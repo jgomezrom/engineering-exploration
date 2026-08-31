@@ -59,6 +59,9 @@ export default function Home() {
             Documentation
           </a>
         </div>
+        <div className="bg-primary text-white p-4 rounded">
+          Testing my primary color token
+        </div>
       </main>
     </div>
   );
