@@ -7,21 +7,17 @@ import Card from "../components/Card";
 import FieldIcon from "../components/FieldIcon";
 import { quizQuestions } from "../data/quiz";
 import { fields } from "../data/fields";
-import { FieldSlug } from "../data/types";
+import { computeResults } from "./scoring";
+import RadarChart from "./RadarChart";
 
 type Stage = "intro" | "question" | "results";
 
-function scoreAnswers(answers: (number | null)[]): Partial<Record<FieldSlug, number>> {
-  const totals: Partial<Record<FieldSlug, number>> = {};
-  quizQuestions.forEach((question, i) => {
-    const optionIndex = answers[i];
-    if (optionIndex === null) return;
-    const option = question.options[optionIndex];
-    for (const [slug, points] of Object.entries(option.points) as [FieldSlug, number][]) {
-      totals[slug] = (totals[slug] ?? 0) + points;
-    }
-  });
-  return totals;
+// A field counts as a "close" match to the top result if it's within this many
+// percentage points — roughly the swing of a single answer, so it's not a false tie.
+const CLOSE_MATCH_THRESHOLD = 8;
+
+function shortName(name: string) {
+  return name.replace(" Engineering", "");
 }
 
 export default function QuizPage() {
@@ -136,12 +132,10 @@ export default function QuizPage() {
   }
 
   // Results
-  const scores = scoreAnswers(answers);
-  const ranked = fields
-    .map((field) => ({ field, score: scores[field.slug] ?? 0 }))
-    .sort((a, b) => b.score - a.score);
-  const topScore = ranked[0].score;
-  const topMatches = topScore > 0 ? ranked.filter((r) => r.score >= topScore - 2) : [];
+  const results = computeResults(answers);
+  const topPercentage = results[0]?.percentage ?? 0;
+  const topMatches =
+    topPercentage > 0 ? results.filter((r) => r.percentage >= topPercentage - CLOSE_MATCH_THRESHOLD) : [];
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
@@ -149,54 +143,91 @@ export default function QuizPage() {
         Your results
       </span>
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
-        {topMatches.length > 1 ? "You're close between a couple of fields" : "Your top match"}
+        Fields worth exploring
       </h1>
       <p className="mt-3 text-neutral-600 dark:text-neutral-400">
-        This isn&apos;t a verdict — it&apos;s a starting point based on your answers. Read through
-        the field pages below and see what actually resonates.
+        This isn&apos;t a verdict — it&apos;s a starting point based on how you answered. Each
+        percentage is scored independently against that field&apos;s own maximum, so it&apos;s
+        completely normal for more than one field to come back high.
       </p>
 
-      <div className="mt-8 flex flex-col gap-4">
-        {topMatches.map(({ field }) => (
-          <Link key={field.slug} href={`/engineering/${field.slug}`}>
-            <Card>
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
-                  <FieldIcon slug={field.slug} className="h-6 w-6 text-primary" />
+      <div className="mt-10">
+        <RadarChart results={results} />
+      </div>
+
+      <div className="mt-10 flex flex-col gap-4">
+        {topMatches.map((result) => {
+          const field = fields.find((f) => f.slug === result.slug)!;
+          return (
+            <Link key={field.slug} href={`/engineering/${field.slug}`}>
+              <Card>
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                    <FieldIcon slug={field.slug} className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between gap-2">
+                      <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
+                        {field.name}
+                      </h2>
+                      <span className="flex-shrink-0 font-mono text-sm text-primary">
+                        {result.percentage}% match
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                      {field.tagline}
+                    </p>
+                    {result.topReasons.length > 0 && (
+                      <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
+                        This tracks with how you answered — you leaned toward{" "}
+                        <span className="text-neutral-700 dark:text-neutral-300">
+                          &ldquo;{result.topReasons[0]}&rdquo;
+                        </span>
+                        {result.topReasons[1] && (
+                          <>
+                            {" "}
+                            and{" "}
+                            <span className="text-neutral-700 dark:text-neutral-300">
+                              &ldquo;{result.topReasons[1]}&rdquo;
+                            </span>
+                          </>
+                        )}
+                        .
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
-                    {field.name}
-                  </h2>
-                  <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                    {field.tagline}
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </Link>
-        ))}
+              </Card>
+            </Link>
+          );
+        })}
       </div>
 
       <div className="mt-12 border-t border-neutral-900/10 pt-8 dark:border-white/10">
         <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
-          Full breakdown
+          All 5 fields, ranked
         </h3>
         <div className="mt-4 flex flex-col gap-3">
-          {ranked.map(({ field, score }) => (
-            <div key={field.slug} className="flex items-center gap-3">
-              <span className="w-40 flex-shrink-0 truncate text-sm text-neutral-600 dark:text-neutral-400">
-                {field.name}
-              </span>
-              <div className="h-2 flex-1 bg-neutral-100 dark:bg-neutral-900">
-                <div
-                  className="h-2 bg-primary"
-                  style={{ width: `${topScore > 0 ? (score / topScore) * 100 : 0}%` }}
-                />
-              </div>
-              <span className="w-6 flex-shrink-0 text-right text-sm text-neutral-400">{score}</span>
-            </div>
-          ))}
+          {results.map((result) => {
+            const field = fields.find((f) => f.slug === result.slug)!;
+            return (
+              <Link
+                key={field.slug}
+                href={`/engineering/${field.slug}`}
+                className="group flex items-center gap-3"
+              >
+                <span className="w-24 flex-shrink-0 truncate text-sm text-neutral-600 group-hover:text-primary dark:text-neutral-400">
+                  {shortName(field.name)}
+                </span>
+                <div className="h-2 flex-1 bg-neutral-100 dark:bg-neutral-900">
+                  <div className="h-2 bg-primary" style={{ width: `${result.percentage}%` }} />
+                </div>
+                <span className="w-10 flex-shrink-0 text-right font-mono text-sm text-neutral-400">
+                  {result.percentage}%
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </div>
 
