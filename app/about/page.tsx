@@ -34,10 +34,19 @@ export default function AboutPage() {
           fact.
         </p>
         <p>
-          It&apos;s not affiliated with any university, company, or engineering organization —
-          just one person&apos;s attempt to put together something clear and useful. If
-          something here reads as inaccurate or outdated, that&apos;s worth knowing, since this
-          is maintained by a student, not a career-counseling professional.
+          I built this because I remember being in that exact spot back in high school —
+          looking at a long list of engineering majors and having no real idea what any of
+          them actually meant day to day. Most of what I found online was either a vague list
+          of job titles or straight-up recruiting copy. I wanted to build the resource I wish
+          I&apos;d had: something that just tells it straight about what the work is like and
+          where the honest trade-offs are.
+        </p>
+        <p>
+          This site was built by Jaime Gomez, a student at MSU. It&apos;s not affiliated with
+          MSU, any other university, or any engineering organization — just one student&apos;s
+          attempt to put something clear and useful together. If something here reads as
+          inaccurate or outdated, that&apos;s worth knowing, since this is maintained by a
+          student, not a career-counseling professional.
         </p>
         <p>
           The interest quiz works the same way: it&apos;s a starting point based on how you
