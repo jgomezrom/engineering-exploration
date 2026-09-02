@@ -7,6 +7,7 @@ import CuriosityExplorer from "./components/CuriosityExplorer";
 import DidYouKnowTicker from "./components/DidYouKnowTicker";
 import { fields } from "./data/fields";
 import { challenges } from "./data/challenges";
+import { resourceLinks } from "./data/resourceLinks";
 
 function JourneyArrow() {
   return (
@@ -131,6 +132,35 @@ export default function Home() {
 
       <div className="mt-20 w-full max-w-2xl text-left">
         <DidYouKnowTicker />
+      </div>
+
+      <div className="mt-20 w-full max-w-4xl border-t border-neutral-900/10 pt-16 text-left lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl dark:border-white/10">
+        <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+          Want to go deeper?
+        </span>
+        <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
+          More ways to explore
+        </h2>
+        <p className="mt-3 max-w-xl text-neutral-600 dark:text-neutral-400">
+          Comparing fields side by side, whether you need to be good at math, how engineering
+          careers differ from what people assume — all of this is already on the site.
+        </p>
+
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {resourceLinks.map((resource) => (
+            <Link key={resource.href} href={resource.href}>
+              <Card>
+                {resource.icon}
+                <h3 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+                  {resource.title}
+                </h3>
+                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+                  {resource.description}
+                </p>
+              </Card>
+            </Link>
+          ))}
+        </div>
       </div>
 
       <div className="mt-20 w-full max-w-3xl border-t border-neutral-900/10 pt-16 text-center dark:border-white/10">
