@@ -91,7 +91,11 @@ export default function ComparePage() {
         These ratings are editorial judgment — a qualitative read of each field&apos;s own
         description on this site, not an independent measurement or a test score. Two people
         could reasonably rate a field a little differently. Open a field page to see the exact
-        reasoning behind its ratings.
+        reasoning behind its ratings, or read the full{" "}
+        <Link href="/sources" className="font-medium text-primary hover:underline">
+          sources &amp; methodology
+        </Link>
+        .
       </p>
 
       <h2 className="mt-12 text-lg font-semibold text-neutral-900 dark:text-white">

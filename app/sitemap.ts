@@ -23,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/math",
     "/resources",
     "/simulations",
+    "/sources",
+    "/parents-and-teachers",
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

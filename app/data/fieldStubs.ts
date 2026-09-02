@@ -26,6 +26,7 @@ export const fieldStubs: FieldStub[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/nuclear-engineers.htm",
       note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
     },
   },
   {
@@ -48,6 +49,7 @@ export const fieldStubs: FieldStub[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/petroleum-engineers.htm",
       note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region. This field is closely tied to oil and gas industry cycles, which affects both pay and job stability.",
+      verifiedDate: "September 2026",
     },
   },
   {
@@ -71,6 +73,7 @@ export const fieldStubs: FieldStub[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/agricultural-engineers.htm",
       note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
     },
   },
   {
@@ -94,6 +97,7 @@ export const fieldStubs: FieldStub[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm",
       note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
     },
   },
   {

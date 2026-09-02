@@ -69,4 +69,27 @@ export const resourceLinks = [
       </svg>
     ),
   },
+  {
+    href: "/sources",
+    title: "Sources & Methodology",
+    description: "Where every number comes from, what's editorial judgment, and who actually wrote this.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+        <path d="M10 8h20v24H10z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M15 15h10M15 20h10M15 25h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    href: "/parents-and-teachers",
+    title: "For Parents & Teachers",
+    description: "What this site is, what it collects (nothing), and how it might be useful in a classroom.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+        <circle cx="14" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="27" cy="14" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M6 32c1-6.5 4-10 8-10s7 3.5 8 10M22 32c0.7-5 3-8 6.5-8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ];

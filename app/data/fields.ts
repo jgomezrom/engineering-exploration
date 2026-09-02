@@ -76,6 +76,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Actual pay varies a lot by location, industry, employer, and experience.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -206,6 +207,7 @@ export const fields: EngineeringField[] = [
     sourceName: "U.S. Bureau of Labor Statistics",
     sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
     note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. The closely related 'electronics engineer' specialization reports a higher median ($130,220) in the same BLS data, so specialization matters here too.",
+    verifiedDate: "September 2026",
   },
   nextSteps: {
     "10-12": {
@@ -337,6 +339,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Public-sector pay in particular can differ meaningfully from private-sector pay within this same field.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -470,6 +473,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Given the job-market caveats in this field's competitiveness section above, treat this figure as background context, not a guarantee.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -604,6 +608,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
       note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region. Given this field's own hiring-market caveats above, a high historical median doesn't guarantee current entry-level outcomes.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -737,6 +742,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/aerospace-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Aerospace pay can also vary meaningfully between defense-sector and commercial-aviation roles.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -870,6 +876,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/chemical-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Pay can vary meaningfully depending on which industry you're in, such as oil and gas versus pharmaceuticals.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -1003,6 +1010,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/computer-hardware-engineers.htm",
       note: "This is a U.S. national median across all experience levels, listed under BLS's 'computer hardware engineers' category — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -1135,6 +1143,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/environmental-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Public-sector and consulting roles in this field can differ meaningfully in pay.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -1268,6 +1277,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/industrial-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Because industrial engineers work across so many different industries, pay can vary a lot depending on the sector.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -1401,6 +1411,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/materials-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {
@@ -1534,6 +1545,7 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/about/data-for-occupations-not-covered-in-detail.htm",
       note: "Robotics and mechatronics engineers aren't tracked as their own detailed BLS category — this figure is from the broader 'Engineers, All Other' group, which BLS explicitly notes includes robotics and mechatronics engineers. Treat it as a rough estimate rather than a precise figure for this specific specialization.",
+      verifiedDate: "September 2026",
     },
     nextSteps: {
       "10-12": {

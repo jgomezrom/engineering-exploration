@@ -79,6 +79,10 @@ export type SalaryData = {
   sourceName: string;
   sourceUrl: string;
   note: string;
+  // When this figure was actually pulled from the source above — not when the
+  // wage period itself was measured (that's `period`). Lets a reader tell how
+  // stale a citation might be.
+  verifiedDate: string;
 };
 
 export type AgeBand = "10-12" | "13-15" | "16-18";

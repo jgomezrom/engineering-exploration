@@ -51,6 +51,14 @@ export default function AboutPage() {
           The interest quiz works the same way: it&apos;s a starting point based on how you
           answer a set of questions, not a verdict on what you should do with your life.
         </p>
+        <p>
+          For more detail on where the numbers on this site come from and what&apos;s editorial
+          judgment versus a cited source, see{" "}
+          <Link href="/sources" className="text-primary hover:underline">
+            Sources &amp; Methodology
+          </Link>
+          .
+        </p>
       </div>
 
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">

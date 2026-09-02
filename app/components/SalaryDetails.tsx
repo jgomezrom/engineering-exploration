@@ -29,6 +29,9 @@ export default function SalaryDetails({ salary }: { salary: SalaryData }) {
           {salary.sourceName}
         </a>
       </p>
+      <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+        Last verified: {salary.verifiedDate}
+      </p>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
         {salary.note}
       </p>
