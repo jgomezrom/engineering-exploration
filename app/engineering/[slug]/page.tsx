@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import FieldIcon from "../../components/FieldIcon";
 import FieldIllustration from "../../components/FieldIllustration";
 import FieldStatSheet from "../../components/FieldStatSheet";
+import SalaryDetails from "../../components/SalaryDetails";
 import WorkdayTimeline from "../../components/WorkdayTimeline";
 import NextStepsExplorer from "../../components/NextStepsExplorer";
 import { fields } from "../../data/fields";
@@ -112,29 +113,6 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
             At a Glance
           </span>
 
-          <div className="mt-4 border-b border-neutral-900/10 pb-4 dark:border-white/10">
-            <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-neutral-900 dark:text-white">
-                {field.salary.medianAnnual}
-              </span>
-              <span className="text-sm text-neutral-600 dark:text-neutral-400">/ year, median</span>
-            </div>
-            <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-400">
-              {field.salary.region} · {field.salary.period} —{" "}
-              <a
-                href={field.salary.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                {field.salary.sourceName}
-              </a>
-            </p>
-            <p className="mt-2 text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">
-              {field.salary.note}
-            </p>
-          </div>
-
           <div className="mt-4">
             <FieldStatSheet
               stats={{
@@ -222,15 +200,19 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
         </p>
       </Section>
 
-      <Section index={13} title="Try It Yourself">
+      <Section index={13} title="What You Could Earn">
+        <SalaryDetails salary={field.salary} />
+      </Section>
+
+      <Section index={14} title="Try It Yourself">
         <BulletList items={field.beginnerActivities} />
       </Section>
 
-      <Section index={14} title="Questions to Ask Yourself">
+      <Section index={15} title="Questions to Ask Yourself">
         <BulletList items={field.selfReflectionQuestions} />
       </Section>
 
-      <Section index={15} title="What Can I Do Next?">
+      <Section index={16} title="What Can I Do Next?">
         <NextStepsExplorer nextSteps={field.nextSteps} />
       </Section>
     </main>
