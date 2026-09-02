@@ -5,8 +5,12 @@ import FieldIcon from "../components/FieldIcon";
 
 export default function ExplorePage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
+    <main className="mx-auto max-w-5xl px-6 py-16 xl:max-w-6xl">
+      <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+        Browse by field
+      </span>
+
+      <h1 className="text-3xl font-bold text-neutral-900 dark:text-white xl:text-4xl">
         Explore Engineering Fields
       </h1>
       <p className="mt-2 max-w-xl text-neutral-600 dark:text-neutral-400">
@@ -27,6 +31,18 @@ export default function ExplorePage() {
 </Card>
           </Link>
         ))}
+
+        <div className="flex flex-col items-start justify-center border border-dashed border-neutral-900/15 p-6 dark:border-white/15">
+          <span className="font-mono text-xs tracking-widest text-neutral-400">
+            COMING SOON
+          </span>
+          <h2 className="mt-4 text-lg font-semibold text-neutral-400 dark:text-neutral-600">
+            More Fields
+          </h2>
+          <p className="mt-2 text-sm text-neutral-400 dark:text-neutral-600">
+            Civil, software, and more fields are on the way. Check back soon.
+          </p>
+        </div>
       </div>
     </main>
   );

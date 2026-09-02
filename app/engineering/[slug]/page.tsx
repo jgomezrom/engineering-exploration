@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Card from "../../components/Card";
+import FieldIcon from "../../components/FieldIcon";
 import { fields } from "../../data/fields";
 
 export function generateStaticParams() {
@@ -66,10 +67,19 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
   }
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
+    <main className="relative mx-auto max-w-3xl px-6 py-16">
+      <span className="pointer-events-none absolute left-6 top-10 hidden h-8 w-8 border-l-2 border-t-2 border-primary/30 lg:block" />
+      <span className="pointer-events-none absolute right-6 top-10 hidden h-8 w-8 border-r-2 border-t-2 border-primary/30 lg:block" />
+      <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
+      <span className="pointer-events-none absolute bottom-10 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-primary/30 lg:block" />
+
       <Link href="/explore" className="text-sm font-medium text-primary hover:underline">
         ← Back to Explore Fields
       </Link>
+
+      <div className="mt-6 inline-flex items-center justify-center rounded-full bg-primary/10 p-4">
+        <FieldIcon slug={field.slug} className="h-10 w-10 text-primary" />
+      </div>
 
       <h1 className="mt-4 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
         {field.name}
