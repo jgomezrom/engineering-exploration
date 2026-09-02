@@ -8,7 +8,16 @@ import { challenges } from "./data/challenges";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://engineering-exploration-two.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/explore", "/quiz", "/challenges", "/compare", "/about"].map((path) => ({
+  const staticRoutes = [
+    "",
+    "/explore",
+    "/quiz",
+    "/challenges",
+    "/compare",
+    "/about",
+    "/curious",
+    "/design-process",
+  ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
   }));

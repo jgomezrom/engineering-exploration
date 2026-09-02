@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FieldIcon from "../../components/FieldIcon";
+import DesignProcessDiagram from "../../components/DesignProcessDiagram";
 import { challenges } from "../../data/challenges";
 import { fields } from "../../data/fields";
 
@@ -128,6 +129,22 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
 
       <Section index={3} title="Skills You'll Practice">
         <BulletList items={challenge.skillsLearned} />
+      </Section>
+
+      <Section index={4} title="If It Doesn't Work the First Time">
+        <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+          That&apos;s normal — this challenge follows the same design process real engineers use.
+          A failed test just tells you where to go back and improve.
+        </p>
+        <div className="mt-6">
+          <DesignProcessDiagram compact />
+        </div>
+        <Link
+          href="/design-process"
+          className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
+        >
+          See the full Engineering Design Process →
+        </Link>
       </Section>
     </main>
   );

@@ -49,6 +49,22 @@ export default function ChallengesPage() {
           </Link>
         ))}
       </div>
+
+      <div className="mt-12 border border-neutral-900/10 p-6 dark:border-white/10">
+        <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
+          Not sure what to do if it doesn&apos;t work?
+        </h2>
+        <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+          Every challenge here follows the same process real engineers use — and it&apos;s normal
+          to loop back and try again.
+        </p>
+        <Link
+          href="/design-process"
+          className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
+        >
+          See the Engineering Design Process →
+        </Link>
+      </div>
     </main>
   );
 }
