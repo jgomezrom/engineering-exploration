@@ -4,16 +4,28 @@ import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-6 py-24 text-center">
+    <main className="relative flex flex-col items-center px-6 py-24 text-center">
+      <span className="pointer-events-none absolute left-6 top-10 hidden h-8 w-8 border-l-2 border-t-2 border-primary/30 lg:block" />
+      <span className="pointer-events-none absolute right-6 top-10 hidden h-8 w-8 border-r-2 border-t-2 border-primary/30 lg:block" />
+      <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
+      <span className="pointer-events-none absolute bottom-10 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-primary/30 lg:block" />
+
+      <span className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 -rotate-90 font-mono text-xs tracking-widest text-neutral-400 lg:block">
+        ENGINEERING EXPLORATION
+      </span>
+      <span className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 rotate-90 font-mono text-xs tracking-widest text-neutral-400 lg:block">
+        05 FIELDS · ∞ PATHS
+      </span>
+
       <span className="mb-4 rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
         For curious minds
       </span>
 
-      <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl">
+      <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl">
         What kind of engineer do you want to be?
       </h1>
 
-      <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-400">
+      <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-400 lg:max-w-2xl lg:text-xl">
         Explore what engineers actually do — the real stuff, not just the highlight reel — and find fields worth getting curious about. No pressure to already know what you want to be.
       </p>
 
@@ -25,7 +37,16 @@ export default function Home() {
           Take the Interest Quiz
         </Button>
       </div>
-      <div className="mt-20 grid w-full max-w-4xl gap-6 sm:grid-cols-3">
+
+      <div className="mt-16 hidden w-full max-w-3xl items-center justify-center gap-8 border-y border-neutral-900/10 py-6 font-mono text-sm text-neutral-500 dark:border-white/10 lg:flex">
+        <span>5 FIELDS</span>
+        <span className="h-1 w-1 rounded-full bg-neutral-400" />
+        <span>15+ CHALLENGES</span>
+        <span className="h-1 w-1 rounded-full bg-neutral-400" />
+        <span>5-MIN QUIZ</span>
+      </div>
+
+      <div className="mt-20 grid w-full max-w-4xl gap-6 sm:grid-cols-3 lg:max-w-5xl lg:gap-8 xl:max-w-6xl">
   <Card>
     <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-white">
       Explore Fields
