@@ -232,7 +232,15 @@ export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 
 // A broad grouping independent of field, so the challenge library can grow
 // without every new category needing its own field slug.
-export type ChallengeCategory = "Mechanisms & Motion" | "Structures & Materials" | "Circuits & Electronics";
+export type ChallengeCategory =
+  | "Mechanisms & Motion"
+  | "Structures & Materials"
+  | "Circuits & Electronics"
+  | "Code & Logic"
+  | "Chemistry & Processes"
+  | "Life Sciences"
+  | "Systems & Efficiency"
+  | "Flight & Aerodynamics";
 
 // Each challenge is framed as a small "mission" — a real engineering problem
 // has a goal, real constraints, and a way to tell whether it worked, not just
