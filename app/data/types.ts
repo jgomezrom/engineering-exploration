@@ -44,3 +44,18 @@ export type QuizQuestion = {
   prompt: string;
   options: QuizOption[];
 };
+
+export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
+
+export type Challenge = {
+  slug: string;
+  title: string;
+  field: FieldSlug;
+  tagline: string;
+  difficulty: Difficulty;
+  estimatedTime: string;
+  approximateCost: string;
+  materials: string[];
+  instructions: string[];
+  skillsLearned: string[];
+};
