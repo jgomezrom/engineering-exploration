@@ -7,8 +7,9 @@ import Card from "../components/Card";
 import FieldIcon from "../components/FieldIcon";
 import { quizQuestions } from "../data/quiz";
 import { fields } from "../data/fields";
-import { computeResults } from "./scoring";
+import { computeResults, THEME_LABELS } from "./scoring";
 import RadarChart from "./RadarChart";
+import { challenges } from "../data/challenges";
 
 type Stage = "intro" | "question" | "results";
 
@@ -223,50 +224,112 @@ export default function QuizPage() {
         </p>
       )}
 
-      <div className="mt-10 flex flex-col gap-4">
+      <div className="mt-10 flex flex-col gap-6">
         {topMatches.map((result) => {
           const field = fields.find((f) => f.slug === result.slug)!;
+          const mightNotEnjoy = [field.thingsPeopleDislike[0], field.challenges[0]].filter(
+            (item): item is string => Boolean(item)
+          );
+          const relatedChallenge = challenges.find((c) => c.field === field.slug);
+
           return (
-            <Link key={field.slug} href={`/engineering/${field.slug}`}>
-              <Card>
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <FieldIcon slug={field.slug} className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between gap-2">
-                      <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
-                        {field.name}
-                      </h2>
-                      <span className="flex-shrink-0 font-mono text-sm text-primary">
-                        {result.percentage}% match
-                      </span>
-                    </div>
-                    <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                      {field.tagline}
-                    </p>
-                    {result.topReasons.length > 0 && (
-                      <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
-                        This tracks with how you answered — you leaned toward{" "}
-                        <span className="text-neutral-700 dark:text-neutral-300">
-                          &ldquo;{result.topReasons[0]}&rdquo;
-                        </span>
-                        {result.topReasons[1] && (
-                          <>
-                            {" "}
-                            and{" "}
-                            <span className="text-neutral-700 dark:text-neutral-300">
-                              &ldquo;{result.topReasons[1]}&rdquo;
-                            </span>
-                          </>
-                        )}
-                        .
-                      </p>
-                    )}
-                  </div>
+            <Card key={field.slug}>
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <FieldIcon slug={field.slug} className="h-6 w-6 text-primary" />
                 </div>
-              </Card>
-            </Link>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
+                      {field.name}
+                    </h2>
+                    <span className="flex-shrink-0 font-mono text-sm text-primary">
+                      {result.percentage}% match
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                    {field.tagline}
+                  </p>
+                </div>
+              </div>
+
+              {(result.topThemes.length > 0 || result.topReasons.length > 0) && (
+                <div className="mt-4 border-t border-neutral-900/10 pt-4 dark:border-white/10">
+                  <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+                    Why you matched
+                  </h3>
+                  {result.topThemes.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {result.topThemes.map((theme) => (
+                        <span
+                          key={theme}
+                          className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                        >
+                          {THEME_LABELS[theme]}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  {result.topReasons.length > 0 && (
+                    <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
+                      Specifically, you leaned toward{" "}
+                      <span className="text-neutral-800 dark:text-neutral-200">
+                        &ldquo;{result.topReasons[0]}&rdquo;
+                      </span>
+                      {result.topReasons[1] && (
+                        <>
+                          {" "}
+                          and{" "}
+                          <span className="text-neutral-800 dark:text-neutral-200">
+                            &ldquo;{result.topReasons[1]}&rdquo;
+                          </span>
+                        </>
+                      )}
+                      .
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {mightNotEnjoy.length > 0 && (
+                <div className="mt-4 border-t border-neutral-900/10 pt-4 dark:border-white/10">
+                  <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+                    You might not enjoy
+                  </h3>
+                  <ul className="mt-2 space-y-1.5">
+                    {mightNotEnjoy.map((item) => (
+                      <li
+                        key={item}
+                        className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400"
+                      >
+                        <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-neutral-400" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 border-t border-neutral-900/10 pt-4 dark:border-white/10">
+                <Link
+                  href={`/engineering/${field.slug}`}
+                  className="text-sm font-medium text-primary hover:underline"
+                >
+                  Explore this field →
+                </Link>
+                {relatedChallenge && (
+                  <Link
+                    href={`/challenges/${relatedChallenge.slug}`}
+                    className="text-sm font-medium text-primary hover:underline"
+                  >
+                    Try a related challenge →
+                  </Link>
+                )}
+                <Link href="/compare" className="text-sm font-medium text-primary hover:underline">
+                  Compare with other fields →
+                </Link>
+              </div>
+            </Card>
           );
         })}
       </div>

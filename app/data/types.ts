@@ -66,10 +66,32 @@ export type EngineeringField = {
   selfReflectionQuestions: string[];
 };
 
+// A small, fixed vocabulary of interest themes used to explain quiz results in
+// plain language ("you leaned toward hands-on building") instead of just a
+// percentage. Kept short on purpose so results stay readable.
+export type QuizTheme =
+  | "hands-on-building"
+  | "electronics"
+  | "structures-infrastructure"
+  | "biology-health"
+  | "coding-software"
+  | "abstract-problem-solving"
+  | "debugging-troubleshooting"
+  | "regulation-safety"
+  | "public-impact"
+  | "long-term-projects"
+  | "fast-iteration"
+  | "teamwork-collaboration"
+  | "independent-work";
+
 export type QuizOption = {
   text: string;
   // Only the fields this option is relevant to need to be listed.
   points: Partial<Record<FieldSlug, number>>;
+  // What this specific answer signals about the person's interests, independent
+  // of which field it happens to score. Can be empty for hedging/negative options
+  // that don't clearly signal a theme.
+  themes: QuizTheme[];
 };
 
 export type QuizQuestion = {

@@ -1,6 +1,22 @@
 import { fields } from "../data/fields";
 import { quizQuestions } from "../data/quiz";
-import { FieldSlug } from "../data/types";
+import { FieldSlug, QuizTheme } from "../data/types";
+
+export const THEME_LABELS: Record<QuizTheme, string> = {
+  "hands-on-building": "Hands-on building",
+  electronics: "Electronics & circuits",
+  "structures-infrastructure": "Structures & infrastructure",
+  "biology-health": "Biology & health",
+  "coding-software": "Coding & software",
+  "abstract-problem-solving": "Abstract problem-solving",
+  "debugging-troubleshooting": "Debugging & troubleshooting",
+  "regulation-safety": "Regulation & safety",
+  "public-impact": "Public impact",
+  "long-term-projects": "Long-term projects",
+  "fast-iteration": "Fast iteration",
+  "teamwork-collaboration": "Teamwork",
+  "independent-work": "Independent work",
+};
 
 export type FieldResult = {
   slug: FieldSlug;
@@ -8,6 +24,7 @@ export type FieldResult = {
   maxPossible: number;
   percentage: number; // 0-100, rounded — rawScore as a share of this field's own max
   topReasons: string[]; // up to 2 of the user's own answers that contributed most to this field
+  topThemes: QuizTheme[]; // up to 3 interest themes the user's answers pointed toward, for this field
 };
 
 // For each question, only one answer can be picked, so the most a single question can
@@ -34,6 +51,9 @@ export function computeResults(answers: (number | null)[]): FieldResult[] {
   const maxPossible = computeMaxPossiblePoints();
   const rawScores: Partial<Record<FieldSlug, number>> = {};
   const contributions: Partial<Record<FieldSlug, { text: string; points: number }[]>> = {};
+  // Per field, how much weight (points) each theme accumulated — a theme that shows up
+  // in several of the user's answers for that field will outweigh one that shows up once.
+  const themeWeights: Partial<Record<FieldSlug, Partial<Record<QuizTheme, number>>>> = {};
 
   quizQuestions.forEach((question, i) => {
     const optionIndex = answers[i];
@@ -42,6 +62,11 @@ export function computeResults(answers: (number | null)[]): FieldResult[] {
     for (const [slug, points] of Object.entries(option.points) as [FieldSlug, number][]) {
       rawScores[slug] = (rawScores[slug] ?? 0) + points;
       (contributions[slug] ??= []).push({ text: option.text, points });
+
+      const fieldThemeWeights = (themeWeights[slug] ??= {});
+      for (const theme of option.themes) {
+        fieldThemeWeights[theme] = (fieldThemeWeights[theme] ?? 0) + points;
+      }
     }
   });
 
@@ -55,7 +80,11 @@ export function computeResults(answers: (number | null)[]): FieldResult[] {
         .sort((a, b) => b.points - a.points)
         .slice(0, 2)
         .map((c) => c.text);
-      return { slug, rawScore, maxPossible: max, percentage, topReasons };
+      const topThemes = Object.entries(themeWeights[slug] ?? {})
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map(([theme]) => theme as QuizTheme);
+      return { slug, rawScore, maxPossible: max, percentage, topReasons, topThemes };
     })
     .sort((a, b) => b.percentage - a.percentage);
 }
