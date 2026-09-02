@@ -6,7 +6,7 @@ import FieldIcon from "../../components/FieldIcon";
 import FieldIllustration from "../../components/FieldIllustration";
 import FieldStatSheet from "../../components/FieldStatSheet";
 import SalaryDetails from "../../components/SalaryDetails";
-import WorkdayTimeline from "../../components/WorkdayTimeline";
+import DayInTheLife from "../../components/DayInTheLife";
 import NextStepsExplorer from "../../components/NextStepsExplorer";
 import { fields } from "../../data/fields";
 
@@ -146,8 +146,13 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
         <BulletList items={field.commonMisconceptions} />
       </Section>
 
-      <Section index={5} title="A Typical Workday">
-        <WorkdayTimeline blocks={field.workdayTimeline} />
+      <Section index={5} title="A Day in the Life">
+        <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+          {field.typicalWorkday}
+        </p>
+        <div className="mt-6">
+          <DayInTheLife dayInLife={field.dayInLife} />
+        </div>
       </Section>
 
       <Section index={6} title="Typical Projects">

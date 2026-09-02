@@ -12,12 +12,21 @@ export type FieldSlug =
 
 export type Level = "Low" | "Medium" | "High";
 
-// A snapshot of a typical workday as a short sequence of labeled blocks, not
-// literal clock times — the field descriptions don't specify hours, so this
-// stays honest about being a rough sequence rather than a precise schedule.
-export type WorkdayBlock = {
+// An illustrative example day, stepped through hour by hour. The times are
+// invented for pacing, not measured — the field descriptions don't specify
+// literal hours, so the UI must say plainly that this is one example day, not
+// a guaranteed schedule.
+export type DayInLifeBlock = {
+  time: string;
   label: string;
   detail: string;
+};
+
+export type DayInLife = {
+  blocks: DayInLifeBlock[];
+  // A question with no right answer and nowhere it gets saved — meant to be
+  // sat with, not submitted.
+  reflectionQuestion: string;
 };
 
 // Traceable, qualitative reads of each field's own written content (not
@@ -80,7 +89,7 @@ export type EngineeringField = {
   helpfulSkills: string[];
   typicalProjects: string[];
   typicalWorkday: string;
-  workdayTimeline: WorkdayBlock[];
+  dayInLife: DayInLife;
   stats: FieldStats;
   salary: SalaryData;
   nextSteps: NextSteps;

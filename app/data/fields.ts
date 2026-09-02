@@ -35,11 +35,17 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "A lot of the job is at a computer — running simulations, reviewing designs, writing reports, and going to meetings — mixed with time in a lab or shop testing physical prototypes. It's less 'building things by hand all day' and more 'solving problems, some of which involve hands-on testing.'",
-    workdayTimeline: [
-      { label: "At a desk", detail: "Running simulations and reviewing designs" },
-      { label: "Meetings", detail: "Writing reports, coordinating with the team" },
-      { label: "In the shop", detail: "Testing physical prototypes" },
-    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Morning check-in", detail: "Reviewing overnight simulation results and catching up on email from the team." },
+        { time: "9:30 AM", label: "Design work", detail: "Running simulations and reviewing a design in CAD software to see how it holds up under load." },
+        { time: "11:00 AM", label: "Team meeting", detail: "Coordinating with teammates and writing up a status report on a design that's behind schedule." },
+        { time: "1:00 PM", label: "In the shop", detail: "Testing a physical prototype — and it's not behaving the way the simulation predicted." },
+        { time: "3:00 PM", label: "Back at the desk", detail: "Writing up what went wrong in testing and reworking the design based on it." },
+        { time: "4:30 PM", label: "Wrap-up", detail: "Documenting today's progress and setting up tomorrow's shop time." },
+      ],
+      reflectionQuestion: "Which part of this day would you actually enjoy more — the design work at a computer, or the hands-on testing? Which part would frustrate you?",
+    },
     // Ratings are a qualitative read of this field's own text above, not an independent score.
     // mathIntensity: usefulSubjects leads with "Physics (especially mechanics)" and "Calculus".
     // handsOnWork: typicalWorkday explicitly frames it as "less building things by hand all day".
@@ -160,11 +166,17 @@ export const fields: EngineeringField[] = [
   ],
   typicalWorkday:
     "Often a mix of circuit design software, testing equipment (like oscilloscopes and multimeters), and — in many roles — writing embedded software. Debugging a circuit that isn't working as expected is a very normal, recurring part of the job.",
-  workdayTimeline: [
-    { label: "Circuit design", detail: "Working in circuit design software" },
-    { label: "On the bench", detail: "Using oscilloscopes and multimeters to test" },
-    { label: "Debugging", detail: "Figuring out why a circuit isn't behaving as expected" },
-  ],
+  dayInLife: {
+    blocks: [
+      { time: "9:00 AM", label: "Circuit design", detail: "Working in circuit design software, laying out a new component on the board." },
+      { time: "10:30 AM", label: "Simulation", detail: "Simulating how the circuit should behave before building it physically." },
+      { time: "12:00 PM", label: "On the bench", detail: "Using an oscilloscope and multimeter to test the physical circuit against the simulation." },
+      { time: "1:30 PM", label: "Debugging", detail: "The circuit isn't behaving as expected — tracing the problem connection by connection." },
+      { time: "3:00 PM", label: "Embedded code", detail: "Programming a microcontroller to respond correctly to a sensor input." },
+      { time: "4:30 PM", label: "Wrap-up", detail: "Documenting what got fixed today and what's still unresolved." },
+    ],
+    reflectionQuestion: "How would it feel to spend an afternoon debugging a circuit that isn't working, with no guarantee you'll find the problem before you go home?",
+  },
   // mathIntensity: usefulSubjects leads with physics/calculus; helpfulSkills calls for "comfort with abstract math".
   // handsOnWork: typicalWorkday frames it as "a mix" of software, bench testing, and embedded coding.
   // regulatoryBurden: thingsPeopleDislike says compliance is heavy "especially in power or aerospace" — industry-dependent.
@@ -285,11 +297,17 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "A mix of office design work — running structural or hydraulic calculations, reviewing drawings, writing reports — and site visits to check on active construction or inspect existing infrastructure. Public-sector civil engineers often spend real time in meetings with city officials or community members, since infrastructure projects are usually publicly funded and publicly reviewed.",
-    workdayTimeline: [
-      { label: "Office design work", detail: "Running calculations, reviewing drawings" },
-      { label: "Site visits", detail: "Checking on construction or inspecting infrastructure" },
-      { label: "Public meetings", detail: "Meeting with city officials or community members" },
-    ],
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Site visit", detail: "An early start checking on active construction to make sure what's being built matches the design." },
+        { time: "10:00 AM", label: "Back at the office", detail: "Running structural or hydraulic calculations on a new section of the project." },
+        { time: "11:30 AM", label: "Reviewing drawings", detail: "Checking a colleague's design against building and safety codes." },
+        { time: "1:00 PM", label: "Permits and paperwork", detail: "Preparing site plans for a permit application — more of the job than most people expect." },
+        { time: "2:30 PM", label: "Public meeting", detail: "Presenting a project update to city officials and answering questions from the community." },
+        { time: "4:00 PM", label: "Wrap-up", detail: "Writing a report summarizing what was found on today's site visit." },
+      ],
+      reflectionQuestion: "Would an early-morning outdoor site visit sound like a nice break from the desk, or an annoying interruption to your day?",
+    },
     // mathIntensity: usefulSubjects leads with "Physics (especially statics and mechanics)" and calculus.
     // handsOnWork: typicalWorkday frames it as "a mix" of office work and site visits, not majority field work.
     // regulatoryBurden: helpfulSkills centers "designing within legal safety requirements"; thingsPeopleDislike cites heavy permitting.
@@ -412,11 +430,17 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "A lot of lab-based work — testing prototypes, running experiments, documenting results — combined with time spent on regulatory paperwork and meetings with cross-disciplinary teams like clinicians and quality/regulatory staff. Because medical devices are so strictly regulated, thorough documentation is a bigger part of daily work here than in many other engineering fields.",
-    workdayTimeline: [
-      { label: "In the lab", detail: "Testing prototypes and running experiments" },
-      { label: "Documentation", detail: "Regulatory paperwork and precise records" },
-      { label: "Cross-team meetings", detail: "Working with clinicians and regulatory staff" },
-    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "In the lab", detail: "Testing a device prototype to check whether it works the way it's supposed to." },
+        { time: "10:30 AM", label: "Running an experiment", detail: "Analyzing how a material performs when used inside the body — biocompatibility testing." },
+        { time: "12:30 PM", label: "Documentation", detail: "Writing careful, precise records — regulatory approval depends on getting this exactly right." },
+        { time: "2:00 PM", label: "Cross-team meeting", detail: "Meeting with clinicians and regulatory staff about the device's next round of testing." },
+        { time: "3:30 PM", label: "Regulatory paperwork", detail: "Working through documentation required for a formal regulatory submission." },
+        { time: "4:30 PM", label: "Wrap-up", detail: "Updating the project timeline — regulatory review can add months that are outside your control." },
+      ],
+      reflectionQuestion: "How would you feel knowing the device you tested today might not actually reach a patient for another two or three years?",
+    },
     // mathIntensity: usefulSubjects splits evenly across biology, chemistry, physics, and calculus — not math-first.
     // handsOnWork: typicalWorkday leads with "a lot of lab-based work" as the primary framing.
     // regulatoryBurden: whatEngineersWorkOn calls regulatory approval "a bigger part of the job than in most other engineering fields".
@@ -539,11 +563,18 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "Mostly at a computer — writing code, reviewing other people's code, attending planning or standup meetings, and researching how to solve a specific technical problem. Contrary to the 'solo genius coder' image, most software engineering is a collaborative, team-based process involving a lot of written and verbal communication.",
-    workdayTimeline: [
-      { label: "Writing code", detail: "Building and reviewing other people's code" },
-      { label: "Team meetings", detail: "Planning or standup meetings" },
-      { label: "Problem-solving", detail: "Researching how to solve a specific technical issue" },
-    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Standup meeting", detail: "A quick team check-in on what everyone's working on and what's blocking them." },
+        { time: "9:15 AM", label: "Writing code", detail: "Working on a small feature — most of it built on top of code that already exists." },
+        { time: "10:30 AM", label: "Code review", detail: "Reading and reviewing a teammate's code before it ships." },
+        { time: "12:30 PM", label: "Debugging", detail: "Something isn't working as expected, and it's not obvious why yet." },
+        { time: "2:00 PM", label: "Problem-solving", detail: "Researching how other people solved a similar technical problem before." },
+        { time: "3:30 PM", label: "Back to the fix", detail: "Testing and refining the fix from earlier in the day." },
+        { time: "4:30 PM", label: "Wrap-up", detail: "Updating the team on progress before logging off." },
+      ],
+      reflectionQuestion: "Did today sound like mostly solving problems with a team, or mostly typing code alone? Which one matches what you pictured?",
+    },
     // mathIntensity: usefulSubjects lists "Algebra and discrete math, if available" — present but hedged, not central.
     // handsOnWork: typicalWorkday opens with "Mostly at a computer" — the lowest physical/lab component of the 5.
     // regulatoryBurden: no regulatory or compliance language appears anywhere in this field's challenges or dislikes.
