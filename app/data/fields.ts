@@ -139,4 +139,220 @@ export const fields: EngineeringField[] = [
     "Am I interested in how both hardware and software work together?",
   ],
 },
+  {
+    slug: "civil-engineering",
+    name: "Civil Engineering",
+    tagline: "Planning and designing the infrastructure that makes daily life work — roads, bridges, water systems, and the buildings around you.",
+    whatItIs:
+      "Civil engineering covers the design, construction, and upkeep of infrastructure and the built environment — basically most of what you interact with outside your own house that isn't a private product. It splits into sub-areas like structural, geotechnical, transportation, and water resources/environmental engineering.",
+    whatEngineersWorkOn:
+      "Civil engineers design structures and systems, run calculations to check they'll hold up under real-world conditions (loads, soil, water flow), and coordinate closely with architects, contractors, and government agencies. A lot of the job is also site visits during construction to make sure what's actually being built matches the design — and dealing with permits, codes, and approvals, which is a bigger part of the work than people expect.",
+    realWorldExamples: [
+      "Bridges and highway overpasses",
+      "Water treatment and municipal sewer systems",
+      "Building foundations and structural framing",
+      "Dams and flood control systems",
+      "Public transit infrastructure like rail lines and tunnels",
+    ],
+    commonMisconceptions: [
+      "That civil engineers are the same as construction workers or contractors — civil engineers design and plan; they generally aren't the ones physically building.",
+      "That it's a 'less technical' field than mechanical or electrical engineering — structural and geotechnical calculations can be just as demanding, and the safety margins matter because failures are public and potentially catastrophic.",
+      "That most civil engineering work is on big, glamorous projects — a lot of day-to-day work is smaller municipal projects: road repairs, subdivision drainage, routine bridge inspections.",
+    ],
+    usefulSubjects: ["Physics (especially statics and mechanics)", "Calculus", "Environmental science, if available", "Geography or earth science, if available"],
+    helpfulSkills: [
+      "Comfort working within codes, standards, and regulations — a lot of the job is designing within legal safety requirements, not just what's technically possible",
+      "Project coordination, since civil projects typically involve architects, city officials, and contractors, not just other engineers",
+      "Attention to long-term risk — small errors in structural or geotechnical work can have serious public safety consequences",
+      "Basic familiarity with CAD or GIS software, if available",
+    ],
+    typicalProjects: [
+      "Calculating the load a beam or foundation needs to support",
+      "Designing a drainage system for a new development",
+      "Reviewing soil test data to figure out what kind of foundation a site can support",
+      "Preparing site plans for a permit application",
+    ],
+    typicalWorkday:
+      "A mix of office design work — running structural or hydraulic calculations, reviewing drawings, writing reports — and site visits to check on active construction or inspect existing infrastructure. Public-sector civil engineers often spend real time in meetings with city officials or community members, since infrastructure projects are usually publicly funded and publicly reviewed.",
+    industries: ["Government and municipal", "Construction", "Environmental consulting", "Transportation", "Water resources", "Real estate development"],
+    relatedMajors: ["Civil Engineering", "Structural Engineering", "Environmental Engineering"],
+    careerPaths: [
+      { title: "Structural Engineer", description: "Designs the load-bearing framework of buildings and bridges so they can safely support weight and withstand forces like wind or earthquakes." },
+      { title: "Geotechnical Engineer", description: "Studies soil and rock conditions to determine how a structure's foundation should be designed." },
+      { title: "Transportation Engineer", description: "Plans and designs roads, highways, and transit systems, often focused on traffic flow and safety." },
+      { title: "Water Resources Engineer", description: "Designs systems for water supply, drainage, flood control, and wastewater treatment." },
+    ],
+    advantages: [
+      "Work has a direct, visible, long-lasting impact on the community you live in",
+      "Demand is tied to essential infrastructure, which tends to need maintenance and upgrades regardless of economic conditions",
+      "A clear path toward professional licensure in many countries, which can bring more independent authority and career stability",
+    ],
+    challenges: [
+      "Projects can take years from design to completion, so you don't always see quick results",
+      "Public-sector work can involve slow bureaucratic processes and political factors outside your control as an engineer",
+      "High stakes — a design error in structural or geotechnical work isn't just costly, it can be dangerous",
+    ],
+    thingsPeopleDislike: [
+      "Government and municipal salaries can lag behind private-sector engineering roles in some regions",
+      "A lot of paperwork, permitting, and regulatory review, especially in public-sector work",
+      "Site visits can mean early mornings, outdoor conditions, and travel to remote sites",
+    ],
+    howCompetitive:
+      "Demand for civil engineers is generally steady, since infrastructure maintenance and public projects don't disappear the way some private-sector work can, but pay and demand vary a lot by region and by whether you're in public or private-sector work. In many countries, becoming a fully licensed civil engineer takes several years of supervised experience after graduating, which affects how quickly you can take on independent design responsibility — research the licensing path and job market in your specific country before making decisions.",
+    beginnerActivities: [
+      "Build a small bridge out of popsicle sticks or spaghetti and see how much weight it can hold before failing",
+      "Look at a local construction site or bridge and try to identify basic structural elements like beams, columns, and trusses",
+      "Try a free online tool that lets you test simple truss or beam designs",
+    ],
+    selfReflectionQuestions: [
+      "Am I interested in projects that take years to finish rather than weeks?",
+      "Do I care about public infrastructure and community impact as much as, or more than, the technical problem-solving?",
+      "Am I comfortable working within strict codes and regulations rather than having more open-ended design freedom?",
+      "Would I want to eventually pursue a professional license, which usually requires years of supervised work experience?",
+    ],
+  },
+  {
+    slug: "biomedical-engineering",
+    name: "Biomedical Engineering",
+    tagline: "Applying engineering principles to biology and medicine — designing the devices, tools, and systems used to diagnose, monitor, and treat the human body.",
+    whatItIs:
+      "Biomedical engineering sits at the intersection of engineering and the life sciences. It covers a wide range of sub-areas — medical devices, imaging technology, prosthetics, biomaterials, tissue engineering, and increasingly health-related software — so what a biomedical engineer actually does day to day varies a lot depending on their specialization.",
+    whatEngineersWorkOn:
+      "Biomedical engineers design and test medical devices and equipment, work on making imaging or diagnostic tools more accurate, and develop materials that are safe to use inside or on the human body — often collaborating closely with doctors, biologists, and regulatory specialists. A bigger part of the job than in most other engineering fields is navigating strict safety testing and regulatory approval before a product can be used on patients.",
+    realWorldExamples: [
+      "Pacemakers and other implantable medical devices",
+      "MRI and CT imaging machines",
+      "Prosthetic limbs and orthopedic implants",
+      "Insulin pumps and other wearable medical devices",
+      "Lab equipment used for diagnostic testing",
+    ],
+    commonMisconceptions: [
+      "That biomedical engineers are doctors or work directly with patients — most work in labs, R&D, or manufacturing, not clinical settings.",
+      "That the field is mostly biology — it's engineering first, and strong math and physics fundamentals are usually just as important as life-science knowledge.",
+      "That entry-level jobs are as widely available as in more established fields like mechanical or electrical engineering — this varies, and it's worth researching carefully (see the competitiveness note below).",
+    ],
+    usefulSubjects: ["Biology", "Chemistry", "Physics", "Calculus"],
+    helpfulSkills: [
+      "Comfort combining engineering fundamentals with biology and physiology concepts",
+      "Careful, detail-oriented documentation — regulatory approval processes require extensive, precise records",
+      "Patience with long development timelines, since medical devices often take years to go from design to market",
+      "Collaboration skills, since projects usually involve engineers, clinicians, and regulatory staff working together",
+    ],
+    typicalProjects: [
+      "Designing and testing a prototype medical device for safety and function",
+      "Analyzing how a material performs when used inside the body (biocompatibility)",
+      "Working through documentation required for regulatory submission",
+      "Running lab experiments to validate how a device or sensor performs",
+    ],
+    typicalWorkday:
+      "A lot of lab-based work — testing prototypes, running experiments, documenting results — combined with time spent on regulatory paperwork and meetings with cross-disciplinary teams like clinicians and quality/regulatory staff. Because medical devices are so strictly regulated, thorough documentation is a bigger part of daily work here than in many other engineering fields.",
+    industries: ["Medical device manufacturing", "Pharmaceuticals", "Hospitals and healthcare systems", "Research institutions", "Diagnostics"],
+    relatedMajors: ["Biomedical Engineering", "Bioengineering", "Chemical Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Medical Device Engineer", description: "Designs and tests devices like pacemakers, insulin pumps, or surgical instruments." },
+      { title: "Clinical Engineer", description: "Manages and maintains medical equipment within a hospital or healthcare system." },
+      { title: "Biomaterials Engineer", description: "Develops materials safe for use inside or on the human body, like implants or coatings." },
+      { title: "Regulatory Affairs Specialist", description: "Manages the testing and documentation process required to get a medical device approved for use — a common path for biomedical engineers who prefer less lab work." },
+    ],
+    advantages: [
+      "Work has a clear, meaningful connection to improving people's health",
+      "Highly interdisciplinary — a good fit if you don't want to choose between engineering and life sciences",
+      "A growing area of medicine as devices, diagnostics, and personalized treatment continue to advance",
+    ],
+    challenges: [
+      "Regulatory approval processes are long and demanding, which can slow down how quickly your work reaches real-world use",
+      "The interdisciplinary nature means a genuinely broad skill set is expected, which can make coursework heavier than more specialized majors",
+      "Entry-level roles can be more competitive relative to some other engineering fields — see the note below",
+    ],
+    thingsPeopleDislike: [
+      "Slow-moving regulatory and approval timelines can be frustrating if you want to see fast results",
+      "Heavy documentation requirements",
+      "Some graduates end up in roles that are only loosely 'biomedical' (like general quality or mechanical engineering roles) because dedicated biomedical positions can be harder to find right out of school",
+    ],
+    howCompetitive:
+      "This is a field where the caveats matter more than most, so treat this as a starting point, not a final answer. Biomedical engineering is a popular major, and it's commonly reported that the number of jobs specifically titled 'biomedical engineer' hasn't always kept pace with how many students graduate with the degree — which is why some graduates move into adjacent roles like quality engineering or regulatory affairs rather than a narrowly 'biomedical' title. This varies significantly by region and specialization and can change over time, so research current, local job market data rather than relying on general reputation.",
+    beginnerActivities: [
+      "Research how a specific medical device, like a pacemaker or insulin pump, actually works",
+      "Try a beginner biology or anatomy resource to see if the life-science side genuinely interests you",
+      "Look into a local science center, hospital volunteer program, or shadowing opportunity to see biomedical equipment in a real setting",
+    ],
+    selfReflectionQuestions: [
+      "Am I equally interested in biology and medicine as I am in traditional engineering, or do I lean heavily toward one?",
+      "Am I okay with long project timelines shaped by regulatory approval, not just technical difficulty?",
+      "Would I be satisfied in an adjacent role, like regulatory affairs or quality engineering, if a narrowly 'biomedical' job isn't available right away?",
+      "Do I want work that's closely tied to healthcare outcomes, even if I'm not working directly with patients?",
+    ],
+  },
+  {
+    slug: "software-engineering",
+    name: "Software Engineering",
+    tagline: "Designing, building, and maintaining the software systems and applications that run almost everything digital.",
+    whatItIs:
+      "Software engineering is about designing, building, testing, and maintaining software — the code behind applications, websites, operating systems, and the systems inside other engineered products, like the control software in a car or a medical device. It's sometimes taught within computer science programs and sometimes as its own major, and the line between 'software engineer,' 'computer scientist,' and 'programmer' is used inconsistently across companies.",
+    whatEngineersWorkOn:
+      "Software engineers write and review code, design how different parts of a system fit together, test software to catch bugs before release, and maintain and improve existing systems — which is a much bigger part of the job than people expect, since most code isn't written from scratch but built on top of or modified within existing systems. A lot of the actual work is reading other people's code, communicating with teammates, and figuring out why something isn't working as expected.",
+    realWorldExamples: [
+      "Mobile apps and websites",
+      "Operating systems and the software running inside consumer devices",
+      "Backend systems that process transactions, like banking or e-commerce platforms",
+      "Embedded software inside cars, appliances, and medical devices",
+      "Developer tools and infrastructure other companies use to build their own software",
+    ],
+    commonMisconceptions: [
+      "That it's mostly about knowing a lot of programming languages — problem-solving and system design matter more than memorizing syntax, and most working engineers use documentation and references constantly.",
+      "That you code independently, all day, every day — most roles involve real time in meetings, code review, planning, and communicating with non-engineers.",
+      "That it's an easy or guaranteed path to a high salary regardless of effort — the hiring market has shifted in recent years and is more competitive than the popular narrative suggests (see the note below).",
+    ],
+    usefulSubjects: ["Any programming or computer science courses available", "Algebra and discrete math, if available", "Logic-based coursework, like formal logic or debate, can help too"],
+    helpfulSkills: [
+      "Breaking large, vague problems into smaller, well-defined steps",
+      "Patience for debugging — most of the job is figuring out why something doesn't work, not writing new code",
+      "Comfort reading and modifying code someone else wrote, since most professional work happens inside existing codebases",
+      "Communication skills, since engineers constantly explain technical decisions to teammates or non-technical stakeholders",
+    ],
+    typicalProjects: [
+      "Building a small app or website from scratch to learn a language or framework",
+      "Fixing a bug in existing code and figuring out what caused it",
+      "Writing tests to make sure a piece of software behaves correctly",
+      "Contributing a small change to an open-source project",
+    ],
+    typicalWorkday:
+      "Mostly at a computer — writing code, reviewing other people's code, attending planning or standup meetings, and researching how to solve a specific technical problem. Contrary to the 'solo genius coder' image, most software engineering is a collaborative, team-based process involving a lot of written and verbal communication.",
+    industries: ["Tech companies", "Finance", "Healthcare", "Gaming", "Any industry with a digital product, which today is most of them"],
+    relatedMajors: ["Computer Science", "Software Engineering", "Computer Engineering"],
+    careerPaths: [
+      { title: "Frontend Engineer", description: "Builds the parts of a website or app that users see and interact with directly." },
+      { title: "Backend Engineer", description: "Builds the server-side systems that handle data, logic, and requests behind the scenes." },
+      { title: "Mobile Engineer", description: "Builds applications specifically for phones and tablets, like iOS or Android apps." },
+      { title: "DevOps / Infrastructure Engineer", description: "Builds and maintains the systems that let other engineers deploy and run software reliably." },
+    ],
+    advantages: [
+      "Skills are broadly transferable across almost every industry, since most companies rely on some software",
+      "Remote work is more common in this field than in most other engineering disciplines",
+      "Relatively fast feedback loops — you can often build and test something yourself without needing expensive equipment or lab access",
+    ],
+    challenges: [
+      "The field changes quickly — tools and best practices considered standard today may be outdated in a few years, so ongoing self-learning is part of the job",
+      "The entry-level hiring market has become noticeably more competitive in recent years (see the note below)",
+      "Sitting at a computer for long stretches can take a physical toll if you don't build in breaks and movement",
+    ],
+    thingsPeopleDislike: [
+      "Constant need to learn new tools and technologies just to keep up",
+      "Meetings and process overhead at larger companies can feel like it slows down actual building",
+      "Job security can feel less stable than people assume — the industry has gone through visible layoff waves in recent years",
+    ],
+    howCompetitive:
+      "This has shifted meaningfully in recent years, so treat older narratives about the field carefully. For a long time, software engineering was seen as a reliably high-demand, high-paying path, but entry-level hiring has become considerably more competitive due to a combination of more graduates entering the field, increased use of AI tools for some coding tasks, and broader tech industry layoffs. It's still a large field with real opportunities, but 'just learn to code' is a much less reliable guarantee than it used to be — research current hiring trends rather than relying on this or older general reputation.",
+    beginnerActivities: [
+      "Try a free beginner coding course — many exist specifically for Python or JavaScript",
+      "Build a very small project, like a simple calculator or to-do list app",
+      "Try a coding practice site to solve small logic puzzles",
+    ],
+    selfReflectionQuestions: [
+      "Do I enjoy the process of debugging — patiently figuring out why something doesn't work?",
+      "Am I comfortable with a field that changes quickly and requires ongoing learning?",
+      "Do I want a highly collaborative role, working closely with a team, rather than working alone most of the time?",
+      "Am I choosing this field because I'm genuinely interested in building things with code, or mainly because of assumptions about salary or job security that may not hold as strongly as they used to?",
+    ],
+  },
 ];
