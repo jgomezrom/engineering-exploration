@@ -2,11 +2,21 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   href?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: "button" | "submit";
 };
 
-export default function Button({ children, variant = "primary", href }: ButtonProps) {
+export default function Button({
+  children,
+  variant = "primary",
+  href,
+  onClick,
+  disabled,
+  type = "button",
+}: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition-colors";
+    "inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-40";
 
   const variantStyles =
     variant === "primary"
@@ -23,5 +33,9 @@ export default function Button({ children, variant = "primary", href }: ButtonPr
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
+      {children}
+    </button>
+  );
 }

@@ -3,8 +3,15 @@ export type Career = {
   description: string;
 };
 
+export type FieldSlug =
+  | "mechanical-engineering"
+  | "electrical-engineering"
+  | "civil-engineering"
+  | "biomedical-engineering"
+  | "software-engineering";
+
 export type EngineeringField = {
-  slug: string;
+  slug: FieldSlug;
   name: string;
   tagline: string;
   whatItIs: string;
@@ -24,4 +31,16 @@ export type EngineeringField = {
   howCompetitive: string;
   beginnerActivities: string[];
   selfReflectionQuestions: string[];
+};
+
+export type QuizOption = {
+  text: string;
+  // Only the fields this option is relevant to need to be listed.
+  points: Partial<Record<FieldSlug, number>>;
+};
+
+export type QuizQuestion = {
+  id: string;
+  prompt: string;
+  options: QuizOption[];
 };
