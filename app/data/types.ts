@@ -28,7 +28,21 @@ export type FieldStats = {
   handsOnWork: Level;
   regulatoryBurden: Level;
   marketUncertainty: Level;
+  coding: Level;
+  outdoorWork: Level;
+  biologyContent: Level;
+  creativeFreedom: Level;
+  teamwork: Level;
+  seeingWorkRealLife: Level;
 };
+
+// The 4 stats shown in each field page's compact "At a Glance" box — kept separate
+// from the full FieldStats so that box doesn't grow every time a new comparison
+// axis is added for the /compare page.
+export type CoreFieldStats = Pick<
+  FieldStats,
+  "mathIntensity" | "handsOnWork" | "regulatoryBurden" | "marketUncertainty"
+>;
 
 // A sourced, dated wage figure — never a number without a citation attached.
 export type SalaryData = {

@@ -136,7 +136,14 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
           </div>
 
           <div className="mt-4">
-            <FieldStatSheet stats={field.stats} />
+            <FieldStatSheet
+              stats={{
+                mathIntensity: field.stats.mathIntensity,
+                handsOnWork: field.stats.handsOnWork,
+                regulatoryBurden: field.stats.regulatoryBurden,
+                marketUncertainty: field.stats.marketUncertainty,
+              }}
+            />
           </div>
         </div>
       </div>

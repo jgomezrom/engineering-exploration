@@ -1,4 +1,4 @@
-import { FieldStats, Level } from "../data/types";
+import { CoreFieldStats, Level } from "../data/types";
 
 const LEVEL_WIDTH: Record<Level, string> = {
   Low: "33%",
@@ -6,7 +6,7 @@ const LEVEL_WIDTH: Record<Level, string> = {
   High: "100%",
 };
 
-const STAT_LABELS: Record<keyof FieldStats, string> = {
+const STAT_LABELS: Record<keyof CoreFieldStats, string> = {
   mathIntensity: "Math & Physics Intensity",
   handsOnWork: "Hands-On / Physical Work",
   regulatoryBurden: "Regulation & Compliance",
@@ -29,8 +29,8 @@ export function StatBar({ label, level }: { label: string; level: Level }) {
   );
 }
 
-export default function FieldStatSheet({ stats }: { stats: FieldStats }) {
-  const keys = Object.keys(stats) as (keyof FieldStats)[];
+export default function FieldStatSheet({ stats }: { stats: CoreFieldStats }) {
+  const keys = Object.keys(stats) as (keyof CoreFieldStats)[];
   return (
     <div className="flex flex-col gap-4">
       {keys.map((key) => (

@@ -45,7 +45,24 @@ export const fields: EngineeringField[] = [
     // handsOnWork: typicalWorkday explicitly frames it as "less building things by hand all day".
     // regulatoryBurden: thingsPeopleDislike notes compliance work "depending on the industry".
     // marketUncertainty: howCompetitive hedges by country/industry but calls demand "strong and stable".
-    stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "Medium", marketUncertainty: "Medium" },
+    // coding: no programming language appears anywhere in this field's text — CAD/simulation software use isn't the same as writing code.
+    // outdoorWork: workdayTimeline is desk, meetings, and shop — no outdoor or field component appears.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: advantages calls the field "extremely broad," spanning "everything from tiny mechanisms... to jet engines," without the code/regulation limits civil or biomedical describe.
+    // teamwork: workdayTimeline gives one of three blocks to "meetings — writing reports, coordinating with the team."
+    // seeingWorkRealLife: advantages explicitly says "you can often see and touch what you designed."
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
     salary: {
       medianAnnual: "$104,110",
       period: "May 2025",
@@ -152,7 +169,24 @@ export const fields: EngineeringField[] = [
   // handsOnWork: typicalWorkday frames it as "a mix" of software, bench testing, and embedded coding.
   // regulatoryBurden: thingsPeopleDislike says compliance is heavy "especially in power or aerospace" — industry-dependent.
   // marketUncertainty: howCompetitive hedges "varies by country and specialization" but calls demand "generally strong".
-  stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "Medium", marketUncertainty: "Medium" },
+  // coding: helpfulSkills calls for "basic programming, since many modern electrical systems include embedded code," and typicalProjects includes "programming a microcontroller."
+  // outdoorWork: no outdoor or field component appears anywhere in this field's text.
+  // biologyContent: no biology or life-science content appears anywhere in this field's text.
+  // creativeFreedom: design work is present but not framed as open-ended the way mechanical's "extremely broad" claim is — rated the same middle level absent a stronger signal either way.
+  // teamwork: whatEngineersWorkOn notes engineers "often work closely with software engineers" — real but a more secondary mention than fields with more explicit collaboration language.
+  // seeingWorkRealLife: challenges says "electricity and signals aren't always visible or intuitive the way mechanical motion is" — real devices result, but the underlying work is explicitly framed as less directly visible.
+  stats: {
+    mathIntensity: "High",
+    handsOnWork: "Medium",
+    regulatoryBurden: "Medium",
+    marketUncertainty: "Medium",
+    coding: "Medium",
+    outdoorWork: "Low",
+    biologyContent: "Low",
+    creativeFreedom: "Medium",
+    teamwork: "Medium",
+    seeingWorkRealLife: "Medium",
+  },
   salary: {
     medianAnnual: "$120,630",
     period: "May 2025",
@@ -260,7 +294,24 @@ export const fields: EngineeringField[] = [
     // handsOnWork: typicalWorkday frames it as "a mix" of office work and site visits, not majority field work.
     // regulatoryBurden: helpfulSkills centers "designing within legal safety requirements"; thingsPeopleDislike cites heavy permitting.
     // marketUncertainty: howCompetitive calls demand "generally steady" but hedges pay/demand "a lot by region".
-    stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "High", marketUncertainty: "Medium" },
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: thingsPeopleDislike explicitly says "site visits can mean early mornings, outdoor conditions, and travel to remote sites."
+    // biologyContent: usefulSubjects lists "environmental science," not biology specifically — no direct biology content appears.
+    // creativeFreedom: selfReflectionQuestions explicitly asks whether you're "comfortable working within strict codes and regulations rather than having more open-ended design freedom."
+    // teamwork: whatEngineersWorkOn says engineers "coordinate closely with architects, contractors, and government agencies," and typicalWorkday adds public meetings with "city officials or community members."
+    // seeingWorkRealLife: advantages explicitly says work "has a direct, visible, long-lasting impact on the community you live in."
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "High",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
     salary: {
       medianAnnual: "$100,840",
       period: "May 2025",
@@ -370,7 +421,24 @@ export const fields: EngineeringField[] = [
     // handsOnWork: typicalWorkday leads with "a lot of lab-based work" as the primary framing.
     // regulatoryBurden: whatEngineersWorkOn calls regulatory approval "a bigger part of the job than in most other engineering fields".
     // marketUncertainty: howCompetitive opens with "the caveats matter more than most" — the most hedged section on the site.
-    stats: { mathIntensity: "Medium", handsOnWork: "High", regulatoryBurden: "High", marketUncertainty: "High" },
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: no outdoor or field component appears anywhere in this field's text — work is lab-, hospital-, and office-based.
+    // biologyContent: usefulSubjects leads with "Biology," and whatItIs calls it "the intersection of engineering and the life sciences."
+    // creativeFreedom: device and biomaterials design is real, but the text centers regulatory process and lab testing more than open-ended design language — rated a middle level absent a stronger signal either way.
+    // teamwork: helpfulSkills explicitly lists "collaboration skills, since projects usually involve engineers, clinicians, and regulatory staff working together."
+    // seeingWorkRealLife: thingsPeopleDislike notes "slow-moving regulatory and approval timelines can be frustrating if you want to see fast results" — real devices do get built, but the text explicitly flags the delay before you see them in use.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "High",
+      marketUncertainty: "High",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "High",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
     salary: {
       medianAnnual: "$109,370",
       period: "May 2025",
@@ -480,7 +548,24 @@ export const fields: EngineeringField[] = [
     // handsOnWork: typicalWorkday opens with "Mostly at a computer" — the lowest physical/lab component of the 5.
     // regulatoryBurden: no regulatory or compliance language appears anywhere in this field's challenges or dislikes.
     // marketUncertainty: howCompetitive says hiring "has shifted meaningfully" and is "considerably more competitive" now.
-    stats: { mathIntensity: "Medium", handsOnWork: "Low", regulatoryBurden: "Low", marketUncertainty: "High" },
+    // coding: the field's entire description centers on writing, reviewing, and maintaining code.
+    // outdoorWork: typicalWorkday opens with "Mostly at a computer" — no outdoor component appears.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: typicalProjects includes building things "from scratch," but whatEngineersWorkOn notes "most code isn't written from scratch but built on top of or modified within existing systems" — rated a middle level given that explicit tension.
+    // teamwork: typicalWorkday states "most software engineering is a collaborative, team-based process," and commonMisconceptions directly debunks the "solo genius coder" image.
+    // seeingWorkRealLife: advantages explicitly cites "relatively fast feedback loops — you can often build and test something yourself."
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Low",
+      regulatoryBurden: "Low",
+      marketUncertainty: "High",
+      coding: "High",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
     salary: {
       medianAnnual: "$135,980",
       period: "May 2025",
