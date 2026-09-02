@@ -22,7 +22,7 @@ export default function Home() {
       </span>
 
       <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl">
-        What kind of engineer do you want to be?
+        What kind of <span className="text-accent">engineer</span> do you want to be?
       </h1>
 
       <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-400 lg:max-w-2xl lg:text-xl">
@@ -46,9 +46,14 @@ export default function Home() {
         <span>5-MIN QUIZ</span>
       </div>
 
-      <div className="mt-20 grid w-full max-w-4xl gap-6 sm:grid-cols-3 lg:max-w-5xl lg:gap-8 xl:max-w-6xl">
+      <div className="mt-12 grid w-full max-w-4xl gap-6 sm:grid-cols-3 lg:max-w-5xl lg:gap-8 xl:max-w-6xl">
   <Card>
-    <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-white">
+    <span className="font-mono text-xs tracking-widest text-neutral-400">01</span>
+    <svg viewBox="0 0 40 40" fill="none" className="mt-2 h-8 w-8 text-primary">
+      <circle cx="20" cy="20" r="16" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M25 15l-3 8-8 3 3-8z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+    <h3 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
       Explore Fields
     </h3>
     <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
@@ -60,7 +65,12 @@ export default function Home() {
   </Card>
 
   <Card>
-    <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-white">
+    <span className="font-mono text-xs tracking-widest text-neutral-400">02</span>
+    <svg viewBox="0 0 40 40" fill="none" className="mt-2 h-8 w-8 text-primary">
+      <rect x="10" y="8" width="20" height="24" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M14 16h12M14 20h12M14 24h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+    <h3 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
       Take the Quiz
     </h3>
     <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
@@ -72,7 +82,11 @@ export default function Home() {
   </Card>
 
   <Card>
-    <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-white">
+    <span className="font-mono text-xs tracking-widest text-neutral-400">03</span>
+    <svg viewBox="0 0 40 40" fill="none" className="mt-2 h-8 w-8 text-primary">
+      <path d="M27 8a6 6 0 0 0-7.75 7.75L9 26l5 5 10.25-10.25A6 6 0 0 0 32 13l-4 4-3-3 4-4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+    <h3 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
       Try a Challenge
     </h3>
     <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
