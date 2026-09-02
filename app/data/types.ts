@@ -174,6 +174,21 @@ export type QuizQuestion = {
   options: QuizOption[];
 };
 
+// A fundamental idea that shows up across multiple fields — kept separate from
+// FieldSlug so a concept can point at several related fields without forcing
+// every field to reference every concept.
+export type ConceptCategory = "Mechanical" | "Electrical" | "Structures & Materials" | "Software & Systems";
+
+export type Concept = {
+  slug: string;
+  name: string;
+  category: ConceptCategory;
+  shortDefinition: string;
+  explanation: string;
+  realWorldExample: string;
+  relatedFields: FieldSlug[];
+};
+
 export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 
 // A broad grouping independent of field, so the challenge library can grow
@@ -195,6 +210,9 @@ export type Challenge = {
   objective: string;
   constraints: string[];
   conceptTaught: string;
+  // Slug of the matching entry in concepts.ts, if one exists, so the mission
+  // page can link straight to a fuller explanation.
+  conceptSlug?: string;
   materials: string[];
   instructions: string[];
   measureResults: string;

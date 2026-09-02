@@ -148,6 +148,14 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
             <p className="mt-2 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
               {challenge.conceptTaught}
             </p>
+            {challenge.conceptSlug && (
+              <Link
+                href={`/concepts?concept=${challenge.conceptSlug}`}
+                className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
+              >
+                Learn more about this concept →
+              </Link>
+            )}
           </div>
         </div>
       </Section>
