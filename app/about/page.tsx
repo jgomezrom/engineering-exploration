@@ -20,10 +20,9 @@ export default function AboutPage() {
 
       <div className="mt-8 flex flex-col gap-6 text-neutral-600 dark:text-neutral-400">
         <p>
-          Engineering Exploration is a personal learning project — a way to figure out how to
-          build a real website while also building something that might actually be useful:
-          honest, no-hype information about what engineers in different fields actually do,
-          day to day.
+          Engineering Exploration is a personal project of mine. It&apos;s meant to give
+          honest, no-hype info about what engineers in different fields actually do, day to
+          day.
         </p>
         <p>
           A lot of career-exploration content out there leans heavily on hype — impressive
