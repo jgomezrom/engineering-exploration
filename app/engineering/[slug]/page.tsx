@@ -6,6 +6,7 @@ import FieldIcon from "../../components/FieldIcon";
 import FieldIllustration from "../../components/FieldIllustration";
 import FieldStatSheet from "../../components/FieldStatSheet";
 import WorkdayTimeline from "../../components/WorkdayTimeline";
+import NextStepsExplorer from "../../components/NextStepsExplorer";
 import { fields } from "../../data/fields";
 
 export function generateStaticParams() {
@@ -220,6 +221,10 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
 
       <Section index={14} title="Questions to Ask Yourself">
         <BulletList items={field.selfReflectionQuestions} />
+      </Section>
+
+      <Section index={15} title="What Can I Do Next?">
+        <NextStepsExplorer nextSteps={field.nextSteps} />
       </Section>
     </main>
   );

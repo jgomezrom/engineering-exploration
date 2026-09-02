@@ -40,6 +40,20 @@ export type SalaryData = {
   note: string;
 };
 
+export type AgeBand = "10-12" | "13-15" | "16-18";
+
+// Concrete next steps for someone at a given age/stage. Availability of clubs and
+// programs varies a lot by school and region, so the wording should hedge
+// ("if available") rather than assume every reader has access to the same things.
+export type NextStepSuggestion = {
+  project: string;
+  tool: string;
+  activity: string;
+  relatedField: FieldSlug;
+};
+
+export type NextSteps = Record<AgeBand, NextStepSuggestion>;
+
 export type EngineeringField = {
   slug: FieldSlug;
   name: string;
@@ -55,6 +69,7 @@ export type EngineeringField = {
   workdayTimeline: WorkdayBlock[];
   stats: FieldStats;
   salary: SalaryData;
+  nextSteps: NextSteps;
   industries: string[];
   relatedMajors: string[];
   careerPaths: Career[];

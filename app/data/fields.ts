@@ -54,6 +54,26 @@ export const fields: EngineeringField[] = [
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Actual pay varies a lot by location, industry, employer, and experience.",
     },
+    nextSteps: {
+      "10-12": {
+        project: "Build a simple catapult or pulley system from household materials and see how far or how much it can move.",
+        tool: "No special tools needed yet — just try building with what's around the house.",
+        activity: "Look for a LEGO robotics or STEM club at school, or a FIRST LEGO League team, if one's available near you.",
+        relatedField: "electrical-engineering",
+      },
+      "13-15": {
+        project: "Design a simple part in a free browser-based CAD tool, then think through how you'd actually build it.",
+        tool: "Tinkercad — free, browser-based, no installation needed.",
+        activity: "Look into a FIRST Tech Challenge or VEX Robotics team at your school, if one exists.",
+        relatedField: "electrical-engineering",
+      },
+      "16-18": {
+        project: "Design and model a more complete part or small mechanism, thinking through tolerances and how it would actually be manufactured.",
+        tool: "Fusion 360 (free for personal/education use) or SolidWorks if your school provides access.",
+        activity: "Look for a pre-college engineering program, a FIRST Robotics Competition team, or a summer engineering camp through a university.",
+        relatedField: "electrical-engineering",
+      },
+    },
     industries: ["Automotive", "Aerospace", "Manufacturing", "Energy", "Robotics", "Consumer products"],
     relatedMajors: ["Mechanical Engineering", "Mechatronics Engineering", "Manufacturing Engineering"],
     careerPaths: [
@@ -140,6 +160,26 @@ export const fields: EngineeringField[] = [
     sourceName: "U.S. Bureau of Labor Statistics",
     sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
     note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. The closely related 'electronics engineer' specialization reports a higher median ($130,220) in the same BLS data, so specialization matters here too.",
+  },
+  nextSteps: {
+    "10-12": {
+      project: "Build a simple circuit with a snap-circuit kit, a battery, and an LED.",
+      tool: "A beginner snap-circuit kit — inexpensive, widely available, no soldering needed.",
+      activity: "Look for a school STEM club or a beginner electronics workshop at a local library or maker space, if one's available.",
+      relatedField: "software-engineering",
+    },
+    "13-15": {
+      project: "Try building a basic LED circuit, then swap the resistor and see what changes.",
+      tool: "A free online circuit simulator like Tinkercad Circuits, so you can test ideas before buying parts.",
+      activity: "Look into a FIRST Tech Challenge team or a robotics club that involves wiring and electronics, if available at your school.",
+      relatedField: "software-engineering",
+    },
+    "16-18": {
+      project: "Try a beginner Arduino project, like making an LED blink on a schedule or reading a sensor.",
+      tool: "Arduino — a widely used, beginner-friendly microcontroller platform.",
+      activity: "Look for a pre-college engineering program or a summer electronics camp, and check whether your school offers AP Physics with an electricity and magnetism unit.",
+      relatedField: "software-engineering",
+    },
   },
   industries: ["Power/energy", "Consumer electronics", "Telecommunications", "Automotive", "Aerospace", "Semiconductor manufacturing"],
   relatedMajors: ["Electrical Engineering", "Electronics Engineering", "Computer Engineering"],
@@ -228,6 +268,26 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Public-sector pay in particular can differ meaningfully from private-sector pay within this same field.",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Build a small bridge out of popsicle sticks or spaghetti and see how much weight it can hold.",
+        tool: "No special tools needed yet — just household building materials.",
+        activity: "Look for a STEM club at school, or see if a local library or science museum runs a bridge-building or structures workshop.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Try a free online tool that lets you test simple truss or beam designs before building anything physical.",
+        tool: "PhET Interactive Simulations (University of Colorado Boulder) — free, includes forces and structures topics.",
+        activity: "Look into a Science Olympiad team, which often has bridge-building or structural-engineering events.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Pick a bridge or building you actually pass by and research, from public sources, roughly how it was designed to handle its loads.",
+        tool: "Basic CAD or drafting software, if your school offers a drafting or engineering design class.",
+        activity: "Look into a pre-college civil engineering or construction program, or a summer program run by a university engineering department.",
+        relatedField: "mechanical-engineering",
+      },
     },
     industries: ["Government and municipal", "Construction", "Environmental consulting", "Transportation", "Water resources", "Real estate development"],
     relatedMajors: ["Civil Engineering", "Structural Engineering", "Environmental Engineering"],
@@ -319,6 +379,26 @@ export const fields: EngineeringField[] = [
       sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm",
       note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Given the job-market caveats in this field's competitiveness section above, treat this figure as background context, not a guarantee.",
     },
+    nextSteps: {
+      "10-12": {
+        project: "Research how a device you or someone you know actually uses (a pacemaker, hearing aid, or insulin pump) works, and explain it in your own words.",
+        tool: "No special tools needed yet — just curiosity and reliable sources like library books or trusted science sites.",
+        activity: "Look for a science club at school, or see if a local science museum has a health or medical technology exhibit.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Try a beginner biology resource to see whether the life-science side genuinely interests you, not just the engineering side.",
+        tool: "A free, reputable biology resource (like Khan Academy's biology content) to test your interest before committing coursework time.",
+        activity: "Look into a HOSA (Health Occupations Students of America) chapter at your school, if one exists — it covers health careers broadly, not just biomedical engineering.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Look into whether your school or a nearby hospital offers volunteering, shadowing, or a biomedical engineering summer program.",
+        tool: "None specific yet — this stage is more about exposure to the field than a particular tool.",
+        activity: "Look for a HOSA chapter, a pre-college biomedical engineering program, or a hospital's teen volunteer program.",
+        relatedField: "mechanical-engineering",
+      },
+    },
     industries: ["Medical device manufacturing", "Pharmaceuticals", "Hospitals and healthcare systems", "Research institutions", "Diagnostics"],
     relatedMajors: ["Biomedical Engineering", "Bioengineering", "Chemical Engineering (some overlap)"],
     careerPaths: [
@@ -408,6 +488,26 @@ export const fields: EngineeringField[] = [
       sourceName: "U.S. Bureau of Labor Statistics",
       sourceUrl: "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
       note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region. Given this field's own hiring-market caveats above, a high historical median doesn't guarantee current entry-level outcomes.",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Try Scratch to build a very simple animation or game — no typing real code required.",
+        tool: "Scratch — free, made by MIT, designed specifically for beginners.",
+        activity: "Look for a school coding club, or see if your local library runs a beginner coding program.",
+        relatedField: "electrical-engineering",
+      },
+      "13-15": {
+        project: "Try a free beginner coding course and build one small project, like a calculator or a to-do list.",
+        tool: "A free beginner course in Python, since it's commonly taught first.",
+        activity: "Look into a school coding club or a local chapter of a beginner coding organization, if available.",
+        relatedField: "electrical-engineering",
+      },
+      "16-18": {
+        project: "Contribute a small change to a real open-source project, or build a bigger personal project and publish it.",
+        tool: "GitHub — the standard place software engineers store and share code.",
+        activity: "Check whether your school offers AP Computer Science, and look into a summer coding program or internship if one's available.",
+        relatedField: "electrical-engineering",
+      },
     },
     industries: ["Tech companies", "Finance", "Healthcare", "Gaming", "Any industry with a digital product, which today is most of them"],
     relatedMajors: ["Computer Science", "Software Engineering", "Computer Engineering"],
