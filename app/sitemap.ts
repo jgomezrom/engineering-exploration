@@ -2,13 +2,13 @@ import type { MetadataRoute } from "next";
 import { fields } from "./data/fields";
 import { challenges } from "./data/challenges";
 
-// NEXT_PUBLIC_SITE_URL must be set (in Vercel project settings) to your real production
-// domain. "engineering-exploration.vercel.app" is NOT this project — that name was already
-// taken by an unrelated site, so don't reuse it as a fallback here.
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+// Verified working production domain as of the last deployment check. If you add a
+// custom domain later, set NEXT_PUBLIC_SITE_URL in Vercel project settings to override
+// this — that always takes priority over the fallback below.
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://engineering-exploration-two.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/explore", "/quiz", "/challenges"].map((path) => ({
+  const staticRoutes = ["", "/explore", "/quiz", "/challenges", "/compare", "/about"].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
   }));
