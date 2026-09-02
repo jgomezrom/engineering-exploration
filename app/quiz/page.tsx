@@ -216,6 +216,13 @@ export default function QuizPage() {
         <RadarChart results={results} />
       </div>
 
+      {topMatches.length === 0 && (
+        <p className="mt-10 text-sm text-neutral-500 dark:text-neutral-400">
+          No answers were scored, so there&apos;s no match to show yet — try taking the quiz
+          again and picking an answer for each question.
+        </p>
+      )}
+
       <div className="mt-10 flex flex-col gap-4">
         {topMatches.map((result) => {
           const field = fields.find((f) => f.slug === result.slug)!;

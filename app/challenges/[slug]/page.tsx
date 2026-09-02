@@ -73,7 +73,11 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
     notFound();
   }
 
-  const field = fields.find((f) => f.slug === challenge.field)!;
+  const field = fields.find((f) => f.slug === challenge.field);
+
+  if (!field) {
+    notFound();
+  }
 
   return (
     <main className="relative mx-auto max-w-3xl px-6 py-16">
