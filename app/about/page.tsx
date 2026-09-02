@@ -25,15 +25,15 @@ export default function AboutPage() {
           day.
         </p>
         <p>
-          A lot of career-exploration content out there leans heavily on hype — impressive
-          job titles, big salary numbers, and vague inspirational language that doesn&apos;t
+          A lot of career-exploration content out there leans heavily on hype. Impressive
+          job titles, big salary numbers, vague inspirational language that doesn&apos;t
           tell you much about what the work is actually like. This site tries to do the
           opposite: real day-to-day descriptions, honest trade-offs, and clear flags whenever
           something is uncertain or worth double-checking rather than presenting it as settled
           fact.
         </p>
         <p>
-          I built this because I remember being in that exact spot back in high school —
+          I built this because I remember being in that exact spot back in high school,
           looking at a long list of engineering majors and having no real idea what any of
           them actually meant day to day. Most of what I found online was either a vague list
           of job titles or straight-up recruiting copy. I wanted to build the resource I wish
@@ -42,7 +42,7 @@ export default function AboutPage() {
         </p>
         <p>
           This site was built by Jaime Gomez, a student at MSU. It&apos;s not affiliated with
-          MSU, any other university, or any engineering organization — just one student&apos;s
+          MSU, any other university, or any engineering organization. Just one student&apos;s
           attempt to put something clear and useful together. If something here reads as
           inaccurate or outdated, that&apos;s worth knowing, since this is maintained by a
           student, not a career-counseling professional.
