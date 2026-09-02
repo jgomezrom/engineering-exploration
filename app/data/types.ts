@@ -15,7 +15,18 @@ export type FieldSlug =
   | "environmental-engineering"
   | "industrial-engineering"
   | "materials-engineering"
-  | "robotics-engineering";
+  | "robotics-engineering"
+  | "nuclear-engineering"
+  | "petroleum-engineering"
+  | "agricultural-engineering"
+  | "architectural-engineering"
+  | "automotive-engineering"
+  | "manufacturing-engineering"
+  | "systems-engineering"
+  | "marine-engineering"
+  | "structural-engineering"
+  | "energy-engineering"
+  | "semiconductor-engineering";
 
 export type Level = "Low" | "Medium" | "High";
 
@@ -109,6 +120,24 @@ export type EngineeringField = {
   howCompetitive: string;
   beginnerActivities: string[];
   selfReflectionQuestions: string[];
+};
+
+// A lighter-weight entry for a field that doesn't yet have the full research
+// depth of EngineeringField (Day in the Life, full stats, next steps, etc.).
+// Salary is optional and only ever a real, sourced figure — when a field isn't
+// tracked as its own government occupational category, salaryNote explains
+// that honestly and points to relatedField's page for sourced data instead of
+// approximating or borrowing a number that isn't really about this field.
+export type FieldStub = {
+  slug: FieldSlug;
+  name: string;
+  tagline: string;
+  whatItIs: string;
+  realWorldExamples: string[];
+  relatedMajors: string[];
+  relatedField: FieldSlug;
+  salary?: SalaryData;
+  salaryNote?: string;
 };
 
 // A small, fixed vocabulary of interest themes used to explain quiz results in

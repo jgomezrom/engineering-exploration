@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { fields } from "./data/fields";
+import { fieldStubs } from "./data/fieldStubs";
 import { challenges } from "./data/challenges";
 
 // Verified working production domain as of the last deployment check. If you add a
@@ -22,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const fieldRoutes = fields.map((field) => ({
+  const fieldRoutes = [...fields, ...fieldStubs].map((field) => ({
     url: `${baseUrl}/engineering/${field.slug}`,
     lastModified: new Date(),
   }));

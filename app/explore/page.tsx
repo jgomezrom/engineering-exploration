@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "../components/Card";
 import { fields } from "../data/fields";
+import { fieldStubs } from "../data/fieldStubs";
 import FieldIcon from "../components/FieldIcon";
 
 function joinNames(names: string[]) {
@@ -49,6 +50,39 @@ export default function ExplorePage() {
           </Link>
         ))}
       </div>
+
+      {fieldStubs.length > 0 && (
+        <div className="mt-16 border-t border-neutral-900/10 pt-10 dark:border-white/10">
+          <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
+            More fields, in brief
+          </h2>
+          <p className="mt-1 max-w-xl text-sm text-neutral-600 dark:text-neutral-400">
+            Shorter overviews — real and sourced, but without the full day-in-the-life,
+            comparison stats, or next steps the fields above have.
+          </p>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {fieldStubs.map((stub) => (
+              <Link key={stub.slug} href={`/engineering/${stub.slug}`}>
+                <Card>
+                  <div className="flex items-center justify-between">
+                    <FieldIcon slug={stub.slug} className="h-8 w-8 text-primary" />
+                    <span className="rounded-full bg-neutral-100 px-3 py-1 font-mono text-xs uppercase tracking-wide text-neutral-500 dark:bg-neutral-900 dark:text-neutral-400">
+                      Brief overview
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-base font-semibold text-neutral-900 dark:text-white">
+                    {stub.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+                    {stub.tagline}
+                  </p>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </main>
   );
 }
