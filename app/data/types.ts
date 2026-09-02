@@ -248,6 +248,8 @@ export type Challenge = {
   // Slug of the matching entry in concepts.ts, if one exists, so the mission
   // page can link straight to a fuller explanation.
   conceptSlug?: string;
+  // Path to a matching interactive simulation under /simulations, if one exists.
+  simulationHref?: string;
   materials: string[];
   instructions: string[];
   measureResults: string;

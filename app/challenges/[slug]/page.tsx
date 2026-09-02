@@ -148,14 +148,24 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
             <p className="mt-2 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
               {challenge.conceptTaught}
             </p>
-            {challenge.conceptSlug && (
-              <Link
-                href={`/concepts?concept=${challenge.conceptSlug}`}
-                className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
-              >
-                Learn more about this concept →
-              </Link>
-            )}
+            <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1">
+              {challenge.conceptSlug && (
+                <Link
+                  href={`/concepts?concept=${challenge.conceptSlug}`}
+                  className="inline-block text-sm font-medium text-primary hover:underline"
+                >
+                  Learn more about this concept →
+                </Link>
+              )}
+              {challenge.simulationHref && (
+                <Link
+                  href={challenge.simulationHref}
+                  className="inline-block text-sm font-medium text-primary hover:underline"
+                >
+                  Try the interactive simulator →
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </Section>

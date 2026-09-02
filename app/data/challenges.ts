@@ -19,6 +19,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Levers and stored energy — how arm length, pivot position, and rubber-band tension change how much force gets transferred to the launched object.",
     conceptSlug: "torque",
+    simulationHref: "/simulations",
     materials: [
       "About 10 popsicle sticks (craft sticks)",
       "6–8 rubber bands",

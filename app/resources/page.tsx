@@ -67,6 +67,18 @@ const RESOURCES = [
       </svg>
     ),
   },
+  {
+    href: "/simulations",
+    title: "Lever & Torque Simulator",
+    description: "Adjust weight and distance on a lever and watch it balance in real time, with the math explained.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+        <path d="M8 28h24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M14 28l6-16 6 16" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <circle cx="20" cy="12" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+    ),
+  },
 ];
 
 export default function ResourcesPage() {
