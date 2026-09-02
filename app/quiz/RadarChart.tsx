@@ -6,24 +6,38 @@ import { FieldSlug } from "../data/types";
 // until the quiz is expanded to cover it.
 const FIELD_ORDER: FieldSlug[] = [
   "mechanical-engineering",
+  "aerospace-engineering",
   "electrical-engineering",
+  "computer-engineering",
   "civil-engineering",
+  "environmental-engineering",
   "biomedical-engineering",
+  "chemical-engineering",
   "software-engineering",
+  "industrial-engineering",
+  "materials-engineering",
+  "robotics-engineering",
 ];
 
 const FIELD_LABELS: Partial<Record<FieldSlug, string>> = {
   "mechanical-engineering": "Mechanical",
+  "aerospace-engineering": "Aerospace",
   "electrical-engineering": "Electrical",
+  "computer-engineering": "Computer",
   "civil-engineering": "Civil",
+  "environmental-engineering": "Enviro",
   "biomedical-engineering": "Biomedical",
+  "chemical-engineering": "Chemical",
   "software-engineering": "Software",
+  "industrial-engineering": "Industrial",
+  "materials-engineering": "Materials",
+  "robotics-engineering": "Robotics",
 };
 
-const SIZE = 360;
+const SIZE = 460;
 const CENTER = SIZE / 2;
-const MAX_RADIUS = 95;
-const LABEL_RADIUS_FACTOR = 1.32;
+const MAX_RADIUS = 130;
+const LABEL_RADIUS_FACTOR = 1.3;
 const GRID_LEVELS = [0.25, 0.5, 0.75, 1];
 
 function pointAt(index: number, total: number, radiusFraction: number) {

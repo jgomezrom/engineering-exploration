@@ -73,7 +73,7 @@ export default function QuizPage() {
         <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
           <FieldIcon slug="biomedical-engineering" className="h-8 w-8 text-primary/40" />
           <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
-            {quizQuestions.length} QUESTIONS · 5 FIELDS
+            {quizQuestions.length} QUESTIONS · {fields.length} FIELDS
           </span>
         </div>
 
@@ -98,7 +98,7 @@ export default function QuizPage() {
           ))}
         </div>
         <p className="mt-3 font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
-          Scored against all 5 fields
+          Scored against all {fields.length} fields
         </p>
 
         <div className="mt-16 grid w-full max-w-3xl gap-6 sm:grid-cols-3">
@@ -118,7 +118,7 @@ export default function QuizPage() {
               See your match %
             </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              A radar chart shows how you compare across all 5 fields, not just a single verdict.
+              A radar chart shows how you compare across all {fields.length} fields, not just a single verdict.
             </p>
           </Card>
           <Card>
@@ -336,7 +336,7 @@ export default function QuizPage() {
 
       <div className="mt-12 border-t border-neutral-900/10 pt-8 dark:border-white/10">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-          All 5 fields, ranked
+          All {results.length} fields, ranked
         </h2>
         <div className="mt-4 flex flex-col gap-3">
           {results.map((result) => {
