@@ -32,46 +32,48 @@ export default function Home() {
       <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
       <span className="pointer-events-none absolute bottom-10 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-primary/30 lg:block" />
 
-      <div className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
-        <FieldIcon slug="mechanical-engineering" className="h-8 w-8 text-primary/40" />
-        <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
-          ENGINEERING EXPLORATION
+      <div className="relative flex w-full flex-col items-center">
+        <div className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
+          <FieldIcon slug="mechanical-engineering" className="h-8 w-8 text-primary/40" />
+          <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
+            ENGINEERING EXPLORATION
+          </span>
+        </div>
+        <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
+          <FieldIcon slug="electrical-engineering" className="h-8 w-8 text-primary/40" />
+          <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
+            {String(fields.length).padStart(2, "0")} FIELDS · ∞ PATHS
+          </span>
+        </div>
+
+        <span className="mb-4 rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+          For curious minds
         </span>
-      </div>
-      <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
-        <FieldIcon slug="electrical-engineering" className="h-8 w-8 text-primary/40" />
-        <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
-          {String(fields.length).padStart(2, "0")} FIELDS · ∞ PATHS
-        </span>
-      </div>
 
-      <span className="mb-4 rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
-        For curious minds
-      </span>
+        <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl 2xl:text-7xl">
+          What kind of <span className="text-accent">engineer</span> do you want to be?
+        </h1>
 
-      <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl 2xl:text-7xl">
-        What kind of <span className="text-accent">engineer</span> do you want to be?
-      </h1>
+        <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-400 lg:max-w-2xl lg:text-xl 2xl:max-w-3xl">
+          Explore what engineers actually do — the real stuff, not just the highlight reel — and find fields worth getting curious about. No pressure to already know what you want to be.
+        </p>
 
-      <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-400 lg:max-w-2xl lg:text-xl 2xl:max-w-3xl">
-        Explore what engineers actually do — the real stuff, not just the highlight reel — and find fields worth getting curious about. No pressure to already know what you want to be.
-      </p>
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <Button href="/explore" variant="primary">
+            Explore Engineering Fields
+          </Button>
+          <Button href="/quiz" variant="secondary">
+            Take the Interest Quiz
+          </Button>
+        </div>
 
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-        <Button href="/explore" variant="primary">
-          Explore Engineering Fields
-        </Button>
-        <Button href="/quiz" variant="secondary">
-          Take the Interest Quiz
-        </Button>
-      </div>
-
-      <div className="mt-16 hidden w-full max-w-3xl items-center justify-center gap-8 border-y border-neutral-900/10 py-6 font-mono text-sm text-neutral-600 dark:border-white/10 dark:text-neutral-400 lg:flex 2xl:max-w-4xl">
-        <span>{fields.length} FIELDS</span>
-        <span className="h-1 w-1 rounded-full bg-neutral-400" />
-        <span>{challenges.length} CHALLENGES</span>
-        <span className="h-1 w-1 rounded-full bg-neutral-400" />
-        <span>5-MIN QUIZ</span>
+        <div className="mt-16 hidden w-full max-w-3xl items-center justify-center gap-8 border-y border-neutral-900/10 py-6 font-mono text-sm text-neutral-600 dark:border-white/10 dark:text-neutral-400 lg:flex 2xl:max-w-4xl">
+          <span>{fields.length} FIELDS</span>
+          <span className="h-1 w-1 rounded-full bg-neutral-400" />
+          <span>{challenges.length} CHALLENGES</span>
+          <span className="h-1 w-1 rounded-full bg-neutral-400" />
+          <span>5-MIN QUIZ</span>
+        </div>
       </div>
 
       <div className="mt-12 grid w-full max-w-4xl items-center gap-6 sm:grid-cols-[1fr_auto_1fr_auto_1fr] lg:max-w-5xl lg:gap-4 xl:max-w-6xl 2xl:max-w-7xl">
