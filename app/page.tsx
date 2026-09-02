@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import FieldIcon from "./components/FieldIcon";
+import CuriosityExplorer from "./components/CuriosityExplorer";
 import { fields } from "./data/fields";
 import { challenges } from "./data/challenges";
 
@@ -113,6 +114,22 @@ export default function Home() {
     </Link>
   </Card>
 </div>
+
+      <div className="mt-20 w-full max-w-3xl border-t border-neutral-900/10 pt-16 text-center dark:border-white/10">
+        <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+          Not sure where to start?
+        </span>
+        <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
+          What are you into?
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-neutral-600 dark:text-neutral-400">
+          You don&apos;t need to already know engineering vocabulary. Pick something
+          you&apos;re curious about and see which fields actually connect to it.
+        </p>
+        <div className="mt-8">
+          <CuriosityExplorer />
+        </div>
+      </div>
     </main>
   );
 }
