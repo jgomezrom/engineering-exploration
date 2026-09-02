@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Button from "../components/Button";
 import { careerComparisons } from "../data/careerComparisons";
 import { fields } from "../data/fields";
 
@@ -69,12 +69,11 @@ export default function VsPage() {
               </div>
 
               {field && (
-                <Link
-                  href={`/engineering/${field.slug}`}
-                  className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
-                >
-                  More on {field.name} →
-                </Link>
+                <div className="mt-5">
+                  <Button href={`/engineering/${field.slug}`} variant="secondary">
+                    More on {field.name} →
+                  </Button>
+                </div>
               )}
             </div>
           );
