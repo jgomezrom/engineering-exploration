@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/design-process",
     "/concepts",
     "/vs",
+    "/math",
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

@@ -98,7 +98,12 @@ export default function ComparePage() {
         What the work is actually like
       </h2>
       <p className="mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-        The things you&apos;re more likely to actually care about when picking a field.
+        The things you&apos;re more likely to actually care about when picking a field. Worried
+        about the Math Intensity row specifically?{" "}
+        <Link href="/math" className="font-medium text-primary hover:underline">
+          Here&apos;s an honest answer, plus a course roadmap
+        </Link>
+        .
       </p>
 
       <div className="mt-6 overflow-x-auto">

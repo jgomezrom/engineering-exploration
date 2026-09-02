@@ -200,6 +200,30 @@ export type CareerComparison = {
   relatedField: FieldSlug;
 };
 
+// Course-planning reference content for the "Do I have to be good at math?"
+// page. Course names are real, standard offerings (AP is U.S.-specific, IB is
+// used at some schools internationally) — availability always varies by
+// school, so copy using these should keep that hedged rather than assumed.
+export type CourseSubject = {
+  subject: string;
+  standard: string[];
+  advanced: string[];
+  note?: string;
+};
+
+export type FieldCourseFocus = {
+  fieldSlug: FieldSlug;
+  priorityCourses: string[];
+};
+
+export type TutoringResourceType = "Free" | "Low-cost or paid" | "Competition & enrichment";
+
+export type TutoringResource = {
+  name: string;
+  type: TutoringResourceType;
+  description: string;
+};
+
 export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 
 // A broad grouping independent of field, so the challenge library can grow
