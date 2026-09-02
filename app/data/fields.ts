@@ -35,6 +35,17 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "A lot of the job is at a computer — running simulations, reviewing designs, writing reports, and going to meetings — mixed with time in a lab or shop testing physical prototypes. It's less 'building things by hand all day' and more 'solving problems, some of which involve hands-on testing.'",
+    workdayTimeline: [
+      { label: "At a desk", detail: "Running simulations and reviewing designs" },
+      { label: "Meetings", detail: "Writing reports, coordinating with the team" },
+      { label: "In the shop", detail: "Testing physical prototypes" },
+    ],
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: usefulSubjects leads with "Physics (especially mechanics)" and "Calculus".
+    // handsOnWork: typicalWorkday explicitly frames it as "less building things by hand all day".
+    // regulatoryBurden: thingsPeopleDislike notes compliance work "depending on the industry".
+    // marketUncertainty: howCompetitive hedges by country/industry but calls demand "strong and stable".
+    stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "Medium", marketUncertainty: "Medium" },
     industries: ["Automotive", "Aerospace", "Manufacturing", "Energy", "Robotics", "Consumer products"],
     relatedMajors: ["Mechanical Engineering", "Mechatronics Engineering", "Manufacturing Engineering"],
     careerPaths: [
@@ -104,6 +115,16 @@ export const fields: EngineeringField[] = [
   ],
   typicalWorkday:
     "Often a mix of circuit design software, testing equipment (like oscilloscopes and multimeters), and — in many roles — writing embedded software. Debugging a circuit that isn't working as expected is a very normal, recurring part of the job.",
+  workdayTimeline: [
+    { label: "Circuit design", detail: "Working in circuit design software" },
+    { label: "On the bench", detail: "Using oscilloscopes and multimeters to test" },
+    { label: "Debugging", detail: "Figuring out why a circuit isn't behaving as expected" },
+  ],
+  // mathIntensity: usefulSubjects leads with physics/calculus; helpfulSkills calls for "comfort with abstract math".
+  // handsOnWork: typicalWorkday frames it as "a mix" of software, bench testing, and embedded coding.
+  // regulatoryBurden: thingsPeopleDislike says compliance is heavy "especially in power or aerospace" — industry-dependent.
+  // marketUncertainty: howCompetitive hedges "varies by country and specialization" but calls demand "generally strong".
+  stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "Medium", marketUncertainty: "Medium" },
   industries: ["Power/energy", "Consumer electronics", "Telecommunications", "Automotive", "Aerospace", "Semiconductor manufacturing"],
   relatedMajors: ["Electrical Engineering", "Electronics Engineering", "Computer Engineering"],
   careerPaths: [
@@ -174,6 +195,16 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "A mix of office design work — running structural or hydraulic calculations, reviewing drawings, writing reports — and site visits to check on active construction or inspect existing infrastructure. Public-sector civil engineers often spend real time in meetings with city officials or community members, since infrastructure projects are usually publicly funded and publicly reviewed.",
+    workdayTimeline: [
+      { label: "Office design work", detail: "Running calculations, reviewing drawings" },
+      { label: "Site visits", detail: "Checking on construction or inspecting infrastructure" },
+      { label: "Public meetings", detail: "Meeting with city officials or community members" },
+    ],
+    // mathIntensity: usefulSubjects leads with "Physics (especially statics and mechanics)" and calculus.
+    // handsOnWork: typicalWorkday frames it as "a mix" of office work and site visits, not majority field work.
+    // regulatoryBurden: helpfulSkills centers "designing within legal safety requirements"; thingsPeopleDislike cites heavy permitting.
+    // marketUncertainty: howCompetitive calls demand "generally steady" but hedges pay/demand "a lot by region".
+    stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "High", marketUncertainty: "Medium" },
     industries: ["Government and municipal", "Construction", "Environmental consulting", "Transportation", "Water resources", "Real estate development"],
     relatedMajors: ["Civil Engineering", "Structural Engineering", "Environmental Engineering"],
     careerPaths: [
@@ -246,6 +277,16 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "A lot of lab-based work — testing prototypes, running experiments, documenting results — combined with time spent on regulatory paperwork and meetings with cross-disciplinary teams like clinicians and quality/regulatory staff. Because medical devices are so strictly regulated, thorough documentation is a bigger part of daily work here than in many other engineering fields.",
+    workdayTimeline: [
+      { label: "In the lab", detail: "Testing prototypes and running experiments" },
+      { label: "Documentation", detail: "Regulatory paperwork and precise records" },
+      { label: "Cross-team meetings", detail: "Working with clinicians and regulatory staff" },
+    ],
+    // mathIntensity: usefulSubjects splits evenly across biology, chemistry, physics, and calculus — not math-first.
+    // handsOnWork: typicalWorkday leads with "a lot of lab-based work" as the primary framing.
+    // regulatoryBurden: whatEngineersWorkOn calls regulatory approval "a bigger part of the job than in most other engineering fields".
+    // marketUncertainty: howCompetitive opens with "the caveats matter more than most" — the most hedged section on the site.
+    stats: { mathIntensity: "Medium", handsOnWork: "High", regulatoryBurden: "High", marketUncertainty: "High" },
     industries: ["Medical device manufacturing", "Pharmaceuticals", "Hospitals and healthcare systems", "Research institutions", "Diagnostics"],
     relatedMajors: ["Biomedical Engineering", "Bioengineering", "Chemical Engineering (some overlap)"],
     careerPaths: [
@@ -318,6 +359,16 @@ export const fields: EngineeringField[] = [
     ],
     typicalWorkday:
       "Mostly at a computer — writing code, reviewing other people's code, attending planning or standup meetings, and researching how to solve a specific technical problem. Contrary to the 'solo genius coder' image, most software engineering is a collaborative, team-based process involving a lot of written and verbal communication.",
+    workdayTimeline: [
+      { label: "Writing code", detail: "Building and reviewing other people's code" },
+      { label: "Team meetings", detail: "Planning or standup meetings" },
+      { label: "Problem-solving", detail: "Researching how to solve a specific technical issue" },
+    ],
+    // mathIntensity: usefulSubjects lists "Algebra and discrete math, if available" — present but hedged, not central.
+    // handsOnWork: typicalWorkday opens with "Mostly at a computer" — the lowest physical/lab component of the 5.
+    // regulatoryBurden: no regulatory or compliance language appears anywhere in this field's challenges or dislikes.
+    // marketUncertainty: howCompetitive says hiring "has shifted meaningfully" and is "considerably more competitive" now.
+    stats: { mathIntensity: "Medium", handsOnWork: "Low", regulatoryBurden: "Low", marketUncertainty: "High" },
     industries: ["Tech companies", "Finance", "Healthcare", "Gaming", "Any industry with a digital product, which today is most of them"],
     relatedMajors: ["Computer Science", "Software Engineering", "Computer Engineering"],
     careerPaths: [

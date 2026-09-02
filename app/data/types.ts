@@ -10,6 +10,26 @@ export type FieldSlug =
   | "biomedical-engineering"
   | "software-engineering";
 
+export type Level = "Low" | "Medium" | "High";
+
+// A snapshot of a typical workday as a short sequence of labeled blocks, not
+// literal clock times — the field descriptions don't specify hours, so this
+// stays honest about being a rough sequence rather than a precise schedule.
+export type WorkdayBlock = {
+  label: string;
+  detail: string;
+};
+
+// Traceable, qualitative reads of each field's own written content (not
+// invented scores) — see the comment above each field's `stats` in fields.ts
+// for exactly which sentence each rating comes from.
+export type FieldStats = {
+  mathIntensity: Level;
+  handsOnWork: Level;
+  regulatoryBurden: Level;
+  marketUncertainty: Level;
+};
+
 export type EngineeringField = {
   slug: FieldSlug;
   name: string;
@@ -22,6 +42,8 @@ export type EngineeringField = {
   helpfulSkills: string[];
   typicalProjects: string[];
   typicalWorkday: string;
+  workdayTimeline: WorkdayBlock[];
+  stats: FieldStats;
   industries: string[];
   relatedMajors: string[];
   careerPaths: Career[];

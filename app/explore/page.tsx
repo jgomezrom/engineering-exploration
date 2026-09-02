@@ -21,7 +21,11 @@ export default function ExplorePage() {
         Explore Engineering Fields
       </h1>
       <p className="mt-2 max-w-xl text-neutral-600 dark:text-neutral-400">
-        Click into any field below to see what engineers in that area actually do.
+        Click into any field below to see what engineers in that area actually do, or{" "}
+        <Link href="/compare" className="font-medium text-primary hover:underline">
+          compare all 5 side by side
+        </Link>
+        .
       </p>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

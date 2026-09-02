@@ -3,6 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Card from "../../components/Card";
 import FieldIcon from "../../components/FieldIcon";
+import FieldIllustration from "../../components/FieldIllustration";
+import FieldStatSheet from "../../components/FieldStatSheet";
+import WorkdayTimeline from "../../components/WorkdayTimeline";
 import { fields } from "../../data/fields";
 
 export function generateStaticParams() {
@@ -99,6 +102,20 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
       </h1>
       <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">{field.tagline}</p>
 
+      <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
+          <FieldIllustration slug={field.slug} className="h-auto w-full text-primary" />
+        </div>
+        <div className="border border-neutral-900/10 p-6 dark:border-white/10">
+          <span className="font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+            At a Glance
+          </span>
+          <div className="mt-4">
+            <FieldStatSheet stats={field.stats} />
+          </div>
+        </div>
+      </div>
+
       <Section index={1} title="What It Is">
         <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           {field.whatItIs}
@@ -120,9 +137,7 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
       </Section>
 
       <Section index={5} title="A Typical Workday">
-        <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
-          {field.typicalWorkday}
-        </p>
+        <WorkdayTimeline blocks={field.workdayTimeline} />
       </Section>
 
       <Section index={6} title="Typical Projects">
