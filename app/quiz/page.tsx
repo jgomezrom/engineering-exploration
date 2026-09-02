@@ -370,6 +370,22 @@ export default function QuizPage() {
           Retake the quiz
         </Button>
       </div>
+
+      <div className="mt-12 border-t border-neutral-900/10 pt-8 dark:border-white/10">
+        <h2 className="text-sm font-semibold text-neutral-900 dark:text-white">
+          Curious about fields like nuclear, petroleum, or marine engineering?
+        </h2>
+        <p className="mt-2 max-w-xl text-sm text-neutral-600 dark:text-neutral-400">
+          Those fields don&apos;t have the depth yet to fit into the scoring above, so there&apos;s
+          a separate, more informal quiz just for them.
+        </p>
+        <Link
+          href="/quiz/more-majors"
+          className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
+        >
+          Try the smaller majors quiz →
+        </Link>
+      </div>
     </main>
   );
 }

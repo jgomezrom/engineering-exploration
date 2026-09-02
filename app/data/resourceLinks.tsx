@@ -81,6 +81,19 @@ export const resourceLinks = [
     ),
   },
   {
+    href: "/quiz/more-majors",
+    title: "The Smaller Majors Quiz",
+    description: "An optional, more informal quiz for fields like nuclear, petroleum, marine, and semiconductor engineering.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+        <circle cx="14" cy="14" r="9" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="27" cy="24" r="6" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="14" cy="14" r="2" fill="currentColor" />
+        <circle cx="27" cy="24" r="1.5" fill="currentColor" />
+      </svg>
+    ),
+  },
+  {
     href: "/parents-and-teachers",
     title: "For Parents & Teachers",
     description: "What this site is, what it collects (nothing), and how it might be useful in a classroom.",
