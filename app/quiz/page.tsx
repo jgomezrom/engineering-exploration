@@ -57,18 +57,79 @@ export default function QuizPage() {
 
   if (stage === "intro") {
     return (
-      <main className="mx-auto flex max-w-2xl flex-col items-center px-6 py-24 text-center">
+      <main className="relative flex flex-col items-center px-6 py-24 text-center">
+        <span className="pointer-events-none absolute left-6 top-10 hidden h-8 w-8 border-l-2 border-t-2 border-primary/30 lg:block" />
+        <span className="pointer-events-none absolute right-6 top-10 hidden h-8 w-8 border-r-2 border-t-2 border-primary/30 lg:block" />
+        <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
+        <span className="pointer-events-none absolute bottom-10 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-primary/30 lg:block" />
+
+        <div className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
+          <FieldIcon slug="civil-engineering" className="h-8 w-8 text-primary/40" />
+          <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-400">
+            INTEREST QUIZ
+          </span>
+        </div>
+        <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
+          <FieldIcon slug="biomedical-engineering" className="h-8 w-8 text-primary/40" />
+          <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-400">
+            {quizQuestions.length} QUESTIONS · 5 FIELDS
+          </span>
+        </div>
+
         <span className="mb-4 rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
           5-minute quiz
         </span>
-        <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+        <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl 2xl:text-7xl">
           Which engineering field fits you?
         </h1>
-        <p className="mt-6 text-lg text-neutral-600 dark:text-neutral-400">
+        <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-400 lg:max-w-2xl lg:text-xl">
           {quizQuestions.length} quick questions about how you like to think, build, and work.
           There are no right answers — this just helps narrow down where to start exploring.
         </p>
-        <Button onClick={() => setStage("question")}>Start the quiz</Button>
+
+        <div className="mt-8">
+          <Button onClick={() => setStage("question")}>Start the quiz</Button>
+        </div>
+
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-6">
+          {fields.map((field) => (
+            <FieldIcon key={field.slug} slug={field.slug} className="h-7 w-7 text-neutral-300 dark:text-neutral-700" />
+          ))}
+        </div>
+        <p className="mt-3 font-mono text-xs uppercase tracking-widest text-neutral-400">
+          Scored against all 5 fields
+        </p>
+
+        <div className="mt-16 grid w-full max-w-3xl gap-6 sm:grid-cols-3">
+          <Card>
+            <span className="font-mono text-xs tracking-widest text-neutral-400">01</span>
+            <h3 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
+              Answer honestly
+            </h3>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              {quizQuestions.length} scenario-based questions. No right answers, just what actually
+              appeals to you.
+            </p>
+          </Card>
+          <Card>
+            <span className="font-mono text-xs tracking-widest text-neutral-400">02</span>
+            <h3 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
+              See your match %
+            </h3>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              A radar chart shows how you compare across all 5 fields, not just a single verdict.
+            </p>
+          </Card>
+          <Card>
+            <span className="font-mono text-xs tracking-widest text-neutral-400">03</span>
+            <h3 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
+              Explore further
+            </h3>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              Jump straight into the real field pages for whatever matched best.
+            </p>
+          </Card>
+        </div>
       </main>
     );
   }
