@@ -7,7 +7,7 @@ export default function NavBar() {
         <Link href="/" className="text-lg font-semibold text-neutral-900 dark:text-white">
           Engineering Exploration
         </Link>
-        <div className="flex gap-6 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+        <div className="flex gap-3 text-sm font-medium text-neutral-600 dark:text-neutral-400 sm:gap-6">
           <Link href="/explore" className="hover:text-primary">Explore</Link>
           <Link href="/quiz" className="hover:text-primary">Quiz</Link>
           <Link href="/challenges" className="hover:text-primary">Challenges</Link>
