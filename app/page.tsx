@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import FieldIcon from "./components/FieldIcon";
+
+export const metadata: Metadata = {
+  title: "Engineering Exploration — Find Your Engineering Path",
+  description:
+    "An honest, no-hype guide to what engineers actually do. Explore 5 engineering fields, take a 5-minute interest quiz, and try hands-on challenges.",
+};
 
 export default function Home() {
   return (
@@ -13,13 +20,13 @@ export default function Home() {
 
       <div className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
         <FieldIcon slug="mechanical-engineering" className="h-8 w-8 text-primary/40" />
-        <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-400">
+        <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
           ENGINEERING EXPLORATION
         </span>
       </div>
       <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
         <FieldIcon slug="electrical-engineering" className="h-8 w-8 text-primary/40" />
-        <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-400">
+        <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
           05 FIELDS · ∞ PATHS
         </span>
       </div>
@@ -45,7 +52,7 @@ export default function Home() {
         </Button>
       </div>
 
-      <div className="mt-16 hidden w-full max-w-3xl items-center justify-center gap-8 border-y border-neutral-900/10 py-6 font-mono text-sm text-neutral-500 dark:border-white/10 lg:flex 2xl:max-w-4xl">
+      <div className="mt-16 hidden w-full max-w-3xl items-center justify-center gap-8 border-y border-neutral-900/10 py-6 font-mono text-sm text-neutral-600 dark:border-white/10 dark:text-neutral-400 lg:flex 2xl:max-w-4xl">
         <span>5 FIELDS</span>
         <span className="h-1 w-1 rounded-full bg-neutral-400" />
         <span>15+ CHALLENGES</span>
@@ -55,14 +62,14 @@ export default function Home() {
 
       <div className="mt-12 grid w-full max-w-4xl gap-6 sm:grid-cols-3 lg:max-w-5xl lg:gap-8 xl:max-w-6xl 2xl:max-w-7xl">
   <Card>
-    <span className="font-mono text-xs tracking-widest text-neutral-400">01</span>
-    <svg viewBox="0 0 40 40" fill="none" className="mt-2 h-8 w-8 text-primary">
+    <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">01</span>
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
       <circle cx="20" cy="20" r="16" stroke="currentColor" strokeWidth="1.5" />
       <path d="M25 15l-3 8-8 3 3-8z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
-    <h3 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+    <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
       Explore Fields
-    </h3>
+    </h2>
     <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
       Browse 5 major engineering fields and see what each one is really like.
     </p>
@@ -72,14 +79,14 @@ export default function Home() {
   </Card>
 
   <Card>
-    <span className="font-mono text-xs tracking-widest text-neutral-400">02</span>
-    <svg viewBox="0 0 40 40" fill="none" className="mt-2 h-8 w-8 text-primary">
+    <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">02</span>
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
       <rect x="10" y="8" width="20" height="24" rx="2" stroke="currentColor" strokeWidth="1.5" />
       <path d="M14 16h12M14 20h12M14 24h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
-    <h3 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+    <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
       Take the Quiz
-    </h3>
+    </h2>
     <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
       Answer a few questions about what you enjoy, and get fields worth exploring.
     </p>
@@ -89,13 +96,13 @@ export default function Home() {
   </Card>
 
   <Card>
-    <span className="font-mono text-xs tracking-widest text-neutral-400">03</span>
-    <svg viewBox="0 0 40 40" fill="none" className="mt-2 h-8 w-8 text-primary">
+    <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">03</span>
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
       <path d="M27 8a6 6 0 0 0-7.75 7.75L9 26l5 5 10.25-10.25A6 6 0 0 0 32 13l-4 4-3-3 4-4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
-    <h3 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+    <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
       Try a Challenge
-    </h3>
+    </h2>
     <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
       Test out small, hands-on engineering activities you can do at home.
     </p>

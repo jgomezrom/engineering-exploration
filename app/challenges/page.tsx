@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "../components/Card";
 import FieldIcon from "../components/FieldIcon";
 import { challenges } from "../data/challenges";
+
+export const metadata: Metadata = {
+  title: "Hands-On Challenges | Engineering Exploration",
+  description:
+    "Small, real engineering projects you can do at home — no lab required. Build a catapult, load-test a bridge, or wire up an LED circuit.",
+};
 
 export default function ChallengesPage() {
   return (
@@ -34,7 +41,7 @@ export default function ChallengesPage() {
               <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
                 {challenge.tagline}
               </p>
-              <div className="mt-4 flex flex-col gap-1 font-mono text-xs text-neutral-400">
+              <div className="mt-4 flex flex-col gap-1 font-mono text-xs text-neutral-600 dark:text-neutral-400">
                 <span>{challenge.estimatedTime}</span>
                 <span>{challenge.approximateCost}</span>
               </div>

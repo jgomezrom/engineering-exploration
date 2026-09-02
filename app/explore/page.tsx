@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "../components/Card";
 import { fields } from "../data/fields";
 import FieldIcon from "../components/FieldIcon";
+
+export const metadata: Metadata = {
+  title: "Explore Engineering Fields | Engineering Exploration",
+  description:
+    "Browse 5 major engineering fields — mechanical, electrical, civil, biomedical, and software — and see what engineers in each area actually do.",
+};
 
 export default function ExplorePage() {
   return (

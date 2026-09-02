@@ -29,7 +29,7 @@ function Section({ index, title, children }: { index: number; title: string; chi
   return (
     <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
       <div className="flex items-baseline gap-3">
-        <span className="font-mono text-xs text-neutral-400">{String(index).padStart(2, "0")}</span>
+        <span className="font-mono text-xs text-neutral-600 dark:text-neutral-400">{String(index).padStart(2, "0")}</span>
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{title}</h2>
       </div>
       <div className="mt-5">{children}</div>

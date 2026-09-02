@@ -65,13 +65,13 @@ export default function QuizPage() {
 
         <div className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
           <FieldIcon slug="civil-engineering" className="h-8 w-8 text-primary/40" />
-          <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-400">
+          <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
             INTEREST QUIZ
           </span>
         </div>
         <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
           <FieldIcon slug="biomedical-engineering" className="h-8 w-8 text-primary/40" />
-          <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-400">
+          <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
             {quizQuestions.length} QUESTIONS · 5 FIELDS
           </span>
         </div>
@@ -96,35 +96,35 @@ export default function QuizPage() {
             <FieldIcon key={field.slug} slug={field.slug} className="h-7 w-7 text-neutral-300 dark:text-neutral-700" />
           ))}
         </div>
-        <p className="mt-3 font-mono text-xs uppercase tracking-widest text-neutral-400">
+        <p className="mt-3 font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           Scored against all 5 fields
         </p>
 
         <div className="mt-16 grid w-full max-w-3xl gap-6 sm:grid-cols-3">
           <Card>
-            <span className="font-mono text-xs tracking-widest text-neutral-400">01</span>
-            <h3 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
+            <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">01</span>
+            <h2 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
               Answer honestly
-            </h3>
+            </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               {quizQuestions.length} scenario-based questions. No right answers, just what actually
               appeals to you.
             </p>
           </Card>
           <Card>
-            <span className="font-mono text-xs tracking-widest text-neutral-400">02</span>
-            <h3 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
+            <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">02</span>
+            <h2 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
               See your match %
-            </h3>
+            </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               A radar chart shows how you compare across all 5 fields, not just a single verdict.
             </p>
           </Card>
           <Card>
-            <span className="font-mono text-xs tracking-widest text-neutral-400">03</span>
-            <h3 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
+            <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">03</span>
+            <h2 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
               Explore further
-            </h3>
+            </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               Jump straight into the real field pages for whatever matched best.
             </p>
@@ -137,7 +137,7 @@ export default function QuizPage() {
   if (stage === "question") {
     return (
       <main className="mx-auto max-w-2xl px-6 py-16">
-        <div className="flex items-center justify-between font-mono text-xs tracking-widest text-neutral-400">
+        <div className="flex items-center justify-between font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
           <span>
             QUESTION {String(currentIndex + 1).padStart(2, "0")} / {quizQuestions.length}
           </span>
@@ -150,9 +150,9 @@ export default function QuizPage() {
           />
         </div>
 
-        <h2 className="mt-8 text-2xl font-semibold text-neutral-900 dark:text-white">
+        <h1 className="mt-8 text-2xl font-semibold text-neutral-900 dark:text-white">
           {question.prompt}
-        </h2>
+        </h1>
 
         <div className="mt-8 flex flex-col gap-3">
           {question.options.map((option, i) => {
@@ -265,9 +265,9 @@ export default function QuizPage() {
       </div>
 
       <div className="mt-12 border-t border-neutral-900/10 pt-8 dark:border-white/10">
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
           All 5 fields, ranked
-        </h3>
+        </h2>
         <div className="mt-4 flex flex-col gap-3">
           {results.map((result) => {
             const field = fields.find((f) => f.slug === result.slug)!;
@@ -283,7 +283,7 @@ export default function QuizPage() {
                 <div className="h-2 flex-1 bg-neutral-100 dark:bg-neutral-900">
                   <div className="h-2 bg-primary" style={{ width: `${result.percentage}%` }} />
                 </div>
-                <span className="w-10 flex-shrink-0 text-right font-mono text-sm text-neutral-400">
+                <span className="w-10 flex-shrink-0 text-right font-mono text-sm text-neutral-600 dark:text-neutral-400">
                   {result.percentage}%
                 </span>
               </Link>
