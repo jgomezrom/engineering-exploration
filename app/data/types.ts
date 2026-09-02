@@ -30,6 +30,16 @@ export type FieldStats = {
   marketUncertainty: Level;
 };
 
+// A sourced, dated wage figure — never a number without a citation attached.
+export type SalaryData = {
+  medianAnnual: string;
+  period: string;
+  region: string;
+  sourceName: string;
+  sourceUrl: string;
+  note: string;
+};
+
 export type EngineeringField = {
   slug: FieldSlug;
   name: string;
@@ -44,6 +54,7 @@ export type EngineeringField = {
   typicalWorkday: string;
   workdayTimeline: WorkdayBlock[];
   stats: FieldStats;
+  salary: SalaryData;
   industries: string[];
   relatedMajors: string[];
   careerPaths: Career[];

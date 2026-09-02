@@ -46,6 +46,14 @@ export const fields: EngineeringField[] = [
     // regulatoryBurden: thingsPeopleDislike notes compliance work "depending on the industry".
     // marketUncertainty: howCompetitive hedges by country/industry but calls demand "strong and stable".
     stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "Medium", marketUncertainty: "Medium" },
+    salary: {
+      medianAnnual: "$104,110",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+      note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Actual pay varies a lot by location, industry, employer, and experience.",
+    },
     industries: ["Automotive", "Aerospace", "Manufacturing", "Energy", "Robotics", "Consumer products"],
     relatedMajors: ["Mechanical Engineering", "Mechatronics Engineering", "Manufacturing Engineering"],
     careerPaths: [
@@ -125,6 +133,14 @@ export const fields: EngineeringField[] = [
   // regulatoryBurden: thingsPeopleDislike says compliance is heavy "especially in power or aerospace" — industry-dependent.
   // marketUncertainty: howCompetitive hedges "varies by country and specialization" but calls demand "generally strong".
   stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "Medium", marketUncertainty: "Medium" },
+  salary: {
+    medianAnnual: "$120,630",
+    period: "May 2025",
+    region: "United States (national median)",
+    sourceName: "U.S. Bureau of Labor Statistics",
+    sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
+    note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. The closely related 'electronics engineer' specialization reports a higher median ($130,220) in the same BLS data, so specialization matters here too.",
+  },
   industries: ["Power/energy", "Consumer electronics", "Telecommunications", "Automotive", "Aerospace", "Semiconductor manufacturing"],
   relatedMajors: ["Electrical Engineering", "Electronics Engineering", "Computer Engineering"],
   careerPaths: [
@@ -205,6 +221,14 @@ export const fields: EngineeringField[] = [
     // regulatoryBurden: helpfulSkills centers "designing within legal safety requirements"; thingsPeopleDislike cites heavy permitting.
     // marketUncertainty: howCompetitive calls demand "generally steady" but hedges pay/demand "a lot by region".
     stats: { mathIntensity: "High", handsOnWork: "Medium", regulatoryBurden: "High", marketUncertainty: "Medium" },
+    salary: {
+      medianAnnual: "$100,840",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
+      note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Public-sector pay in particular can differ meaningfully from private-sector pay within this same field.",
+    },
     industries: ["Government and municipal", "Construction", "Environmental consulting", "Transportation", "Water resources", "Real estate development"],
     relatedMajors: ["Civil Engineering", "Structural Engineering", "Environmental Engineering"],
     careerPaths: [
@@ -287,6 +311,14 @@ export const fields: EngineeringField[] = [
     // regulatoryBurden: whatEngineersWorkOn calls regulatory approval "a bigger part of the job than in most other engineering fields".
     // marketUncertainty: howCompetitive opens with "the caveats matter more than most" — the most hedged section on the site.
     stats: { mathIntensity: "Medium", handsOnWork: "High", regulatoryBurden: "High", marketUncertainty: "High" },
+    salary: {
+      medianAnnual: "$109,370",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm",
+      note: "This is a U.S. national median across all experience levels and specializations — not a starting salary, and not adjusted for your region. Given the job-market caveats in this field's competitiveness section above, treat this figure as background context, not a guarantee.",
+    },
     industries: ["Medical device manufacturing", "Pharmaceuticals", "Hospitals and healthcare systems", "Research institutions", "Diagnostics"],
     relatedMajors: ["Biomedical Engineering", "Bioengineering", "Chemical Engineering (some overlap)"],
     careerPaths: [
@@ -369,6 +401,14 @@ export const fields: EngineeringField[] = [
     // regulatoryBurden: no regulatory or compliance language appears anywhere in this field's challenges or dislikes.
     // marketUncertainty: howCompetitive says hiring "has shifted meaningfully" and is "considerably more competitive" now.
     stats: { mathIntensity: "Medium", handsOnWork: "Low", regulatoryBurden: "Low", marketUncertainty: "High" },
+    salary: {
+      medianAnnual: "$135,980",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region. Given this field's own hiring-market caveats above, a high historical median doesn't guarantee current entry-level outcomes.",
+    },
     industries: ["Tech companies", "Finance", "Healthcare", "Gaming", "Any industry with a digital product, which today is most of them"],
     relatedMajors: ["Computer Science", "Software Engineering", "Computer Engineering"],
     careerPaths: [

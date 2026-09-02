@@ -110,6 +110,30 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
           <span className="font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
             At a Glance
           </span>
+
+          <div className="mt-4 border-b border-neutral-900/10 pb-4 dark:border-white/10">
+            <div className="flex items-baseline gap-2">
+              <span className="text-2xl font-bold text-neutral-900 dark:text-white">
+                {field.salary.medianAnnual}
+              </span>
+              <span className="text-sm text-neutral-600 dark:text-neutral-400">/ year, median</span>
+            </div>
+            <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-400">
+              {field.salary.region} · {field.salary.period} —{" "}
+              <a
+                href={field.salary.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                {field.salary.sourceName}
+              </a>
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">
+              {field.salary.note}
+            </p>
+          </div>
+
           <div className="mt-4">
             <FieldStatSheet stats={field.stats} />
           </div>

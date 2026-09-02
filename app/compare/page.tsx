@@ -35,7 +35,8 @@ export default function ComparePage() {
       <p className="mt-2 max-w-2xl text-neutral-600 dark:text-neutral-400">
         These ratings are a qualitative read of each field&apos;s own description on this site —
         not an independent measurement. Open a field page to see the exact reasoning behind its
-        ratings.
+        ratings. Median salary is sourced separately — see each field&apos;s page for the exact
+        citation and caveats.
       </p>
 
       <div className="mt-10 overflow-x-auto">
@@ -59,6 +60,18 @@ export default function ComparePage() {
             </tr>
           </thead>
           <tbody>
+            <tr className="border-t border-neutral-900/10 dark:border-white/10">
+              <td className="py-4 pr-4 text-sm text-neutral-600 dark:text-neutral-400">
+                Median Salary (US)
+              </td>
+              {fields.map((field) => (
+                <td key={field.slug} className="px-3 py-4 text-center">
+                  <span className="font-mono text-sm font-semibold text-neutral-900 dark:text-white">
+                    {field.salary.medianAnnual}
+                  </span>
+                </td>
+              ))}
+            </tr>
             {STAT_ROWS.map((row) => (
               <tr key={row.key} className="border-t border-neutral-900/10 dark:border-white/10">
                 <td className="py-4 pr-4 text-sm text-neutral-600 dark:text-neutral-400">
