@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { DayInLife } from "../data/types";
+import ReflectionPrompt from "./ReflectionPrompt";
 
 export default function DayInTheLife({ dayInLife }: { dayInLife: DayInLife }) {
   const { blocks, reflectionQuestion } = dayInLife;
   const [step, setStep] = useState(0);
-  const [reflection, setReflection] = useState("");
   const block = blocks[step];
 
   return (
@@ -64,15 +64,8 @@ export default function DayInTheLife({ dayInLife }: { dayInLife: DayInLife }) {
         </div>
       </div>
 
-      <div className="mt-6 border border-neutral-900/10 bg-neutral-50 p-5 dark:border-white/10 dark:bg-neutral-900">
-        <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">{reflectionQuestion}</h3>
-        <textarea
-          value={reflection}
-          onChange={(e) => setReflection(e.target.value)}
-          placeholder="Jot a thought if you want — this isn't saved or sent anywhere, it's just for you."
-          rows={3}
-          className="mt-3 w-full resize-none border border-neutral-900/10 bg-white p-3 text-sm text-neutral-900 placeholder:text-neutral-600/60 focus:border-primary focus:outline-none dark:border-white/10 dark:bg-neutral-950 dark:text-white dark:placeholder:text-neutral-400/60"
-        />
+      <div className="mt-6">
+        <ReflectionPrompt question={reflectionQuestion} />
       </div>
     </div>
   );

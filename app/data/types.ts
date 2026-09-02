@@ -176,15 +176,30 @@ export type QuizQuestion = {
 
 export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 
+// A broad grouping independent of field, so the challenge library can grow
+// without every new category needing its own field slug.
+export type ChallengeCategory = "Mechanisms & Motion" | "Structures & Materials" | "Circuits & Electronics";
+
+// Each challenge is framed as a small "mission" — a real engineering problem
+// has a goal, real constraints, and a way to tell whether it worked, not just
+// a set of steps to follow.
 export type Challenge = {
   slug: string;
   title: string;
   field: FieldSlug;
+  category: ChallengeCategory;
   tagline: string;
   difficulty: Difficulty;
   estimatedTime: string;
   approximateCost: string;
+  objective: string;
+  constraints: string[];
+  conceptTaught: string;
   materials: string[];
   instructions: string[];
+  measureResults: string;
   skillsLearned: string[];
+  // Paired with a scratch textarea, like the Day in the Life reflection
+  // question — never saved or sent anywhere.
+  reflectionPrompt: string;
 };

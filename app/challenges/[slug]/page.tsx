@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import FieldIcon from "../../components/FieldIcon";
 import DesignProcessDiagram from "../../components/DesignProcessDiagram";
+import ReflectionPrompt from "../../components/ReflectionPrompt";
 import { challenges } from "../../data/challenges";
 import { fields } from "../../data/fields";
 
@@ -102,6 +103,9 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
 
       <div className="mt-6 flex flex-wrap gap-3">
         <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+          {challenge.category}
+        </span>
+        <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
           {challenge.difficulty}
         </span>
         <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
@@ -119,19 +123,54 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
         </Link>
       </p>
 
-      <Section index={1} title="What You'll Need">
+      <Section index={1} title="Mission Briefing">
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+              Objective
+            </h3>
+            <p className="mt-2 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+              {challenge.objective}
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+              Constraints
+            </h3>
+            <div className="mt-2">
+              <BulletList items={challenge.constraints} />
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+              Concept You&apos;re Testing
+            </h3>
+            <p className="mt-2 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+              {challenge.conceptTaught}
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section index={2} title="What You'll Need">
         <BulletList items={challenge.materials} />
       </Section>
 
-      <Section index={2} title="Instructions">
+      <Section index={3} title="Instructions">
         <NumberedList items={challenge.instructions} />
       </Section>
 
-      <Section index={3} title="Skills You'll Practice">
+      <Section index={4} title="How to Measure Results">
+        <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+          {challenge.measureResults}
+        </p>
+      </Section>
+
+      <Section index={5} title="Skills You'll Practice">
         <BulletList items={challenge.skillsLearned} />
       </Section>
 
-      <Section index={4} title="If It Doesn't Work the First Time">
+      <Section index={6} title="If It Doesn't Work the First Time">
         <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           That&apos;s normal — this challenge follows the same design process real engineers use.
           A failed test just tells you where to go back and improve.
@@ -145,6 +184,10 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
         >
           See the full Engineering Design Process →
         </Link>
+      </Section>
+
+      <Section index={7} title="Reflect">
+        <ReflectionPrompt question={challenge.reflectionPrompt} />
       </Section>
     </main>
   );

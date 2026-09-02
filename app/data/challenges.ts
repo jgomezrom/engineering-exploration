@@ -5,10 +5,19 @@ export const challenges: Challenge[] = [
     slug: "popsicle-stick-catapult",
     title: "Build a Popsicle-Stick Catapult",
     field: "mechanical-engineering",
+    category: "Mechanisms & Motion",
     tagline: "A hands-on look at levers, tension, and iterative design — build one, test it, then improve it.",
     difficulty: "Beginner",
     estimatedTime: "45–60 minutes",
     approximateCost: "$5–10, or free if you already have craft supplies",
+    objective: "Build a small catapult that can launch a light object as far and as consistently as possible.",
+    constraints: [
+      "Must be built only from the materials listed below — no additional store-bought launch mechanisms",
+      "The launched item must be something soft and safe, like a pom-pom or mini marshmallow",
+      "Take 3–5 test launches before you're allowed to change the design",
+    ],
+    conceptTaught:
+      "Levers and stored energy — how arm length, pivot position, and rubber-band tension change how much force gets transferred to the launched object.",
     materials: [
       "About 10 popsicle sticks (craft sticks)",
       "6–8 rubber bands",
@@ -25,21 +34,33 @@ export const challenges: Challenge[] = [
       "Test 3–5 launches and note roughly how far the item travels each time.",
       "Change one thing — number of rubber bands, spoon angle, or number of base sticks — and test again. Compare the results.",
     ],
+    measureResults:
+      "Measure the distance of at least 3 launches with a tape measure or by counting floor tiles, then compare the average distance before and after you change one variable.",
     skillsLearned: [
       "Basic lever and torque mechanics — why arm length and pivot position change launch force",
       "How stored energy (rubber band tension) converts into motion",
       "Iterative design — changing one variable at a time and measuring the effect",
       "Comfort with a design not working perfectly on the first try",
     ],
+    reflectionPrompt: "What single change made the biggest difference in distance? Would you have guessed that beforehand?",
   },
   {
     slug: "spaghetti-bridge-load-test",
     title: "Build & Load-Test a Spaghetti Bridge",
     field: "civil-engineering",
+    category: "Structures & Materials",
     tagline: "A classic structural engineering exercise — design a bridge, then find out exactly how much weight it can hold before it fails.",
     difficulty: "Beginner",
     estimatedTime: "1–1.5 hours, plus drying time if using glue",
     approximateCost: "$5–10",
+    objective: "Design and build a bridge out of spaghetti that spans a fixed gap and holds as much weight as possible before it breaks.",
+    constraints: [
+      "The bridge must span the gap you chose without touching the ground in between",
+      "Only spaghetti and glue are allowed as structural materials",
+      "Weight must be added gradually and evenly at the center, not dropped or applied unevenly",
+    ],
+    conceptTaught:
+      "Truss design and load paths — why triangles resist collapsing sideways the way squares don't, and how a structure's shape determines where it's strongest and weakest.",
     materials: [
       "1–2 boxes of uncooked spaghetti",
       "Hot glue gun (with adult supervision) or white glue",
@@ -57,21 +78,33 @@ export const challenges: Challenge[] = [
       "Note the weight at which it starts to bend, then the weight at which it actually breaks — these are two different, both useful, data points.",
       "Look at exactly where it failed. That tells you where the design was weakest, which is the most useful part of the whole exercise.",
     ],
+    measureResults:
+      "Record the weight at which the bridge first visibly bends, and the weight at which it actually breaks — two different, both useful numbers.",
     skillsLearned: [
       "Why triangles are structurally stronger than squares (truss design basics)",
       "The difference between a structure bending (still working) and failing (broken)",
       "How load travels through a structure, and where forces concentrate",
       "Reading a failure to understand a design's weak point, instead of just seeing it as a loss",
     ],
+    reflectionPrompt: "Look at exactly where your bridge failed. If you could rebuild it right now, what's the one part you'd reinforce first?",
   },
   {
     slug: "basic-led-circuit",
     title: "Build a Basic LED Circuit",
     field: "electrical-engineering",
+    category: "Circuits & Electronics",
     tagline: "The first circuit most electrical engineers ever build — small, fast, and it teaches you why every component in a circuit exists for a reason.",
     difficulty: "Beginner",
     estimatedTime: "20–30 minutes",
     approximateCost: "$10–15 for a small beginner electronics kit, less if you already have parts",
+    objective: "Build a working circuit that lights an LED safely, using a battery, a resistor, and a breadboard.",
+    constraints: [
+      "The LED must be connected with correct polarity — it will not work backward",
+      "A resistor must be included in the circuit to limit current",
+      "Only the listed components and a single power source are allowed",
+    ],
+    conceptTaught:
+      "Current, polarity, and current-limiting resistors — why an LED only works in one direction, and why connecting it directly to a battery without a resistor is a bad idea.",
     materials: [
       "A small breadboard",
       "A 9V battery with a battery clip, or an AA battery holder (2–4 batteries)",
@@ -89,11 +122,14 @@ export const challenges: Challenge[] = [
       "If it doesn't light up, double-check the LED's direction first — reversed polarity is the most common reason a first circuit doesn't work.",
       "Optional: try removing the resistor briefly to see what changes, then put it back — this demonstrates why the resistor is there in the first place, not just a spare part.",
     ],
+    measureResults:
+      "Success is simple and binary: the LED lights up. If it doesn't, the circuit isn't complete or correct yet — that's useful information, not a failure.",
     skillsLearned: [
       "Reading component polarity — why direction matters in a circuit",
       "Why a current-limiting resistor is necessary, not optional, when using an LED",
       "Basic breadboard layout and how its rows are electrically connected",
       "Methodical debugging — checking one likely cause at a time when something doesn't work",
     ],
+    reflectionPrompt: "If you removed the resistor and tried the optional step, what did you notice? Why do you think that happened?",
   },
 ];
