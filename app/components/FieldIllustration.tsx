@@ -35,6 +35,22 @@ function TrussSpan({ x, y, width, height, segments }: { x: number; y: number; wi
   );
 }
 
+function LatticeGrid({ x, y, cols, rows, spacing }: { x: number; y: number; cols: number; rows: number; spacing: number }) {
+  const nodes: { cx: number; cy: number }[] = [];
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      nodes.push({ cx: x + c * spacing + (r % 2 === 1 ? spacing / 2 : 0), cy: y + r * spacing });
+    }
+  }
+  return (
+    <>
+      {nodes.map((n, i) => (
+        <circle key={i} cx={n.cx} cy={n.cy} r="4" stroke="currentColor" strokeWidth="1.5" />
+      ))}
+    </>
+  );
+}
+
 export default function FieldIllustration({ slug, className = "h-auto w-full" }: FieldIllustrationProps) {
   switch (slug) {
     case "mechanical-engineering":
@@ -110,7 +126,112 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
         </svg>
       );
 
+    case "aerospace-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <path d="M30 100c50-30 150-30 240-6-60 20-160 24-240 6Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <line x1="30" y1="99" x2="270" y2="94" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            airfoil section
+          </text>
+        </svg>
+      );
+
+    case "chemical-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="30" y="60" width="50" height="70" rx="4" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="125" y="40" width="50" height="90" rx="4" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="220" y="70" width="50" height="60" rx="4" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M80 95h45M175 85h45" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M55 60V45M150 40V25M245 70V55" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+        </svg>
+      );
+
+    case "computer-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="115" y="55" width="70" height="70" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="135" y="75" width="30" height="30" stroke="currentColor" strokeWidth="1.5" />
+          <path
+            d="M130 55V35M150 55V35M170 55V35M130 125v20M150 125v20M170 125v20M115 70H85M115 95H60M115 110H85M185 70h30M185 95h55M185 110h30"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+
+    case "environmental-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="40" y="30" width="220" height="30" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="40" y="60" width="220" height="30" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="40" y="90" width="220" height="30" stroke="currentColor" strokeWidth="1.5" />
+          <path
+            d="M40 120c15 10 30 10 45 0s30-10 45 0 30 10 45 0 30-10 45 0 30 10 40 0"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            fill="none"
+          />
+          <line x1="40" y1="150" x2="260" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            soil cross-section
+          </text>
+        </svg>
+      );
+
+    case "industrial-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="20" y="70" width="50" height="40" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="110" y="70" width="50" height="40" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="200" y="70" width="50" height="40" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M70 90h40M160 90h40" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="20" y1="130" x2="250" y2="130" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="135" y="145" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            process flow
+          </text>
+        </svg>
+      );
+
+    case "materials-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <LatticeGrid x={50} y={40} cols={5} rows={4} spacing={40} />
+          <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            crystal lattice
+          </text>
+        </svg>
+      );
+
+    case "robotics-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="40" y="130" width="40" height="20" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M60 130V90l70-30 60 40" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="60" cy="90" r="6" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="130" cy="60" r="6" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M190 100l14-14M190 100l14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="40" y1="160" x2="260" y2="160" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="172" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            articulated arm
+          </text>
+        </svg>
+      );
+
     default:
-      return null;
+      // A generic technical/blueprint placeholder for fields that don't have
+      // bespoke art yet — so a new field only needs a data.ts entry, not new SVG.
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="60" y="40" width="180" height="100" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="60" y1="90" x2="240" y2="90" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <line x1="150" y1="40" x2="150" y2="140" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <circle cx="150" cy="90" r="6" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      );
   }
 }

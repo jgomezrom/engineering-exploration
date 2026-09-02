@@ -1,6 +1,9 @@
 import { FieldResult } from "./scoring";
 import { FieldSlug } from "../data/types";
 
+// Only the fields the quiz actually scores — see the filter in scoring.ts. A
+// field added to the site without quiz questions of its own won't appear here
+// until the quiz is expanded to cover it.
 const FIELD_ORDER: FieldSlug[] = [
   "mechanical-engineering",
   "electrical-engineering",
@@ -9,7 +12,7 @@ const FIELD_ORDER: FieldSlug[] = [
   "software-engineering",
 ];
 
-const FIELD_LABELS: Record<FieldSlug, string> = {
+const FIELD_LABELS: Partial<Record<FieldSlug, string>> = {
   "mechanical-engineering": "Mechanical",
   "electrical-engineering": "Electrical",
   "civil-engineering": "Civil",
@@ -84,7 +87,7 @@ export default function RadarChart({ results }: { results: FieldResult[] }) {
             dominantBaseline="middle"
             className="fill-neutral-500 font-mono text-[12px] uppercase tracking-wide dark:fill-neutral-400"
           >
-            {FIELD_LABELS[r.slug]}
+            {FIELD_LABELS[r.slug] ?? r.slug}
           </text>
         );
       })}

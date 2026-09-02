@@ -71,6 +71,10 @@ export function computeResults(answers: (number | null)[]): FieldResult[] {
   });
 
   return fields
+    // Only score fields the quiz actually has questions calibrated for — a field
+    // with no quiz coverage would otherwise show a misleading "0% match" that
+    // looks like a real result instead of "this field isn't in the quiz yet."
+    .filter((field) => (maxPossible[field.slug] ?? 0) > 0)
     .map((field) => {
       const slug = field.slug;
       const rawScore = rawScores[slug] ?? 0;

@@ -6,8 +6,7 @@ import { FieldStats, Level } from "../data/types";
 
 export const metadata: Metadata = {
   title: "Compare Engineering Fields | Engineering Exploration",
-  description:
-    "See how mechanical, electrical, civil, biomedical, and software engineering compare side by side — building physical things, coding, biology, creativity, teamwork, and more.",
+  description: `See how all ${fields.length} engineering fields on this site compare side by side — building physical things, coding, biology, creativity, teamwork, and more.`,
 };
 
 const LEVEL_WIDTH: Record<Level, string> = {

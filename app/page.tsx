@@ -9,8 +9,7 @@ import { challenges } from "./data/challenges";
 
 export const metadata: Metadata = {
   title: "Engineering Exploration — Find Your Engineering Path",
-  description:
-    "An honest, no-hype guide to what engineers actually do. Explore 5 engineering fields, take a 5-minute interest quiz, and try hands-on challenges.",
+  description: `An honest, no-hype guide to what engineers actually do. Explore ${fields.length} engineering fields, take a 5-minute interest quiz, and try hands-on challenges.`,
 };
 
 export default function Home() {
@@ -30,7 +29,7 @@ export default function Home() {
       <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
         <FieldIcon slug="electrical-engineering" className="h-8 w-8 text-primary/40" />
         <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
-          05 FIELDS · ∞ PATHS
+          {String(fields.length).padStart(2, "0")} FIELDS · ∞ PATHS
         </span>
       </div>
 
@@ -74,7 +73,7 @@ export default function Home() {
       Explore Fields
     </h2>
     <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-      Browse 5 major engineering fields and see what each one is really like.
+      Browse {fields.length} engineering fields and see what each one is really like.
     </p>
     <Link href="/explore" className="text-sm font-medium text-primary hover:underline">
       Start exploring →

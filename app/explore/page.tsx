@@ -4,10 +4,16 @@ import Card from "../components/Card";
 import { fields } from "../data/fields";
 import FieldIcon from "../components/FieldIcon";
 
+function joinNames(names: string[]) {
+  if (names.length <= 1) return names.join("");
+  return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
+}
+
 export const metadata: Metadata = {
   title: "Explore Engineering Fields | Engineering Exploration",
-  description:
-    "Browse 5 major engineering fields — mechanical, electrical, civil, biomedical, and software — and see what engineers in each area actually do.",
+  description: `Browse ${fields.length} engineering fields — ${joinNames(
+    fields.map((f) => f.name.replace(" Engineering", ""))
+  )} — and see what engineers in each area actually do.`,
 };
 
 export default function ExplorePage() {
@@ -23,7 +29,7 @@ export default function ExplorePage() {
       <p className="mt-2 max-w-xl text-neutral-600 dark:text-neutral-400">
         Click into any field below to see what engineers in that area actually do, or{" "}
         <Link href="/compare" className="font-medium text-primary hover:underline">
-          compare all 5 side by side
+          compare all {fields.length} side by side
         </Link>
         .
       </p>

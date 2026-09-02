@@ -8,7 +8,14 @@ export type FieldSlug =
   | "electrical-engineering"
   | "civil-engineering"
   | "biomedical-engineering"
-  | "software-engineering";
+  | "software-engineering"
+  | "aerospace-engineering"
+  | "chemical-engineering"
+  | "computer-engineering"
+  | "environmental-engineering"
+  | "industrial-engineering"
+  | "materials-engineering"
+  | "robotics-engineering";
 
 export type Level = "Low" | "Medium" | "High";
 
