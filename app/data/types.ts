@@ -189,6 +189,17 @@ export type Concept = {
   relatedFields: FieldSlug[];
 };
 
+// A side-by-side of an engineering role and a commonly confused non-engineering
+// role, grounded in the misconceptions already written into each field's page.
+export type CareerComparison = {
+  slug: string;
+  title: string;
+  engineerRole: { title: string; description: string; typicalPath: string };
+  otherRole: { title: string; description: string; typicalPath: string };
+  keyDifference: string;
+  relatedField: FieldSlug;
+};
+
 export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 
 // A broad grouping independent of field, so the challenge library can grow

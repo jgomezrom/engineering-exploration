@@ -10,6 +10,7 @@ import DayInTheLife from "../../components/DayInTheLife";
 import NextStepsExplorer from "../../components/NextStepsExplorer";
 import { fields } from "../../data/fields";
 import { fieldStubs } from "../../data/fieldStubs";
+import { careerComparisons } from "../../data/careerComparisons";
 
 export function generateStaticParams() {
   return [...fields.map((field) => ({ slug: field.slug })), ...fieldStubs.map((stub) => ({ slug: stub.slug }))];
@@ -207,6 +208,11 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
 
       <Section index={4} title="Common Misconceptions">
         <BulletList items={field!.commonMisconceptions} />
+        {careerComparisons.some((c) => c.relatedField === field!.slug) && (
+          <Link href="/vs" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+            See this compared side by side →
+          </Link>
+        )}
       </Section>
 
       <Section index={5} title="A Day in the Life">
