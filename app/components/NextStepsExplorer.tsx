@@ -4,17 +4,20 @@ import { useState } from "react";
 import Link from "next/link";
 import { fields } from "../data/fields";
 import { AgeBand, NextSteps } from "../data/types";
+import { useAgeBand } from "../context/AgeBandContext";
 
 const AGE_BANDS: AgeBand[] = ["10-12", "13-15", "16-18"];
 
 export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps }) {
-  const [selected, setSelected] = useState<AgeBand>("13-15");
+  const { ageBand, setAgeBand } = useAgeBand();
+  const [selected, setSelected] = useState<AgeBand>(ageBand ?? "13-15");
   const suggestion = nextSteps[selected];
   const relatedField = fields.find((f) => f.slug === suggestion.relatedField);
+  const isRemembered = ageBand === selected;
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         {AGE_BANDS.map((band) => {
           const isSelected = selected === band;
           return (
@@ -34,6 +37,34 @@ export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps 
           );
         })}
       </div>
+
+      <p className="mt-3 text-xs text-neutral-500 dark:text-neutral-400">
+        {isRemembered ? (
+          <>
+            Remembering ages {selected} for other pages too, just for this visit —{" "}
+            <button
+              type="button"
+              onClick={() => setAgeBand(null)}
+              className="font-medium text-primary hover:underline"
+            >
+              forget it
+            </button>
+            .
+          </>
+        ) : (
+          <>
+            Not saved anywhere.{" "}
+            <button
+              type="button"
+              onClick={() => setAgeBand(selected)}
+              className="font-medium text-primary hover:underline"
+            >
+              Remember ages {selected} for other pages too
+            </button>{" "}
+            (just for this visit — nothing is stored beyond your browser tab).
+          </>
+        )}
+      </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <div className="border border-neutral-900/10 p-4 dark:border-white/10">

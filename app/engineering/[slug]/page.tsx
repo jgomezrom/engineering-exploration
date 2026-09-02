@@ -90,7 +90,7 @@ function PageFrame({
   children: React.ReactNode;
 }) {
   return (
-    <main className="relative mx-auto max-w-3xl px-6 py-16">
+    <main className="relative mx-auto w-full min-w-0 max-w-3xl px-6 py-16">
       <span className="pointer-events-none absolute left-6 top-10 hidden h-8 w-8 border-l-2 border-t-2 border-primary/30 lg:block" />
       <span className="pointer-events-none absolute right-6 top-10 hidden h-8 w-8 border-r-2 border-t-2 border-primary/30 lg:block" />
       <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
