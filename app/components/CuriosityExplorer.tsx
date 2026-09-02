@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Card from "./Card";
 import FieldIcon from "./FieldIcon";
+import InterestIcon from "./InterestIcon";
 import { fields } from "../data/fields";
 import { interests } from "../data/interests";
 
@@ -17,8 +18,8 @@ export default function CuriosityExplorer() {
     : [];
 
   return (
-    <div className="text-left">
-      <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
+    <div className="border border-neutral-900/10 p-6 text-left sm:p-8 dark:border-white/10">
+      <div className="flex flex-wrap justify-center gap-2.5 sm:justify-start">
         {visibleInterests.map((interest) => {
           const isSelected = selected === interest.slug;
           return (
@@ -27,19 +28,20 @@ export default function CuriosityExplorer() {
               type="button"
               aria-pressed={isSelected}
               onClick={() => setSelected(isSelected ? null : interest.slug)}
-              className={`border px-4 py-2 text-sm font-medium transition-colors ${
+              className={`flex items-center gap-2 border px-4 py-2 text-sm font-medium transition-colors ${
                 isSelected
                   ? "border-primary bg-primary/10 text-primary"
                   : "border-neutral-900/10 text-neutral-600 hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
               }`}
             >
+              <InterestIcon slug={interest.slug} className="h-4 w-4 flex-shrink-0" />
               {interest.label}
             </button>
           );
         })}
       </div>
 
-      {selectedInterest && (
+      {selectedInterest ? (
         <div className="mt-8 border-t border-neutral-900/10 pt-8 dark:border-white/10">
           <p className="font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
             Fields connected to {selectedInterest.label}
@@ -64,6 +66,10 @@ export default function CuriosityExplorer() {
             ))}
           </div>
         </div>
+      ) : (
+        <p className="mt-6 border-t border-neutral-900/10 pt-6 text-center text-sm text-neutral-500 dark:border-white/10 dark:text-neutral-400 sm:text-left">
+          Pick one above to see what it actually connects to.
+        </p>
       )}
     </div>
   );
