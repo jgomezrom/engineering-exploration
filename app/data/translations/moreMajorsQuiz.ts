@@ -3,7 +3,7 @@ export const moreMajorsQuizTranslations = {
     badge: "Optional · bonus round",
     heading: "The Smaller Majors",
     intro: (n: number) =>
-      `Nuclear, petroleum, marine, semiconductor, and other fields that don't (yet) have the full research depth to fit into the main quiz's scoring. This is ${n} quick questions, and it gives you a simple tally, not a percentage — think of it as noticing a spark of interest, not a real match score.`,
+      `Automotive, structural, semiconductor, and other fields that don't (yet) have the full research depth to fit into the main quiz's scoring. This is ${n} quick questions, and it gives you a simple tally, not a percentage — think of it as noticing a spark of interest, not a real match score.`,
     startButton: "Start",
     backToMainQuiz: "← Back to the main quiz",
     questionLabel: "Question",
@@ -24,7 +24,7 @@ export const moreMajorsQuizTranslations = {
     badge: "Opcional · ronda extra",
     heading: "Las Carreras Menos Comunes",
     intro: (n: number) =>
-      `Nuclear, petróleo, marina, semiconductores, y otros campos que todavía no tienen la profundidad de investigación completa para encajar en la calificación del cuestionario principal. Estas son ${n} preguntas rápidas, y te da un conteo simple, no un porcentaje — piénsalo como notar una chispa de interés, no un puntaje de coincidencia real.`,
+      `Automotriz, estructural, semiconductores, y otros campos que todavía no tienen la profundidad de investigación completa para encajar en la calificación del cuestionario principal. Estas son ${n} preguntas rápidas, y te da un conteo simple, no un porcentaje — piénsalo como notar una chispa de interés, no un puntaje de coincidencia real.`,
     startButton: "Empezar",
     backToMainQuiz: "← Volver al cuestionario principal",
     questionLabel: "Pregunta",
