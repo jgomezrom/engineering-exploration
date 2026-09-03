@@ -5,6 +5,7 @@ import Card from "./components/Card";
 import FieldIcon from "./components/FieldIcon";
 import CuriosityExplorer from "./components/CuriosityExplorer";
 import DidYouKnowTicker from "./components/DidYouKnowTicker";
+import ExplorationStrip from "./components/ExplorationStrip";
 import FadeIn from "./components/FadeIn";
 import { fields } from "./data/fields";
 import { challenges } from "./data/challenges";
@@ -67,6 +68,8 @@ export default function Home() {
             Take the Interest Quiz
           </Button>
         </div>
+
+        <ExplorationStrip totalFields={fields.length} />
 
         <div className="mt-16 hidden w-full max-w-3xl items-center justify-center gap-8 border-y border-neutral-900/10 py-6 font-mono text-sm text-neutral-600 dark:border-white/10 dark:text-neutral-400 lg:flex 2xl:max-w-4xl">
           <span>{fields.length} FIELDS</span>

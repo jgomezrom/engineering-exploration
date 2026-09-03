@@ -5,7 +5,7 @@ import FadeIn from "../components/FadeIn";
 export const metadata: Metadata = {
   title: "For Parents & Teachers | Engineering Exploration",
   description:
-    "What this site is, what it collects (nothing), and how it might be useful in a classroom or at home.",
+    "What this site is, what it stores (a couple of optional, browser-only preferences — never sent anywhere), and how it might be useful in a classroom or at home.",
 };
 
 function BulletList({ items }: { items: string[] }) {
@@ -66,15 +66,17 @@ export default function ParentsAndTeachersPage() {
 
       <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
-          What it collects: nothing
+          What it stores, and what it doesn&apos;t
         </h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           There are no accounts, no sign-up, no ads, and no tracking of what a student clicks on
-          or answers. Specifically:
+          or answers sent to us or anyone else. Two small features save a little information —
+          both stay entirely on the device itself. Specifically:
         </p>
         <div className="mt-4">
           <BulletList
             items={[
+              "Bookmarking a field and the day-streak counter (\"You've explored 3 of 12 fields\") are saved using the browser's local storage — a small file that lives only on that device, in that browser. It's never sent to us or anyone else, there's no account attached to it, and it disappears if the browser's data is cleared. Nobody but the person using that browser can see it.",
               "The interest quiz's answers and results exist only in the browser while it's open, and disappear the moment the page is closed or reloaded — nothing is sent anywhere or saved.",
               "Every reflection prompt (on challenge pages and the Day in the Life feature) is a plain text box that is never saved, submitted, or sent anywhere — it's there for the student's own thinking, not for anyone else to read.",
               "The optional \"remember my age band\" feature only ever lives in the browser's memory for that one visit, never in a cookie, local storage, or on a server — closing the tab erases it completely.",
@@ -84,11 +86,12 @@ export default function ParentsAndTeachersPage() {
         </div>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           In practice, that means it&apos;s safe to hand to a student without setting anything up
-          first, and there&apos;s nothing to review afterward — there&apos;s no record of what they
-          did on the site. (The site is hosted on Vercel, which — like any web host — may keep
-          standard server-level access logs as part of normal infrastructure; that&apos;s outside
-          the site&apos;s control and separate from the analytics, ads, and tracking the site
-          itself deliberately doesn&apos;t add.)
+          first. The bookmarks and streak counter save a little information, but only inside that
+          one browser — there&apos;s no record anywhere we, or anyone else, could look at
+          afterward. (The site is hosted on Vercel, which — like any web host — may keep standard
+          server-level access logs as part of normal infrastructure; that&apos;s outside the
+          site&apos;s control and separate from the analytics, ads, and tracking the site itself
+          deliberately doesn&apos;t add.)
         </p>
       </FadeIn>
 

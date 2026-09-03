@@ -5,6 +5,7 @@ import FadeIn from "../components/FadeIn";
 import { fields } from "../data/fields";
 import { fieldStubs } from "../data/fieldStubs";
 import FieldIcon from "../components/FieldIcon";
+import BookmarkedFields from "../components/BookmarkedFields";
 
 function joinNames(names: string[]) {
   if (names.length <= 1) return names.join("");
@@ -35,6 +36,12 @@ export default function ExplorePage() {
         </Link>
         .
       </p>
+
+      <div className="mt-10">
+        <BookmarkedFields
+          allFields={[...fields, ...fieldStubs].map((f) => ({ slug: f.slug, name: f.name, tagline: f.tagline }))}
+        />
+      </div>
 
       <FadeIn className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {fields.map((field) => (

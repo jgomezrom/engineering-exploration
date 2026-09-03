@@ -9,9 +9,12 @@ import FieldStatSheet from "../../components/FieldStatSheet";
 import SalaryDetails from "../../components/SalaryDetails";
 import DayInTheLife from "../../components/DayInTheLife";
 import NextStepsExplorer from "../../components/NextStepsExplorer";
+import BookmarkButton from "../../components/BookmarkButton";
+import FieldVisitTracker from "../../components/FieldVisitTracker";
 import { fields } from "../../data/fields";
 import { fieldStubs } from "../../data/fieldStubs";
 import { careerComparisons } from "../../data/careerComparisons";
+import { FieldSlug } from "../../data/types";
 
 export function generateStaticParams() {
   return [...fields.map((field) => ({ slug: field.slug })), ...fieldStubs.map((stub) => ({ slug: stub.slug }))];
@@ -87,7 +90,7 @@ function PageFrame({
   tagline,
   children,
 }: {
-  slug: string;
+  slug: FieldSlug;
   name: string;
   tagline: string;
   children: React.ReactNode;
@@ -109,6 +112,7 @@ function PageFrame({
 
       <h1 className="mt-4 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">{name}</h1>
       <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">{tagline}</p>
+      <BookmarkButton slug={slug} />
 
       {children}
     </main>
@@ -171,6 +175,7 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
 
   return (
     <PageFrame slug={field!.slug} name={field!.name} tagline={field!.tagline}>
+      <FieldVisitTracker slug={field!.slug} />
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
         <div className="flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
           <FieldIllustration slug={field!.slug} className="h-auto w-full text-primary" />
