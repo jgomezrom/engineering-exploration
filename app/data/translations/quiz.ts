@@ -35,7 +35,7 @@ export const quizTranslations = {
     allFieldsRanked: (n: number) => `All ${n} fields, ranked`,
     exploreAllFields: "Explore all fields",
     retakeQuiz: "Retake the quiz",
-    curiousAboutSmaller: "Curious about fields like nuclear, petroleum, or marine engineering?",
+    curiousAboutSmaller: "Curious about fields like automotive, structural, or semiconductor engineering?",
     smallerFieldsBody:
       "Those fields don't have the depth yet to fit into the scoring above, so there's a separate, more informal quiz just for them.",
     trySmallerQuiz: "Try the smaller majors quiz →",
@@ -77,7 +77,7 @@ export const quizTranslations = {
     allFieldsRanked: (n: number) => `Los ${n} campos, clasificados`,
     exploreAllFields: "Explorar todos los campos",
     retakeQuiz: "Repetir el cuestionario",
-    curiousAboutSmaller: "¿Curioso/a sobre campos como ingeniería nuclear, de petróleo, o marina?",
+    curiousAboutSmaller: "¿Curioso/a sobre campos como ingeniería automotriz, estructural, o de semiconductores?",
     smallerFieldsBody:
       "Esos campos todavía no tienen la profundidad para encajar en la calificación de arriba, así que hay un cuestionario separado y más informal solo para ellos.",
     trySmallerQuiz: "Prueba el cuestionario de carreras menos comunes →",
@@ -99,6 +99,10 @@ export const fieldLabelsShort: Record<"en" | "es", Partial<Record<string, string
     "industrial-engineering": "Industrial",
     "materials-engineering": "Materials",
     "robotics-engineering": "Robotics",
+    "nuclear-engineering": "Nuclear",
+    "petroleum-engineering": "Petroleum",
+    "agricultural-engineering": "Agricultural",
+    "marine-engineering": "Marine",
   },
   es: {
     "mechanical-engineering": "Mecánica",
@@ -113,5 +117,9 @@ export const fieldLabelsShort: Record<"en" | "es", Partial<Record<string, string
     "industrial-engineering": "Industrial",
     "materials-engineering": "Materiales",
     "robotics-engineering": "Robótica",
+    "nuclear-engineering": "Nuclear",
+    "petroleum-engineering": "Petróleo",
+    "agricultural-engineering": "Agrícola",
+    "marine-engineering": "Marina",
   },
 };

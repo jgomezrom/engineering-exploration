@@ -21,6 +21,10 @@ const FIELD_ORDER: FieldSlug[] = [
   "industrial-engineering",
   "materials-engineering",
   "robotics-engineering",
+  "nuclear-engineering",
+  "petroleum-engineering",
+  "agricultural-engineering",
+  "marine-engineering",
 ];
 
 const SIZE = 460;
