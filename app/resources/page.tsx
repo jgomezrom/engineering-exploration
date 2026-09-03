@@ -27,7 +27,13 @@ export default function ResourcesPage() {
         {resourceLinks.map((resource) => (
           <Link key={resource.href} href={resource.href}>
             <Card>
-              {resource.icon}
+              <div
+                className={`inline-flex h-14 w-14 items-center justify-center rounded-full ${
+                  resource.accentColor === "accent" ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"
+                }`}
+              >
+                {resource.icon}
+              </div>
               <h2 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
                 {resource.title}
               </h2>

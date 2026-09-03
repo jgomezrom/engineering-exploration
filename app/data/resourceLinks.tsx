@@ -1,12 +1,30 @@
+// Ordered by relevance to a student who just landed on the homepage — broadly
+// useful tools first, narrower or different-audience pages (methodology,
+// parents/teachers) last. accentColor alternates so the grid reads as more
+// than one color instead of a wall of teal; it's cosmetic, not meaningful.
 export const resourceLinks = [
   {
     href: "/compare",
     title: "Compare Fields",
     description: "See all the fields on this site side by side, across the traits you actually care about.",
+    accentColor: "primary" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <path d="M8 32V16M20 32V8M32 32V22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M4 32h32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    href: "/faq",
+    title: "Frequently Asked Questions",
+    description: "Quick answers to common questions — math requirements, switching majors, privacy — each linking to the full page behind it.",
+    accentColor: "accent" as const,
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+        <circle cx="20" cy="20" r="15" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M15.5 15.5a4.5 4.5 0 1 1 6.2 4.16c-1.2.5-1.7 1.34-1.7 2.34v1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="20" cy="27" r="1" fill="currentColor" />
       </svg>
     ),
   },
@@ -14,8 +32,9 @@ export const resourceLinks = [
     href: "/math",
     title: "Do I Have to Be Good at Math?",
     description: "An honest answer, plus a full course roadmap — AP, IB options, and where to get extra help.",
+    accentColor: "primary" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <path d="M12 14h16M12 20h10M12 26h13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <circle cx="20" cy="20" r="15" stroke="currentColor" strokeWidth="1.5" />
       </svg>
@@ -25,8 +44,9 @@ export const resourceLinks = [
     href: "/vs",
     title: "Engineering vs. Other Careers",
     description: "Engineer or mechanic? Doctor? Programmer? Clearing up the careers people mix up most.",
+    accentColor: "accent" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <circle cx="13" cy="14" r="6" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="27" cy="14" r="6" stroke="currentColor" strokeWidth="1.5" />
         <path d="M6 33c1-6 5-9 7-9s6 3 7 9M20 33c1-6 5-9 7-9s6 3 7 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -37,8 +57,9 @@ export const resourceLinks = [
     href: "/concepts",
     title: "Engineering Concepts",
     description: "Forces, circuits, structures, algorithms, and more — the core ideas, explained in plain language.",
+    accentColor: "primary" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <circle cx="20" cy="10" r="3" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="10" cy="28" r="3" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="30" cy="28" r="3" stroke="currentColor" strokeWidth="1.5" />
@@ -50,8 +71,9 @@ export const resourceLinks = [
     href: "/simulations",
     title: "Lever & Torque Simulator",
     description: "Adjust weight and distance on a lever and watch it balance in real time, with the math explained.",
+    accentColor: "accent" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <path d="M8 28h24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M14 28l6-16 6 16" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
         <circle cx="20" cy="12" r="2.5" stroke="currentColor" strokeWidth="1.5" />
@@ -62,21 +84,11 @@ export const resourceLinks = [
     href: "/design-process",
     title: "The Engineering Design Process",
     description: "The loop real engineers actually use — Ask, Imagine, Plan, Build, Test, Improve, Repeat.",
+    accentColor: "primary" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <circle cx="20" cy="20" r="14" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 4" />
         <path d="M20 6l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    href: "/sources",
-    title: "Sources & Methodology",
-    description: "Where every number comes from, what's editorial judgment, and who actually wrote this.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
-        <path d="M10 8h20v24H10z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M15 15h10M15 20h10M15 25h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -84,8 +96,9 @@ export const resourceLinks = [
     href: "/quiz/more-majors",
     title: "The Smaller Majors Quiz",
     description: "An optional, more informal quiz for fields like nuclear, petroleum, marine, and semiconductor engineering.",
+    accentColor: "accent" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <circle cx="14" cy="14" r="9" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="27" cy="24" r="6" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="14" cy="14" r="2" fill="currentColor" />
@@ -94,14 +107,26 @@ export const resourceLinks = [
     ),
   },
   {
-    href: "/parents-and-teachers",
-    title: "For Parents & Teachers",
-    description: "What this site is, what it collects (nothing), and how it might be useful in a classroom.",
+    href: "/sources",
+    title: "Sources & Methodology",
+    description: "Where every number comes from, what's editorial judgment, and who actually wrote this.",
+    accentColor: "primary" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
-        <circle cx="14" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="27" cy="14" r="3.5" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M6 32c1-6.5 4-10 8-10s7 3.5 8 10M22 32c0.7-5 3-8 6.5-8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+        <path d="M10 8h20v24H10z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M15 15h10M15 20h10M15 25h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    href: "/opportunities",
+    title: "Finding Opportunities Near You",
+    description: "This site doesn't know where you live and won't ask. Exactly what to search for to find clubs and programs yourself.",
+    accentColor: "accent" as const,
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+        <path d="M20 5c6 6 9 12 9 17a9 9 0 0 1-18 0c0-5 3-11 9-17Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <circle cx="20" cy="21" r="3" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
   },
@@ -109,8 +134,9 @@ export const resourceLinks = [
     href: "/meet-engineers",
     title: "How to Meet a Real Engineer",
     description: "This site won't fake interviews. Here's how to actually find one, what to ask, and how to stay safe doing it.",
+    accentColor: "primary" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
         <circle cx="15" cy="14" r="6" stroke="currentColor" strokeWidth="1.5" />
         <path d="M6 33c1-7 4-11 9-11s8 4 9 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M27 12h8M27 18h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -119,25 +145,15 @@ export const resourceLinks = [
     ),
   },
   {
-    href: "/opportunities",
-    title: "Finding Opportunities Near You",
-    description: "This site doesn't know where you live and won't ask. Exactly what to search for to find clubs and programs yourself.",
+    href: "/parents-and-teachers",
+    title: "For Parents & Teachers",
+    description: "What this site is, what it collects (nothing), and how it might be useful in a classroom.",
+    accentColor: "accent" as const,
     icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
-        <path d="M20 5c6 6 9 12 9 17a9 9 0 0 1-18 0c0-5 3-11 9-17Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-        <circle cx="20" cy="21" r="3" stroke="currentColor" strokeWidth="1.5" />
-      </svg>
-    ),
-  },
-  {
-    href: "/faq",
-    title: "Frequently Asked Questions",
-    description: "Quick answers to common questions — math requirements, switching majors, privacy — each linking to the full page behind it.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
-        <circle cx="20" cy="20" r="15" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M15.5 15.5a4.5 4.5 0 1 1 6.2 4.16c-1.2.5-1.7 1.34-1.7 2.34v1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <circle cx="20" cy="27" r="1" fill="currentColor" />
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+        <circle cx="14" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="27" cy="14" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M6 32c1-6.5 4-10 8-10s7 3.5 8 10M22 32c0.7-5 3-8 6.5-8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
   },

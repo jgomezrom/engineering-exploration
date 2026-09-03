@@ -20,21 +20,28 @@ export default function CuriosityExplorer() {
   return (
     <div className="border border-neutral-900/10 p-6 text-left sm:p-8 dark:border-white/10">
       <div className="flex flex-wrap justify-center gap-2.5 sm:justify-start">
-        {visibleInterests.map((interest) => {
+        {visibleInterests.map((interest, index) => {
           const isSelected = selected === interest.slug;
+          const isAccent = index % 2 === 1;
           return (
             <button
               key={interest.slug}
               type="button"
               aria-pressed={isSelected}
               onClick={() => setSelected(isSelected ? null : interest.slug)}
-              className={`flex items-center gap-2 border px-4 py-2 text-sm font-medium transition-colors ${
+              className={`flex items-center gap-2 border py-1.5 pl-1.5 pr-4 text-sm font-medium transition-colors ${
                 isSelected
                   ? "border-primary bg-primary/10 text-primary"
                   : "border-neutral-900/10 text-neutral-600 hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
               }`}
             >
-              <InterestIcon slug={interest.slug} className="h-4 w-4 flex-shrink-0" />
+              <span
+                className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full ${
+                  isAccent ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"
+                }`}
+              >
+                <InterestIcon slug={interest.slug} className="h-3.5 w-3.5" />
+              </span>
               {interest.label}
             </button>
           );
