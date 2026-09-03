@@ -23,6 +23,7 @@ export const chromeTranslations = {
     bookmarked: "Bookmarked",
     removeBookmark: "Remove bookmark for this field",
     goToHomepage: "Go to homepage",
+    openSearch: "Search the site",
   },
   es: {
     navCurious: "Curioso",
@@ -44,5 +45,6 @@ export const chromeTranslations = {
     bookmarked: "Guardado",
     removeBookmark: "Quitar el marcador de este campo",
     goToHomepage: "Ir a la página de inicio",
+    openSearch: "Buscar en el sitio",
   },
 };

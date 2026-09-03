@@ -26,6 +26,7 @@ export const challengesTranslations = {
       "That's normal — this challenge follows the same design process real engineers use. A failed test just tells you where to go back and improve.",
     seeFullProcess: "See the full Engineering Design Process →",
     reflect: "Reflect",
+    printChallenge: "Print this challenge",
   },
   es: {
     badge: "Pruébalo tú mismo",
@@ -52,6 +53,7 @@ export const challengesTranslations = {
       "Eso es normal — este desafío sigue el mismo proceso de diseño que usan los ingenieros de verdad. Una prueba fallida solo te dice a dónde regresar para mejorar.",
     seeFullProcess: "Ver el Proceso de Diseño de Ingeniería completo →",
     reflect: "Reflexiona",
+    printChallenge: "Imprimir este desafío",
   },
 };
 

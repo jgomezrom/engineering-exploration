@@ -104,12 +104,26 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
         </span>
       </div>
 
-      <p className="mt-6 text-sm text-neutral-500 dark:text-neutral-400">
-        {t.relatedField}{" "}
-        <Link href={`/engineering/${field.slug}`} className="font-medium text-primary hover:underline">
-          {field.name}
-        </Link>
-      </p>
+      <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          {t.relatedField}{" "}
+          <Link href={`/engineering/${field.slug}`} className="font-medium text-primary hover:underline">
+            {field.name}
+          </Link>
+        </p>
+        <button
+          type="button"
+          onClick={() => window.print()}
+          className="print:hidden flex items-center gap-2 border border-neutral-900/10 px-3 py-1.5 text-xs font-medium text-neutral-600 transition-colors hover:border-primary/40 hover:text-primary dark:border-white/10 dark:text-neutral-400"
+        >
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-3.5 w-3.5">
+            <path d="M6 7.5V3h8v4.5" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+            <rect x="3" y="7.5" width="14" height="7" rx="1" stroke="currentColor" strokeWidth="1.4" />
+            <rect x="6" y="11" width="8" height="5.5" stroke="currentColor" strokeWidth="1.4" />
+          </svg>
+          {t.printChallenge}
+        </button>
+      </div>
 
       <Section index={1} title={t.missionBriefing}>
         <div className="space-y-6">
@@ -136,7 +150,7 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
             <p className="mt-2 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
               {challenge.conceptTaught}
             </p>
-            <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1">
+            <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 print:hidden">
               {challenge.conceptSlug && (
                 <Link
                   href={`/concepts?concept=${challenge.conceptSlug}`}
@@ -192,10 +206,13 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
 
       <Section index={6} title={t.ifDoesntWork}>
         <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{t.ifDoesntWorkBody}</p>
-        <div className="mt-6">
+        <div className="mt-6 print:hidden">
           <DesignProcessDiagram compact />
         </div>
-        <Link href="/design-process" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+        <Link
+          href="/design-process"
+          className="mt-4 inline-block text-sm font-medium text-primary hover:underline print:hidden"
+        >
           {t.seeFullProcess}
         </Link>
       </Section>

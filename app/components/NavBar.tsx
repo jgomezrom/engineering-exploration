@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
+import SearchModal from "./SearchModal";
 import { useLanguage } from "../context/LanguageContext";
 import { chromeTranslations } from "../data/translations/chrome";
 
@@ -18,6 +19,7 @@ const NAV_LINKS = [
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { language } = useLanguage();
   const t = chromeTranslations[language];
 
@@ -46,6 +48,17 @@ export default function NavBar() {
             ))}
           </div>
 
+          <button
+            type="button"
+            aria-label={t.openSearch}
+            onClick={() => setSearchOpen(true)}
+            className="flex h-9 w-9 flex-shrink-0 items-center justify-center border border-neutral-900/10 text-neutral-600 transition-colors hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
+          >
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
+              <circle cx="9" cy="9" r="6" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M17 17l-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </button>
           <LanguageToggle />
           <ThemeToggle />
 
@@ -78,6 +91,8 @@ export default function NavBar() {
           </div>
         </div>
       )}
+
+      {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
     </header>
   );
 }
