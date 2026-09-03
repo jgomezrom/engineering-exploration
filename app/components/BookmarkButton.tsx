@@ -17,7 +17,7 @@ export default function BookmarkButton({ slug }: { slug: FieldSlug }) {
     <button
       type="button"
       aria-pressed={bookmarked}
-      aria-label={bookmarked ? "Remove bookmark for this field" : t.bookmarkThis}
+      aria-label={bookmarked ? t.removeBookmark : t.bookmarkThis}
       onClick={() => toggleBookmark(slug)}
       className={`mt-6 inline-flex items-center gap-2 border px-4 py-2 text-sm font-medium transition-colors ${
         bookmarked

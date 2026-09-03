@@ -12,6 +12,7 @@ import { fields } from "../data/fields";
 import { challenges } from "../data/challenges";
 import { resourceLinks } from "../data/resourceLinks";
 import { homeTranslations } from "../data/translations/home";
+import { resourceLinksEs } from "../data/translations/resources";
 import { useLanguage } from "../context/LanguageContext";
 
 function JourneyArrow() {
@@ -27,7 +28,6 @@ function JourneyArrow() {
 export default function HomeContent() {
   const { language } = useLanguage();
   const t = homeTranslations[language];
-  const isTranslated = language !== "en";
 
   return (
     <main className="relative flex flex-col items-center px-6 py-24 text-center">
@@ -151,25 +151,32 @@ export default function HomeContent() {
         </span>
         <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">{t.deeperTitle}</h2>
         <p className="mt-3 max-w-xl text-neutral-600 dark:text-neutral-400">
-          {t.deeperBody} {isTranslated && <span className="italic">{t.deeperNote}</span>}
+          {t.deeperBody}
         </p>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {resourceLinks.map((resource) => (
-            <Link key={resource.href} href={resource.href}>
-              <Card>
-                <div
-                  className={`inline-flex h-14 w-14 items-center justify-center rounded-full ${
-                    resource.accentColor === "accent" ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"
-                  }`}
-                >
-                  {resource.icon}
-                </div>
-                <h3 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">{resource.title}</h3>
-                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{resource.description}</p>
-              </Card>
-            </Link>
-          ))}
+          {resourceLinks.map((resource) => {
+            const localized = language === "es" ? resourceLinksEs[resource.href] : undefined;
+            return (
+              <Link key={resource.href} href={resource.href}>
+                <Card>
+                  <div
+                    className={`inline-flex h-14 w-14 items-center justify-center rounded-full ${
+                      resource.accentColor === "accent" ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"
+                    }`}
+                  >
+                    {resource.icon}
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+                    {localized?.title ?? resource.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+                    {localized?.description ?? resource.description}
+                  </p>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
       </FadeIn>
 
@@ -179,7 +186,7 @@ export default function HomeContent() {
         </span>
         <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">{t.curiousTitle}</h2>
         <p className="mx-auto mt-3 max-w-xl text-neutral-600 dark:text-neutral-400">
-          {t.curiousBody} {isTranslated && <span className="italic">{t.deeperNote}</span>}
+          {t.curiousBody}
         </p>
         <div className="mt-8">
           <CuriosityExplorer />

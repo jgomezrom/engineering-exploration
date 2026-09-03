@@ -61,7 +61,7 @@ export default function LeverSimulator() {
   return (
     <div>
       <div className="border border-neutral-900/10 p-6 dark:border-white/10 sm:p-8">
-        <svg viewBox="0 0 400 200" className="mx-auto w-full max-w-md" role="img" aria-label="A lever balancing two weights, tilting based on which side has more torque">
+        <svg viewBox="0 0 400 200" className="mx-auto w-full max-w-md" role="img" aria-label={t.diagramAriaLabel}>
           <line x1="20" y1="180" x2="380" y2="180" stroke="currentColor" strokeWidth="1" strokeDasharray="2 4" className="text-neutral-900/15 dark:text-white/15" />
           <path d={`M${PIVOT_X - 22} 180 L${PIVOT_X} 122 L${PIVOT_X + 22} 180 Z`} className="fill-neutral-100 stroke-neutral-900/20 dark:fill-neutral-900 dark:stroke-white/20" strokeWidth="1.5" />
 

@@ -21,6 +21,8 @@ export const chromeTranslations = {
     backToChallenges: "← Back to Challenges",
     bookmarkThis: "Bookmark this field",
     bookmarked: "Bookmarked",
+    removeBookmark: "Remove bookmark for this field",
+    goToHomepage: "Go to homepage",
   },
   es: {
     navCurious: "Curioso",
@@ -40,5 +42,7 @@ export const chromeTranslations = {
     backToChallenges: "← Volver a Desafíos",
     bookmarkThis: "Guardar este campo",
     bookmarked: "Guardado",
+    removeBookmark: "Quitar el marcador de este campo",
+    goToHomepage: "Ir a la página de inicio",
   },
 };

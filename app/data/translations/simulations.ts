@@ -23,6 +23,7 @@ export const simulationsTranslations = {
     weight: "Weight",
     distanceFromPivot: "Distance from pivot",
     torqueLabel: "Torque",
+    diagramAriaLabel: "A lever balancing two weights, tilting based on which side has more torque",
   },
   es: {
     badge: "Simulaciones",
@@ -48,5 +49,6 @@ export const simulationsTranslations = {
     weight: "Peso",
     distanceFromPivot: "Distancia al punto de apoyo",
     torqueLabel: "Torque",
+    diagramAriaLabel: "Una palanca equilibrando dos pesos, inclinándose según qué lado tiene más torque",
   },
 };

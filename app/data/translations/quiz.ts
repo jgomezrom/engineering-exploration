@@ -39,6 +39,7 @@ export const quizTranslations = {
     smallerFieldsBody:
       "Those fields don't have the depth yet to fit into the scoring above, so there's a separate, more informal quiz just for them.",
     trySmallerQuiz: "Try the smaller majors quiz →",
+    radarChartAriaLabel: "Radar chart of match percentage per engineering field",
   },
   es: {
     badge: "Cuestionario de 5 minutos",
@@ -80,6 +81,7 @@ export const quizTranslations = {
     smallerFieldsBody:
       "Esos campos todavía no tienen la profundidad para encajar en la calificación de arriba, así que hay un cuestionario separado y más informal solo para ellos.",
     trySmallerQuiz: "Prueba el cuestionario de carreras menos comunes →",
+    radarChartAriaLabel: "Gráfico de radar del porcentaje de coincidencia por campo de ingeniería",
   },
 };
 

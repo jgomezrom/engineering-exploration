@@ -26,7 +26,7 @@ export default function NavBar() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          aria-label="Go to homepage"
+          aria-label={t.goToHomepage}
           className="flex items-center gap-2 text-lg font-semibold text-neutral-900 dark:text-white"
         >
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-5 w-5 flex-shrink-0 text-primary">

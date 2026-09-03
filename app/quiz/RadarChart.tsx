@@ -3,7 +3,7 @@
 import { FieldResult } from "./scoring";
 import { FieldSlug } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
-import { fieldLabelsShort } from "../data/translations/quiz";
+import { fieldLabelsShort, quizTranslations } from "../data/translations/quiz";
 
 // Only the fields the quiz actually scores — see the filter in scoring.ts. A
 // field added to the site without quiz questions of its own won't appear here
@@ -38,6 +38,7 @@ function pointAt(index: number, total: number, radiusFraction: number) {
 export default function RadarChart({ results }: { results: FieldResult[] }) {
   const { language } = useLanguage();
   const fieldLabels = fieldLabelsShort[language];
+  const t = quizTranslations[language];
   const bySlug = Object.fromEntries(results.map((r) => [r.slug, r])) as Record<FieldSlug, FieldResult>;
   const ordered = FIELD_ORDER.map((slug) => bySlug[slug]).filter(Boolean);
   const n = ordered.length;
@@ -46,7 +47,7 @@ export default function RadarChart({ results }: { results: FieldResult[] }) {
   const dataPath = dataPoints.map((p) => `${p.x},${p.y}`).join(" ");
 
   return (
-    <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="mx-auto w-full max-w-sm" role="img" aria-label="Radar chart of match percentage per engineering field">
+    <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="mx-auto w-full max-w-sm" role="img" aria-label={t.radarChartAriaLabel}>
       {GRID_LEVELS.map((level) => {
         const pts = ordered.map((_, i) => pointAt(i, n, level));
         return (

@@ -5,6 +5,11 @@ export const notFoundTranslations = {
     body: "This page doesn't exist — maybe it was never built, or the link's wrong. Try one of these instead.",
     goHome: "Go Home",
     exploreFields: "Explore Fields",
+    challengeHeading: "We couldn't find that challenge",
+    challengeBody: "The challenge you're looking for doesn't exist yet. Check out the challenges we do have below.",
+    seeChallenges: "See Hands-On Challenges",
+    fieldHeading: "We couldn't find that field",
+    fieldBody: "The engineering field you're looking for doesn't exist yet. Check out the fields we do have below.",
   },
   es: {
     badge: "404",
@@ -12,5 +17,10 @@ export const notFoundTranslations = {
     body: "Esta página no existe — quizás nunca se construyó, o el enlace está mal. Prueba una de estas opciones.",
     goHome: "Ir al Inicio",
     exploreFields: "Explorar Campos",
+    challengeHeading: "No pudimos encontrar ese desafío",
+    challengeBody: "El desafío que buscas todavía no existe. Échale un vistazo a los desafíos que sí tenemos abajo.",
+    seeChallenges: "Ver Desafíos Prácticos",
+    fieldHeading: "No pudimos encontrar ese campo",
+    fieldBody: "El campo de ingeniería que buscas todavía no existe. Échale un vistazo a los campos que sí tenemos abajo.",
   },
 };

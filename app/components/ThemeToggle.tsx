@@ -2,6 +2,12 @@
 
 import { useSyncExternalStore } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
+
+const LABELS = {
+  en: { toLight: "Switch to light mode", toDark: "Switch to dark mode" },
+  es: { toLight: "Cambiar a modo claro", toDark: "Cambiar a modo oscuro" },
+};
 
 function subscribeToSystemTheme(callback: () => void) {
   const mq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -22,6 +28,8 @@ function getServerSnapshot() {
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const { language } = useLanguage();
+  const t = LABELS[language];
   const systemPrefersDark = useSyncExternalStore(subscribeToSystemTheme, getSystemPrefersDark, getServerSnapshot);
   const effective: "dark" | "light" = theme ?? (systemPrefersDark ? "dark" : "light");
 
@@ -29,7 +37,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(effective === "dark" ? "light" : "dark")}
-      aria-label={effective === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={effective === "dark" ? t.toLight : t.toDark}
       className="flex h-9 w-9 flex-shrink-0 items-center justify-center border border-neutral-900/10 text-neutral-600 transition-colors hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
     >
       {effective === "dark" ? (

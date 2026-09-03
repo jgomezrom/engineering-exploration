@@ -1,8 +1,28 @@
+"use client";
+
 import { FieldSlug } from "../data/types";
+import { useLanguage } from "../context/LanguageContext";
 
 type FieldIllustrationProps = {
   slug: FieldSlug;
   className?: string;
+};
+
+const DIAGRAM_LABELS = {
+  en: {
+    airfoilSection: "airfoil section",
+    soilCrossSection: "soil cross-section",
+    processFlow: "process flow",
+    crystalLattice: "crystal lattice",
+    articulatedArm: "articulated arm",
+  },
+  es: {
+    airfoilSection: "sección de perfil alar",
+    soilCrossSection: "sección transversal del suelo",
+    processFlow: "flujo del proceso",
+    crystalLattice: "red cristalina",
+    articulatedArm: "brazo articulado",
+  },
 };
 
 function GearTeeth({ cx, cy, r, count, len }: { cx: number; cy: number; r: number; count: number; len: number }) {
@@ -52,6 +72,9 @@ function LatticeGrid({ x, y, cols, rows, spacing }: { x: number; y: number; cols
 }
 
 export default function FieldIllustration({ slug, className = "h-auto w-full" }: FieldIllustrationProps) {
+  const { language } = useLanguage();
+  const labels = DIAGRAM_LABELS[language];
+
   switch (slug) {
     case "mechanical-engineering":
       return (
@@ -133,7 +156,7 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           <line x1="30" y1="99" x2="270" y2="94" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
-            airfoil section
+            {labels.airfoilSection}
           </text>
         </svg>
       );
@@ -177,7 +200,7 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           />
           <line x1="40" y1="150" x2="260" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
-            soil cross-section
+            {labels.soilCrossSection}
           </text>
         </svg>
       );
@@ -191,7 +214,7 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           <path d="M70 90h40M160 90h40" stroke="currentColor" strokeWidth="1.5" />
           <line x1="20" y1="130" x2="250" y2="130" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <text x="135" y="145" textAnchor="middle" className="fill-current font-mono text-[9px]">
-            process flow
+            {labels.processFlow}
           </text>
         </svg>
       );
@@ -202,7 +225,7 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           <LatticeGrid x={50} y={40} cols={5} rows={4} spacing={40} />
           <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
-            crystal lattice
+            {labels.crystalLattice}
           </text>
         </svg>
       );
@@ -217,7 +240,7 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           <path d="M190 100l14-14M190 100l14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           <line x1="40" y1="160" x2="260" y2="160" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <text x="150" y="172" textAnchor="middle" className="fill-current font-mono text-[9px]">
-            articulated arm
+            {labels.articulatedArm}
           </text>
         </svg>
       );

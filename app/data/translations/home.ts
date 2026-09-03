@@ -36,7 +36,6 @@ export const homeTranslations = {
     deeperTitle: "More ways to explore",
     deeperBody:
       "Comparing fields side by side, whether you need to be good at math, how engineering careers differ from what people assume — all of this is already on the site.",
-    deeperNote: "(These pages are still English-only for now.)",
     curiousBadge: "Not sure where to start?",
     curiousTitle: "What are you into?",
     curiousBody:
@@ -72,7 +71,6 @@ export const homeTranslations = {
     deeperTitle: "Más formas de explorar",
     deeperBody:
       "Comparar campos lado a lado, si necesitas ser bueno en matemáticas, en qué se diferencian las carreras de ingeniería de lo que la gente asume — todo esto ya está en el sitio.",
-    deeperNote: "(Estas páginas todavía están solo en inglés, por ahora.)",
     curiousBadge: "¿No sabes por dónde empezar?",
     curiousTitle: "¿Qué te interesa?",
     curiousBody:
