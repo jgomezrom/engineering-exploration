@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ReactNode } from "react";
 import FadeIn from "../components/FadeIn";
 
 export const metadata: Metadata = {
   title: "For Parents & Teachers | Engineering Exploration",
   description:
-    "What this site is, what it stores (a couple of optional, browser-only preferences — never sent anywhere), and how it might be useful in a classroom or at home.",
+    "What this site is, what it stores (a couple of optional, browser-only preferences) and tracks (anonymous traffic analytics only), and how it might be useful in a classroom or at home.",
 };
 
-function BulletList({ items }: { items: string[] }) {
+function BulletList({ items }: { items: ReactNode[] }) {
   return (
     <ul className="max-w-2xl space-y-3">
-      {items.map((item) => (
-        <li key={item} className="flex gap-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
+      {items.map((item, index) => (
+        <li key={index} className="flex gap-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
           <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
           <span>{item}</span>
         </li>
@@ -69,9 +70,10 @@ export default function ParentsAndTeachersPage() {
           What it stores, and what it doesn&apos;t
         </h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
-          There are no accounts, no sign-up, no ads, and no tracking of what a student clicks on
-          or answers sent to us or anyone else. Two small features save a little information —
-          both stay entirely on the device itself. Specifically:
+          There are no accounts, no sign-up, and no ads. As of September 2026, this site also
+          uses a small amount of anonymous traffic analytics (the fifth item below) — beyond
+          that, nothing about what a student clicks on or answers is tracked or sent anywhere.
+          Specifically:
         </p>
         <div className="mt-4">
           <BulletList
@@ -80,6 +82,20 @@ export default function ParentsAndTeachersPage() {
               "The interest quiz's answers and results exist only in the browser while it's open, and disappear the moment the page is closed or reloaded — nothing is sent anywhere or saved.",
               "Every reflection prompt (on challenge pages and the Day in the Life feature) is a plain text box that is never saved, submitted, or sent anywhere — it's there for the student's own thinking, not for anyone else to read.",
               "The optional \"remember my age band\" feature only ever lives in the browser's memory for that one visit, never in a cookie, local storage, or on a server — closing the tab erases it completely.",
+              <>
+                This site uses Vercel Web Analytics to see anonymous, aggregate traffic — total
+                visits and which pages are popular. It doesn&apos;t use cookies, and per{" "}
+                <a
+                  href="https://vercel.com/docs/analytics/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Vercel&apos;s own privacy documentation
+                </a>
+                , it&apos;s not designed to identify or re-identify an individual visitor —
+                visit data is automatically discarded after 24 hours, not kept permanently.
+              </>,
               "There is no login, no profile, and no way for this site to identify who is using it.",
             ]}
           />
@@ -88,10 +104,10 @@ export default function ParentsAndTeachersPage() {
           In practice, that means it&apos;s safe to hand to a student without setting anything up
           first. The bookmarks and streak counter save a little information, but only inside that
           one browser — there&apos;s no record anywhere we, or anyone else, could look at
-          afterward. (The site is hosted on Vercel, which — like any web host — may keep standard
-          server-level access logs as part of normal infrastructure; that&apos;s outside the
-          site&apos;s control and separate from the analytics, ads, and tracking the site itself
-          deliberately doesn&apos;t add.)
+          afterward, and the anonymous traffic analytics above can&apos;t be tied back to any one
+          student. (The site is hosted on Vercel, which — like any web host — may keep standard
+          server-level access logs as part of normal infrastructure, separate from the Web
+          Analytics described above.)
         </p>
       </FadeIn>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import NavBar from "./components/NavBar"; import Footer from "./components/Footer";
 import { AgeBandProvider } from "./context/AgeBandContext";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Footer />
           </AgeBandProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

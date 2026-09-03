@@ -129,4 +129,16 @@ export const resourceLinks = [
       </svg>
     ),
   },
+  {
+    href: "/faq",
+    title: "Frequently Asked Questions",
+    description: "Quick answers to common questions — math requirements, switching majors, privacy — each linking to the full page behind it.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+        <circle cx="20" cy="20" r="15" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M15.5 15.5a4.5 4.5 0 1 1 6.2 4.16c-1.2.5-1.7 1.34-1.7 2.34v1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="20" cy="27" r="1" fill="currentColor" />
+      </svg>
+    ),
+  },
 ];

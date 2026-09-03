@@ -21,6 +21,11 @@ export const fields: EngineeringField[] = [
       "That it's only about big machines — a lot of mechanical engineering is precise, small-scale design work.",
       "That you have to already be 'good with tools' before starting — most of the hands-on skill is learned during the degree, not before it.",
     ],
+    mythsAndRealities: [
+      { myth: "Mechanical engineers mostly fix cars or appliances.", reality: "That's usually a mechanic or technician's job — a different profession entirely." },
+      { myth: "It's only about big machines.", reality: "A lot of mechanical engineering is precise, small-scale design work." },
+      { myth: "You have to already be 'good with tools' before starting.", reality: "Most of the hands-on skill is learned during the degree, not before it." },
+    ],
     usefulSubjects: ["Physics (especially mechanics)", "Calculus", "Chemistry (some programs)", "Technical drawing or CAD, if available"],
     helpfulSkills: [
       "Spatial reasoning (visualizing how parts fit and move together)",
@@ -154,6 +159,11 @@ export const fields: EngineeringField[] = [
     "That it's only about physical wiring — a huge portion of the field is signal theory, circuit design, and increasingly, programming embedded systems",
     "That you need to already understand circuits before starting — like mechanical engineering, most of this is taught from the ground up",
   ],
+  mythsAndRealities: [
+    { myth: "It's the same as being an electrician.", reality: "That's a licensed trade, different from an engineering degree." },
+    { myth: "It's only about physical wiring.", reality: "A huge portion of the field is signal theory, circuit design, and increasingly, programming embedded systems." },
+    { myth: "You need to already understand circuits before starting.", reality: "Like mechanical engineering, most of this is taught from the ground up." },
+  ],
   usefulSubjects: ["Physics (especially electricity and magnetism)", "Calculus", "Any intro to programming, if available"],
   helpfulSkills: [
     "Comfort with abstract math (electrical behavior isn't always visible the way mechanical motion is)",
@@ -283,6 +293,11 @@ export const fields: EngineeringField[] = [
       "That civil engineers are the same as construction workers or contractors — civil engineers design and plan; they generally aren't the ones physically building.",
       "That it's a 'less technical' field than mechanical or electrical engineering — structural and geotechnical calculations can be just as demanding, and the safety margins matter because failures are public and potentially catastrophic.",
       "That most civil engineering work is on big, glamorous projects — a lot of day-to-day work is smaller municipal projects: road repairs, subdivision drainage, routine bridge inspections.",
+    ],
+    mythsAndRealities: [
+      { myth: "Civil engineers are the same as construction workers or contractors.", reality: "Civil engineers design and plan; they generally aren't the ones physically building." },
+      { myth: "It's a 'less technical' field than mechanical or electrical engineering.", reality: "Structural and geotechnical calculations can be just as demanding, and the safety margins matter because failures are public and potentially catastrophic." },
+      { myth: "Most civil engineering work is on big, glamorous projects.", reality: "A lot of day-to-day work is smaller municipal projects: road repairs, subdivision drainage, routine bridge inspections." },
     ],
     usefulSubjects: ["Physics (especially statics and mechanics)", "Calculus", "Environmental science, if available", "Geography or earth science, if available"],
     helpfulSkills: [
@@ -418,6 +433,11 @@ export const fields: EngineeringField[] = [
       "That the field is mostly biology — it's engineering first, and strong math and physics fundamentals are usually just as important as life-science knowledge.",
       "That entry-level jobs are as widely available as in more established fields like mechanical or electrical engineering — this varies, and it's worth researching carefully (see the competitiveness note below).",
     ],
+    mythsAndRealities: [
+      { myth: "Biomedical engineers are doctors or work directly with patients.", reality: "Most work in labs, R&D, or manufacturing, not clinical settings." },
+      { myth: "The field is mostly biology.", reality: "It's engineering first, and strong math and physics fundamentals are usually just as important as life-science knowledge." },
+      { myth: "Entry-level jobs are as widely available as in more established fields like mechanical or electrical engineering.", reality: "This varies a lot, and it's worth researching carefully — see the competitiveness section below." },
+    ],
     usefulSubjects: ["Biology", "Chemistry", "Physics", "Calculus"],
     helpfulSkills: [
       "Comfort combining engineering fundamentals with biology and physiology concepts",
@@ -551,6 +571,11 @@ export const fields: EngineeringField[] = [
       "That it's mostly about knowing a lot of programming languages — problem-solving and system design matter more than memorizing syntax, and most working engineers use documentation and references constantly.",
       "That you code independently, all day, every day — most roles involve real time in meetings, code review, planning, and communicating with non-engineers.",
       "That it's an easy or guaranteed path to a high salary regardless of effort — the hiring market has shifted in recent years and is more competitive than the popular narrative suggests (see the note below).",
+    ],
+    mythsAndRealities: [
+      { myth: "It's mostly about knowing a lot of programming languages.", reality: "Problem-solving and system design matter more than memorizing syntax, and most working engineers use documentation and references constantly." },
+      { myth: "You code independently, all day, every day.", reality: "Most roles involve real time in meetings, code review, planning, and communicating with non-engineers." },
+      { myth: "It's an easy or guaranteed path to a high salary regardless of effort.", reality: "The hiring market has shifted in recent years and is more competitive than the popular narrative suggests — see the note below." },
     ],
     usefulSubjects: ["Any programming or computer science courses available", "Algebra and discrete math, if available", "Logic-based coursework, like formal logic or debate, can help too"],
     helpfulSkills: [
@@ -687,6 +712,11 @@ export const fields: EngineeringField[] = [
       "That you need to already understand rocket science — like other engineering fields, the technical depth is taught during the degree, not expected beforehand.",
       "That it's the same as being a pilot or astronaut — aerospace engineers design and test the vehicles; they don't necessarily fly them.",
     ],
+    mythsAndRealities: [
+      { myth: "Aerospace engineers all work for NASA or a space company.", reality: "Most work in commercial aviation, defense, or on components for larger systems, not necessarily spacecraft." },
+      { myth: "You need to already understand rocket science.", reality: "Like other engineering fields, the technical depth is taught during the degree, not expected beforehand." },
+      { myth: "It's the same as being a pilot or astronaut.", reality: "Aerospace engineers design and test the vehicles; they don't necessarily fly them." },
+    ],
     usefulSubjects: ["Physics (especially mechanics and thermodynamics)", "Calculus", "Chemistry", "Technical drawing or CAD, if available"],
     helpfulSkills: [
       "Comfort with math and physics at a demanding level — the margins for error are smaller than in most other fields",
@@ -820,6 +850,11 @@ export const fields: EngineeringField[] = [
       "That chemical engineers work mostly in a lab mixing chemicals — most of the job is designing and running large-scale industrial processes, not lab chemistry.",
       "That it's the same as being a chemist — chemists typically focus on discovering and understanding reactions; chemical engineers focus on how to run them safely and efficiently at scale.",
       "That it's a niche field — chemical engineers work across a very wide range of industries, from energy to pharmaceuticals to food production.",
+    ],
+    mythsAndRealities: [
+      { myth: "Chemical engineers work mostly in a lab mixing chemicals.", reality: "Most of the job is designing and running large-scale industrial processes, not lab chemistry." },
+      { myth: "It's the same as being a chemist.", reality: "Chemists typically focus on discovering and understanding reactions; chemical engineers focus on how to run them safely and efficiently at scale." },
+      { myth: "It's a niche field.", reality: "Chemical engineers work across a very wide range of industries, from energy to pharmaceuticals to food production." },
     ],
     usefulSubjects: ["Chemistry", "Physics", "Calculus", "Biology, if available"],
     helpfulSkills: [
@@ -955,6 +990,11 @@ export const fields: EngineeringField[] = [
       "That it's the same as electrical engineering — there's real overlap, but computer engineering focuses specifically on computing hardware and the software closest to it, rather than broader electrical systems like power.",
       "That you need to already understand circuits or code before starting — like other engineering fields, this is taught from the ground up during the degree.",
     ],
+    mythsAndRealities: [
+      { myth: "It's the same as software engineering.", reality: "Computer engineers design physical hardware and low-level firmware, not typically full applications or websites." },
+      { myth: "It's the same as electrical engineering.", reality: "There's real overlap, but computer engineering focuses specifically on computing hardware and the software closest to it, rather than broader electrical systems like power." },
+      { myth: "You need to already understand circuits or code before starting.", reality: "Like other engineering fields, this is taught from the ground up during the degree." },
+    ],
     usefulSubjects: ["Physics (especially electricity and electronics)", "Calculus", "Any intro to programming, if available"],
     helpfulSkills: [
       "Comfort with both circuit-level thinking and programming, since the field bridges hardware and software",
@@ -1087,6 +1127,11 @@ export const fields: EngineeringField[] = [
       "That environmental engineers are the same as environmental scientists — scientists typically focus on studying and understanding environmental systems, while engineers focus on designing solutions and systems.",
       "That the job is mostly outdoor fieldwork — a significant amount of the work is office-based analysis, regulatory review, and report writing.",
       "That it's a 'soft' or less technical engineering field — it draws heavily on chemistry, biology, and civil engineering fundamentals, and regulatory work requires real technical precision.",
+    ],
+    mythsAndRealities: [
+      { myth: "Environmental engineers are the same as environmental scientists.", reality: "Scientists typically focus on studying and understanding environmental systems, while engineers focus on designing solutions and systems." },
+      { myth: "The job is mostly outdoor fieldwork.", reality: "A significant amount of the work is office-based analysis, regulatory review, and report writing." },
+      { myth: "It's a 'soft' or less technical engineering field.", reality: "It draws heavily on chemistry, biology, and civil engineering fundamentals, and regulatory work requires real technical precision." },
     ],
     usefulSubjects: ["Environmental science or earth science, if available", "Chemistry", "Biology", "Physics", "Calculus"],
     helpfulSkills: [
@@ -1222,6 +1267,11 @@ export const fields: EngineeringField[] = [
       "That it's less 'technical' than other engineering fields because it doesn't focus on a single physical product — the underlying math, like statistics and optimization, can be just as demanding.",
       "That it only applies to factories — industrial engineering principles are used in healthcare, logistics, retail, and many service industries.",
     ],
+    mythsAndRealities: [
+      { myth: "Industrial engineers work on the factory floor operating machines.", reality: "Most of the job is analysis and process design, not machine operation." },
+      { myth: "It's less 'technical' than other engineering fields because it doesn't focus on a single physical product.", reality: "The underlying math, like statistics and optimization, can be just as demanding." },
+      { myth: "It only applies to factories.", reality: "Industrial engineering principles are used in healthcare, logistics, retail, and many service industries." },
+    ],
     usefulSubjects: ["Advanced mathematics, including statistics", "Physics", "Any intro to programming or data analysis, if available"],
     helpfulSkills: [
       "Comfort with statistics and data analysis, since a lot of the job involves measuring and improving a process",
@@ -1356,6 +1406,11 @@ export const fields: EngineeringField[] = [
       "That it's the same as chemistry — chemistry focuses on the reactions and composition of substances; materials engineering focuses more on how a material's structure affects its real-world performance.",
       "That it's a narrow, niche field — materials engineers work across aerospace, automotive, electronics, medical devices, energy, and more.",
     ],
+    mythsAndRealities: [
+      { myth: "Materials engineers just pick materials off a shelf for other engineers.", reality: "A significant part of the job is developing and testing genuinely new materials, not just selecting existing ones." },
+      { myth: "It's the same as chemistry.", reality: "Chemistry focuses on the reactions and composition of substances; materials engineering focuses more on how a material's structure affects its real-world performance." },
+      { myth: "It's a narrow, niche field.", reality: "Materials engineers work across aerospace, automotive, electronics, medical devices, energy, and more." },
+    ],
     usefulSubjects: ["Chemistry", "Physics", "Calculus", "Technical drawing or CAD, if available"],
     helpfulSkills: [
       "A strong foundation in chemistry and physics, since material properties come from what's happening at a molecular or structural level",
@@ -1489,6 +1544,11 @@ export const fields: EngineeringField[] = [
       "That it's its own single, standardized major everywhere — some universities offer a dedicated robotics or mechatronics degree, while others expect you to specialize through mechanical, electrical, or computer engineering with a robotics focus.",
       "That it's mostly about building humanoid robots — most real-world robotics work is industrial or task-specific, like arms, drones, or vehicles, not human-shaped machines.",
       "That you need to be equally expert in mechanical, electrical, and software engineering from day one — most people specialize in one area and build working knowledge of the others over time.",
+    ],
+    mythsAndRealities: [
+      { myth: "It's its own single, standardized major everywhere.", reality: "Some universities offer a dedicated robotics or mechatronics degree, while others expect you to specialize through mechanical, electrical, or computer engineering with a robotics focus." },
+      { myth: "It's mostly about building humanoid robots.", reality: "Most real-world robotics work is industrial or task-specific, like arms, drones, or vehicles, not human-shaped machines." },
+      { myth: "You need to be equally expert in mechanical, electrical, and software engineering from day one.", reality: "Most people specialize in one area and build working knowledge of the others over time." },
     ],
     usefulSubjects: ["Physics (especially mechanics and electricity)", "Calculus", "Any intro to programming, if available", "Technical drawing or CAD, if available"],
     helpfulSkills: [

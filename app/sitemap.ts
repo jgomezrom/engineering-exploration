@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/quiz/more-majors",
     "/meet-engineers",
     "/opportunities",
+    "/faq",
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

@@ -3,6 +3,14 @@ export type Career = {
   description: string;
 };
 
+// A myth/reality pair for the flip-card presentation of a field's own
+// commonMisconceptions — same facts, split into two labeled halves instead
+// of one sentence. See the comment above mythsAndRealities in fields.ts.
+export type MythReality = {
+  myth: string;
+  reality: string;
+};
+
 export type FieldSlug =
   | "mechanical-engineering"
   | "electrical-engineering"
@@ -107,6 +115,9 @@ export type EngineeringField = {
   whatEngineersWorkOn: string;
   realWorldExamples: string[];
   commonMisconceptions: string[];
+  // Same facts as commonMisconceptions above, split into myth/reality pairs
+  // for the flip-card presentation — not independently sourced content.
+  mythsAndRealities: MythReality[];
   usefulSubjects: string[];
   helpfulSkills: string[];
   typicalProjects: string[];

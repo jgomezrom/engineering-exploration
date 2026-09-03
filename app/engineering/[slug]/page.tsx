@@ -9,6 +9,7 @@ import FieldStatSheet from "../../components/FieldStatSheet";
 import SalaryDetails from "../../components/SalaryDetails";
 import DayInTheLife from "../../components/DayInTheLife";
 import NextStepsExplorer from "../../components/NextStepsExplorer";
+import MythRealityCards from "../../components/MythRealityCards";
 import BookmarkButton from "../../components/BookmarkButton";
 import FieldVisitTracker from "../../components/FieldVisitTracker";
 import { fields } from "../../data/fields";
@@ -215,7 +216,10 @@ export default async function EngineeringFieldPage(props: PageProps<"/engineerin
       </Section>
 
       <Section index={4} title="Common Misconceptions">
-        <BulletList items={field!.commonMisconceptions} />
+        <p className="mb-5 max-w-2xl text-sm text-neutral-500 dark:text-neutral-400">
+          Tap a card to see the reality behind each one.
+        </p>
+        <MythRealityCards items={field!.mythsAndRealities} />
         {careerComparisons.some((c) => c.relatedField === field!.slug) && (
           <Link href="/vs" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
             See this compared side by side →
