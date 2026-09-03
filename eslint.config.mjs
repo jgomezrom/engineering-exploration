@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Isolated git worktrees created for background/spawned tasks live here —
+    // each is a full separate checkout and shouldn't be linted as part of
+    // this one.
+    ".claude/worktrees/**",
   ]),
 ]);
 
