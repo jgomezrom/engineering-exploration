@@ -5,10 +5,14 @@ import Card from "./Card";
 import FieldIcon from "./FieldIcon";
 import { useExploration } from "../hooks/useExploration";
 import { FieldSlug } from "../data/types";
+import { useLanguage } from "../context/LanguageContext";
+import { exploreTranslations } from "../data/translations/explore";
 
 type FieldSummary = { slug: FieldSlug; name: string; tagline: string };
 
 export default function BookmarkedFields({ allFields }: { allFields: FieldSummary[] }) {
+  const { language } = useLanguage();
+  const t = exploreTranslations[language];
   const { hydrated, bookmarks } = useExploration();
   const bookmarkedFields = allFields.filter((f) => bookmarks.includes(f.slug));
 
@@ -16,13 +20,13 @@ export default function BookmarkedFields({ allFields }: { allFields: FieldSummar
 
   return (
     <div className="mb-16 border-b border-neutral-900/10 pb-16 dark:border-white/10">
-      <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">Your Bookmarked Fields</h2>
+      <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">{t.bookmarkedHeading}</h2>
       <p className="mt-1 max-w-xl text-sm text-neutral-600 dark:text-neutral-400">
-        Saved in this browser only — see{" "}
+        {t.bookmarkedIntroBefore}{" "}
         <Link href="/parents-and-teachers" className="text-primary hover:underline">
-          Parents &amp; Teachers
+          {t.parentsLink}
         </Link>{" "}
-        for exactly what that means.
+        {t.bookmarkedIntroAfter}
       </p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {bookmarkedFields.map((field) => (

@@ -1,0 +1,32 @@
+export const exploreTranslations = {
+  en: {
+    badge: "Browse by field",
+    heading: "Explore Engineering Fields",
+    introBefore: "Click into any field below to see what engineers in that area actually do, or",
+    compareLink: "compare all",
+    introAfter: "side by side.",
+    bookmarkedHeading: "Your Bookmarked Fields",
+    bookmarkedIntroBefore: "Saved in this browser only — see",
+    parentsLink: "Parents & Teachers",
+    bookmarkedIntroAfter: "for exactly what that means.",
+    moreFieldsHeading: "More fields, in brief",
+    moreFieldsIntro:
+      "Shorter overviews — real and sourced, but without the full day-in-the-life, comparison stats, or next steps the fields above have.",
+    briefOverview: "Brief overview",
+  },
+  es: {
+    badge: "Explorar por campo",
+    heading: "Explorar Campos de Ingeniería",
+    introBefore: "Haz clic en cualquier campo abajo para ver qué hacen realmente los ingenieros en esa área, o",
+    compareLink: "compara los",
+    introAfter: "lado a lado.",
+    bookmarkedHeading: "Tus Campos Guardados",
+    bookmarkedIntroBefore: "Guardado solo en este navegador — consulta",
+    parentsLink: "Padres y Docentes",
+    bookmarkedIntroAfter: "para saber exactamente qué significa eso.",
+    moreFieldsHeading: "Más campos, en breve",
+    moreFieldsIntro:
+      "Resúmenes más cortos — reales y con fuente, pero sin el día en la vida completo, las estadísticas comparativas, o los próximos pasos que tienen los campos de arriba.",
+    briefOverview: "Resumen breve",
+  },
+};

@@ -4,28 +4,37 @@ import { useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { concepts } from "../data/concepts";
+import { conceptsEs } from "../data/concepts.es";
 import { fields } from "../data/fields";
+import { fieldsEs } from "../data/fields.es";
 import { ConceptCategory } from "../data/types";
+import { useLanguage } from "../context/LanguageContext";
+import { conceptsTranslations, categoryLabels } from "../data/translations/concepts";
 
 const CATEGORY_ORDER: ConceptCategory[] = ["Mechanical", "Electrical", "Structures & Materials", "Software & Systems"];
 
 export default function ConceptsExplorer() {
+  const { language } = useLanguage();
+  const t = conceptsTranslations[language];
+  const labels = categoryLabels[language];
+  const displayConcepts = language === "es" ? conceptsEs : concepts;
+  const fieldPool = language === "es" ? [...fieldsEs, ...fields] : fields;
   const searchParams = useSearchParams();
   const requested = searchParams.get("concept");
   const initialSlug = concepts.some((c) => c.slug === requested) ? requested! : concepts[0].slug;
   const [selectedSlug, setSelectedSlug] = useState(initialSlug);
-  const selected = concepts.find((c) => c.slug === selectedSlug)!;
+  const selected = displayConcepts.find((c) => c.slug === selectedSlug)!;
 
   return (
     <div>
       <div className="space-y-6">
         {CATEGORY_ORDER.map((category) => {
-          const inCategory = concepts.filter((c) => c.category === category);
+          const inCategory = displayConcepts.filter((c) => c.category === category);
           if (inCategory.length === 0) return null;
           return (
             <div key={category}>
               <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-                {category}
+                {labels[category]}
               </h3>
               <div className="mt-2 flex flex-wrap gap-2">
                 {inCategory.map((concept) => {
@@ -54,7 +63,7 @@ export default function ConceptsExplorer() {
 
       <div className="mt-8 border border-neutral-900/10 p-6 dark:border-white/10">
         <span className="font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
-          {selected.category}
+          {labels[selected.category]}
         </span>
         <h2 className="mt-2 text-2xl font-bold text-neutral-900 dark:text-white">{selected.name}</h2>
         <p className="mt-2 text-sm font-medium text-neutral-900 dark:text-white">{selected.shortDefinition}</p>
@@ -64,7 +73,7 @@ export default function ConceptsExplorer() {
 
         <div className="mt-5 border-l-2 border-primary/40 pl-4">
           <span className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-            In real life
+            {t.inRealLife}
           </span>
           <p className="mt-1 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
             {selected.realWorldExample}
@@ -73,10 +82,10 @@ export default function ConceptsExplorer() {
 
         <div className="mt-5 flex flex-wrap items-center gap-2">
           <span className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-            Shows up in:
+            {t.showsUpIn}
           </span>
           {selected.relatedFields.map((slug) => {
-            const field = fields.find((f) => f.slug === slug);
+            const field = fieldPool.find((f) => f.slug === slug);
             if (!field) return null;
             return (
               <Link
