@@ -105,4 +105,28 @@ export const resourceLinks = [
       </svg>
     ),
   },
+  {
+    href: "/meet-engineers",
+    title: "How to Meet a Real Engineer",
+    description: "This site won't fake interviews. Here's how to actually find one, what to ask, and how to stay safe doing it.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+        <circle cx="15" cy="14" r="6" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M6 33c1-7 4-11 9-11s8 4 9 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M27 12h8M27 18h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M25 9h12v9h-4l-3 3v-3h-5z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    href: "/opportunities",
+    title: "Finding Opportunities Near You",
+    description: "This site doesn't know where you live and won't ask. Exactly what to search for to find clubs and programs yourself.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8 text-primary">
+        <path d="M20 5c6 6 9 12 9 17a9 9 0 0 1-18 0c0-5 3-11 9-17Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <circle cx="20" cy="21" r="3" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+    ),
+  },
 ];
