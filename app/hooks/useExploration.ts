@@ -58,6 +58,13 @@ export function useExploration() {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    // localStorage doesn't exist during server render, so this has to run
+    // post-mount rather than in a lazy useState initializer (which would read
+    // real data on the client's first render and mismatch the server's EMPTY
+    // output). useSyncExternalStore doesn't fit cleanly here either: it needs
+    // a snapshot with a stable reference between calls, and JSON.parse
+    // produces a new object every time.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setData(load());
     setHydrated(true);
   }, []);

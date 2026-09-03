@@ -77,8 +77,8 @@ export default function MeetEngineersPage() {
         </div>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
           Keep it to 15–20 minutes unless they offer more time. Come with your questions written
-          down. Send a short thank-you message afterward — it's a small thing that people genuinely
-          remember.
+          down. Send a short thank-you message afterward — it&apos;s a small thing that people
+          genuinely remember.
         </p>
       </FadeIn>
 

@@ -70,7 +70,7 @@ export default function MathPage() {
       </h1>
       <p className="mt-3 max-w-xl text-neutral-600 dark:text-neutral-400">
         The honest answer, and then the part most sites skip — an actual roadmap of which classes
-        to take, in middle and high school, and where to get help if you're stuck.
+        to take, in middle and high school, and where to get help if you&apos;re stuck.
       </p>
 
       <FadeIn as="section" className="mt-12">

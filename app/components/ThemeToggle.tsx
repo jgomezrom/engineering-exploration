@@ -1,27 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "../context/ThemeContext";
+
+function subscribeToSystemTheme(callback: () => void) {
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  mq.addEventListener("change", callback);
+  return () => mq.removeEventListener("change", callback);
+}
+
+function getSystemPrefersDark() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
+// Server render (and the client's first hydration pass) has no OS preference
+// to read, so both assume light — React reconciles to the real value right
+// after mount, same as any other useSyncExternalStore consumer.
+function getServerSnapshot() {
+  return false;
+}
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  // Tracks the OS preference so the icon shows the right state before any
-  // explicit choice is made, and updates live if the OS setting changes.
-  const [systemPrefersDark, setSystemPrefersDark] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    setSystemPrefersDark(mq.matches);
-    const onChange = () => setSystemPrefersDark(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
-
-  if (systemPrefersDark === null) {
-    // Matches server-rendered output (no OS preference known yet) — avoids a flash.
-    return <div className="h-9 w-9 flex-shrink-0" aria-hidden="true" />;
-  }
-
+  const systemPrefersDark = useSyncExternalStore(subscribeToSystemTheme, getSystemPrefersDark, getServerSnapshot);
   const effective: "dark" | "light" = theme ?? (systemPrefersDark ? "dark" : "light");
 
   return (
