@@ -139,11 +139,13 @@ export default function MathPage() {
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
             AP is specifically a U.S. College Board program, and IB, while international, still
             isn&apos;t offered at every school. Many countries have their own advanced coursework
-            systems that serve the same purpose — A-Levels in the U.K. and many Commonwealth
-            countries, the Abitur in Germany, the Baccalauréat in France, and others. The specific
-            program name matters far less than the underlying principle: take the most advanced
-            math and physics your school actually offers, especially anything that reaches
-            calculus.
+            or exam systems that serve the same purpose — A-Levels in the U.K. and many
+            Commonwealth countries, the Abitur in Germany, the Baccalauréat in France, the WASSCE
+            (administered by WAEC) in Nigeria and other West African countries, the ENEM in
+            Brazil, Vietnam&apos;s national high school graduation exam, and many others. The
+            specific program name matters far less than the underlying principle: take the most
+            advanced math and physics your school actually offers, especially anything that
+            reaches calculus.
           </p>
         </div>
       </FadeIn>

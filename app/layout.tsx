@@ -5,6 +5,7 @@ import "./globals.css";
 import NavBar from "./components/NavBar"; import Footer from "./components/Footer";
 import { AgeBandProvider } from "./context/AgeBandContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +31,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
-          <AgeBandProvider>
-            <NavBar />
-            {children}
-            <Footer />
-          </AgeBandProvider>
+          <LanguageProvider>
+            <AgeBandProvider>
+              <NavBar />
+              {children}
+              <Footer />
+            </AgeBandProvider>
+          </LanguageProvider>
         </ThemeProvider>
         <Analytics />
       </body>

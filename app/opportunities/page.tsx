@@ -49,15 +49,30 @@ export default function OpportunitiesPage() {
           <BulletList
             items={[
               "Your school's clubs list — a STEM club, robotics team, or Science Olympiad team may already exist and just not be widely advertised. Ask a science or math teacher directly, not just the school website.",
-              "\"FIRST Robotics,\" \"FIRST Tech Challenge,\" or \"FIRST LEGO League\" plus your city or region — FIRST runs a well-known international network of school and community teams.",
-              "\"MATHCOUNTS\" plus your school district — a national middle school math competition, usually run through schools.",
+              "\"FIRST Robotics,\" \"FIRST Tech Challenge,\" or \"FIRST LEGO League\" plus your city or region — FIRST LEGO League alone runs in about 110 countries, and FIRST Robotics Competition in around 30, so this is one of the few searches on this list likely to work outside the U.S. too.",
+              "\"MATHCOUNTS\" plus your school district — a national middle school math competition, usually run through schools (U.S.-specific).",
               "\"[a nearby university] pre-college program\" or \"[a nearby university] summer engineering\" — many universities run summer programs for high schoolers, some free or low-cost.",
               "Your local library's website or a community bulletin board — some libraries and maker spaces run free STEM or electronics workshops.",
               "\"[a nearby hospital] teen volunteer program\" — a real way to get exposure to a medical setting if biomedical engineering interests you.",
-              "Your local community college's dual-enrollment page — a real way to take a college-level math or science class while still in high school, sometimes at reduced cost.",
+              "Your local community college's dual-enrollment page — a real way to take a college-level math or science class while still in high school, sometimes at reduced cost (a U.S.-specific institution; ask a school counselor what your country's equivalent looks like).",
             ]}
           />
         </div>
+      </FadeIn>
+
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+        <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">Not in the U.S.?</h2>
+        <p className="mt-3 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+          Most of this site&apos;s specific program names — MATHCOUNTS, AMC, &quot;community
+          college&quot; — are U.S. institutions, because that&apos;s the schooling system this
+          site&apos;s author actually knows firsthand. FIRST&apos;s programs are a real exception:
+          FIRST LEGO League operates in roughly 110 countries and FIRST Robotics Competition in
+          around 30, so that search is worth trying wherever you are. Beyond that, the honest
+          answer is that a school counselor or science teacher in your own country will know your
+          local equivalents far better than this site can guess at — the underlying advice
+          (&quot;look for a robotics team, a math competition, a university outreach program&quot;)
+          applies everywhere, even where the specific names don&apos;t.
+        </p>
       </FadeIn>
 
       <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">

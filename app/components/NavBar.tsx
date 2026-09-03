@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
 
 const NAV_LINKS = [
   { href: "/curious", label: "Curious" },
@@ -32,6 +33,7 @@ export default function NavBar() {
             ))}
           </div>
 
+          <LanguageToggle />
           <ThemeToggle />
 
           <button
