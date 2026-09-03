@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "../components/Card";
+import FadeIn from "../components/FadeIn";
 import { fields } from "../data/fields";
 import { fieldStubs } from "../data/fieldStubs";
 import FieldIcon from "../components/FieldIcon";
@@ -35,7 +36,7 @@ export default function ExplorePage() {
         .
       </p>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <FadeIn className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {fields.map((field) => (
           <Link key={field.slug} href={`/engineering/${field.slug}`}>
             <Card>
@@ -49,10 +50,10 @@ export default function ExplorePage() {
 </Card>
           </Link>
         ))}
-      </div>
+      </FadeIn>
 
       {fieldStubs.length > 0 && (
-        <div className="mt-16 border-t border-neutral-900/10 pt-10 dark:border-white/10">
+        <FadeIn className="mt-16 border-t border-neutral-900/10 pt-10 dark:border-white/10">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
             More fields, in brief
           </h2>
@@ -81,7 +82,7 @@ export default function ExplorePage() {
               </Link>
             ))}
           </div>
-        </div>
+        </FadeIn>
       )}
     </main>
   );

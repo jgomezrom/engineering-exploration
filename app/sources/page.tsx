@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FadeIn from "../components/FadeIn";
 import { fields } from "../data/fields";
 import { fieldStubs } from "../data/fieldStubs";
 
@@ -40,7 +41,7 @@ export default function SourcesPage() {
         you can check them yourself.
       </p>
 
-      <section className="mt-12">
+      <FadeIn as="section" className="mt-12">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           Two kinds of claims on this site
         </h2>
@@ -71,9 +72,9 @@ export default function SourcesPage() {
             </p>
           </div>
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           Who wrote this, and how
         </h2>
@@ -102,9 +103,9 @@ export default function SourcesPage() {
             "Nothing on this site is gated by age, and nothing you do on it (quiz answers, reflections, age preferences) is saved anywhere — see the note on each interactive feature.",
           ]}
         />
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           Every salary citation on this site
         </h2>
@@ -186,7 +187,7 @@ export default function SourcesPage() {
           of those pages says so explicitly and points to the closest related field instead of
           guessing at a number.
         </p>
-      </section>
+      </FadeIn>
     </main>
   );
 }

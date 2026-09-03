@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "../components/Card";
+import FadeIn from "../components/FadeIn";
 import { resourceLinks } from "../data/resourceLinks";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function ResourcesPage() {
         gathered in one spot so it&apos;s easy to find.
       </p>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <FadeIn className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {resourceLinks.map((resource) => (
           <Link key={resource.href} href={resource.href}>
             <Card>
@@ -34,7 +35,7 @@ export default function ResourcesPage() {
             </Card>
           </Link>
         ))}
-      </div>
+      </FadeIn>
     </main>
   );
 }

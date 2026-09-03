@@ -6,10 +6,12 @@ export default function FadeIn({
   children,
   delay = 0,
   className = "",
+  as: Tag = "div",
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  as?: "div" | "section";
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -42,7 +44,7 @@ export default function FadeIn({
   }, []);
 
   return (
-    <div
+    <Tag
       ref={ref}
       className={`transition-all duration-700 ease-out motion-reduce:transition-none ${
         visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
@@ -50,6 +52,6 @@ export default function FadeIn({
       style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
     >
       {children}
-    </div>
+    </Tag>
   );
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Button from "../components/Button";
 import Card from "../components/Card";
+import FadeIn from "../components/FadeIn";
 import FieldIcon from "../components/FieldIcon";
 import { quizQuestions } from "../data/quiz";
 import { fields } from "../data/fields";
@@ -225,7 +226,7 @@ export default function QuizPage() {
       )}
 
       <div className="mt-10 flex flex-col gap-6">
-        {topMatches.map((result) => {
+        {topMatches.map((result, i) => {
           const field = fields.find((f) => f.slug === result.slug)!;
           const mightNotEnjoy = [field.thingsPeopleDislike[0], field.challenges[0]].filter(
             (item): item is string => Boolean(item)
@@ -233,7 +234,8 @@ export default function QuizPage() {
           const relatedChallenge = challenges.find((c) => c.field === field.slug);
 
           return (
-            <Card key={field.slug}>
+            <FadeIn key={field.slug} delay={i * 100}>
+            <Card>
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
                   <FieldIcon slug={field.slug} className="h-6 w-6 text-primary" />
@@ -330,6 +332,7 @@ export default function QuizPage() {
                 </Link>
               </div>
             </Card>
+            </FadeIn>
           );
         })}
       </div>

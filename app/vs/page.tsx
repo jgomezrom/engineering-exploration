@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Button from "../components/Button";
+import FadeIn from "../components/FadeIn";
 import { careerComparisons } from "../data/careerComparisons";
 import { fields } from "../data/fields";
 
@@ -51,7 +52,7 @@ export default function VsPage() {
         {careerComparisons.map((comparison) => {
           const field = fields.find((f) => f.slug === comparison.relatedField);
           return (
-            <div key={comparison.slug} className="border-t border-neutral-900/10 pt-10 dark:border-white/10">
+            <FadeIn key={comparison.slug} className="border-t border-neutral-900/10 pt-10 dark:border-white/10">
               <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{comparison.title}</h2>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -75,7 +76,7 @@ export default function VsPage() {
                   </Button>
                 </div>
               )}
-            </div>
+            </FadeIn>
           );
         })}
       </div>

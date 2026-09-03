@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LeverSimulator from "../components/LeverSimulator";
+import FadeIn from "../components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Lever & Torque Simulator | Engineering Exploration",
@@ -31,7 +32,7 @@ export default function SimulationsPage() {
         <LeverSimulator />
       </div>
 
-      <div className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">The math behind it</h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           A lever doesn&apos;t balance because the weights on each side are equal — it balances
@@ -58,7 +59,7 @@ export default function SimulationsPage() {
         <Link href="/concepts?concept=torque" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
           More on torque as a concept →
         </Link>
-      </div>
+      </FadeIn>
     </main>
   );
 }

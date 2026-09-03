@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FadeIn from "../components/FadeIn";
 
 export const metadata: Metadata = {
   title: "For Parents & Teachers | Engineering Exploration",
@@ -35,7 +36,7 @@ export default function ParentsAndTeachersPage() {
         collect from the kid or student using it?
       </p>
 
-      <section className="mt-12">
+      <FadeIn as="section" className="mt-12">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">What this is</h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           Engineering Exploration is a free, static website (see{" "}
@@ -61,9 +62,9 @@ export default function ParentsAndTeachersPage() {
           for exactly how the content was researched and what&apos;s cited versus editorial
           judgment.
         </p>
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           What it collects: nothing
         </h2>
@@ -89,9 +90,9 @@ export default function ParentsAndTeachersPage() {
           the site&apos;s control and separate from the analytics, ads, and tracking the site
           itself deliberately doesn&apos;t add.)
         </p>
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           How it might actually be useful
         </h2>
@@ -105,7 +106,7 @@ export default function ParentsAndTeachersPage() {
             ]}
           />
         </div>
-      </section>
+      </FadeIn>
 
       <div className="mt-14 flex flex-col gap-4 border-t border-neutral-900/10 pt-14 sm:flex-row dark:border-white/10">
         <Link

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DesignProcessDiagram from "../components/DesignProcessDiagram";
+import FadeIn from "../components/FadeIn";
 
 export const metadata: Metadata = {
   title: "The Engineering Design Process | Engineering Exploration",
@@ -31,9 +32,9 @@ export default function DesignProcessPage() {
         </p>
       </div>
 
-      <div className="mt-10 border border-neutral-900/10 p-6 dark:border-white/10 sm:p-10">
+      <FadeIn className="mt-10 border border-neutral-900/10 p-6 dark:border-white/10 sm:p-10">
         <DesignProcessDiagram />
-      </div>
+      </FadeIn>
     </main>
   );
 }

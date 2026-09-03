@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FieldIcon from "../../components/FieldIcon";
+import FadeIn from "../../components/FadeIn";
 import DesignProcessDiagram from "../../components/DesignProcessDiagram";
 import ReflectionPrompt from "../../components/ReflectionPrompt";
 import { challenges } from "../../data/challenges";
@@ -29,13 +30,15 @@ export async function generateMetadata(
 
 function Section({ index, title, children }: { index: number; title: string; children: React.ReactNode }) {
   return (
-    <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
-      <div className="flex items-baseline gap-3">
-        <span className="font-mono text-xs text-neutral-600 dark:text-neutral-400">{String(index).padStart(2, "0")}</span>
-        <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{title}</h2>
-      </div>
-      <div className="mt-5">{children}</div>
-    </section>
+    <FadeIn>
+      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+        <div className="flex items-baseline gap-3">
+          <span className="font-mono text-xs text-neutral-600 dark:text-neutral-400">{String(index).padStart(2, "0")}</span>
+          <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{title}</h2>
+        </div>
+        <div className="mt-5">{children}</div>
+      </section>
+    </FadeIn>
   );
 }
 

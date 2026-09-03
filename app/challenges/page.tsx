@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "../components/Card";
+import FadeIn from "../components/FadeIn";
 import FieldIcon from "../components/FieldIcon";
 import { challenges } from "../data/challenges";
 import { ChallengeCategory } from "../data/types";
@@ -43,7 +44,7 @@ export default function ChallengesPage() {
       </p>
 
       {grouped.map(({ category, items }) => (
-        <div key={category} className="mt-12">
+        <FadeIn key={category} className="mt-12">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">{category}</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((challenge) => (
@@ -69,7 +70,7 @@ export default function ChallengesPage() {
               </Link>
             ))}
           </div>
-        </div>
+        </FadeIn>
       ))}
 
       <div className="mt-12 border border-neutral-900/10 p-6 dark:border-white/10">

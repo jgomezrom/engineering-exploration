@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FadeIn from "../components/FadeIn";
 import { fields } from "../data/fields";
 import { middleSchoolSubjects, highSchoolSubjects, fieldCourseFocus, tutoringResources } from "../data/courseGuide";
 import { CourseSubject, TutoringResourceType } from "../data/types";
@@ -72,7 +73,7 @@ export default function MathPage() {
         to take, in middle and high school, and where to get help if you're stuck.
       </p>
 
-      <section className="mt-12">
+      <FadeIn as="section" className="mt-12">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">The honest answer</h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           It depends on the field, and it depends less than you probably think. On this site&apos;s{" "}
@@ -95,9 +96,9 @@ export default function MathPage() {
           just as much to math: most of the comfort engineers have with math is learned during
           their education, not something they walked in already having.
         </p>
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           Building your course schedule
         </h2>
@@ -145,9 +146,9 @@ export default function MathPage() {
             calculus.
           </p>
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           What matters most, by field
         </h2>
@@ -174,9 +175,9 @@ export default function MathPage() {
             );
           })}
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
           If you need extra help
         </h2>
@@ -207,9 +208,9 @@ export default function MathPage() {
             </div>
           ))}
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
         <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
           None of this is a checklist you need to complete perfectly. Schools differ enormously in
           what they offer, and plenty of working engineers got where they are without taking a
@@ -217,7 +218,7 @@ export default function MathPage() {
           science available to you — and not ruling yourself out of engineering because you
           assume you&apos;d need to already be &ldquo;a math person&rdquo; before you even start.
         </p>
-      </section>
+      </FadeIn>
     </main>
   );
 }

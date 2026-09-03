@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FadeIn from "../components/FadeIn";
 import FieldIcon from "../components/FieldIcon";
 import { fields } from "../data/fields";
 import { FieldStats, Level } from "../data/types";
@@ -98,63 +99,67 @@ export default function ComparePage() {
         .
       </p>
 
-      <h2 className="mt-12 text-lg font-semibold text-neutral-900 dark:text-white">
-        What the work is actually like
-      </h2>
-      <p className="mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-        The things you&apos;re more likely to actually care about when picking a field. Worried
-        about the Math Intensity row specifically?{" "}
-        <Link href="/math" className="font-medium text-primary hover:underline">
-          Here&apos;s an honest answer, plus a course roadmap
-        </Link>
-        .
-      </p>
+      <FadeIn>
+        <h2 className="mt-12 text-lg font-semibold text-neutral-900 dark:text-white">
+          What the work is actually like
+        </h2>
+        <p className="mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+          The things you&apos;re more likely to actually care about when picking a field. Worried
+          about the Math Intensity row specifically?{" "}
+          <Link href="/math" className="font-medium text-primary hover:underline">
+            Here&apos;s an honest answer, plus a course roadmap
+          </Link>
+          .
+        </p>
 
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse text-left">
-          <thead>
-            <FieldHeaderRow />
-          </thead>
-          <tbody>
-            <StatRows rows={FIT_ROWS} />
-          </tbody>
-        </table>
-      </div>
+        <div className="mt-6 overflow-x-auto">
+          <table className="w-full min-w-[640px] border-collapse text-left">
+            <thead>
+              <FieldHeaderRow />
+            </thead>
+            <tbody>
+              <StatRows rows={FIT_ROWS} />
+            </tbody>
+          </table>
+        </div>
+      </FadeIn>
 
-      <h2 className="mt-14 text-lg font-semibold text-neutral-900 dark:text-white">
-        Career practicalities
-      </h2>
-      <p className="mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-        Regulation, job market conditions, and pay matter, but they change over time and by
-        region — treat these as background context, not a reason to rule a field out.
-      </p>
+      <FadeIn>
+        <h2 className="mt-14 text-lg font-semibold text-neutral-900 dark:text-white">
+          Career practicalities
+        </h2>
+        <p className="mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+          Regulation, job market conditions, and pay matter, but they change over time and by
+          region — treat these as background context, not a reason to rule a field out.
+        </p>
 
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse text-left">
-          <thead>
-            <FieldHeaderRow />
-          </thead>
-          <tbody>
-            <tr className="border-t border-neutral-900/10 dark:border-white/10">
-              <td className="py-4 pr-4 text-sm text-neutral-600 dark:text-neutral-400">
-                Median Salary (US)
-              </td>
-              {fields.map((field) => (
-                <td key={field.slug} className="px-3 py-4 text-center">
-                  <span className="font-mono text-sm font-semibold text-neutral-900 dark:text-white">
-                    {field.salary.medianAnnual}
-                  </span>
+        <div className="mt-6 overflow-x-auto">
+          <table className="w-full min-w-[640px] border-collapse text-left">
+            <thead>
+              <FieldHeaderRow />
+            </thead>
+            <tbody>
+              <tr className="border-t border-neutral-900/10 dark:border-white/10">
+                <td className="py-4 pr-4 text-sm text-neutral-600 dark:text-neutral-400">
+                  Median Salary (US)
                 </td>
-              ))}
-            </tr>
-            <StatRows rows={PRACTICALITY_ROWS} />
-          </tbody>
-        </table>
-      </div>
-      <p className="mt-3 max-w-2xl text-xs text-neutral-600 dark:text-neutral-400">
-        Median salary is sourced separately — see each field&apos;s page for the exact citation
-        and caveats.
-      </p>
+                {fields.map((field) => (
+                  <td key={field.slug} className="px-3 py-4 text-center">
+                    <span className="font-mono text-sm font-semibold text-neutral-900 dark:text-white">
+                      {field.salary.medianAnnual}
+                    </span>
+                  </td>
+                ))}
+              </tr>
+              <StatRows rows={PRACTICALITY_ROWS} />
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 max-w-2xl text-xs text-neutral-600 dark:text-neutral-400">
+          Median salary is sourced separately — see each field&apos;s page for the exact citation
+          and caveats.
+        </p>
+      </FadeIn>
 
       <div className="mt-10">
         <Link href="/explore" className="text-sm font-medium text-primary hover:underline">
