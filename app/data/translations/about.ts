@@ -1,0 +1,28 @@
+export const aboutTranslations = {
+  en: {
+    badge: "About this project",
+    heading: "A student project, built in the open",
+    p1: "Engineering Exploration is a personal project of mine. It's meant to give honest, no-hype info about what engineers in different fields actually do, day to day.",
+    p2: "A lot of career-exploration content out there leans heavily on hype. Impressive job titles, big salary numbers, vague inspirational language that doesn't tell you much about what the work is actually like. This site tries to do the opposite: real day-to-day descriptions, honest trade-offs, and clear flags whenever something is uncertain or worth double-checking rather than presenting it as settled fact.",
+    p3: "I built this because I remember being in that exact spot back in high school, looking at a long list of engineering majors and having no real idea what any of them actually meant day to day. Most of what I found online was either a vague list of job titles or straight-up recruiting copy. I wanted to build the resource I wish I'd had: something that just tells it straight about what the work is like and where the honest trade-offs are.",
+    p4: "This site was built by Jaime Gomez, a student at MSU. It's not affiliated with MSU, any other university, or any engineering organization. Just one student's attempt to put something clear and useful together. If something here reads as inaccurate or outdated, that's worth knowing, since this is maintained by a student, not a career-counseling professional.",
+    p5: "The interest quiz works the same way: it's a starting point based on how you answer a set of questions, not a verdict on what you should do with your life.",
+    p6Before: "For more detail on where the numbers on this site come from and what's editorial judgment versus a cited source, see",
+    sourcesLink: "Sources & Methodology",
+    exploreCta: "Explore Engineering Fields",
+    quizCta: "Take the Interest Quiz",
+  },
+  es: {
+    badge: "Sobre este proyecto",
+    heading: "Un proyecto estudiantil, construido a la vista de todos",
+    p1: "Engineering Exploration es un proyecto personal mío. Su propósito es dar información honesta y sin exageraciones sobre lo que realmente hacen, día a día, los ingenieros de diferentes campos.",
+    p2: "Mucho del contenido de exploración de carreras que existe se apoya fuertemente en la exageración. Títulos de trabajo impresionantes, cifras de salario grandes, lenguaje inspiracional vago que no te dice mucho sobre cómo es el trabajo en realidad. Este sitio intenta hacer lo opuesto: descripciones reales del día a día, compensaciones honestas, y señales claras cada vez que algo es incierto o vale la pena verificar, en lugar de presentarlo como un hecho establecido.",
+    p3: "Construí esto porque recuerdo estar en esa exacta posición en la preparatoria, viendo una lista larga de carreras de ingeniería sin tener idea real de qué significaba cualquiera de ellas en el día a día. La mayoría de lo que encontré en línea era o una lista vaga de títulos de trabajo, o pura publicidad de reclutamiento. Quería construir el recurso que hubiera querido tener: algo que simplemente diga la verdad sobre cómo es el trabajo y dónde están las compensaciones honestas.",
+    p4: "Este sitio fue construido por Jaime Gomez, estudiante en MSU. No está afiliado a MSU, a ninguna otra universidad, ni a ninguna organización de ingeniería. Es solo el intento de un estudiante de armar algo claro y útil. Si algo aquí se lee como inexacto o desactualizado, vale la pena saberlo, ya que esto lo mantiene un estudiante, no un profesional de orientación vocacional.",
+    p5: "El cuestionario de intereses funciona de la misma manera: es un punto de partida basado en cómo respondes un conjunto de preguntas, no un veredicto sobre qué deberías hacer con tu vida.",
+    p6Before: "Para más detalle sobre de dónde vienen los números de este sitio y qué es juicio editorial frente a una fuente citada, consulta",
+    sourcesLink: "Fuentes y Metodología",
+    exploreCta: "Explorar Campos de Ingeniería",
+    quizCta: "Tomar el Cuestionario de Intereses",
+  },
+};

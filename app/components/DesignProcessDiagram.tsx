@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { designProcessSteps } from "../data/designProcess";
+import { designProcessStepsEs } from "../data/designProcess.es";
+import { useLanguage } from "../context/LanguageContext";
+import { designProcessTranslations } from "../data/translations/designProcess";
 
 const SIZE = 320;
 const CENTER = SIZE / 2;
@@ -17,10 +20,13 @@ function pointAt(index: number, total: number) {
 }
 
 export default function DesignProcessDiagram({ compact = false }: { compact?: boolean }) {
+  const { language } = useLanguage();
+  const t = designProcessTranslations[language];
+  const steps = language === "es" ? designProcessStepsEs : designProcessSteps;
   const [selected, setSelected] = useState(0);
-  const total = designProcessSteps.length;
-  const points = designProcessSteps.map((_, i) => pointAt(i, total));
-  const activeStep = designProcessSteps[selected];
+  const total = steps.length;
+  const points = steps.map((_, i) => pointAt(i, total));
+  const activeStep = steps[selected];
 
   return (
     <div>
@@ -29,7 +35,7 @@ export default function DesignProcessDiagram({ compact = false }: { compact?: bo
           viewBox={`0 0 ${SIZE} ${SIZE}`}
           className={`mx-auto ${compact ? "w-full max-w-[220px]" : "w-full max-w-xs"}`}
           role="img"
-          aria-label="The engineering design process, arranged as a repeating cycle: Ask, Imagine, Plan, Build, Test, Improve, then back to Ask."
+          aria-label={t.diagramAriaLabel}
         >
           <defs>
             <marker
@@ -59,7 +65,7 @@ export default function DesignProcessDiagram({ compact = false }: { compact?: bo
             );
           })}
 
-          {designProcessSteps.map((step, i) => {
+          {steps.map((step, i) => {
             const p = points[i];
             const isSelected = selected === i;
             return (
@@ -93,7 +99,7 @@ export default function DesignProcessDiagram({ compact = false }: { compact?: bo
 
         <div>
           <div className="flex flex-wrap gap-2">
-            {designProcessSteps.map((step, i) => {
+            {steps.map((step, i) => {
               const isSelected = selected === i;
               return (
                 <button
@@ -122,13 +128,10 @@ export default function DesignProcessDiagram({ compact = false }: { compact?: bo
       {!compact && (
         <div className="mt-8 border border-neutral-900/10 bg-neutral-50 p-5 dark:border-white/10 dark:bg-neutral-900">
           <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
-            About &ldquo;Repeat&rdquo;
+            {t.repeatHeading}
           </h3>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-            The arrow from Improve back to Ask is the whole point. Engineers rarely get a design
-            right on the first pass, and the loop almost never restarts cleanly from the top — a
-            failed test usually sends you back to Build or Plan, not all the way to Ask. Redoing a
-            step isn&apos;t a sign something went wrong. It&apos;s the process working as intended.
+            {t.repeatBody}
           </p>
         </div>
       )}

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { simulationsTranslations } from "../data/translations/simulations";
 
 const MAX_ANGLE = 15;
 const PIVOT_X = 200;
@@ -38,6 +40,8 @@ function Slider({
 }
 
 export default function LeverSimulator() {
+  const { language } = useLanguage();
+  const t = simulationsTranslations[language];
   const [leftWeight, setLeftWeight] = useState(4);
   const [leftDistance, setLeftDistance] = useState(6);
   const [rightWeight, setRightWeight] = useState(6);
@@ -78,31 +82,31 @@ export default function LeverSimulator() {
         </svg>
 
         <p className="mt-2 text-center font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
-          {balanced ? "Balanced" : netTorque > 0 ? "Tipping right" : "Tipping left"}
+          {balanced ? t.balanced : netTorque > 0 ? t.tippingRight : t.tippingLeft}
         </p>
       </div>
 
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <div className="border border-primary/30 p-5">
-          <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Left side</h3>
+          <h3 className="font-mono text-xs uppercase tracking-widest text-primary">{t.leftSide}</h3>
           <div className="mt-4 space-y-4">
-            <Slider label="Weight" value={leftWeight} onChange={setLeftWeight} color="text-primary" />
-            <Slider label="Distance from pivot" value={leftDistance} onChange={setLeftDistance} color="text-primary" />
+            <Slider label={t.weight} value={leftWeight} onChange={setLeftWeight} color="text-primary" />
+            <Slider label={t.distanceFromPivot} value={leftDistance} onChange={setLeftDistance} color="text-primary" />
           </div>
           <p className="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
-            Torque = {leftWeight} × {leftDistance} ={" "}
+            {t.torqueLabel} = {leftWeight} × {leftDistance} ={" "}
             <span className="font-mono font-semibold text-neutral-900 dark:text-white">{torqueLeft}</span>
           </p>
         </div>
 
         <div className="border border-accent/30 p-5">
-          <h3 className="font-mono text-xs uppercase tracking-widest text-accent">Right side</h3>
+          <h3 className="font-mono text-xs uppercase tracking-widest text-accent">{t.rightSide}</h3>
           <div className="mt-4 space-y-4">
-            <Slider label="Weight" value={rightWeight} onChange={setRightWeight} color="text-accent" />
-            <Slider label="Distance from pivot" value={rightDistance} onChange={setRightDistance} color="text-accent" />
+            <Slider label={t.weight} value={rightWeight} onChange={setRightWeight} color="text-accent" />
+            <Slider label={t.distanceFromPivot} value={rightDistance} onChange={setRightDistance} color="text-accent" />
           </div>
           <p className="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
-            Torque = {rightWeight} × {rightDistance} ={" "}
+            {t.torqueLabel} = {rightWeight} × {rightDistance} ={" "}
             <span className="font-mono font-semibold text-neutral-900 dark:text-white">{torqueRight}</span>
           </p>
         </div>
