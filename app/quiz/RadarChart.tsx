@@ -1,5 +1,9 @@
+"use client";
+
 import { FieldResult } from "./scoring";
 import { FieldSlug } from "../data/types";
+import { useLanguage } from "../context/LanguageContext";
+import { fieldLabelsShort } from "../data/translations/quiz";
 
 // Only the fields the quiz actually scores — see the filter in scoring.ts. A
 // field added to the site without quiz questions of its own won't appear here
@@ -19,21 +23,6 @@ const FIELD_ORDER: FieldSlug[] = [
   "robotics-engineering",
 ];
 
-const FIELD_LABELS: Partial<Record<FieldSlug, string>> = {
-  "mechanical-engineering": "Mechanical",
-  "aerospace-engineering": "Aerospace",
-  "electrical-engineering": "Electrical",
-  "computer-engineering": "Computer",
-  "civil-engineering": "Civil",
-  "environmental-engineering": "Enviro",
-  "biomedical-engineering": "Biomedical",
-  "chemical-engineering": "Chemical",
-  "software-engineering": "Software",
-  "industrial-engineering": "Industrial",
-  "materials-engineering": "Materials",
-  "robotics-engineering": "Robotics",
-};
-
 const SIZE = 460;
 const CENTER = SIZE / 2;
 const MAX_RADIUS = 130;
@@ -47,6 +36,8 @@ function pointAt(index: number, total: number, radiusFraction: number) {
 }
 
 export default function RadarChart({ results }: { results: FieldResult[] }) {
+  const { language } = useLanguage();
+  const fieldLabels = fieldLabelsShort[language];
   const bySlug = Object.fromEntries(results.map((r) => [r.slug, r])) as Record<FieldSlug, FieldResult>;
   const ordered = FIELD_ORDER.map((slug) => bySlug[slug]).filter(Boolean);
   const n = ordered.length;
@@ -101,7 +92,7 @@ export default function RadarChart({ results }: { results: FieldResult[] }) {
             dominantBaseline="middle"
             className="fill-neutral-500 font-mono text-[12px] uppercase tracking-wide dark:fill-neutral-400"
           >
-            {FIELD_LABELS[r.slug] ?? r.slug}
+            {fieldLabels[r.slug] ?? r.slug}
           </text>
         );
       })}

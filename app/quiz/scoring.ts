@@ -1,21 +1,38 @@
 import { fields } from "../data/fields";
 import { quizQuestions } from "../data/quiz";
-import { FieldSlug, QuizTheme } from "../data/types";
+import { FieldSlug, QuizTheme, QuizQuestion } from "../data/types";
 
-export const THEME_LABELS: Record<QuizTheme, string> = {
-  "hands-on-building": "Hands-on building",
-  electronics: "Electronics & circuits",
-  "structures-infrastructure": "Structures & infrastructure",
-  "biology-health": "Biology & health",
-  "coding-software": "Coding & software",
-  "abstract-problem-solving": "Abstract problem-solving",
-  "debugging-troubleshooting": "Debugging & troubleshooting",
-  "regulation-safety": "Regulation & safety",
-  "public-impact": "Public impact",
-  "long-term-projects": "Long-term projects",
-  "fast-iteration": "Fast iteration",
-  "teamwork-collaboration": "Teamwork",
-  "independent-work": "Independent work",
+export const THEME_LABELS: Record<"en" | "es", Record<QuizTheme, string>> = {
+  en: {
+    "hands-on-building": "Hands-on building",
+    electronics: "Electronics & circuits",
+    "structures-infrastructure": "Structures & infrastructure",
+    "biology-health": "Biology & health",
+    "coding-software": "Coding & software",
+    "abstract-problem-solving": "Abstract problem-solving",
+    "debugging-troubleshooting": "Debugging & troubleshooting",
+    "regulation-safety": "Regulation & safety",
+    "public-impact": "Public impact",
+    "long-term-projects": "Long-term projects",
+    "fast-iteration": "Fast iteration",
+    "teamwork-collaboration": "Teamwork",
+    "independent-work": "Independent work",
+  },
+  es: {
+    "hands-on-building": "Trabajo práctico",
+    electronics: "Electrónica y circuitos",
+    "structures-infrastructure": "Estructuras e infraestructura",
+    "biology-health": "Biología y salud",
+    "coding-software": "Programación y software",
+    "abstract-problem-solving": "Resolución de problemas abstractos",
+    "debugging-troubleshooting": "Depuración y solución de problemas",
+    "regulation-safety": "Regulación y seguridad",
+    "public-impact": "Impacto público",
+    "long-term-projects": "Proyectos a largo plazo",
+    "fast-iteration": "Iteración rápida",
+    "teamwork-collaboration": "Trabajo en equipo",
+    "independent-work": "Trabajo independiente",
+  },
 };
 
 export type FieldResult = {
@@ -47,7 +64,13 @@ function computeMaxPossiblePoints(): Partial<Record<FieldSlug, number>> {
   return max;
 }
 
-export function computeResults(answers: (number | null)[]): FieldResult[] {
+// `questions` only supplies display text (topReasons) — defaults to the English
+// quizQuestions since `points`/`themes` are identical between languages, so the
+// actual scoring never depends on which language's array is passed in.
+export function computeResults(
+  answers: (number | null)[],
+  questions: QuizQuestion[] = quizQuestions
+): FieldResult[] {
   const maxPossible = computeMaxPossiblePoints();
   const rawScores: Partial<Record<FieldSlug, number>> = {};
   const contributions: Partial<Record<FieldSlug, { text: string; points: number }[]>> = {};
@@ -55,7 +78,7 @@ export function computeResults(answers: (number | null)[]): FieldResult[] {
   // in several of the user's answers for that field will outweigh one that shows up once.
   const themeWeights: Partial<Record<FieldSlug, Partial<Record<QuizTheme, number>>>> = {};
 
-  quizQuestions.forEach((question, i) => {
+  questions.forEach((question, i) => {
     const optionIndex = answers[i];
     if (optionIndex === null) return;
     const option = question.options[optionIndex];
