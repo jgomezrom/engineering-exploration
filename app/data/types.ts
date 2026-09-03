@@ -273,6 +273,10 @@ export type Challenge = {
   conceptSlug?: string;
   // Path to a matching interactive simulation under /simulations, if one exists.
   simulationHref?: string;
+  // Only set for a challenge with a genuine physical risk (heat, sharp edges,
+  // launching something) that isn't already covered by its own constraints —
+  // one or two plain sentences, not a generic legal disclaimer.
+  safetyNote?: string;
   materials: string[];
   instructions: string[];
   measureResults: string;

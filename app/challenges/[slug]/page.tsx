@@ -175,6 +175,20 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
 
       <Section index={2} title="What You'll Need">
         <BulletList items={challenge.materials} />
+        {challenge.safetyNote && (
+          <div className="mt-5 flex max-w-2xl gap-3 border border-accent/30 bg-accent/5 p-4 dark:bg-accent/10">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent">
+              <path
+                d="M10 3.5 2.5 16.5h15L10 3.5Z"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinejoin="round"
+              />
+              <path d="M10 8.5v4M10 14.5v.01" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+            </svg>
+            <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">{challenge.safetyNote}</p>
+          </div>
+        )}
       </Section>
 
       <Section index={3} title="Instructions">

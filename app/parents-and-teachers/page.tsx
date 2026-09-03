@@ -44,7 +44,7 @@ export default function ParentsAndTeachersPage() {
           <Link href="/about" className="text-primary hover:underline">
             About
           </Link>
-          ) built by a college student to give middle and high schoolers an honest look at what
+          ) built by a college student to give teens and young adults an honest look at what
           engineers in different fields actually do — not a recruiting pitch, not a list of job
           titles. Every field page includes the unglamorous parts on purpose: common
           misconceptions, what people actually dislike about the work, and how competitive the job

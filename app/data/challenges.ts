@@ -20,6 +20,7 @@ export const challenges: Challenge[] = [
       "Levers and stored energy — how arm length, pivot position, and rubber-band tension change how much force gets transferred to the launched object.",
     conceptSlug: "torque",
     simulationHref: "/simulations",
+    safetyNote: "Ask an adult before using a hot glue gun, and always aim the launch away from faces and breakable objects.",
     materials: [
       "About 10 popsicle sticks (craft sticks)",
       "6–8 rubber bands",
@@ -64,6 +65,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Truss design and load paths — why triangles resist collapsing sideways the way squares don't, and how a structure's shape determines where it's strongest and weakest.",
     conceptSlug: "stress-strain",
+    safetyNote: "Ask an adult before using a hot glue gun — it heats up enough to burn skin.",
     materials: [
       "1–2 boxes of uncooked spaghetti",
       "Hot glue gun (with adult supervision) or white glue",
@@ -274,6 +276,7 @@ export const challenges: Challenge[] = [
     ],
     conceptTaught:
       "Crystallization and saturation — the process of dissolving a solid into a liquid until it can't hold any more, then controlling how it comes back out as solid crystals. This exact process is used industrially in sugar refining and drug manufacturing, just at a much larger scale.",
+    safetyNote: "Ask an adult to help with heating the water — this uses a stove or a similarly hot source.",
     materials: [
       "Sugar or table salt",
       "Warm water (adult supervision if heating on a stove)",
@@ -315,6 +318,7 @@ export const challenges: Challenge[] = [
     ],
     conceptTaught:
       "Filtration — physically removing particles from water by forcing it through layers of different materials, a foundational step in real water treatment before any chemical or biological treatment happens.",
+    safetyNote: "Ask an adult to help cut the plastic bottle — the cut edges can be sharp.",
     materials: [
       "A plastic bottle with the bottom cut off (adult help recommended), or a funnel",
       "Sand, small gravel or pebbles, and crushed charcoal (activated charcoal if available)",
