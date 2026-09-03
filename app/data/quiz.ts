@@ -189,4 +189,104 @@ export const quizQuestions: QuizQuestion[] = [
       { text: "Keeping essential public systems running", points: { "civil-engineering": 2, "electrical-engineering": 1, "environmental-engineering": 2 }, themes: ["public-impact", "structures-infrastructure"] },
     ],
   },
+  {
+    id: "hardest-part-of-a-build",
+    prompt: "When a physical design isn't working right, which part would you actually enjoy digging into?",
+    options: [
+      { text: "Whether a mechanism is moving the way it's supposed to", points: { "mechanical-engineering": 2, "robotics-engineering": 1 }, themes: ["hands-on-building", "debugging-troubleshooting"] },
+      { text: "Whether the design can survive extreme heat, speed, or pressure", points: { "aerospace-engineering": 2 }, themes: ["hands-on-building"] },
+      { text: "Whether the material itself is the actual problem, not the shape", points: { "materials-engineering": 2 }, themes: ["hands-on-building"] },
+      { text: "Whether the electronics and code are doing what they're supposed to", points: { "robotics-engineering": 2, "computer-engineering": 1, "electrical-engineering": 1 }, themes: ["electronics", "debugging-troubleshooting"] },
+    ],
+  },
+  {
+    id: "hardware-software-lean",
+    prompt: "If your job involved both hardware and code, which side would you gravitate toward?",
+    options: [
+      { text: "Mostly hardware — circuits, power, physical signals", points: { "electrical-engineering": 2 }, themes: ["electronics"] },
+      { text: "Mostly the chip and firmware — the code closest to the hardware itself", points: { "computer-engineering": 2 }, themes: ["electronics", "coding-software"] },
+      { text: "Mostly software — apps, websites, systems that don't touch physical hardware", points: { "software-engineering": 2 }, themes: ["coding-software"] },
+      { text: "An even mix, on an actual physical device like a robot", points: { "robotics-engineering": 2 }, themes: ["electronics", "coding-software"] },
+    ],
+  },
+  {
+    id: "civil-vs-environmental",
+    prompt: "Which of these public projects would you rather be the engineer on?",
+    options: [
+      { text: "A new bridge or transit line", points: { "civil-engineering": 2 }, themes: ["structures-infrastructure", "public-impact"] },
+      { text: "A water treatment plant or air quality project", points: { "environmental-engineering": 2 }, themes: ["public-impact"] },
+      { text: "The medical equipment inside a hospital, not the building itself", points: { "biomedical-engineering": 1 }, themes: ["biology-health"] },
+      { text: "None of these — I'd rather work on a private product, not public infrastructure", points: { "software-engineering": 1, "mechanical-engineering": 1 }, themes: [] },
+    ],
+  },
+  {
+    id: "chemical-vs-materials",
+    prompt: "Which lab-based problem sounds more interesting?",
+    options: [
+      { text: "Scaling a chemical reaction from a small test up to a full industrial process", points: { "chemical-engineering": 2 }, themes: ["hands-on-building"] },
+      { text: "Testing a new material to find its exact strength and failure point", points: { "materials-engineering": 2 }, themes: ["hands-on-building"] },
+      { text: "Testing a device's safety before it's used on a person", points: { "biomedical-engineering": 1 }, themes: ["hands-on-building", "biology-health"] },
+      { text: "I'd rather not work in a lab at all", points: { "civil-engineering": 1, "software-engineering": 1 }, themes: [] },
+    ],
+  },
+  {
+    id: "process-fixer",
+    prompt: "You're handed a slow, inefficient process and asked to fix it. How do you feel?",
+    options: [
+      { text: "Excited — finding and removing waste is satisfying", points: { "industrial-engineering": 2 }, themes: ["abstract-problem-solving"] },
+      { text: "Fine with it, but I'd rather design something new from scratch", points: { "mechanical-engineering": 1 }, themes: [] },
+      { text: "I'd rather fix a technical system's code than a workflow", points: { "computer-engineering": 1, "software-engineering": 1 }, themes: ["debugging-troubleshooting"] },
+      { text: "Not really my thing — I'd rather build than optimize", points: {}, themes: [] },
+    ],
+  },
+  {
+    id: "aerospace-vs-mechanical",
+    prompt: "Which excites you more?",
+    options: [
+      { text: "Aircraft, rockets, or anything that has to perform in extreme environments", points: { "aerospace-engineering": 2 }, themes: ["hands-on-building", "long-term-projects"] },
+      { text: "Everyday machines — engines, appliances, tools — that just need to work reliably", points: { "mechanical-engineering": 2 }, themes: ["hands-on-building"] },
+      { text: "Vehicles specifically, like cars", points: { "mechanical-engineering": 1 }, themes: ["hands-on-building"] },
+      { text: "Neither — I'm more interested in the electronics inside them", points: { "electrical-engineering": 1, "computer-engineering": 1 }, themes: ["electronics"] },
+    ],
+  },
+  {
+    id: "biomedical-vs-others-lab",
+    prompt: "In a lab, which project would you rather be doing?",
+    options: [
+      { text: "Testing a device that will be used on or inside a patient", points: { "biomedical-engineering": 2 }, themes: ["biology-health"] },
+      { text: "Testing how a new material holds up under stress", points: { "materials-engineering": 1 }, themes: ["hands-on-building"] },
+      { text: "Running a chemistry-heavy process experiment", points: { "chemical-engineering": 1 }, themes: ["hands-on-building"] },
+      { text: "I'd rather not be in a lab at all", points: { "civil-engineering": 1, "software-engineering": 1 }, themes: [] },
+    ],
+  },
+  {
+    id: "systems-thinking",
+    prompt: "Which type of problem-solving sounds more like you?",
+    options: [
+      { text: "Zooming out to see how dozens of smaller pieces fit into one big system", points: { "industrial-engineering": 1, "aerospace-engineering": 1 }, themes: ["abstract-problem-solving"] },
+      { text: "Focusing deeply on one small, precise piece and getting it exactly right", points: { "materials-engineering": 1, "computer-engineering": 1 }, themes: ["abstract-problem-solving"] },
+      { text: "Working with something alive or biological, not just mechanical parts", points: { "biomedical-engineering": 2 }, themes: ["biology-health"] },
+      { text: "Working with something you can directly measure, like with a multimeter", points: { "electrical-engineering": 2 }, themes: ["electronics"] },
+    ],
+  },
+  {
+    id: "public-vs-product",
+    prompt: "Which final outcome matters more to you?",
+    options: [
+      { text: "Something the public relies on without ever thinking about it, like clean water or working roads", points: { "civil-engineering": 1, "environmental-engineering": 2 }, themes: ["public-impact"] },
+      { text: "Something an individual person or company specifically chooses to buy", points: { "mechanical-engineering": 1, "software-engineering": 1 }, themes: [] },
+      { text: "Something that keeps an entire complex project's pieces working together", points: { "industrial-engineering": 1 }, themes: ["abstract-problem-solving"] },
+      { text: "Something built to withstand extreme, unusual conditions", points: { "aerospace-engineering": 1, "materials-engineering": 1 }, themes: ["hands-on-building"] },
+    ],
+  },
+  {
+    id: "regulation-heavy-fields",
+    prompt: "Heavily regulated work is common in several fields. Which version of that would you tolerate best?",
+    options: [
+      { text: "Regulations about keeping people physically safe in buildings and structures", points: { "civil-engineering": 1 }, themes: ["regulation-safety"] },
+      { text: "Regulations about safely testing something before it's used on a person", points: { "biomedical-engineering": 1 }, themes: ["regulation-safety"] },
+      { text: "Regulations about safely handling hazardous materials or chemicals", points: { "chemical-engineering": 2 }, themes: ["regulation-safety"] },
+      { text: "Regulations about keeping aircraft or spacecraft safe to operate", points: { "aerospace-engineering": 2 }, themes: ["regulation-safety"] },
+    ],
+  },
 ];
