@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
 import { chromeTranslations } from "../data/translations/chrome";
 
+const REPORT_EMAIL = "jg3110r@gmail.com";
+
 export default function Footer() {
   const { language } = useLanguage();
+  const pathname = usePathname();
   const t = chromeTranslations[language];
 
   const footerLinks = [
@@ -14,6 +18,10 @@ export default function Footer() {
     { href: "/parents-and-teachers", label: t.footerParents },
     { href: "/resources", label: t.footerResources },
   ];
+
+  const mailtoHref = `mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(
+    "Engineering Exploration - mistake report"
+  )}&body=${encodeURIComponent(`Page: ${pathname}\n\n`)}`;
 
   return (
     <footer className="w-full border-t border-neutral-100 bg-white dark:border-white/10 dark:bg-black">
@@ -25,6 +33,9 @@ export default function Footer() {
               {link.label}
             </Link>
           ))}
+          <a href={mailtoHref} className="hover:text-primary">
+            {t.footerReportMistake}
+          </a>
         </nav>
       </div>
     </footer>
