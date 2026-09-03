@@ -2,6 +2,7 @@
 
 import { CoreFieldStats, Level } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
+import { levelLabels } from "../data/translations/levels";
 
 const LEVEL_WIDTH: Record<Level, string> = {
   Low: "33%",
@@ -22,11 +23,6 @@ const STAT_LABELS: Record<"en" | "es", Record<keyof CoreFieldStats, string>> = {
     regulatoryBurden: "Regulación y Cumplimiento",
     marketUncertainty: "Incertidumbre del Mercado Laboral",
   },
-};
-
-const LEVEL_LABELS: Record<"en" | "es", Record<Level, string>> = {
-  en: { Low: "Low", Medium: "Medium", High: "High" },
-  es: { Low: "Baja", Medium: "Media", High: "Alta" },
 };
 
 export function StatBar({ label, level, levelLabel }: { label: string; level: Level; levelLabel: string }) {
@@ -55,7 +51,7 @@ export default function FieldStatSheet({ stats }: { stats: CoreFieldStats }) {
           key={key}
           label={STAT_LABELS[language][key]}
           level={stats[key]}
-          levelLabel={LEVEL_LABELS[language][stats[key]]}
+          levelLabel={levelLabels[language][stats[key]]}
         />
       ))}
     </div>
