@@ -90,6 +90,12 @@ export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps 
           <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
             {suggestion.activity}
           </p>
+          <Link
+            href="/opportunities"
+            className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
+          >
+            How to actually find one near you →
+          </Link>
         </div>
         <div className="border border-neutral-900/10 p-4 dark:border-white/10">
           <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
