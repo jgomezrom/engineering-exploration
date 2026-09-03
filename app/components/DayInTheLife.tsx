@@ -3,18 +3,33 @@
 import { useState } from "react";
 import { DayInLife } from "../data/types";
 import ReflectionPrompt from "./ReflectionPrompt";
+import { useLanguage } from "../context/LanguageContext";
+
+const LABELS = {
+  en: {
+    intro: "One illustrative example day, not a guaranteed schedule — real days vary a lot by employer, role, and industry.",
+    earlier: "← Earlier",
+    later: "Later →",
+    goTo: "Go to",
+  },
+  es: {
+    intro: "Un día de ejemplo ilustrativo, no un horario garantizado — los días reales varían mucho según el empleador, el puesto y la industria.",
+    earlier: "← Antes",
+    later: "Después →",
+    goTo: "Ir a",
+  },
+};
 
 export default function DayInTheLife({ dayInLife }: { dayInLife: DayInLife }) {
   const { blocks, reflectionQuestion } = dayInLife;
   const [step, setStep] = useState(0);
   const block = blocks[step];
+  const { language } = useLanguage();
+  const t = LABELS[language];
 
   return (
     <div>
-      <p className="text-xs text-neutral-600 dark:text-neutral-400">
-        One illustrative example day, not a guaranteed schedule — real days vary a lot by
-        employer, role, and industry.
-      </p>
+      <p className="text-xs text-neutral-600 dark:text-neutral-400">{t.intro}</p>
 
       <div className="mt-5 border border-neutral-900/10 p-6 dark:border-white/10">
         <div className="flex items-center justify-between">
@@ -37,14 +52,14 @@ export default function DayInTheLife({ dayInLife }: { dayInLife: DayInLife }) {
             disabled={step === 0}
             className="border border-neutral-900/10 px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:border-primary/40 disabled:cursor-not-allowed disabled:opacity-40 dark:border-white/10 dark:text-neutral-400"
           >
-            ← Earlier
+            {t.earlier}
           </button>
           <div className="flex gap-1.5">
             {blocks.map((b, i) => (
               <button
                 key={b.time}
                 type="button"
-                aria-label={`Go to ${b.time}`}
+                aria-label={`${t.goTo} ${b.time}`}
                 aria-current={i === step}
                 onClick={() => setStep(i)}
                 className={`h-1.5 w-4 rounded-full transition-colors ${
@@ -59,7 +74,7 @@ export default function DayInTheLife({ dayInLife }: { dayInLife: DayInLife }) {
             disabled={step === blocks.length - 1}
             className="border border-neutral-900/10 px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:border-primary/40 disabled:cursor-not-allowed disabled:opacity-40 dark:border-white/10 dark:text-neutral-400"
           >
-            Later →
+            {t.later}
           </button>
         </div>
       </div>

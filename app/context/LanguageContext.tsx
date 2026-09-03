@@ -22,8 +22,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
 
   useEffect(() => {
+    // Same legitimate case as useExploration.ts's hydration effect: reading
+    // localStorage has to happen post-mount, not in a lazy useState
+    // initializer, or the client's first render would mismatch the
+    // server's English-only output.
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (stored === "es" || stored === "en") setLanguageState(stored);
     } catch {
       // Storage disabled or unavailable — just stay on the English default.

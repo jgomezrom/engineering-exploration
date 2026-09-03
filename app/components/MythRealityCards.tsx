@@ -2,8 +2,14 @@
 
 import { useState } from "react";
 import { MythReality } from "../data/types";
+import { useLanguage } from "../context/LanguageContext";
 
-function FlipCard({ item }: { item: MythReality }) {
+const LABELS = {
+  en: { myth: "Myth", reality: "Reality", reveal: "Reveal the reality", back: "Back to myth" },
+  es: { myth: "Mito", reality: "Realidad", reveal: "Ver la realidad", back: "Volver al mito" },
+};
+
+function FlipCard({ item, t }: { item: MythReality; t: (typeof LABELS)["en"] }) {
   const [revealed, setRevealed] = useState(false);
 
   return (
@@ -14,7 +20,7 @@ function FlipCard({ item }: { item: MythReality }) {
       className="flex w-full flex-col items-start border border-neutral-900/10 p-5 text-left transition-colors hover:border-primary/40 dark:border-white/10"
     >
       <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
-        {revealed ? "Reality" : "Myth"}
+        {revealed ? t.reality : t.myth}
       </span>
       <p className="mt-2 leading-relaxed text-neutral-900 dark:text-white">
         {revealed ? item.reality : item.myth}
@@ -29,17 +35,19 @@ function FlipCard({ item }: { item: MythReality }) {
             strokeLinejoin="round"
           />
         </svg>
-        {revealed ? "Back to myth" : "Reveal the reality"}
+        {revealed ? t.back : t.reveal}
       </span>
     </button>
   );
 }
 
 export default function MythRealityCards({ items }: { items: MythReality[] }) {
+  const { language } = useLanguage();
+  const t = LABELS[language];
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
-        <FlipCard key={item.myth} item={item} />
+        <FlipCard key={item.myth} item={item} t={t} />
       ))}
     </div>
   );

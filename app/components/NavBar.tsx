@@ -4,18 +4,22 @@ import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../context/LanguageContext";
+import { chromeTranslations } from "../data/translations/chrome";
 
 const NAV_LINKS = [
-  { href: "/curious", label: "Curious" },
-  { href: "/explore", label: "Explore" },
-  { href: "/quiz", label: "Quiz" },
-  { href: "/challenges", label: "Challenges" },
-  { href: "/resources", label: "Resources" },
-  { href: "/about", label: "About" },
+  { href: "/curious", key: "navCurious" as const },
+  { href: "/explore", key: "navExplore" as const },
+  { href: "/quiz", key: "navQuiz" as const },
+  { href: "/challenges", key: "navChallenges" as const },
+  { href: "/resources", key: "navResources" as const },
+  { href: "/about", key: "navAbout" as const },
 ];
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = chromeTranslations[language];
 
   return (
     <header className="w-full border-b border-neutral-100 bg-white dark:border-white/10 dark:bg-black">
@@ -37,7 +41,7 @@ export default function NavBar() {
           <div className="hidden items-center gap-5 text-sm font-medium text-neutral-600 dark:text-neutral-400 md:flex">
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-primary">
-                {link.label}
+                {t[link.key]}
               </Link>
             ))}
           </div>
@@ -47,7 +51,7 @@ export default function NavBar() {
 
           <button
             type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t.closeMenu : t.openMenu}
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
             className="flex h-9 w-9 items-center justify-center text-neutral-900 md:hidden dark:text-white"
@@ -68,7 +72,7 @@ export default function NavBar() {
           <div className="flex flex-col gap-4 text-sm font-medium text-neutral-600 dark:text-neutral-400">
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-primary" onClick={() => setOpen(false)}>
-                {link.label}
+                {t[link.key]}
               </Link>
             ))}
           </div>

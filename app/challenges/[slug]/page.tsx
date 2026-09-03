@@ -5,6 +5,7 @@ import FieldIcon from "../../components/FieldIcon";
 import FadeIn from "../../components/FadeIn";
 import DesignProcessDiagram from "../../components/DesignProcessDiagram";
 import ReflectionPrompt from "../../components/ReflectionPrompt";
+import BackLink from "../../components/BackLink";
 import { challenges } from "../../data/challenges";
 import { fields } from "../../data/fields";
 
@@ -91,9 +92,7 @@ export default async function ChallengePage(props: PageProps<"/challenges/[slug]
       <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
       <span className="pointer-events-none absolute bottom-10 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-primary/30 lg:block" />
 
-      <Link href="/challenges" className="text-sm font-medium text-primary hover:underline">
-        ← Back to Challenges
-      </Link>
+      <BackLink href="/challenges" labelKey="backToChallenges" />
 
       <div className="mt-6 inline-flex items-center justify-center rounded-full bg-primary/10 p-4">
         <FieldIcon slug={challenge.field} className="h-10 w-10 text-primary" />
