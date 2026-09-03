@@ -16,6 +16,7 @@ import FadeIn from "./FadeIn";
 import { fields } from "../data/fields";
 import { fieldStubs } from "../data/fieldStubs";
 import { fieldsEs } from "../data/fields.es";
+import { fieldStubsEs } from "../data/fieldStubs.es";
 import { careerComparisons } from "../data/careerComparisons";
 import { FieldSlug } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
@@ -109,14 +110,16 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
   const englishField = fields.find((f) => f.slug === slug);
   const stub = !englishField ? fieldStubs.find((s) => s.slug === slug) : undefined;
   const spanishField = language === "es" ? fieldsEs.find((f) => f.slug === slug) : undefined;
-  const showNotice = language === "es" && !spanishField;
+  const spanishStub = language === "es" ? fieldStubsEs.find((s) => s.slug === slug) : undefined;
+  const showNotice = stub ? language === "es" && !spanishStub : language === "es" && !spanishField;
   const field = spanishField ?? englishField;
 
   if (stub) {
+    const displayStub = spanishStub ?? stub;
     const relatedPool = language === "es" ? [...fieldsEs, ...fields] : fields;
     const related = relatedPool.find((f) => f.slug === stub.relatedField);
     return (
-      <PageFrame slug={stub.slug} name={stub.name} tagline={stub.tagline}>
+      <PageFrame slug={stub.slug} name={displayStub.name} tagline={displayStub.tagline}>
         <div className="mt-8 border border-neutral-900/10 bg-neutral-50 p-5 dark:border-white/10 dark:bg-neutral-900">
           <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
             {t.stubOverview}
@@ -135,22 +138,22 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
         {showNotice && <NotTranslatedNotice text={t.notTranslatedNotice} />}
 
         <Section index={1} title={t.section1}>
-          <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{stub.whatItIs}</p>
+          <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.whatItIs}</p>
         </Section>
 
         <Section index={2} title={t.section3}>
-          <BulletList items={stub.realWorldExamples} />
+          <BulletList items={displayStub.realWorldExamples} />
         </Section>
 
         <Section index={3} title={t.relatedMajors}>
-          <BulletList items={stub.relatedMajors} />
+          <BulletList items={displayStub.relatedMajors} />
         </Section>
 
         <Section index={4} title={t.section13}>
-          {stub.salary ? (
-            <SalaryDetails salary={stub.salary} />
+          {displayStub.salary ? (
+            <SalaryDetails salary={displayStub.salary} />
           ) : (
-            <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{stub.salaryNote}</p>
+            <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.salaryNote}</p>
           )}
         </Section>
       </PageFrame>
