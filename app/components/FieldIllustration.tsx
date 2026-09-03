@@ -17,6 +17,8 @@ const DIAGRAM_LABELS = {
     articulatedArm: "articulated arm",
     nuclearPlant: "nuclear plant",
     drillingRig: "drilling rig",
+    dripIrrigation: "drip irrigation",
+    shipHull: "ship hull",
   },
   es: {
     airfoilSection: "sección de perfil alar",
@@ -26,6 +28,8 @@ const DIAGRAM_LABELS = {
     articulatedArm: "brazo articulado",
     nuclearPlant: "planta nuclear",
     drillingRig: "torre de perforación",
+    dripIrrigation: "riego por goteo",
+    shipHull: "casco de barco",
   },
 };
 
@@ -270,6 +274,44 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
             {labels.drillingRig}
+          </text>
+        </svg>
+      );
+
+    case "agricultural-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <line x1="70" y1="60" x2="230" y2="60" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path
+            d="M90 60v14M130 60v14M170 60v14M210 60v14"
+            stroke="currentColor"
+            strokeWidth="1.2"
+            strokeDasharray="2 2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M90 130V100M90 105l-7-10M90 105l7-10M130 130V100M130 105l-7-10M130 105l7-10M170 130V100M170 105l-7-10M170 105l7-10M210 130V100M210 105l-7-10M210 105l7-10"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.dripIrrigation}
+          </text>
+        </svg>
+      );
+
+    case "marine-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <path d="M75 110H225L215 140H85Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <rect x="128" y="85" width="44" height="25" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="150" y1="85" x2="150" y2="68" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.shipHull}
           </text>
         </svg>
       );

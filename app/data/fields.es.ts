@@ -1828,4 +1828,260 @@ export const fieldsEs: EngineeringField[] = [
       "¿Estaría cómodo/a viajando o trabajando en un sitio de campo remoto, al menos periódicamente?",
     ],
   },
+  {
+    slug: "agricultural-engineering",
+    name: "Ingeniería Agrícola",
+    tagline: "Aplicar la ingeniería a la agricultura y la producción de alimentos — equipo, riego, y sistemas alimentarios.",
+    whatItIs:
+      "La ingeniería agrícola aplica principios de ingeniería a la agricultura y la producción de alimentos — diseñando equipo, sistemas de riego, y estructuras que hacen la agricultura más eficiente, y adaptando la tecnología para trabajar con factores biológicos y ambientales que no se comportan como los materiales de ingeniería estándar.",
+    whatEngineersWorkOn:
+      "Los ingenieros agrícolas diseñan equipo y maquinaria agrícola, desarrollan sistemas de riego y gestión del agua, diseñan estructuras como instalaciones de almacenamiento y plantas de procesamiento, y trabajan en tecnología de agricultura de precisión como el monitoreo de cultivos basado en sensores. Gran parte del trabajo implica adaptar soluciones de ingeniería estándar para trabajar con sistemas biológicos — cultivos, suelo, y ganado — que se comportan de forma menos predecible que los materiales de ingeniería típicos.",
+    realWorldExamples: [
+      "Diseño de equipo y maquinaria agrícola",
+      "Sistemas de riego y gestión del agua",
+      "Sistemas de procesamiento y almacenamiento de alimentos",
+      "Tecnología de agricultura de precisión, como monitoreo de cultivos basado en sensores",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros agrícolas son lo mismo que los agricultores — los agricultores cultivan y crían ganado; los ingenieros agrícolas diseñan el equipo, los sistemas, y la tecnología que apoyan ese trabajo.",
+      "Que el trabajo solo es relevante en áreas rurales — aunque gran parte del trabajo de campo ocurre en granjas, los ingenieros agrícolas también trabajan en plantas de procesamiento de alimentos, laboratorios de investigación, y empresas de fabricación de equipo que pueden estar ubicadas casi en cualquier lugar.",
+      "Que es un campo de baja tecnología — la ingeniería agrícola moderna implica tecnología real, incluyendo sensores, automatización, y análisis de datos para agricultura de precisión.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros agrícolas son lo mismo que los agricultores.", reality: "Los agricultores cultivan y crían ganado; los ingenieros agrícolas diseñan el equipo, los sistemas, y la tecnología que apoyan ese trabajo." },
+      { myth: "El trabajo solo es relevante en áreas rurales.", reality: "Aunque gran parte del trabajo de campo ocurre en granjas, los ingenieros agrícolas también trabajan en plantas de procesamiento de alimentos, laboratorios de investigación, y empresas de fabricación de equipo que pueden estar ubicadas casi en cualquier lugar." },
+      { myth: "Es un campo de baja tecnología.", reality: "La ingeniería agrícola moderna implica tecnología real, incluyendo sensores, automatización, y análisis de datos para agricultura de precisión." },
+    ],
+    usefulSubjects: ["Biología", "Física", "Química", "Cálculo"],
+    helpfulSkills: [
+      "Comodidad combinando fundamentos de ingeniería con biología y ciencias ambientales",
+      "Resolución práctica de problemas, ya que el equipo a menudo tiene que funcionar de forma confiable en condiciones exteriores impredecibles",
+      "Pensamiento sistémico, ya que los sistemas agrícolas involucran factores biológicos, mecánicos, y ambientales que interactúan entre sí",
+      "Disposición para pasar tiempo en granjas o sitios de campo, no solo en una oficina o laboratorio",
+    ],
+    typicalProjects: [
+      "Diseñar o mejorar una pieza de equipo agrícola, como una máquina de siembra o cosecha",
+      "Diseñar un sistema de riego para un cultivo y clima específicos",
+      "Probar tecnología basada en sensores para monitorear la salud de los cultivos o las condiciones del suelo",
+      "Diseñar una instalación de almacenamiento o procesamiento para reducir el desperdicio de alimentos después de la cosecha",
+    ],
+    typicalWorkday:
+      "Una mezcla de trabajo de diseño y pruebas, a menudo dividido entre una oficina o laboratorio y tiempo en una granja o sitio de campo donde realmente se usan el equipo y los sistemas. La colaboración con agricultores, agrónomos, y científicos de alimentos es una parte regular del trabajo, ya que las condiciones agrícolas del mundo real informan constantemente la ingeniería.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Visita de campo", detail: "Visitar un sitio de granja para ver cómo está funcionando en condiciones reales una pieza de equipo o un sistema de riego." },
+        { time: "9:30 AM", label: "Revisión de datos", detail: "Revisar datos de sensores de un sistema de agricultura de precisión para verificar las condiciones del cultivo o el suelo." },
+        { time: "11:00 AM", label: "Trabajo de diseño", detail: "Trabajar en un diseño para una pieza nueva o mejorada de equipo agrícola." },
+        { time: "1:00 PM", label: "Colaboración", detail: "Reunirse con un agricultor o agrónomo para entender un problema real que el diseño necesita resolver." },
+        { time: "2:30 PM", label: "Pruebas", detail: "Probar un prototipo bajo condiciones que imitan el uso real en una granja." },
+        { time: "4:00 PM", label: "Cierre del día", detail: "Documentar los resultados de las pruebas de hoy y planear los próximos pasos." },
+      ],
+      reflectionQuestion:
+        "¿Disfrutarías un trabajo de ingeniería donde los 'materiales' con los que diseñas — suelo, cultivos, clima — no se comportan tan predeciblemente como el acero o el plástico?",
+    },
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "High",
+      biologyContent: "High",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$98,590",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/agricultural-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo un sistema de riego moderno decide cuándo y cuánto regar los cultivos.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables.",
+        activity: "Busca un club de 4-H, un capítulo de FFA (Future Farmers of America), o un club de STEM en tu escuela, si hay uno disponible.",
+        relatedField: "environmental-engineering",
+      },
+      "13-15": {
+        project: "Diseña un sistema simple de riego por goteo usando materiales caseros y prueba qué tan uniformemente riega una pequeña área.",
+        tool: "Materiales caseros básicos — tubería, recipientes, y algo para hacer pequeños agujeros.",
+        activity: "Investiga un programa 4-H o FFA, que a menudo incluyen proyectos prácticos de tecnología agrícola.",
+        relatedField: "environmental-engineering",
+      },
+      "16-18": {
+        project: "Investiga una tecnología real de agricultura de precisión, como sensores de suelo o monitoreo de cultivos con drones, y resume cómo cambia las decisiones agrícolas.",
+        tool: "Fuentes confiables de tecnología agrícola, como el sitio web público de un programa de extensión universitaria.",
+        activity: "Busca un programa preuniversitario de ingeniería agrícola o un programa de verano en una universidad con un departamento de agricultura.",
+        relatedField: "environmental-engineering",
+      },
+    },
+    industries: ["Fabricación de equipo agrícola", "Procesamiento de alimentos", "Riego y gestión del agua", "Tecnología agrícola (AgTech)", "Agencias gubernamentales de agricultura"],
+    relatedMajors: ["Ingeniería Agrícola", "Ingeniería Mecánica (con cierta superposición)", "Ingeniería Ambiental (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Diseño de Equipo Agrícola", description: "Diseña y mejora la maquinaria usada para sembrar, cosechar, y otras tareas agrícolas." },
+      { title: "Ingeniero/a de Riego", description: "Diseña sistemas de gestión del agua y riego adaptados a cultivos y climas específicos." },
+      { title: "Ingeniero/a de Procesamiento de Alimentos", description: "Diseña el equipo y los sistemas usados para procesar, empacar, y almacenar alimentos después de la cosecha." },
+      { title: "Ingeniero/a de Agricultura de Precisión", description: "Desarrolla tecnología basada en sensores y datos para ayudar a los agricultores a tomar decisiones más informadas." },
+    ],
+    advantages: [
+      "El trabajo apoya directamente la producción de alimentos, que es una necesidad esencial en todas partes",
+      "Un campo genuinamente interdisciplinario que combina la ingeniería con la biología y las ciencias ambientales",
+      "Impacto real y constante — las mejoras en este campo pueden reducir significativamente el desperdicio o mejorar los rendimientos",
+    ],
+    challenges: [
+      "El equipo tiene que funcionar de forma confiable en condiciones exteriores impredecibles, lo cual es más difícil de diseñar que para un entorno controlado",
+      "El campo es más pequeño que muchas otras disciplinas de ingeniería, lo cual puede significar menos vacantes en general",
+      "Algunos puestos requieren viajes regulares o tiempo en sitios de granjas rurales, lo cual no es para todos",
+    ],
+    thingsPeopleDislike: [
+      "Un número relativamente pequeño de vacantes en comparación con campos de ingeniería más grandes",
+      "El trabajo de campo al aire libre puede significar exposición al clima y condiciones de trabajo menos cómodas",
+      "El salario tiende a ser algo más bajo que en muchas otras especialidades de ingeniería",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 7% para ingenieros agrícolas de 2025 a 2035 — más rápido que el promedio de todas las ocupaciones — con cerca de 100 vacantes proyectadas por año durante esa década. Ese es uno de los conteos anuales de vacantes más pequeños entre los campos de ingeniería en este sitio, ya que la ingeniería agrícola es un campo comparativamente pequeño y especializado. Investiga el mercado actual y la demanda en tu región y país específicos antes de tomar decisiones, ya que las necesidades de tecnología agrícola pueden variar mucho según las prácticas agrícolas locales.",
+    beginnerActivities: [
+      "Investiga cómo un sistema de riego moderno decide cuándo y cuánto regar los cultivos",
+      "Diseña un sistema simple de riego por goteo con materiales caseros y prueba qué tan uniformemente riega un área",
+      "Investiga una tecnología real de agricultura de precisión, como sensores de suelo o monitoreo de cultivos con drones",
+    ],
+    selfReflectionQuestions: [
+      "¿Disfrutaría un trabajo de ingeniería donde los 'materiales' subyacentes — suelo, cultivos, clima — no se comportan tan predeciblemente como el acero o el plástico?",
+      "¿Estoy cómodo/a pasando tiempo real al aire libre o en sitios de granjas, no solo en una oficina o laboratorio?",
+      "¿Me interesa genuinamente la agricultura y los sistemas alimentarios, o principalmente el lado mecánico o tecnológico?",
+    ],
+  },
+  {
+    slug: "marine-engineering",
+    name: "Ingeniería Marina",
+    tagline: "Diseñar y mantener barcos, submarinos, y otras embarcaciones construidas para el océano.",
+    whatItIs:
+      "La ingeniería marina, a menudo combinada con la arquitectura naval, se enfoca en diseñar, construir, y mantener barcos, submarinos, y otras embarcaciones y estructuras marinas — el casco, los sistemas de propulsión, y los sistemas mecánicos y eléctricos a bordo todos tienen que funcionar de forma confiable en un entorno oceánico exigente.",
+    whatEngineersWorkOn:
+      "Los ingenieros marinos diseñan y mantienen los sistemas de propulsión, energía, y mecánicos que mantienen funcionando a los barcos y otras embarcaciones, mientras que los arquitectos navales (un rol estrechamente relacionado, a menudo estudiado junto con este) se enfocan más en el casco y el diseño general de la embarcación. Los ingenieros marinos prueban cómo aguantan los sistemas bajo condiciones oceánicas reales — presión, corrosión, y movimiento constante — y trabajan para mantener las embarcaciones existentes operando de forma segura y eficiente.",
+    realWorldExamples: [
+      "Diseño de cascos y análisis estructural de barcos",
+      "Sistemas de propulsión y potencia de barcos",
+      "Diseño de plataformas marinas",
+      "Sistemas de submarinos y embarcaciones navales",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros marinos solo trabajan en barcos navales o militares — el campo también cubre barcos de carga comerciales, cruceros, embarcaciones pesqueras, plataformas marinas, y botes recreativos.",
+      "Que es lo mismo que la arquitectura naval — los arquitectos navales se enfocan más en el casco, la estabilidad, y el diseño general de una embarcación; los ingenieros marinos se enfocan más en los sistemas de propulsión, energía, y mecánicos dentro de ella. En la práctica, los dos campos se superponen y a menudo se estudian juntos.",
+      "Que el trabajo requiere estar en el mar constantemente — muchos ingenieros marinos trabajan en oficinas, astilleros, o empresas de diseño, con tiempo en el mar siendo solo una parte de algunos puestos, no todo el trabajo.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros marinos solo trabajan en barcos navales o militares.", reality: "El campo también cubre barcos de carga comerciales, cruceros, embarcaciones pesqueras, plataformas marinas, y botes recreativos." },
+      { myth: "Es lo mismo que la arquitectura naval.", reality: "Los arquitectos navales se enfocan más en el casco, la estabilidad, y el diseño general de una embarcación; los ingenieros marinos se enfocan más en los sistemas de propulsión, energía, y mecánicos dentro de ella. En la práctica, los dos campos se superponen y a menudo se estudian juntos." },
+      { myth: "El trabajo requiere estar en el mar constantemente.", reality: "Muchos ingenieros marinos trabajan en oficinas, astilleros, o empresas de diseño, con tiempo en el mar siendo solo una parte de algunos puestos, no todo el trabajo." },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Química (para entender la corrosión y los materiales)"],
+    helpfulSkills: [
+      "Bases sólidas de mecánica y estructuras, ya que las embarcaciones tienen que resistir estrés físico extremo y constante",
+      "Comodidad con la corrosión, los materiales, y cómo se comportan en un ambiente de agua salada con el tiempo",
+      "Pensamiento sistémico, ya que los sistemas de propulsión, energía, y estructurales de una embarcación tienen que funcionar juntos de forma confiable",
+      "Disposición para trabajar en un astillero o a bordo de una embarcación, al menos para algunos puestos",
+    ],
+    typicalProjects: [
+      "Diseñar o evaluar el sistema de propulsión o energía de una embarcación",
+      "Analizar cómo aguantan el casco y la estructura de un barco bajo estrés y cargas oceánicas reales",
+      "Inspeccionar los sistemas mecánicos de una embarcación existente en busca de desgaste, corrosión, o reparaciones necesarias",
+      "Trabajar en el diseño de una plataforma marina u otra estructura marítima",
+    ],
+    typicalWorkday:
+      "Una mezcla de trabajo de diseño y análisis en una oficina, y tiempo en un astillero o a bordo de una embarcación inspeccionando sistemas y estructuras reales. El equilibrio entre el trabajo de oficina y el trabajo práctico en el sitio varía mucho según el puesto y el empleador específicos.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Inspección en el astillero", detail: "Inspeccionar el sistema de propulsión de una embarcación en busca de desgaste o mantenimiento necesario." },
+        { time: "9:30 AM", label: "Revisión de diseño", detail: "Revisar un diseño para un nuevo componente del sistema de propulsión contra los requisitos de desempeño." },
+        { time: "11:00 AM", label: "Análisis estructural", detail: "Analizar cómo aguanta una sección del casco bajo una carga nueva propuesta." },
+        { time: "1:00 PM", label: "Coordinación de equipo", detail: "Reunirse con un arquitecto naval para coordinar cómo encajan los sistemas estructurales y mecánicos." },
+        { time: "2:30 PM", label: "Revisión de materiales", detail: "Evaluar cómo está aguantando un material contra la corrosión después de tiempo en agua salada." },
+        { time: "4:00 PM", label: "Cierre del día", detail: "Documentar los hallazgos de hoy y actualizar el plan del proyecto." },
+      ],
+      reflectionQuestion:
+        "¿Disfrutarías un trabajo de ingeniería que tiene que aguantar contra uno de los entornos más físicamente exigentes — agua salada constante, presión, y movimiento?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "High",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$112,230",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo un barco se mantiene a flote e intenta un experimento simple de flotabilidad usando plastilina o papel aluminio en un recipiente con agua.",
+        tool: "Materiales caseros básicos — plastilina, papel aluminio, y un recipiente con agua.",
+        activity: "Busca un club de STEM en tu escuela, o una exhibición de museo marítimo, si hay uno cerca de ti.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Construye un casco de bote simple con materiales caseros y prueba cuánto peso puede aguantar antes de hundirse.",
+        tool: "Materiales caseros básicos — cartón, papel aluminio, o recipientes de plástico, y pesas para probar.",
+        activity: "Investiga un equipo de Science Olympiad, que a veces incluye eventos relacionados con diseño de botes o ingeniería naval.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Investiga cómo se diseñan los barcos modernos para resistir la corrosión en agua salada, y resume las principales estrategias usadas.",
+        tool: "Fuentes de ingeniería confiables, como el sitio web público de una organización de ingeniería marítima.",
+        activity: "Busca un programa preuniversitario de ingeniería o un programa de verano con enfoque en ingeniería marina o naval, si hay uno disponible.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Construcción naval", "Transporte marítimo comercial", "Naval y defensa", "Energía en alta mar", "Fabricación de equipo marino"],
+    relatedMajors: ["Ingeniería Marina", "Arquitectura Naval", "Ingeniería Mecánica (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Sistemas Marinos", description: "Diseña y mantiene los sistemas de propulsión, energía, y mecánicos de una embarcación." },
+      { title: "Arquitecto/a Naval", description: "Se enfoca en el diseño del casco, la estabilidad, y la forma estructural general de una embarcación, estrechamente vinculado con la ingeniería marina." },
+      { title: "Ingeniero/a de Estructuras en Alta Mar", description: "Diseña plataformas y estructuras construidas para operar de forma segura en condiciones de mar abierto." },
+      { title: "Inspector/a Marino/a", description: "Inspecciona embarcaciones y estructuras marinas para evaluar su condición, seguridad, y cumplimiento con los estándares." },
+    ],
+    advantages: [
+      "Experiencia altamente especializada con demanda constante donde sea que se construyan o mantengan barcos y estructuras marinas",
+      "Desafíos de ingeniería reales y tangibles — pocos entornos son tan físicamente exigentes como el océano abierto",
+      "El trabajo puede abarcar una amplia gama de tipos de embarcaciones, desde transporte comercial hasta defensa y energía en alta mar",
+    ],
+    challenges: [
+      "Las exigencias físicas del entorno oceánico — presión, corrosión, movimiento constante — crean problemas de ingeniería genuinamente difíciles",
+      "Algunos puestos requieren tiempo en un astillero o a bordo de una embarcación, lo cual no es para todos",
+      "El campo es más especializado y pequeño que muchas otras disciplinas de ingeniería, lo cual puede reducir dónde está disponible el trabajo",
+    ],
+    thingsPeopleDislike: [
+      "Algunos puestos requieren tiempo prolongado lejos de casa, en un astillero o a bordo de una embarcación",
+      "El campo está concentrado en regiones costeras o portuarias específicas, lo cual puede limitar dónde puedes trabajar",
+      "La corrosión, el desgaste, y los problemas de mantenimiento son una parte constante y continua del trabajo, no un problema de diseño de una sola vez",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 7% para ingenieros marinos y arquitectos navales de 2025 a 2035 — más rápido que el promedio de todas las ocupaciones — con cerca de 500 vacantes proyectadas por año durante esa década. La demanda está ligada a la construcción naval, el transporte marítimo comercial, y la actividad naval, lo cual puede variar según la región y el país — investiga el mercado actual y la industria de construcción naval en tu área específica antes de tomar decisiones.",
+    beginnerActivities: [
+      "Investiga cómo un barco se mantiene a flote e intenta un experimento simple de flotabilidad con plastilina o papel aluminio",
+      "Construye un casco de bote simple con materiales caseros y prueba cuánto peso puede aguantar",
+      "Investiga cómo los barcos modernos resisten la corrosión en agua salada",
+    ],
+    selfReflectionQuestions: [
+      "¿Disfrutaría un trabajo de ingeniería que tiene que aguantar contra condiciones físicas extremadamente exigentes, como agua salada constante y presión?",
+      "¿Estoy cómodo/a con que algunos puestos requieran tiempo en un astillero o a bordo de una embarcación, posiblemente lejos de casa?",
+      "¿Me atrae la ingeniería marina específicamente, o más ampliamente la ingeniería mecánica o estructural?",
+    ],
+  },
 ];

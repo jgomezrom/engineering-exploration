@@ -1937,4 +1937,278 @@ export const fields: EngineeringField[] = [
       "Would I be comfortable traveling to or working at a remote field site, at least periodically?",
     ],
   },
+  {
+    slug: "agricultural-engineering",
+    name: "Agricultural Engineering",
+    tagline: "Applying engineering to farming and food production — equipment, irrigation, and food systems.",
+    whatItIs:
+      "Agricultural engineering applies engineering principles to farming and food production — designing equipment, irrigation systems, and structures that make agriculture more efficient, and adapting technology to work with biological and environmental factors that don't behave like standard engineering materials.",
+    whatEngineersWorkOn:
+      "Agricultural engineers design farm equipment and machinery, develop irrigation and water management systems, design structures like storage facilities and processing plants, and work on precision agriculture technology like sensor-based crop monitoring. A lot of the work involves adapting standard engineering solutions to work with biological systems — crops, soil, and livestock — that behave less predictably than typical engineering materials.",
+    realWorldExamples: [
+      "Farm equipment and machinery design",
+      "Irrigation and water management systems",
+      "Food processing and storage systems",
+      "Precision agriculture technology, like sensor-based crop monitoring",
+    ],
+    commonMisconceptions: [
+      "That agricultural engineers are the same as farmers — farmers grow crops and raise livestock; agricultural engineers design the equipment, systems, and technology that support that work.",
+      "That the job is only relevant in rural areas — while a lot of fieldwork happens on farms, agricultural engineers also work in food processing plants, research labs, and equipment manufacturing companies that can be based almost anywhere.",
+      "That it's a low-tech field — modern agricultural engineering involves real technology, including sensors, automation, and data analysis for precision agriculture.",
+    ],
+    mythsAndRealities: [
+      { myth: "Agricultural engineers are the same as farmers.", reality: "Farmers grow crops and raise livestock; agricultural engineers design the equipment, systems, and technology that support that work." },
+      { myth: "The job is only relevant in rural areas.", reality: "While a lot of fieldwork happens on farms, agricultural engineers also work in food processing plants, research labs, and equipment manufacturing companies that can be based almost anywhere." },
+      { myth: "It's a low-tech field.", reality: "Modern agricultural engineering involves real technology, including sensors, automation, and data analysis for precision agriculture." },
+    ],
+    usefulSubjects: ["Biology", "Physics", "Chemistry", "Calculus"],
+    helpfulSkills: [
+      "Comfort combining engineering fundamentals with biology and environmental science",
+      "Practical, hands-on problem-solving, since equipment often has to work reliably in unpredictable outdoor conditions",
+      "Systems thinking, since agricultural systems involve interacting biological, mechanical, and environmental factors",
+      "Willingness to spend time at farm or field sites, not just in an office or lab",
+    ],
+    typicalProjects: [
+      "Designing or improving a piece of farm equipment, like a planting or harvesting machine",
+      "Designing an irrigation system for a specific crop and climate",
+      "Testing sensor-based technology for monitoring crop health or soil conditions",
+      "Designing a storage or processing facility to reduce food waste after harvest",
+    ],
+    typicalWorkday:
+      "A mix of design and testing work, often split between an office or lab and time at a farm or field site where equipment and systems are actually used. Collaboration with farmers, agronomists, and food scientists is a regular part of the job, since real-world agricultural conditions constantly inform the engineering.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Field visit", detail: "Visiting a farm site to see how a piece of equipment or irrigation system is performing in real conditions." },
+        { time: "9:30 AM", label: "Data review", detail: "Reviewing sensor data from a precision agriculture system to check crop or soil conditions." },
+        { time: "11:00 AM", label: "Design work", detail: "Working on a design for a new or improved piece of farm equipment." },
+        { time: "1:00 PM", label: "Collaboration", detail: "Meeting with a farmer or agronomist to understand a real problem the design needs to solve." },
+        { time: "2:30 PM", label: "Testing", detail: "Testing a prototype under conditions that mimic real farm use." },
+        { time: "4:00 PM", label: "Wrap-up", detail: "Documenting today's test results and planning next steps." },
+      ],
+      reflectionQuestion: "Would you enjoy engineering work where the 'materials' you're designing around — soil, crops, weather — don't behave as predictably as steel or plastic?",
+    },
+    // mathIntensity: usefulSubjects leads with biology, with physics/chemistry/calculus present but less "high-intensity" framing than nuclear or aerospace.
+    // handsOnWork: typicalWorkday and dayInLife both center equipment testing and field visits.
+    // regulatoryBurden: no strong regulatory or compliance language appears anywhere in this field's text.
+    // marketUncertainty: howCompetitive cites solid, moderate 7% BLS growth without volatility language.
+    // coding: sensor-based precision agriculture technology is mentioned, but not framed as central coding work.
+    // outdoorWork: dayInLife opens with a field visit, and helpfulSkills explicitly calls for "time at farm or field sites."
+    // biologyContent: usefulSubjects leads with "Biology," and whatItIs explicitly centers "biological and environmental factors."
+    // creativeFreedom: real design work throughout without heavy regulatory-constraint language.
+    // teamwork: collaboration with farmers and agronomists is real but less repeated/emphasized than fields rated High.
+    // seeingWorkRealLife: equipment and systems are used directly and visibly on real farms, similar to civil or mechanical engineering's framing.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "High",
+      biologyContent: "High",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$98,590",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/agricultural-engineers.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how a modern irrigation system decides when and how much to water crops.",
+        tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
+        activity: "Look for a 4-H club, FFA (Future Farmers of America) chapter, or STEM club at school, if available.",
+        relatedField: "environmental-engineering",
+      },
+      "13-15": {
+        project: "Design a simple drip irrigation system using household materials and test how evenly it waters a small area.",
+        tool: "Basic household materials — tubing, containers, and something to poke small holes.",
+        activity: "Look into a 4-H or FFA program, which often include hands-on agricultural technology projects.",
+        relatedField: "environmental-engineering",
+      },
+      "16-18": {
+        project: "Research a real precision agriculture technology, like soil sensors or drone crop monitoring, and summarize how it changes farming decisions.",
+        tool: "Reliable agricultural technology sources, like a university extension program's public website.",
+        activity: "Look for a pre-college agricultural engineering program or a summer program at a university with an agriculture department.",
+        relatedField: "environmental-engineering",
+      },
+    },
+    industries: ["Farm equipment manufacturing", "Food processing", "Irrigation and water management", "Agricultural technology (AgTech)", "Government agricultural agencies"],
+    relatedMajors: ["Agricultural Engineering", "Mechanical Engineering (some overlap)", "Environmental Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Farm Equipment Design Engineer", description: "Designs and improves machinery used for planting, harvesting, and other farm tasks." },
+      { title: "Irrigation Engineer", description: "Designs water management and irrigation systems tailored to specific crops and climates." },
+      { title: "Food Processing Engineer", description: "Designs the equipment and systems used to process, package, and store food after harvest." },
+      { title: "Precision Agriculture Engineer", description: "Develops sensor-based and data-driven technology to help farmers make more informed decisions." },
+    ],
+    advantages: [
+      "Work directly supports food production, which is an essential need everywhere",
+      "A genuinely interdisciplinary field that blends engineering with biology and environmental science",
+      "Steady, real-world impact — improvements in this field can meaningfully reduce waste or improve yields",
+    ],
+    challenges: [
+      "Equipment has to perform reliably in unpredictable outdoor conditions, which is harder to design for than a controlled environment",
+      "The field is smaller than many other engineering disciplines, which can mean fewer job openings overall",
+      "Some roles require regular travel to or time at rural farm sites, which isn't for everyone",
+    ],
+    thingsPeopleDislike: [
+      "A relatively small number of job openings compared to larger engineering fields",
+      "Outdoor field work can mean exposure to weather and less comfortable working conditions",
+      "Pay tends to be somewhat lower than many other engineering specialties",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects 7% employment growth for agricultural engineers from 2025 to 2035 — faster than the average for all occupations — with about 100 openings projected per year over that decade. That's one of the smaller annual opening counts among engineering fields on this site, since agricultural engineering is a comparatively small, specialized field. Research the current market and demand in your specific region and country before making decisions, since agricultural technology needs can vary a lot by local farming practices.",
+    beginnerActivities: [
+      "Research how a modern irrigation system decides when and how much to water crops",
+      "Design a simple drip irrigation system with household materials and test how evenly it waters an area",
+      "Research a real precision agriculture technology, like soil sensors or drone crop monitoring",
+    ],
+    selfReflectionQuestions: [
+      "Would I enjoy engineering work where the underlying 'materials' — soil, crops, weather — don't behave as predictably as steel or plastic?",
+      "Am I comfortable spending real time outdoors or at farm sites, not just in an office or lab?",
+      "Am I genuinely interested in agriculture and food systems, or mainly in the mechanical or technology side?",
+    ],
+  },
+  {
+    slug: "marine-engineering",
+    name: "Marine Engineering",
+    tagline: "Designing and maintaining ships, submarines, and other vessels built for the ocean.",
+    whatItIs:
+      "Marine engineering, often paired with naval architecture, focuses on designing, building, and maintaining ships, submarines, and other marine vessels and structures — the hull, propulsion systems, and onboard mechanical and electrical systems all need to work reliably in a demanding ocean environment.",
+    whatEngineersWorkOn:
+      "Marine engineers design and maintain the propulsion, power, and mechanical systems that keep ships and other vessels running, while naval architects (a closely related role, often studied together) focus more on the hull and overall vessel design. Marine engineers test how systems hold up under real ocean conditions — pressure, corrosion, and constant motion — and work to keep existing vessels operating safely and efficiently.",
+    realWorldExamples: [
+      "Ship hull design and structural analysis",
+      "Ship propulsion and power systems",
+      "Offshore platform design",
+      "Submarine and naval vessel systems",
+    ],
+    commonMisconceptions: [
+      "That marine engineers work only on naval or military ships — the field also covers commercial cargo ships, cruise ships, fishing vessels, offshore platforms, and recreational boats.",
+      "That it's the same as naval architecture — naval architects focus more on a vessel's hull, stability, and overall design; marine engineers focus more on the propulsion, power, and mechanical systems inside it. In practice, the two fields overlap and are often studied together.",
+      "That the job requires being at sea constantly — many marine engineers work in offices, shipyards, or design firms, with sea time being one part of some roles rather than the whole job.",
+    ],
+    mythsAndRealities: [
+      { myth: "Marine engineers work only on naval or military ships.", reality: "The field also covers commercial cargo ships, cruise ships, fishing vessels, offshore platforms, and recreational boats." },
+      { myth: "It's the same as naval architecture.", reality: "Naval architects focus more on a vessel's hull, stability, and overall design; marine engineers focus more on the propulsion, power, and mechanical systems inside it. In practice, the two fields overlap and are often studied together." },
+      { myth: "The job requires being at sea constantly.", reality: "Many marine engineers work in offices, shipyards, or design firms, with sea time being one part of some roles rather than the whole job." },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Chemistry (for understanding corrosion and materials)"],
+    helpfulSkills: [
+      "Strong mechanical and structural fundamentals, since vessels have to withstand extreme, constant physical stress",
+      "Comfort with corrosion, materials, and how they behave in a saltwater environment over time",
+      "Systems thinking, since a vessel's propulsion, power, and structural systems all have to work together reliably",
+      "Willingness to work at a shipyard or aboard a vessel, at least for some roles",
+    ],
+    typicalProjects: [
+      "Designing or evaluating a vessel's propulsion or power system",
+      "Analyzing how a ship's hull and structure hold up under real ocean stress and loads",
+      "Inspecting an existing vessel's mechanical systems for wear, corrosion, or needed repairs",
+      "Working on the design of an offshore platform or other marine structure",
+    ],
+    typicalWorkday:
+      "A mix of design and analysis work in an office, and time at a shipyard or aboard a vessel inspecting real systems and structures. The balance between office and hands-on site work varies a lot depending on the specific role and employer.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Shipyard inspection", detail: "Inspecting a vessel's propulsion system for wear or needed maintenance." },
+        { time: "9:30 AM", label: "Design review", detail: "Reviewing a design for a new propulsion system component against performance requirements." },
+        { time: "11:00 AM", label: "Structural analysis", detail: "Analyzing how a hull section holds up under a proposed new load." },
+        { time: "1:00 PM", label: "Team coordination", detail: "Meeting with a naval architect to coordinate how structural and mechanical systems fit together." },
+        { time: "2:30 PM", label: "Materials review", detail: "Evaluating how a material is holding up against corrosion after time in saltwater." },
+        { time: "4:00 PM", label: "Wrap-up", detail: "Documenting today's findings and updating the project plan." },
+      ],
+      reflectionQuestion: "Would you enjoy engineering work that has to hold up against one of the most physically demanding environments — constant saltwater, pressure, and motion?",
+    },
+    // mathIntensity: usefulSubjects leads with physics and calculus, matching mechanical engineering's framing.
+    // handsOnWork: dayInLife opens with shipyard inspection and centers real vessel systems throughout.
+    // regulatoryBurden: real safety standards are implied by vessel inspection work, but not framed as the "strictest" the way nuclear engineering is.
+    // marketUncertainty: howCompetitive cites steady, moderate 7% BLS growth without volatility language.
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: dayInLife mixes shipyard/vessel time with office design work, rated as a genuine mix rather than dominant.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: real design and analysis work appears without heavy regulatory-constraint language.
+    // teamwork: coordination with naval architects appears but isn't emphasized as constantly as fields rated High.
+    // seeingWorkRealLife: work centers on real, physical vessels and structures — tangible and directly observable.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "High",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$112,230",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how a ship stays afloat and try a simple buoyancy experiment using clay or foil in a container of water.",
+        tool: "Basic household materials — clay, aluminum foil, and a container of water.",
+        activity: "Look for a STEM club at school, or a maritime museum exhibit, if one is near you.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Build a simple boat hull out of household materials and test how much weight it can hold before sinking.",
+        tool: "Basic household materials — cardboard, foil, or plastic containers, and weights for testing.",
+        activity: "Look into a Science Olympiad team, which sometimes includes boat-design or naval-engineering-related events.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Research how modern ships are designed to resist corrosion in saltwater, and summarize the main strategies used.",
+        tool: "Reliable engineering sources, like a maritime engineering organization's public website.",
+        activity: "Look for a pre-college engineering program or summer program with a marine or naval engineering focus, if available.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Shipbuilding", "Commercial shipping", "Naval and defense", "Offshore energy", "Marine equipment manufacturing"],
+    relatedMajors: ["Marine Engineering", "Naval Architecture", "Mechanical Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Marine Systems Engineer", description: "Designs and maintains a vessel's propulsion, power, and mechanical systems." },
+      { title: "Naval Architect", description: "Focuses on a vessel's hull design, stability, and overall structural form, closely paired with marine engineering." },
+      { title: "Offshore Structures Engineer", description: "Designs platforms and structures built to operate safely in open ocean conditions." },
+      { title: "Marine Surveyor", description: "Inspects vessels and marine structures to assess their condition, safety, and compliance with standards." },
+    ],
+    advantages: [
+      "Highly specialized expertise with steady demand wherever ships and marine structures are built or maintained",
+      "Real, tangible engineering challenges — few environments are as physically demanding as the open ocean",
+      "Work can span a wide range of vessel types, from commercial shipping to defense to offshore energy",
+    ],
+    challenges: [
+      "The physical demands of the ocean environment — pressure, corrosion, constant motion — make for genuinely difficult engineering problems",
+      "Some roles require time at a shipyard or aboard a vessel, which isn't a fit for everyone",
+      "The field is more specialized and smaller than many other engineering disciplines, which can narrow where the work is available",
+    ],
+    thingsPeopleDislike: [
+      "Some roles require extended time away from home, at a shipyard or aboard a vessel",
+      "The field is concentrated in specific coastal or port regions, which can limit where you can work",
+      "Corrosion, wear, and maintenance issues are a constant, ongoing part of the work, not a one-time design problem",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects 7% employment growth for marine engineers and naval architects from 2025 to 2035 — faster than the average for all occupations — with about 500 openings projected per year over that decade. Demand is tied to shipbuilding, commercial shipping, and naval activity, which can vary by region and country — research the current market and shipbuilding industry in your specific area before making decisions.",
+    beginnerActivities: [
+      "Research how a ship stays afloat and try a simple buoyancy experiment with clay or foil",
+      "Build a simple boat hull from household materials and test how much weight it can hold",
+      "Research how modern ships resist corrosion in saltwater",
+    ],
+    selfReflectionQuestions: [
+      "Would I enjoy engineering work that has to hold up against extremely demanding physical conditions, like constant saltwater and pressure?",
+      "Am I comfortable with some roles requiring time at a shipyard or aboard a vessel, possibly away from home?",
+      "Am I drawn to marine engineering specifically, or more broadly to mechanical or structural engineering?",
+    ],
+  },
 ];

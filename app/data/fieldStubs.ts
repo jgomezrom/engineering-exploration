@@ -6,54 +6,6 @@ import { FieldStub } from "./types";
 // it is here.
 export const fieldStubs: FieldStub[] = [
   {
-    slug: "agricultural-engineering",
-    name: "Agricultural Engineering",
-    tagline: "Applying engineering to farming and food production — equipment, irrigation, and food systems.",
-    whatItIs:
-      "Agricultural engineering applies engineering principles to farming and food production — designing equipment, irrigation systems, and structures that make agriculture more efficient, and adapting technology to work with biological and environmental factors that don't behave like standard engineering materials.",
-    realWorldExamples: [
-      "Farm equipment and machinery design",
-      "Irrigation and water management systems",
-      "Food processing and storage systems",
-      "Precision agriculture technology, like sensor-based crop monitoring",
-    ],
-    relatedMajors: ["Agricultural Engineering", "Mechanical Engineering (some overlap)", "Environmental Engineering (some overlap)"],
-    relatedField: "environmental-engineering",
-    salary: {
-      medianAnnual: "$98,590",
-      period: "May 2025",
-      region: "United States (national median)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/agricultural-engineers.htm",
-      note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
-      verifiedDate: "September 2026",
-    },
-  },
-  {
-    slug: "marine-engineering",
-    name: "Marine Engineering",
-    tagline: "Designing and maintaining ships, submarines, and other vessels built for the ocean.",
-    whatItIs:
-      "Marine engineering, often paired with naval architecture, focuses on designing, building, and maintaining ships, submarines, and other marine vessels and structures — the hull, propulsion systems, and onboard mechanical and electrical systems all need to work reliably in a demanding ocean environment.",
-    realWorldExamples: [
-      "Ship hull design and structural analysis",
-      "Ship propulsion and power systems",
-      "Offshore platform design",
-      "Submarine and naval vessel systems",
-    ],
-    relatedMajors: ["Marine Engineering", "Naval Architecture", "Mechanical Engineering (some overlap)"],
-    relatedField: "mechanical-engineering",
-    salary: {
-      medianAnnual: "$112,230",
-      period: "May 2025",
-      region: "United States (national median)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm",
-      note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
-      verifiedDate: "September 2026",
-    },
-  },
-  {
     slug: "architectural-engineering",
     name: "Architectural Engineering",
     tagline: "Designing the structural, mechanical, and electrical systems that make a building actually work.",

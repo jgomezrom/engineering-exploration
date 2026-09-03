@@ -6,54 +6,6 @@ import { FieldStub } from "./types";
 // (with a small notice) for any not yet translated.
 export const fieldStubsEs: FieldStub[] = [
   {
-    slug: "agricultural-engineering",
-    name: "Ingeniería Agrícola",
-    tagline: "Aplicar la ingeniería a la agricultura y la producción de alimentos — equipo, riego, y sistemas alimentarios.",
-    whatItIs:
-      "La ingeniería agrícola aplica principios de ingeniería a la agricultura y la producción de alimentos — diseñando equipo, sistemas de riego, y estructuras que hacen la agricultura más eficiente, y adaptando la tecnología para trabajar con factores biológicos y ambientales que no se comportan como los materiales de ingeniería estándar.",
-    realWorldExamples: [
-      "Diseño de equipo y maquinaria agrícola",
-      "Sistemas de riego y gestión del agua",
-      "Sistemas de procesamiento y almacenamiento de alimentos",
-      "Tecnología de agricultura de precisión, como monitoreo de cultivos basado en sensores",
-    ],
-    relatedMajors: ["Ingeniería Agrícola", "Ingeniería Mecánica (con cierta superposición)", "Ingeniería Ambiental (con cierta superposición)"],
-    relatedField: "environmental-engineering",
-    salary: {
-      medianAnnual: "$98,590",
-      period: "Mayo 2025",
-      region: "Estados Unidos (mediana nacional)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/agricultural-engineers.htm",
-      note: "Mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
-      verifiedDate: "Septiembre 2026",
-    },
-  },
-  {
-    slug: "marine-engineering",
-    name: "Ingeniería Marina",
-    tagline: "Diseñar y mantener barcos, submarinos, y otras embarcaciones construidas para el océano.",
-    whatItIs:
-      "La ingeniería marina, a menudo combinada con la arquitectura naval, se enfoca en diseñar, construir, y mantener barcos, submarinos, y otras embarcaciones y estructuras marinas — el casco, los sistemas de propulsión, y los sistemas mecánicos y eléctricos a bordo todos tienen que funcionar de forma confiable en un entorno oceánico exigente.",
-    realWorldExamples: [
-      "Diseño de cascos y análisis estructural de barcos",
-      "Sistemas de propulsión y potencia de barcos",
-      "Diseño de plataformas marinas",
-      "Sistemas de submarinos y embarcaciones navales",
-    ],
-    relatedMajors: ["Ingeniería Marina", "Arquitectura Naval", "Ingeniería Mecánica (con cierta superposición)"],
-    relatedField: "mechanical-engineering",
-    salary: {
-      medianAnnual: "$112,230",
-      period: "Mayo 2025",
-      region: "Estados Unidos (mediana nacional)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm",
-      note: "Mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
-      verifiedDate: "Septiembre 2026",
-    },
-  },
-  {
     slug: "architectural-engineering",
     name: "Ingeniería Arquitectónica",
     tagline: "Diseñar los sistemas estructurales, mecánicos y eléctricos que hacen que un edificio realmente funcione.",
