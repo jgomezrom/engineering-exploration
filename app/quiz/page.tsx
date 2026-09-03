@@ -243,7 +243,7 @@ export default function QuizPage() {
                     <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
                       {field.name}
                     </h2>
-                    <span className="flex-shrink-0 font-mono text-sm text-primary">
+                    <span className="flex-shrink-0 rounded-full bg-accent/10 px-3 py-1 font-mono text-sm font-semibold text-accent">
                       {result.percentage}% match
                     </span>
                   </div>

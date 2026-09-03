@@ -5,6 +5,7 @@ import Card from "./components/Card";
 import FieldIcon from "./components/FieldIcon";
 import CuriosityExplorer from "./components/CuriosityExplorer";
 import DidYouKnowTicker from "./components/DidYouKnowTicker";
+import FadeIn from "./components/FadeIn";
 import { fields } from "./data/fields";
 import { challenges } from "./data/challenges";
 import { resourceLinks } from "./data/resourceLinks";
@@ -77,66 +78,72 @@ export default function Home() {
       </div>
 
       <div className="mt-12 grid w-full max-w-4xl items-center gap-6 sm:grid-cols-[1fr_auto_1fr_auto_1fr] lg:max-w-5xl lg:gap-4 xl:max-w-6xl 2xl:max-w-7xl">
-  <Card>
-    <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">01</span>
-    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
-      <circle cx="20" cy="20" r="16" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M25 15l-3 8-8 3 3-8z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    </svg>
-    <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
-      Explore Fields
-    </h2>
-    <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-      Browse {fields.length} engineering fields and see what each one is really like.
-    </p>
-    <Link href="/explore" className="text-sm font-medium text-primary hover:underline">
-      Start exploring →
-    </Link>
-  </Card>
+  <FadeIn delay={0}>
+    <Card>
+      <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">01</span>
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
+        <circle cx="20" cy="20" r="16" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M25 15l-3 8-8 3 3-8z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      </svg>
+      <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+        Explore Fields
+      </h2>
+      <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+        Browse {fields.length} engineering fields and see what each one is really like.
+      </p>
+      <Link href="/explore" className="text-sm font-medium text-primary hover:underline">
+        Start exploring →
+      </Link>
+    </Card>
+  </FadeIn>
 
   <JourneyArrow />
 
-  <Card>
-    <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">02</span>
-    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
-      <rect x="10" y="8" width="20" height="24" rx="2" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M14 16h12M14 20h12M14 24h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-    <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
-      Take the Quiz
-    </h2>
-    <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-      Answer a few questions about what you enjoy, and get fields worth exploring.
-    </p>
-    <Link href="/quiz" className="text-sm font-medium text-primary hover:underline">
-      Take the quiz →
-    </Link>
-  </Card>
+  <FadeIn delay={100}>
+    <Card>
+      <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">02</span>
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
+        <rect x="10" y="8" width="20" height="24" rx="2" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M14 16h12M14 20h12M14 24h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+      <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+        Take the Quiz
+      </h2>
+      <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+        Answer a few questions about what you enjoy, and get fields worth exploring.
+      </p>
+      <Link href="/quiz" className="text-sm font-medium text-primary hover:underline">
+        Take the quiz →
+      </Link>
+    </Card>
+  </FadeIn>
 
   <JourneyArrow />
 
-  <Card>
-    <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">03</span>
-    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
-      <path d="M27 8a6 6 0 0 0-7.75 7.75L9 26l5 5 10.25-10.25A6 6 0 0 0 32 13l-4 4-3-3 4-4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    </svg>
-    <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
-      Try a Challenge
-    </h2>
-    <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-      Test out small, hands-on engineering activities you can do at home.
-    </p>
-    <Link href="/challenges" className="text-sm font-medium text-primary hover:underline">
-      See challenges →
-    </Link>
-  </Card>
+  <FadeIn delay={200}>
+    <Card>
+      <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">03</span>
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="mt-2 h-8 w-8 text-primary">
+        <path d="M27 8a6 6 0 0 0-7.75 7.75L9 26l5 5 10.25-10.25A6 6 0 0 0 32 13l-4 4-3-3 4-4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      </svg>
+      <h2 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
+        Try a Challenge
+      </h2>
+      <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+        Test out small, hands-on engineering activities you can do at home.
+      </p>
+      <Link href="/challenges" className="text-sm font-medium text-primary hover:underline">
+        See challenges →
+      </Link>
+    </Card>
+  </FadeIn>
 </div>
 
-      <div className="mt-20 w-full max-w-2xl text-left">
+      <FadeIn className="mt-20 w-full max-w-2xl text-left">
         <DidYouKnowTicker />
-      </div>
+      </FadeIn>
 
-      <div className="mt-20 w-full max-w-4xl border-t border-neutral-900/10 pt-16 text-left lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl dark:border-white/10">
+      <FadeIn className="mt-20 w-full max-w-4xl border-t border-neutral-900/10 pt-16 text-left lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl dark:border-white/10">
         <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
           Want to go deeper?
         </span>
@@ -163,9 +170,9 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </div>
+      </FadeIn>
 
-      <div className="mt-20 w-full max-w-3xl border-t border-neutral-900/10 pt-16 text-center dark:border-white/10">
+      <FadeIn className="mt-20 w-full max-w-3xl border-t border-neutral-900/10 pt-16 text-center dark:border-white/10">
         <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
           Not sure where to start?
         </span>
@@ -179,7 +186,7 @@ export default function Home() {
         <div className="mt-8">
           <CuriosityExplorer />
         </div>
-      </div>
+      </FadeIn>
     </main>
   );
 }
