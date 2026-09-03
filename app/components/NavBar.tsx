@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
   { href: "/curious", label: "Curious" },
@@ -22,29 +23,33 @@ export default function NavBar() {
           Engineering Exploration
         </Link>
 
-        <div className="hidden items-center gap-5 text-sm font-medium text-neutral-600 dark:text-neutral-400 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-primary">
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-5 text-sm font-medium text-neutral-600 dark:text-neutral-400 md:flex">
+            {NAV_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:text-primary">
+                {link.label}
+              </Link>
+            ))}
+          </div>
 
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-          className="flex h-9 w-9 items-center justify-center text-neutral-900 md:hidden dark:text-white"
-        >
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-6 w-6">
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            )}
-          </svg>
-        </button>
+          <ThemeToggle />
+
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+            className="flex h-9 w-9 items-center justify-center text-neutral-900 md:hidden dark:text-white"
+          >
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-6 w-6">
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {open && (

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Lets every existing dark: utility respond to a manual .dark/.light class on
+   <html> (set by ThemeToggle), not just the OS-level media query below. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #fafaf8;
   --foreground: #171717;
@@ -22,10 +26,18 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :not(.light) lets an explicit "switch to light" choice still win even when
+     the OS itself prefers dark. */
+  :root:not(.light) {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+/* An explicit "switch to dark" choice wins regardless of OS preference. */
+:root.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
