@@ -1664,4 +1664,277 @@ export const fields: EngineeringField[] = [
       "Am I genuinely interested in robotics specifically, or mainly drawn to one of its underlying disciplines, like mechanical design or programming?",
     ],
   },
+  {
+    slug: "nuclear-engineering",
+    name: "Nuclear Engineering",
+    tagline: "Designing and monitoring the systems that generate and safely manage nuclear energy.",
+    whatItIs:
+      "Nuclear engineering focuses on the safe design, operation, and monitoring of systems that use nuclear energy — from power plants to medical and research applications. It combines physics, safety engineering, and strict regulatory compliance, since the consequences of an error are unusually serious.",
+    whatEngineersWorkOn:
+      "Nuclear engineers design the systems and safety procedures for producing and using nuclear energy, monitor reactor operations to make sure everything runs within strict safety limits, write and review procedures for handling and disposing of radioactive materials, and investigate ways to make nuclear processes safer or more efficient. A lot of the job involves working within a dense web of federal regulations, since nuclear safety oversight is some of the strictest in any engineering field.",
+    realWorldExamples: [
+      "Nuclear power plant design and safety systems",
+      "Nuclear medicine and radiation therapy equipment",
+      "Nuclear waste storage and disposal systems",
+      "Naval nuclear propulsion systems",
+    ],
+    commonMisconceptions: [
+      "That nuclear engineers work directly with weapons — most nuclear engineers work in civilian power generation, medicine, or research, not defense.",
+      "That the job is mostly about physics theory — most of the actual work is applied: monitoring systems, writing safety procedures, and making sure real equipment operates within strict limits.",
+      "That it's a shrinking field because few new plants are being built — a lot of the work is maintaining, monitoring, and eventually decommissioning the plants that already exist, plus growing applications in medicine and research.",
+    ],
+    mythsAndRealities: [
+      { myth: "Nuclear engineers work directly with weapons.", reality: "Most nuclear engineers work in civilian power generation, medicine, or research, not defense." },
+      { myth: "The job is mostly about physics theory.", reality: "Most of the actual work is applied: monitoring systems, writing safety procedures, and making sure real equipment operates within strict limits." },
+      { myth: "It's a shrinking field because few new plants are being built.", reality: "A lot of the work is maintaining, monitoring, and eventually decommissioning the plants that already exist, plus growing applications in medicine and research." },
+    ],
+    usefulSubjects: ["Physics (especially nuclear and modern physics, if offered)", "Calculus", "Chemistry"],
+    helpfulSkills: [
+      "Comfort with strict rules and procedures, since nuclear work is governed by some of the most detailed safety regulations in any engineering field",
+      "Careful, methodical attention to detail — a small oversight in this field can have serious consequences",
+      "Strong math and physics fundamentals, since reactor behavior is grounded in nuclear physics",
+      "Clear written communication, since safety procedures and regulatory documentation have to be exact and unambiguous",
+    ],
+    typicalProjects: [
+      "Monitoring reactor performance data to confirm it's operating within safety limits",
+      "Writing or reviewing a procedure for safely handling or storing radioactive material",
+      "Investigating a way to make an existing nuclear process more efficient without compromising safety",
+      "Working with a team to prepare for a regulatory inspection or audit",
+    ],
+    typicalWorkday:
+      "A mix of monitoring plant or system data, reviewing and writing safety documentation, and coordinating with a team on regulatory compliance. Time is split between an office or control room and, depending on the role, in-person time at the physical facility.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Shift briefing", detail: "Reviewing overnight reactor performance data and any notes from the previous shift." },
+        { time: "9:30 AM", label: "Systems check", detail: "Monitoring live reactor data to confirm all systems are within normal operating limits." },
+        { time: "11:00 AM", label: "Safety documentation", detail: "Reviewing a procedure for handling radioactive material to make sure it meets current regulations." },
+        { time: "1:00 PM", label: "Regulatory coordination", detail: "Meeting with a compliance team to prepare documentation for an upcoming inspection." },
+        { time: "2:30 PM", label: "Problem-solving", detail: "Investigating a minor irregularity in a system reading to rule out any underlying issue." },
+        { time: "4:00 PM", label: "Wrap-up", detail: "Logging today's findings and briefing the incoming shift." },
+      ],
+      reflectionQuestion: "Would you be comfortable with a job where following exact procedures matters as much as technical skill?",
+    },
+    // mathIntensity: usefulSubjects leads with nuclear/modern physics and calculus.
+    // handsOnWork: typicalWorkday is monitoring- and documentation-centered, with some in-person facility time — less physical building than mechanical or aerospace.
+    // regulatoryBurden: whatItIs and whatEngineersWorkOn both explicitly call this "some of the strictest" regulation of any engineering field.
+    // marketUncertainty: howCompetitive cites essentially flat (0%) BLS growth — a real, if unusual, kind of uncertainty rather than the volatility other fields show.
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: work is framed as office/control-room based with facility time, not outdoor fieldwork.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: heavy regulatory and procedural framing throughout constrains open-ended design, similar to civil or chemical engineering.
+    // teamwork: dayInLife includes shift briefings and regulatory coordination, but less repeated multi-stakeholder emphasis than fields rated High.
+    // seeingWorkRealLife: dayInLife centers on monitoring live reactor data and real facility operations — tangible, though mediated through instrumentation.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$133,970",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/nuclear-engineers.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how a nuclear power plant generates electricity and sketch a simple diagram of the process.",
+        tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
+        activity: "Look for a STEM or physics club at school, or a museum exhibit on energy or nuclear science.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Research how nuclear medicine is used to diagnose or treat illness, and summarize how it's different from a nuclear power plant.",
+        tool: "No special tools needed yet — reliable science sources.",
+        activity: "Look into a Science Olympiad team, which sometimes covers energy or nuclear-related events.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Research the safety systems used in modern nuclear reactor designs and what changed after a historical incident like Three Mile Island or Fukushima.",
+        tool: "No special tools needed yet — reliable science and engineering sources.",
+        activity: "Look for a pre-college engineering program or a summer program with an energy or nuclear focus, if available.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Nuclear power generation", "Nuclear medicine and healthcare", "National laboratories and research", "Naval and defense", "Nuclear waste management"],
+    relatedMajors: ["Nuclear Engineering", "Mechanical Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Reactor Engineer", description: "Monitors and optimizes the operation of a nuclear reactor to keep it running safely and efficiently." },
+      { title: "Nuclear Safety Engineer", description: "Focuses specifically on the safety systems and procedures that prevent and respond to potential incidents." },
+      { title: "Radiation Protection Engineer", description: "Designs and monitors systems that protect workers and the public from radiation exposure." },
+      { title: "Nuclear Fuel Engineer", description: "Works on the design, performance, and management of the fuel used in a nuclear reactor." },
+    ],
+    advantages: [
+      "Strong median pay relative to many other engineering fields",
+      "Highly specialized expertise that's in consistent demand wherever nuclear facilities operate",
+      "Work that has a direct, meaningful connection to a country's energy infrastructure or medical care",
+    ],
+    challenges: [
+      "Employment growth is essentially flat — the U.S. Bureau of Labor Statistics projects almost no change in the number of nuclear engineering jobs through 2035",
+      "Heavy regulatory and procedural requirements shape almost every part of the work, leaving less room for open-ended design",
+      "Public perception of nuclear energy can be a source of pressure or scrutiny, regardless of an individual engineer's actual work",
+    ],
+    thingsPeopleDislike: [
+      "A significant amount of documentation and procedural review, rather than hands-on design work",
+      "A limited number of new nuclear facilities being built in some countries, which can narrow where the work is available",
+      "Working around radioactive materials requires constant attention to safety protocol, which some find stressful over time",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects essentially no change (0%) in employment for nuclear engineers from 2025 to 2035 — among the flattest projections of any engineering field on this site — with about 800 openings projected per year over that decade, mostly from workers retiring or changing careers rather than from new positions being created. That doesn't mean the field is shrinking, since existing nuclear plants and facilities need ongoing staffing, but it does mean the number of nuclear engineering positions isn't expected to grow. Demand can also shift with a country's energy policy decisions — research the current market and any planned nuclear projects in your specific region before making decisions.",
+    beginnerActivities: [
+      "Research how a nuclear power plant generates electricity and sketch out the process",
+      "Research how nuclear medicine is used in healthcare and how it differs from a power plant",
+      "Research the safety systems used in modern reactor designs",
+    ],
+    selfReflectionQuestions: [
+      "Am I comfortable with a field where following exact procedures matters as much as raw technical skill?",
+      "Does knowing the number of nuclear engineering jobs is expected to stay flat, not grow, change how I feel about the field?",
+      "Am I interested in nuclear energy specifically, or more broadly in energy systems in general?",
+    ],
+  },
+  {
+    slug: "petroleum-engineering",
+    name: "Petroleum Engineering",
+    tagline: "Designing how oil and natural gas are extracted from the ground safely and efficiently.",
+    whatItIs:
+      "Petroleum engineering focuses on how to extract oil and natural gas from the ground safely and efficiently — designing extraction methods, drilling plans, and production systems. It's a specialized field tied closely to the energy industry's own economic cycles.",
+    whatEngineersWorkOn:
+      "Petroleum engineers design and evaluate methods for extracting oil and natural gas from underground reservoirs, analyze geological data to estimate how much a site can produce, design drilling plans and production equipment, and work to improve extraction efficiency while managing safety and environmental risk. A lot of the work involves close collaboration with geologists and geoscientists, since a reservoir's underlying geology drives almost every engineering decision.",
+    realWorldExamples: [
+      "Oil and gas well design and drilling plans",
+      "Extraction equipment and production systems",
+      "Reservoir analysis to estimate how much oil or gas a site can produce",
+    ],
+    commonMisconceptions: [
+      "That petroleum engineers spend their careers physically working on drilling rigs — many roles are based in an office analyzing data and planning, with periodic site visits rather than full-time fieldwork.",
+      "That it's the same job as a geologist — geologists study and interpret the rock and fluid formations underground; petroleum engineers use that information to design how to safely and efficiently extract resources from them.",
+      "That the field is disappearing entirely — global demand growth for oil and gas has slowed, but the field isn't vanishing, and pay remains among the highest of any engineering discipline.",
+    ],
+    mythsAndRealities: [
+      { myth: "Petroleum engineers spend their careers physically working on drilling rigs.", reality: "Many roles are based in an office analyzing data and planning, with periodic site visits rather than full-time fieldwork." },
+      { myth: "It's the same job as a geologist.", reality: "Geologists study and interpret the rock and fluid formations underground; petroleum engineers use that information to design how to safely and efficiently extract resources from them." },
+      { myth: "The field is disappearing entirely.", reality: "Global demand growth for oil and gas has slowed, but the field isn't vanishing, and pay remains among the highest of any engineering discipline." },
+    ],
+    usefulSubjects: ["Physics", "Chemistry", "Calculus", "Earth science or geology, if available"],
+    helpfulSkills: [
+      "Comfort interpreting geological and reservoir data to make engineering decisions",
+      "Strong math and physics fundamentals for modeling fluid flow and reservoir behavior",
+      "Risk assessment — weighing safety, cost, and environmental factors when planning extraction",
+      "Willingness to travel to or work at remote field sites, at least periodically",
+    ],
+    typicalProjects: [
+      "Analyzing reservoir data to estimate how much oil or gas a site can produce",
+      "Designing a drilling plan for a new well",
+      "Evaluating ways to improve extraction efficiency from an existing well",
+      "Assessing the safety and environmental risk of a proposed extraction method",
+    ],
+    typicalWorkday:
+      "A mix of office-based data analysis and modeling, and — depending on the role — time at a field site reviewing operations in person. Collaboration with geologists and other engineers is a constant part of the job, since reservoir decisions require input from multiple disciplines.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Data review", detail: "Reviewing overnight production data from an active well." },
+        { time: "9:30 AM", label: "Reservoir analysis", detail: "Analyzing geological data with a geologist to estimate a new site's production potential." },
+        { time: "11:30 AM", label: "Drilling plan", detail: "Working on a drilling plan for a proposed well, factoring in depth, equipment, and safety requirements." },
+        { time: "1:30 PM", label: "Team coordination", detail: "Meeting with field operations staff to review how an active extraction site is performing." },
+        { time: "3:00 PM", label: "Risk assessment", detail: "Evaluating the safety and environmental risk of a proposed change to an extraction method." },
+        { time: "4:30 PM", label: "Wrap-up", detail: "Documenting today's analysis and updating the project plan." },
+      ],
+      reflectionQuestion: "Would you be comfortable in a field where pay is strong but tied closely to the ups and downs of global energy markets?",
+    },
+    // mathIntensity: usefulSubjects leads with physics, chemistry, and calculus for reservoir and fluid modeling.
+    // handsOnWork: typicalWorkday frames it as office analysis plus periodic field site time, not full-time hands-on work.
+    // regulatoryBurden: safety and environmental risk assessment appear throughout, but without the "strictest regulation" framing nuclear or aerospace carry.
+    // marketUncertainty: whatItIs explicitly says the field is "tied closely to the energy industry's own economic cycles" — the strongest volatility signal of any field on this site.
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: dayInLife and typicalWorkday describe periodic field site visits alongside office-based work.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: real engineering design and modeling work appears without heavy regulatory-constraint language, similar to electrical or mechanical engineering.
+    // teamwork: whatEngineersWorkOn and dayInLife both explicitly emphasize close, constant collaboration with geologists and other engineers.
+    // seeingWorkRealLife: work centers on real wells and production data, though often mediated through data analysis rather than direct physical building.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "High",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$144,910",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/petroleum-engineers.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region. This field is closely tied to oil and gas industry cycles, which affects both pay and job stability.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how oil and natural gas are formed underground and how engineers find them.",
+        tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
+        activity: "Look for a STEM or earth science club at school.",
+        relatedField: "chemical-engineering",
+      },
+      "13-15": {
+        project: "Research how a drilling rig works and sketch the basic steps of drilling a well.",
+        tool: "No special tools needed yet — reliable science sources.",
+        activity: "Look into a Science Olympiad team, which sometimes covers earth science topics.",
+        relatedField: "chemical-engineering",
+      },
+      "16-18": {
+        project: "Research a real oil or gas field and estimate, using public data, how extraction there has changed over time.",
+        tool: "Public energy data sources, like a national energy information agency's public database, if available in your country.",
+        activity: "Look for a pre-college engineering program with an energy focus, if available.",
+        relatedField: "chemical-engineering",
+      },
+    },
+    industries: ["Oil and gas extraction", "Energy consulting", "Offshore drilling", "Reservoir engineering firms", "Government energy agencies"],
+    relatedMajors: ["Petroleum Engineering", "Chemical Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Drilling Engineer", description: "Designs and oversees the plans for safely and efficiently drilling a well." },
+      { title: "Reservoir Engineer", description: "Analyzes underground reservoir data to estimate production potential and plan extraction strategy." },
+      { title: "Production Engineer", description: "Focuses on optimizing how efficiently an existing well or field produces oil or gas." },
+      { title: "Completions Engineer", description: "Designs the final steps that prepare a drilled well for production." },
+    ],
+    advantages: [
+      "Among the highest median salaries of any engineering field on this site",
+      "Work directly shapes how a major global energy resource is extracted and used",
+      "Strong technical variety — geology, fluid mechanics, and equipment design all come into play",
+    ],
+    challenges: [
+      "Pay and job stability are closely tied to global oil and gas prices, which can shift quickly",
+      "Some roles require travel to or extended time at remote field sites",
+      "The field faces real long-term questions about the pace of the global transition away from fossil fuels",
+    ],
+    thingsPeopleDislike: [
+      "Job security can feel less predictable than in fields less tied to commodity prices",
+      "Remote or physically demanding field site conditions in some roles",
+      "Public perception of the oil and gas industry can be a source of added scrutiny",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects 2% employment growth for petroleum engineers from 2025 to 2035 — slower than the average for all occupations — with about 1,000 openings projected per year over that decade, mostly from workers retiring or changing careers. Pay is among the highest of any engineering field, but both hiring and compensation are closely tied to global oil and gas prices, which can shift substantially from year to year. Research current market conditions and hiring trends in your specific region and industry sector before making decisions.",
+    beginnerActivities: [
+      "Research how oil and natural gas are formed underground and how they're located",
+      "Research how a drilling rig works and sketch the basic steps of drilling a well",
+      "Look into how a real oil or gas field's production has changed over time using public data",
+    ],
+    selfReflectionQuestions: [
+      "Am I comfortable with a field where pay and job stability are tied closely to global energy prices?",
+      "Am I interested in earth science and geology as much as traditional engineering?",
+      "Would I be comfortable traveling to or working at a remote field site, at least periodically?",
+    ],
+  },
 ];

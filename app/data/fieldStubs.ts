@@ -6,53 +6,6 @@ import { FieldStub } from "./types";
 // it is here.
 export const fieldStubs: FieldStub[] = [
   {
-    slug: "nuclear-engineering",
-    name: "Nuclear Engineering",
-    tagline: "Designing and monitoring the systems that generate and safely manage nuclear energy.",
-    whatItIs:
-      "Nuclear engineering focuses on the safe design, operation, and monitoring of systems that use nuclear energy — from power plants to medical and research applications. It combines physics, safety engineering, and strict regulatory compliance, since the consequences of an error are unusually serious.",
-    realWorldExamples: [
-      "Nuclear power plant design and safety systems",
-      "Nuclear medicine and radiation therapy equipment",
-      "Nuclear waste storage and disposal systems",
-      "Naval nuclear propulsion systems",
-    ],
-    relatedMajors: ["Nuclear Engineering", "Mechanical Engineering (some overlap)"],
-    relatedField: "mechanical-engineering",
-    salary: {
-      medianAnnual: "$133,970",
-      period: "May 2025",
-      region: "United States (national median)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/nuclear-engineers.htm",
-      note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
-      verifiedDate: "September 2026",
-    },
-  },
-  {
-    slug: "petroleum-engineering",
-    name: "Petroleum Engineering",
-    tagline: "Designing how oil and natural gas are extracted from the ground safely and efficiently.",
-    whatItIs:
-      "Petroleum engineering focuses on how to extract oil and natural gas from the ground safely and efficiently — designing extraction methods, drilling plans, and production systems. It's a specialized field tied closely to the energy industry's own economic cycles.",
-    realWorldExamples: [
-      "Oil and gas well design and drilling plans",
-      "Extraction equipment and production systems",
-      "Reservoir analysis to estimate how much oil or gas a site can produce",
-    ],
-    relatedMajors: ["Petroleum Engineering", "Chemical Engineering (some overlap)"],
-    relatedField: "chemical-engineering",
-    salary: {
-      medianAnnual: "$144,910",
-      period: "May 2025",
-      region: "United States (national median)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/petroleum-engineers.htm",
-      note: "U.S. national median across all experience levels — not a starting salary, and not adjusted for your region. This field is closely tied to oil and gas industry cycles, which affects both pay and job stability.",
-      verifiedDate: "September 2026",
-    },
-  },
-  {
     slug: "agricultural-engineering",
     name: "Agricultural Engineering",
     tagline: "Applying engineering to farming and food production — equipment, irrigation, and food systems.",

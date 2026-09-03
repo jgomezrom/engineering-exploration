@@ -15,6 +15,8 @@ const DIAGRAM_LABELS = {
     processFlow: "process flow",
     crystalLattice: "crystal lattice",
     articulatedArm: "articulated arm",
+    nuclearPlant: "nuclear plant",
+    drillingRig: "drilling rig",
   },
   es: {
     airfoilSection: "sección de perfil alar",
@@ -22,6 +24,8 @@ const DIAGRAM_LABELS = {
     processFlow: "flujo del proceso",
     crystalLattice: "red cristalina",
     articulatedArm: "brazo articulado",
+    nuclearPlant: "planta nuclear",
+    drillingRig: "torre de perforación",
   },
 };
 
@@ -241,6 +245,31 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           <line x1="40" y1="160" x2="260" y2="160" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           <text x="150" y="172" textAnchor="middle" className="fill-current font-mono text-[9px]">
             {labels.articulatedArm}
+          </text>
+        </svg>
+      );
+
+    case "nuclear-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <path d="M100 130V72A42 32 0 0 1 184 72V130" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M210 130L224 58H240L254 130Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.nuclearPlant}
+          </text>
+        </svg>
+      );
+
+    case "petroleum-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <path d="M110 130L150 45L190 130" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
+          <path d="M122 105h56M131 85h38M141 65h18" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="95" y="130" width="110" height="10" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="30" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.drillingRig}
           </text>
         </svg>
       );

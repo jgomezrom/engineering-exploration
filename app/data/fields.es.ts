@@ -1573,4 +1573,259 @@ export const fieldsEs: EngineeringField[] = [
       "¿Me interesa genuinamente la robótica en sí, o principalmente me atrae una de sus disciplinas subyacentes, como el diseño mecánico o la programación?",
     ],
   },
+  {
+    slug: "nuclear-engineering",
+    name: "Ingeniería Nuclear",
+    tagline: "Diseñar y monitorear los sistemas que generan y gestionan la energía nuclear de forma segura.",
+    whatItIs:
+      "La ingeniería nuclear se enfoca en el diseño, la operación y el monitoreo seguros de los sistemas que usan energía nuclear — desde plantas de energía hasta aplicaciones médicas y de investigación. Combina física, ingeniería de seguridad, y un cumplimiento regulatorio estricto, ya que las consecuencias de un error son inusualmente graves.",
+    whatEngineersWorkOn:
+      "Los ingenieros nucleares diseñan los sistemas y procedimientos de seguridad para producir y usar energía nuclear, monitorean la operación de reactores para asegurarse de que todo funcione dentro de límites de seguridad estrictos, escriben y revisan procedimientos para el manejo y la disposición de materiales radiactivos, e investigan formas de hacer los procesos nucleares más seguros o eficientes. Gran parte del trabajo implica operar dentro de una densa red de regulaciones federales, ya que la supervisión de seguridad nuclear es de las más estrictas en cualquier campo de la ingeniería.",
+    realWorldExamples: [
+      "Diseño de plantas de energía nuclear y sus sistemas de seguridad",
+      "Equipo de medicina nuclear y radioterapia",
+      "Sistemas de almacenamiento y disposición de residuos nucleares",
+      "Sistemas de propulsión nuclear naval",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros nucleares trabajan directamente con armas — la mayoría de los ingenieros nucleares trabajan en generación de energía civil, medicina, o investigación, no en defensa.",
+      "Que el trabajo se trata mayormente de teoría de física — la mayor parte del trabajo real es aplicado: monitorear sistemas, escribir procedimientos de seguridad, y asegurarse de que el equipo real opere dentro de límites estrictos.",
+      "Que es un campo que se está reduciendo porque se construyen pocas plantas nuevas — gran parte del trabajo es mantener, monitorear, y eventualmente desmantelar las plantas que ya existen, además de las aplicaciones crecientes en medicina e investigación.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros nucleares trabajan directamente con armas.", reality: "La mayoría de los ingenieros nucleares trabajan en generación de energía civil, medicina, o investigación, no en defensa." },
+      { myth: "El trabajo se trata mayormente de teoría de física.", reality: "La mayor parte del trabajo real es aplicado: monitorear sistemas, escribir procedimientos de seguridad, y asegurarse de que el equipo real opere dentro de límites estrictos." },
+      { myth: "Es un campo que se está reduciendo porque se construyen pocas plantas nuevas.", reality: "Gran parte del trabajo es mantener, monitorear, y eventualmente desmantelar las plantas que ya existen, además de las aplicaciones crecientes en medicina e investigación." },
+    ],
+    usefulSubjects: ["Física (especialmente física nuclear y moderna, si está disponible)", "Cálculo", "Química"],
+    helpfulSkills: [
+      "Comodidad con reglas y procedimientos estrictos, ya que el trabajo nuclear está regido por algunas de las regulaciones de seguridad más detalladas de cualquier campo de ingeniería",
+      "Atención cuidadosa y metódica al detalle — un pequeño descuido en este campo puede tener consecuencias serias",
+      "Bases sólidas de matemáticas y física, ya que el comportamiento de un reactor está fundamentado en física nuclear",
+      "Comunicación escrita clara, ya que los procedimientos de seguridad y la documentación regulatoria tienen que ser exactos y sin ambigüedad",
+    ],
+    typicalProjects: [
+      "Monitorear datos de desempeño de un reactor para confirmar que está operando dentro de los límites de seguridad",
+      "Escribir o revisar un procedimiento para manejar o almacenar material radiactivo de forma segura",
+      "Investigar una forma de hacer un proceso nuclear existente más eficiente sin comprometer la seguridad",
+      "Trabajar con un equipo para prepararse para una inspección o auditoría regulatoria",
+    ],
+    typicalWorkday:
+      "Una mezcla de monitorear datos de la planta o el sistema, revisar y escribir documentación de seguridad, y coordinar con un equipo el cumplimiento regulatorio. El tiempo se divide entre una oficina o sala de control y, dependiendo del puesto, tiempo presencial en la instalación física.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Reunión de turno", detail: "Revisar los datos de desempeño del reactor durante la noche y cualquier nota del turno anterior." },
+        { time: "9:30 AM", label: "Revisión de sistemas", detail: "Monitorear datos en vivo del reactor para confirmar que todos los sistemas están dentro de los límites normales de operación." },
+        { time: "11:00 AM", label: "Documentación de seguridad", detail: "Revisar un procedimiento para el manejo de material radiactivo para asegurarse de que cumple con las regulaciones actuales." },
+        { time: "1:00 PM", label: "Coordinación regulatoria", detail: "Reunirse con un equipo de cumplimiento para preparar documentación para una inspección próxima." },
+        { time: "2:30 PM", label: "Solución de problemas", detail: "Investigar una irregularidad menor en una lectura del sistema para descartar cualquier problema subyacente." },
+        { time: "4:00 PM", label: "Cierre del día", detail: "Registrar los hallazgos de hoy e informar al turno entrante." },
+      ],
+      reflectionQuestion:
+        "¿Te sentirías cómodo/a con un trabajo donde seguir procedimientos exactos importa tanto como la habilidad técnica?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$133,970",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/nuclear-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo una planta de energía nuclear genera electricidad y dibuja un diagrama simple del proceso.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables, como libros de biblioteca o sitios de ciencia de confianza.",
+        activity: "Busca un club de STEM o física en tu escuela, o una exhibición de museo sobre energía o ciencia nuclear.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Investiga cómo se usa la medicina nuclear para diagnosticar o tratar enfermedades, y resume en qué se diferencia de una planta de energía nuclear.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables.",
+        activity: "Investiga un equipo de Science Olympiad, que a veces cubre eventos relacionados con energía o temas nucleares.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Investiga los sistemas de seguridad usados en los diseños modernos de reactores nucleares y qué cambió después de un incidente histórico como Three Mile Island o Fukushima.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes confiables de ciencia e ingeniería.",
+        activity: "Busca un programa preuniversitario de ingeniería o un programa de verano con enfoque en energía o nuclear, si hay uno disponible.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Generación de energía nuclear", "Medicina nuclear y atención médica", "Laboratorios nacionales e investigación", "Naval y defensa", "Gestión de residuos nucleares"],
+    relatedMajors: ["Ingeniería Nuclear", "Ingeniería Mecánica (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Reactores", description: "Monitorea y optimiza la operación de un reactor nuclear para mantenerlo funcionando de forma segura y eficiente." },
+      { title: "Ingeniero/a de Seguridad Nuclear", description: "Se enfoca específicamente en los sistemas y procedimientos de seguridad que previenen y responden a posibles incidentes." },
+      { title: "Ingeniero/a de Protección Radiológica", description: "Diseña y monitorea sistemas que protegen a los trabajadores y al público de la exposición a la radiación." },
+      { title: "Ingeniero/a de Combustible Nuclear", description: "Trabaja en el diseño, desempeño, y gestión del combustible usado en un reactor nuclear." },
+    ],
+    advantages: [
+      "Salario mediano fuerte en comparación con muchos otros campos de ingeniería",
+      "Experiencia altamente especializada que tiene demanda constante donde sea que operen instalaciones nucleares",
+      "Trabajo que tiene una conexión directa y significativa con la infraestructura energética o la atención médica de un país",
+    ],
+    challenges: [
+      "El crecimiento del empleo es esencialmente plano — la Oficina de Estadísticas Laborales de EE. UU. proyecta casi ningún cambio en el número de empleos de ingeniería nuclear hasta 2035",
+      "Los requisitos regulatorios y procedimentales pesados dan forma a casi todas las partes del trabajo, dejando menos espacio para el diseño abierto",
+      "La percepción pública de la energía nuclear puede ser una fuente de presión o escrutinio, sin importar el trabajo real de un ingeniero individual",
+    ],
+    thingsPeopleDislike: [
+      "Una cantidad significativa de documentación y revisión de procedimientos, en lugar de trabajo de diseño práctico",
+      "Un número limitado de instalaciones nucleares nuevas siendo construidas en algunos países, lo cual puede reducir dónde está disponible el trabajo",
+      "Trabajar alrededor de materiales radiactivos requiere atención constante al protocolo de seguridad, lo cual algunos encuentran estresante con el tiempo",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta esencialmente ningún cambio (0%) en el empleo de ingenieros nucleares de 2025 a 2035 — entre las proyecciones más planas de cualquier campo de ingeniería en este sitio — con cerca de 800 vacantes proyectadas por año durante esa década, mayormente por trabajadores jubilándose o cambiando de carrera en lugar de por puestos nuevos que se crean. Eso no significa que el campo se esté reduciendo, ya que las plantas e instalaciones nucleares existentes necesitan personal de forma continua, pero sí significa que no se espera que crezca el número de puestos de ingeniería nuclear. La demanda también puede cambiar con las decisiones de política energética de un país — investiga el mercado actual y cualquier proyecto nuclear planeado en tu región específica antes de tomar decisiones.",
+    beginnerActivities: [
+      "Investiga cómo una planta de energía nuclear genera electricidad y esquematiza el proceso",
+      "Investiga cómo se usa la medicina nuclear en la atención médica y en qué se diferencia de una planta de energía",
+      "Investiga los sistemas de seguridad usados en los diseños modernos de reactores",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con un campo donde seguir procedimientos exactos importa tanto como la habilidad técnica pura?",
+      "¿Saber que se espera que el número de empleos de ingeniería nuclear se mantenga estable, no que crezca, cambia cómo me siento sobre el campo?",
+      "¿Me interesa la energía nuclear específicamente, o más ampliamente los sistemas de energía en general?",
+    ],
+  },
+  {
+    slug: "petroleum-engineering",
+    name: "Ingeniería de Petróleo",
+    tagline: "Diseñar cómo se extraen el petróleo y el gas natural del subsuelo de forma segura y eficiente.",
+    whatItIs:
+      "La ingeniería de petróleo se enfoca en cómo extraer petróleo y gas natural del subsuelo de forma segura y eficiente — diseñando métodos de extracción, planes de perforación, y sistemas de producción. Es un campo especializado ligado de cerca a los propios ciclos económicos de la industria energética.",
+    whatEngineersWorkOn:
+      "Los ingenieros de petróleo diseñan y evalúan métodos para extraer petróleo y gas natural de yacimientos subterráneos, analizan datos geológicos para estimar cuánto puede producir un sitio, diseñan planes de perforación y equipo de producción, y trabajan para mejorar la eficiencia de extracción mientras gestionan el riesgo de seguridad y ambiental. Gran parte del trabajo implica una colaboración cercana con geólogos y geocientíficos, ya que la geología subyacente de un yacimiento impulsa casi cada decisión de ingeniería.",
+    realWorldExamples: [
+      "Diseño de pozos de petróleo y gas y planes de perforación",
+      "Equipo de extracción y sistemas de producción",
+      "Análisis de yacimientos para estimar cuánto petróleo o gas puede producir un sitio",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros de petróleo pasan sus carreras trabajando físicamente en plataformas de perforación — muchos puestos están basados en una oficina analizando datos y planeando, con visitas periódicas al sitio en lugar de trabajo de campo de tiempo completo.",
+      "Que es el mismo trabajo que un geólogo — los geólogos estudian e interpretan las formaciones de roca y fluidos subterráneas; los ingenieros de petróleo usan esa información para diseñar cómo extraer recursos de forma segura y eficiente.",
+      "Que el campo está desapareciendo por completo — el crecimiento de la demanda global de petróleo y gas se ha desacelerado, pero el campo no está desapareciendo, y el salario sigue estando entre los más altos de cualquier disciplina de ingeniería.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros de petróleo pasan sus carreras trabajando físicamente en plataformas de perforación.", reality: "Muchos puestos están basados en una oficina analizando datos y planeando, con visitas periódicas al sitio en lugar de trabajo de campo de tiempo completo." },
+      { myth: "Es el mismo trabajo que un geólogo.", reality: "Los geólogos estudian e interpretan las formaciones de roca y fluidos subterráneas; los ingenieros de petróleo usan esa información para diseñar cómo extraer recursos de forma segura y eficiente." },
+      { myth: "El campo está desapareciendo por completo.", reality: "El crecimiento de la demanda global de petróleo y gas se ha desacelerado, pero el campo no está desapareciendo, y el salario sigue estando entre los más altos de cualquier disciplina de ingeniería." },
+    ],
+    usefulSubjects: ["Física", "Química", "Cálculo", "Ciencias de la tierra o geología, si está disponible"],
+    helpfulSkills: [
+      "Comodidad interpretando datos geológicos y de yacimientos para tomar decisiones de ingeniería",
+      "Bases sólidas de matemáticas y física para modelar el flujo de fluidos y el comportamiento de yacimientos",
+      "Evaluación de riesgos — sopesar factores de seguridad, costo, y ambientales al planear la extracción",
+      "Disposición para viajar o trabajar en sitios de campo remotos, al menos periódicamente",
+    ],
+    typicalProjects: [
+      "Analizar datos de yacimientos para estimar cuánto petróleo o gas puede producir un sitio",
+      "Diseñar un plan de perforación para un pozo nuevo",
+      "Evaluar formas de mejorar la eficiencia de extracción de un pozo existente",
+      "Evaluar el riesgo de seguridad y ambiental de un método de extracción propuesto",
+    ],
+    typicalWorkday:
+      "Una mezcla de análisis de datos y modelado en la oficina, y — dependiendo del puesto — tiempo en un sitio de campo revisando las operaciones en persona. La colaboración con geólogos y otros ingenieros es una parte constante del trabajo, ya que las decisiones sobre yacimientos requieren aportes de múltiples disciplinas.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Revisión de datos", detail: "Revisar los datos de producción de la noche de un pozo activo." },
+        { time: "9:30 AM", label: "Análisis de yacimiento", detail: "Analizar datos geológicos con un geólogo para estimar el potencial de producción de un sitio nuevo." },
+        { time: "11:30 AM", label: "Plan de perforación", detail: "Trabajar en un plan de perforación para un pozo propuesto, considerando profundidad, equipo, y requisitos de seguridad." },
+        { time: "1:30 PM", label: "Coordinación de equipo", detail: "Reunirse con el personal de operaciones de campo para revisar cómo está funcionando un sitio de extracción activo." },
+        { time: "3:00 PM", label: "Evaluación de riesgos", detail: "Evaluar el riesgo de seguridad y ambiental de un cambio propuesto a un método de extracción." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Documentar el análisis de hoy y actualizar el plan del proyecto." },
+      ],
+      reflectionQuestion:
+        "¿Te sentirías cómodo/a en un campo donde el salario es fuerte pero está ligado de cerca a los altibajos de los mercados energéticos globales?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "High",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$144,910",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/petroleum-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región. Este campo está ligado de cerca a los ciclos de la industria del petróleo y el gas, lo cual afecta tanto el salario como la estabilidad laboral.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo se forman el petróleo y el gas natural bajo tierra y cómo los encuentran los ingenieros.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables, como libros de biblioteca o sitios de ciencia de confianza.",
+        activity: "Busca un club de STEM o ciencias de la tierra en tu escuela.",
+        relatedField: "chemical-engineering",
+      },
+      "13-15": {
+        project: "Investiga cómo funciona una plataforma de perforación y esquematiza los pasos básicos para perforar un pozo.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables.",
+        activity: "Investiga un equipo de Science Olympiad, que a veces cubre temas de ciencias de la tierra.",
+        relatedField: "chemical-engineering",
+      },
+      "16-18": {
+        project: "Investiga un campo real de petróleo o gas y estima, usando datos públicos, cómo ha cambiado la extracción ahí con el tiempo.",
+        tool: "Fuentes públicas de datos de energía, como la base de datos pública de una agencia nacional de información energética, si está disponible en tu país.",
+        activity: "Busca un programa preuniversitario de ingeniería con enfoque en energía, si hay uno disponible.",
+        relatedField: "chemical-engineering",
+      },
+    },
+    industries: ["Extracción de petróleo y gas", "Consultoría energética", "Perforación en alta mar", "Empresas de ingeniería de yacimientos", "Agencias gubernamentales de energía"],
+    relatedMajors: ["Ingeniería de Petróleo", "Ingeniería Química (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Perforación", description: "Diseña y supervisa los planes para perforar un pozo de forma segura y eficiente." },
+      { title: "Ingeniero/a de Yacimientos", description: "Analiza datos de yacimientos subterráneos para estimar el potencial de producción y planear la estrategia de extracción." },
+      { title: "Ingeniero/a de Producción", description: "Se enfoca en optimizar qué tan eficientemente produce petróleo o gas un pozo o campo existente." },
+      { title: "Ingeniero/a de Terminación de Pozos", description: "Diseña los pasos finales que preparan un pozo perforado para la producción." },
+    ],
+    advantages: [
+      "Entre los salarios medianos más altos de cualquier campo de ingeniería en este sitio",
+      "El trabajo da forma directamente a cómo se extrae y usa un recurso energético global importante",
+      "Gran variedad técnica — geología, mecánica de fluidos, y diseño de equipo entran en juego",
+    ],
+    challenges: [
+      "El salario y la estabilidad laboral están ligados de cerca a los precios globales del petróleo y el gas, que pueden cambiar rápidamente",
+      "Algunos puestos requieren viajar o pasar tiempo extendido en sitios de campo remotos",
+      "El campo enfrenta preguntas reales a largo plazo sobre el ritmo de la transición global fuera de los combustibles fósiles",
+    ],
+    thingsPeopleDislike: [
+      "La seguridad laboral puede sentirse menos predecible que en campos menos ligados a los precios de las materias primas",
+      "Condiciones remotas o físicamente exigentes en el sitio de campo en algunos puestos",
+      "La percepción pública de la industria del petróleo y el gas puede ser una fuente de escrutinio adicional",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 2% para ingenieros de petróleo de 2025 a 2035 — más lento que el promedio de todas las ocupaciones — con cerca de 1,000 vacantes proyectadas por año durante esa década, mayormente por trabajadores jubilándose o cambiando de carrera. El salario está entre los más altos de cualquier campo de ingeniería, pero tanto la contratación como la compensación están ligadas de cerca a los precios globales del petróleo y el gas, que pueden cambiar sustancialmente de un año a otro. Investiga las condiciones actuales del mercado y las tendencias de contratación en tu región y sector de industria específicos antes de tomar decisiones.",
+    beginnerActivities: [
+      "Investiga cómo se forman el petróleo y el gas natural bajo tierra y cómo se localizan",
+      "Investiga cómo funciona una plataforma de perforación y esquematiza los pasos básicos para perforar un pozo",
+      "Investiga cómo ha cambiado con el tiempo la producción de un campo real de petróleo o gas usando datos públicos",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con un campo donde el salario y la estabilidad laboral están ligados de cerca a los precios energéticos globales?",
+      "¿Me interesan las ciencias de la tierra y la geología tanto como la ingeniería tradicional?",
+      "¿Estaría cómodo/a viajando o trabajando en un sitio de campo remoto, al menos periódicamente?",
+    ],
+  },
 ];

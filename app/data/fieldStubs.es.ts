@@ -6,53 +6,6 @@ import { FieldStub } from "./types";
 // (with a small notice) for any not yet translated.
 export const fieldStubsEs: FieldStub[] = [
   {
-    slug: "nuclear-engineering",
-    name: "Ingeniería Nuclear",
-    tagline: "Diseñar y monitorear los sistemas que generan y gestionan la energía nuclear de forma segura.",
-    whatItIs:
-      "La ingeniería nuclear se enfoca en el diseño, la operación y el monitoreo seguros de los sistemas que usan energía nuclear — desde plantas de energía hasta aplicaciones médicas y de investigación. Combina física, ingeniería de seguridad, y un cumplimiento regulatorio estricto, ya que las consecuencias de un error son inusualmente graves.",
-    realWorldExamples: [
-      "Diseño de plantas de energía nuclear y sus sistemas de seguridad",
-      "Equipo de medicina nuclear y radioterapia",
-      "Sistemas de almacenamiento y disposición de residuos nucleares",
-      "Sistemas de propulsión nuclear naval",
-    ],
-    relatedMajors: ["Ingeniería Nuclear", "Ingeniería Mecánica (con cierta superposición)"],
-    relatedField: "mechanical-engineering",
-    salary: {
-      medianAnnual: "$133,970",
-      period: "Mayo 2025",
-      region: "Estados Unidos (mediana nacional)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/nuclear-engineers.htm",
-      note: "Mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
-      verifiedDate: "Septiembre 2026",
-    },
-  },
-  {
-    slug: "petroleum-engineering",
-    name: "Ingeniería de Petróleo",
-    tagline: "Diseñar cómo se extraen el petróleo y el gas natural del subsuelo de forma segura y eficiente.",
-    whatItIs:
-      "La ingeniería de petróleo se enfoca en cómo extraer petróleo y gas natural del subsuelo de forma segura y eficiente — diseñando métodos de extracción, planes de perforación, y sistemas de producción. Es un campo especializado ligado de cerca a los propios ciclos económicos de la industria energética.",
-    realWorldExamples: [
-      "Diseño de pozos de petróleo y gas y planes de perforación",
-      "Equipo de extracción y sistemas de producción",
-      "Análisis de yacimientos para estimar cuánto petróleo o gas puede producir un sitio",
-    ],
-    relatedMajors: ["Ingeniería de Petróleo", "Ingeniería Química (con cierta superposición)"],
-    relatedField: "chemical-engineering",
-    salary: {
-      medianAnnual: "$144,910",
-      period: "Mayo 2025",
-      region: "Estados Unidos (mediana nacional)",
-      sourceName: "U.S. Bureau of Labor Statistics",
-      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/petroleum-engineers.htm",
-      note: "Mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región. Este campo está ligado de cerca a los ciclos de la industria del petróleo y el gas, lo cual afecta tanto el salario como la estabilidad laboral.",
-      verifiedDate: "Septiembre 2026",
-    },
-  },
-  {
     slug: "agricultural-engineering",
     name: "Ingeniería Agrícola",
     tagline: "Aplicar la ingeniería a la agricultura y la producción de alimentos — equipo, riego, y sistemas alimentarios.",
