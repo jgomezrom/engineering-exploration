@@ -10,39 +10,100 @@ export type Interest = {
 };
 
 export const interests: Interest[] = [
-  // Mechanical + electrical both list "Automotive" as an industry.
-  { slug: "cars", label: "Cars", fields: ["mechanical-engineering", "electrical-engineering"] },
-  // Mechanical + electrical both list "Aerospace" as an industry.
-  { slug: "space", label: "Space", fields: ["mechanical-engineering", "electrical-engineering"] },
-  // Mechanical lists a "Robotics" industry and "Robotics Engineer" career path, which
-  // itself notes overlap with electrical/software engineering.
-  { slug: "robots", label: "Robots", fields: ["mechanical-engineering", "electrical-engineering", "software-engineering"] },
-  // Biomedical engineering is directly about medical devices and healthcare.
-  { slug: "medicine", label: "Medicine", fields: ["biomedical-engineering"] },
+  // Mechanical + electrical both list "Automotive" as an industry; materials and
+  // robotics both list "Automotive" among their own industries too.
+  {
+    slug: "cars",
+    label: "Cars",
+    fields: ["mechanical-engineering", "electrical-engineering", "materials-engineering", "robotics-engineering"],
+  },
+  // Aerospace engineering's entire focus is aircraft and spacecraft; mechanical and
+  // electrical list "Aerospace" as an industry; materials and robotics both list
+  // "Aerospace" among their own industries too.
+  {
+    slug: "space",
+    label: "Space",
+    fields: [
+      "aerospace-engineering",
+      "mechanical-engineering",
+      "electrical-engineering",
+      "materials-engineering",
+      "robotics-engineering",
+    ],
+  },
+  // Robotics engineering's entire focus is robots; mechanical lists a "Robotics"
+  // industry and "Robotics Engineer" career path, which itself notes overlap with
+  // electrical/software engineering.
+  {
+    slug: "robots",
+    label: "Robots",
+    fields: ["robotics-engineering", "mechanical-engineering", "electrical-engineering", "software-engineering"],
+  },
+  // Biomedical engineering is directly about medical devices and healthcare;
+  // materials and robotics both list "Medical devices" / "Healthcare and medical
+  // devices" among their own industries.
+  {
+    slug: "medicine",
+    label: "Medicine",
+    fields: ["biomedical-engineering", "materials-engineering", "robotics-engineering"],
+  },
   // Software lists "Gaming" as an industry.
   { slug: "video-games", label: "Video Games", fields: ["software-engineering"] },
   // Civil engineering is directly about the built environment.
   { slug: "buildings", label: "Buildings", fields: ["civil-engineering"] },
-  // Civil lists "Environmental consulting" and "Water resources" as industries.
-  { slug: "climate", label: "Climate", fields: ["civil-engineering"] },
-  // Software is directly about building software; electrical lists "Computer Engineering"
-  // as a related major.
-  { slug: "computers", label: "Computers", fields: ["software-engineering", "electrical-engineering"] },
-  // Electrical engineering is directly about circuits and electronics.
-  { slug: "electronics", label: "Electronics", fields: ["electrical-engineering"] },
+  // Civil lists "Environmental consulting" and "Water resources" as industries;
+  // environmental engineering's entire focus is water, air, and waste systems.
+  { slug: "climate", label: "Climate", fields: ["civil-engineering", "environmental-engineering"] },
+  // Software is directly about building software; electrical lists "Computer
+  // Engineering" as a related major; computer engineering's entire focus is
+  // computing hardware.
+  {
+    slug: "computers",
+    label: "Computers",
+    fields: ["software-engineering", "electrical-engineering", "computer-engineering"],
+  },
+  // Electrical engineering is directly about circuits and electronics; computer
+  // engineering blends circuits with the code closest to them; robotics
+  // engineering combines electronics with mechanics and code.
+  {
+    slug: "electronics",
+    label: "Electronics",
+    fields: ["electrical-engineering", "computer-engineering", "robotics-engineering"],
+  },
   // Mechanical lists a "Product Design Engineer" career path.
   { slug: "design", label: "Design", fields: ["mechanical-engineering"] },
-  // Mechanical engineering is directly about how machines are designed and built.
-  { slug: "machines", label: "Machines", fields: ["mechanical-engineering"] },
+  // Mechanical engineering is directly about how machines are designed and built;
+  // robotics engineering is specifically about machines that sense and act.
+  { slug: "machines", label: "Machines", fields: ["mechanical-engineering", "robotics-engineering"] },
   // Mechanical lists an "Energy" industry; electrical lists "Power/energy" and a
-  // "Power Systems Engineer" career path.
-  { slug: "energy", label: "Energy", fields: ["mechanical-engineering", "electrical-engineering"] },
-  // Civil lists "Transportation" as an industry and a "Transportation Engineer" career
-  // path; mechanical lists "Automotive" as an industry.
-  { slug: "transportation", label: "Transportation", fields: ["civil-engineering", "mechanical-engineering"] },
-  // Mechanical lists a "Manufacturing" industry and "Manufacturing Engineering" as a
-  // related major.
-  { slug: "manufacturing", label: "Manufacturing", fields: ["mechanical-engineering"] },
+  // "Power Systems Engineer" career path; materials engineering lists "Energy"
+  // among its own industries; chemical engineering's industries include "Oil and
+  // gas," a major energy-production sector.
+  {
+    slug: "energy",
+    label: "Energy",
+    fields: ["mechanical-engineering", "electrical-engineering", "materials-engineering", "chemical-engineering"],
+  },
+  // Civil lists "Transportation" as an industry and a "Transportation Engineer"
+  // career path; mechanical lists "Automotive" as an industry; aerospace
+  // engineering is specifically about aircraft, a transportation category.
+  {
+    slug: "transportation",
+    label: "Transportation",
+    fields: ["civil-engineering", "mechanical-engineering", "aerospace-engineering"],
+  },
+  // Mechanical lists a "Manufacturing" industry and "Manufacturing Engineering" as
+  // a related major; industrial engineering's entire focus is how manufacturing
+  // and production systems run; materials and robotics both list "Manufacturing"
+  // among their own industries.
+  {
+    slug: "manufacturing",
+    label: "Manufacturing",
+    fields: ["mechanical-engineering", "industrial-engineering", "materials-engineering", "robotics-engineering"],
+  },
+  // Chemical engineering's entire focus is designing the processes that turn raw
+  // materials into usable products — the clearest fit among the current fields.
+  { slug: "chemistry", label: "Chemistry", fields: ["chemical-engineering"] },
   // No current field content genuinely covers this yet — hidden until one does.
   { slug: "sports", label: "Sports", fields: [] },
   { slug: "animals", label: "Animals", fields: [] },

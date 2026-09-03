@@ -114,6 +114,15 @@ export default function InterestIcon({ slug, className = "h-5 w-5" }: InterestIc
           <circle cx="18" cy="6.5" r="1" fill="currentColor" />
         </svg>
       );
+    case "chemistry":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+          <path d="M9.5 3.5h5M10 3.5v5l-4.3 7.4A1.7 1.7 0 0 0 7.2 18.5h9.6a1.7 1.7 0 0 0 1.5-2.6L14 8.5v-5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M7.8 14h8.4" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="10.5" cy="16.3" r="0.8" fill="currentColor" />
+          <circle cx="13.5" cy="15.3" r="0.6" fill="currentColor" />
+        </svg>
+      );
     default:
       return (
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
