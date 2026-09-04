@@ -35,6 +35,8 @@ export default function SimulatorSlider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
+        aria-label={label}
+        aria-valuetext={`${value}${unit ?? ""}`}
         className="mt-2 w-full accent-primary"
       />
     </div>
