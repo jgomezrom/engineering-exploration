@@ -19,9 +19,15 @@ export async function generateMetadata(
     return { title: "Field Not Found" };
   }
 
+  const title = `${field.name} | Engineering Exploration`;
+  const description = field.tagline;
+
   return {
-    title: `${field.name} | Engineering Exploration`,
-    description: field.tagline,
+    title,
+    description,
+    alternates: { canonical: `/engineering/${slug}` },
+    openGraph: { title, description, url: `/engineering/${slug}`, images: "/opengraph-image" },
+    twitter: { title, description, images: "/opengraph-image" },
   };
 }
 

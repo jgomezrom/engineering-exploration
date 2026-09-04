@@ -17,9 +17,15 @@ export async function generateMetadata(
     return { title: "Challenge Not Found" };
   }
 
+  const title = `${challenge.title} | Engineering Exploration`;
+  const description = challenge.tagline;
+
   return {
-    title: `${challenge.title} | Engineering Exploration`,
-    description: challenge.tagline,
+    title,
+    description,
+    alternates: { canonical: `/challenges/${slug}` },
+    openGraph: { title, description, url: `/challenges/${slug}`, images: "/opengraph-image" },
+    twitter: { title, description, images: "/opengraph-image" },
   };
 }
 

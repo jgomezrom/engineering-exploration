@@ -8,7 +8,7 @@ import { challenges } from "../data/challenges";
 import { challengesEs } from "../data/challenges.es";
 import { ChallengeCategory } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
-import { challengesTranslations, categoryLabels, difficultyLabels } from "../data/translations/challenges";
+import { challengesTranslations, categoryLabels } from "../data/translations/challenges";
 
 function groupByCategory(items: typeof challenges) {
   const order: ChallengeCategory[] = [];
@@ -27,7 +27,6 @@ export default function ChallengesContent() {
   const { language } = useLanguage();
   const t = challengesTranslations[language];
   const catLabel = categoryLabels[language];
-  const diffLabel = difficultyLabels[language];
   const displayChallenges = language === "es" ? challengesEs : challenges;
   const grouped = groupByCategory(displayChallenges);
 
@@ -47,12 +46,7 @@ export default function ChallengesContent() {
             {items.map((challenge) => (
               <Link key={challenge.slug} href={`/challenges/${challenge.slug}`}>
                 <Card>
-                  <div className="flex items-center justify-between">
-                    <FieldIcon slug={challenge.field} className="h-10 w-10 text-primary" />
-                    <span className="border border-neutral-900/15 px-3 py-1 font-mono text-xs uppercase tracking-wide text-neutral-500 dark:border-white/15 dark:text-neutral-400">
-                      {diffLabel[challenge.difficulty]}
-                    </span>
-                  </div>
+                  <FieldIcon slug={challenge.field} className="h-10 w-10 text-primary" />
                   <h3 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
                     {challenge.title}
                   </h3>

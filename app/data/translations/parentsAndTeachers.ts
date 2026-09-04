@@ -19,7 +19,7 @@ export const parentsAndTeachersTranslations = {
     section2P1:
       "There are no accounts, no sign-up, and no ads. As of September 2026, this site also uses a small amount of anonymous traffic analytics (the fifth item below) — beyond that, nothing about what a student clicks on or answers is tracked or sent anywhere. Specifically:",
     bullet1:
-      "Bookmarking a field and the day-streak counter (\"You've explored 3 of 12 fields\") are saved using the browser's local storage — a small file that lives only on that device, in that browser. It's never sent to us or anyone else, there's no account attached to it, and it disappears if the browser's data is cleared. Nobody but the person using that browser can see it.",
+      "Bookmarking a field and the day-streak counter (\"You've explored 3 of 16 fields\") are saved using the browser's local storage — a small file that lives only on that device, in that browser. It's never sent to us or anyone else, there's no account attached to it, and it disappears if the browser's data is cleared. Nobody but the person using that browser can see it.",
     bullet2:
       "The interest quiz's answers and results exist only in the browser while it's open, and disappear the moment the page is closed or reloaded — nothing is sent anywhere or saved.",
     bullet3:
@@ -66,7 +66,7 @@ export const parentsAndTeachersTranslations = {
     section2P1:
       "No hay cuentas, no hay registro, y no hay anuncios. A partir de septiembre de 2026, este sitio también usa una pequeña cantidad de analíticas de tráfico anónimas (el quinto punto abajo) — más allá de eso, nada de lo que un estudiante hace clic o responde se rastrea ni se envía a ningún lado. Específicamente:",
     bullet1:
-      'Guardar un campo y el contador de racha de días ("Has explorado 3 de 12 campos") se guardan usando el almacenamiento local del navegador — un archivo pequeño que vive solo en ese dispositivo, en ese navegador. Nunca se envía a nosotros ni a nadie más, no tiene ninguna cuenta asociada, y desaparece si se borran los datos del navegador. Nadie más que la persona que usa ese navegador puede verlo.',
+      'Guardar un campo y el contador de racha de días ("Has explorado 3 de 16 campos") se guardan usando el almacenamiento local del navegador — un archivo pequeño que vive solo en ese dispositivo, en ese navegador. Nunca se envía a nosotros ni a nadie más, no tiene ninguna cuenta asociada, y desaparece si se borran los datos del navegador. Nadie más que la persona que usa ese navegador puede verlo.',
     bullet2:
       "Las respuestas y resultados del cuestionario de intereses existen solo en el navegador mientras está abierto, y desaparecen en el momento en que se cierra o recarga la página — nada se envía a ningún lado ni se guarda.",
     bullet3:

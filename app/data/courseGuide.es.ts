@@ -181,6 +181,38 @@ export const fieldCourseFocusEs: FieldCourseFocus[] = [
       "Cualquier electiva de ciencias de la computación — este campo genuinamente abarca cursos de mecánica, eléctrica, y software",
     ],
   },
+  {
+    fieldSlug: "nuclear-engineering",
+    priorityCourses: [
+      "Física, especialmente física nuclear y moderna, si tu escuela la ofrece",
+      "Cálculo",
+      "Química",
+    ],
+  },
+  {
+    fieldSlug: "petroleum-engineering",
+    priorityCourses: [
+      "Física y Química",
+      "Cálculo",
+      "Ciencias de la tierra o geología, si se ofrece",
+    ],
+  },
+  {
+    fieldSlug: "agricultural-engineering",
+    priorityCourses: [
+      "Biología — este campo se apoya en ella más que la mayoría de los campos de ingeniería",
+      "Física y Química",
+      "Cálculo",
+    ],
+  },
+  {
+    fieldSlug: "marine-engineering",
+    priorityCourses: [
+      "Física",
+      "Cálculo",
+      "Química, útil para entender la corrosión y los materiales en ambientes marinos",
+    ],
+  },
 ];
 
 export const tutoringResourcesEs: TutoringResource[] = [

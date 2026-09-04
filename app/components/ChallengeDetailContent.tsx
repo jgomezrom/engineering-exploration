@@ -11,7 +11,7 @@ import { challengesEs } from "../data/challenges.es";
 import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
 import { useLanguage } from "../context/LanguageContext";
-import { challengesTranslations, categoryLabels, difficultyLabels } from "../data/translations/challenges";
+import { challengesTranslations, categoryLabels } from "../data/translations/challenges";
 
 function Section({ index, title, children }: { index: number; title: string; children: React.ReactNode }) {
   return (
@@ -59,7 +59,6 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
   const { language } = useLanguage();
   const t = challengesTranslations[language];
   const catLabel = categoryLabels[language];
-  const diffLabel = difficultyLabels[language];
 
   const displayChallenges = language === "es" ? challengesEs : challenges;
   const displayFields = language === "es" ? fieldsEs : fields;
@@ -92,9 +91,6 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
       <div className="mt-6 flex flex-wrap gap-3">
         <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {catLabel[challenge.category]}
-        </span>
-        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
-          {diffLabel[challenge.difficulty]}
         </span>
         <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {challenge.estimatedTime}
