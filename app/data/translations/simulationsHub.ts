@@ -19,6 +19,10 @@ export const simulationsHubTranslations = {
     logicGateDescription: "Flip inputs and switch between AND/OR/XOR/NOT gates while the truth table builds itself live.",
     projectileTitle: "Projectile Motion",
     projectileDescription: "Dial in a launch angle and power, watch the trajectory change, and see why real flight needs more than this.",
+    pendulumTitle: "Pendulum",
+    pendulumDescription: "Change the length and release angle and watch the period respond — notice what's conspicuously missing from the controls.",
+    heatConductionTitle: "Heat Conduction",
+    heatConductionDescription: "Pick a material and adjust its thickness and temperature difference to see how much heat actually gets through.",
   },
   es: {
     backToSimulations: "← Volver a todas las simulaciones",
@@ -40,5 +44,9 @@ export const simulationsHubTranslations = {
     logicGateDescription: "Cambia las entradas y alterna entre puertas AND/OR/XOR/NOT mientras la tabla de verdad se arma sola, en vivo.",
     projectileTitle: "Movimiento de Proyectiles",
     projectileDescription: "Ajusta el ángulo y la potencia de lanzamiento, observa cómo cambia la trayectoria, y descubre por qué el vuelo real necesita algo más que esto.",
+    pendulumTitle: "Péndulo",
+    pendulumDescription: "Cambia la longitud y el ángulo de liberación y observa cómo responde el periodo — nota qué falta claramente entre los controles.",
+    heatConductionTitle: "Conducción de Calor",
+    heatConductionDescription: "Elige un material y ajusta su grosor y la diferencia de temperatura para ver cuánto calor realmente logra pasar.",
   },
 };

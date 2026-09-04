@@ -25,7 +25,7 @@ export const conceptsEs: Concept[] = [
       "El torque es lo que hace que algo rote en lugar de solo moverse en línea recta. Depende tanto de cuánta fuerza aplicas como de qué tan lejos del punto de apoyo la aplicas — por eso una llave más larga hace que sea más fácil aflojar un tornillo apretado: la misma cantidad de fuerza, aplicada más lejos del punto de apoyo, crea más torque.",
     realWorldExample:
       "Girar una llave, pedalear una bicicleta, o el brazo de una catapulta girando alrededor de su punto de apoyo, todos involucran torque.",
-    relatedFields: ["mechanical-engineering", "robotics-engineering"],
+    relatedFields: ["mechanical-engineering", "robotics-engineering", "automotive-engineering"],
   },
   {
     slug: "friction",
@@ -123,7 +123,7 @@ export const conceptsEs: Concept[] = [
       "El trabajo de una estructura es cargar peso — el suyo propio, las personas y cosas dentro o sobre ella, y fuerzas externas como el viento o los terremotos — de forma segura hasta el suelo o sus soportes. Cómo está formada una estructura importa enormemente: las formas triangulares (armaduras) resisten colapsar de una manera que los cuadrados no, que es por eso que gran parte de la ingeniería estructural se reduce a organizar materiales en triángulos.",
     realWorldExample:
       "El armazón de armadura de un puente, el esqueleto de acero de un edificio, o los soportes triangulares de un puente de espagueti son todas estructuras en acción.",
-    relatedFields: ["civil-engineering", "aerospace-engineering"],
+    relatedFields: ["civil-engineering", "aerospace-engineering", "structural-engineering", "architectural-engineering"],
   },
   {
     slug: "materials",
@@ -134,7 +134,7 @@ export const conceptsEs: Concept[] = [
       "Ningún diseño funciona igual en todos los materiales — una forma que es resistente en acero podría fallar en plástico, y un material que es excelente bajo compresión, como el concreto, podría ser débil bajo tensión. Elegir el material correcto para el trabajo, y entender cómo se comporta en condiciones reales, es toda su propia disciplina de ingeniería.",
     realWorldExample:
       "Los aviones usan aleaciones ligeras porque el peso importa enormemente para volar, mientras que los puentes a menudo usan acero y concreto porque necesitan ser resistentes bajo tipos de carga muy diferentes.",
-    relatedFields: ["materials-engineering", "aerospace-engineering", "mechanical-engineering"],
+    relatedFields: ["materials-engineering", "aerospace-engineering", "mechanical-engineering", "semiconductor-engineering"],
   },
   {
     slug: "algorithms",
@@ -155,6 +155,50 @@ export const conceptsEs: Concept[] = [
       "Un sistema de control mide continuamente su propia salida, la compara con un objetivo, y se ajusta para cerrar la brecha — un ciclo llamado retroalimentación. Esto es lo que le permite a un termostato mantener una habitación a una temperatura constante, o a un brazo robótico asentarse con precisión en una posición objetivo en lugar de pasarse y oscilar para siempre.",
     realWorldExample:
       "Un termostato encendiendo y apagando la calefacción para mantener una temperatura objetivo, o el control de crucero ajustando el acelerador de un auto para mantener una velocidad fija, son ambos sistemas de control.",
-    relatedFields: ["electrical-engineering", "robotics-engineering", "computer-engineering"],
+    relatedFields: ["electrical-engineering", "robotics-engineering", "computer-engineering", "systems-engineering"],
+  },
+  {
+    slug: "thermodynamics",
+    name: "Termodinámica",
+    category: "Mechanical",
+    shortDefinition: "Cómo se mueven el calor y la energía, y las reglas que rigen convertir uno en el otro.",
+    explanation:
+      "La termodinámica rige cómo fluye el calor y cómo la energía se convierte entre formas — y viene con límites estrictos: el calor siempre fluye de lo caliente a lo frío por sí solo, y ningún motor puede convertir el 100% del calor que recibe en trabajo útil. Cada motor, planta de energía, y reactor está diseñado para funcionar dentro de esos límites, no en contra de ellos.",
+    realWorldExample:
+      "Un motor de auto convirtiendo combustible quemado en movimiento (con mucha de esa energía perdida como calor), un reactor nuclear convirtiendo calor en vapor para girar una turbina, o un refrigerador moviendo calor fuera de un espacio frío son todos termodinámica en acción.",
+    relatedFields: ["mechanical-engineering", "chemical-engineering", "nuclear-engineering", "petroleum-engineering", "energy-engineering"],
+  },
+  {
+    slug: "fluid-dynamics",
+    name: "Dinámica de Fluidos",
+    category: "Mechanical",
+    shortDefinition: "Cómo se mueven los líquidos y gases, y las fuerzas que ejercen sobre lo que fluye a su alrededor.",
+    explanation:
+      "La dinámica de fluidos describe cómo se comportan los líquidos y gases en movimiento — qué tan rápido fluyen, cuánta presión ejercen, y cómo empujan las superficies junto a las que o alrededor de las que se mueven. Es por eso que un ala genera sustentación, por qué el casco de un barco tiene la forma que tiene, y por qué un oleoducto tiene que dimensionarse correctamente para mover petróleo de forma eficiente sin una pérdida de presión excesiva.",
+    realWorldExample:
+      "El aire fluyendo sobre el ala de una aeronave, el agua empujando contra el casco de un barco, o el petróleo moviéndose por un oleoducto están todos regidos por la dinámica de fluidos.",
+    relatedFields: ["aerospace-engineering", "marine-engineering", "petroleum-engineering", "environmental-engineering", "mechanical-engineering"],
+  },
+  {
+    slug: "biocompatibility",
+    name: "Biocompatibilidad",
+    category: "Structures & Materials",
+    shortDefinition: "Si un material puede funcionar dentro o sobre el cuerpo humano sin causar reacciones dañinas.",
+    explanation:
+      "Un material puede ser mecánicamente perfecto y aun así fallar por completo si el cuerpo lo rechaza. La biocompatibilidad se trata de si un material provoca inflamación, una respuesta inmune, o reacciones tóxicas cuando se implanta o se usa de otra forma dentro o sobre el cuerpo — una restricción de ingeniería real, añadida sobre las propiedades mecánicas normales de un material, no solo una idea médica secundaria.",
+    realWorldExample:
+      "Un implante de cadera hecho de titanio (que el cuerpo tolera bien), un recubrimiento en un stent diseñado para prevenir coágulos, o un material de sutura diseñado para disolverse de forma segura con el tiempo están todos diseñados pensando en la biocompatibilidad.",
+    relatedFields: ["biomedical-engineering", "materials-engineering"],
+  },
+  {
+    slug: "process-optimization",
+    name: "Optimización de Procesos",
+    category: "Software & Systems",
+    shortDefinition: "Encontrar y eliminar tiempo, material, o esfuerzo desperdiciado en un proceso, sin cambiar lo que el proceso realmente logra.",
+    explanation:
+      "La optimización de procesos significa ver cómo ya se hace algo — una línea de fábrica, una ruta de suministro, un horario de riego — y encontrar dónde se está desperdiciando tiempo, material, o esfuerzo, para luego rediseñar en torno a eso. La tarea en sí normalmente no cambia; cómo está organizada sí. Pequeños cambios en el orden, el tiempo, o la distribución pueden sumar una gran diferencia en el mundo real.",
+    realWorldExample:
+      "Reorganizar el piso de una fábrica para que las piezas viajen una distancia más corta, ajustar un horario de riego para usar menos agua con el mismo rendimiento de cultivo, o rediseñar una línea de ensamblaje para reducir movimiento desperdiciado son todos optimización de procesos.",
+    relatedFields: ["industrial-engineering", "manufacturing-engineering", "agricultural-engineering"],
   },
 ];

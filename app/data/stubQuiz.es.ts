@@ -42,4 +42,34 @@ export const stubQuizQuestionsEs: StubQuizQuestion[] = [
       { text: "En una oficina, coordinando cómo encajan las muchas piezas móviles de un proyecto enorme", stubFields: ["systems-engineering"] },
     ],
   },
+  {
+    id: "workplace-environment",
+    prompt: "¿Qué entorno te resulta más atractivo para tu trabajo diario real?",
+    options: [
+      { text: "Una pista de pruebas o un taller, afinando cómo se comporta un vehículo", stubFields: ["automotive-engineering"] },
+      { text: "Una planta de energía o un sitio de energía renovable", stubFields: ["energy-engineering"] },
+      { text: "Un sitio de construcción, viendo cómo se levanta una gran estructura", stubFields: ["structural-engineering"] },
+      { text: "Una sala limpia, trabajando a escala microscópica", stubFields: ["semiconductor-engineering"] },
+    ],
+  },
+  {
+    id: "problem-scale",
+    prompt: "¿Qué escala de problema te atrae más?",
+    options: [
+      { text: "Millones de piezas idénticas, ensambladas de la misma forma cada vez", stubFields: ["manufacturing-engineering"] },
+      { text: "Un proyecto enorme y único, con incontables piezas móviles", stubFields: ["systems-engineering"] },
+      { text: "Un solo vehículo, perfeccionado hasta el más mínimo detalle", stubFields: ["automotive-engineering"] },
+      { text: "Un solo edificio, diseñado para soportar exactamente las cargas que necesita", stubFields: ["structural-engineering"] },
+    ],
+  },
+  {
+    id: "public-need",
+    prompt: "¿Qué necesidad pública preferirías ayudar a resolver?",
+    options: [
+      { text: "Mantener la red eléctrica confiable mientras la demanda sigue creciendo", stubFields: ["energy-engineering"] },
+      { text: "Asegurarse de que edificios y puentes puedan soportar la carga", stubFields: ["structural-engineering"] },
+      { text: "Hacer que los vehículos sean más seguros y eficientes", stubFields: ["automotive-engineering"] },
+      { text: "Diseñar cómo funcionan realmente juntos los sistemas de un edificio", stubFields: ["architectural-engineering"] },
+    ],
+  },
 ];

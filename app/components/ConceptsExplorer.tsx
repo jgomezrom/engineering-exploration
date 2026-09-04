@@ -7,6 +7,8 @@ import { concepts } from "../data/concepts";
 import { conceptsEs } from "../data/concepts.es";
 import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
+import { fieldStubs } from "../data/fieldStubs";
+import { fieldStubsEs } from "../data/fieldStubs.es";
 import { ConceptCategory } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
 import { conceptsTranslations, categoryLabels } from "../data/translations/concepts";
@@ -18,7 +20,8 @@ export default function ConceptsExplorer() {
   const t = conceptsTranslations[language];
   const labels = categoryLabels[language];
   const displayConcepts = language === "es" ? conceptsEs : concepts;
-  const fieldPool = language === "es" ? [...fieldsEs, ...fields] : fields;
+  const fieldPool =
+    language === "es" ? [...fieldsEs, ...fields, ...fieldStubsEs, ...fieldStubs] : [...fields, ...fieldStubs];
   const searchParams = useSearchParams();
   const requested = searchParams.get("concept");
   const initialSlug = concepts.some((c) => c.slug === requested) ? requested! : concepts[0].slug;

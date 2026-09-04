@@ -54,4 +54,34 @@ export const stubQuizQuestions: StubQuizQuestion[] = [
       { text: "In an office, coordinating how a huge project's many moving parts fit together", stubFields: ["systems-engineering"] },
     ],
   },
+  {
+    id: "workplace-environment",
+    prompt: "Which environment sounds most appealing for your actual day-to-day work?",
+    options: [
+      { text: "A test track or shop, tuning how a vehicle performs", stubFields: ["automotive-engineering"] },
+      { text: "A power plant or renewable energy site", stubFields: ["energy-engineering"] },
+      { text: "A job site, watching a large structure go up", stubFields: ["structural-engineering"] },
+      { text: "A cleanroom, working at a microscopic scale", stubFields: ["semiconductor-engineering"] },
+    ],
+  },
+  {
+    id: "problem-scale",
+    prompt: "Which scale of problem appeals to you more?",
+    options: [
+      { text: "Millions of identical parts, assembled the same way every time", stubFields: ["manufacturing-engineering"] },
+      { text: "One massive, one-of-a-kind project with countless moving pieces", stubFields: ["systems-engineering"] },
+      { text: "A single vehicle, refined down to the smallest detail", stubFields: ["automotive-engineering"] },
+      { text: "A single building, engineered to handle exactly the loads it needs to", stubFields: ["structural-engineering"] },
+    ],
+  },
+  {
+    id: "public-need",
+    prompt: "Which public need would you rather help meet?",
+    options: [
+      { text: "Keeping the power grid reliable as demand keeps growing", stubFields: ["energy-engineering"] },
+      { text: "Making sure buildings and bridges can take the load", stubFields: ["structural-engineering"] },
+      { text: "Making vehicles safer and more efficient", stubFields: ["automotive-engineering"] },
+      { text: "Designing how a building's systems actually work together", stubFields: ["architectural-engineering"] },
+    ],
+  },
 ];

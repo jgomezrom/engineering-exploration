@@ -19,7 +19,7 @@ export const concepts: Concept[] = [
     explanation:
       "Torque is what makes something rotate instead of just moving in a straight line. It depends on both how much force you apply and how far from the pivot point you apply it — that's why a longer wrench makes it easier to loosen a tight bolt: the same amount of force, applied farther from the pivot, creates more torque.",
     realWorldExample: "Turning a wrench, pedaling a bike, or a catapult's arm swinging around its pivot all involve torque.",
-    relatedFields: ["mechanical-engineering", "robotics-engineering"],
+    relatedFields: ["mechanical-engineering", "robotics-engineering", "automotive-engineering"],
   },
   {
     slug: "friction",
@@ -109,7 +109,7 @@ export const concepts: Concept[] = [
     explanation:
       "A structure's job is to carry loads — its own weight, the people and things inside or on it, and external forces like wind or earthquakes — safely down to the ground or its supports. How a structure is shaped matters enormously: triangular shapes (trusses) resist collapsing in a way that squares don't, which is why so much structural engineering comes down to arranging materials into triangles.",
     realWorldExample: "A bridge's truss framework, a building's steel skeleton, or the triangular supports on a spaghetti bridge are all structures at work.",
-    relatedFields: ["civil-engineering", "aerospace-engineering"],
+    relatedFields: ["civil-engineering", "aerospace-engineering", "structural-engineering", "architectural-engineering"],
   },
   {
     slug: "materials",
@@ -119,7 +119,7 @@ export const concepts: Concept[] = [
     explanation:
       "No design works the same way in every material — a shape that's strong in steel might fail in plastic, and a material that's great under compression, like concrete, might be weak under tension. Choosing the right material for the job, and understanding how it behaves under real conditions, is its own entire engineering discipline.",
     realWorldExample: "Aircraft use lightweight alloys because weight matters enormously for flight, while bridges often use steel and concrete because they need to be strong under very different kinds of load.",
-    relatedFields: ["materials-engineering", "aerospace-engineering", "mechanical-engineering"],
+    relatedFields: ["materials-engineering", "aerospace-engineering", "mechanical-engineering", "semiconductor-engineering"],
   },
   {
     slug: "algorithms",
@@ -139,6 +139,50 @@ export const concepts: Concept[] = [
     explanation:
       "A control system continuously measures its own output, compares it to a target, and adjusts itself to close the gap — a loop called feedback. This is what lets a thermostat hold a room at a steady temperature, or a robot arm settle precisely onto a target position instead of overshooting and oscillating forever.",
     realWorldExample: "A thermostat turning the heat on and off to hold a target temperature, or cruise control adjusting a car's throttle to maintain a set speed, are both control systems.",
-    relatedFields: ["electrical-engineering", "robotics-engineering", "computer-engineering"],
+    relatedFields: ["electrical-engineering", "robotics-engineering", "computer-engineering", "systems-engineering"],
+  },
+  {
+    slug: "thermodynamics",
+    name: "Thermodynamics",
+    category: "Mechanical",
+    shortDefinition: "How heat and energy move, and the rules that govern converting one into the other.",
+    explanation:
+      "Thermodynamics governs how heat flows and how energy converts between forms — and it comes with hard limits: heat always flows from hot to cold on its own, and no engine can convert 100% of the heat it takes in into useful work. Every engine, power plant, and reactor is built around working within those limits, not against them.",
+    realWorldExample:
+      "A car engine converting burning fuel into motion (with a lot of that energy lost as heat), a nuclear reactor turning heat into steam to spin a turbine, or a refrigerator moving heat out of a cold space are all thermodynamics at work.",
+    relatedFields: ["mechanical-engineering", "chemical-engineering", "nuclear-engineering", "petroleum-engineering", "energy-engineering"],
+  },
+  {
+    slug: "fluid-dynamics",
+    name: "Fluid Dynamics",
+    category: "Mechanical",
+    shortDefinition: "How liquids and gases move, and the forces they exert on whatever they flow around.",
+    explanation:
+      "Fluid dynamics describes how liquids and gases behave in motion — how fast they flow, how much pressure they exert, and how they push on the surfaces they move past or around. It's why a wing generates lift, why a ship's hull is shaped the way it is, and why a pipeline has to be sized correctly to move oil efficiently without excessive pressure loss.",
+    realWorldExample:
+      "Air flowing over an aircraft wing, water pushing against a ship's hull, or oil moving through a pipeline are all governed by fluid dynamics.",
+    relatedFields: ["aerospace-engineering", "marine-engineering", "petroleum-engineering", "environmental-engineering", "mechanical-engineering"],
+  },
+  {
+    slug: "biocompatibility",
+    name: "Biocompatibility",
+    category: "Structures & Materials",
+    shortDefinition: "Whether a material can function inside or on the human body without causing harmful reactions.",
+    explanation:
+      "A material can be mechanically perfect and still fail completely if the body rejects it. Biocompatibility is about whether a material triggers inflammation, an immune response, or toxic reactions when it's implanted or otherwise used in or on the body — a real engineering constraint layered on top of a material's normal mechanical properties, not just a medical afterthought.",
+    realWorldExample:
+      "A hip implant made of titanium (which the body tolerates well), a coating on a stent designed to prevent clotting, or a suture material designed to safely dissolve over time are all engineered for biocompatibility.",
+    relatedFields: ["biomedical-engineering", "materials-engineering"],
+  },
+  {
+    slug: "process-optimization",
+    name: "Process Optimization",
+    category: "Software & Systems",
+    shortDefinition: "Finding and removing wasted time, material, or effort in a process, without changing what the process actually accomplishes.",
+    explanation:
+      "Process optimization means looking at how something already gets done — a factory line, a supply route, an irrigation schedule — and finding where time, material, or effort is being wasted, then redesigning around it. The task itself usually doesn't change; how it's organized does. Small changes in ordering, timing, or layout can add up to a large real-world difference.",
+    realWorldExample:
+      "Rearranging a factory floor so parts travel a shorter distance, adjusting an irrigation schedule to use less water for the same crop yield, or redesigning an assembly line to cut wasted motion are all process optimization.",
+    relatedFields: ["industrial-engineering", "manufacturing-engineering", "agricultural-engineering"],
   },
 ];

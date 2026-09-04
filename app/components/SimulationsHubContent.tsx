@@ -60,6 +60,22 @@ const ICONS: Record<(typeof SIMULATIONS)[number]["slug"], React.ReactNode> = {
       <path d="M4 30h30" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2 2" opacity="0.5" />
     </svg>
   ),
+  pendulum: (
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+      <path d="M12 8h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="20" cy="8" r="1.6" fill="currentColor" />
+      <path d="M20 8v20" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" opacity="0.4" />
+      <path d="M20 8l8 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="28" cy="26" r="4" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  ),
+  "heat-conduction": (
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+      <rect x="16" y="9" width="8" height="22" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M6 20h9M25 20h9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M31 20l3-3M31 20l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
 };
 
 export default function SimulationsHubContent() {
