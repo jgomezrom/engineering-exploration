@@ -15,6 +15,10 @@ export const simulationsHubTranslations = {
     gearDescription: "Resize two meshing gears and watch the exact trade-off between speed and torque play out.",
     buoyancyTitle: "Buoyancy & Density",
     buoyancyDescription: "Figure out why a solid block sinks but the same material, shaped into a hull, floats.",
+    logicGateTitle: "Logic Gates",
+    logicGateDescription: "Flip inputs and switch between AND/OR/XOR/NOT gates, with the truth table built live.",
+    projectileTitle: "Projectile Motion",
+    projectileDescription: "Adjust launch angle and power and watch the trajectory change — and see why real flight needs more.",
   },
   es: {
     backToSimulations: "← Volver a todas las simulaciones",
@@ -32,5 +36,9 @@ export const simulationsHubTranslations = {
     gearDescription: "Cambia el tamaño de dos engranajes engranados y observa el intercambio exacto entre velocidad y torque.",
     buoyancyTitle: "Flotabilidad y Densidad",
     buoyancyDescription: "Descubre por qué un bloque sólido se hunde pero el mismo material, con forma de casco, flota.",
+    logicGateTitle: "Puertas Lógicas",
+    logicGateDescription: "Cambia las entradas y alterna entre puertas AND/OR/XOR/NOT, con la tabla de verdad construida en vivo.",
+    projectileTitle: "Movimiento de Proyectiles",
+    projectileDescription: "Ajusta el ángulo y la potencia de lanzamiento y observa la trayectoria cambiar — y por qué el vuelo real necesita más.",
   },
 };

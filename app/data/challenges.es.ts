@@ -245,6 +245,7 @@ export const challengesEs: Challenge[] = [
       "Elige distancia o tiempo en el aire como tu única meta antes de empezar — estás optimizando para una, no para ambas",
     ],
     conceptSlug: "forces",
+    simulationHref: "/simulations/projectile-motion",
     conceptTaught:
       "Sustentación y resistencia — cómo la forma del ala y la distribución del peso cambian cómo se comporta un avión en el aire, la misma compensación básica con la que trabajan los diseñadores de aeronaves reales a una escala mucho mayor.",
     materials: ["Varias hojas de papel (para múltiples intentos)", "Una cinta métrica o una forma de contar pasos para la distancia", "Un cronómetro o el temporizador del teléfono, si estás probando el tiempo en el aire"],
@@ -487,6 +488,7 @@ export const challengesEs: Challenge[] = [
       "Debe contar en el orden binario correcto sin saltarse ninguna combinación",
       "No se permite calculadora ni tabla de conversión escrita mientras se cuenta — descubre cada paso mediante la propia regla de conteo",
     ],
+    simulationHref: "/simulations/logic-gates",
     conceptTaught:
       "Representación binaria — las computadoras almacenan y procesan cada número, letra, e instrucción usando solo dos estados (0 y 1). Cuatro bits pueden representar exactamente 16 valores diferentes (2 elevado a la cuarta potencia), que es por eso que más bits significa que una computadora puede representar números más grandes o más posibilidades.",
     materials: ["4 vasos, cartas, o monedas, cada uno volteable entre dos estados distintos", "Una superficie plana para alinearlos"],

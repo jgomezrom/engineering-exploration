@@ -41,7 +41,7 @@ export const resourceLinksEs: Record<string, { title: string; description: strin
   "/simulations": {
     title: "Simulaciones Interactivas",
     description:
-      "Palancas, circuitos, vigas, engranajes, y flotabilidad — ajusta variables reales y observa cómo responde la física real, con las matemáticas explicadas.",
+      "Palancas, circuitos, vigas, engranajes, flotabilidad, puertas lógicas, y movimiento de proyectiles — ajusta variables reales y observa cómo responde la física real.",
   },
   "/design-process": {
     title: "El Proceso de Diseño de Ingeniería",

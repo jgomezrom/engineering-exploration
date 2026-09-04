@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/simulations/beam-deflection",
     "/simulations/gear-ratio",
     "/simulations/buoyancy",
+    "/simulations/logic-gates",
+    "/simulations/projectile-motion",
     "/sources",
     "/parents-and-teachers",
     "/quiz/more-majors",

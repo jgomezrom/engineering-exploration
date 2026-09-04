@@ -239,6 +239,7 @@ export const challenges: Challenge[] = [
       "Pick distance or hang time as your single goal before you start — you're optimizing for one, not both",
     ],
     conceptSlug: "forces",
+    simulationHref: "/simulations/projectile-motion",
     conceptTaught:
       "Lift and drag — how wing shape and weight distribution change how a plane behaves in the air, the same basic tradeoff real aircraft designers work with at a much larger scale.",
     materials: ["Several sheets of paper (for multiple attempts)", "A tape measure or a way to count paces for distance", "A stopwatch or phone timer, if testing for hang time"],
@@ -481,6 +482,7 @@ export const challenges: Challenge[] = [
       "Must count in the correct binary order without skipping a combination",
       "No calculator or written conversion chart allowed while counting — figure out each step by the counting rule itself",
     ],
+    simulationHref: "/simulations/logic-gates",
     conceptTaught:
       "Binary representation — computers store and process every number, letter, and instruction using only two states (0 and 1). Four bits can represent exactly 16 different values (2 to the power of 4), which is why more bits means a computer can represent bigger numbers or more possibilities.",
     materials: ["4 cups, cards, or coins, each flippable between two distinct states", "A flat surface to line them up"],

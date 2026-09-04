@@ -43,6 +43,22 @@ const ICONS = {
       <path d="M13 22V15h10v3l-3 4z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
   ),
+  logicGate: (
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+      <path d="M16 12H24A8 8 0 0 1 24 28H16Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M8 16h8M8 24h8M32 20h-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="8" cy="16" r="1.6" fill="currentColor" />
+      <circle cx="8" cy="24" r="1.6" fill="currentColor" />
+    </svg>
+  ),
+  projectile: (
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+      <path d="M6 30Q16 8 32 30" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="6" cy="30" r="2" fill="currentColor" />
+      <circle cx="32" cy="30" r="2" fill="currentColor" />
+      <path d="M4 30h30" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2 2" opacity="0.5" />
+    </svg>
+  ),
 };
 
 const SIMULATIONS = [
@@ -51,6 +67,8 @@ const SIMULATIONS = [
   { slug: "beam-deflection", icon: ICONS.beam, titleKey: "beamTitle", descKey: "beamDescription" },
   { slug: "gear-ratio", icon: ICONS.gear, titleKey: "gearTitle", descKey: "gearDescription" },
   { slug: "buoyancy", icon: ICONS.buoyancy, titleKey: "buoyancyTitle", descKey: "buoyancyDescription" },
+  { slug: "logic-gates", icon: ICONS.logicGate, titleKey: "logicGateTitle", descKey: "logicGateDescription" },
+  { slug: "projectile-motion", icon: ICONS.projectile, titleKey: "projectileTitle", descKey: "projectileDescription" },
 ] as const;
 
 export default function SimulationsHubContent() {
