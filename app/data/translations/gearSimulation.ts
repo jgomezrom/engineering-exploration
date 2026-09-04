@@ -1,0 +1,46 @@
+export const gearSimulationTranslations = {
+  en: {
+    badge: "Simulation",
+    heading: "Gear Ratio Simulator",
+    introBefore: "Change how many teeth each gear has and watch them spin at their real relative speeds. It's the same trade-off as the lever — you're never getting more speed and more torque for free, only trading one for the other, which is exactly what happens inside a",
+    challengeLink: "bicycle's gears or a car's transmission",
+    introAfter: ".",
+    inputLabel: "INPUT",
+    outputLabel: "OUTPUT",
+    inputTeeth: "Input gear teeth",
+    outputTeeth: "Output gear teeth",
+    speedReadout: (v: string) => `${v}× input speed`,
+    torqueReadout: (v: string) => `${v}× input torque`,
+    mathHeading: "The math behind it",
+    mathP1Before: "Where two gears mesh, their teeth move past that contact point at exactly the same speed — so a gear with fewer teeth has to spin faster to keep up with a bigger neighbor, the same way a small wheel has to spin faster than a big one to cover the same ground. That gives a simple ratio:",
+    formula: "teeth(input) × speed(input) = teeth(output) × speed(output)",
+    mathP2:
+      "Torque works the opposite way. Ignoring friction, the power going in has to equal the power coming out — and power is torque times speed. So whatever speed a gear pair loses, it gains back in torque, in the same proportion: output torque = input torque × (output teeth ÷ input teeth). A small gear driving a big one trades speed for torque — more turning force, delivered slower. That's the entire idea behind a bicycle's low gear for climbing hills, or a car downshifting to accelerate.",
+    mathP3:
+      "This simulator ignores friction — real gear trains lose a little power to heat wherever the teeth rub — and draws teeth as simple straight spokes rather than the precisely curved shape (called an involute profile) real gear teeth use to mesh smoothly without slipping. The speed and torque trade-off it shows, though, is exact.",
+    conceptLink: "More on gears as a concept →",
+    diagramAriaLabel: "Two meshing gears of different sizes spinning at speeds inversely proportional to their tooth counts",
+  },
+  es: {
+    badge: "Simulación",
+    heading: "Simulador de Relación de Engranajes",
+    introBefore: "Cambia cuántos dientes tiene cada engranaje y observa cómo giran a sus velocidades relativas reales. Es el mismo compromiso que la palanca — nunca obtienes más velocidad y más torque gratis, solo intercambias uno por el otro, que es exactamente lo que pasa dentro de los",
+    challengeLink: "cambios de una bicicleta o la transmisión de un auto",
+    introAfter: ".",
+    inputLabel: "ENTRADA",
+    outputLabel: "SALIDA",
+    inputTeeth: "Dientes del engranaje de entrada",
+    outputTeeth: "Dientes del engranaje de salida",
+    speedReadout: (v: string) => `${v}× la velocidad de entrada`,
+    torqueReadout: (v: string) => `${v}× el torque de entrada`,
+    mathHeading: "Las matemáticas detrás de esto",
+    mathP1Before: "Donde dos engranajes se engranan, sus dientes pasan por ese punto de contacto exactamente a la misma velocidad — así que un engranaje con menos dientes tiene que girar más rápido para mantenerse al ritmo de un vecino más grande, de la misma forma en que una rueda pequeña tiene que girar más rápido que una grande para cubrir la misma distancia. Eso da una relación simple:",
+    formula: "dientes(entrada) × velocidad(entrada) = dientes(salida) × velocidad(salida)",
+    mathP2:
+      "El torque funciona al revés. Ignorando la fricción, la potencia que entra tiene que ser igual a la potencia que sale — y la potencia es torque multiplicado por velocidad. Entonces lo que un par de engranajes pierde en velocidad, lo recupera en torque, en la misma proporción: torque de salida = torque de entrada × (dientes de salida ÷ dientes de entrada). Un engranaje pequeño que impulsa uno grande intercambia velocidad por torque — más fuerza de giro, entregada más lento. Esa es toda la idea detrás de la marcha baja de una bicicleta para subir cerros, o un auto que reduce de marcha para acelerar.",
+    mathP3:
+      "Este simulador ignora la fricción — los trenes de engranajes reales pierden algo de potencia en forma de calor donde los dientes se rozan — y dibuja los dientes como simples radios rectos en lugar de la forma curva precisa (llamada perfil de envolvente) que usan los dientes de engranajes reales para engranar suavemente sin resbalar. El intercambio de velocidad y torque que muestra, sin embargo, es exacto.",
+    conceptLink: "Más sobre los engranajes como concepto →",
+    diagramAriaLabel: "Dos engranajes de diferentes tamaños engranados, girando a velocidades inversamente proporcionales a su número de dientes",
+  },
+};

@@ -19,7 +19,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Levers and stored energy — how arm length, pivot position, and rubber-band tension change how much force gets transferred to the launched object.",
     conceptSlug: "torque",
-    simulationHref: "/simulations",
+    simulationHref: "/simulations/lever-torque",
     safetyNote: "Ask an adult before using a hot glue gun, and always aim the launch away from faces and breakable objects.",
     materials: [
       "About 10 popsicle sticks (craft sticks)",
@@ -65,6 +65,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Truss design and load paths — why triangles resist collapsing sideways the way squares don't, and how a structure's shape determines where it's strongest and weakest.",
     conceptSlug: "stress-strain",
+    simulationHref: "/simulations/beam-deflection",
     safetyNote: "Ask an adult before using a hot glue gun — it heats up enough to burn skin.",
     materials: [
       "1–2 boxes of uncooked spaghetti",
@@ -111,6 +112,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Current, polarity, and current-limiting resistors — why an LED only works in one direction, and why connecting it directly to a battery without a resistor is a bad idea.",
     conceptSlug: "current",
+    simulationHref: "/simulations/circuit",
     materials: [
       "A small breadboard",
       "A 9V battery with a battery clip, or an AA battery holder (2–4 batteries)",
@@ -396,6 +398,7 @@ export const challenges: Challenge[] = [
       "Weight must be added gradually, not dropped all at once",
     ],
     conceptSlug: "stress-strain",
+    simulationHref: "/simulations/beam-deflection",
     conceptTaught:
       "Stress and strain — every material can handle a certain amount of force before it deforms or breaks, and that limit is different for every material. Comparing materials head-to-head under the same conditions is exactly how materials engineers evaluate a new material.",
     materials: [

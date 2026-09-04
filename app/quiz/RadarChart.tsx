@@ -33,10 +33,18 @@ const MAX_RADIUS = 130;
 const LABEL_RADIUS_FACTOR = 1.3;
 const GRID_LEVELS = [0.25, 0.5, 0.75, 1];
 
+// Math.cos/Math.sin can differ in their very last bit between the server's
+// and the browser's JS engine — invisible to the eye, but enough for React
+// to see two different attribute strings and report a hydration mismatch.
+// Rounding closes that gap without any visible effect.
+function round(n: number) {
+  return Math.round(n * 100) / 100;
+}
+
 function pointAt(index: number, total: number, radiusFraction: number) {
   const angle = -Math.PI / 2 + (index * 2 * Math.PI) / total;
   const r = MAX_RADIUS * radiusFraction;
-  return { x: CENTER + r * Math.cos(angle), y: CENTER + r * Math.sin(angle) };
+  return { x: round(CENTER + r * Math.cos(angle)), y: round(CENTER + r * Math.sin(angle)) };
 }
 
 export default function RadarChart({ results }: { results: FieldResult[] }) {

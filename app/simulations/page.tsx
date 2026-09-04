@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import SimulationsContent from "../components/SimulationsContent";
+import SimulationsHubContent from "../components/SimulationsHubContent";
 
 export const metadata: Metadata = {
-  title: "Lever & Torque Simulator | Engineering Exploration",
+  title: "Interactive Simulations | Engineering Exploration",
   description:
-    "Drag two weights along a lever and watch it balance in real time — an interactive way to see how torque, not just weight, determines whether a lever tips.",
+    "Adjust real variables — weight, voltage, load, gear teeth, density — and watch real physics respond instantly, with the math behind each one explained plainly.",
 };
 
 export default function SimulationsPage() {
-  return <SimulationsContent />;
+  return <SimulationsHubContent />;
 }

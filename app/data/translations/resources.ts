@@ -39,9 +39,9 @@ export const resourceLinksEs: Record<string, { title: string; description: strin
     description: "Fuerzas, circuitos, estructuras, algoritmos, y más — las ideas centrales, explicadas en lenguaje sencillo.",
   },
   "/simulations": {
-    title: "Simulador de Palanca y Torque",
+    title: "Simulaciones Interactivas",
     description:
-      "Ajusta el peso y la distancia en una palanca y obsérvala equilibrarse en tiempo real, con las matemáticas explicadas.",
+      "Palancas, circuitos, vigas, engranajes, y flotabilidad — ajusta variables reales y observa cómo responde la física real, con las matemáticas explicadas.",
   },
   "/design-process": {
     title: "El Proceso de Diseño de Ingeniería",

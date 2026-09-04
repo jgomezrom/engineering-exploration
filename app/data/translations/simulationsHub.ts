@@ -1,0 +1,36 @@
+export const simulationsHubTranslations = {
+  en: {
+    backToSimulations: "← Back to all simulations",
+    badge: "Simulations",
+    heading: "Interactive Simulations",
+    intro:
+      "Adjust real variables and watch real physics respond instantly, with the math behind each one explained plainly — no equations left unexplained, no black boxes.",
+    leverTitle: "Lever & Torque",
+    leverDescription: "Balance two weights on a lever and see why distance from the pivot matters as much as weight.",
+    circuitTitle: "Circuit & Ohm's Law",
+    circuitDescription: "Adjust voltage and resistance in a simple LED circuit and watch the current — and the brightness — respond.",
+    beamTitle: "Beam Load & Deflection",
+    beamDescription: "Move a load along a beam and change its stiffness to see what actually makes a structure bend or hold.",
+    gearTitle: "Gear Ratio",
+    gearDescription: "Resize two meshing gears and watch the exact trade-off between speed and torque play out.",
+    buoyancyTitle: "Buoyancy & Density",
+    buoyancyDescription: "Figure out why a solid block sinks but the same material, shaped into a hull, floats.",
+  },
+  es: {
+    backToSimulations: "← Volver a todas las simulaciones",
+    badge: "Simulaciones",
+    heading: "Simulaciones Interactivas",
+    intro:
+      "Ajusta variables reales y observa cómo responde la física real al instante, con las matemáticas detrás de cada una explicadas claramente — ninguna ecuación sin explicar, ninguna caja negra.",
+    leverTitle: "Palanca y Torque",
+    leverDescription: "Equilibra dos pesos en una palanca y descubre por qué la distancia al punto de apoyo importa tanto como el peso.",
+    circuitTitle: "Circuito y Ley de Ohm",
+    circuitDescription: "Ajusta el voltaje y la resistencia en un circuito LED simple y observa cómo responden la corriente — y el brillo.",
+    beamTitle: "Carga y Deflexión de Vigas",
+    beamDescription: "Mueve una carga a lo largo de una viga y cambia su rigidez para ver qué es lo que realmente hace que una estructura se doble o aguante.",
+    gearTitle: "Relación de Engranajes",
+    gearDescription: "Cambia el tamaño de dos engranajes engranados y observa el intercambio exacto entre velocidad y torque.",
+    buoyancyTitle: "Flotabilidad y Densidad",
+    buoyancyDescription: "Descubre por qué un bloque sólido se hunde pero el mismo material, con forma de casco, flota.",
+  },
+};

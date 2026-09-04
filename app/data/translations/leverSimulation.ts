@@ -1,6 +1,6 @@
-export const simulationsTranslations = {
+export const leverSimulationTranslations = {
   en: {
-    badge: "Simulations",
+    badge: "Simulation",
     heading: "Lever & Torque Simulator",
     introBefore: "Adjust the weight and distance on each side and watch the lever respond instantly. It's the same idea behind the",
     catapultLink: "popsicle-stick catapult challenge",
@@ -26,7 +26,7 @@ export const simulationsTranslations = {
     diagramAriaLabel: "A lever balancing two weights, tilting based on which side has more torque",
   },
   es: {
-    badge: "Simulaciones",
+    badge: "Simulación",
     heading: "Simulador de Palanca y Torque",
     introBefore: "Ajusta el peso y la distancia de cada lado y observa cómo responde la palanca al instante. Es la misma idea detrás del",
     catapultLink: "desafío de la catapulta de palitos de madera",

@@ -11,11 +11,19 @@ const CENTER = SIZE / 2;
 const RADIUS = 118;
 const NODE_RADIUS = 26;
 
+// Math.cos/Math.sin can differ in their very last bit between the server's
+// and the browser's JS engine — invisible to the eye, but enough for React
+// to see two different attribute strings and report a hydration mismatch.
+// Rounding closes that gap without any visible effect.
+function round(n: number) {
+  return Math.round(n * 100) / 100;
+}
+
 function pointAt(index: number, total: number) {
   const angle = -Math.PI / 2 + (index * 2 * Math.PI) / total;
   return {
-    x: CENTER + RADIUS * Math.cos(angle),
-    y: CENTER + RADIUS * Math.sin(angle),
+    x: round(CENTER + RADIUS * Math.cos(angle)),
+    y: round(CENTER + RADIUS * Math.sin(angle)),
   };
 }
 

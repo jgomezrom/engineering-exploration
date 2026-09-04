@@ -1,0 +1,46 @@
+export const circuitSimulationTranslations = {
+  en: {
+    badge: "Simulation",
+    heading: "Circuit & Ohm's Law Simulator",
+    introBefore: "Adjust the battery voltage and the resistor's resistance and watch the LED respond instantly. It's the same circuit as the",
+    challengeLink: "basic LED circuit challenge",
+    introAfter: "— just without needing to solder anything.",
+    voltage: "Voltage",
+    resistance: "Resistance",
+    current: (ma: string | number) => `${ma} mA flowing`,
+    tooMuchCurrent: "Too much current — a real LED would likely burn out",
+    mathHeading: "The math behind it",
+    mathP1Before: "How much current flows through a circuit depends on two things: how hard the voltage is pushing, and how much the resistance is fighting back. That relationship is",
+    mathP1Ohm: "Ohm's Law",
+    mathP1After: ", one of the most-used equations in electrical engineering:",
+    formula: "current = voltage ÷ resistance (I = V ÷ R)",
+    mathP2:
+      "That's why turning up the voltage brightens the LED, and turning up the resistance dims it — more voltage pushes more current through, and more resistance chokes it back down. It's also why the resistor is doing real work here even though it isn't the part lighting up: an LED conducts current very easily once it turns on, so without something limiting that current, it would draw far more than it's built for and burn out almost instantly. The resistor's job isn't to power the LED — it's to protect it.",
+    mathP3:
+      "This simulator treats the LED as a simple current-driven brightness indicator. Real LEDs have their own small voltage drop before they conduct at all (usually 1.8–3.3V depending on color) and their brightness curve isn't perfectly linear — but the core relationship this simulator shows, more current in means more light out, up to a point where the LED can be damaged, holds.",
+    conceptLink: "More on current as a concept →",
+    diagramAriaLabel: "A battery, resistor, and LED in a series circuit, with animated current flow and LED brightness that responds to the current",
+  },
+  es: {
+    badge: "Simulación",
+    heading: "Simulador de Circuito y Ley de Ohm",
+    introBefore: "Ajusta el voltaje de la batería y la resistencia y observa cómo responde el LED al instante. Es el mismo circuito del",
+    challengeLink: "desafío del circuito LED básico",
+    introAfter: "— solo que sin necesitar soldar nada.",
+    voltage: "Voltaje",
+    resistance: "Resistencia",
+    current: (ma: string | number) => `${ma} mA fluyendo`,
+    tooMuchCurrent: "Demasiada corriente — un LED real probablemente se quemaría",
+    mathHeading: "Las matemáticas detrás de esto",
+    mathP1Before: "Cuánta corriente fluye por un circuito depende de dos cosas: qué tan fuerte empuja el voltaje, y cuánto se resiste la resistencia. Esa relación es la",
+    mathP1Ohm: "Ley de Ohm",
+    mathP1After: ", una de las ecuaciones más usadas en la ingeniería eléctrica:",
+    formula: "corriente = voltaje ÷ resistencia (I = V ÷ R)",
+    mathP2:
+      "Por eso subir el voltaje ilumina más el LED, y subir la resistencia lo atenúa — más voltaje empuja más corriente, y más resistencia la frena. También por eso la resistencia está haciendo un trabajo real aquí aunque no sea la parte que se ilumina: un LED conduce corriente muy fácilmente una vez que se enciende, así que sin algo que limite esa corriente, consumiría mucha más de la que está diseñado para soportar y se quemaría casi al instante. El trabajo de la resistencia no es alimentar al LED — es protegerlo.",
+    mathP3:
+      "Este simulador trata al LED como un simple indicador de brillo impulsado por corriente. Los LEDs reales tienen su propia pequeña caída de voltaje antes de siquiera empezar a conducir (usualmente 1.8–3.3V según el color) y su curva de brillo no es perfectamente lineal — pero la relación central que muestra este simulador, más corriente significa más luz, hasta un punto en el que el LED puede dañarse, se mantiene.",
+    conceptLink: "Más sobre la corriente como concepto →",
+    diagramAriaLabel: "Una batería, resistencia, y LED en un circuito en serie, con flujo de corriente animado y brillo del LED que responde a la corriente",
+  },
+};

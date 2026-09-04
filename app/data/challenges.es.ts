@@ -25,7 +25,7 @@ export const challengesEs: Challenge[] = [
     conceptTaught:
       "Palancas y energía almacenada — cómo la longitud del brazo, la posición del punto de apoyo, y la tensión de la liga cambian cuánta fuerza se transfiere al objeto lanzado.",
     conceptSlug: "torque",
-    simulationHref: "/simulations",
+    simulationHref: "/simulations/lever-torque",
     safetyNote: "Pídele permiso a un adulto antes de usar una pistola de silicón caliente, y siempre apunta el lanzamiento lejos de caras y objetos frágiles.",
     materials: [
       "Cerca de 10 palitos de madera (palitos de manualidades)",
@@ -71,6 +71,7 @@ export const challengesEs: Challenge[] = [
     conceptTaught:
       "Diseño de armaduras y trayectorias de carga — por qué los triángulos resisten colapsar hacia los lados de una forma que los cuadrados no, y cómo la forma de una estructura determina dónde es más fuerte y más débil.",
     conceptSlug: "stress-strain",
+    simulationHref: "/simulations/beam-deflection",
     safetyNote: "Pídele permiso a un adulto antes de usar una pistola de silicón caliente — se calienta lo suficiente como para quemar la piel.",
     materials: [
       "De 1 a 2 cajas de espagueti crudo",
@@ -117,6 +118,7 @@ export const challengesEs: Challenge[] = [
     conceptTaught:
       "Corriente, polaridad, y resistores limitadores de corriente — por qué un LED solo funciona en una dirección, y por qué conectarlo directamente a una batería sin un resistor es una mala idea.",
     conceptSlug: "current",
+    simulationHref: "/simulations/circuit",
     materials: [
       "Una protoboard pequeña",
       "Una batería de 9V con un clip para batería, o un portapilas AA (de 2 a 4 pilas)",
@@ -402,6 +404,7 @@ export const challengesEs: Challenge[] = [
       "El peso debe agregarse gradualmente, no dejarlo caer todo de una vez",
     ],
     conceptSlug: "stress-strain",
+    simulationHref: "/simulations/beam-deflection",
     conceptTaught:
       "Estrés y deformación — todo material puede soportar cierta cantidad de fuerza antes de deformarse o romperse, y ese límite es diferente para cada material. Comparar materiales cara a cara bajo las mismas condiciones es exactamente cómo los ingenieros de materiales evalúan un material nuevo.",
     materials: [
