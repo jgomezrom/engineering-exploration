@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { GearTeeth } from "./FieldIllustration";
 import { useLanguage } from "../context/LanguageContext";
 import { chromeTranslations } from "../data/translations/chrome";
 
@@ -24,19 +26,53 @@ export default function Footer() {
   )}&body=${encodeURIComponent(`Page: ${pathname}\n\n`)}`;
 
   return (
-    <footer className="w-full border-t border-neutral-100 bg-white dark:border-white/10 dark:bg-black">
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-8 text-sm text-neutral-600 dark:text-neutral-400 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} Engineering Exploration. {t.footerTagline}</p>
-        <nav className="flex flex-wrap gap-x-5 gap-y-2">
-          {footerLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-primary">
-              {link.label}
-            </Link>
-          ))}
-          <a href={mailtoHref} className="hover:text-primary">
-            {t.footerReportMistake}
-          </a>
-        </nav>
+    <footer className="relative w-full overflow-hidden bg-[#0a2540]">
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(165,226,234,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(165,226,234,0.07) 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
+        }}
+      />
+
+      <span className="pointer-events-none absolute left-6 top-6 hidden h-8 w-8 border-l-2 border-t-2 border-[#a5e2ea]/30 lg:block" />
+      <span className="pointer-events-none absolute right-6 top-6 hidden h-8 w-8 border-r-2 border-t-2 border-[#a5e2ea]/30 lg:block" />
+      <span className="pointer-events-none absolute bottom-6 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-[#a5e2ea]/30 lg:block" />
+      <span className="pointer-events-none absolute bottom-6 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-[#a5e2ea]/30 lg:block" />
+
+      <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-10 px-6 py-16 sm:flex-row sm:gap-12">
+        <Image
+          src="/logo-badge.jpg"
+          alt="Engineering Exploration"
+          width={1243}
+          height={864}
+          className="h-auto w-56 flex-shrink-0 sm:w-64"
+          sizes="(min-width: 640px) 16rem, 14rem"
+        />
+
+        <div className="flex flex-1 flex-col items-center gap-5 text-center sm:items-start sm:text-left">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-9 w-9 text-[#a5e2ea]">
+            <circle cx="20" cy="20" r="12" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="20" cy="20" r="3" stroke="currentColor" strokeWidth="1.5" />
+            <GearTeeth cx={20} cy={20} r={12} count={10} toothH={4} />
+          </svg>
+
+          <p className="text-sm text-[#dbeef2]">
+            © {new Date().getFullYear()} Engineering Exploration. {t.footerTagline}
+          </p>
+
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#dbeef2]">
+            {footerLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:text-[#a5e2ea]">
+                {link.label}
+              </Link>
+            ))}
+            <a href={mailtoHref} className="hover:text-[#a5e2ea]">
+              {t.footerReportMistake}
+            </a>
+          </nav>
+        </div>
       </div>
     </footer>
   );

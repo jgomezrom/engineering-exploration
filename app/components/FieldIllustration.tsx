@@ -67,7 +67,7 @@ function round(n: number) {
 
 // Chunky trapezoidal teeth (base wider than tip) read as real gear teeth at
 // small sizes far better than thin radial lines do.
-function GearTeeth({ cx, cy, r, count, toothH, toothW = 0.34 }: { cx: number; cy: number; r: number; count: number; toothH: number; toothW?: number }) {
+export function GearTeeth({ cx, cy, r, count, toothH, toothW = 0.34 }: { cx: number; cy: number; r: number; count: number; toothH: number; toothW?: number }) {
   const segs: string[] = [];
   for (let i = 0; i < count; i++) {
     const mid = (i * 2 * Math.PI) / count;
