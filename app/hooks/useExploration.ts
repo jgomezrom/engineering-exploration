@@ -10,14 +10,21 @@ import { FieldSlug } from "../data/types";
 // instead of having to migrate old shapes.
 const STORAGE_KEY = "ee-exploration-v1";
 
+export type QuizResult = {
+  slug: FieldSlug;
+  percentage: number;
+  date: string; // "YYYY-MM-DD", the day the quiz was taken
+};
+
 type StoredExploration = {
   bookmarks: FieldSlug[];
   visited: FieldSlug[];
   lastVisitDate: string | null; // "YYYY-MM-DD", in the visitor's local calendar day
   streakDays: number;
+  lastQuizResult: QuizResult | null;
 };
 
-const EMPTY: StoredExploration = { bookmarks: [], visited: [], lastVisitDate: null, streakDays: 0 };
+const EMPTY: StoredExploration = { bookmarks: [], visited: [], lastVisitDate: null, streakDays: 0, lastQuizResult: null };
 
 function todayISO() {
   const d = new Date();
@@ -105,6 +112,16 @@ export function useExploration() {
     setData(next);
   }, []);
 
+  // Called once when the quiz reaches its results stage. Only the single top
+  // result is kept — this is a quick "what did I get last time" reference for
+  // the summary page, not a history of every attempt.
+  const saveQuizResult = useCallback((slug: FieldSlug, percentage: number) => {
+    const fresh = load();
+    const next: StoredExploration = { ...fresh, lastQuizResult: { slug, percentage, date: todayISO() } };
+    save(next);
+    setData(next);
+  }, []);
+
   return {
     hydrated,
     bookmarks: data.bookmarks,
@@ -113,5 +130,7 @@ export function useExploration() {
     visitedCount: data.visited.length,
     streakDays: data.streakDays,
     recordVisit,
+    lastQuizResult: data.lastQuizResult,
+    saveQuizResult,
   };
 }

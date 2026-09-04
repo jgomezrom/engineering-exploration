@@ -35,6 +35,7 @@ export const quizTranslations = {
     allFieldsRanked: (n: number) => `All ${n} fields, ranked`,
     exploreAllFields: "Explore all fields",
     retakeQuiz: "Retake the quiz",
+    seeSummaryLink: "See this saved to your exploration summary →",
     curiousAboutSmaller: "Curious about fields like automotive, structural, or semiconductor engineering?",
     smallerFieldsBody:
       "Those fields don't have the depth yet to fit into the scoring above, so there's a separate, more informal quiz just for them.",
@@ -77,6 +78,7 @@ export const quizTranslations = {
     allFieldsRanked: (n: number) => `Los ${n} campos, clasificados`,
     exploreAllFields: "Explorar todos los campos",
     retakeQuiz: "Repetir el cuestionario",
+    seeSummaryLink: "Ve esto guardado en tu resumen de exploración →",
     curiousAboutSmaller: "¿Curioso/a sobre campos como ingeniería automotriz, estructural, o de semiconductores?",
     smallerFieldsBody:
       "Esos campos todavía no tienen la profundidad para encajar en la calificación de arriba, así que hay un cuestionario separado y más informal solo para ellos.",

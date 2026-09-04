@@ -16,6 +16,7 @@ import { computeResults, THEME_LABELS } from "./scoring";
 import RadarChart from "./RadarChart";
 import { useLanguage } from "../context/LanguageContext";
 import { quizTranslations } from "../data/translations/quiz";
+import { useExploration } from "../hooks/useExploration";
 
 type Stage = "intro" | "question" | "results";
 
@@ -35,6 +36,7 @@ export default function QuizPage() {
   const displayQuestions = language === "es" ? quizQuestionsEs : quizQuestions;
   const displayChallenges = language === "es" ? challengesEs : challenges;
   const themeLabel = THEME_LABELS[language];
+  const { saveQuizResult } = useExploration();
 
   const [stage, setStage] = useState<Stage>("intro");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,6 +56,10 @@ export default function QuizPage() {
 
   function goNext() {
     if (isLastQuestion) {
+      const finalResults = computeResults(answers, displayQuestions);
+      if (finalResults[0] && finalResults[0].percentage > 0) {
+        saveQuizResult(finalResults[0].slug, finalResults[0].percentage);
+      }
       setStage("results");
     } else {
       setCurrentIndex(currentIndex + 1);
@@ -371,6 +377,9 @@ export default function QuizPage() {
           {t.retakeQuiz}
         </Button>
       </div>
+      <Link href="/my-summary" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+        {t.seeSummaryLink}
+      </Link>
 
       <div className="mt-12 border-t border-neutral-900/10 pt-8 dark:border-white/10">
         <h2 className="text-sm font-semibold text-neutral-900 dark:text-white">
