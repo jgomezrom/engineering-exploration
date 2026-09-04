@@ -4,7 +4,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "mechanical-engineering",
     name: "Mechanical Engineering",
-    tagline: "Designing and building machines and systems that move, power, and shape the physical world.",
+    tagline: "Machines and systems that move, power, and shape the physical world — designed and built from the ground up.",
     whatItIs:
       "Mechanical engineering is one of the broadest engineering fields. It's about how things move, how forces act on objects, and how machines are designed, built, and improved — everything from tiny mechanisms inside a watch to jet engines and factory robots.",
     whatEngineersWorkOn:
@@ -142,7 +142,7 @@ export const fields: EngineeringField[] = [
 {
   slug: "electrical-engineering",
   name: "Electrical Engineering",
-  tagline: "Understanding and designing the systems that generate, move, and control electricity and electronic signals.",
+  tagline: "How electricity and electronic signals actually get generated, moved, and controlled.",
   whatItIs:
     "Electrical engineering covers how electricity is generated, distributed, and used — from massive power grids down to the tiny circuits inside a phone. It splits into many sub-areas: power systems, electronics, signal processing, and more.",
   whatEngineersWorkOn:
@@ -176,7 +176,7 @@ export const fields: EngineeringField[] = [
     "Programming a microcontroller to respond to sensor input",
   ],
   typicalWorkday:
-    "Often a mix of circuit design software, testing equipment (like oscilloscopes and multimeters), and — in many roles — writing embedded software. Debugging a circuit that isn't working as expected is a very normal, recurring part of the job.",
+    "The toolkit spans circuit design software, testing equipment like oscilloscopes and multimeters, and — in many roles — writing embedded software. Debugging a circuit that isn't working as expected is a very normal, recurring part of the job.",
   dayInLife: {
     blocks: [
       { time: "9:00 AM", label: "Circuit design", detail: "Working in circuit design software, laying out a new component on the board." },
@@ -189,7 +189,7 @@ export const fields: EngineeringField[] = [
     reflectionQuestion: "How would it feel to spend an afternoon debugging a circuit that isn't working, with no guarantee you'll find the problem before you go home?",
   },
   // mathIntensity: usefulSubjects leads with physics/calculus; helpfulSkills calls for "comfort with abstract math".
-  // handsOnWork: typicalWorkday frames it as "a mix" of software, bench testing, and embedded coding.
+  // handsOnWork: typicalWorkday describes a toolkit spanning software, bench testing, and embedded coding.
   // regulatoryBurden: thingsPeopleDislike says compliance is heavy "especially in power or aerospace" — industry-dependent.
   // marketUncertainty: howCompetitive hedges "varies by country and specialization" but calls demand "generally strong".
   // coding: helpfulSkills calls for "basic programming, since many modern electrical systems include embedded code," and typicalProjects includes "programming a microcontroller."
@@ -277,7 +277,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "civil-engineering",
     name: "Civil Engineering",
-    tagline: "Planning and designing the infrastructure that makes daily life work — roads, bridges, water systems, and the buildings around you.",
+    tagline: "The infrastructure that makes daily life work — roads, bridges, water systems, and the buildings around you — planned and kept standing.",
     whatItIs:
       "Civil engineering covers the design, construction, and upkeep of infrastructure and the built environment — basically most of what you interact with outside your own house that isn't a private product. It splits into sub-areas like structural, geotechnical, transportation, and water resources/environmental engineering.",
     whatEngineersWorkOn:
@@ -313,7 +313,7 @@ export const fields: EngineeringField[] = [
       "Preparing site plans for a permit application",
     ],
     typicalWorkday:
-      "A mix of office design work — running structural or hydraulic calculations, reviewing drawings, writing reports — and site visits to check on active construction or inspect existing infrastructure. Public-sector civil engineers often spend real time in meetings with city officials or community members, since infrastructure projects are usually publicly funded and publicly reviewed.",
+      "Office design work — running structural or hydraulic calculations, reviewing drawings, writing reports — alternates with site visits to check on active construction or inspect existing infrastructure. Public-sector civil engineers often spend real time in meetings with city officials or community members, since infrastructure projects are usually publicly funded and publicly reviewed.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Site visit", detail: "An early start checking on active construction to make sure what's being built matches the design." },
@@ -326,7 +326,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "Would an early-morning outdoor site visit sound like a nice break from the desk, or an annoying interruption to your day?",
     },
     // mathIntensity: usefulSubjects leads with "Physics (especially statics and mechanics)" and calculus.
-    // handsOnWork: typicalWorkday frames it as "a mix" of office work and site visits, not majority field work.
+    // handsOnWork: typicalWorkday has office work alternating with site visits, not majority field work.
     // regulatoryBurden: helpfulSkills centers "designing within legal safety requirements"; thingsPeopleDislike cites heavy permitting.
     // marketUncertainty: howCompetitive calls demand "generally steady" but hedges pay/demand "a lot by region".
     // coding: no programming language appears anywhere in this field's text.
@@ -555,7 +555,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "software-engineering",
     name: "Software Engineering",
-    tagline: "Designing, building, and maintaining the software systems and applications that run almost everything digital.",
+    tagline: "The software systems and applications that run almost everything digital — designed, built, and kept running.",
     whatItIs:
       "Software engineering is about designing, building, testing, and maintaining software — the code behind applications, websites, operating systems, and the systems inside other engineered products, like the control software in a car or a medical device. It's sometimes taught within computer science programs and sometimes as its own major, and the line between 'software engineer,' 'computer scientist,' and 'programmer' is used inconsistently across companies.",
     whatEngineersWorkOn:
@@ -695,7 +695,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "aerospace-engineering",
     name: "Aerospace Engineering",
-    tagline: "Designing and testing the aircraft, spacecraft, and systems that get things off the ground — and keep them there safely.",
+    tagline: "The aircraft, spacecraft, and systems that get things off the ground — designed and tested to keep them there safely.",
     whatItIs:
       "Aerospace engineering is about designing, building, and testing vehicles that fly — from commercial airplanes to satellites, rockets, and drones. It splits into two overlapping areas: aeronautical engineering (things that fly within the atmosphere) and astronautical engineering (spacecraft and things that operate beyond it), though most programs and jobs blend both.",
     whatEngineersWorkOn:
@@ -834,7 +834,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "chemical-engineering",
     name: "Chemical Engineering",
-    tagline: "Applying chemistry and physics to design the processes and equipment that turn raw materials into everything from fuel to medicine to plastics.",
+    tagline: "Chemistry and physics put to work designing the processes and equipment that turn raw materials into everything from fuel to medicine to plastics.",
     whatItIs:
       "Chemical engineering is about designing and running the large-scale processes that turn raw materials into usable products — fuels, plastics, pharmaceuticals, food, and industrial chemicals. It sits at the intersection of chemistry, physics, and traditional engineering, focused less on inventing new chemical reactions and more on figuring out how to run them safely and efficiently at a massive scale.",
     whatEngineersWorkOn:
@@ -870,7 +870,7 @@ export const fields: EngineeringField[] = [
       "Troubleshooting why a production line isn't producing the expected yield",
     ],
     typicalWorkday:
-      "A mix of office-based process design and simulation work, and time on a plant floor monitoring and troubleshooting active production processes. Safety review and regulatory compliance work is a bigger part of the job than people expect, since many chemical processes involve hazardous materials.",
+      "Expect both office-based process design and simulation work, and time on a plant floor monitoring and troubleshooting active production processes. Safety review and regulatory compliance work is a bigger part of the job than people expect, since many chemical processes involve hazardous materials.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Plant walkthrough", detail: "Checking on an active production process and talking with plant operators about how it's running." },
@@ -883,7 +883,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "How would you feel being responsible for the safety procedures around a process that could be genuinely dangerous if something goes wrong?",
     },
     // mathIntensity: usefulSubjects leads with "Chemistry," "Physics," and "Calculus."
-    // handsOnWork: typicalWorkday frames it as "a mix" of office-based work and time on a plant floor.
+    // handsOnWork: typicalWorkday describes both office-based work and time on a plant floor.
     // regulatoryBurden: typicalWorkday explicitly says safety and regulatory compliance work "is a bigger part of the job than people expect."
     // marketUncertainty: howCompetitive cites real, positive BLS growth, but a smaller number of annual openings than other fields, and ties to cyclical industries like oil and gas.
     // coding: no programming language appears anywhere in this field's text — simulation software use isn't the same as writing code.
@@ -973,7 +973,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "computer-engineering",
     name: "Computer Engineering",
-    tagline: "Designing the hardware — processors, circuit boards, and embedded systems — that software actually runs on.",
+    tagline: "The hardware — processors, circuit boards, and embedded systems — that software actually runs on.",
     whatItIs:
       "Computer engineering sits between electrical engineering and computer science, focused on designing the physical hardware that computers and digital devices run on — processors, circuit boards, memory systems, and the embedded systems inside everyday devices. Many computer engineers also write the low-level software (firmware) that runs directly on that hardware, so the field blends circuit design with programming.",
     whatEngineersWorkOn:
@@ -1009,7 +1009,7 @@ export const fields: EngineeringField[] = [
       "Updating a system's design to support a new component or software requirement",
     ],
     typicalWorkday:
-      "A mix of circuit design software, hardware testing equipment, and writing low-level code — similar in spirit to electrical engineering, but focused specifically on computing hardware. Testing and documenting results is a significant, recurring part of the job.",
+      "Expect circuit design software, hardware testing equipment, and writing low-level code in the same day — similar in spirit to electrical engineering, but focused specifically on computing hardware. Testing and documenting results is a significant, recurring part of the job.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Schematic review", detail: "Reviewing a circuit schematic for a new piece of hardware before it goes to prototyping." },
@@ -1022,7 +1022,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "Would you enjoy debugging a problem when you're not even sure yet whether it's a hardware issue or a software issue?",
     },
     // mathIntensity: usefulSubjects leads with "Physics (especially electricity and electronics)" and Calculus, matching electrical engineering's framing.
-    // handsOnWork: typicalWorkday frames it as "a mix" of circuit design, hardware testing, and low-level coding.
+    // handsOnWork: typicalWorkday describes circuit design, hardware testing, and low-level coding in the same day.
     // regulatoryBurden: no regulatory or compliance language appears anywhere in this field's text.
     // marketUncertainty: howCompetitive cites strong BLS growth without the specific hiring-volatility caveat this site gives software engineering, so rated at the same middle level as electrical/mechanical rather than software's High.
     // coding: helpfulSkills calls for "comfort with... programming," and typicalProjects centers "writing firmware."
@@ -1111,7 +1111,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "environmental-engineering",
     name: "Environmental Engineering",
-    tagline: "Designing the systems and solutions that protect air, water, and soil quality — and clean them up when something's gone wrong.",
+    tagline: "The systems and solutions that protect air, water, and soil quality — and clean them up when something's gone wrong.",
     whatItIs:
       "Environmental engineering applies engineering and science to problems involving the natural environment — water quality, air pollution, waste management, and site cleanup. It overlaps significantly with civil and chemical engineering, but focuses specifically on environmental protection and remediation rather than infrastructure or industrial processes in general.",
     whatEngineersWorkOn:
@@ -1147,7 +1147,7 @@ export const fields: EngineeringField[] = [
       "Developing a cleanup plan for a contaminated site",
     ],
     typicalWorkday:
-      "A mix of office-based data analysis and report writing, and time at field sites collecting samples or inspecting facilities for compliance. Environmental engineers often work closely with scientists, technicians, and regulators, and public- or community-facing communication is a real part of some roles.",
+      "Office-based data analysis and report writing shares the week with time at field sites, collecting samples or inspecting facilities for compliance. Environmental engineers often work closely with scientists, technicians, and regulators, and public- or community-facing communication is a real part of some roles.",
     dayInLife: {
       blocks: [
         { time: "8:30 AM", label: "Field site visit", detail: "Collecting water or soil samples at a site being evaluated for contamination." },
@@ -1160,7 +1160,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "Would you find it satisfying to help clean up an environmental problem, even knowing the fix might take years and involve a lot of paperwork along the way?",
     },
     // mathIntensity: usefulSubjects splits fairly evenly across environmental science, chemistry, biology, physics, and calculus — not math-first.
-    // handsOnWork: typicalWorkday frames it as "a mix" of office-based analysis and field site time.
+    // handsOnWork: typicalWorkday has office-based analysis sharing the week with field site time.
     // regulatoryBurden: whatEngineersWorkOn and typicalWorkday both center inspecting facilities and meeting environmental regulations.
     // marketUncertainty: howCompetitive cites solid, real BLS growth similar in strength to civil and mechanical engineering.
     // coding: no programming language appears anywhere in this field's text.
@@ -1286,7 +1286,7 @@ export const fields: EngineeringField[] = [
       "Building a model to compare different process changes before implementing one",
     ],
     typicalWorkday:
-      "A mix of gathering data through observation, surveys, or existing records, analyzing it to find inefficiencies, and working with teams across a business to redesign a process. Much of the job happens in meetings and on-site observation, in addition to computer-based analysis.",
+      "The job means gathering data through observation, surveys, or existing records, analyzing it to find inefficiencies, and working with teams across a business to redesign a process. Much of it happens in meetings and on-site observation, in addition to computer-based analysis.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Floor observation", detail: "Watching a production or service process in action to see where delays happen." },
@@ -1425,7 +1425,7 @@ export const fields: EngineeringField[] = [
       "Evaluating whether a material meets a project's quality and safety specifications",
     ],
     typicalWorkday:
-      "A mix of lab-based testing and experimentation, and collaboration with engineers from other disciplines who need a material with specific properties for their own project. Data analysis and documentation are a significant part of the job, since material performance has to be precisely characterized and recorded.",
+      "Lab-based testing and experimentation are balanced against collaboration with engineers from other disciplines who need a material with specific properties for their own project. Data analysis and documentation are a significant part of the job, since material performance has to be precisely characterized and recorded.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Lab testing", detail: "Testing how a material sample performs under stress or heat." },
@@ -1564,7 +1564,7 @@ export const fields: EngineeringField[] = [
       "Debugging why a robot isn't behaving as expected — and figuring out which discipline the problem is actually in",
     ],
     typicalWorkday:
-      "A mix of mechanical design, electrical and sensor work, and writing control software, plus significant time testing the integrated system as a whole. Because robotics problems can originate in any of the three underlying disciplines, a lot of the job is genuinely cross-disciplinary troubleshooting.",
+      "The job spans mechanical design, electrical and sensor work, and writing control software, plus significant time testing the integrated system as a whole. Because robotics problems can originate in any of the three underlying disciplines, a lot of the job is genuinely cross-disciplinary troubleshooting.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Mechanical design", detail: "Working on the physical structure or a joint mechanism for a robotic system." },
@@ -1662,6 +1662,553 @@ export const fields: EngineeringField[] = [
       "Do I enjoy troubleshooting problems where the cause isn't obvious ahead of time?",
       "Am I okay with a less standardized academic path, where I might need to piece together the right courses myself?",
       "Am I genuinely interested in robotics specifically, or mainly drawn to one of its underlying disciplines, like mechanical design or programming?",
+    ],
+  },
+  {
+    slug: "nuclear-engineering",
+    name: "Nuclear Engineering",
+    tagline: "The systems that generate and safely manage nuclear energy — designed and constantly monitored.",
+    whatItIs:
+      "Nuclear engineering focuses on the safe design, operation, and monitoring of systems that use nuclear energy — from power plants to medical and research applications. It combines physics, safety engineering, and strict regulatory compliance, since the consequences of an error are unusually serious.",
+    whatEngineersWorkOn:
+      "Nuclear engineers design the systems and safety procedures for producing and using nuclear energy, monitor reactor operations to make sure everything runs within strict safety limits, write and review procedures for handling and disposing of radioactive materials, and investigate ways to make nuclear processes safer or more efficient. A lot of the job involves working within a dense web of federal regulations, since nuclear safety oversight is some of the strictest in any engineering field.",
+    realWorldExamples: [
+      "Nuclear power plant design and safety systems",
+      "Nuclear medicine and radiation therapy equipment",
+      "Nuclear waste storage and disposal systems",
+      "Naval nuclear propulsion systems",
+    ],
+    commonMisconceptions: [
+      "That nuclear engineers work directly with weapons — most nuclear engineers work in civilian power generation, medicine, or research, not defense.",
+      "That the job is mostly about physics theory — most of the actual work is applied: monitoring systems, writing safety procedures, and making sure real equipment operates within strict limits.",
+      "That it's a shrinking field because few new plants are being built — a lot of the work is maintaining, monitoring, and eventually decommissioning the plants that already exist, plus growing applications in medicine and research.",
+    ],
+    mythsAndRealities: [
+      { myth: "Nuclear engineers work directly with weapons.", reality: "Most nuclear engineers work in civilian power generation, medicine, or research, not defense." },
+      { myth: "The job is mostly about physics theory.", reality: "Most of the actual work is applied: monitoring systems, writing safety procedures, and making sure real equipment operates within strict limits." },
+      { myth: "It's a shrinking field because few new plants are being built.", reality: "A lot of the work is maintaining, monitoring, and eventually decommissioning the plants that already exist, plus growing applications in medicine and research." },
+    ],
+    usefulSubjects: ["Physics (especially nuclear and modern physics, if offered)", "Calculus", "Chemistry"],
+    helpfulSkills: [
+      "Comfort with strict rules and procedures, since nuclear work is governed by some of the most detailed safety regulations in any engineering field",
+      "Careful, methodical attention to detail — a small oversight in this field can have serious consequences",
+      "Strong math and physics fundamentals, since reactor behavior is grounded in nuclear physics",
+      "Clear written communication, since safety procedures and regulatory documentation have to be exact and unambiguous",
+    ],
+    typicalProjects: [
+      "Monitoring reactor performance data to confirm it's operating within safety limits",
+      "Writing or reviewing a procedure for safely handling or storing radioactive material",
+      "Investigating a way to make an existing nuclear process more efficient without compromising safety",
+      "Working with a team to prepare for a regulatory inspection or audit",
+    ],
+    typicalWorkday:
+      "Expect a rotation of monitoring plant or system data, reviewing and writing safety documentation, and coordinating with a team on regulatory compliance. Time is split between an office or control room and, depending on the role, in-person time at the physical facility.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Shift briefing", detail: "Reviewing overnight reactor performance data and any notes from the previous shift." },
+        { time: "9:30 AM", label: "Systems check", detail: "Monitoring live reactor data to confirm all systems are within normal operating limits." },
+        { time: "11:00 AM", label: "Safety documentation", detail: "Reviewing a procedure for handling radioactive material to make sure it meets current regulations." },
+        { time: "1:00 PM", label: "Regulatory coordination", detail: "Meeting with a compliance team to prepare documentation for an upcoming inspection." },
+        { time: "2:30 PM", label: "Problem-solving", detail: "Investigating a minor irregularity in a system reading to rule out any underlying issue." },
+        { time: "4:00 PM", label: "Wrap-up", detail: "Logging today's findings and briefing the incoming shift." },
+      ],
+      reflectionQuestion: "Would you be comfortable with a job where following exact procedures matters as much as technical skill?",
+    },
+    // mathIntensity: usefulSubjects leads with nuclear/modern physics and calculus.
+    // handsOnWork: typicalWorkday is monitoring- and documentation-centered, with some in-person facility time — less physical building than mechanical or aerospace.
+    // regulatoryBurden: whatItIs and whatEngineersWorkOn both explicitly call this "some of the strictest" regulation of any engineering field.
+    // marketUncertainty: howCompetitive cites essentially flat (0%) BLS growth — a real, if unusual, kind of uncertainty rather than the volatility other fields show.
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: work is framed as office/control-room based with facility time, not outdoor fieldwork.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: heavy regulatory and procedural framing throughout constrains open-ended design, similar to civil or chemical engineering.
+    // teamwork: dayInLife includes shift briefings and regulatory coordination, but less repeated multi-stakeholder emphasis than fields rated High.
+    // seeingWorkRealLife: dayInLife centers on monitoring live reactor data and real facility operations — tangible, though mediated through instrumentation.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$133,970",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/nuclear-engineers.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how a nuclear power plant generates electricity and sketch a simple diagram of the process.",
+        tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
+        activity: "Look for a STEM or physics club at school, or a museum exhibit on energy or nuclear science.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Research how nuclear medicine is used to diagnose or treat illness, and summarize how it's different from a nuclear power plant.",
+        tool: "No special tools needed yet — reliable science sources.",
+        activity: "Look into a Science Olympiad team, which sometimes covers energy or nuclear-related events.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Research the safety systems used in modern nuclear reactor designs and what changed after a historical incident like Three Mile Island or Fukushima.",
+        tool: "No special tools needed yet — reliable science and engineering sources.",
+        activity: "Look for a pre-college engineering program or a summer program with an energy or nuclear focus, if available.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Nuclear power generation", "Nuclear medicine and healthcare", "National laboratories and research", "Naval and defense", "Nuclear waste management"],
+    relatedMajors: ["Nuclear Engineering", "Mechanical Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Reactor Engineer", description: "Monitors and optimizes the operation of a nuclear reactor to keep it running safely and efficiently." },
+      { title: "Nuclear Safety Engineer", description: "Focuses specifically on the safety systems and procedures that prevent and respond to potential incidents." },
+      { title: "Radiation Protection Engineer", description: "Designs and monitors systems that protect workers and the public from radiation exposure." },
+      { title: "Nuclear Fuel Engineer", description: "Works on the design, performance, and management of the fuel used in a nuclear reactor." },
+    ],
+    advantages: [
+      "Strong median pay relative to many other engineering fields",
+      "Highly specialized expertise that's in consistent demand wherever nuclear facilities operate",
+      "Work that has a direct, meaningful connection to a country's energy infrastructure or medical care",
+    ],
+    challenges: [
+      "Employment growth is essentially flat — the U.S. Bureau of Labor Statistics projects almost no change in the number of nuclear engineering jobs through 2035",
+      "Heavy regulatory and procedural requirements shape almost every part of the work, leaving less room for open-ended design",
+      "Public perception of nuclear energy can be a source of pressure or scrutiny, regardless of an individual engineer's actual work",
+    ],
+    thingsPeopleDislike: [
+      "A significant amount of documentation and procedural review, rather than hands-on design work",
+      "A limited number of new nuclear facilities being built in some countries, which can narrow where the work is available",
+      "Working around radioactive materials requires constant attention to safety protocol, which some find stressful over time",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects essentially no change (0%) in employment for nuclear engineers from 2025 to 2035 — among the flattest projections of any engineering field on this site — with about 800 openings projected per year over that decade, mostly from workers retiring or changing careers rather than from new positions being created. That doesn't mean the field is shrinking, since existing nuclear plants and facilities need ongoing staffing, but it does mean the number of nuclear engineering positions isn't expected to grow. Demand can also shift with a country's energy policy decisions — research the current market and any planned nuclear projects in your specific region before making decisions.",
+    beginnerActivities: [
+      "Research how a nuclear power plant generates electricity and sketch out the process",
+      "Research how nuclear medicine is used in healthcare and how it differs from a power plant",
+      "Research the safety systems used in modern reactor designs",
+    ],
+    selfReflectionQuestions: [
+      "Am I comfortable with a field where following exact procedures matters as much as raw technical skill?",
+      "Does knowing the number of nuclear engineering jobs is expected to stay flat, not grow, change how I feel about the field?",
+      "Am I interested in nuclear energy specifically, or more broadly in energy systems in general?",
+    ],
+  },
+  {
+    slug: "petroleum-engineering",
+    name: "Petroleum Engineering",
+    tagline: "How oil and natural gas get extracted from the ground, safely and efficiently.",
+    whatItIs:
+      "Petroleum engineering focuses on how to extract oil and natural gas from the ground safely and efficiently — designing extraction methods, drilling plans, and production systems. It's a specialized field tied closely to the energy industry's own economic cycles.",
+    whatEngineersWorkOn:
+      "Petroleum engineers design and evaluate methods for extracting oil and natural gas from underground reservoirs, analyze geological data to estimate how much a site can produce, design drilling plans and production equipment, and work to improve extraction efficiency while managing safety and environmental risk. A lot of the work involves close collaboration with geologists and geoscientists, since a reservoir's underlying geology drives almost every engineering decision.",
+    realWorldExamples: [
+      "Oil and gas well design and drilling plans",
+      "Extraction equipment and production systems",
+      "Reservoir analysis to estimate how much oil or gas a site can produce",
+    ],
+    commonMisconceptions: [
+      "That petroleum engineers spend their careers physically working on drilling rigs — many roles are based in an office analyzing data and planning, with periodic site visits rather than full-time fieldwork.",
+      "That it's the same job as a geologist — geologists study and interpret the rock and fluid formations underground; petroleum engineers use that information to design how to safely and efficiently extract resources from them.",
+      "That the field is disappearing entirely — global demand growth for oil and gas has slowed, but the field isn't vanishing, and pay remains among the highest of any engineering discipline.",
+    ],
+    mythsAndRealities: [
+      { myth: "Petroleum engineers spend their careers physically working on drilling rigs.", reality: "Many roles are based in an office analyzing data and planning, with periodic site visits rather than full-time fieldwork." },
+      { myth: "It's the same job as a geologist.", reality: "Geologists study and interpret the rock and fluid formations underground; petroleum engineers use that information to design how to safely and efficiently extract resources from them." },
+      { myth: "The field is disappearing entirely.", reality: "Global demand growth for oil and gas has slowed, but the field isn't vanishing, and pay remains among the highest of any engineering discipline." },
+    ],
+    usefulSubjects: ["Physics", "Chemistry", "Calculus", "Earth science or geology, if available"],
+    helpfulSkills: [
+      "Comfort interpreting geological and reservoir data to make engineering decisions",
+      "Strong math and physics fundamentals for modeling fluid flow and reservoir behavior",
+      "Risk assessment — weighing safety, cost, and environmental factors when planning extraction",
+      "Willingness to travel to or work at remote field sites, at least periodically",
+    ],
+    typicalProjects: [
+      "Analyzing reservoir data to estimate how much oil or gas a site can produce",
+      "Designing a drilling plan for a new well",
+      "Evaluating ways to improve extraction efficiency from an existing well",
+      "Assessing the safety and environmental risk of a proposed extraction method",
+    ],
+    typicalWorkday:
+      "Office-based data analysis and modeling fills most weeks, with — depending on the role — time at a field site reviewing operations in person. Collaboration with geologists and other engineers is a constant part of the job, since reservoir decisions require input from multiple disciplines.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Data review", detail: "Reviewing overnight production data from an active well." },
+        { time: "9:30 AM", label: "Reservoir analysis", detail: "Analyzing geological data with a geologist to estimate a new site's production potential." },
+        { time: "11:30 AM", label: "Drilling plan", detail: "Working on a drilling plan for a proposed well, factoring in depth, equipment, and safety requirements." },
+        { time: "1:30 PM", label: "Team coordination", detail: "Meeting with field operations staff to review how an active extraction site is performing." },
+        { time: "3:00 PM", label: "Risk assessment", detail: "Evaluating the safety and environmental risk of a proposed change to an extraction method." },
+        { time: "4:30 PM", label: "Wrap-up", detail: "Documenting today's analysis and updating the project plan." },
+      ],
+      reflectionQuestion: "Would you be comfortable in a field where pay is strong but tied closely to the ups and downs of global energy markets?",
+    },
+    // mathIntensity: usefulSubjects leads with physics, chemistry, and calculus for reservoir and fluid modeling.
+    // handsOnWork: typicalWorkday frames it as office analysis plus periodic field site time, not full-time hands-on work.
+    // regulatoryBurden: safety and environmental risk assessment appear throughout, but without the "strictest regulation" framing nuclear or aerospace carry.
+    // marketUncertainty: whatItIs explicitly says the field is "tied closely to the energy industry's own economic cycles" — the strongest volatility signal of any field on this site.
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: dayInLife and typicalWorkday describe periodic field site visits alongside office-based work.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: real engineering design and modeling work appears without heavy regulatory-constraint language, similar to electrical or mechanical engineering.
+    // teamwork: whatEngineersWorkOn and dayInLife both explicitly emphasize close, constant collaboration with geologists and other engineers.
+    // seeingWorkRealLife: work centers on real wells and production data, though often mediated through data analysis rather than direct physical building.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "High",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$144,910",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/petroleum-engineers.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region. This field is closely tied to oil and gas industry cycles, which affects both pay and job stability.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how oil and natural gas are formed underground and how engineers find them.",
+        tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
+        activity: "Look for a STEM or earth science club at school.",
+        relatedField: "chemical-engineering",
+      },
+      "13-15": {
+        project: "Research how a drilling rig works and sketch the basic steps of drilling a well.",
+        tool: "No special tools needed yet — reliable science sources.",
+        activity: "Look into a Science Olympiad team, which sometimes covers earth science topics.",
+        relatedField: "chemical-engineering",
+      },
+      "16-18": {
+        project: "Research a real oil or gas field and estimate, using public data, how extraction there has changed over time.",
+        tool: "Public energy data sources, like a national energy information agency's public database, if available in your country.",
+        activity: "Look for a pre-college engineering program with an energy focus, if available.",
+        relatedField: "chemical-engineering",
+      },
+    },
+    industries: ["Oil and gas extraction", "Energy consulting", "Offshore drilling", "Reservoir engineering firms", "Government energy agencies"],
+    relatedMajors: ["Petroleum Engineering", "Chemical Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Drilling Engineer", description: "Designs and oversees the plans for safely and efficiently drilling a well." },
+      { title: "Reservoir Engineer", description: "Analyzes underground reservoir data to estimate production potential and plan extraction strategy." },
+      { title: "Production Engineer", description: "Focuses on optimizing how efficiently an existing well or field produces oil or gas." },
+      { title: "Completions Engineer", description: "Designs the final steps that prepare a drilled well for production." },
+    ],
+    advantages: [
+      "Among the highest median salaries of any engineering field on this site",
+      "Work directly shapes how a major global energy resource is extracted and used",
+      "Strong technical variety — geology, fluid mechanics, and equipment design all come into play",
+    ],
+    challenges: [
+      "Pay and job stability are closely tied to global oil and gas prices, which can shift quickly",
+      "Some roles require travel to or extended time at remote field sites",
+      "The field faces real long-term questions about the pace of the global transition away from fossil fuels",
+    ],
+    thingsPeopleDislike: [
+      "Job security can feel less predictable than in fields less tied to commodity prices",
+      "Remote or physically demanding field site conditions in some roles",
+      "Public perception of the oil and gas industry can be a source of added scrutiny",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects 2% employment growth for petroleum engineers from 2025 to 2035 — slower than the average for all occupations — with about 1,000 openings projected per year over that decade, mostly from workers retiring or changing careers. Pay is among the highest of any engineering field, but both hiring and compensation are closely tied to global oil and gas prices, which can shift substantially from year to year. Research current market conditions and hiring trends in your specific region and industry sector before making decisions.",
+    beginnerActivities: [
+      "Research how oil and natural gas are formed underground and how they're located",
+      "Research how a drilling rig works and sketch the basic steps of drilling a well",
+      "Look into how a real oil or gas field's production has changed over time using public data",
+    ],
+    selfReflectionQuestions: [
+      "Am I comfortable with a field where pay and job stability are tied closely to global energy prices?",
+      "Am I interested in earth science and geology as much as traditional engineering?",
+      "Would I be comfortable traveling to or working at a remote field site, at least periodically?",
+    ],
+  },
+  {
+    slug: "agricultural-engineering",
+    name: "Agricultural Engineering",
+    tagline: "Engineering put to work on farming and food production — equipment, irrigation, and food systems.",
+    whatItIs:
+      "Agricultural engineering applies engineering principles to farming and food production — designing equipment, irrigation systems, and structures that make agriculture more efficient, and adapting technology to work with biological and environmental factors that don't behave like standard engineering materials.",
+    whatEngineersWorkOn:
+      "Agricultural engineers design farm equipment and machinery, develop irrigation and water management systems, design structures like storage facilities and processing plants, and work on precision agriculture technology like sensor-based crop monitoring. A lot of the work involves adapting standard engineering solutions to work with biological systems — crops, soil, and livestock — that behave less predictably than typical engineering materials.",
+    realWorldExamples: [
+      "Farm equipment and machinery design",
+      "Irrigation and water management systems",
+      "Food processing and storage systems",
+      "Precision agriculture technology, like sensor-based crop monitoring",
+    ],
+    commonMisconceptions: [
+      "That agricultural engineers are the same as farmers — farmers grow crops and raise livestock; agricultural engineers design the equipment, systems, and technology that support that work.",
+      "That the job is only relevant in rural areas — while a lot of fieldwork happens on farms, agricultural engineers also work in food processing plants, research labs, and equipment manufacturing companies that can be based almost anywhere.",
+      "That it's a low-tech field — modern agricultural engineering involves real technology, including sensors, automation, and data analysis for precision agriculture.",
+    ],
+    mythsAndRealities: [
+      { myth: "Agricultural engineers are the same as farmers.", reality: "Farmers grow crops and raise livestock; agricultural engineers design the equipment, systems, and technology that support that work." },
+      { myth: "The job is only relevant in rural areas.", reality: "While a lot of fieldwork happens on farms, agricultural engineers also work in food processing plants, research labs, and equipment manufacturing companies that can be based almost anywhere." },
+      { myth: "It's a low-tech field.", reality: "Modern agricultural engineering involves real technology, including sensors, automation, and data analysis for precision agriculture." },
+    ],
+    usefulSubjects: ["Biology", "Physics", "Chemistry", "Calculus"],
+    helpfulSkills: [
+      "Comfort combining engineering fundamentals with biology and environmental science",
+      "Practical, hands-on problem-solving, since equipment often has to work reliably in unpredictable outdoor conditions",
+      "Systems thinking, since agricultural systems involve interacting biological, mechanical, and environmental factors",
+      "Willingness to spend time at farm or field sites, not just in an office or lab",
+    ],
+    typicalProjects: [
+      "Designing or improving a piece of farm equipment, like a planting or harvesting machine",
+      "Designing an irrigation system for a specific crop and climate",
+      "Testing sensor-based technology for monitoring crop health or soil conditions",
+      "Designing a storage or processing facility to reduce food waste after harvest",
+    ],
+    typicalWorkday:
+      "Design and testing work is often split between an office or lab and time at a farm or field site where equipment and systems are actually used. Collaboration with farmers, agronomists, and food scientists is a regular part of the job, since real-world agricultural conditions constantly inform the engineering.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Field visit", detail: "Visiting a farm site to see how a piece of equipment or irrigation system is performing in real conditions." },
+        { time: "9:30 AM", label: "Data review", detail: "Reviewing sensor data from a precision agriculture system to check crop or soil conditions." },
+        { time: "11:00 AM", label: "Design work", detail: "Working on a design for a new or improved piece of farm equipment." },
+        { time: "1:00 PM", label: "Collaboration", detail: "Meeting with a farmer or agronomist to understand a real problem the design needs to solve." },
+        { time: "2:30 PM", label: "Testing", detail: "Testing a prototype under conditions that mimic real farm use." },
+        { time: "4:00 PM", label: "Wrap-up", detail: "Documenting today's test results and planning next steps." },
+      ],
+      reflectionQuestion: "Would you enjoy engineering work where the 'materials' you're designing around — soil, crops, weather — don't behave as predictably as steel or plastic?",
+    },
+    // mathIntensity: usefulSubjects leads with biology, with physics/chemistry/calculus present but less "high-intensity" framing than nuclear or aerospace.
+    // handsOnWork: typicalWorkday and dayInLife both center equipment testing and field visits.
+    // regulatoryBurden: no strong regulatory or compliance language appears anywhere in this field's text.
+    // marketUncertainty: howCompetitive cites solid, moderate 7% BLS growth without volatility language.
+    // coding: sensor-based precision agriculture technology is mentioned, but not framed as central coding work.
+    // outdoorWork: dayInLife opens with a field visit, and helpfulSkills explicitly calls for "time at farm or field sites."
+    // biologyContent: usefulSubjects leads with "Biology," and whatItIs explicitly centers "biological and environmental factors."
+    // creativeFreedom: real design work throughout without heavy regulatory-constraint language.
+    // teamwork: collaboration with farmers and agronomists is real but less repeated/emphasized than fields rated High.
+    // seeingWorkRealLife: equipment and systems are used directly and visibly on real farms, similar to civil or mechanical engineering's framing.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "High",
+      biologyContent: "High",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$98,590",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/agricultural-engineers.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how a modern irrigation system decides when and how much to water crops.",
+        tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
+        activity: "Look for a 4-H club, FFA (Future Farmers of America) chapter, or STEM club at school, if available.",
+        relatedField: "environmental-engineering",
+      },
+      "13-15": {
+        project: "Design a simple drip irrigation system using household materials and test how evenly it waters a small area.",
+        tool: "Basic household materials — tubing, containers, and something to poke small holes.",
+        activity: "Look into a 4-H or FFA program, which often include hands-on agricultural technology projects.",
+        relatedField: "environmental-engineering",
+      },
+      "16-18": {
+        project: "Research a real precision agriculture technology, like soil sensors or drone crop monitoring, and summarize how it changes farming decisions.",
+        tool: "Reliable agricultural technology sources, like a university extension program's public website.",
+        activity: "Look for a pre-college agricultural engineering program or a summer program at a university with an agriculture department.",
+        relatedField: "environmental-engineering",
+      },
+    },
+    industries: ["Farm equipment manufacturing", "Food processing", "Irrigation and water management", "Agricultural technology (AgTech)", "Government agricultural agencies"],
+    relatedMajors: ["Agricultural Engineering", "Mechanical Engineering (some overlap)", "Environmental Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Farm Equipment Design Engineer", description: "Designs and improves machinery used for planting, harvesting, and other farm tasks." },
+      { title: "Irrigation Engineer", description: "Designs water management and irrigation systems tailored to specific crops and climates." },
+      { title: "Food Processing Engineer", description: "Designs the equipment and systems used to process, package, and store food after harvest." },
+      { title: "Precision Agriculture Engineer", description: "Develops sensor-based and data-driven technology to help farmers make more informed decisions." },
+    ],
+    advantages: [
+      "Work directly supports food production, which is an essential need everywhere",
+      "A genuinely interdisciplinary field that blends engineering with biology and environmental science",
+      "Steady, real-world impact — improvements in this field can meaningfully reduce waste or improve yields",
+    ],
+    challenges: [
+      "Equipment has to perform reliably in unpredictable outdoor conditions, which is harder to design for than a controlled environment",
+      "The field is smaller than many other engineering disciplines, which can mean fewer job openings overall",
+      "Some roles require regular travel to or time at rural farm sites, which isn't for everyone",
+    ],
+    thingsPeopleDislike: [
+      "A relatively small number of job openings compared to larger engineering fields",
+      "Outdoor field work can mean exposure to weather and less comfortable working conditions",
+      "Pay tends to be somewhat lower than many other engineering specialties",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects 7% employment growth for agricultural engineers from 2025 to 2035 — faster than the average for all occupations — with about 100 openings projected per year over that decade. That's one of the smaller annual opening counts among engineering fields on this site, since agricultural engineering is a comparatively small, specialized field. Research the current market and demand in your specific region and country before making decisions, since agricultural technology needs can vary a lot by local farming practices.",
+    beginnerActivities: [
+      "Research how a modern irrigation system decides when and how much to water crops",
+      "Design a simple drip irrigation system with household materials and test how evenly it waters an area",
+      "Research a real precision agriculture technology, like soil sensors or drone crop monitoring",
+    ],
+    selfReflectionQuestions: [
+      "Would I enjoy engineering work where the underlying 'materials' — soil, crops, weather — don't behave as predictably as steel or plastic?",
+      "Am I comfortable spending real time outdoors or at farm sites, not just in an office or lab?",
+      "Am I genuinely interested in agriculture and food systems, or mainly in the mechanical or technology side?",
+    ],
+  },
+  {
+    slug: "marine-engineering",
+    name: "Marine Engineering",
+    tagline: "Ships, submarines, and other vessels built for the ocean — designed and kept running.",
+    whatItIs:
+      "Marine engineering, often paired with naval architecture, focuses on designing, building, and maintaining ships, submarines, and other marine vessels and structures — the hull, propulsion systems, and onboard mechanical and electrical systems all need to work reliably in a demanding ocean environment.",
+    whatEngineersWorkOn:
+      "Marine engineers design and maintain the propulsion, power, and mechanical systems that keep ships and other vessels running, while naval architects (a closely related role, often studied together) focus more on the hull and overall vessel design. Marine engineers test how systems hold up under real ocean conditions — pressure, corrosion, and constant motion — and work to keep existing vessels operating safely and efficiently.",
+    realWorldExamples: [
+      "Ship hull design and structural analysis",
+      "Ship propulsion and power systems",
+      "Offshore platform design",
+      "Submarine and naval vessel systems",
+    ],
+    commonMisconceptions: [
+      "That marine engineers work only on naval or military ships — the field also covers commercial cargo ships, cruise ships, fishing vessels, offshore platforms, and recreational boats.",
+      "That it's the same as naval architecture — naval architects focus more on a vessel's hull, stability, and overall design; marine engineers focus more on the propulsion, power, and mechanical systems inside it. In practice, the two fields overlap and are often studied together.",
+      "That the job requires being at sea constantly — many marine engineers work in offices, shipyards, or design firms, with sea time being one part of some roles rather than the whole job.",
+    ],
+    mythsAndRealities: [
+      { myth: "Marine engineers work only on naval or military ships.", reality: "The field also covers commercial cargo ships, cruise ships, fishing vessels, offshore platforms, and recreational boats." },
+      { myth: "It's the same as naval architecture.", reality: "Naval architects focus more on a vessel's hull, stability, and overall design; marine engineers focus more on the propulsion, power, and mechanical systems inside it. In practice, the two fields overlap and are often studied together." },
+      { myth: "The job requires being at sea constantly.", reality: "Many marine engineers work in offices, shipyards, or design firms, with sea time being one part of some roles rather than the whole job." },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Chemistry (for understanding corrosion and materials)"],
+    helpfulSkills: [
+      "Strong mechanical and structural fundamentals, since vessels have to withstand extreme, constant physical stress",
+      "Comfort with corrosion, materials, and how they behave in a saltwater environment over time",
+      "Systems thinking, since a vessel's propulsion, power, and structural systems all have to work together reliably",
+      "Willingness to work at a shipyard or aboard a vessel, at least for some roles",
+    ],
+    typicalProjects: [
+      "Designing or evaluating a vessel's propulsion or power system",
+      "Analyzing how a ship's hull and structure hold up under real ocean stress and loads",
+      "Inspecting an existing vessel's mechanical systems for wear, corrosion, or needed repairs",
+      "Working on the design of an offshore platform or other marine structure",
+    ],
+    typicalWorkday:
+      "Design and analysis work in an office gives way to time at a shipyard or aboard a vessel, inspecting real systems and structures. The balance between office and hands-on site work varies a lot depending on the specific role and employer.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Shipyard inspection", detail: "Inspecting a vessel's propulsion system for wear or needed maintenance." },
+        { time: "9:30 AM", label: "Design review", detail: "Reviewing a design for a new propulsion system component against performance requirements." },
+        { time: "11:00 AM", label: "Structural analysis", detail: "Analyzing how a hull section holds up under a proposed new load." },
+        { time: "1:00 PM", label: "Team coordination", detail: "Meeting with a naval architect to coordinate how structural and mechanical systems fit together." },
+        { time: "2:30 PM", label: "Materials review", detail: "Evaluating how a material is holding up against corrosion after time in saltwater." },
+        { time: "4:00 PM", label: "Wrap-up", detail: "Documenting today's findings and updating the project plan." },
+      ],
+      reflectionQuestion: "Would you enjoy engineering work that has to hold up against one of the most physically demanding environments — constant saltwater, pressure, and motion?",
+    },
+    // mathIntensity: usefulSubjects leads with physics and calculus, matching mechanical engineering's framing.
+    // handsOnWork: dayInLife opens with shipyard inspection and centers real vessel systems throughout.
+    // regulatoryBurden: real safety standards are implied by vessel inspection work, but not framed as the "strictest" the way nuclear engineering is.
+    // marketUncertainty: howCompetitive cites steady, moderate 7% BLS growth without volatility language.
+    // coding: no programming language appears anywhere in this field's text.
+    // outdoorWork: dayInLife mixes shipyard/vessel time with office design work, rated as a genuine mix rather than dominant.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: real design and analysis work appears without heavy regulatory-constraint language.
+    // teamwork: coordination with naval architects appears but isn't emphasized as constantly as fields rated High.
+    // seeingWorkRealLife: work centers on real, physical vessels and structures — tangible and directly observable.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "High",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$112,230",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm",
+      note: "This is a U.S. national median across all experience levels — not a starting salary, and not adjusted for your region.",
+      verifiedDate: "September 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Research how a ship stays afloat and try a simple buoyancy experiment using clay or foil in a container of water.",
+        tool: "Basic household materials — clay, aluminum foil, and a container of water.",
+        activity: "Look for a STEM club at school, or a maritime museum exhibit, if one is near you.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Build a simple boat hull out of household materials and test how much weight it can hold before sinking.",
+        tool: "Basic household materials — cardboard, foil, or plastic containers, and weights for testing.",
+        activity: "Look into a Science Olympiad team, which sometimes includes boat-design or naval-engineering-related events.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Research how modern ships are designed to resist corrosion in saltwater, and summarize the main strategies used.",
+        tool: "Reliable engineering sources, like a maritime engineering organization's public website.",
+        activity: "Look for a pre-college engineering program or summer program with a marine or naval engineering focus, if available.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Shipbuilding", "Commercial shipping", "Naval and defense", "Offshore energy", "Marine equipment manufacturing"],
+    relatedMajors: ["Marine Engineering", "Naval Architecture", "Mechanical Engineering (some overlap)"],
+    careerPaths: [
+      { title: "Marine Systems Engineer", description: "Designs and maintains a vessel's propulsion, power, and mechanical systems." },
+      { title: "Naval Architect", description: "Focuses on a vessel's hull design, stability, and overall structural form, closely paired with marine engineering." },
+      { title: "Offshore Structures Engineer", description: "Designs platforms and structures built to operate safely in open ocean conditions." },
+      { title: "Marine Surveyor", description: "Inspects vessels and marine structures to assess their condition, safety, and compliance with standards." },
+    ],
+    advantages: [
+      "Highly specialized expertise with steady demand wherever ships and marine structures are built or maintained",
+      "Real, tangible engineering challenges — few environments are as physically demanding as the open ocean",
+      "Work can span a wide range of vessel types, from commercial shipping to defense to offshore energy",
+    ],
+    challenges: [
+      "The physical demands of the ocean environment — pressure, corrosion, constant motion — make for genuinely difficult engineering problems",
+      "Some roles require time at a shipyard or aboard a vessel, which isn't a fit for everyone",
+      "The field is more specialized and smaller than many other engineering disciplines, which can narrow where the work is available",
+    ],
+    thingsPeopleDislike: [
+      "Some roles require extended time away from home, at a shipyard or aboard a vessel",
+      "The field is concentrated in specific coastal or port regions, which can limit where you can work",
+      "Corrosion, wear, and maintenance issues are a constant, ongoing part of the work, not a one-time design problem",
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics projects 7% employment growth for marine engineers and naval architects from 2025 to 2035 — faster than the average for all occupations — with about 500 openings projected per year over that decade. Demand is tied to shipbuilding, commercial shipping, and naval activity, which can vary by region and country — research the current market and shipbuilding industry in your specific area before making decisions.",
+    beginnerActivities: [
+      "Research how a ship stays afloat and try a simple buoyancy experiment with clay or foil",
+      "Build a simple boat hull from household materials and test how much weight it can hold",
+      "Research how modern ships resist corrosion in saltwater",
+    ],
+    selfReflectionQuestions: [
+      "Would I enjoy engineering work that has to hold up against extremely demanding physical conditions, like constant saltwater and pressure?",
+      "Am I comfortable with some roles requiring time at a shipyard or aboard a vessel, possibly away from home?",
+      "Am I drawn to marine engineering specifically, or more broadly to mechanical or structural engineering?",
     ],
   },
 ];

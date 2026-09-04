@@ -1,0 +1,2087 @@
+import { EngineeringField } from "./types";
+
+// Spanish translations of full field entries, same shape as fields.ts. Only
+// the fields listed here have a Spanish version; the field page falls back
+// to the English entry (with a small notice) for any field not yet
+// translated — see FieldLanguageNotice / the [slug]/page.tsx lookup.
+// Numbers, dates, and source names in `salary` are facts and are not
+// re-translated beyond the surrounding label text; `stats` keeps the same
+// Level values ("Low"/"Medium"/"High") since those are used as typed keys
+// elsewhere in the app, not just display text.
+export const fieldsEs: EngineeringField[] = [
+  {
+    slug: "mechanical-engineering",
+    name: "Ingeniería Mecánica",
+    tagline:
+      "Máquinas y sistemas que se mueven, generan energía y le dan forma al mundo físico — diseñados y construidos desde cero.",
+    whatItIs:
+      "La ingeniería mecánica es uno de los campos más amplios de la ingeniería. Se trata de cómo se mueven las cosas, cómo actúan las fuerzas sobre los objetos, y cómo se diseñan, construyen y mejoran las máquinas — desde los mecanismos diminutos dentro de un reloj hasta motores a reacción y robots de fábrica.",
+    whatEngineersWorkOn:
+      "Los ingenieros mecánicos diseñan piezas y sistemas, hacen simulaciones para predecir cómo se comportará algo bajo estrés o calor, construyen y prueban prototipos físicos, y descubren cómo fabricar diseños a gran escala. Gran parte del trabajo diario consiste en resolver problemas cuando un diseño no se comporta como debería.",
+    realWorldExamples: [
+      "Motores de auto y sistemas de frenos",
+      "Brazos robóticos usados en fábricas",
+      "Sistemas de climatización (HVAC) que calientan y enfrían edificios",
+      "Prótesis y dispositivos médicos",
+      "Montañas rusas y atracciones de parques de diversiones",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros mecánicos principalmente arreglan autos o electrodomésticos (eso normalmente lo hace un mecánico o técnico, un trabajo diferente).",
+      "Que solo se trata de máquinas grandes — gran parte de la ingeniería mecánica es trabajo de diseño preciso y a pequeña escala.",
+      "Que ya tienes que 'ser bueno con las herramientas' antes de empezar — la mayoría de la habilidad práctica se aprende durante la carrera, no antes.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Los ingenieros mecánicos principalmente arreglan autos o electrodomésticos.",
+        reality: "Eso normalmente lo hace un mecánico o técnico — una profesión completamente distinta.",
+      },
+      {
+        myth: "Solo se trata de máquinas grandes.",
+        reality: "Gran parte de la ingeniería mecánica es trabajo de diseño preciso y a pequeña escala.",
+      },
+      {
+        myth: "Ya tienes que 'ser bueno con las herramientas' antes de empezar.",
+        reality: "La mayoría de la habilidad práctica se aprende durante la carrera, no antes.",
+      },
+    ],
+    usefulSubjects: ["Física (especialmente mecánica)", "Cálculo", "Química (en algunos programas)", "Dibujo técnico o CAD, si está disponible"],
+    helpfulSkills: [
+      "Razonamiento espacial (visualizar cómo encajan y se mueven las piezas juntas)",
+      "Comodidad con las matemáticas, especialmente física basada en álgebra",
+      "Paciencia para el ensayo y error — los diseños rara vez funcionan perfectamente la primera vez",
+      "Conocimientos básicos de computación para software de CAD y simulación",
+    ],
+    typicalProjects: [
+      "Diseñar una pieza en software CAD y probar si puede soportar cierta carga",
+      "Construir y probar un prototipo físico",
+      "Mejorar un diseño existente para que sea más liviano, más barato o más eficiente",
+    ],
+    typicalWorkday:
+      "Gran parte del trabajo se hace frente a una computadora — corriendo simulaciones, revisando diseños, escribiendo informes y asistiendo a reuniones — combinado con tiempo en un laboratorio o taller probando prototipos físicos. Es menos 'construir cosas a mano todo el día' y más 'resolver problemas, algunos de los cuales implican pruebas prácticas.'",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Repaso matutino", detail: "Revisar los resultados de las simulaciones de la noche y ponerse al día con los correos del equipo." },
+        { time: "9:30 AM", label: "Trabajo de diseño", detail: "Correr simulaciones y revisar un diseño en software CAD para ver cómo aguanta bajo carga." },
+        { time: "11:00 AM", label: "Reunión de equipo", detail: "Coordinar con el equipo y redactar un informe de estado sobre un diseño que va atrasado." },
+        { time: "1:00 PM", label: "En el taller", detail: "Probar un prototipo físico — y no se comporta como predijo la simulación." },
+        { time: "3:00 PM", label: "De vuelta al escritorio", detail: "Documentar qué salió mal en las pruebas y ajustar el diseño según eso." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Documentar el progreso de hoy y preparar el tiempo de taller de mañana." },
+      ],
+      reflectionQuestion:
+        "¿Qué parte de este día disfrutarías más — el trabajo de diseño en la computadora o las pruebas prácticas? ¿Qué parte te frustraría?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$104,110",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. El salario real varía mucho según la ubicación, la industria, el empleador y la experiencia.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Construye una catapulta simple o un sistema de poleas con materiales de tu casa y observa qué tan lejos o cuánto puede mover.",
+        tool: "Todavía no necesitas herramientas especiales — solo intenta construir con lo que tengas en casa.",
+        activity: "Busca un club de robótica LEGO o de STEM en tu escuela, o un equipo de FIRST LEGO League, si hay uno cerca de ti.",
+        relatedField: "electrical-engineering",
+      },
+      "13-15": {
+        project: "Diseña una pieza simple en una herramienta CAD gratuita basada en el navegador, y piensa en cómo la construirías de verdad.",
+        tool: "Tinkercad — gratis, basado en el navegador, no necesita instalación.",
+        activity: "Investiga si hay un equipo de FIRST Tech Challenge o VEX Robotics en tu escuela.",
+        relatedField: "electrical-engineering",
+      },
+      "16-18": {
+        project: "Diseña y modela una pieza o mecanismo más completo, pensando en las tolerancias y en cómo se fabricaría realmente.",
+        tool: "Fusion 360 (gratis para uso personal o educativo) o SolidWorks si tu escuela te da acceso.",
+        activity: "Busca un programa preuniversitario de ingeniería, un equipo de FIRST Robotics Competition, o un campamento de verano de ingeniería en una universidad.",
+        relatedField: "electrical-engineering",
+      },
+    },
+    industries: ["Automotriz", "Aeroespacial", "Manufactura", "Energía", "Robótica", "Productos de consumo"],
+    relatedMajors: ["Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería de Manufactura"],
+    careerPaths: [
+      { title: "Ingeniero/a Automotriz", description: "Diseña y prueba sistemas del vehículo como motores, frenos y suspensiones." },
+      { title: "Ingeniero/a de Climatización (HVAC)", description: "Diseña sistemas de calefacción, refrigeración y ventilación para edificios." },
+      { title: "Ingeniero/a de Diseño de Productos", description: "Diseña productos físicos de consumo o industriales, desde el concepto hasta la fabricación." },
+      { title: "Ingeniero/a de Robótica", description: "Diseña la estructura física y los mecanismos de los robots (a menudo se superpone con la ingeniería eléctrica y de software)." },
+    ],
+    advantages: [
+      "Extremadamente amplio — las habilidades se transfieren a muchas industrias",
+      "Una mezcla de trabajo práctico y trabajo en computadora, si te gusta la variedad",
+      "Resultados directos y visibles — a menudo puedes ver y tocar lo que diseñaste",
+    ],
+    challenges: [
+      "Carga pesada de matemáticas y física, especialmente al principio de la carrera",
+      "Los diseños fallan con frecuencia durante las pruebas, y descubrir por qué requiere paciencia",
+      "Algunos puestos implican mucha documentación, informes y procesos de aprobación, así que a veces no estarás realmente diseñando ni construyendo nada",
+    ],
+    thingsPeopleDislike: [
+      "Los plazos de fabricación y pruebas pueden ser lentos — los proyectos a veces toman meses o años",
+      "Una cantidad considerable de papeleo y trabajo de cumplimiento normativo según la industria (como la aeroespacial, que está fuertemente regulada)",
+    ],
+    howCompetitive:
+      "En general, la ingeniería mecánica tiene una demanda fuerte y estable, pero esto varía mucho según el país y la industria específica (por ejemplo, los puestos en el sector aeroespacial suelen ser más competitivos que los de manufactura general). No lo tomes como garantizado — investiga el mercado laboral de tu país específico antes de tomar decisiones importantes.",
+    beginnerActivities: [
+      "Construye una máquina simple con materiales de casa (como una catapulta o un sistema de poleas) y observa qué tan bien funciona",
+      "Prueba una herramienta CAD gratuita como Tinkercad y diseña una pieza simple",
+      "Desarma un juguete o electrodoméstico mecánico viejo (de forma segura, desenchufado) y observa cómo encajan las piezas",
+    ],
+    selfReflectionQuestions: [
+      "¿Disfruto descubrir cómo funcionan las cosas físicas?",
+      "¿Estoy bien con que un diseño no funcione la primera vez, e intentarlo de nuevo?",
+      "¿Me gusta una mezcla de trabajo en computadora y pruebas prácticas?",
+      "¿Me gustan las matemáticas y me veo usándolas regularmente?",
+    ],
+  },
+  {
+    slug: "electrical-engineering",
+    name: "Ingeniería Eléctrica",
+    tagline: "Cómo se generan, transportan y controlan de verdad la electricidad y las señales electrónicas.",
+    whatItIs:
+      "La ingeniería eléctrica abarca cómo se genera, distribuye y utiliza la electricidad — desde enormes redes eléctricas hasta los diminutos circuitos dentro de un teléfono. Se divide en muchas subáreas: sistemas de energía, electrónica, procesamiento de señales, y más.",
+    whatEngineersWorkOn:
+      "Los ingenieros eléctricos diseñan circuitos, prueban cómo se comportan los sistemas electrónicos, trabajan en la distribución de energía, y a menudo colaboran de cerca con ingenieros de software cuando un dispositivo necesita tanto hardware como código para funcionar. Gran parte del trabajo consiste en leer esquemas, usar equipo de prueba especializado, y depurar por qué un circuito no se comporta como se esperaba.",
+    realWorldExamples: [
+      "Redes eléctricas y subestaciones",
+      "Placas de circuitos dentro de teléfonos y laptops",
+      "Sistemas de batería y motor de vehículos eléctricos",
+      "Equipos de imágenes médicas",
+      "Sistemas de comunicación inalámbrica (como WiFi y redes celulares)",
+    ],
+    commonMisconceptions: [
+      "Que es lo mismo que ser electricista (un oficio con licencia, diferente de un título de ingeniería).",
+      "Que solo se trata de cableado físico — una gran parte del campo es teoría de señales, diseño de circuitos, y cada vez más, programación de sistemas embebidos.",
+      "Que ya necesitas entender circuitos antes de empezar — como en la ingeniería mecánica, la mayor parte se enseña desde cero.",
+    ],
+    mythsAndRealities: [
+      { myth: "Es lo mismo que ser electricista.", reality: "Eso es un oficio con licencia, diferente de un título de ingeniería." },
+      { myth: "Solo se trata de cableado físico.", reality: "Una gran parte del campo es teoría de señales, diseño de circuitos, y cada vez más, programación de sistemas embebidos." },
+      { myth: "Necesitas ya entender circuitos antes de empezar.", reality: "Como en la ingeniería mecánica, la mayor parte se enseña desde cero." },
+    ],
+    usefulSubjects: ["Física (especialmente electricidad y magnetismo)", "Cálculo", "Cualquier curso introductorio de programación, si está disponible"],
+    helpfulSkills: [
+      "Comodidad con las matemáticas abstractas (el comportamiento eléctrico no siempre es visible como sí lo es el movimiento mecánico)",
+      "Depuración cuidadosa y metódica — una sola conexión incorrecta puede dañar todo un circuito",
+      "Programación básica, ya que muchos sistemas eléctricos modernos incluyen código embebido",
+    ],
+    typicalProjects: [
+      "Diseñar y probar un circuito en una protoboard",
+      "Simular el comportamiento de un circuito antes de construirlo físicamente",
+      "Programar un microcontrolador para que responda a la entrada de un sensor",
+    ],
+    typicalWorkday:
+      "El kit de herramientas abarca software de diseño de circuitos, equipo de prueba como osciloscopios y multímetros, y — en muchos puestos — escribir software embebido. Depurar un circuito que no funciona como se esperaba es una parte muy normal y recurrente del trabajo.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Diseño de circuitos", detail: "Trabajar en software de diseño de circuitos, colocando un nuevo componente en la placa." },
+        { time: "10:30 AM", label: "Simulación", detail: "Simular cómo debería comportarse el circuito antes de construirlo físicamente." },
+        { time: "12:00 PM", label: "En el banco de trabajo", detail: "Usar un osciloscopio y un multímetro para comparar el circuito físico con la simulación." },
+        { time: "1:30 PM", label: "Depuración", detail: "El circuito no se comporta como se esperaba — rastreando el problema conexión por conexión." },
+        { time: "3:00 PM", label: "Código embebido", detail: "Programar un microcontrolador para que responda correctamente a la entrada de un sensor." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Documentar qué se arregló hoy y qué sigue sin resolver." },
+      ],
+      reflectionQuestion:
+        "¿Cómo te sentirías pasando una tarde entera depurando un circuito que no funciona, sin garantía de encontrar el problema antes de irte a casa?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Medium",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$120,630",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. La especialización estrechamente relacionada de 'ingeniero electrónico' reporta una mediana más alta ($130,220) en los mismos datos del BLS, así que la especialización también importa aquí.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Construye un circuito simple con un kit de circuitos de encaje, una batería y un LED.",
+        tool: "Un kit de circuitos de encaje para principiantes — económico, fácil de conseguir, no necesita soldadura.",
+        activity: "Busca un club de STEM en tu escuela o un taller de electrónica para principiantes en una biblioteca local o espacio maker, si hay uno disponible.",
+        relatedField: "software-engineering",
+      },
+      "13-15": {
+        project: "Intenta construir un circuito básico de LED, y luego cambia la resistencia para ver qué pasa.",
+        tool: "Un simulador de circuitos gratuito en línea como Tinkercad Circuits, para que puedas probar ideas antes de comprar piezas.",
+        activity: "Investiga si hay un equipo de FIRST Tech Challenge o un club de robótica que involucre cableado y electrónica en tu escuela.",
+        relatedField: "software-engineering",
+      },
+      "16-18": {
+        project: "Prueba un proyecto de Arduino para principiantes, como hacer que un LED parpadee en un horario o leer un sensor.",
+        tool: "Arduino — una plataforma de microcontrolador muy usada y accesible para principiantes.",
+        activity: "Busca un programa preuniversitario de ingeniería o un campamento de verano de electrónica, y revisa si tu escuela ofrece Física AP con una unidad de electricidad y magnetismo.",
+        relatedField: "software-engineering",
+      },
+    },
+    industries: ["Energía", "Electrónica de consumo", "Telecomunicaciones", "Automotriz", "Aeroespacial", "Manufactura de semiconductores"],
+    relatedMajors: ["Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería en Computación"],
+    careerPaths: [
+      { title: "Ingeniero/a de Sistemas de Energía", description: "Diseña y mantiene los sistemas que generan y distribuyen electricidad." },
+      { title: "Ingeniero/a de Diseño Electrónico", description: "Diseña placas de circuitos y componentes electrónicos para dispositivos." },
+      { title: "Ingeniero/a de RF/Inalámbrico", description: "Trabaja en sistemas de comunicación inalámbrica como WiFi, señales celulares y satelitales." },
+      { title: "Ingeniero/a de Control", description: "Diseña sistemas que controlan automáticamente máquinas o procesos usando señales eléctricas." },
+    ],
+    advantages: [
+      "Alta demanda en una gama muy amplia de industrias",
+      "Las habilidades se transfieren bien a campos relacionados como la ingeniería en computación o la robótica",
+      "Mucha variedad — el trabajo en sistemas de energía se ve muy diferente al trabajo en electrónica de consumo",
+    ],
+    challenges: [
+      "Los conceptos suelen ser abstractos — la electricidad y las señales no siempre son visibles o intuitivas como sí lo es el movimiento mecánico",
+      "La depuración puede ser frustrante ya que los problemas no siempre son visualmente obvios",
+      "Las regulaciones y normas de seguridad son estrictas en el trabajo relacionado con energía, y por buenas razones",
+    ],
+    thingsPeopleDislike: [
+      "Algunos puestos tienen mucha carga de cumplimiento normativo y documentación de pruebas, especialmente en energía o aeroespacial",
+      "El rápido ritmo de cambio en la electrónica significa aprender constantemente nuevas herramientas y estándares",
+    ],
+    howCompetitive:
+      "La demanda es generalmente fuerte, especialmente para ingenieros cómodos tanto con hardware como con software, pero esto varía según el país y la especialización — los puestos en sistemas de energía y los puestos en electrónica de vanguardia pueden tener mercados laborales muy diferentes. Investiga tu región específica antes de sacar conclusiones.",
+    beginnerActivities: [
+      "Construye un circuito simple con una protoboard, LEDs y una batería de 9V",
+      "Prueba un kit de electrónica para principiantes (muchos son económicos y fáciles de conseguir)",
+      "Usa un simulador de circuitos gratuito en línea para construir y probar un circuito sin necesitar piezas físicas",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con conceptos abstractos que no puedo ver directamente, como la corriente eléctrica?",
+      "¿Disfruto depurar — descubrir con paciencia por qué algo no funciona?",
+      "¿Me interesa cómo funcionan juntos el hardware y el software?",
+    ],
+  },
+  {
+    slug: "civil-engineering",
+    name: "Ingeniería Civil",
+    tagline: "La infraestructura que hace que la vida diaria funcione — carreteras, puentes, sistemas de agua y los edificios que te rodean — planificada y mantenida en pie.",
+    whatItIs:
+      "La ingeniería civil abarca el diseño, la construcción y el mantenimiento de la infraestructura y el entorno construido — básicamente la mayor parte de lo que usas fuera de tu propia casa que no es un producto privado. Se divide en subáreas como ingeniería estructural, geotécnica, de transporte, y de recursos hídricos/ambiental.",
+    whatEngineersWorkOn:
+      "Los ingenieros civiles diseñan estructuras y sistemas, hacen cálculos para verificar que resistirán las condiciones del mundo real (cargas, suelo, flujo de agua), y coordinan de cerca con arquitectos, contratistas y agencias gubernamentales. Gran parte del trabajo también son visitas al sitio durante la construcción para asegurarse de que lo que realmente se está construyendo coincide con el diseño — y lidiar con permisos, códigos y aprobaciones, que es una parte más grande del trabajo de lo que la gente espera.",
+    realWorldExamples: [
+      "Puentes y pasos elevados de autopistas",
+      "Sistemas de tratamiento de agua y alcantarillado municipal",
+      "Cimientos de edificios y estructuras de armazón",
+      "Presas y sistemas de control de inundaciones",
+      "Infraestructura de transporte público como líneas ferroviarias y túneles",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros civiles son lo mismo que los trabajadores de la construcción o los contratistas — los ingenieros civiles diseñan y planifican; generalmente no son quienes construyen físicamente.",
+      "Que es un campo 'menos técnico' que la ingeniería mecánica o eléctrica — los cálculos estructurales y geotécnicos pueden ser igual de exigentes, y los márgenes de seguridad importan porque las fallas son públicas y potencialmente catastróficas.",
+      "Que la mayoría del trabajo de ingeniería civil es en proyectos grandes y llamativos — gran parte del trabajo diario son proyectos municipales más pequeños: reparación de calles, drenaje de urbanizaciones, inspecciones rutinarias de puentes.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros civiles son lo mismo que los trabajadores de la construcción o los contratistas.", reality: "Los ingenieros civiles diseñan y planifican; generalmente no son quienes construyen físicamente." },
+      { myth: "Es un campo 'menos técnico' que la ingeniería mecánica o eléctrica.", reality: "Los cálculos estructurales y geotécnicos pueden ser igual de exigentes, y los márgenes de seguridad importan porque las fallas son públicas y potencialmente catastróficas." },
+      { myth: "La mayoría del trabajo de ingeniería civil es en proyectos grandes y llamativos.", reality: "Gran parte del trabajo diario son proyectos municipales más pequeños: reparación de calles, drenaje de urbanizaciones, inspecciones rutinarias de puentes." },
+    ],
+    usefulSubjects: ["Física (especialmente estática y mecánica)", "Cálculo", "Ciencias ambientales, si está disponible", "Geografía o ciencias de la Tierra, si está disponible"],
+    helpfulSkills: [
+      "Comodidad trabajando dentro de códigos, normas y regulaciones — gran parte del trabajo es diseñar dentro de los requisitos legales de seguridad, no solo lo técnicamente posible",
+      "Coordinación de proyectos, ya que los proyectos civiles normalmente involucran arquitectos, funcionarios municipales y contratistas, no solo a otros ingenieros",
+      "Atención al riesgo a largo plazo — pequeños errores en trabajo estructural o geotécnico pueden tener consecuencias graves para la seguridad pública",
+      "Familiaridad básica con software CAD o GIS, si está disponible",
+    ],
+    typicalProjects: [
+      "Calcular la carga que una viga o cimiento necesita soportar",
+      "Diseñar un sistema de drenaje para una nueva urbanización",
+      "Revisar datos de pruebas de suelo para determinar qué tipo de cimiento puede soportar un terreno",
+      "Preparar planos del sitio para una solicitud de permiso",
+    ],
+    typicalWorkday:
+      "El trabajo de diseño en la oficina — haciendo cálculos estructurales o hidráulicos, revisando planos, escribiendo informes — se alterna con visitas al sitio para revisar construcción activa o inspeccionar infraestructura existente. Los ingenieros civiles del sector público a menudo pasan bastante tiempo en reuniones con funcionarios municipales o miembros de la comunidad, ya que los proyectos de infraestructura suelen ser financiados y revisados públicamente.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Visita al sitio", detail: "Un inicio temprano revisando la construcción activa para asegurarse de que lo que se está construyendo coincide con el diseño." },
+        { time: "10:00 AM", label: "De vuelta en la oficina", detail: "Haciendo cálculos estructurales o hidráulicos de una nueva sección del proyecto." },
+        { time: "11:30 AM", label: "Revisando planos", detail: "Verificando el diseño de un colega contra los códigos de construcción y seguridad." },
+        { time: "1:00 PM", label: "Permisos y papeleo", detail: "Preparando planos del sitio para una solicitud de permiso — más parte del trabajo de lo que la mayoría espera." },
+        { time: "2:30 PM", label: "Reunión pública", detail: "Presentando una actualización del proyecto a funcionarios municipales y respondiendo preguntas de la comunidad." },
+        { time: "4:00 PM", label: "Cierre del día", detail: "Escribiendo un informe que resume lo encontrado en la visita de hoy al sitio." },
+      ],
+      reflectionQuestion:
+        "¿Una visita matutina al aire libre te suena como un descanso agradable del escritorio, o como una interrupción molesta de tu día?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "High",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$100,840",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. El salario del sector público en particular puede diferir bastante del salario del sector privado dentro de este mismo campo.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Construye un pequeño puente con palitos de madera o espagueti y observa cuánto peso puede sostener.",
+        tool: "Todavía no necesitas herramientas especiales — solo materiales de construcción caseros.",
+        activity: "Busca un club de STEM en tu escuela, o revisa si una biblioteca local o museo de ciencias ofrece un taller de construcción de puentes o estructuras.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Prueba una herramienta gratuita en línea que te permita probar diseños simples de armaduras o vigas antes de construir algo físico.",
+        tool: "PhET Interactive Simulations (Universidad de Colorado Boulder) — gratis, incluye temas de fuerzas y estructuras.",
+        activity: "Investiga si hay un equipo de Science Olympiad, que a menudo tiene eventos de construcción de puentes o ingeniería estructural.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Elige un puente o edificio por el que realmente pases y, usando fuentes públicas, investiga aproximadamente cómo fue diseñado para soportar sus cargas.",
+        tool: "Software básico de CAD o dibujo técnico, si tu escuela ofrece una clase de dibujo o diseño de ingeniería.",
+        activity: "Investiga un programa preuniversitario de ingeniería civil o construcción, o un programa de verano organizado por un departamento de ingeniería universitario.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Gobierno y municipal", "Construcción", "Consultoría ambiental", "Transporte", "Recursos hídricos", "Desarrollo inmobiliario"],
+    relatedMajors: ["Ingeniería Civil", "Ingeniería Estructural", "Ingeniería Ambiental"],
+    careerPaths: [
+      { title: "Ingeniero/a Estructural", description: "Diseña el armazón de carga de edificios y puentes para que puedan soportar peso de forma segura y resistir fuerzas como el viento o los terremotos." },
+      { title: "Ingeniero/a Geotécnico/a", description: "Estudia las condiciones del suelo y la roca para determinar cómo debe diseñarse el cimiento de una estructura." },
+      { title: "Ingeniero/a de Transporte", description: "Planifica y diseña calles, carreteras y sistemas de transporte, a menudo enfocado en el flujo de tráfico y la seguridad." },
+      { title: "Ingeniero/a de Recursos Hídricos", description: "Diseña sistemas de suministro de agua, drenaje, control de inundaciones y tratamiento de aguas residuales." },
+    ],
+    advantages: [
+      "El trabajo tiene un impacto directo, visible y duradero en la comunidad donde vives",
+      "La demanda está ligada a la infraestructura esencial, que suele necesitar mantenimiento y mejoras sin importar las condiciones económicas",
+      "Un camino claro hacia la licencia profesional en muchos países, lo que puede traer más autoridad independiente y estabilidad laboral",
+    ],
+    challenges: [
+      "Los proyectos pueden tomar años desde el diseño hasta la finalización, así que no siempre ves resultados rápidos",
+      "El trabajo en el sector público puede implicar procesos burocráticos lentos y factores políticos fuera de tu control como ingeniero",
+      "Mucho está en juego — un error de diseño en trabajo estructural o geotécnico no solo es costoso, puede ser peligroso",
+    ],
+    thingsPeopleDislike: [
+      "Los salarios del gobierno y municipales pueden quedar por debajo de los puestos de ingeniería del sector privado en algunas regiones",
+      "Mucho papeleo, permisos y revisión regulatoria, especialmente en el trabajo del sector público",
+      "Las visitas al sitio pueden significar madrugadas, condiciones al aire libre, y viajes a sitios remotos",
+    ],
+    howCompetitive:
+      "La demanda de ingenieros civiles es generalmente estable, ya que el mantenimiento de infraestructura y los proyectos públicos no desaparecen como sí puede pasar con parte del trabajo del sector privado, pero el salario y la demanda varían mucho según la región y si trabajas en el sector público o privado. En muchos países, convertirte en un ingeniero civil totalmente licenciado toma varios años de experiencia supervisada después de graduarte, lo cual afecta qué tan rápido puedes asumir responsabilidad de diseño independiente — investiga el camino de licenciatura y el mercado laboral en tu país específico antes de tomar decisiones.",
+    beginnerActivities: [
+      "Construye un pequeño puente con palitos de madera o espagueti y observa cuánto peso puede sostener antes de fallar",
+      "Observa un sitio de construcción o puente local e intenta identificar elementos estructurales básicos como vigas, columnas y armaduras",
+      "Prueba una herramienta gratuita en línea que te permita probar diseños simples de armaduras o vigas",
+    ],
+    selfReflectionQuestions: [
+      "¿Me interesan los proyectos que toman años en terminarse en lugar de semanas?",
+      "¿Me importa la infraestructura pública y el impacto en la comunidad tanto como, o más que, la resolución técnica de problemas?",
+      "¿Estoy cómodo/a trabajando dentro de códigos y regulaciones estrictas en lugar de tener más libertad de diseño abierta?",
+      "¿Querría eventualmente obtener una licencia profesional, que normalmente requiere años de experiencia laboral supervisada?",
+    ],
+  },
+  {
+    slug: "biomedical-engineering",
+    name: "Ingeniería Biomédica",
+    tagline: "Aplicar principios de ingeniería a la biología y la medicina — diseñando los dispositivos, herramientas y sistemas usados para diagnosticar, monitorear y tratar el cuerpo humano.",
+    whatItIs:
+      "La ingeniería biomédica está en la intersección entre la ingeniería y las ciencias de la vida. Abarca una amplia gama de subáreas — dispositivos médicos, tecnología de imágenes, prótesis, biomateriales, ingeniería de tejidos, y cada vez más, software relacionado con la salud — así que lo que un ingeniero biomédico realmente hace día a día varía mucho según su especialización.",
+    whatEngineersWorkOn:
+      "Los ingenieros biomédicos diseñan y prueban dispositivos y equipos médicos, trabajan en hacer más precisas las herramientas de imágenes o diagnóstico, y desarrollan materiales seguros para usar dentro o sobre el cuerpo humano — a menudo colaborando de cerca con médicos, biólogos y especialistas regulatorios. Una parte más grande del trabajo que en la mayoría de los otros campos de ingeniería es navegar pruebas de seguridad estrictas y la aprobación regulatoria antes de que un producto pueda usarse en pacientes.",
+    realWorldExamples: [
+      "Marcapasos y otros dispositivos médicos implantables",
+      "Máquinas de resonancia magnética (MRI) y tomografía computarizada (CT)",
+      "Prótesis de extremidades e implantes ortopédicos",
+      "Bombas de insulina y otros dispositivos médicos portátiles",
+      "Equipo de laboratorio usado para pruebas diagnósticas",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros biomédicos son médicos o trabajan directamente con pacientes — la mayoría trabaja en laboratorios, investigación y desarrollo, o manufactura, no en entornos clínicos.",
+      "Que el campo es principalmente biología — es ingeniería primero, y una base sólida en matemáticas y física suele ser tan importante como el conocimiento de ciencias de la vida.",
+      "Que los trabajos de nivel inicial son tan abundantes como en campos más establecidos como la ingeniería mecánica o eléctrica — esto varía, y vale la pena investigarlo con cuidado (ver la nota sobre competitividad más abajo).",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros biomédicos son médicos o trabajan directamente con pacientes.", reality: "La mayoría trabaja en laboratorios, investigación y desarrollo, o manufactura, no en entornos clínicos." },
+      { myth: "El campo es principalmente biología.", reality: "Es ingeniería primero, y una base sólida en matemáticas y física suele ser tan importante como el conocimiento de ciencias de la vida." },
+      { myth: "Los trabajos de nivel inicial son tan abundantes como en campos más establecidos como la ingeniería mecánica o eléctrica.", reality: "Esto varía mucho, y vale la pena investigarlo con cuidado — ver la sección sobre competitividad más abajo." },
+    ],
+    usefulSubjects: ["Biología", "Química", "Física", "Cálculo"],
+    helpfulSkills: [
+      "Comodidad combinando fundamentos de ingeniería con conceptos de biología y fisiología",
+      "Documentación cuidadosa y detallada — los procesos de aprobación regulatoria requieren registros extensos y precisos",
+      "Paciencia con plazos de desarrollo largos, ya que los dispositivos médicos a menudo tardan años en pasar del diseño al mercado",
+      "Habilidades de colaboración, ya que los proyectos normalmente involucran a ingenieros, médicos clínicos y personal regulatorio trabajando juntos",
+    ],
+    typicalProjects: [
+      "Diseñar y probar un prototipo de dispositivo médico para verificar su seguridad y funcionamiento",
+      "Analizar cómo se comporta un material cuando se usa dentro del cuerpo (biocompatibilidad)",
+      "Trabajar en la documentación requerida para una presentación regulatoria",
+      "Realizar experimentos de laboratorio para validar cómo funciona un dispositivo o sensor",
+    ],
+    typicalWorkday:
+      "Mucho trabajo de laboratorio — probar prototipos, realizar experimentos, documentar resultados — combinado con tiempo dedicado a papeleo regulatorio y reuniones con equipos multidisciplinarios como médicos clínicos y personal de calidad/regulación. Debido a que los dispositivos médicos están tan estrictamente regulados, la documentación exhaustiva es una parte más grande del trabajo diario aquí que en muchos otros campos de ingeniería.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "En el laboratorio", detail: "Probar un prototipo de dispositivo para verificar si funciona como se supone que debe hacerlo." },
+        { time: "10:30 AM", label: "Realizando un experimento", detail: "Analizar cómo se comporta un material cuando se usa dentro del cuerpo — pruebas de biocompatibilidad." },
+        { time: "12:30 PM", label: "Documentación", detail: "Escribir registros cuidadosos y precisos — la aprobación regulatoria depende de hacer esto exactamente bien." },
+        { time: "2:00 PM", label: "Reunión entre equipos", detail: "Reunión con médicos clínicos y personal regulatorio sobre la siguiente ronda de pruebas del dispositivo." },
+        { time: "3:30 PM", label: "Papeleo regulatorio", detail: "Trabajar en la documentación requerida para una presentación regulatoria formal." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Actualizar el cronograma del proyecto — la revisión regulatoria puede añadir meses que están fuera de tu control." },
+      ],
+      reflectionQuestion:
+        "¿Cómo te sentirías sabiendo que el dispositivo que probaste hoy podría no llegar realmente a un paciente hasta dentro de dos o tres años más?",
+    },
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "High",
+      marketUncertainty: "High",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "High",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$109,370",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. Dadas las advertencias sobre el mercado laboral en la sección de competitividad de este campo, más arriba, trata esta cifra como contexto de referencia, no como una garantía.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo funciona un dispositivo que tú o alguien que conoces realmente usa (un marcapasos, un audífono o una bomba de insulina), y explícalo con tus propias palabras.",
+        tool: "Todavía no necesitas herramientas especiales — solo curiosidad y fuentes confiables como libros de biblioteca o sitios científicos de confianza.",
+        activity: "Busca un club de ciencias en tu escuela, o revisa si un museo de ciencias local tiene una exhibición de salud o tecnología médica.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Prueba un recurso de biología para principiantes para ver si el lado de las ciencias de la vida realmente te interesa, no solo el lado de la ingeniería.",
+        tool: "Un recurso de biología gratuito y confiable (como el contenido de biología de Khan Academy) para probar tu interés antes de dedicarle tiempo de estudio.",
+        activity: "Investiga si hay un capítulo de HOSA (Health Occupations Students of America) en tu escuela — cubre carreras de salud en general, no solo la ingeniería biomédica.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Investiga si tu escuela o un hospital cercano ofrece voluntariado, observación laboral (shadowing), o un programa de verano de ingeniería biomédica.",
+        tool: "Ninguna herramienta específica todavía — esta etapa se trata más de conocer el campo que de usar una herramienta en particular.",
+        activity: "Busca un capítulo de HOSA, un programa preuniversitario de ingeniería biomédica, o un programa de voluntariado para adolescentes en un hospital.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Manufactura de dispositivos médicos", "Farmacéutica", "Hospitales y sistemas de salud", "Instituciones de investigación", "Diagnóstico"],
+    relatedMajors: ["Ingeniería Biomédica", "Bioingeniería", "Ingeniería Química (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Dispositivos Médicos", description: "Diseña y prueba dispositivos como marcapasos, bombas de insulina o instrumentos quirúrgicos." },
+      { title: "Ingeniero/a Clínico/a", description: "Gestiona y da mantenimiento al equipo médico dentro de un hospital o sistema de salud." },
+      { title: "Ingeniero/a de Biomateriales", description: "Desarrolla materiales seguros para usar dentro o sobre el cuerpo humano, como implantes o recubrimientos." },
+      { title: "Especialista en Asuntos Regulatorios", description: "Gestiona el proceso de pruebas y documentación necesario para que un dispositivo médico sea aprobado para su uso — un camino común para ingenieros biomédicos que prefieren menos trabajo de laboratorio." },
+    ],
+    advantages: [
+      "El trabajo tiene una conexión clara y significativa con mejorar la salud de las personas",
+      "Altamente interdisciplinario — una buena opción si no quieres elegir entre la ingeniería y las ciencias de la vida",
+      "Un área de la medicina en crecimiento a medida que los dispositivos, el diagnóstico y el tratamiento personalizado siguen avanzando",
+    ],
+    challenges: [
+      "Los procesos de aprobación regulatoria son largos y exigentes, lo cual puede retrasar qué tan rápido tu trabajo llega a un uso real",
+      "La naturaleza interdisciplinaria significa que se espera un conjunto de habilidades genuinamente amplio, lo que puede hacer que la carga académica sea más pesada que en carreras más especializadas",
+      "Los puestos de nivel inicial pueden ser más competitivos en comparación con otros campos de ingeniería — ver la nota más abajo",
+    ],
+    thingsPeopleDislike: [
+      "Los plazos lentos de regulación y aprobación pueden ser frustrantes si quieres ver resultados rápidos",
+      "Requisitos pesados de documentación",
+      "Algunos graduados terminan en puestos que solo son 'biomédicos' de forma vaga (como puestos generales de calidad o ingeniería mecánica) porque los puestos biomédicos específicos pueden ser más difíciles de encontrar recién egresado",
+    ],
+    howCompetitive:
+      "Este es un campo donde las advertencias importan más que en la mayoría, así que trata esto como un punto de partida, no como una respuesta final. La ingeniería biomédica es una carrera popular, y comúnmente se reporta que el número de trabajos específicamente titulados 'ingeniero biomédico' no siempre ha crecido al mismo ritmo que la cantidad de estudiantes que se gradúan con este título — por eso algunos graduados pasan a puestos relacionados como ingeniería de calidad o asuntos regulatorios en lugar de un puesto estrictamente 'biomédico'. Esto varía mucho según la región y la especialización, y puede cambiar con el tiempo, así que investiga datos actuales y locales del mercado laboral en lugar de confiar en la reputación general.",
+    beginnerActivities: [
+      "Investiga cómo funciona realmente un dispositivo médico específico, como un marcapasos o una bomba de insulina",
+      "Prueba un recurso de biología o anatomía para principiantes para ver si el lado de las ciencias de la vida realmente te interesa",
+      "Investiga un centro de ciencias local, un programa de voluntariado en un hospital, o una oportunidad de observación laboral para ver equipo biomédico en un entorno real",
+    ],
+    selfReflectionQuestions: [
+      "¿Me interesan igual la biología y la medicina que la ingeniería tradicional, o me inclino mucho más hacia una de las dos?",
+      "¿Estoy bien con plazos de proyecto largos determinados por la aprobación regulatoria, no solo por la dificultad técnica?",
+      "¿Estaría satisfecho/a en un puesto relacionado, como asuntos regulatorios o ingeniería de calidad, si un trabajo estrictamente 'biomédico' no está disponible de inmediato?",
+      "¿Quiero un trabajo estrechamente ligado a los resultados de salud, aunque no trabaje directamente con pacientes?",
+    ],
+  },
+  {
+    slug: "software-engineering",
+    name: "Ingeniería de Software",
+    tagline: "Los sistemas de software y aplicaciones que hacen funcionar casi todo lo digital — diseñados, construidos y mantenidos.",
+    whatItIs:
+      "La ingeniería de software se trata de diseñar, construir, probar y mantener software — el código detrás de las aplicaciones, sitios web, sistemas operativos, y los sistemas dentro de otros productos de ingeniería, como el software de control de un auto o un dispositivo médico. A veces se enseña dentro de programas de ciencias de la computación y a veces como carrera propia, y la línea entre 'ingeniero de software,' 'científico de la computación,' y 'programador' se usa de forma inconsistente según la empresa.",
+    whatEngineersWorkOn:
+      "Los ingenieros de software escriben y revisan código, diseñan cómo encajan las diferentes partes de un sistema, prueban el software para detectar errores antes del lanzamiento, y mantienen y mejoran sistemas existentes — lo cual es una parte mucho más grande del trabajo de lo que la gente espera, ya que la mayoría del código no se escribe desde cero, sino que se construye sobre sistemas existentes o se modifica dentro de ellos. Gran parte del trabajo real es leer el código de otras personas, comunicarse con el equipo, y descubrir por qué algo no funciona como se esperaba.",
+    realWorldExamples: [
+      "Aplicaciones móviles y sitios web",
+      "Sistemas operativos y el software que corre dentro de dispositivos de consumo",
+      "Sistemas backend que procesan transacciones, como plataformas bancarias o de comercio electrónico",
+      "Software embebido dentro de autos, electrodomésticos y dispositivos médicos",
+      "Herramientas para desarrolladores e infraestructura que otras empresas usan para construir su propio software",
+    ],
+    commonMisconceptions: [
+      "Que se trata principalmente de saber muchos lenguajes de programación — resolver problemas y diseñar sistemas importa más que memorizar sintaxis, y la mayoría de los ingenieros en activo usan documentación y referencias constantemente.",
+      "Que programas de forma independiente, todo el día, todos los días — la mayoría de los puestos implican tiempo real en reuniones, revisión de código, planificación, y comunicación con personas que no son ingenieros.",
+      "Que es un camino fácil o garantizado hacia un salario alto sin importar el esfuerzo — el mercado laboral ha cambiado en los últimos años y es más competitivo de lo que sugiere la narrativa popular (ver la nota más abajo).",
+    ],
+    mythsAndRealities: [
+      { myth: "Se trata principalmente de saber muchos lenguajes de programación.", reality: "Resolver problemas y diseñar sistemas importa más que memorizar sintaxis, y la mayoría de los ingenieros en activo usan documentación y referencias constantemente." },
+      { myth: "Programas de forma independiente, todo el día, todos los días.", reality: "La mayoría de los puestos implican tiempo real en reuniones, revisión de código, planificación, y comunicación con personas que no son ingenieros." },
+      { myth: "Es un camino fácil o garantizado hacia un salario alto sin importar el esfuerzo.", reality: "El mercado laboral ha cambiado en los últimos años y es más competitivo de lo que sugiere la narrativa popular — ver la nota más abajo." },
+    ],
+    usefulSubjects: ["Cualquier curso de programación o ciencias de la computación disponible", "Álgebra y matemáticas discretas, si está disponible", "Cursos basados en lógica, como lógica formal o debate, también pueden ayudar"],
+    helpfulSkills: [
+      "Dividir problemas grandes y vagos en pasos más pequeños y bien definidos",
+      "Paciencia para depurar — la mayor parte del trabajo es descubrir por qué algo no funciona, no escribir código nuevo",
+      "Comodidad leyendo y modificando código que alguien más escribió, ya que la mayoría del trabajo profesional ocurre dentro de bases de código ya existentes",
+      "Habilidades de comunicación, ya que los ingenieros constantemente explican decisiones técnicas a su equipo o a personas sin conocimientos técnicos",
+    ],
+    typicalProjects: [
+      "Construir una aplicación o sitio web pequeño desde cero para aprender un lenguaje o framework",
+      "Arreglar un error en código existente y descubrir qué lo causó",
+      "Escribir pruebas para asegurarse de que una pieza de software se comporte correctamente",
+      "Contribuir un pequeño cambio a un proyecto de código abierto",
+    ],
+    typicalWorkday:
+      "Mayormente frente a una computadora — escribiendo código, revisando el código de otras personas, asistiendo a reuniones de planificación o standup, e investigando cómo resolver un problema técnico específico. Contrario a la imagen del 'programador genio solitario', la mayoría de la ingeniería de software es un proceso colaborativo, en equipo, que implica mucha comunicación escrita y verbal.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Reunión standup", detail: "Un chequeo rápido del equipo sobre en qué está trabajando cada quien y qué los está frenando." },
+        { time: "9:15 AM", label: "Escribiendo código", detail: "Trabajando en una función pequeña — la mayor parte construida sobre código que ya existe." },
+        { time: "10:30 AM", label: "Revisión de código", detail: "Leyendo y revisando el código de un compañero de equipo antes de que se publique." },
+        { time: "12:30 PM", label: "Depuración", detail: "Algo no funciona como se esperaba, y todavía no está claro por qué." },
+        { time: "2:00 PM", label: "Resolución de problemas", detail: "Investigando cómo otras personas resolvieron un problema técnico similar antes." },
+        { time: "3:30 PM", label: "De vuelta a la solución", detail: "Probando y refinando la solución de más temprano en el día." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Actualizando al equipo sobre el progreso antes de desconectarse." },
+      ],
+      reflectionQuestion:
+        "¿Este día sonó más a resolver problemas en equipo, o a escribir código solo? ¿Cuál se parece más a lo que imaginabas?",
+    },
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Low",
+      regulatoryBurden: "Low",
+      marketUncertainty: "High",
+      coding: "High",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$135,980",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región. Dadas las advertencias sobre el mercado laboral de este campo mencionadas más arriba, una mediana histórica alta no garantiza los resultados actuales para puestos de nivel inicial.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Prueba Scratch para construir una animación o juego muy simple — no necesitas escribir código real.",
+        tool: "Scratch — gratis, hecho por el MIT, diseñado específicamente para principiantes.",
+        activity: "Busca un club de programación en tu escuela, o revisa si tu biblioteca local ofrece un programa de programación para principiantes.",
+        relatedField: "electrical-engineering",
+      },
+      "13-15": {
+        project: "Prueba un curso gratuito de programación para principiantes y construye un proyecto pequeño, como una calculadora o una lista de tareas.",
+        tool: "Un curso gratuito de Python para principiantes, ya que suele ser el primero que se enseña.",
+        activity: "Investiga si hay un club de programación en tu escuela o una sede local de una organización de programación para principiantes.",
+        relatedField: "electrical-engineering",
+      },
+      "16-18": {
+        project: "Contribuye un pequeño cambio a un proyecto real de código abierto, o construye un proyecto personal más grande y publícalo.",
+        tool: "GitHub — el lugar estándar donde los ingenieros de software guardan y comparten código.",
+        activity: "Revisa si tu escuela ofrece Ciencias de la Computación AP, e investiga un programa de verano de programación o una pasantía si hay alguna disponible.",
+        relatedField: "electrical-engineering",
+      },
+    },
+    industries: ["Empresas de tecnología", "Finanzas", "Salud", "Videojuegos", "Cualquier industria con un producto digital, que hoy en día es la mayoría"],
+    relatedMajors: ["Ciencias de la Computación", "Ingeniería de Software", "Ingeniería en Computación"],
+    careerPaths: [
+      { title: "Ingeniero/a Frontend", description: "Construye las partes de un sitio web o app que los usuarios ven y con las que interactúan directamente." },
+      { title: "Ingeniero/a Backend", description: "Construye los sistemas del lado del servidor que manejan datos, lógica y solicitudes detrás de escena." },
+      { title: "Ingeniero/a Móvil", description: "Construye aplicaciones específicamente para teléfonos y tablets, como apps de iOS o Android." },
+      { title: "Ingeniero/a de DevOps / Infraestructura", description: "Construye y mantiene los sistemas que permiten a otros ingenieros publicar y ejecutar software de forma confiable." },
+    ],
+    advantages: [
+      "Las habilidades se transfieren ampliamente a casi cualquier industria, ya que la mayoría de las empresas dependen de algún software",
+      "El trabajo remoto es más común en este campo que en la mayoría de las otras disciplinas de ingeniería",
+      "Ciclos de retroalimentación relativamente rápidos — a menudo puedes construir y probar algo tú mismo sin necesitar equipo costoso o acceso a un laboratorio",
+    ],
+    challenges: [
+      "El campo cambia rápidamente — las herramientas y mejores prácticas consideradas estándar hoy pueden quedar obsoletas en unos años, así que el aprendizaje continuo por cuenta propia es parte del trabajo",
+      "El mercado laboral de nivel inicial se ha vuelto notablemente más competitivo en los últimos años (ver la nota más abajo)",
+      "Pasar largos periodos sentado frente a una computadora puede afectar físicamente si no incluyes descansos y movimiento",
+    ],
+    thingsPeopleDislike: [
+      "La necesidad constante de aprender nuevas herramientas y tecnologías solo para mantenerse al día",
+      "Las reuniones y la carga de procesos en empresas grandes pueden sentirse como que frenan la construcción real",
+      "La estabilidad laboral puede sentirse menos segura de lo que la gente asume — la industria ha pasado por olas visibles de despidos en los últimos años",
+    ],
+    howCompetitive:
+      "Esto ha cambiado de forma significativa en los últimos años, así que trata con cuidado las narrativas antiguas sobre este campo. Durante mucho tiempo, la ingeniería de software se vio como un camino confiablemente bien pagado y de alta demanda, pero la contratación de nivel inicial se ha vuelto considerablemente más competitiva debido a una combinación de más graduados entrando al campo, un mayor uso de herramientas de IA para algunas tareas de programación, y despidos más amplios en la industria tecnológica. Sigue siendo un campo grande con oportunidades reales, pero 'simplemente aprende a programar' es una garantía mucho menos confiable de lo que solía ser — investiga las tendencias actuales de contratación en lugar de confiar en esto o en la reputación general antigua.",
+    beginnerActivities: [
+      "Prueba un curso gratuito de programación para principiantes — muchos existen específicamente para Python o JavaScript",
+      "Construye un proyecto muy pequeño, como una calculadora simple o una app de lista de tareas",
+      "Prueba un sitio de práctica de programación para resolver pequeños acertijos de lógica",
+    ],
+    selfReflectionQuestions: [
+      "¿Disfruto el proceso de depurar — descubrir con paciencia por qué algo no funciona?",
+      "¿Estoy cómodo/a con un campo que cambia rápidamente y requiere aprendizaje continuo?",
+      "¿Quiero un puesto altamente colaborativo, trabajando de cerca con un equipo, en lugar de trabajar solo la mayor parte del tiempo?",
+      "¿Estoy eligiendo este campo porque genuinamente me interesa construir cosas con código, o principalmente por suposiciones sobre el salario o la estabilidad laboral que quizás ya no sean tan ciertas como antes?",
+    ],
+  },
+  {
+    slug: "aerospace-engineering",
+    name: "Ingeniería Aeroespacial",
+    tagline: "Las aeronaves, naves espaciales y sistemas que hacen que las cosas despeguen — diseñados y probados para que se mantengan seguros en el aire.",
+    whatItIs:
+      "La ingeniería aeroespacial se trata de diseñar, construir y probar vehículos que vuelan — desde aviones comerciales hasta satélites, cohetes y drones. Se divide en dos áreas que se superponen: la ingeniería aeronáutica (cosas que vuelan dentro de la atmósfera) y la ingeniería astronáutica (naves espaciales y cosas que operan más allá de ella), aunque la mayoría de los programas y trabajos combinan ambas.",
+    whatEngineersWorkOn:
+      "Los ingenieros aeroespaciales diseñan componentes y sistemas, hacen simulaciones para predecir cómo se comportará un diseño bajo fuerzas extremas como alta velocidad, presión o temperatura, coordinan con equipos de manufactura para descubrir cómo se puede construir algo realmente, y evalúan los diseños contra requisitos estrictos de seguridad y regulación. Gran parte del trabajo es hacer pruebas — llevar un diseño a sus límites en un laboratorio o simulación antes de confiarle jamás un vuelo real.",
+    realWorldExamples: [
+      "Alas y estructuras de fuselaje de aviones comerciales",
+      "Sistemas de propulsión y comunicación de satélites",
+      "Motores de cohetes y vehículos de lanzamiento",
+      "Drones y sistemas de aeronaves no tripuladas",
+      "Sistemas de soporte vital y control térmico de naves espaciales",
+    ],
+    commonMisconceptions: [
+      "Que todos los ingenieros aeroespaciales trabajan para la NASA o una empresa espacial — la mayoría trabaja en aviación comercial, defensa, o en componentes para sistemas más grandes, no necesariamente naves espaciales.",
+      "Que ya necesitas entender de cohetes — como en otros campos de ingeniería, la profundidad técnica se enseña durante la carrera, no se espera de antemano.",
+      "Que es lo mismo que ser piloto o astronauta — los ingenieros aeroespaciales diseñan y prueban los vehículos; no necesariamente los pilotean.",
+    ],
+    mythsAndRealities: [
+      { myth: "Todos los ingenieros aeroespaciales trabajan para la NASA o una empresa espacial.", reality: "La mayoría trabaja en aviación comercial, defensa, o en componentes para sistemas más grandes, no necesariamente naves espaciales." },
+      { myth: "Ya necesitas entender de cohetes.", reality: "Como en otros campos de ingeniería, la profundidad técnica se enseña durante la carrera, no se espera de antemano." },
+      { myth: "Es lo mismo que ser piloto o astronauta.", reality: "Los ingenieros aeroespaciales diseñan y prueban los vehículos; no necesariamente los pilotean." },
+    ],
+    usefulSubjects: ["Física (especialmente mecánica y termodinámica)", "Cálculo", "Química", "Dibujo técnico o CAD, si está disponible"],
+    helpfulSkills: [
+      "Comodidad con matemáticas y física a un nivel exigente — los márgenes de error son más pequeños que en la mayoría de los otros campos",
+      "Paciencia para pruebas y simulaciones extensas antes de que algo se construya físicamente",
+      "Atención al detalle, ya que un pequeño error puede tener consecuencias graves de seguridad",
+      "Conocimientos básicos de computación para software de CAD y simulación",
+    ],
+    typicalProjects: [
+      "Simular cómo se comporta un diseño de ala bajo diferentes velocidades y esfuerzos",
+      "Analizar la capacidad de un material para resistir calor o presión extremos",
+      "Revisar datos de prueba de un túnel de viento o una prueba de vuelo",
+      "Trabajar en la documentación requerida para certificar un diseño como seguro",
+    ],
+    typicalWorkday:
+      "Mayormente en la oficina y el laboratorio — corriendo simulaciones, revisando diseños, y analizando datos de prueba — con tiempo periódico en un laboratorio o instalación de pruebas, y viajes en algunos puestos. Los proyectos aeroespaciales suelen ser esfuerzos grandes de varios años, así que gran parte del trabajo diario es una pequeña pieza de un sistema mucho más grande, coordinado con muchos otros ingenieros.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Revisión de diseño", detail: "Revisar el diseño de un componente contra los requisitos estructurales y de seguridad del proyecto." },
+        { time: "10:30 AM", label: "Simulación", detail: "Correr una simulación para ver cómo se comporta una pieza bajo estrés o temperatura extremos." },
+        { time: "12:30 PM", label: "Coordinación de equipo", detail: "Reunión con equipos de manufactura y otros equipos de ingeniería — un solo proyecto aeroespacial involucra a mucha gente." },
+        { time: "2:00 PM", label: "Revisión de datos de prueba", detail: "Analizar los resultados de una prueba reciente de túnel de viento o de laboratorio contra lo que predijo la simulación." },
+        { time: "3:30 PM", label: "Documentación", detail: "Redactar los hallazgos para el registro de seguridad y certificación — requerido antes de que algo avance." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Actualizar el cronograma del proyecto y señalar cualquier problema para mañana." },
+      ],
+      reflectionQuestion:
+        "¿Estarías bien sabiendo que tu parte de un proyecto podría no volar hasta dentro de años, y que la mayor parte de tu día es hacer pruebas y documentación en lugar de construir?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$134,960",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/aerospace-engineers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. El salario aeroespacial también puede variar bastante entre puestos del sector de defensa y de aviación comercial.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Construye y vuela un avión de papel o planeador simple, y experimenta con qué cambia qué tan lejos o recto vuela.",
+        tool: "Todavía no necesitas herramientas especiales — solo papel y experimentación.",
+        activity: "Busca un club de STEM en tu escuela, o revisa si un museo de ciencias local tiene una exhibición de aviación o espacio.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Prueba una herramienta de simulación gratuita para ver cómo la forma o el ángulo del ala afecta la sustentación.",
+        tool: "PhET Interactive Simulations (Universidad de Colorado Boulder) — gratis, incluye temas de fuerzas y movimiento relevantes para el vuelo.",
+        activity: "Investiga si hay un equipo de Science Olympiad, que a menudo tiene eventos relacionados con aviación o cohetería.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Construye y lanza un cohete modelo básico, registrando cómo las decisiones de diseño afectan la altitud y la estabilidad.",
+        tool: "Un kit de cohetería modelo de una marca reconocida, siguiendo las pautas de seguridad estándar.",
+        activity: "Busca un programa preuniversitario de ingeniería aeroespacial o un programa de Civil Air Patrol, si hay uno disponible.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Aviación comercial", "Defensa", "Exploración espacial", "Comunicaciones satelitales", "Sistemas no tripulados/drones"],
+    relatedMajors: ["Ingeniería Aeroespacial", "Ingeniería Aeronáutica", "Ingeniería Astronáutica"],
+    careerPaths: [
+      { title: "Ingeniero/a de Aerodinámica", description: "Analiza cómo fluye el aire alrededor de un vehículo para mejorar el rendimiento, la estabilidad y la eficiencia de combustible." },
+      { title: "Ingeniero/a de Estructuras", description: "Diseña la estructura física de una aeronave o nave espacial para resistir las fuerzas de vuelo y lanzamiento." },
+      { title: "Ingeniero/a de Propulsión", description: "Diseña y prueba los motores o sistemas de propulsión que impulsan el vuelo." },
+      { title: "Ingeniero/a de Sistemas", description: "Coordina cómo funcionan juntos los muchos subsistemas de un gran proyecto aeroespacial — estructuras, propulsión, aviónica." },
+    ],
+    advantages: [
+      "Trabajar en algunos de los problemas de ingeniería técnicamente más exigentes que existen",
+      "Fuerte crecimiento laboral registrado por el gobierno — la Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 8% de 2025 a 2035, más rápido que el promedio de todas las ocupaciones",
+      "Un campo con una conexión directa a logros importantes y de alta visibilidad, desde el vuelo comercial hasta la exploración espacial",
+    ],
+    challenges: [
+      "Carga de matemáticas y física extremadamente exigente, a menudo más intensiva que otras carreras de ingeniería",
+      "Los márgenes de seguridad de alto riesgo implican procesos de diseño y prueba lentos y muy revisados",
+      "Los proyectos suelen ser grandes y de varios años, así que un ingeniero individual puede trabajar en una pequeña pieza de un sistema mucho más grande durante mucho tiempo",
+    ],
+    thingsPeopleDislike: [
+      "Requisitos pesados de documentación y certificación antes de que cualquier diseño pueda avanzar",
+      "La industria ha sido históricamente cíclica — ligada a los presupuestos de defensa y la demanda de aviación comercial, ambos de los cuales pueden cambiar con el gasto gubernamental y la economía en general",
+      "Las grandes organizaciones burocráticas, especialmente en contratación de defensa, pueden moverse lentamente en comparación con empresas más pequeñas",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 8% para ingenieros aeroespaciales de 2025 a 2035 — mucho más rápido que el promedio de todas las ocupaciones — con cerca de 3,800 vacantes proyectadas por año durante esa década, impulsadas en parte por rediseños de aeronaves y la creciente industria de drones y satélites. Dicho esto, la contratación en el sector aeroespacial ha sido históricamente cíclica, ligada de cerca al gasto de defensa y a los altibajos de la propia industria de aviación comercial, y gran parte de la industria requiere ciudadanía o autorización de seguridad para puestos relacionados con defensa en algunos países. Investiga el mercado actual y cualquier requisito de ciudadanía o autorización en tu país y sector específico antes de tomar decisiones.",
+    beginnerActivities: [
+      "Construye y vuela un avión de papel, experimentando con diferentes formas de alas y dobleces",
+      "Prueba una herramienta de simulación gratuita para ver cómo la forma o el ángulo del ala afecta la sustentación",
+      "Construye y lanza un cohete modelo básico, siguiendo las pautas de seguridad estándar",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con una de las cargas de matemáticas y física más exigentes de la ingeniería?",
+      "¿Estoy bien con procesos de diseño lentos y muy revisados donde la seguridad va antes que la velocidad?",
+      "¿Estaría satisfecho/a trabajando en una pieza de un proyecto mucho más grande y de varios años?",
+      "¿Me interesa este campo específicamente, o me atrae principalmente la idea general del espacio y el vuelo?",
+    ],
+  },
+  {
+    slug: "chemical-engineering",
+    name: "Ingeniería Química",
+    tagline: "La química y la física puestas a trabajar en diseñar los procesos y equipos que convierten materias primas en todo, desde combustible hasta medicinas y plásticos.",
+    whatItIs:
+      "La ingeniería química se trata de diseñar y operar los procesos a gran escala que convierten materias primas en productos utilizables — combustibles, plásticos, productos farmacéuticos, alimentos y químicos industriales. Está en la intersección entre la química, la física y la ingeniería tradicional, enfocada menos en inventar nuevas reacciones químicas y más en descubrir cómo llevarlas a cabo de forma segura y eficiente a una escala masiva.",
+    whatEngineersWorkOn:
+      "Los ingenieros químicos diseñan equipos y procesos para manufactura, realizan experimentos y simulaciones para descubrir la forma más eficiente y segura de producir algo, establecen procedimientos de seguridad para el manejo de materiales peligrosos, y solucionan problemas cuando un proceso de producción no se comporta como se esperaba. Gran parte del trabajo implica escalar algo que funciona en un laboratorio pequeño hasta convertirlo en un proceso que puede funcionar continuamente en una planta industrial de tamaño completo.",
+    realWorldExamples: [
+      "Refinación de petróleo y producción de combustible",
+      "Procesos de manufactura farmacéutica",
+      "Producción de plásticos y polímeros",
+      "Sistemas de tratamiento de agua y desalinización",
+      "Plantas de procesamiento de alimentos y bebidas",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros químicos trabajan principalmente en un laboratorio mezclando químicos — la mayor parte del trabajo es diseñar y operar procesos industriales a gran escala, no química de laboratorio.",
+      "Que es lo mismo que ser químico — los químicos normalmente se enfocan en descubrir y entender reacciones; los ingenieros químicos se enfocan en cómo llevarlas a cabo de forma segura y eficiente a gran escala.",
+      "Que es un campo de nicho — los ingenieros químicos trabajan en una gama muy amplia de industrias, desde energía hasta farmacéutica y producción de alimentos.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros químicos trabajan principalmente en un laboratorio mezclando químicos.", reality: "La mayor parte del trabajo es diseñar y operar procesos industriales a gran escala, no química de laboratorio." },
+      { myth: "Es lo mismo que ser químico.", reality: "Los químicos normalmente se enfocan en descubrir y entender reacciones; los ingenieros químicos se enfocan en cómo llevarlas a cabo de forma segura y eficiente a gran escala." },
+      { myth: "Es un campo de nicho.", reality: "Los ingenieros químicos trabajan en una gama muy amplia de industrias, desde energía hasta farmacéutica y producción de alimentos." },
+    ],
+    usefulSubjects: ["Química", "Física", "Cálculo", "Biología, si está disponible"],
+    helpfulSkills: [
+      "Una base sólida en química, ya que sustenta la mayor parte del trabajo de diseño de procesos",
+      "Comodidad con el pensamiento crítico de seguridad — muchos procesos químicos involucran materiales peligrosos, alta presión o alta temperatura",
+      "Pensamiento sistémico — entender cómo un cambio en una parte de un proceso afecta todo lo que viene después",
+      "Conocimientos básicos de computación para software de simulación de procesos",
+    ],
+    typicalProjects: [
+      "Diseñar equipo para escalar de forma segura un proceso de laboratorio a producción industrial",
+      "Analizar un proceso de producción para encontrar formas de hacerlo más eficiente o menos derrochador",
+      "Revisar los procedimientos de seguridad para el manejo de un material peligroso",
+      "Solucionar por qué una línea de producción no está generando el rendimiento esperado",
+    ],
+    typicalWorkday:
+      "Espera tanto trabajo de diseño de procesos y simulación en la oficina, como tiempo en el piso de la planta monitoreando y solucionando problemas de procesos de producción activos. El trabajo de revisión de seguridad y cumplimiento normativo es una parte más grande del trabajo de lo que la gente espera, ya que muchos procesos químicos involucran materiales peligrosos.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Recorrido por la planta", detail: "Revisar un proceso de producción activo y hablar con los operadores de la planta sobre cómo está funcionando." },
+        { time: "9:30 AM", label: "Revisión del proceso", detail: "Analizar datos de la corrida de producción de ayer para revisar el rendimiento y la eficiencia." },
+        { time: "11:00 AM", label: "Revisión de seguridad", detail: "Revisar los procedimientos para el manejo de un material peligroso usado en el proceso." },
+        { time: "1:00 PM", label: "Simulación", detail: "Modelar un cambio propuesto al proceso para ver si mejora la eficiencia antes de probarlo de verdad." },
+        { time: "2:30 PM", label: "Solución de problemas", detail: "Una línea de producción no está alcanzando su producción esperada, y no está claro de inmediato por qué." },
+        { time: "4:00 PM", label: "Documentación", detail: "Redactar los hallazgos de hoy para los registros de seguridad y procesos de la planta." },
+      ],
+      reflectionQuestion:
+        "¿Cómo te sentirías siendo responsable de los procedimientos de seguridad de un proceso que podría ser genuinamente peligroso si algo sale mal?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$125,040",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/chemical-engineers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. El salario puede variar bastante según la industria en la que trabajes, como petróleo y gas frente a farmacéutica.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Prueba un experimento simple de química de cocina, supervisado por un adulto, como hacer un polímero básico, y piensa en cómo tendrías que hacerlo de forma segura a una escala mucho mayor.",
+        tool: "Todavía no necesitas herramientas especiales — solo experimentos de química casera supervisados.",
+        activity: "Busca un club de STEM o química en tu escuela, o una exhibición de química en un museo de ciencias local.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Prueba una herramienta gratuita de simulación química para ver cómo cambiar condiciones como la temperatura o la concentración afecta una reacción.",
+        tool: "PhET Interactive Simulations (Universidad de Colorado Boulder) — gratis, incluye temas de química y estados de la materia.",
+        activity: "Investiga si hay un equipo de Science Olympiad, que a menudo tiene eventos relacionados con química.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Investiga cómo se fabrica realmente un producto cotidiano específico, como botellas de plástico o combustible, a escala industrial, usando fuentes públicas disponibles.",
+        tool: "Ninguna herramienta específica todavía — esta etapa se trata más de conocer el pensamiento a escala industrial que de usar una herramienta en particular.",
+        activity: "Busca un programa preuniversitario de ingeniería química o un campamento de verano de ingeniería en una universidad, si hay uno disponible.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Petróleo y gas", "Farmacéutica", "Alimentos y bebidas", "Manufactura de plásticos y materiales", "Tratamiento de agua", "Productos de consumo"],
+    relatedMajors: ["Ingeniería Química", "Ciencia e Ingeniería de Materiales", "Ingeniería Bioquímica"],
+    careerPaths: [
+      { title: "Ingeniero/a de Procesos", description: "Diseña y optimiza los pasos de un proceso de manufactura para que sea seguro, eficiente y consistente." },
+      { title: "Ingeniero/a de Seguridad de Procesos", description: "Se enfoca específicamente en identificar y reducir riesgos en procesos químicos industriales." },
+      { title: "Ingeniero/a de Planta/Producción", description: "Trabaja en el sitio de una planta de manufactura, manteniendo los procesos de producción activos funcionando sin problemas." },
+      { title: "Ingeniero/a de Investigación y Desarrollo", description: "Trabaja en desarrollar procesos nuevos o mejorados, a menudo conectando la química a escala de laboratorio con la ingeniería a escala industrial." },
+    ],
+    advantages: [
+      "Las habilidades se transfieren a una gama muy amplia de industrias, desde energía hasta farmacéutica y producción de alimentos",
+      "Una base sólida tanto en química como en ingeniería tradicional abre múltiples direcciones de carrera",
+      "El trabajo tiene una conexión directa con productos usados en la vida diaria",
+    ],
+    challenges: [
+      "Carga pesada de química, física y matemáticas, a menudo considerada una de las carreras de ingeniería más exigentes académicamente",
+      "Trabajar con materiales peligrosos significa que la seguridad tiene que ir antes que la velocidad o la conveniencia, lo cual puede ralentizar el trabajo",
+      "Muchos puestos están ligados a industrias específicas, como petróleo y gas, que pueden pasar por ciclos significativos de auge y caída",
+    ],
+    thingsPeopleDislike: [
+      "Requisitos pesados de documentación de seguridad y regulación",
+      "Algunos puestos, especialmente en plantas de producción, pueden no estar ubicados en ciudades importantes",
+      "Industrias como petróleo y gas pueden ser económicamente cíclicas, lo cual afecta la estabilidad laboral en esos sectores específicos",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 5% para ingenieros químicos de 2025 a 2035 — más rápido que el promedio de todas las ocupaciones — con cerca de 1,100 vacantes proyectadas por año durante esa década, muchas resultado de trabajadores jubilándose o cambiando de carrera. Ese es un número menor de vacantes anuales que en algunos otros campos de ingeniería, ya que la ingeniería química es un campo comparativamente más pequeño en general. La demanda y el salario pueden variar mucho dependiendo de la industria en la que trabajes y su ciclo económico actual — investiga el mercado actual en tu país e industria específicos antes de tomar decisiones.",
+    beginnerActivities: [
+      "Prueba un experimento simple de química de cocina, supervisado por un adulto, como hacer un polímero básico",
+      "Investiga cómo se fabrica a escala industrial un producto cotidiano específico, como plástico o combustible",
+      "Prueba una herramienta gratuita de simulación química para ver cómo cambiar las condiciones afecta una reacción",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con una carga pesada de química y matemáticas, además de los temas tradicionales de ingeniería?",
+      "¿Estaría bien siendo responsable de los procedimientos de seguridad relacionados con materiales potencialmente peligrosos?",
+      "¿Me interesa cómo se hacen las cosas a gran escala industrial, no solo cómo funcionan en teoría?",
+      "¿Estaría bien si mi trabajo estuviera ubicado en una planta industrial en lugar de una oficina en una ciudad importante?",
+    ],
+  },
+  {
+    slug: "computer-engineering",
+    name: "Ingeniería en Computación",
+    tagline: "El hardware — procesadores, placas de circuitos y sistemas embebidos — sobre el que realmente corre el software.",
+    whatItIs:
+      "La ingeniería en computación está entre la ingeniería eléctrica y la ciencia de la computación, enfocada en diseñar el hardware físico sobre el que corren las computadoras y los dispositivos digitales: procesadores, placas de circuitos, sistemas de memoria, y los sistemas embebidos dentro de los aparatos cotidianos. Muchos ingenieros en computación también escriben el software de bajo nivel (firmware) que corre directamente sobre ese hardware, así que el campo combina el diseño de circuitos con la programación.",
+    whatEngineersWorkOn:
+      "Los ingenieros en computación diseñan y prueban hardware de computadoras y equipos relacionados, crean esquemáticos para circuitos y procesadores, escriben y prueban firmware que corre directamente sobre el hardware, y trabajan en hacer que los sistemas existentes sean compatibles con software o componentes nuevos. Gran parte del trabajo implica colaborar de cerca con ingenieros de software, ya que el hardware y el software tienen que funcionar juntos para que un dispositivo realmente funcione.",
+    realWorldExamples: [
+      "Procesadores y chips de memoria dentro de computadoras y teléfonos",
+      "Placas de circuitos dentro de aparatos electrónicos de consumo",
+      "Sistemas embebidos dentro de autos, electrodomésticos y dispositivos médicos",
+      "Hardware de red como routers y servidores",
+      "Firmware que controla cómo se comporta el hardware antes de que cargue un sistema operativo",
+    ],
+    commonMisconceptions: [
+      "Que es lo mismo que la ingeniería de software — los ingenieros en computación diseñan hardware físico y firmware de bajo nivel, no típicamente aplicaciones completas o sitios web.",
+      "Que es lo mismo que la ingeniería eléctrica — hay una superposición real, pero la ingeniería en computación se enfoca específicamente en el hardware de cómputo y el software más cercano a él, en lugar de sistemas eléctricos más amplios como la energía.",
+      "Que ya tienes que entender de circuitos o de código antes de empezar — como en otros campos de la ingeniería, esto se enseña desde cero durante la carrera.",
+    ],
+    mythsAndRealities: [
+      { myth: "Es lo mismo que la ingeniería de software.", reality: "Los ingenieros en computación diseñan hardware físico y firmware de bajo nivel, no típicamente aplicaciones completas o sitios web." },
+      { myth: "Es lo mismo que la ingeniería eléctrica.", reality: "Hay una superposición real, pero la ingeniería en computación se enfoca específicamente en el hardware de cómputo y el software más cercano a él, en lugar de sistemas eléctricos más amplios como la energía." },
+      { myth: "Ya tienes que entender de circuitos o de código antes de empezar.", reality: "Como en otros campos de la ingeniería, esto se enseña desde cero durante la carrera." },
+    ],
+    usefulSubjects: ["Física (especialmente electricidad y electrónica)", "Cálculo", "Cualquier curso introductorio de programación, si está disponible"],
+    helpfulSkills: [
+      "Comodidad tanto con el pensamiento a nivel de circuitos como con la programación, ya que el campo conecta el hardware y el software",
+      "Depuración cuidadosa y metódica, ya que un error de hardware puede ser más difícil de rastrear que uno puramente de software",
+      "Paciencia para la documentación técnica detallada, ya que el diseño de hardware implica esquemáticos y especificaciones precisas",
+      "Familiaridad básica con software de diseño y simulación de circuitos",
+    ],
+    typicalProjects: [
+      "Diseñar un esquemático de circuito para una nueva pieza de hardware",
+      "Escribir firmware que controla cómo se comporta el hardware de un dispositivo",
+      "Probar un prototipo de hardware y analizar por qué no está funcionando como se esperaba",
+      "Actualizar el diseño de un sistema para soportar un nuevo componente o requisito de software",
+    ],
+    typicalWorkday:
+      "Espera software de diseño de circuitos, equipo de pruebas de hardware, y escritura de código de bajo nivel en el mismo día — algo parecido en espíritu a la ingeniería eléctrica, pero enfocado específicamente en hardware de cómputo. Probar y documentar resultados es una parte significativa y constante del trabajo.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Revisión de esquemáticos", detail: "Revisar el esquemático de un circuito para una nueva pieza de hardware antes de que pase a prototipado." },
+        { time: "10:30 AM", label: "Firmware", detail: "Escribir código de bajo nivel que controla cómo se comporta el hardware." },
+        { time: "12:30 PM", label: "Pruebas de hardware", detail: "Probar un prototipo físico contra sus especificaciones técnicas." },
+        { time: "2:00 PM", label: "Depuración", detail: "Un prototipo no está funcionando como se esperaba, y todavía no está claro si la causa es el hardware o el firmware." },
+        { time: "3:30 PM", label: "Reunión entre equipos", detail: "Coordinar con ingenieros de software para asegurarse de que el hardware y el software funcionen bien juntos." },
+        { time: "4:30 PM", label: "Documentación", detail: "Actualizar esquemáticos y especificaciones para reflejar los cambios de hoy." },
+      ],
+      reflectionQuestion:
+        "¿Disfrutarías depurar un problema cuando ni siquiera estás seguro/a todavía si es un problema de hardware o de software?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Medium",
+      coding: "High",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$161,740",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/computer-hardware-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia, catalogada bajo la categoría de 'ingenieros de hardware de computadoras' del BLS — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Desarma un dispositivo electrónico viejo y desenchufado (de forma segura) y trata de identificar la placa de circuitos y sus componentes.",
+        tool: "Todavía no necesitas herramientas especiales — solo un dispositivo seguro y desenchufado para explorar.",
+        activity: "Busca un club de STEM en tu escuela o un taller de electrónica para principiantes en una biblioteca local o espacio maker, si hay uno disponible.",
+        relatedField: "electrical-engineering",
+      },
+      "13-15": {
+        project: "Prueba un proyecto de microcontrolador para principiantes, como hacer que un LED parpadee según un horario usando código simple.",
+        tool: "Arduino — una plataforma de microcontroladores ampliamente usada y amigable para principiantes que combina hardware y código.",
+        activity: "Investiga si hay un club de robótica o un equipo de FIRST Tech Challenge, que a menudo implican tanto cableado como programación.",
+        relatedField: "electrical-engineering",
+      },
+      "16-18": {
+        project: "Prueba un proyecto de microcontrolador más avanzado que combine un sensor con código personalizado, como una alerta básica activada por temperatura.",
+        tool: "Arduino o Raspberry Pi, ambos ampliamente usados y bien documentados para principiantes que avanzan hacia proyectos más complejos.",
+        activity: "Revisa si tu escuela ofrece una clase que combine electrónica y programación, e investiga un programa preuniversitario de ingeniería, si hay uno disponible.",
+        relatedField: "electrical-engineering",
+      },
+    },
+    industries: ["Electrónica de consumo", "Manufactura de semiconductores", "Automotriz", "Telecomunicaciones", "Dispositivos médicos", "Aeroespacial y defensa"],
+    relatedMajors: ["Ingeniería en Computación", "Ingeniería Eléctrica", "Ciencias de la Computación (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Diseño de Hardware", description: "Diseña los circuitos y componentes físicos dentro de los dispositivos de cómputo." },
+      { title: "Ingeniero/a de Firmware", description: "Escribe el código de bajo nivel que corre directamente sobre el hardware, antes de que cargue un sistema operativo completo." },
+      { title: "Ingeniero/a de Sistemas Embebidos", description: "Diseña el hardware y software combinados dentro de dispositivos como autos, electrodomésticos o equipo médico." },
+      { title: "Ingeniero/a de Integración de Sistemas", description: "Se asegura de que los componentes de hardware y software de diferentes equipos funcionen bien juntos." },
+    ],
+    advantages: [
+      "Fuerte crecimiento laboral, respaldado por datos del gobierno — la Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 9% de 2025 a 2035, mucho más rápido que el promedio",
+      "Combina habilidades de hardware y software, lo cual mantiene amplias las opciones de carrera",
+      "Alta demanda en muchas industrias, ya que casi todo dispositivo moderno depende de hardware personalizado y sistemas embebidos",
+    ],
+    challenges: [
+      "Requiere comodidad tanto con conceptos eléctricos a nivel de circuitos como con la programación, lo cual es un conjunto de habilidades más amplio que cualquiera de los dos por separado",
+      "Los ciclos de desarrollo de hardware suelen ser más lentos que los del software puro, ya que los prototipos físicos toman tiempo en construirse y probarse",
+      "La depuración puede ser más difícil que en el trabajo puramente de software, ya que un problema podría estar en el hardware, en el firmware, o en la interacción entre ambos",
+    ],
+    thingsPeopleDislike: [
+      "Ciclos de iteración más lentos que el trabajo solo de software, ya que los cambios de hardware cuestan más tiempo y dinero para probar",
+      "Los errores pueden ser genuinamente difíciles de aislar entre causas de hardware y de software",
+      "El ritmo acelerado de cambio en la industria tecnológica significa aprender constantemente herramientas y estándares nuevos, similar a la ingeniería de software",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 9% para ingenieros de hardware de computadoras de 2025 a 2035 — mucho más rápido que el promedio de todas las ocupaciones — con cerca de 4,100 vacantes proyectadas por año durante esa década, impulsado en parte por la demanda de procesadores y componentes en electrodomésticos, dispositivos médicos y vehículos. Como con cualquier campo relacionado con la tecnología, la demanda puede cambiar con los ciclos económicos más amplios de la industria tecnológica, así que investiga las tendencias actuales de contratación en tu región y especialización específicas antes de tomar decisiones.",
+    beginnerActivities: [
+      "Desarma un dispositivo electrónico viejo y desenchufado (de forma segura) para ver su placa de circuitos y componentes",
+      "Prueba un kit de microcontrolador para principiantes, como Arduino, para hacer que un LED parpadee según un horario",
+      "Usa un simulador de circuitos gratuito para diseñar y probar un circuito simple",
+    ],
+    selfReflectionQuestions: [
+      "¿Me interesan por igual los circuitos físicos y escribir código, o me inclino fuertemente hacia uno de los dos?",
+      "¿Estoy cómodo/a con ciclos de desarrollo más lentos que el trabajo puramente de software, ya que el hardware toma más tiempo en probarse?",
+      "¿Disfruto depurar problemas cuando la causa podría estar en el hardware, el software, o ambos?",
+    ],
+  },
+  {
+    slug: "environmental-engineering",
+    name: "Ingeniería Ambiental",
+    tagline: "Los sistemas y soluciones que protegen la calidad del aire, el agua y el suelo — y los limpian cuando algo sale mal.",
+    whatItIs:
+      "La ingeniería ambiental aplica la ingeniería y la ciencia a problemas relacionados con el entorno natural: calidad del agua, contaminación del aire, gestión de residuos, y limpieza de sitios contaminados. Se superpone de forma significativa con la ingeniería civil y la ingeniería química, pero se enfoca específicamente en la protección y remediación ambiental en lugar de la infraestructura o los procesos industriales en general.",
+    whatEngineersWorkOn:
+      "Los ingenieros ambientales diseñan sistemas para controlar o reducir la contaminación, analizan muestras de agua, aire o suelo para verificar si hay contaminación, inspeccionan instalaciones para asegurarse de que cumplan con las regulaciones ambientales, y asesoran a organizaciones sobre cómo limpiar o prevenir el daño ambiental. Gran parte del trabajo implica colaborar con científicos, técnicos y reguladores gubernamentales, y alternar entre análisis de oficina y tiempo en un sitio de campo real.",
+    realWorldExamples: [
+      "Diseño de plantas de tratamiento de agua y aguas residuales",
+      "Sistemas de control de contaminación del aire para fábricas",
+      "Limpieza y remediación de sitios contaminados",
+      "Sistemas de gestión de rellenos sanitarios y residuos",
+      "Evaluaciones de impacto ambiental para proyectos de construcción nuevos",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros ambientales son lo mismo que los científicos ambientales — los científicos típicamente se enfocan en estudiar y entender los sistemas ambientales, mientras que los ingenieros se enfocan en diseñar soluciones y sistemas.",
+      "Que el trabajo es principalmente trabajo de campo al aire libre — una cantidad significativa del trabajo es análisis de oficina, revisión regulatoria, y redacción de informes.",
+      "Que es un campo de ingeniería 'blando' o menos técnico — se apoya fuertemente en química, biología y fundamentos de ingeniería civil, y el trabajo regulatorio requiere precisión técnica real.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros ambientales son lo mismo que los científicos ambientales.", reality: "Los científicos típicamente se enfocan en estudiar y entender los sistemas ambientales, mientras que los ingenieros se enfocan en diseñar soluciones y sistemas." },
+      { myth: "El trabajo es principalmente trabajo de campo al aire libre.", reality: "Una cantidad significativa del trabajo es análisis de oficina, revisión regulatoria, y redacción de informes." },
+      { myth: "Es un campo de ingeniería 'blando' o menos técnico.", reality: "Se apoya fuertemente en química, biología y fundamentos de ingeniería civil, y el trabajo regulatorio requiere precisión técnica real." },
+    ],
+    usefulSubjects: ["Ciencias ambientales o ciencias de la tierra, si están disponibles", "Química", "Biología", "Física", "Cálculo"],
+    helpfulSkills: [
+      "Comodidad combinando química, biología y conceptos tradicionales de ingeniería",
+      "Atención al detalle, ya que el trabajo de cumplimiento regulatorio depende de datos y documentación precisos",
+      "Habilidades de comunicación, ya que el trabajo a menudo implica explicar hallazgos técnicos a reguladores, comunidades, o personas sin formación técnica",
+      "Disposición para pasar algo de tiempo en sitios de campo al aire libre o industriales, no solo en una oficina",
+    ],
+    typicalProjects: [
+      "Diseñar un sistema para tratar agua contaminada o reducir la contaminación del aire de una instalación",
+      "Probar muestras de agua, aire o suelo en busca de señales de contaminación",
+      "Preparar una evaluación de impacto ambiental para un proyecto de construcción propuesto",
+      "Desarrollar un plan de limpieza para un sitio contaminado",
+    ],
+    typicalWorkday:
+      "El análisis de datos y la redacción de informes en la oficina comparten la semana con tiempo en sitios de campo, recolectando muestras o inspeccionando instalaciones para verificar el cumplimiento normativo. Los ingenieros ambientales a menudo trabajan de cerca con científicos, técnicos y reguladores, y la comunicación con el público o la comunidad es una parte real de algunos puestos.",
+    dayInLife: {
+      blocks: [
+        { time: "8:30 AM", label: "Visita a sitio de campo", detail: "Recolectar muestras de agua o suelo en un sitio que está siendo evaluado por contaminación." },
+        { time: "10:30 AM", label: "Coordinación con el laboratorio", detail: "Enviar muestras para análisis y revisar los resultados de un lote anterior." },
+        { time: "12:30 PM", label: "Análisis de datos", detail: "Analizar los datos de las muestras para verificar si un sitio cumple con los estándares regulatorios." },
+        { time: "2:00 PM", label: "Inspección de cumplimiento", detail: "Revisar los sistemas de control de contaminación de una instalación contra las regulaciones ambientales." },
+        { time: "3:30 PM", label: "Redacción de informes", detail: "Redactar los hallazgos para una presentación regulatoria o un informe para el cliente." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Coordinar los próximos pasos con el equipo del proyecto, incluyendo científicos y técnicos." },
+      ],
+      reflectionQuestion:
+        "¿Te resultaría satisfactorio ayudar a resolver un problema ambiental, aun sabiendo que la solución podría tardar años e implicar mucho papeleo en el camino?",
+    },
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "High",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$107,110",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/environmental-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. Los puestos del sector público y de consultoría en este campo pueden diferir de forma significativa en cuanto a salario.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Prueba el pH o la claridad de muestras de agua de diferentes fuentes, como agua del grifo comparada con la de un estanque local, usando un kit casero simple y seguro.",
+        tool: "Un kit básico de análisis de agua — económico y ampliamente disponible.",
+        activity: "Busca un club de STEM o ambiental en tu escuela, o un programa de centro de naturaleza enfocado en ecosistemas locales.",
+        relatedField: "civil-engineering",
+      },
+      "13-15": {
+        project: "Investiga un problema ambiental local, como la calidad del agua o la contaminación del aire, usando fuentes de datos públicas, y resume lo que encuentres.",
+        tool: "Fuentes de datos ambientales públicas, como la base de datos pública de una agencia nacional de protección ambiental, si está disponible en tu país.",
+        activity: "Investiga si hay un equipo de Science Olympiad o un club ambiental, que a menudo cubren temas de calidad del agua o ecología.",
+        relatedField: "civil-engineering",
+      },
+      "16-18": {
+        project: "Diseña un sistema simple de filtración de agua usando materiales caseros y prueba qué tan bien remueve partículas visibles.",
+        tool: "Materiales caseros básicos — arena, grava, carbón, y recipientes — para un experimento práctico de filtración.",
+        activity: "Busca un programa preuniversitario de ingeniería ambiental o un programa de verano enfocado en sostenibilidad o ciencias ambientales.",
+        relatedField: "civil-engineering",
+      },
+    },
+    industries: ["Agencias gubernamentales y regulatorias", "Consultoría ambiental", "Empresas de agua potable", "Construcción e infraestructura", "Gestión de residuos"],
+    relatedMajors: ["Ingeniería Ambiental", "Ingeniería Civil", "Ciencias Ambientales (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Recursos Hídricos", description: "Diseña sistemas para el tratamiento, suministro y gestión de aguas residuales." },
+      { title: "Ingeniero/a de Calidad del Aire", description: "Diseña y evalúa sistemas para reducir o controlar la contaminación del aire proveniente de fuentes industriales." },
+      { title: "Ingeniero/a de Remediación", description: "Diseña planes para limpiar suelo, agua u otros sitios contaminados." },
+      { title: "Ingeniero/a de Cumplimiento Ambiental", description: "Se asegura de que las instalaciones y proyectos cumplan con las regulaciones y estándares ambientales." },
+    ],
+    advantages: [
+      "El trabajo tiene una conexión directa y tangible con resultados ambientales y de salud pública",
+      "La demanda está ligada a necesidades públicas y regulatorias esenciales, lo cual tiende a mantenerse relativamente estable",
+      "Altamente interdisciplinario — una buena opción si no quieres elegir entre la ingeniería y las ciencias ambientales o de la vida",
+    ],
+    challenges: [
+      "Trabajo regulatorio y de cumplimiento intenso, que puede ralentizar los proyectos sin importar la solución técnica",
+      "Los proyectos de limpieza y remediación pueden tomar años, así que los resultados no siempre son inmediatos",
+      "Requiere comodidad tanto con materias de ingeniería como de ciencias de la vida, lo cual puede significar una carga de cursos más amplia y pesada",
+    ],
+    thingsPeopleDislike: [
+      "Una cantidad significativa de papeleo y documentación regulatoria",
+      "Las visitas a sitios de campo pueden implicar condiciones al aire libre, viajes, y exposición a entornos menos agradables, como sitios contaminados",
+      "El salario del sector público y de consultoría puede quedarse atrás de algunos puestos de ingeniería del sector privado en ciertas regiones",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 6% para ingenieros ambientales de 2025 a 2035 — más rápido que el promedio de todas las ocupaciones — con cerca de 2,300 vacantes proyectadas por año durante esa década, impulsado por una mayor atención a los riesgos ambientales y la demanda de soluciones de calidad de agua y aire. La demanda puede variar según las regulaciones ambientales regionales y el financiamiento gubernamental para proyectos públicos — investiga el mercado actual y el entorno regulatorio en tu país específico antes de tomar decisiones.",
+    beginnerActivities: [
+      "Prueba el pH o la claridad de muestras de agua de diferentes fuentes usando un kit casero simple",
+      "Diseña un sistema básico de filtración de agua con materiales caseros y prueba qué tan bien funciona",
+      "Investiga un problema ambiental local usando fuentes de datos públicas",
+    ],
+    selfReflectionQuestions: [
+      "¿Me interesan por igual las ciencias ambientales y la ingeniería tradicional, o me inclino fuertemente hacia una de las dos?",
+      "¿Estoy cómodo/a con un trabajo regulatorio y de cumplimiento intenso como parte del empleo?",
+      "¿Estaría satisfecho/a con proyectos de limpieza o mejora que pueden tomar años en mostrar resultados?",
+      "¿Estoy bien pasando parte de mi tiempo en sitios de campo al aire libre o industriales, no solo en una oficina?",
+    ],
+  },
+  {
+    slug: "industrial-engineering",
+    name: "Ingeniería Industrial",
+    tagline: "Hacer que los sistemas — fábricas, cadenas de suministro, hospitales, hasta las filas de las cajas registradoras — funcionen de forma más eficiente, con menos recursos y tiempo desperdiciados.",
+    whatItIs:
+      "La ingeniería industrial se trata de mejorar cómo funcionan los sistemas complejos: líneas de manufactura, cadenas de suministro, hospitales, redes de logística, e incluso procesos de servicio como una fila de caja. En lugar de diseñar un solo producto físico, los ingenieros industriales se enfocan en cómo trabajan juntos las personas, las máquinas, los materiales y la información, y en cómo hacer que todo ese sistema sea más eficiente, seguro, o de mayor calidad.",
+    whatEngineersWorkOn:
+      "Los ingenieros industriales evalúan sistemas de manufactura, entrega, experiencia del cliente, u otros procesos para identificar formas de mejorar la productividad y la calidad. Reúnen información a través de la observación, la recolección de datos, y encuestas, y luego diseñan procesos mejorados, a menudo colaborando con personas de muchos departamentos distintos que no son necesariamente ingenieros. Gran parte del trabajo implica encontrar desperdicio o cuellos de botella en un sistema existente y descubrir cómo eliminarlos.",
+    realWorldExamples: [
+      "Diseño de la distribución del piso de fábrica y de líneas de producción",
+      "Logística de almacenes y cadenas de suministro",
+      "Flujo de pacientes y sistemas de programación en hospitales",
+      "Diseño de procesos de seguridad y embarque en aeropuertos",
+      "Mejora de procesos de caja y servicio al cliente en tiendas",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros industriales trabajan en el piso de fábrica operando máquinas — la mayor parte del trabajo es análisis y diseño de procesos, no operación de maquinaria.",
+      "Que es menos 'técnico' que otros campos de ingeniería porque no se enfoca en un solo producto físico — las matemáticas subyacentes, como la estadística y la optimización, pueden ser igual de exigentes.",
+      "Que solo aplica a fábricas — los principios de la ingeniería industrial se usan en salud, logística, comercio minorista, y muchas industrias de servicios.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros industriales trabajan en el piso de fábrica operando máquinas.", reality: "La mayor parte del trabajo es análisis y diseño de procesos, no operación de maquinaria." },
+      { myth: "Es menos 'técnico' que otros campos de ingeniería porque no se enfoca en un solo producto físico.", reality: "Las matemáticas subyacentes, como la estadística y la optimización, pueden ser igual de exigentes." },
+      { myth: "Solo aplica a fábricas.", reality: "Los principios de la ingeniería industrial se usan en salud, logística, comercio minorista, y muchas industrias de servicios." },
+    ],
+    usefulSubjects: ["Matemáticas avanzadas, incluyendo estadística", "Física", "Cualquier curso introductorio de programación o análisis de datos, si está disponible"],
+    helpfulSkills: [
+      "Comodidad con la estadística y el análisis de datos, ya que gran parte del trabajo implica medir y mejorar un proceso",
+      "Pensamiento sistémico — entender cómo un cambio en una parte de un proceso afecta todo lo demás",
+      "Habilidades de comunicación y colaboración, ya que los proyectos usualmente implican trabajar con personas que no son ingenieras en diferentes departamentos",
+      "Comodidad con la ambigüedad, ya que mejorar un sistema real y desordenado no siempre tiene una única respuesta correcta",
+    ],
+    typicalProjects: [
+      "Observar una línea de manufactura e identificar dónde se está desperdiciando tiempo o materiales",
+      "Analizar datos para encontrar cuellos de botella en una cadena de suministro o sistema de programación",
+      "Rediseñar un flujo de trabajo o la distribución de una instalación para mejorar la eficiencia",
+      "Construir un modelo para comparar diferentes cambios de proceso antes de implementar uno",
+    ],
+    typicalWorkday:
+      "El trabajo consiste en recolectar datos mediante observación, encuestas, o registros existentes, analizarlos para encontrar ineficiencias, y trabajar con equipos de toda una empresa para rediseñar un proceso. Gran parte de esto ocurre en reuniones y observación en el sitio, además del análisis basado en computadora.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Observación en el piso", detail: "Observar un proceso de producción o servicio en acción para ver dónde ocurren los retrasos." },
+        { time: "10:30 AM", label: "Análisis de datos", detail: "Analizar los datos recolectados para medir cuánto tiempo o material está desperdiciando un paso específico." },
+        { time: "12:30 PM", label: "Reunión entre departamentos", detail: "Discutir un cambio de proceso propuesto con personas de operaciones, que no son ingenieras." },
+        { time: "2:00 PM", label: "Modelado", detail: "Construir un modelo simple para comparar dos formas posibles de rediseñar un proceso antes de decidirse por una." },
+        { time: "3:30 PM", label: "Revisión piloto", detail: "Revisar los resultados de una prueba a pequeña escala de un cambio de proceso." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Escribir un informe de recomendación resumiendo los hallazgos de hoy." },
+      ],
+      reflectionQuestion:
+        "¿Disfrutarías pasar tu día mejorando cómo funciona un sistema existente, en lugar de diseñar una sola cosa física nueva?",
+    },
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Low",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Low",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$102,440",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/industrial-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región. Como los ingenieros industriales trabajan en tantas industrias distintas, el salario puede variar mucho según el sector.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Cronometra cuánto tarda una tarea repetitiva, como hacer un sándwich o empacar una mochila, de varias formas distintas, y observa cuál es más rápida.",
+        tool: "Todavía no necesitas herramientas especiales — solo un cronómetro o el temporizador del teléfono.",
+        activity: "Busca un club de STEM o de negocios en tu escuela que toque temas de organización o mejora de procesos.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Elige un proceso que experimentes regularmente, como la fila de la cafetería escolar, y esquematiza dónde ocurren los retrasos y cómo los arreglarías.",
+        tool: "Todavía no necesitas herramientas especiales — lápiz, papel, y observación.",
+        activity: "Investiga un club de negocios o emprendimiento, que a veces cubre temas de procesos y operaciones.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Aprende lo básico de una técnica de mapeo de procesos, como un diagrama de flujo simple, y úsala para mapear y mejorar un proceso real que conozcas.",
+        tool: "Una herramienta gratuita de diagramas de flujo, muchas de las cuales están disponibles en línea sin costo.",
+        activity: "Busca un programa preuniversitario de ingeniería o negocios, o un programa de verano que toque temas de operaciones o logística.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Manufactura", "Logística y cadena de suministro", "Sistemas de salud", "Comercio minorista", "Consultoría", "Tecnología"],
+    relatedMajors: ["Ingeniería Industrial", "Investigación de Operaciones", "Ingeniería de Sistemas"],
+    careerPaths: [
+      { title: "Ingeniero/a de Mejora de Procesos", description: "Analiza los flujos de trabajo existentes y los rediseña para reducir el desperdicio y mejorar la eficiencia." },
+      { title: "Ingeniero/a de Cadena de Suministro", description: "Diseña y optimiza cómo se mueven los materiales y productos desde los proveedores hasta los clientes." },
+      { title: "Ingeniero/a de Calidad", description: "Se enfoca en asegurar que los productos o procesos cumplan de forma consistente con los estándares de calidad." },
+      { title: "Analista de Investigación de Operaciones", description: "Usa modelado matemático y análisis de datos para ayudar a las organizaciones a tomar mejores decisiones operativas." },
+    ],
+    advantages: [
+      "Las habilidades se transfieren a una gama inusualmente amplia de industrias — manufactura, salud, logística, comercio minorista, y más",
+      "Crecimiento laboral muy fuerte, respaldado por datos del gobierno — la Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 12% de 2025 a 2035, mucho más rápido que el promedio",
+      "El trabajo mejora directamente cómo funcionan sistemas reales, lo cual puede significar resultados visibles y medibles",
+    ],
+    challenges: [
+      "El trabajo trata menos sobre un solo producto físico y más sobre sistemas reales, ambiguos y desordenados, lo cual algunas personas encuentran menos satisfactorio que el trabajo de diseño concreto",
+      "Requiere habilidades sólidas de estadística y análisis de datos, lo cual puede ser una carga de matemáticas más pesada de lo que algunos esperan",
+      "El éxito a menudo depende de convencer a personas que no son ingenieras de cambiar cómo trabajan, lo cual requiere habilidades reales de comunicación y persuasión",
+    ],
+    thingsPeopleDislike: [
+      "Mucho tiempo en reuniones y conversaciones con partes interesadas en lugar de trabajo técnico práctico",
+      "Las recomendaciones pueden encontrar resistencia de personas acostumbradas a hacer las cosas de cierta manera, lo cual puede ser frustrante",
+      "El puesto puede sentirse menos como 'ingeniería' para algunas personas, ya que el producto final suele ser un proceso mejor en lugar de un objeto físico",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 12% para ingenieros industriales de 2025 a 2035 — mucho más rápido que el promedio de todas las ocupaciones — con cerca de 23,100 vacantes proyectadas por año durante esa década, uno de los conteos anuales de vacantes más grandes entre los campos de ingeniería, impulsado por la necesidad de este tipo de trabajo de mejora de procesos en muchas industrias. Como el campo aplica a tantas industrias, la demanda tiende a estar menos ligada a los altibajos de un solo sector, aunque sigue valiendo la pena investigar las tendencias actuales de contratación en tu región e industria específicas.",
+    beginnerActivities: [
+      "Cronometra una tarea repetitiva de varias formas distintas y compara cuál es más rápida",
+      "Mapea un proceso que experimentes regularmente, como una fila de cafetería, e identifica dónde ocurren los retrasos",
+      "Aprende una técnica básica de diagramas de flujo y úsala para mapear y mejorar un proceso real",
+    ],
+    selfReflectionQuestions: [
+      "¿Me interesa más mejorar cómo funciona un sistema existente que diseñar una sola cosa física nueva?",
+      "¿Estoy cómodo/a con problemas ambiguos que no tienen una única respuesta correcta?",
+      "¿Disfruto trabajar con personas de diferentes roles, incluyendo personas que no son ingenieras?",
+      "¿Estoy cómodo/a con que la estadística y el análisis de datos sean una parte central del trabajo?",
+    ],
+  },
+  {
+    slug: "materials-engineering",
+    name: "Ingeniería de Materiales",
+    tagline: "Desarrollar y probar los metales, polímeros, cerámicas y compuestos con los que construye todo el resto de la ingeniería.",
+    whatItIs:
+      "La ingeniería de materiales se trata de entender y desarrollar las sustancias de las que está hecho todo lo demás: metales, plásticos, cerámicas, compuestos, y cada vez más materiales diseñados a la medida para un propósito específico. En lugar de diseñar un producto terminado, los ingenieros de materiales suelen trabajar un nivel más abajo, descubriendo de qué tiene que estar hecho un material y cómo tiene que procesarse para que se comporte como lo necesita un ingeniero mecánico, aeroespacial o biomédico.",
+    whatEngineersWorkOn:
+      "Los ingenieros de materiales desarrollan, procesan y prueban los materiales usados para crear una amplia gama de productos. Diseñan procedimientos para desarrollar materiales nuevos, monitorean cómo se comporta un material con el tiempo bajo estrés, calor o desgaste, evalúan si un material cumple con las especificaciones de calidad requeridas, y colaboran de cerca con ingenieros de otras disciplinas que necesitan un material con propiedades específicas. Gran parte del trabajo es genuinamente experimental — probar cómo se comporta un material bajo condiciones en las que no ha sido probado antes.",
+    realWorldExamples: [
+      "Aleaciones ligeras usadas en aviones y vehículos",
+      "Polímeros y compuestos usados en equipo deportivo o dispositivos médicos",
+      "Materiales semiconductores usados en electrónica",
+      "Materiales resistentes al calor usados en motores o equipo industrial",
+      "Materiales biocompatibles usados en implantes",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros de materiales solo eligen materiales de un catálogo para otros ingenieros — una parte significativa del trabajo es desarrollar y probar materiales genuinamente nuevos, no solo seleccionar los que ya existen.",
+      "Que es lo mismo que la química — la química se enfoca en las reacciones y la composición de las sustancias; la ingeniería de materiales se enfoca más en cómo la estructura de un material afecta su desempeño en el mundo real.",
+      "Que es un campo estrecho o de nicho — los ingenieros de materiales trabajan en aeroespacial, automotriz, electrónica, dispositivos médicos, energía, y más.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros de materiales solo eligen materiales de un catálogo para otros ingenieros.", reality: "Una parte significativa del trabajo es desarrollar y probar materiales genuinamente nuevos, no solo seleccionar los que ya existen." },
+      { myth: "Es lo mismo que la química.", reality: "La química se enfoca en las reacciones y la composición de las sustancias; la ingeniería de materiales se enfoca más en cómo la estructura de un material afecta su desempeño en el mundo real." },
+      { myth: "Es un campo estrecho o de nicho.", reality: "Los ingenieros de materiales trabajan en aeroespacial, automotriz, electrónica, dispositivos médicos, energía, y más." },
+    ],
+    usefulSubjects: ["Química", "Física", "Cálculo", "Dibujo técnico o CAD, si está disponible"],
+    helpfulSkills: [
+      "Una base sólida en química y física, ya que las propiedades de un material vienen de lo que ocurre a nivel molecular o estructural",
+      "Paciencia para la experimentación, ya que desarrollar o probar un material nuevo a menudo toma muchas rondas de ensayo y error",
+      "Atención al detalle, ya que pequeñas diferencias en la composición o el procesamiento pueden cambiar significativamente cómo se comporta un material",
+      "Habilidades de colaboración, ya que los ingenieros de materiales usualmente trabajan apoyando las necesidades específicas de otra disciplina de ingeniería",
+    ],
+    typicalProjects: [
+      "Probar cómo se comporta un material bajo estrés, calor, o desgaste repetido",
+      "Desarrollar un material o aleación nueva con propiedades específicas como objetivo",
+      "Analizar por qué un material falló o se degradó más rápido de lo esperado",
+      "Evaluar si un material cumple con las especificaciones de calidad y seguridad de un proyecto",
+    ],
+    typicalWorkday:
+      "Las pruebas y experimentación en el laboratorio se equilibran con la colaboración con ingenieros de otras disciplinas que necesitan un material con propiedades específicas para su propio proyecto. El análisis de datos y la documentación son una parte importante del trabajo, ya que el desempeño de un material tiene que caracterizarse y registrarse con precisión.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Pruebas de laboratorio", detail: "Probar cómo se comporta una muestra de material bajo estrés o calor." },
+        { time: "10:30 AM", label: "Análisis de datos", detail: "Analizar los resultados de las pruebas de ayer para ver cómo se compara el desempeño del material con lo esperado." },
+        { time: "12:30 PM", label: "Reunión entre disciplinas", detail: "Hablar con un ingeniero mecánico o aeroespacial sobre las propiedades que necesita un material para su proyecto." },
+        { time: "2:00 PM", label: "Análisis de fallas", detail: "Investigar por qué una muestra de material falló o se degradó más rápido de lo esperado." },
+        { time: "3:30 PM", label: "Documentación", detail: "Registrar datos precisos sobre la composición y el desempeño de un material para el registro del proyecto." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Planear la próxima ronda de pruebas según los resultados de hoy." },
+      ],
+      reflectionQuestion:
+        "¿Te resultaría satisfactorio pasar semanas o meses probando y perfeccionando un solo material, en lugar de avanzar hacia un producto terminado y visible?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "High",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Low",
+    },
+    salary: {
+      medianAnnual: "$112,860",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/materials-engineers.htm",
+      note: "Esta es la mediana nacional de EE. UU. entre todos los niveles de experiencia y especializaciones — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Prueba cómo aguantan diferentes materiales, como distintos tipos de cinta, cuerda o plástico, al estirarlos o doblarlos, y compara los resultados.",
+        tool: "Todavía no necesitas herramientas especiales — solo materiales caseros y pruebas simples de comparación.",
+        activity: "Busca un club de STEM o ciencias en tu escuela, o una exhibición enfocada en materiales en un museo de ciencias.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Investiga cómo se usa un material avanzado específico, como la fibra de carbono o una aleación con memoria de forma, y qué lo hace especial.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables, como libros de biblioteca o sitios de ciencia de confianza.",
+        activity: "Investiga un equipo de Science Olympiad, que a veces tiene eventos relacionados con la ciencia de materiales.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Prueba un experimento simple y seguro de crecimiento de cristales o de polímeros, y documenta cómo cambiar condiciones como la temperatura o el tiempo afecta el resultado.",
+        tool: "Un kit básico de crecimiento de cristales o ciencia de polímeros, ampliamente disponible para uso educativo.",
+        activity: "Busca un programa preuniversitario de ciencia de materiales o ingeniería, o un programa de investigación de verano a través de una universidad.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Aeroespacial", "Automotriz", "Electrónica y semiconductores", "Dispositivos médicos", "Energía", "Manufactura"],
+    relatedMajors: ["Ciencia e Ingeniería de Materiales", "Ingeniería Metalúrgica", "Ingeniería Química (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a Metalúrgico/a", description: "Se enfoca específicamente en las propiedades y el procesamiento de metales y aleaciones." },
+      { title: "Ingeniero/a de Polímeros", description: "Desarrolla y prueba plásticos y otros materiales a base de polímeros." },
+      { title: "Ingeniero/a de Análisis de Fallas", description: "Investiga por qué falló un material o componente, para ayudar a evitar que vuelva a pasar." },
+      { title: "Ingeniero/a de Investigación y Desarrollo", description: "Trabaja en desarrollar materiales completamente nuevos con propiedades específicas como objetivo." },
+    ],
+    advantages: [
+      "El trabajo está en la base de casi todos los demás campos de ingeniería, ya que todo producto físico está hecho de algún material",
+      "Fuerte crecimiento laboral, respaldado por datos del gobierno — la Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 8% de 2025 a 2035, mucho más rápido que el promedio",
+      "Profundamente experimental y orientado a la investigación, lo cual puede ser una buena opción para quienes disfrutan de la investigación científica genuina",
+    ],
+    challenges: [
+      "Carga pesada de cursos de química y física, con un fuerte énfasis en el pensamiento a nivel molecular y estructural",
+      "Los ciclos de desarrollo y pruebas pueden ser lentos, ya que los materiales a menudo necesitan pruebas extensas antes de que se confíe en ellos para un producto real",
+      "El trabajo puede sentirse un paso alejado de un producto terminado y visible, ya que los materiales normalmente terminan dentro de algo que diseñó otro ingeniero",
+    ],
+    thingsPeopleDislike: [
+      "Los proyectos pueden tomar mucho tiempo en pasar de las primeras pruebas al uso en el mundo real",
+      "Se requiere mucha documentación precisa y registro de datos",
+      "Algunos puestos son menos visibles o conocidos que otras disciplinas de ingeniería, lo cual puede significar menos reconocimiento público para el trabajo",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 8% para ingenieros de materiales de 2025 a 2035 — mucho más rápido que el promedio de todas las ocupaciones — con cerca de 1,300 vacantes proyectadas por año durante esa década, impulsado por la demanda de nuevos materiales y procesos de manufactura. Ese es un número menor de vacantes anuales que en algunos otros campos de ingeniería, ya que la ingeniería de materiales es un campo comparativamente más pequeño y especializado. Investiga el mercado actual en tu país e industria específicos antes de tomar decisiones.",
+    beginnerActivities: [
+      "Prueba cómo aguantan diferentes materiales caseros al estirarlos, doblarlos, o compararlos entre sí",
+      "Investiga cómo se usa un material avanzado específico, como la fibra de carbono, y qué lo hace especial",
+      "Prueba un kit simple y seguro de crecimiento de cristales o ciencia de polímeros",
+    ],
+    selfReflectionQuestions: [
+      "¿Disfrutaría trabajar en un material que termina dentro del producto terminado de alguien más, en lugar de un producto terminado propio?",
+      "¿Estoy cómodo/a con una carga pesada de cursos de química y física?",
+      "¿Tengo paciencia para la experimentación, que puede tomar muchas rondas de ensayo y error?",
+      "¿Me interesan genuinamente los materiales en sí, o principalmente los productos en los que terminan siendo usados?",
+    ],
+  },
+  {
+    slug: "robotics-engineering",
+    name: "Ingeniería de Robótica y Mecatrónica",
+    tagline: "Combinar la ingeniería mecánica, eléctrica y de software para diseñar máquinas que perciben, se mueven y actúan por su cuenta.",
+    whatItIs:
+      "La ingeniería de robótica y mecatrónica combina la ingeniería mecánica, eléctrica y de software para diseñar máquinas que pueden percibir su entorno, moverse, y actuar — desde brazos robóticos industriales hasta vehículos autónomos y robots de consumo. Es inherentemente interdisciplinaria: un robot necesita una estructura física (mecánica), sensores y actuadores (eléctrica), y código que realmente controle su comportamiento (software), así que el campo no encaja perfectamente en ninguna categoría tradicional única de la ingeniería.",
+    whatEngineersWorkOn:
+      "Los ingenieros de robótica diseñan la estructura física y los mecanismos de un robot, seleccionan e integran sensores y actuadores, escriben el software de control que le dice al robot cómo responder a su entorno, y prueban todo el sistema en conjunto para asegurarse de que las partes mecánicas, eléctricas y de software realmente funcionen como un solo sistema. Gran parte del trabajo consiste en solucionar problemas en el límite entre disciplinas — descubrir si un problema es mecánico, eléctrico, o está en el código.",
+    realWorldExamples: [
+      "Brazos robóticos industriales usados en manufactura",
+      "Vehículos autónomos y drones",
+      "Robots de almacén y logística",
+      "Robots quirúrgicos y médicos",
+      "Robots de consumo, como aspiradoras robóticas",
+    ],
+    commonMisconceptions: [
+      "Que es una sola carrera estandarizada en todas partes — algunas universidades ofrecen una carrera dedicada de robótica o mecatrónica, mientras que otras esperan que te especialices a través de ingeniería mecánica, eléctrica o en computación con un enfoque en robótica.",
+      "Que se trata principalmente de construir robots humanoides — la mayoría del trabajo real de robótica es industrial o específico para una tarea, como brazos, drones, o vehículos, no máquinas con forma humana.",
+      "Que tienes que ser igualmente experto en ingeniería mecánica, eléctrica y de software desde el primer día — la mayoría de las personas se especializan en un área y construyen conocimiento práctico de las demás con el tiempo.",
+    ],
+    mythsAndRealities: [
+      { myth: "Es una sola carrera estandarizada en todas partes.", reality: "Algunas universidades ofrecen una carrera dedicada de robótica o mecatrónica, mientras que otras esperan que te especialices a través de ingeniería mecánica, eléctrica o en computación con un enfoque en robótica." },
+      { myth: "Se trata principalmente de construir robots humanoides.", reality: "La mayoría del trabajo real de robótica es industrial o específico para una tarea, como brazos, drones, o vehículos, no máquinas con forma humana." },
+      { myth: "Tienes que ser igualmente experto en ingeniería mecánica, eléctrica y de software desde el primer día.", reality: "La mayoría de las personas se especializan en un área y construyen conocimiento práctico de las demás con el tiempo." },
+    ],
+    usefulSubjects: ["Física (especialmente mecánica y electricidad)", "Cálculo", "Cualquier curso introductorio de programación, si está disponible", "Dibujo técnico o CAD, si está disponible"],
+    helpfulSkills: [
+      "Comodidad trabajando entre disciplinas, ya que un problema de robótica podría ser de naturaleza mecánica, eléctrica, o de software",
+      "Pensamiento sistémico — entender cómo la estructura física, los sensores y el código se afectan entre sí",
+      "Paciencia para las pruebas de integración, ya que lograr que las tres disciplinas funcionen juntas suele ser más difícil que lograr que cualquiera de ellas funcione sola",
+      "Programación básica, ya que la mayoría del trabajo de robótica implica escribir software de control en algún nivel",
+    ],
+    typicalProjects: [
+      "Diseñar la estructura física y las articulaciones de un brazo robótico",
+      "Escribir software de control que permite que un robot responda a la entrada de sus sensores",
+      "Integrar un sensor o actuador nuevo en un sistema robótico existente",
+      "Depurar por qué un robot no se está comportando como se esperaba — y descubrir en qué disciplina está realmente el problema",
+    ],
+    typicalWorkday:
+      "El trabajo abarca diseño mecánico, trabajo eléctrico y de sensores, y escritura de software de control, además de tiempo significativo probando el sistema integrado como un todo. Como los problemas de robótica pueden originarse en cualquiera de las tres disciplinas subyacentes, gran parte del trabajo es genuinamente solución de problemas interdisciplinaria.",
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Diseño mecánico", detail: "Trabajar en la estructura física o el mecanismo de una articulación para un sistema robótico." },
+        { time: "10:30 AM", label: "Integración de sensores", detail: "Cablear y probar un sensor nuevo en el robot." },
+        { time: "12:30 PM", label: "Software de control", detail: "Escribir código que determina cómo responde el robot a la entrada de sus sensores." },
+        { time: "2:00 PM", label: "Pruebas de integración", detail: "Correr el sistema completo en conjunto y ver dónde falla." },
+        { time: "3:00 PM", label: "Depuración interdisciplinaria", detail: "El robot no se está comportando como se esperaba, y no está claro si la causa es mecánica, eléctrica, o está en el código." },
+        { time: "4:30 PM", label: "Documentación", detail: "Registrar los cambios de hoy y los problemas pendientes para mañana." },
+      ],
+      reflectionQuestion:
+        "¿Disfrutarías un trabajo en el que constantemente tienes que descubrir si un problema es mecánico, eléctrico, o un error de software, en lugar de quedarte en un solo carril?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "High",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Medium",
+      coding: "Medium",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$122,930",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/about/data-for-occupations-not-covered-in-detail.htm",
+      note: "Los ingenieros de robótica y mecatrónica no se rastrean como su propia categoría detallada del BLS — esta cifra proviene del grupo más amplio de 'Ingenieros, Todos los Demás', que el BLS indica explícitamente que incluye a los ingenieros de robótica y mecatrónica. Trátala como una estimación aproximada, no como una cifra precisa para esta especialización específica.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Construye una máquina simple que se mueva usando un kit básico de robótica o incluso materiales caseros, como un auto propulsado por una banda elástica.",
+        tool: "Un kit de robótica para principiantes diseñado para tu edad, o simplemente materiales caseros para empezar.",
+        activity: "Busca un equipo de robótica LEGO o FIRST LEGO League en tu escuela, si hay uno disponible.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Prueba un kit de robótica para principiantes que combine un microcontrolador con motores y sensores, y programa un comportamiento simple.",
+        tool: "Un kit de robótica para principiantes basado en Arduino o un microcontrolador similar.",
+        activity: "Investiga un equipo de FIRST Tech Challenge o VEX Robotics en tu escuela, si existe uno.",
+        relatedField: "electrical-engineering",
+      },
+      "16-18": {
+        project: "Construye un proyecto de robótica más completo que combine un chasis, sensores, y código personalizado, como un robot que sigue una línea o esquiva obstáculos.",
+        tool: "Una plataforma de robótica basada en Raspberry Pi o Arduino, ambas ampliamente usadas y bien documentadas.",
+        activity: "Busca un equipo de FIRST Robotics Competition, un programa preuniversitario de robótica o mecatrónica, o un campamento de verano de ingeniería.",
+        relatedField: "software-engineering",
+      },
+    },
+    industries: ["Manufactura y automatización", "Automotriz", "Robótica de consumo", "Aeroespacial y defensa", "Salud y dispositivos médicos", "Logística y almacenamiento"],
+    relatedMajors: ["Ingeniería de Robótica", "Ingeniería Mecatrónica", "Ingeniería Mecánica (con enfoque en robótica)", "Ingeniería Eléctrica o en Computación (con enfoque en robótica)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Diseño de Robótica", description: "Diseña la estructura física y los mecanismos de un sistema robótico." },
+      { title: "Ingeniero/a de Control", description: "Diseña y escribe el software y los sistemas de control que determinan cómo se comporta un robot." },
+      { title: "Ingeniero/a de Automatización", description: "Diseña sistemas robóticos específicamente para manufactura y automatización industrial." },
+      { title: "Ingeniero/a de Sistemas Autónomos", description: "Trabaja en robots o vehículos que operan con control humano limitado o nulo, como drones o sistemas de conducción autónoma." },
+    ],
+    advantages: [
+      "Genuinamente interdisciplinario, lo cual puede ser una buena opción si no quieres elegir entre la ingeniería mecánica, eléctrica y de software",
+      "Campo en crecimiento ligado a la automatización, la manufactura, y los sistemas autónomos en muchas industrias",
+      "Resultados directos y visibles — puedes ver cómo lo que construiste realmente se mueve y actúa",
+    ],
+    challenges: [
+      "Requiere conocimiento práctico en tres disciplinas de ingeniería tradicionalmente separadas, lo cual puede significar una carga de cursos más pesada y amplia",
+      "Los problemas de integración — lograr que las partes mecánicas, eléctricas y de software funcionen juntas — pueden ser más difíciles de depurar que un problema de una sola disciplina",
+      "No siempre se ofrece como una carrera propia y dedicada, así que descubrir el camino académico correcto puede requerir investigación adicional dependiendo de dónde estudies",
+    ],
+    thingsPeopleDislike: [
+      "La depuración puede ser frustrante cuando no está claro de qué disciplina viene realmente un problema",
+      "La falta de un solo camino de carrera estandarizado puede dificultar saber exactamente qué cursos tomar",
+      "Como no se rastrea como su propia ocupación distinta en las estadísticas laborales del gobierno, puede ser más difícil encontrar datos precisos de salario y mercado laboral específicos del campo",
+    ],
+    howCompetitive:
+      "Los ingenieros de robótica y mecatrónica no se rastrean como una ocupación distinta en la Oficina de Estadísticas Laborales de EE. UU. — caen bajo la categoría más amplia de 'Ingenieros, Todos los Demás', que reportó un salario mediano de $122,930 en mayo de 2025 pero no ofrece una proyección de crecimiento separada específica para robótica. El campo está ampliamente ligado al crecimiento en automatización, tecnología de manufactura, y sistemas autónomos, pero como no hay un rastreo gubernamental dedicado, vale especialmente la pena investigar las ofertas de empleo actuales y los informes de la industria en tu región específica en lugar de confiar en una sola estadística.",
+    beginnerActivities: [
+      "Construye una máquina simple que se mueva usando un kit básico de robótica o materiales caseros",
+      "Prueba un kit de robótica para principiantes que combine un microcontrolador, motores, y sensores",
+      "Programa un comportamiento robótico simple, como seguir una línea o esquivar un obstáculo",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a trabajando entre las disciplinas mecánica, eléctrica y de software, en lugar de especializarme estrechamente en solo una?",
+      "¿Disfruto solucionar problemas cuando la causa no es obvia de antemano?",
+      "¿Estoy bien con un camino académico menos estandarizado, donde podría tener que armar yo mismo/a los cursos correctos?",
+      "¿Me interesa genuinamente la robótica en sí, o principalmente me atrae una de sus disciplinas subyacentes, como el diseño mecánico o la programación?",
+    ],
+  },
+  {
+    slug: "nuclear-engineering",
+    name: "Ingeniería Nuclear",
+    tagline: "Los sistemas que generan y gestionan la energía nuclear de forma segura — diseñados y monitoreados constantemente.",
+    whatItIs:
+      "La ingeniería nuclear se enfoca en el diseño, la operación y el monitoreo seguros de los sistemas que usan energía nuclear — desde plantas de energía hasta aplicaciones médicas y de investigación. Combina física, ingeniería de seguridad, y un cumplimiento regulatorio estricto, ya que las consecuencias de un error son inusualmente graves.",
+    whatEngineersWorkOn:
+      "Los ingenieros nucleares diseñan los sistemas y procedimientos de seguridad para producir y usar energía nuclear, monitorean la operación de reactores para asegurarse de que todo funcione dentro de límites de seguridad estrictos, escriben y revisan procedimientos para el manejo y la disposición de materiales radiactivos, e investigan formas de hacer los procesos nucleares más seguros o eficientes. Gran parte del trabajo implica operar dentro de una densa red de regulaciones federales, ya que la supervisión de seguridad nuclear es de las más estrictas en cualquier campo de la ingeniería.",
+    realWorldExamples: [
+      "Diseño de plantas de energía nuclear y sus sistemas de seguridad",
+      "Equipo de medicina nuclear y radioterapia",
+      "Sistemas de almacenamiento y disposición de residuos nucleares",
+      "Sistemas de propulsión nuclear naval",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros nucleares trabajan directamente con armas — la mayoría de los ingenieros nucleares trabajan en generación de energía civil, medicina, o investigación, no en defensa.",
+      "Que el trabajo se trata mayormente de teoría de física — la mayor parte del trabajo real es aplicado: monitorear sistemas, escribir procedimientos de seguridad, y asegurarse de que el equipo real opere dentro de límites estrictos.",
+      "Que es un campo que se está reduciendo porque se construyen pocas plantas nuevas — gran parte del trabajo es mantener, monitorear, y eventualmente desmantelar las plantas que ya existen, además de las aplicaciones crecientes en medicina e investigación.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros nucleares trabajan directamente con armas.", reality: "La mayoría de los ingenieros nucleares trabajan en generación de energía civil, medicina, o investigación, no en defensa." },
+      { myth: "El trabajo se trata mayormente de teoría de física.", reality: "La mayor parte del trabajo real es aplicado: monitorear sistemas, escribir procedimientos de seguridad, y asegurarse de que el equipo real opere dentro de límites estrictos." },
+      { myth: "Es un campo que se está reduciendo porque se construyen pocas plantas nuevas.", reality: "Gran parte del trabajo es mantener, monitorear, y eventualmente desmantelar las plantas que ya existen, además de las aplicaciones crecientes en medicina e investigación." },
+    ],
+    usefulSubjects: ["Física (especialmente física nuclear y moderna, si está disponible)", "Cálculo", "Química"],
+    helpfulSkills: [
+      "Comodidad con reglas y procedimientos estrictos, ya que el trabajo nuclear está regido por algunas de las regulaciones de seguridad más detalladas de cualquier campo de ingeniería",
+      "Atención cuidadosa y metódica al detalle — un pequeño descuido en este campo puede tener consecuencias serias",
+      "Bases sólidas de matemáticas y física, ya que el comportamiento de un reactor está fundamentado en física nuclear",
+      "Comunicación escrita clara, ya que los procedimientos de seguridad y la documentación regulatoria tienen que ser exactos y sin ambigüedad",
+    ],
+    typicalProjects: [
+      "Monitorear datos de desempeño de un reactor para confirmar que está operando dentro de los límites de seguridad",
+      "Escribir o revisar un procedimiento para manejar o almacenar material radiactivo de forma segura",
+      "Investigar una forma de hacer un proceso nuclear existente más eficiente sin comprometer la seguridad",
+      "Trabajar con un equipo para prepararse para una inspección o auditoría regulatoria",
+    ],
+    typicalWorkday:
+      "Espera una rotación entre monitorear datos de la planta o el sistema, revisar y escribir documentación de seguridad, y coordinar con un equipo el cumplimiento regulatorio. El tiempo se divide entre una oficina o sala de control y, dependiendo del puesto, tiempo presencial en la instalación física.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Reunión de turno", detail: "Revisar los datos de desempeño del reactor durante la noche y cualquier nota del turno anterior." },
+        { time: "9:30 AM", label: "Revisión de sistemas", detail: "Monitorear datos en vivo del reactor para confirmar que todos los sistemas están dentro de los límites normales de operación." },
+        { time: "11:00 AM", label: "Documentación de seguridad", detail: "Revisar un procedimiento para el manejo de material radiactivo para asegurarse de que cumple con las regulaciones actuales." },
+        { time: "1:00 PM", label: "Coordinación regulatoria", detail: "Reunirse con un equipo de cumplimiento para preparar documentación para una inspección próxima." },
+        { time: "2:30 PM", label: "Solución de problemas", detail: "Investigar una irregularidad menor en una lectura del sistema para descartar cualquier problema subyacente." },
+        { time: "4:00 PM", label: "Cierre del día", detail: "Registrar los hallazgos de hoy e informar al turno entrante." },
+      ],
+      reflectionQuestion:
+        "¿Te sentirías cómodo/a con un trabajo donde seguir procedimientos exactos importa tanto como la habilidad técnica?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$133,970",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/nuclear-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo una planta de energía nuclear genera electricidad y dibuja un diagrama simple del proceso.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables, como libros de biblioteca o sitios de ciencia de confianza.",
+        activity: "Busca un club de STEM o física en tu escuela, o una exhibición de museo sobre energía o ciencia nuclear.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Investiga cómo se usa la medicina nuclear para diagnosticar o tratar enfermedades, y resume en qué se diferencia de una planta de energía nuclear.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables.",
+        activity: "Investiga un equipo de Science Olympiad, que a veces cubre eventos relacionados con energía o temas nucleares.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Investiga los sistemas de seguridad usados en los diseños modernos de reactores nucleares y qué cambió después de un incidente histórico como Three Mile Island o Fukushima.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes confiables de ciencia e ingeniería.",
+        activity: "Busca un programa preuniversitario de ingeniería o un programa de verano con enfoque en energía o nuclear, si hay uno disponible.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Generación de energía nuclear", "Medicina nuclear y atención médica", "Laboratorios nacionales e investigación", "Naval y defensa", "Gestión de residuos nucleares"],
+    relatedMajors: ["Ingeniería Nuclear", "Ingeniería Mecánica (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Reactores", description: "Monitorea y optimiza la operación de un reactor nuclear para mantenerlo funcionando de forma segura y eficiente." },
+      { title: "Ingeniero/a de Seguridad Nuclear", description: "Se enfoca específicamente en los sistemas y procedimientos de seguridad que previenen y responden a posibles incidentes." },
+      { title: "Ingeniero/a de Protección Radiológica", description: "Diseña y monitorea sistemas que protegen a los trabajadores y al público de la exposición a la radiación." },
+      { title: "Ingeniero/a de Combustible Nuclear", description: "Trabaja en el diseño, desempeño, y gestión del combustible usado en un reactor nuclear." },
+    ],
+    advantages: [
+      "Salario mediano fuerte en comparación con muchos otros campos de ingeniería",
+      "Experiencia altamente especializada que tiene demanda constante donde sea que operen instalaciones nucleares",
+      "Trabajo que tiene una conexión directa y significativa con la infraestructura energética o la atención médica de un país",
+    ],
+    challenges: [
+      "El crecimiento del empleo es esencialmente plano — la Oficina de Estadísticas Laborales de EE. UU. proyecta casi ningún cambio en el número de empleos de ingeniería nuclear hasta 2035",
+      "Los requisitos regulatorios y procedimentales pesados dan forma a casi todas las partes del trabajo, dejando menos espacio para el diseño abierto",
+      "La percepción pública de la energía nuclear puede ser una fuente de presión o escrutinio, sin importar el trabajo real de un ingeniero individual",
+    ],
+    thingsPeopleDislike: [
+      "Una cantidad significativa de documentación y revisión de procedimientos, en lugar de trabajo de diseño práctico",
+      "Un número limitado de instalaciones nucleares nuevas siendo construidas en algunos países, lo cual puede reducir dónde está disponible el trabajo",
+      "Trabajar alrededor de materiales radiactivos requiere atención constante al protocolo de seguridad, lo cual algunos encuentran estresante con el tiempo",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta esencialmente ningún cambio (0%) en el empleo de ingenieros nucleares de 2025 a 2035 — entre las proyecciones más planas de cualquier campo de ingeniería en este sitio — con cerca de 800 vacantes proyectadas por año durante esa década, mayormente por trabajadores jubilándose o cambiando de carrera en lugar de por puestos nuevos que se crean. Eso no significa que el campo se esté reduciendo, ya que las plantas e instalaciones nucleares existentes necesitan personal de forma continua, pero sí significa que no se espera que crezca el número de puestos de ingeniería nuclear. La demanda también puede cambiar con las decisiones de política energética de un país — investiga el mercado actual y cualquier proyecto nuclear planeado en tu región específica antes de tomar decisiones.",
+    beginnerActivities: [
+      "Investiga cómo una planta de energía nuclear genera electricidad y esquematiza el proceso",
+      "Investiga cómo se usa la medicina nuclear en la atención médica y en qué se diferencia de una planta de energía",
+      "Investiga los sistemas de seguridad usados en los diseños modernos de reactores",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con un campo donde seguir procedimientos exactos importa tanto como la habilidad técnica pura?",
+      "¿Saber que se espera que el número de empleos de ingeniería nuclear se mantenga estable, no que crezca, cambia cómo me siento sobre el campo?",
+      "¿Me interesa la energía nuclear específicamente, o más ampliamente los sistemas de energía en general?",
+    ],
+  },
+  {
+    slug: "petroleum-engineering",
+    name: "Ingeniería de Petróleo",
+    tagline: "Cómo se extraen el petróleo y el gas natural del subsuelo, de forma segura y eficiente.",
+    whatItIs:
+      "La ingeniería de petróleo se enfoca en cómo extraer petróleo y gas natural del subsuelo de forma segura y eficiente — diseñando métodos de extracción, planes de perforación, y sistemas de producción. Es un campo especializado ligado de cerca a los propios ciclos económicos de la industria energética.",
+    whatEngineersWorkOn:
+      "Los ingenieros de petróleo diseñan y evalúan métodos para extraer petróleo y gas natural de yacimientos subterráneos, analizan datos geológicos para estimar cuánto puede producir un sitio, diseñan planes de perforación y equipo de producción, y trabajan para mejorar la eficiencia de extracción mientras gestionan el riesgo de seguridad y ambiental. Gran parte del trabajo implica una colaboración cercana con geólogos y geocientíficos, ya que la geología subyacente de un yacimiento impulsa casi cada decisión de ingeniería.",
+    realWorldExamples: [
+      "Diseño de pozos de petróleo y gas y planes de perforación",
+      "Equipo de extracción y sistemas de producción",
+      "Análisis de yacimientos para estimar cuánto petróleo o gas puede producir un sitio",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros de petróleo pasan sus carreras trabajando físicamente en plataformas de perforación — muchos puestos están basados en una oficina analizando datos y planeando, con visitas periódicas al sitio en lugar de trabajo de campo de tiempo completo.",
+      "Que es el mismo trabajo que un geólogo — los geólogos estudian e interpretan las formaciones de roca y fluidos subterráneas; los ingenieros de petróleo usan esa información para diseñar cómo extraer recursos de forma segura y eficiente.",
+      "Que el campo está desapareciendo por completo — el crecimiento de la demanda global de petróleo y gas se ha desacelerado, pero el campo no está desapareciendo, y el salario sigue estando entre los más altos de cualquier disciplina de ingeniería.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros de petróleo pasan sus carreras trabajando físicamente en plataformas de perforación.", reality: "Muchos puestos están basados en una oficina analizando datos y planeando, con visitas periódicas al sitio en lugar de trabajo de campo de tiempo completo." },
+      { myth: "Es el mismo trabajo que un geólogo.", reality: "Los geólogos estudian e interpretan las formaciones de roca y fluidos subterráneas; los ingenieros de petróleo usan esa información para diseñar cómo extraer recursos de forma segura y eficiente." },
+      { myth: "El campo está desapareciendo por completo.", reality: "El crecimiento de la demanda global de petróleo y gas se ha desacelerado, pero el campo no está desapareciendo, y el salario sigue estando entre los más altos de cualquier disciplina de ingeniería." },
+    ],
+    usefulSubjects: ["Física", "Química", "Cálculo", "Ciencias de la tierra o geología, si está disponible"],
+    helpfulSkills: [
+      "Comodidad interpretando datos geológicos y de yacimientos para tomar decisiones de ingeniería",
+      "Bases sólidas de matemáticas y física para modelar el flujo de fluidos y el comportamiento de yacimientos",
+      "Evaluación de riesgos — sopesar factores de seguridad, costo, y ambientales al planear la extracción",
+      "Disposición para viajar o trabajar en sitios de campo remotos, al menos periódicamente",
+    ],
+    typicalProjects: [
+      "Analizar datos de yacimientos para estimar cuánto petróleo o gas puede producir un sitio",
+      "Diseñar un plan de perforación para un pozo nuevo",
+      "Evaluar formas de mejorar la eficiencia de extracción de un pozo existente",
+      "Evaluar el riesgo de seguridad y ambiental de un método de extracción propuesto",
+    ],
+    typicalWorkday:
+      "El análisis de datos y el modelado en la oficina ocupan la mayoría de las semanas, con — dependiendo del puesto — tiempo en un sitio de campo revisando las operaciones en persona. La colaboración con geólogos y otros ingenieros es una parte constante del trabajo, ya que las decisiones sobre yacimientos requieren aportes de múltiples disciplinas.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Revisión de datos", detail: "Revisar los datos de producción de la noche de un pozo activo." },
+        { time: "9:30 AM", label: "Análisis de yacimiento", detail: "Analizar datos geológicos con un geólogo para estimar el potencial de producción de un sitio nuevo." },
+        { time: "11:30 AM", label: "Plan de perforación", detail: "Trabajar en un plan de perforación para un pozo propuesto, considerando profundidad, equipo, y requisitos de seguridad." },
+        { time: "1:30 PM", label: "Coordinación de equipo", detail: "Reunirse con el personal de operaciones de campo para revisar cómo está funcionando un sitio de extracción activo." },
+        { time: "3:00 PM", label: "Evaluación de riesgos", detail: "Evaluar el riesgo de seguridad y ambiental de un cambio propuesto a un método de extracción." },
+        { time: "4:30 PM", label: "Cierre del día", detail: "Documentar el análisis de hoy y actualizar el plan del proyecto." },
+      ],
+      reflectionQuestion:
+        "¿Te sentirías cómodo/a en un campo donde el salario es fuerte pero está ligado de cerca a los altibajos de los mercados energéticos globales?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "High",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Medium",
+    },
+    salary: {
+      medianAnnual: "$144,910",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/petroleum-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región. Este campo está ligado de cerca a los ciclos de la industria del petróleo y el gas, lo cual afecta tanto el salario como la estabilidad laboral.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo se forman el petróleo y el gas natural bajo tierra y cómo los encuentran los ingenieros.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables, como libros de biblioteca o sitios de ciencia de confianza.",
+        activity: "Busca un club de STEM o ciencias de la tierra en tu escuela.",
+        relatedField: "chemical-engineering",
+      },
+      "13-15": {
+        project: "Investiga cómo funciona una plataforma de perforación y esquematiza los pasos básicos para perforar un pozo.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables.",
+        activity: "Investiga un equipo de Science Olympiad, que a veces cubre temas de ciencias de la tierra.",
+        relatedField: "chemical-engineering",
+      },
+      "16-18": {
+        project: "Investiga un campo real de petróleo o gas y estima, usando datos públicos, cómo ha cambiado la extracción ahí con el tiempo.",
+        tool: "Fuentes públicas de datos de energía, como la base de datos pública de una agencia nacional de información energética, si está disponible en tu país.",
+        activity: "Busca un programa preuniversitario de ingeniería con enfoque en energía, si hay uno disponible.",
+        relatedField: "chemical-engineering",
+      },
+    },
+    industries: ["Extracción de petróleo y gas", "Consultoría energética", "Perforación en alta mar", "Empresas de ingeniería de yacimientos", "Agencias gubernamentales de energía"],
+    relatedMajors: ["Ingeniería de Petróleo", "Ingeniería Química (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Perforación", description: "Diseña y supervisa los planes para perforar un pozo de forma segura y eficiente." },
+      { title: "Ingeniero/a de Yacimientos", description: "Analiza datos de yacimientos subterráneos para estimar el potencial de producción y planear la estrategia de extracción." },
+      { title: "Ingeniero/a de Producción", description: "Se enfoca en optimizar qué tan eficientemente produce petróleo o gas un pozo o campo existente." },
+      { title: "Ingeniero/a de Terminación de Pozos", description: "Diseña los pasos finales que preparan un pozo perforado para la producción." },
+    ],
+    advantages: [
+      "Entre los salarios medianos más altos de cualquier campo de ingeniería en este sitio",
+      "El trabajo da forma directamente a cómo se extrae y usa un recurso energético global importante",
+      "Gran variedad técnica — geología, mecánica de fluidos, y diseño de equipo entran en juego",
+    ],
+    challenges: [
+      "El salario y la estabilidad laboral están ligados de cerca a los precios globales del petróleo y el gas, que pueden cambiar rápidamente",
+      "Algunos puestos requieren viajar o pasar tiempo extendido en sitios de campo remotos",
+      "El campo enfrenta preguntas reales a largo plazo sobre el ritmo de la transición global fuera de los combustibles fósiles",
+    ],
+    thingsPeopleDislike: [
+      "La seguridad laboral puede sentirse menos predecible que en campos menos ligados a los precios de las materias primas",
+      "Condiciones remotas o físicamente exigentes en el sitio de campo en algunos puestos",
+      "La percepción pública de la industria del petróleo y el gas puede ser una fuente de escrutinio adicional",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 2% para ingenieros de petróleo de 2025 a 2035 — más lento que el promedio de todas las ocupaciones — con cerca de 1,000 vacantes proyectadas por año durante esa década, mayormente por trabajadores jubilándose o cambiando de carrera. El salario está entre los más altos de cualquier campo de ingeniería, pero tanto la contratación como la compensación están ligadas de cerca a los precios globales del petróleo y el gas, que pueden cambiar sustancialmente de un año a otro. Investiga las condiciones actuales del mercado y las tendencias de contratación en tu región y sector de industria específicos antes de tomar decisiones.",
+    beginnerActivities: [
+      "Investiga cómo se forman el petróleo y el gas natural bajo tierra y cómo se localizan",
+      "Investiga cómo funciona una plataforma de perforación y esquematiza los pasos básicos para perforar un pozo",
+      "Investiga cómo ha cambiado con el tiempo la producción de un campo real de petróleo o gas usando datos públicos",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con un campo donde el salario y la estabilidad laboral están ligados de cerca a los precios energéticos globales?",
+      "¿Me interesan las ciencias de la tierra y la geología tanto como la ingeniería tradicional?",
+      "¿Estaría cómodo/a viajando o trabajando en un sitio de campo remoto, al menos periódicamente?",
+    ],
+  },
+  {
+    slug: "agricultural-engineering",
+    name: "Ingeniería Agrícola",
+    tagline: "La ingeniería puesta a trabajar en la agricultura y la producción de alimentos — equipo, riego, y sistemas alimentarios.",
+    whatItIs:
+      "La ingeniería agrícola aplica principios de ingeniería a la agricultura y la producción de alimentos — diseñando equipo, sistemas de riego, y estructuras que hacen la agricultura más eficiente, y adaptando la tecnología para trabajar con factores biológicos y ambientales que no se comportan como los materiales de ingeniería estándar.",
+    whatEngineersWorkOn:
+      "Los ingenieros agrícolas diseñan equipo y maquinaria agrícola, desarrollan sistemas de riego y gestión del agua, diseñan estructuras como instalaciones de almacenamiento y plantas de procesamiento, y trabajan en tecnología de agricultura de precisión como el monitoreo de cultivos basado en sensores. Gran parte del trabajo implica adaptar soluciones de ingeniería estándar para trabajar con sistemas biológicos — cultivos, suelo, y ganado — que se comportan de forma menos predecible que los materiales de ingeniería típicos.",
+    realWorldExamples: [
+      "Diseño de equipo y maquinaria agrícola",
+      "Sistemas de riego y gestión del agua",
+      "Sistemas de procesamiento y almacenamiento de alimentos",
+      "Tecnología de agricultura de precisión, como monitoreo de cultivos basado en sensores",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros agrícolas son lo mismo que los agricultores — los agricultores cultivan y crían ganado; los ingenieros agrícolas diseñan el equipo, los sistemas, y la tecnología que apoyan ese trabajo.",
+      "Que el trabajo solo es relevante en áreas rurales — aunque gran parte del trabajo de campo ocurre en granjas, los ingenieros agrícolas también trabajan en plantas de procesamiento de alimentos, laboratorios de investigación, y empresas de fabricación de equipo que pueden estar ubicadas casi en cualquier lugar.",
+      "Que es un campo de baja tecnología — la ingeniería agrícola moderna implica tecnología real, incluyendo sensores, automatización, y análisis de datos para agricultura de precisión.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros agrícolas son lo mismo que los agricultores.", reality: "Los agricultores cultivan y crían ganado; los ingenieros agrícolas diseñan el equipo, los sistemas, y la tecnología que apoyan ese trabajo." },
+      { myth: "El trabajo solo es relevante en áreas rurales.", reality: "Aunque gran parte del trabajo de campo ocurre en granjas, los ingenieros agrícolas también trabajan en plantas de procesamiento de alimentos, laboratorios de investigación, y empresas de fabricación de equipo que pueden estar ubicadas casi en cualquier lugar." },
+      { myth: "Es un campo de baja tecnología.", reality: "La ingeniería agrícola moderna implica tecnología real, incluyendo sensores, automatización, y análisis de datos para agricultura de precisión." },
+    ],
+    usefulSubjects: ["Biología", "Física", "Química", "Cálculo"],
+    helpfulSkills: [
+      "Comodidad combinando fundamentos de ingeniería con biología y ciencias ambientales",
+      "Resolución práctica de problemas, ya que el equipo a menudo tiene que funcionar de forma confiable en condiciones exteriores impredecibles",
+      "Pensamiento sistémico, ya que los sistemas agrícolas involucran factores biológicos, mecánicos, y ambientales que interactúan entre sí",
+      "Disposición para pasar tiempo en granjas o sitios de campo, no solo en una oficina o laboratorio",
+    ],
+    typicalProjects: [
+      "Diseñar o mejorar una pieza de equipo agrícola, como una máquina de siembra o cosecha",
+      "Diseñar un sistema de riego para un cultivo y clima específicos",
+      "Probar tecnología basada en sensores para monitorear la salud de los cultivos o las condiciones del suelo",
+      "Diseñar una instalación de almacenamiento o procesamiento para reducir el desperdicio de alimentos después de la cosecha",
+    ],
+    typicalWorkday:
+      "El trabajo de diseño y pruebas suele dividirse entre una oficina o laboratorio y tiempo en una granja o sitio de campo donde realmente se usan el equipo y los sistemas. La colaboración con agricultores, agrónomos, y científicos de alimentos es una parte regular del trabajo, ya que las condiciones agrícolas del mundo real informan constantemente la ingeniería.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Visita de campo", detail: "Visitar un sitio de granja para ver cómo está funcionando en condiciones reales una pieza de equipo o un sistema de riego." },
+        { time: "9:30 AM", label: "Revisión de datos", detail: "Revisar datos de sensores de un sistema de agricultura de precisión para verificar las condiciones del cultivo o el suelo." },
+        { time: "11:00 AM", label: "Trabajo de diseño", detail: "Trabajar en un diseño para una pieza nueva o mejorada de equipo agrícola." },
+        { time: "1:00 PM", label: "Colaboración", detail: "Reunirse con un agricultor o agrónomo para entender un problema real que el diseño necesita resolver." },
+        { time: "2:30 PM", label: "Pruebas", detail: "Probar un prototipo bajo condiciones que imitan el uso real en una granja." },
+        { time: "4:00 PM", label: "Cierre del día", detail: "Documentar los resultados de las pruebas de hoy y planear los próximos pasos." },
+      ],
+      reflectionQuestion:
+        "¿Disfrutarías un trabajo de ingeniería donde los 'materiales' con los que diseñas — suelo, cultivos, clima — no se comportan tan predeciblemente como el acero o el plástico?",
+    },
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "Low",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "High",
+      biologyContent: "High",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$98,590",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/agricultural-engineers.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo un sistema de riego moderno decide cuándo y cuánto regar los cultivos.",
+        tool: "Todavía no necesitas herramientas especiales — fuentes de ciencia confiables.",
+        activity: "Busca un club de 4-H, un capítulo de FFA (Future Farmers of America), o un club de STEM en tu escuela, si hay uno disponible.",
+        relatedField: "environmental-engineering",
+      },
+      "13-15": {
+        project: "Diseña un sistema simple de riego por goteo usando materiales caseros y prueba qué tan uniformemente riega una pequeña área.",
+        tool: "Materiales caseros básicos — tubería, recipientes, y algo para hacer pequeños agujeros.",
+        activity: "Investiga un programa 4-H o FFA, que a menudo incluyen proyectos prácticos de tecnología agrícola.",
+        relatedField: "environmental-engineering",
+      },
+      "16-18": {
+        project: "Investiga una tecnología real de agricultura de precisión, como sensores de suelo o monitoreo de cultivos con drones, y resume cómo cambia las decisiones agrícolas.",
+        tool: "Fuentes confiables de tecnología agrícola, como el sitio web público de un programa de extensión universitaria.",
+        activity: "Busca un programa preuniversitario de ingeniería agrícola o un programa de verano en una universidad con un departamento de agricultura.",
+        relatedField: "environmental-engineering",
+      },
+    },
+    industries: ["Fabricación de equipo agrícola", "Procesamiento de alimentos", "Riego y gestión del agua", "Tecnología agrícola (AgTech)", "Agencias gubernamentales de agricultura"],
+    relatedMajors: ["Ingeniería Agrícola", "Ingeniería Mecánica (con cierta superposición)", "Ingeniería Ambiental (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Diseño de Equipo Agrícola", description: "Diseña y mejora la maquinaria usada para sembrar, cosechar, y otras tareas agrícolas." },
+      { title: "Ingeniero/a de Riego", description: "Diseña sistemas de gestión del agua y riego adaptados a cultivos y climas específicos." },
+      { title: "Ingeniero/a de Procesamiento de Alimentos", description: "Diseña el equipo y los sistemas usados para procesar, empacar, y almacenar alimentos después de la cosecha." },
+      { title: "Ingeniero/a de Agricultura de Precisión", description: "Desarrolla tecnología basada en sensores y datos para ayudar a los agricultores a tomar decisiones más informadas." },
+    ],
+    advantages: [
+      "El trabajo apoya directamente la producción de alimentos, que es una necesidad esencial en todas partes",
+      "Un campo genuinamente interdisciplinario que combina la ingeniería con la biología y las ciencias ambientales",
+      "Impacto real y constante — las mejoras en este campo pueden reducir significativamente el desperdicio o mejorar los rendimientos",
+    ],
+    challenges: [
+      "El equipo tiene que funcionar de forma confiable en condiciones exteriores impredecibles, lo cual es más difícil de diseñar que para un entorno controlado",
+      "El campo es más pequeño que muchas otras disciplinas de ingeniería, lo cual puede significar menos vacantes en general",
+      "Algunos puestos requieren viajes regulares o tiempo en sitios de granjas rurales, lo cual no es para todos",
+    ],
+    thingsPeopleDislike: [
+      "Un número relativamente pequeño de vacantes en comparación con campos de ingeniería más grandes",
+      "El trabajo de campo al aire libre puede significar exposición al clima y condiciones de trabajo menos cómodas",
+      "El salario tiende a ser algo más bajo que en muchas otras especialidades de ingeniería",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 7% para ingenieros agrícolas de 2025 a 2035 — más rápido que el promedio de todas las ocupaciones — con cerca de 100 vacantes proyectadas por año durante esa década. Ese es uno de los conteos anuales de vacantes más pequeños entre los campos de ingeniería en este sitio, ya que la ingeniería agrícola es un campo comparativamente pequeño y especializado. Investiga el mercado actual y la demanda en tu región y país específicos antes de tomar decisiones, ya que las necesidades de tecnología agrícola pueden variar mucho según las prácticas agrícolas locales.",
+    beginnerActivities: [
+      "Investiga cómo un sistema de riego moderno decide cuándo y cuánto regar los cultivos",
+      "Diseña un sistema simple de riego por goteo con materiales caseros y prueba qué tan uniformemente riega un área",
+      "Investiga una tecnología real de agricultura de precisión, como sensores de suelo o monitoreo de cultivos con drones",
+    ],
+    selfReflectionQuestions: [
+      "¿Disfrutaría un trabajo de ingeniería donde los 'materiales' subyacentes — suelo, cultivos, clima — no se comportan tan predeciblemente como el acero o el plástico?",
+      "¿Estoy cómodo/a pasando tiempo real al aire libre o en sitios de granjas, no solo en una oficina o laboratorio?",
+      "¿Me interesa genuinamente la agricultura y los sistemas alimentarios, o principalmente el lado mecánico o tecnológico?",
+    ],
+  },
+  {
+    slug: "marine-engineering",
+    name: "Ingeniería Marina",
+    tagline: "Barcos, submarinos, y otras embarcaciones construidas para el océano — diseñados y mantenidos en operación.",
+    whatItIs:
+      "La ingeniería marina, a menudo combinada con la arquitectura naval, se enfoca en diseñar, construir, y mantener barcos, submarinos, y otras embarcaciones y estructuras marinas — el casco, los sistemas de propulsión, y los sistemas mecánicos y eléctricos a bordo todos tienen que funcionar de forma confiable en un entorno oceánico exigente.",
+    whatEngineersWorkOn:
+      "Los ingenieros marinos diseñan y mantienen los sistemas de propulsión, energía, y mecánicos que mantienen funcionando a los barcos y otras embarcaciones, mientras que los arquitectos navales (un rol estrechamente relacionado, a menudo estudiado junto con este) se enfocan más en el casco y el diseño general de la embarcación. Los ingenieros marinos prueban cómo aguantan los sistemas bajo condiciones oceánicas reales — presión, corrosión, y movimiento constante — y trabajan para mantener las embarcaciones existentes operando de forma segura y eficiente.",
+    realWorldExamples: [
+      "Diseño de cascos y análisis estructural de barcos",
+      "Sistemas de propulsión y potencia de barcos",
+      "Diseño de plataformas marinas",
+      "Sistemas de submarinos y embarcaciones navales",
+    ],
+    commonMisconceptions: [
+      "Que los ingenieros marinos solo trabajan en barcos navales o militares — el campo también cubre barcos de carga comerciales, cruceros, embarcaciones pesqueras, plataformas marinas, y botes recreativos.",
+      "Que es lo mismo que la arquitectura naval — los arquitectos navales se enfocan más en el casco, la estabilidad, y el diseño general de una embarcación; los ingenieros marinos se enfocan más en los sistemas de propulsión, energía, y mecánicos dentro de ella. En la práctica, los dos campos se superponen y a menudo se estudian juntos.",
+      "Que el trabajo requiere estar en el mar constantemente — muchos ingenieros marinos trabajan en oficinas, astilleros, o empresas de diseño, con tiempo en el mar siendo solo una parte de algunos puestos, no todo el trabajo.",
+    ],
+    mythsAndRealities: [
+      { myth: "Los ingenieros marinos solo trabajan en barcos navales o militares.", reality: "El campo también cubre barcos de carga comerciales, cruceros, embarcaciones pesqueras, plataformas marinas, y botes recreativos." },
+      { myth: "Es lo mismo que la arquitectura naval.", reality: "Los arquitectos navales se enfocan más en el casco, la estabilidad, y el diseño general de una embarcación; los ingenieros marinos se enfocan más en los sistemas de propulsión, energía, y mecánicos dentro de ella. En la práctica, los dos campos se superponen y a menudo se estudian juntos." },
+      { myth: "El trabajo requiere estar en el mar constantemente.", reality: "Muchos ingenieros marinos trabajan en oficinas, astilleros, o empresas de diseño, con tiempo en el mar siendo solo una parte de algunos puestos, no todo el trabajo." },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Química (para entender la corrosión y los materiales)"],
+    helpfulSkills: [
+      "Bases sólidas de mecánica y estructuras, ya que las embarcaciones tienen que resistir estrés físico extremo y constante",
+      "Comodidad con la corrosión, los materiales, y cómo se comportan en un ambiente de agua salada con el tiempo",
+      "Pensamiento sistémico, ya que los sistemas de propulsión, energía, y estructurales de una embarcación tienen que funcionar juntos de forma confiable",
+      "Disposición para trabajar en un astillero o a bordo de una embarcación, al menos para algunos puestos",
+    ],
+    typicalProjects: [
+      "Diseñar o evaluar el sistema de propulsión o energía de una embarcación",
+      "Analizar cómo aguantan el casco y la estructura de un barco bajo estrés y cargas oceánicas reales",
+      "Inspeccionar los sistemas mecánicos de una embarcación existente en busca de desgaste, corrosión, o reparaciones necesarias",
+      "Trabajar en el diseño de una plataforma marina u otra estructura marítima",
+    ],
+    typicalWorkday:
+      "El trabajo de diseño y análisis en una oficina da paso a tiempo en un astillero o a bordo de una embarcación, inspeccionando sistemas y estructuras reales. El equilibrio entre el trabajo de oficina y el trabajo práctico en el sitio varía mucho según el puesto y el empleador específicos.",
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Inspección en el astillero", detail: "Inspeccionar el sistema de propulsión de una embarcación en busca de desgaste o mantenimiento necesario." },
+        { time: "9:30 AM", label: "Revisión de diseño", detail: "Revisar un diseño para un nuevo componente del sistema de propulsión contra los requisitos de desempeño." },
+        { time: "11:00 AM", label: "Análisis estructural", detail: "Analizar cómo aguanta una sección del casco bajo una carga nueva propuesta." },
+        { time: "1:00 PM", label: "Coordinación de equipo", detail: "Reunirse con un arquitecto naval para coordinar cómo encajan los sistemas estructurales y mecánicos." },
+        { time: "2:30 PM", label: "Revisión de materiales", detail: "Evaluar cómo está aguantando un material contra la corrosión después de tiempo en agua salada." },
+        { time: "4:00 PM", label: "Cierre del día", detail: "Documentar los hallazgos de hoy y actualizar el plan del proyecto." },
+      ],
+      reflectionQuestion:
+        "¿Disfrutarías un trabajo de ingeniería que tiene que aguantar contra uno de los entornos más físicamente exigentes — agua salada constante, presión, y movimiento?",
+    },
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "High",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "High",
+    },
+    salary: {
+      medianAnnual: "$112,230",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm",
+      note: "Esta es una mediana nacional de EE. UU. entre todos los niveles de experiencia — no es un salario inicial, y no está ajustada a tu región.",
+      verifiedDate: "Septiembre 2026",
+    },
+    nextSteps: {
+      "10-12": {
+        project: "Investiga cómo un barco se mantiene a flote e intenta un experimento simple de flotabilidad usando plastilina o papel aluminio en un recipiente con agua.",
+        tool: "Materiales caseros básicos — plastilina, papel aluminio, y un recipiente con agua.",
+        activity: "Busca un club de STEM en tu escuela, o una exhibición de museo marítimo, si hay uno cerca de ti.",
+        relatedField: "mechanical-engineering",
+      },
+      "13-15": {
+        project: "Construye un casco de bote simple con materiales caseros y prueba cuánto peso puede aguantar antes de hundirse.",
+        tool: "Materiales caseros básicos — cartón, papel aluminio, o recipientes de plástico, y pesas para probar.",
+        activity: "Investiga un equipo de Science Olympiad, que a veces incluye eventos relacionados con diseño de botes o ingeniería naval.",
+        relatedField: "mechanical-engineering",
+      },
+      "16-18": {
+        project: "Investiga cómo se diseñan los barcos modernos para resistir la corrosión en agua salada, y resume las principales estrategias usadas.",
+        tool: "Fuentes de ingeniería confiables, como el sitio web público de una organización de ingeniería marítima.",
+        activity: "Busca un programa preuniversitario de ingeniería o un programa de verano con enfoque en ingeniería marina o naval, si hay uno disponible.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    industries: ["Construcción naval", "Transporte marítimo comercial", "Naval y defensa", "Energía en alta mar", "Fabricación de equipo marino"],
+    relatedMajors: ["Ingeniería Marina", "Arquitectura Naval", "Ingeniería Mecánica (con cierta superposición)"],
+    careerPaths: [
+      { title: "Ingeniero/a de Sistemas Marinos", description: "Diseña y mantiene los sistemas de propulsión, energía, y mecánicos de una embarcación." },
+      { title: "Arquitecto/a Naval", description: "Se enfoca en el diseño del casco, la estabilidad, y la forma estructural general de una embarcación, estrechamente vinculado con la ingeniería marina." },
+      { title: "Ingeniero/a de Estructuras en Alta Mar", description: "Diseña plataformas y estructuras construidas para operar de forma segura en condiciones de mar abierto." },
+      { title: "Inspector/a Marino/a", description: "Inspecciona embarcaciones y estructuras marinas para evaluar su condición, seguridad, y cumplimiento con los estándares." },
+    ],
+    advantages: [
+      "Experiencia altamente especializada con demanda constante donde sea que se construyan o mantengan barcos y estructuras marinas",
+      "Desafíos de ingeniería reales y tangibles — pocos entornos son tan físicamente exigentes como el océano abierto",
+      "El trabajo puede abarcar una amplia gama de tipos de embarcaciones, desde transporte comercial hasta defensa y energía en alta mar",
+    ],
+    challenges: [
+      "Las exigencias físicas del entorno oceánico — presión, corrosión, movimiento constante — crean problemas de ingeniería genuinamente difíciles",
+      "Algunos puestos requieren tiempo en un astillero o a bordo de una embarcación, lo cual no es para todos",
+      "El campo es más especializado y pequeño que muchas otras disciplinas de ingeniería, lo cual puede reducir dónde está disponible el trabajo",
+    ],
+    thingsPeopleDislike: [
+      "Algunos puestos requieren tiempo prolongado lejos de casa, en un astillero o a bordo de una embarcación",
+      "El campo está concentrado en regiones costeras o portuarias específicas, lo cual puede limitar dónde puedes trabajar",
+      "La corrosión, el desgaste, y los problemas de mantenimiento son una parte constante y continua del trabajo, no un problema de diseño de una sola vez",
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. proyecta un crecimiento del empleo del 7% para ingenieros marinos y arquitectos navales de 2025 a 2035 — más rápido que el promedio de todas las ocupaciones — con cerca de 500 vacantes proyectadas por año durante esa década. La demanda está ligada a la construcción naval, el transporte marítimo comercial, y la actividad naval, lo cual puede variar según la región y el país — investiga el mercado actual y la industria de construcción naval en tu área específica antes de tomar decisiones.",
+    beginnerActivities: [
+      "Investiga cómo un barco se mantiene a flote e intenta un experimento simple de flotabilidad con plastilina o papel aluminio",
+      "Construye un casco de bote simple con materiales caseros y prueba cuánto peso puede aguantar",
+      "Investiga cómo los barcos modernos resisten la corrosión en agua salada",
+    ],
+    selfReflectionQuestions: [
+      "¿Disfrutaría un trabajo de ingeniería que tiene que aguantar contra condiciones físicas extremadamente exigentes, como agua salada constante y presión?",
+      "¿Estoy cómodo/a con que algunos puestos requieran tiempo en un astillero o a bordo de una embarcación, posiblemente lejos de casa?",
+      "¿Me atrae la ingeniería marina específicamente, o más ampliamente la ingeniería mecánica o estructural?",
+    ],
+  },
+];

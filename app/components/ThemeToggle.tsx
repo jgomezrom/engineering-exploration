@@ -1,38 +1,26 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 
-function subscribeToSystemTheme(callback: () => void) {
-  const mq = window.matchMedia("(prefers-color-scheme: dark)");
-  mq.addEventListener("change", callback);
-  return () => mq.removeEventListener("change", callback);
-}
-
-function getSystemPrefersDark() {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches;
-}
-
-// Server render (and the client's first hydration pass) has no OS preference
-// to read, so both assume light — React reconciles to the real value right
-// after mount, same as any other useSyncExternalStore consumer.
-function getServerSnapshot() {
-  return false;
-}
+const LABELS = {
+  en: { toLight: "Switch to light mode", toDark: "Switch to dark mode" },
+  es: { toLight: "Cambiar a modo claro", toDark: "Cambiar a modo oscuro" },
+};
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const systemPrefersDark = useSyncExternalStore(subscribeToSystemTheme, getSystemPrefersDark, getServerSnapshot);
-  const effective: "dark" | "light" = theme ?? (systemPrefersDark ? "dark" : "light");
+  const { effectiveTheme, setTheme } = useTheme();
+  const { language } = useLanguage();
+  const t = LABELS[language];
 
   return (
     <button
       type="button"
-      onClick={() => setTheme(effective === "dark" ? "light" : "dark")}
-      aria-label={effective === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      onClick={() => setTheme(effectiveTheme === "dark" ? "light" : "dark")}
+      aria-label={effectiveTheme === "dark" ? t.toLight : t.toDark}
       className="flex h-9 w-9 flex-shrink-0 items-center justify-center border border-neutral-900/10 text-neutral-600 transition-colors hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
     >
-      {effective === "dark" ? (
+      {effectiveTheme === "dark" ? (
         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
           <path
             d="M10 3v1.5M10 15.5V17M17 10h-1.5M4.5 10H3M14.6 5.4l-1.1 1.1M6.5 13.5l-1.1 1.1M14.6 14.6l-1.1-1.1M6.5 6.5 5.4 5.4"

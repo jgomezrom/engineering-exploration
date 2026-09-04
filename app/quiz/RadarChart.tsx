@@ -1,5 +1,9 @@
+"use client";
+
 import { FieldResult } from "./scoring";
 import { FieldSlug } from "../data/types";
+import { useLanguage } from "../context/LanguageContext";
+import { fieldLabelsShort, quizTranslations } from "../data/translations/quiz";
 
 // Only the fields the quiz actually scores — see the filter in scoring.ts. A
 // field added to the site without quiz questions of its own won't appear here
@@ -17,22 +21,11 @@ const FIELD_ORDER: FieldSlug[] = [
   "industrial-engineering",
   "materials-engineering",
   "robotics-engineering",
+  "nuclear-engineering",
+  "petroleum-engineering",
+  "agricultural-engineering",
+  "marine-engineering",
 ];
-
-const FIELD_LABELS: Partial<Record<FieldSlug, string>> = {
-  "mechanical-engineering": "Mechanical",
-  "aerospace-engineering": "Aerospace",
-  "electrical-engineering": "Electrical",
-  "computer-engineering": "Computer",
-  "civil-engineering": "Civil",
-  "environmental-engineering": "Enviro",
-  "biomedical-engineering": "Biomedical",
-  "chemical-engineering": "Chemical",
-  "software-engineering": "Software",
-  "industrial-engineering": "Industrial",
-  "materials-engineering": "Materials",
-  "robotics-engineering": "Robotics",
-};
 
 const SIZE = 460;
 const CENTER = SIZE / 2;
@@ -40,13 +33,24 @@ const MAX_RADIUS = 130;
 const LABEL_RADIUS_FACTOR = 1.3;
 const GRID_LEVELS = [0.25, 0.5, 0.75, 1];
 
+// Math.cos/Math.sin can differ in their very last bit between the server's
+// and the browser's JS engine — invisible to the eye, but enough for React
+// to see two different attribute strings and report a hydration mismatch.
+// Rounding closes that gap without any visible effect.
+function round(n: number) {
+  return Math.round(n * 100) / 100;
+}
+
 function pointAt(index: number, total: number, radiusFraction: number) {
   const angle = -Math.PI / 2 + (index * 2 * Math.PI) / total;
   const r = MAX_RADIUS * radiusFraction;
-  return { x: CENTER + r * Math.cos(angle), y: CENTER + r * Math.sin(angle) };
+  return { x: round(CENTER + r * Math.cos(angle)), y: round(CENTER + r * Math.sin(angle)) };
 }
 
 export default function RadarChart({ results }: { results: FieldResult[] }) {
+  const { language } = useLanguage();
+  const fieldLabels = fieldLabelsShort[language];
+  const t = quizTranslations[language];
   const bySlug = Object.fromEntries(results.map((r) => [r.slug, r])) as Record<FieldSlug, FieldResult>;
   const ordered = FIELD_ORDER.map((slug) => bySlug[slug]).filter(Boolean);
   const n = ordered.length;
@@ -55,7 +59,7 @@ export default function RadarChart({ results }: { results: FieldResult[] }) {
   const dataPath = dataPoints.map((p) => `${p.x},${p.y}`).join(" ");
 
   return (
-    <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="mx-auto w-full max-w-sm" role="img" aria-label="Radar chart of match percentage per engineering field">
+    <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="mx-auto w-full max-w-sm" role="img" aria-label={t.radarChartAriaLabel}>
       {GRID_LEVELS.map((level) => {
         const pts = ordered.map((_, i) => pointAt(i, n, level));
         return (
@@ -101,7 +105,7 @@ export default function RadarChart({ results }: { results: FieldResult[] }) {
             dominantBaseline="middle"
             className="fill-neutral-500 font-mono text-[12px] uppercase tracking-wide dark:fill-neutral-400"
           >
-            {FIELD_LABELS[r.slug] ?? r.slug}
+            {fieldLabels[r.slug] ?? r.slug}
           </text>
         );
       })}

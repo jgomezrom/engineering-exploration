@@ -54,3 +54,31 @@ body {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
+
+/* Printing a challenge (or any page) is meant for someone following along
+   away from a screen — strip the site chrome and ink-heavy dark backgrounds,
+   keep the actual content. Page-specific interactive elements (simulator
+   links, the design-process diagram) hide themselves via the print:hidden
+   utility instead of being listed here, so this stays generic. */
+@media print {
+  header,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    background-image: none !important;
+    color: #000 !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}

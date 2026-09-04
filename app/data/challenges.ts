@@ -19,7 +19,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Levers and stored energy — how arm length, pivot position, and rubber-band tension change how much force gets transferred to the launched object.",
     conceptSlug: "torque",
-    simulationHref: "/simulations",
+    simulationHref: "/simulations/lever-torque",
     safetyNote: "Ask an adult before using a hot glue gun, and always aim the launch away from faces and breakable objects.",
     materials: [
       "About 10 popsicle sticks (craft sticks)",
@@ -65,6 +65,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Truss design and load paths — why triangles resist collapsing sideways the way squares don't, and how a structure's shape determines where it's strongest and weakest.",
     conceptSlug: "stress-strain",
+    simulationHref: "/simulations/beam-deflection",
     safetyNote: "Ask an adult before using a hot glue gun — it heats up enough to burn skin.",
     materials: [
       "1–2 boxes of uncooked spaghetti",
@@ -111,6 +112,7 @@ export const challenges: Challenge[] = [
     conceptTaught:
       "Current, polarity, and current-limiting resistors — why an LED only works in one direction, and why connecting it directly to a battery without a resistor is a bad idea.",
     conceptSlug: "current",
+    simulationHref: "/simulations/circuit",
     materials: [
       "A small breadboard",
       "A 9V battery with a battery clip, or an AA battery holder (2–4 batteries)",
@@ -237,6 +239,7 @@ export const challenges: Challenge[] = [
       "Pick distance or hang time as your single goal before you start — you're optimizing for one, not both",
     ],
     conceptSlug: "forces",
+    simulationHref: "/simulations/projectile-motion",
     conceptTaught:
       "Lift and drag — how wing shape and weight distribution change how a plane behaves in the air, the same basic tradeoff real aircraft designers work with at a much larger scale.",
     materials: ["Several sheets of paper (for multiple attempts)", "A tape measure or a way to count paces for distance", "A stopwatch or phone timer, if testing for hang time"],
@@ -396,6 +399,7 @@ export const challenges: Challenge[] = [
       "Weight must be added gradually, not dropped all at once",
     ],
     conceptSlug: "stress-strain",
+    simulationHref: "/simulations/beam-deflection",
     conceptTaught:
       "Stress and strain — every material can handle a certain amount of force before it deforms or breaks, and that limit is different for every material. Comparing materials head-to-head under the same conditions is exactly how materials engineers evaluate a new material.",
     materials: [
@@ -478,6 +482,7 @@ export const challenges: Challenge[] = [
       "Must count in the correct binary order without skipping a combination",
       "No calculator or written conversion chart allowed while counting — figure out each step by the counting rule itself",
     ],
+    simulationHref: "/simulations/logic-gates",
     conceptTaught:
       "Binary representation — computers store and process every number, letter, and instruction using only two states (0 and 1). Four bits can represent exactly 16 different values (2 to the power of 4), which is why more bits means a computer can represent bigger numbers or more possibilities.",
     materials: ["4 cups, cards, or coins, each flippable between two distinct states", "A flat surface to line them up"],

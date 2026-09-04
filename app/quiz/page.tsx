@@ -7,10 +7,16 @@ import Card from "../components/Card";
 import FadeIn from "../components/FadeIn";
 import FieldIcon from "../components/FieldIcon";
 import { quizQuestions } from "../data/quiz";
+import { quizQuestionsEs } from "../data/quiz.es";
 import { fields } from "../data/fields";
+import { fieldsEs } from "../data/fields.es";
+import { challenges } from "../data/challenges";
+import { challengesEs } from "../data/challenges.es";
 import { computeResults, THEME_LABELS } from "./scoring";
 import RadarChart from "./RadarChart";
-import { challenges } from "../data/challenges";
+import { useLanguage } from "../context/LanguageContext";
+import { quizTranslations } from "../data/translations/quiz";
+import { useExploration } from "../hooks/useExploration";
 
 type Stage = "intro" | "question" | "results";
 
@@ -18,18 +24,27 @@ type Stage = "intro" | "question" | "results";
 // percentage points — roughly the swing of a single answer, so it's not a false tie.
 const CLOSE_MATCH_THRESHOLD = 8;
 
-function shortName(name: string) {
+function shortName(name: string, language: "en" | "es") {
+  if (language === "es") return name.replace(/^Ingeniería\s+(de\s+|en\s+)?/, "");
   return name.replace(" Engineering", "");
 }
 
 export default function QuizPage() {
+  const { language } = useLanguage();
+  const t = quizTranslations[language];
+  const displayFields = language === "es" ? fieldsEs : fields;
+  const displayQuestions = language === "es" ? quizQuestionsEs : quizQuestions;
+  const displayChallenges = language === "es" ? challengesEs : challenges;
+  const themeLabel = THEME_LABELS[language];
+  const { saveQuizResult } = useExploration();
+
   const [stage, setStage] = useState<Stage>("intro");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(
     Array(quizQuestions.length).fill(null)
   );
 
-  const question = quizQuestions[currentIndex];
+  const question = displayQuestions[currentIndex];
   const selected = answers[currentIndex];
   const isLastQuestion = currentIndex === quizQuestions.length - 1;
 
@@ -41,6 +56,10 @@ export default function QuizPage() {
 
   function goNext() {
     if (isLastQuestion) {
+      const finalResults = computeResults(answers, displayQuestions);
+      if (finalResults[0] && finalResults[0].percentage > 0) {
+        saveQuizResult(finalResults[0].slug, finalResults[0].percentage);
+      }
       setStage("results");
     } else {
       setCurrentIndex(currentIndex + 1);
@@ -68,68 +87,60 @@ export default function QuizPage() {
         <div className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
           <FieldIcon slug="civil-engineering" className="h-8 w-8 text-primary/40" />
           <span className="-rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
-            INTEREST QUIZ
+            {t.sideLabelQuiz}
           </span>
         </div>
         <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
           <FieldIcon slug="biomedical-engineering" className="h-8 w-8 text-primary/40" />
           <span className="rotate-90 whitespace-nowrap font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
-            {quizQuestions.length} QUESTIONS · {fields.length} FIELDS
+            {t.sideLabelQuestionsFields(quizQuestions.length, displayFields.length)}
           </span>
         </div>
 
-        <span className="mb-4 rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
-          5-minute quiz
+        <span className="mb-4 border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+          {t.badge}
         </span>
         <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl 2xl:text-7xl">
-          Which engineering field fits you?
+          {t.heading}
         </h1>
         <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-400 lg:max-w-2xl lg:text-xl">
-          {quizQuestions.length} quick questions about how you like to think, build, and work.
-          There are no right answers — this just helps narrow down where to start exploring.
+          {t.intro(quizQuestions.length)}
         </p>
 
         <div className="mt-8">
-          <Button onClick={() => setStage("question")}>Start the quiz</Button>
+          <Button onClick={() => setStage("question")}>{t.startButton}</Button>
         </div>
 
         <div className="mt-16 flex flex-wrap items-center justify-center gap-6">
-          {fields.map((field) => (
+          {displayFields.map((field) => (
             <FieldIcon key={field.slug} slug={field.slug} className="h-7 w-7 text-neutral-300 dark:text-neutral-700" />
           ))}
         </div>
         <p className="mt-3 font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
-          Scored against all {fields.length} fields
+          {t.scoredAgainst(displayFields.length)}
         </p>
 
         <div className="mt-16 grid w-full max-w-3xl gap-6 sm:grid-cols-3">
           <Card>
             <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">01</span>
             <h2 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
-              Answer honestly
+              {t.card1Title}
             </h2>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              {quizQuestions.length} scenario-based questions. No right answers, just what actually
-              appeals to you.
-            </p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">{t.card1Body(quizQuestions.length)}</p>
           </Card>
           <Card>
             <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">02</span>
             <h2 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
-              See your match %
+              {t.card2Title}
             </h2>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              A radar chart shows how you compare across all {fields.length} fields, not just a single verdict.
-            </p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">{t.card2Body(displayFields.length)}</p>
           </Card>
           <Card>
             <span className="font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">03</span>
             <h2 className="mb-2 mt-3 text-lg font-semibold text-neutral-900 dark:text-white">
-              Explore further
+              {t.card3Title}
             </h2>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Jump straight into the real field pages for whatever matched best.
-            </p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">{t.card3Body}</p>
           </Card>
         </div>
       </main>
@@ -141,7 +152,7 @@ export default function QuizPage() {
       <main className="mx-auto max-w-2xl px-6 py-16">
         <div className="flex items-center justify-between font-mono text-xs tracking-widest text-neutral-600 dark:text-neutral-400">
           <span>
-            QUESTION {String(currentIndex + 1).padStart(2, "0")} / {quizQuestions.length}
+            {t.questionLabel} {String(currentIndex + 1).padStart(2, "0")} / {quizQuestions.length}
           </span>
           <span>{Math.round(((currentIndex + 1) / quizQuestions.length) * 100)}%</span>
         </div>
@@ -184,10 +195,10 @@ export default function QuizPage() {
 
         <div className="mt-10 flex justify-between">
           <Button variant="secondary" onClick={goBack} disabled={currentIndex === 0}>
-            Back
+            {t.backButton}
           </Button>
           <Button onClick={goNext} disabled={selected === null}>
-            {isLastQuestion ? "See results" : "Next"}
+            {isLastQuestion ? t.seeResultsButton : t.nextButton}
           </Button>
         </div>
       </main>
@@ -195,49 +206,42 @@ export default function QuizPage() {
   }
 
   // Results
-  const results = computeResults(answers);
+  const results = computeResults(answers, displayQuestions);
   const topPercentage = results[0]?.percentage ?? 0;
   const topMatches =
     topPercentage > 0 ? results.filter((r) => r.percentage >= topPercentage - CLOSE_MATCH_THRESHOLD) : [];
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
-      <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
-        Your results
+      <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        {t.yourResults}
       </span>
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
-        Fields worth exploring
+        {t.fieldsWorthExploring}
       </h1>
-      <p className="mt-3 text-neutral-600 dark:text-neutral-400">
-        This isn&apos;t a verdict — it&apos;s a starting point based on how you answered. Each
-        percentage is scored independently against that field&apos;s own maximum, so it&apos;s
-        completely normal for more than one field to come back high.
-      </p>
+      <p className="mt-3 text-neutral-600 dark:text-neutral-400">{t.resultsIntro}</p>
 
       <div className="mt-10">
         <RadarChart results={results} />
       </div>
 
       {topMatches.length === 0 && (
-        <p className="mt-10 text-sm text-neutral-500 dark:text-neutral-400">
-          No answers were scored, so there&apos;s no match to show yet — try taking the quiz
-          again and picking an answer for each question.
-        </p>
+        <p className="mt-10 text-sm text-neutral-500 dark:text-neutral-400">{t.noAnswersScored}</p>
       )}
 
       <div className="mt-10 flex flex-col gap-6">
         {topMatches.map((result, i) => {
-          const field = fields.find((f) => f.slug === result.slug)!;
+          const field = displayFields.find((f) => f.slug === result.slug)!;
           const mightNotEnjoy = [field.thingsPeopleDislike[0], field.challenges[0]].filter(
             (item): item is string => Boolean(item)
           );
-          const relatedChallenge = challenges.find((c) => c.field === field.slug);
+          const relatedChallenge = displayChallenges.find((c) => c.field === field.slug);
 
           return (
             <FadeIn key={field.slug} delay={i * 100}>
             <Card>
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center border border-primary/30 bg-primary/5">
                   <FieldIcon slug={field.slug} className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
@@ -245,8 +249,8 @@ export default function QuizPage() {
                     <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
                       {field.name}
                     </h2>
-                    <span className="flex-shrink-0 rounded-full bg-accent/10 px-3 py-1 font-mono text-sm font-semibold text-accent">
-                      {result.percentage}% match
+                    <span className="flex-shrink-0 border border-accent/30 bg-accent/5 px-3 py-1 font-mono text-sm font-semibold text-accent">
+                      {result.percentage}% {t.matchLabel}
                     </span>
                   </div>
                   <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
@@ -258,30 +262,30 @@ export default function QuizPage() {
               {(result.topThemes.length > 0 || result.topReasons.length > 0) && (
                 <div className="mt-4 border-t border-neutral-900/10 pt-4 dark:border-white/10">
                   <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-                    Why you matched
+                    {t.whyYouMatched}
                   </h3>
                   {result.topThemes.length > 0 && (
                     <div className="mt-2 flex flex-wrap gap-2">
                       {result.topThemes.map((theme) => (
                         <span
                           key={theme}
-                          className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                          className="border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
                         >
-                          {THEME_LABELS[theme]}
+                          {themeLabel[theme]}
                         </span>
                       ))}
                     </div>
                   )}
                   {result.topReasons.length > 0 && (
                     <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-                      Specifically, you leaned toward{" "}
+                      {t.specificallyYouLeanedBefore}{" "}
                       <span className="text-neutral-800 dark:text-neutral-200">
                         &ldquo;{result.topReasons[0]}&rdquo;
                       </span>
                       {result.topReasons[1] && (
                         <>
                           {" "}
-                          and{" "}
+                          {t.andWord}{" "}
                           <span className="text-neutral-800 dark:text-neutral-200">
                             &ldquo;{result.topReasons[1]}&rdquo;
                           </span>
@@ -296,7 +300,7 @@ export default function QuizPage() {
               {mightNotEnjoy.length > 0 && (
                 <div className="mt-4 border-t border-neutral-900/10 pt-4 dark:border-white/10">
                   <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-                    You might not enjoy
+                    {t.mightNotEnjoy}
                   </h3>
                   <ul className="mt-2 space-y-1.5">
                     {mightNotEnjoy.map((item) => (
@@ -317,18 +321,18 @@ export default function QuizPage() {
                   href={`/engineering/${field.slug}`}
                   className="text-sm font-medium text-primary hover:underline"
                 >
-                  Explore this field →
+                  {t.exploreThisField}
                 </Link>
                 {relatedChallenge && (
                   <Link
                     href={`/challenges/${relatedChallenge.slug}`}
                     className="text-sm font-medium text-primary hover:underline"
                   >
-                    Try a related challenge →
+                    {t.tryRelatedChallenge}
                   </Link>
                 )}
                 <Link href="/compare" className="text-sm font-medium text-primary hover:underline">
-                  Compare with other fields →
+                  {t.compareWithOtherFields}
                 </Link>
               </div>
             </Card>
@@ -339,11 +343,11 @@ export default function QuizPage() {
 
       <div className="mt-12 border-t border-neutral-900/10 pt-8 dark:border-white/10">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-          All {results.length} fields, ranked
+          {t.allFieldsRanked(results.length)}
         </h2>
         <div className="mt-4 flex flex-col gap-3">
           {results.map((result) => {
-            const field = fields.find((f) => f.slug === result.slug)!;
+            const field = displayFields.find((f) => f.slug === result.slug)!;
             return (
               <Link
                 key={field.slug}
@@ -351,7 +355,7 @@ export default function QuizPage() {
                 className="group flex items-center gap-3"
               >
                 <span className="w-24 flex-shrink-0 truncate text-sm text-neutral-600 group-hover:text-primary dark:text-neutral-400">
-                  {shortName(field.name)}
+                  {shortName(field.name, language)}
                 </span>
                 <div className="h-2 flex-1 bg-neutral-100 dark:bg-neutral-900">
                   <div className="h-2 bg-primary" style={{ width: `${result.percentage}%` }} />
@@ -367,26 +371,28 @@ export default function QuizPage() {
 
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">
         <Button href="/explore" variant="primary">
-          Explore all fields
+          {t.exploreAllFields}
         </Button>
         <Button variant="secondary" onClick={restart}>
-          Retake the quiz
+          {t.retakeQuiz}
         </Button>
       </div>
+      <Link href="/my-summary" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+        {t.seeSummaryLink}
+      </Link>
 
       <div className="mt-12 border-t border-neutral-900/10 pt-8 dark:border-white/10">
         <h2 className="text-sm font-semibold text-neutral-900 dark:text-white">
-          Curious about fields like nuclear, petroleum, or marine engineering?
+          {t.curiousAboutSmaller}
         </h2>
         <p className="mt-2 max-w-xl text-sm text-neutral-600 dark:text-neutral-400">
-          Those fields don&apos;t have the depth yet to fit into the scoring above, so there&apos;s
-          a separate, more informal quiz just for them.
+          {t.smallerFieldsBody}
         </p>
         <Link
           href="/quiz/more-majors"
           className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
         >
-          Try the smaller majors quiz →
+          {t.trySmallerQuiz}
         </Link>
       </div>
     </main>

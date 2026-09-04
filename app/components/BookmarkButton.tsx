@@ -1,10 +1,14 @@
 "use client";
 
 import { useExploration } from "../hooks/useExploration";
+import { useLanguage } from "../context/LanguageContext";
+import { chromeTranslations } from "../data/translations/chrome";
 import { FieldSlug } from "../data/types";
 
 export default function BookmarkButton({ slug }: { slug: FieldSlug }) {
   const { hydrated, isBookmarked, toggleBookmark } = useExploration();
+  const { language } = useLanguage();
+  const t = chromeTranslations[language];
   // Render as "not bookmarked" until hydrated so this always matches the
   // server-rendered HTML on first paint — avoids a visible flip a moment later.
   const bookmarked = hydrated && isBookmarked(slug);
@@ -13,7 +17,7 @@ export default function BookmarkButton({ slug }: { slug: FieldSlug }) {
     <button
       type="button"
       aria-pressed={bookmarked}
-      aria-label={bookmarked ? "Remove bookmark for this field" : "Bookmark this field"}
+      aria-label={bookmarked ? t.removeBookmark : t.bookmarkThis}
       onClick={() => toggleBookmark(slug)}
       className={`mt-6 inline-flex items-center gap-2 border px-4 py-2 text-sm font-medium transition-colors ${
         bookmarked
@@ -34,7 +38,7 @@ export default function BookmarkButton({ slug }: { slug: FieldSlug }) {
           strokeLinejoin="round"
         />
       </svg>
-      {bookmarked ? "Bookmarked" : "Bookmark this field"}
+      {bookmarked ? t.bookmarked : t.bookmarkThis}
     </button>
   );
 }

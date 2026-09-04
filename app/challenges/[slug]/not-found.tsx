@@ -1,23 +1,25 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "../../context/LanguageContext";
+import { notFoundTranslations } from "../../data/translations/notFound";
 
 export default function ChallengeNotFound() {
+  const { language } = useLanguage();
+  const t = notFoundTranslations[language];
+
   return (
     <main className="mx-auto flex max-w-xl flex-col items-center px-6 py-24 text-center">
-      <span className="mb-4 rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
-        404
+      <span className="mb-4 border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        {t.badge}
       </span>
-      <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
-        We couldn&apos;t find that challenge
-      </h1>
-      <p className="mt-4 text-neutral-600 dark:text-neutral-400">
-        The challenge you&apos;re looking for doesn&apos;t exist yet. Check out the challenges we
-        do have below.
-      </p>
+      <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">{t.challengeHeading}</h1>
+      <p className="mt-4 text-neutral-600 dark:text-neutral-400">{t.challengeBody}</p>
       <Link
         href="/challenges"
-        className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
+        className="mt-8 inline-flex items-center justify-center border-b-[3px] border-primary-dark bg-primary px-6 py-3 font-medium text-white transition-all hover:bg-primary-dark active:translate-y-[2px]"
       >
-        See Hands-On Challenges
+        {t.seeChallenges}
       </Link>
     </main>
   );

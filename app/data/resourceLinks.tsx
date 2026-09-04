@@ -69,8 +69,8 @@ export const resourceLinks = [
   },
   {
     href: "/simulations",
-    title: "Lever & Torque Simulator",
-    description: "Adjust weight and distance on a lever and watch it balance in real time, with the math explained.",
+    title: "Interactive Simulations",
+    description: "Levers, circuits, beams, gears, buoyancy, logic gates, and projectile motion — adjust real variables and watch real physics respond.",
     accentColor: "accent" as const,
     icon: (
       <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">

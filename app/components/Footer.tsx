@@ -1,15 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { GearTeeth } from "./FieldIllustration";
+import { useLanguage } from "../context/LanguageContext";
+import { chromeTranslations } from "../data/translations/chrome";
 
-const FOOTER_LINKS = [
-  { href: "/about", label: "About" },
-  { href: "/sources", label: "Sources & Methodology" },
-  { href: "/parents-and-teachers", label: "Parents & Teachers" },
-  { href: "/resources", label: "Resources" },
-];
+const REPORT_EMAIL = "jg3110r@gmail.com";
 
 export default function Footer() {
+  const { language } = useLanguage();
+  const pathname = usePathname();
+  const t = chromeTranslations[language];
+
+  const footerLinks = [
+    { href: "/about", label: t.footerAbout },
+    { href: "/sources", label: t.footerSources },
+    { href: "/parents-and-teachers", label: t.footerParents },
+    { href: "/resources", label: t.footerResources },
+  ];
+
+  const mailtoHref = `mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(
+    "Engineering Exploration - mistake report"
+  )}&body=${encodeURIComponent(`Page: ${pathname}\n\n`)}`;
+
   return (
     <footer className="relative w-full overflow-hidden bg-[#0a2540]">
       <div
@@ -40,19 +55,22 @@ export default function Footer() {
           <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-9 w-9 text-[#a5e2ea]">
             <circle cx="20" cy="20" r="12" stroke="currentColor" strokeWidth="1.5" />
             <circle cx="20" cy="20" r="3" stroke="currentColor" strokeWidth="1.5" />
-            <GearTeeth cx={20} cy={20} r={12} count={10} len={4} />
+            <GearTeeth cx={20} cy={20} r={12} count={10} toothH={4} />
           </svg>
 
           <p className="text-sm text-[#dbeef2]">
-            © {new Date().getFullYear()} Engineering Exploration. A student project.
+            © {new Date().getFullYear()} Engineering Exploration. {t.footerTagline}
           </p>
 
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#dbeef2]">
-            {FOOTER_LINKS.map((link) => (
+            {footerLinks.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-[#a5e2ea]">
                 {link.label}
               </Link>
             ))}
+            <a href={mailtoHref} className="hover:text-[#a5e2ea]">
+              {t.footerReportMistake}
+            </a>
           </nav>
         </div>
       </div>

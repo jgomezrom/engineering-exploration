@@ -5,10 +5,7 @@ import { createContext, useContext, useEffect, useState, ReactNode } from "react
 export type Language = "en" | "es";
 
 // Persisted in localStorage (unlike the theme toggle) since a language choice
-// is something a reader would expect to stick across visits. Only the
-// homepage has real Spanish content right now — see translations/home.ts.
-// Every other page still renders English regardless of this setting until
-// it gets its own translation.
+// is something a reader would expect to stick across visits.
 const STORAGE_KEY = "ee-language";
 
 type LanguageContextValue = {
@@ -22,13 +19,25 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
 
   useEffect(() => {
+    // Same legitimate case as useExploration.ts's hydration effect: reading
+    // localStorage has to happen post-mount, not in a lazy useState
+    // initializer, or the client's first render would mismatch the
+    // server's English-only output.
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (stored === "es" || stored === "en") setLanguageState(stored);
     } catch {
       // Storage disabled or unavailable — just stay on the English default.
     }
   }, []);
+
+  // Keeps the <html lang> attribute in sync so screen readers pronounce the
+  // page correctly — the server always renders "en" (language is a
+  // client/localStorage concept), so this has to happen after mount too.
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);

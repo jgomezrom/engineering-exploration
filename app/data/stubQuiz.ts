@@ -17,16 +17,6 @@ export type StubQuizQuestion = {
 
 export const stubQuizQuestions: StubQuizQuestion[] = [
   {
-    id: "industry",
-    prompt: "Which of these industries sounds most interesting to actually work in?",
-    options: [
-      { text: "Energy & power generation", stubFields: ["energy-engineering", "nuclear-engineering"] },
-      { text: "Oil, gas, or fuel production", stubFields: ["petroleum-engineering"] },
-      { text: "Farming & food production", stubFields: ["agricultural-engineering"] },
-      { text: "Ships & the ocean", stubFields: ["marine-engineering"] },
-    ],
-  },
-  {
     id: "product",
     prompt: "Which of these would you rather help create?",
     options: [
@@ -47,22 +37,11 @@ export const stubQuizQuestions: StubQuizQuestion[] = [
     ],
   },
   {
-    id: "site-visit",
-    prompt: "Which of these would you be most excited to actually tour?",
-    options: [
-      { text: "A nuclear power plant", stubFields: ["nuclear-engineering"] },
-      { text: "An oil rig or refinery", stubFields: ["petroleum-engineering"] },
-      { text: "A shipyard or naval base", stubFields: ["marine-engineering"] },
-      { text: "A car manufacturing plant", stubFields: ["automotive-engineering", "manufacturing-engineering"] },
-    ],
-  },
-  {
     id: "values",
     prompt: "Which of these matters most to you in future work?",
     options: [
       { text: "Working with cutting-edge, highly precise technology", stubFields: ["semiconductor-engineering"] },
       { text: "Keeping essential infrastructure — power, buildings — safe and standing", stubFields: ["structural-engineering", "energy-engineering"] },
-      { text: "Producing something the world actually needs, like food or fuel", stubFields: ["agricultural-engineering", "petroleum-engineering"] },
       { text: "Designing how a building actually functions, not just its structure", stubFields: ["architectural-engineering"] },
     ],
   },
@@ -70,10 +49,39 @@ export const stubQuizQuestions: StubQuizQuestion[] = [
     id: "day-at-work",
     prompt: "Which sounds like a more appealing day at work?",
     options: [
-      { text: "Out at a remote site — a farm, an oil field, or the open ocean", stubFields: ["agricultural-engineering", "petroleum-engineering", "marine-engineering"] },
       { text: "In a cleanroom lab, working with materials at a microscopic scale", stubFields: ["semiconductor-engineering"] },
       { text: "On a factory floor, watching a process run and improving it", stubFields: ["manufacturing-engineering"] },
       { text: "In an office, coordinating how a huge project's many moving parts fit together", stubFields: ["systems-engineering"] },
+    ],
+  },
+  {
+    id: "workplace-environment",
+    prompt: "Which environment sounds most appealing for your actual day-to-day work?",
+    options: [
+      { text: "A test track or shop, tuning how a vehicle performs", stubFields: ["automotive-engineering"] },
+      { text: "A power plant or renewable energy site", stubFields: ["energy-engineering"] },
+      { text: "A job site, watching a large structure go up", stubFields: ["structural-engineering"] },
+      { text: "A cleanroom, working at a microscopic scale", stubFields: ["semiconductor-engineering"] },
+    ],
+  },
+  {
+    id: "problem-scale",
+    prompt: "Which scale of problem appeals to you more?",
+    options: [
+      { text: "Millions of identical parts, assembled the same way every time", stubFields: ["manufacturing-engineering"] },
+      { text: "One massive, one-of-a-kind project with countless moving pieces", stubFields: ["systems-engineering"] },
+      { text: "A single vehicle, refined down to the smallest detail", stubFields: ["automotive-engineering"] },
+      { text: "A single building, engineered to handle exactly the loads it needs to", stubFields: ["structural-engineering"] },
+    ],
+  },
+  {
+    id: "public-need",
+    prompt: "Which public need would you rather help meet?",
+    options: [
+      { text: "Keeping the power grid reliable as demand keeps growing", stubFields: ["energy-engineering"] },
+      { text: "Making sure buildings and bridges can take the load", stubFields: ["structural-engineering"] },
+      { text: "Making vehicles safer and more efficient", stubFields: ["automotive-engineering"] },
+      { text: "Designing how a building's systems actually work together", stubFields: ["architectural-engineering"] },
     ],
   },
 ];

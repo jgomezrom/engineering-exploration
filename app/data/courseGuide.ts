@@ -180,6 +180,38 @@ export const fieldCourseFocus: FieldCourseFocus[] = [
       "Any computer science elective — this field genuinely spans mechanical, electrical, and software coursework",
     ],
   },
+  {
+    fieldSlug: "nuclear-engineering",
+    priorityCourses: [
+      "Physics, especially nuclear and modern physics, if your school offers it",
+      "Calculus",
+      "Chemistry",
+    ],
+  },
+  {
+    fieldSlug: "petroleum-engineering",
+    priorityCourses: [
+      "Physics and Chemistry",
+      "Calculus",
+      "Earth science or geology, if offered",
+    ],
+  },
+  {
+    fieldSlug: "agricultural-engineering",
+    priorityCourses: [
+      "Biology — this field draws on it more than most engineering fields",
+      "Physics and Chemistry",
+      "Calculus",
+    ],
+  },
+  {
+    fieldSlug: "marine-engineering",
+    priorityCourses: [
+      "Physics",
+      "Calculus",
+      "Chemistry, useful for understanding corrosion and materials in marine environments",
+    ],
+  },
 ];
 
 export const tutoringResources: TutoringResource[] = [

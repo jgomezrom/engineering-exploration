@@ -78,34 +78,66 @@ export const interests: Interest[] = [
   // Mechanical lists an "Energy" industry; electrical lists "Power/energy" and a
   // "Power Systems Engineer" career path; materials engineering lists "Energy"
   // among its own industries; chemical engineering's industries include "Oil and
-  // gas," a major energy-production sector.
+  // gas," a major energy-production sector. Nuclear engineering's entire focus is
+  // generating and managing nuclear power; petroleum engineering's entire focus
+  // is extracting the oil and gas that power much of the world today.
   {
     slug: "energy",
     label: "Energy",
-    fields: ["mechanical-engineering", "electrical-engineering", "materials-engineering", "chemical-engineering"],
+    fields: [
+      "mechanical-engineering",
+      "electrical-engineering",
+      "materials-engineering",
+      "chemical-engineering",
+      "nuclear-engineering",
+      "petroleum-engineering",
+    ],
   },
   // Civil lists "Transportation" as an industry and a "Transportation Engineer"
   // career path; mechanical lists "Automotive" as an industry; aerospace
-  // engineering is specifically about aircraft, a transportation category.
+  // engineering is specifically about aircraft, a transportation category. Marine
+  // engineering is specifically about ships and other vessels, also transportation.
   {
     slug: "transportation",
     label: "Transportation",
-    fields: ["civil-engineering", "mechanical-engineering", "aerospace-engineering"],
+    fields: ["civil-engineering", "mechanical-engineering", "aerospace-engineering", "marine-engineering"],
   },
   // Mechanical lists a "Manufacturing" industry and "Manufacturing Engineering" as
   // a related major; industrial engineering's entire focus is how manufacturing
   // and production systems run; materials and robotics both list "Manufacturing"
-  // among their own industries.
+  // among their own industries. Agricultural engineering's own industries include
+  // "Farm equipment manufacturing," and its relatedMajors note overlap with
+  // mechanical engineering specifically for equipment design.
   {
     slug: "manufacturing",
     label: "Manufacturing",
-    fields: ["mechanical-engineering", "industrial-engineering", "materials-engineering", "robotics-engineering"],
+    fields: [
+      "mechanical-engineering",
+      "industrial-engineering",
+      "materials-engineering",
+      "robotics-engineering",
+      "agricultural-engineering",
+    ],
   },
   // Chemical engineering's entire focus is designing the processes that turn raw
   // materials into usable products — the clearest fit among the current fields.
-  { slug: "chemistry", label: "Chemistry", fields: ["chemical-engineering"] },
+  // Petroleum engineering's relatedMajors explicitly note "Chemical Engineering
+  // (some overlap)."
+  { slug: "chemistry", label: "Chemistry", fields: ["chemical-engineering", "petroleum-engineering"] },
   // No current field content genuinely covers this yet — hidden until one does.
   { slug: "sports", label: "Sports", fields: [] },
   { slug: "animals", label: "Animals", fields: [] },
   { slug: "art", label: "Art", fields: [] },
+  // Agricultural engineering's relatedMajors explicitly note "Environmental
+  // Engineering (some overlap)," and its own industries include "Irrigation and
+  // water management" — squarely water/environment focused, like the rest of
+  // this topic's fields.
+  {
+    slug: "farming",
+    label: "Farming & Food",
+    fields: ["agricultural-engineering"],
+  },
+  // Ships, submarines, and other vessels built for the ocean — marine
+  // engineering's entire focus.
+  { slug: "ocean", label: "The Ocean", fields: ["marine-engineering"] },
 ];
