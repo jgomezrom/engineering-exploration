@@ -5,7 +5,7 @@ type FieldIllustrationProps = {
   className?: string;
 };
 
-function GearTeeth({ cx, cy, r, count, len }: { cx: number; cy: number; r: number; count: number; len: number }) {
+export function GearTeeth({ cx, cy, r, count, len }: { cx: number; cy: number; r: number; count: number; len: number }) {
   return (
     <>
       {Array.from({ length: count }).map((_, i) => {

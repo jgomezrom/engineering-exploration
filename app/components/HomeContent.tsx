@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Button from "./Button";
 import Card from "./Card";
@@ -29,12 +30,35 @@ export default function HomeContent() {
   const t = homeTranslations[language];
   const isTranslated = language !== "en";
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  const bracketClass = (edge: string) =>
+    `pointer-events-none absolute hidden h-8 w-8 border-primary/30 transition-all duration-700 ease-out motion-reduce:scale-100 motion-reduce:opacity-100 motion-reduce:transition-none lg:block ${edge} ${
+      mounted ? "scale-100 opacity-100" : "scale-0 opacity-0"
+    }`;
+
   return (
     <main className="relative flex flex-col items-center px-6 py-24 text-center">
-      <span className="pointer-events-none absolute left-6 top-10 hidden h-8 w-8 border-l-2 border-t-2 border-primary/30 lg:block" />
-      <span className="pointer-events-none absolute right-6 top-10 hidden h-8 w-8 border-r-2 border-t-2 border-primary/30 lg:block" />
-      <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
-      <span className="pointer-events-none absolute bottom-10 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-primary/30 lg:block" />
+      <span
+        className={bracketClass("left-6 top-10 origin-top-left border-l-2 border-t-2")}
+        style={{ transitionDelay: "0ms" }}
+      />
+      <span
+        className={bracketClass("right-6 top-10 origin-top-right border-r-2 border-t-2")}
+        style={{ transitionDelay: "80ms" }}
+      />
+      <span
+        className={bracketClass("bottom-10 left-6 origin-bottom-left border-b-2 border-l-2")}
+        style={{ transitionDelay: "160ms" }}
+      />
+      <span
+        className={bracketClass("bottom-10 right-6 origin-bottom-right border-b-2 border-r-2")}
+        style={{ transitionDelay: "240ms" }}
+      />
 
       <div className="relative flex w-full flex-col items-center">
         <div className="pointer-events-none absolute left-10 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">

@@ -26,9 +26,8 @@ export default function NavBar() {
           className="flex items-center gap-2 text-lg font-semibold text-neutral-900 dark:text-white"
         >
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-5 w-5 flex-shrink-0 text-primary">
-            <path d="M4 11.5 12 4l8 7.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-            <path d="M10 20v-5h4v5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+            <circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M15 15l6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           Engineering Exploration
         </Link>
