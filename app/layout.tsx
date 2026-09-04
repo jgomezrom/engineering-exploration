@@ -49,7 +49,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${plexSans.variable} ${plexMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* Applies a saved dark/light choice before first paint, so there's
+            no flash — see app/context/ThemeContext.tsx and
+            https://nextjs.org/docs/app/guides/preventing-flash-before-hydration.
+            No saved choice means no class is added here, leaving the
+            prefers-color-scheme media query in globals.css to decide. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("ee-theme");if(t==="dark"||t==="light")document.documentElement.classList.add(t)}catch(e){}})()`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
           <LanguageProvider>
