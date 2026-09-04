@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GearTeeth } from "./FieldIllustration";
@@ -41,38 +40,27 @@ export default function Footer() {
       <span className="pointer-events-none absolute bottom-6 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-[#a5e2ea]/30 lg:block" />
       <span className="pointer-events-none absolute bottom-6 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-[#a5e2ea]/30 lg:block" />
 
-      <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-10 px-6 py-16 sm:flex-row sm:gap-12">
-        <Image
-          src="/logo-badge.jpg"
-          alt="Engineering Exploration"
-          width={1243}
-          height={864}
-          className="h-auto w-56 flex-shrink-0 sm:w-64"
-          sizes="(min-width: 640px) 16rem, 14rem"
-        />
+      <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-5 px-6 py-16 text-center">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-11 w-11 text-[#a5e2ea]">
+          <circle cx="20" cy="20" r="12" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="20" cy="20" r="3" stroke="currentColor" strokeWidth="1.5" />
+          <GearTeeth cx={20} cy={20} r={12} count={10} toothH={4} />
+        </svg>
 
-        <div className="flex flex-1 flex-col items-center gap-5 text-center sm:items-start sm:text-left">
-          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-9 w-9 text-[#a5e2ea]">
-            <circle cx="20" cy="20" r="12" stroke="currentColor" strokeWidth="1.5" />
-            <circle cx="20" cy="20" r="3" stroke="currentColor" strokeWidth="1.5" />
-            <GearTeeth cx={20} cy={20} r={12} count={10} toothH={4} />
-          </svg>
+        <p className="text-sm text-[#dbeef2]">
+          © {new Date().getFullYear()} Engineering Exploration. {t.footerTagline}
+        </p>
 
-          <p className="text-sm text-[#dbeef2]">
-            © {new Date().getFullYear()} Engineering Exploration. {t.footerTagline}
-          </p>
-
-          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#dbeef2]">
-            {footerLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-[#a5e2ea]">
-                {link.label}
-              </Link>
-            ))}
-            <a href={mailtoHref} className="hover:text-[#a5e2ea]">
-              {t.footerReportMistake}
-            </a>
-          </nav>
-        </div>
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#dbeef2]">
+          {footerLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="hover:text-[#a5e2ea]">
+              {link.label}
+            </Link>
+          ))}
+          <a href={mailtoHref} className="hover:text-[#a5e2ea]">
+            {t.footerReportMistake}
+          </a>
+        </nav>
       </div>
     </footer>
   );
