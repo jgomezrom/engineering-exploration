@@ -19,4 +19,6 @@ export const interestLabelsEs: Record<string, string> = {
   sports: "Deportes",
   animals: "Animales",
   art: "Arte",
+  farming: "Agricultura y Alimentos",
+  ocean: "El Océano",
 };

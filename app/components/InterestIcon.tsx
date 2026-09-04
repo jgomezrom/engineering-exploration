@@ -123,6 +123,24 @@ export default function InterestIcon({ slug, className = "h-5 w-5" }: InterestIc
           <circle cx="13.5" cy="15.3" r="0.6" fill="currentColor" />
         </svg>
       );
+    case "farming":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+          <path d="M12 19.5V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M12 12c-3.5 0-5.5-2.2-5.5-5.5C9.8 6.5 12 8.5 12 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M12 14c3.2 0 5-2 5-5-3.2 0-5 1.8-5 5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M4.5 19.5h15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+    case "ocean":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+          <path d="M11 4v9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M11 6.5l4-2v4.5l-4 2" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M3 14.5c1.6 0 1.6 1.5 3.2 1.5s1.6-1.5 3.3-1.5 1.6 1.5 3.2 1.5 1.6-1.5 3.3-1.5 1.6 1.5 3.2 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M3 18.5c1.6 0 1.6 1.5 3.2 1.5s1.6-1.5 3.3-1.5 1.6 1.5 3.2 1.5 1.6-1.5 3.3-1.5 1.6 1.5 3.2 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+        </svg>
+      );
     default:
       return (
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
