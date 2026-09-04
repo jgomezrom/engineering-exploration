@@ -13,7 +13,7 @@ export default function ResourcesContent() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 xl:max-w-6xl">
-      <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.badge}
       </span>
 
@@ -27,8 +27,10 @@ export default function ResourcesContent() {
             <Link key={resource.href} href={resource.href}>
               <Card>
                 <div
-                  className={`inline-flex h-14 w-14 items-center justify-center rounded-full ${
-                    resource.accentColor === "accent" ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"
+                  className={`inline-flex h-14 w-14 items-center justify-center border ${
+                    resource.accentColor === "accent"
+                      ? "border-accent/30 bg-accent/5 text-accent"
+                      : "border-primary/30 bg-primary/5 text-primary"
                   }`}
                 >
                   {resource.icon}

@@ -45,7 +45,7 @@ function NumberedList({ items }: { items: string[] }) {
     <ol className="max-w-2xl space-y-4">
       {items.map((item, i) => (
         <li key={item} className="flex gap-4 leading-relaxed text-neutral-600 dark:text-neutral-400">
-          <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 font-mono text-xs font-semibold text-primary">
+          <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center border border-primary/30 bg-primary/5 font-mono text-xs font-semibold text-primary">
             {i + 1}
           </span>
           <span>{item}</span>
@@ -80,7 +80,7 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
 
       <BackLink href="/challenges" labelKey="backToChallenges" />
 
-      <div className="mt-6 inline-flex items-center justify-center rounded-full bg-primary/10 p-4">
+      <div className="mt-6 inline-flex items-center justify-center border border-primary/30 bg-primary/5 p-4">
         <FieldIcon slug={challenge.field} className="h-10 w-10 text-primary" />
       </div>
 
@@ -90,16 +90,16 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
       <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">{challenge.tagline}</p>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {catLabel[challenge.category]}
         </span>
-        <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {diffLabel[challenge.difficulty]}
         </span>
-        <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {challenge.estimatedTime}
         </span>
-        <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {challenge.approximateCost}
         </span>
       </div>

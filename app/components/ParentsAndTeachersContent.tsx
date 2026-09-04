@@ -25,7 +25,7 @@ export default function ParentsAndTeachersContent() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
-      <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.badge}
       </span>
 
@@ -95,13 +95,13 @@ export default function ParentsAndTeachersContent() {
       <div className="mt-14 flex flex-col gap-4 border-t border-neutral-900/10 pt-14 sm:flex-row dark:border-white/10">
         <Link
           href="/explore"
-          className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
+          className="inline-flex items-center justify-center border-b-[3px] border-primary-dark bg-primary px-6 py-3 font-medium text-white transition-all hover:bg-primary-dark active:translate-y-[2px]"
         >
           {t.exploreCta}
         </Link>
         <Link
           href="/resources"
-          className="inline-flex items-center justify-center rounded-full bg-neutral-100 px-6 py-3 font-medium text-neutral-900 transition-colors hover:bg-neutral-50 dark:bg-neutral-900 dark:text-white"
+          className="inline-flex items-center justify-center border border-b-[3px] border-neutral-900/15 px-6 py-3 font-medium text-neutral-900 transition-all hover:border-primary/50 hover:text-primary active:translate-y-[2px] dark:border-white/15 dark:text-white"
         >
           {t.resourcesCta}
         </Link>

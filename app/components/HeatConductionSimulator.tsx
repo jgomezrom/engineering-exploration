@@ -83,7 +83,7 @@ export default function HeatConductionSimulator() {
         <div className="border border-accent/30 p-5 sm:col-span-2">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <span className="text-sm font-medium text-neutral-900 dark:text-white">{t.material}</span>
-            <div className="flex overflow-hidden rounded-full border border-neutral-900/10 dark:border-white/10">
+            <div className="flex overflow-hidden border border-neutral-900/10 dark:border-white/10">
               {MATERIALS.map((m) => (
                 <button
                   key={m}

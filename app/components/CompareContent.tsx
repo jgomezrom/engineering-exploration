@@ -99,7 +99,7 @@ export default function CompareContent() {
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-5xl px-6 py-16 xl:max-w-6xl">
-      <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.badge}
       </span>
       <h1 className="text-3xl font-bold text-neutral-900 dark:text-white xl:text-4xl">{t.heading}</h1>

@@ -84,7 +84,7 @@ export default function SimulationsHubContent() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
-      <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.badge}
       </span>
 
@@ -97,7 +97,7 @@ export default function SimulationsHubContent() {
         {SIMULATIONS.map((sim) => (
           <Link key={sim.slug} href={`/simulations/${sim.slug}`}>
             <Card>
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <div className="flex h-10 w-10 items-center justify-center border border-primary/30 bg-primary/5 text-primary">
                 {ICONS[sim.slug]}
               </div>
               <h2 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">

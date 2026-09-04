@@ -43,8 +43,8 @@ export default function CuriosityExplorer() {
               }`}
             >
               <span
-                className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full ${
-                  isAccent ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"
+                className={`flex h-6 w-6 flex-shrink-0 items-center justify-center border ${
+                  isAccent ? "border-accent/30 bg-accent/5 text-accent" : "border-primary/30 bg-primary/5 text-primary"
                 }`}
               >
                 <InterestIcon slug={interest.slug} className="h-3.5 w-3.5" />

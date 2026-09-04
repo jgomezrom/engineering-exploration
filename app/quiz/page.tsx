@@ -97,7 +97,7 @@ export default function QuizPage() {
           </span>
         </div>
 
-        <span className="mb-4 rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+        <span className="mb-4 border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {t.badge}
         </span>
         <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl 2xl:text-7xl">
@@ -213,7 +213,7 @@ export default function QuizPage() {
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
-      <span className="rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.yourResults}
       </span>
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
@@ -241,7 +241,7 @@ export default function QuizPage() {
             <FadeIn key={field.slug} delay={i * 100}>
             <Card>
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center border border-primary/30 bg-primary/5">
                   <FieldIcon slug={field.slug} className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
@@ -249,7 +249,7 @@ export default function QuizPage() {
                     <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
                       {field.name}
                     </h2>
-                    <span className="flex-shrink-0 rounded-full bg-accent/10 px-3 py-1 font-mono text-sm font-semibold text-accent">
+                    <span className="flex-shrink-0 border border-accent/30 bg-accent/5 px-3 py-1 font-mono text-sm font-semibold text-accent">
                       {result.percentage}% {t.matchLabel}
                     </span>
                   </div>
@@ -269,7 +269,7 @@ export default function QuizPage() {
                       {result.topThemes.map((theme) => (
                         <span
                           key={theme}
-                          className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                          className="border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
                         >
                           {themeLabel[theme]}
                         </span>

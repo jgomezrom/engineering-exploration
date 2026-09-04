@@ -34,7 +34,7 @@ export default function DidYouKnowTicker() {
   return (
     <div className="border border-neutral-900/10 p-6 dark:border-white/10 sm:p-8">
       <div className="flex items-start gap-4">
-        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center border border-primary/30 bg-primary/5">
           <FieldIcon slug={current.fieldSlug} className="h-5 w-5 text-primary" />
         </div>
         <div className="min-w-0">

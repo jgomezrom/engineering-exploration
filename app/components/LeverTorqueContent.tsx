@@ -19,7 +19,7 @@ export default function LeverTorqueContent() {
         {hub.backToSimulations}
       </Link>
 
-      <span className="mb-4 mt-6 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="mb-4 mt-6 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.badge}
       </span>
 

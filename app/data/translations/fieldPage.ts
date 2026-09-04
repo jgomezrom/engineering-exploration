@@ -7,6 +7,7 @@ export const fieldPageTranslations = {
   en: {
     atAGlance: "At a Glance",
     printField: "Print this field",
+    figureCaption: (name: string) => `FIG. 01 — ${name.toUpperCase()}`,
     section1: "What It Is",
     section2: "What Engineers Work On",
     section3: "Real-World Examples",
@@ -40,6 +41,7 @@ export const fieldPageTranslations = {
   es: {
     atAGlance: "De un vistazo",
     printField: "Imprimir este campo",
+    figureCaption: (name: string) => `FIG. 01 — ${name.toUpperCase()}`,
     section1: "Qué Es",
     section2: "En Qué Trabajan los Ingenieros",
     section3: "Ejemplos del Mundo Real",

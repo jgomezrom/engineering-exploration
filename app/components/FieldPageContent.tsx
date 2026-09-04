@@ -86,7 +86,7 @@ function PageFrame({
         <BackLink href="/explore" labelKey="backToFields" />
       </div>
 
-      <div className="mt-6 inline-flex items-center justify-center rounded-full bg-primary/10 p-4">
+      <div className="mt-6 inline-flex items-center justify-center border border-primary/30 bg-primary/5 p-4">
         <FieldIcon slug={slug} className="h-10 w-10 text-primary" />
       </div>
 
@@ -140,8 +140,17 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
     const related = relatedPool.find((f) => f.slug === stub.relatedField);
     return (
       <PageFrame slug={stub.slug} name={displayStub.name} tagline={displayStub.tagline} printLabel={t.printField}>
-        <div className="mt-8 flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
-          <FieldIllustration slug={stub.slug} className="h-auto w-full max-w-sm text-primary" />
+        <div className="mt-8">
+          <div className="relative flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
+            <span className="pointer-events-none absolute left-2 top-2 h-2.5 w-2.5 border-l border-t border-primary/40" />
+            <span className="pointer-events-none absolute right-2 top-2 h-2.5 w-2.5 border-r border-t border-primary/40" />
+            <span className="pointer-events-none absolute bottom-2 left-2 h-2.5 w-2.5 border-b border-l border-primary/40" />
+            <span className="pointer-events-none absolute bottom-2 right-2 h-2.5 w-2.5 border-b border-r border-primary/40" />
+            <FieldIllustration slug={stub.slug} className="h-auto w-full max-w-sm text-primary" />
+          </div>
+          <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
+            {t.figureCaption(displayStub.name)}
+          </p>
         </div>
         <div className="mt-6 border border-neutral-900/10 bg-neutral-50 p-5 dark:border-white/10 dark:bg-neutral-900">
           <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -190,8 +199,17 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
       <FieldVisitTracker slug={field.slug} />
       {showNotice && <NotTranslatedNotice text={t.notTranslatedNotice} />}
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        <div className="flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
-          <FieldIllustration slug={field.slug} className="h-auto w-full text-primary" />
+        <div>
+          <div className="relative flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
+            <span className="pointer-events-none absolute left-2 top-2 h-2.5 w-2.5 border-l border-t border-primary/40" />
+            <span className="pointer-events-none absolute right-2 top-2 h-2.5 w-2.5 border-r border-t border-primary/40" />
+            <span className="pointer-events-none absolute bottom-2 left-2 h-2.5 w-2.5 border-b border-l border-primary/40" />
+            <span className="pointer-events-none absolute bottom-2 right-2 h-2.5 w-2.5 border-b border-r border-primary/40" />
+            <FieldIllustration slug={field.slug} className="h-auto w-full text-primary" />
+          </div>
+          <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
+            {t.figureCaption(field.name)}
+          </p>
         </div>
         <div className="border border-neutral-900/10 p-6 dark:border-white/10">
           <span className="font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">

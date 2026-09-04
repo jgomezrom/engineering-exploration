@@ -18,12 +18,12 @@ export default function Button({
   type = "button",
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition-all duration-200 ease-out active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40 disabled:active:scale-100 motion-reduce:transition-colors motion-reduce:active:scale-100";
+    "inline-flex items-center justify-center px-6 py-3 font-medium transition-all duration-150 ease-out active:translate-y-[2px] disabled:cursor-not-allowed disabled:opacity-40 disabled:active:translate-y-0 motion-reduce:transition-colors motion-reduce:active:translate-y-0";
 
   const variantStyles =
     variant === "primary"
-      ? "bg-primary text-white hover:bg-primary-dark hover:shadow-[0_6px_20px_-6px_rgba(59,91,219,0.5)]"
-      : "bg-neutral-100 text-neutral-900 hover:bg-neutral-50 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800";
+      ? "border-b-[3px] border-primary-dark bg-primary text-white hover:bg-primary-dark"
+      : "border border-b-[3px] border-neutral-900/15 text-neutral-900 hover:border-primary/50 hover:text-primary dark:border-white/15 dark:text-white";
 
   const classes = `${baseStyles} ${variantStyles}`;
 

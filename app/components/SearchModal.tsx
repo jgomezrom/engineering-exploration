@@ -118,7 +118,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
                           </span>
                         )}
                       </span>
-                      <span className="flex-shrink-0 rounded-full bg-neutral-100 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-neutral-500 dark:bg-neutral-800 dark:text-neutral-400">
+                      <span className="flex-shrink-0 border border-neutral-900/15 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-neutral-500 dark:border-white/15 dark:text-neutral-400">
                         {typeLabel[item.type]}
                       </span>
                     </Link>

@@ -26,22 +26,29 @@ function round(n: number) {
   return Math.round(n * 100) / 100;
 }
 
+// Chunky trapezoidal teeth (base wider than tip) — the same shape the field
+// illustrations use, so a gear reads the same way whether it's spinning here
+// or sitting still on a field page.
+function GearTeeth({ cx, cy, r, count, toothH = 8, toothW = 0.34 }: { cx: number; cy: number; r: number; count: number; toothH?: number; toothW?: number }) {
+  const segs: string[] = [];
+  for (let i = 0; i < count; i++) {
+    const mid = (i * 2 * Math.PI) / count;
+    const halfBase = (Math.PI / count) * toothW;
+    const halfTip = halfBase * 0.65;
+    const p = (a: number, rad: number) => `${round(cx + rad * Math.cos(a))},${round(cy + rad * Math.sin(a))}`;
+    segs.push(`M${p(mid - halfBase, r)}L${p(mid - halfTip, r + toothH)}L${p(mid + halfTip, r + toothH)}L${p(mid + halfBase, r)}`);
+  }
+  return <path d={segs.join(" ")} stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none" />;
+}
+
 function Gear({ cx, cy, teeth, angle, filled }: { cx: number; cy: number; teeth: number; angle: number; filled?: boolean }) {
   const r = radiusFor(teeth);
-  const toothLen = 8;
   const hubR = Math.max(6, r * 0.22);
   return (
     <g transform={`rotate(${angle} ${cx} ${cy})`}>
       <circle cx={cx} cy={cy} r={r} className={filled ? "fill-primary/10 stroke-primary" : "fill-accent/10 stroke-accent"} strokeWidth="1.5" />
       <circle cx={cx} cy={cy} r={hubR} stroke="currentColor" strokeWidth="1.5" fill="none" />
-      {Array.from({ length: teeth }).map((_, i) => {
-        const a = (i * 2 * Math.PI) / teeth;
-        const x1 = round(cx + r * Math.cos(a));
-        const y1 = round(cy + r * Math.sin(a));
-        const x2 = round(cx + (r + toothLen) * Math.cos(a));
-        const y2 = round(cy + (r + toothLen) * Math.sin(a));
-        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="currentColor" strokeWidth="1.5" />;
-      })}
+      <GearTeeth cx={cx} cy={cy} r={r} count={teeth} />
       {/* spokes, purely decorative, echo the site's blueprint-diagram style */}
       {[0, 90, 180, 270].map((deg) => {
         const a = (deg * Math.PI) / 180;

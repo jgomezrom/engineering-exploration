@@ -74,7 +74,7 @@ export default function MoreMajorsQuizPage() {
   if (stage === "intro") {
     return (
       <main className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+        <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
           {t.badge}
         </span>
         <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white xl:text-4xl">
@@ -168,7 +168,7 @@ export default function MoreMajorsQuizPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
-      <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.yourResults}
       </span>
       <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white xl:text-4xl">
@@ -217,7 +217,7 @@ export default function MoreMajorsQuizPage() {
         </Button>
         <Link
           href="/quiz"
-          className="inline-flex items-center justify-center rounded-full bg-neutral-100 px-6 py-3 font-medium text-neutral-900 transition-colors hover:bg-neutral-50 dark:bg-neutral-900 dark:text-white"
+          className="inline-flex items-center justify-center border border-b-[3px] border-neutral-900/15 px-6 py-3 font-medium text-neutral-900 transition-all hover:border-primary/50 hover:text-primary active:translate-y-[2px] dark:border-white/15 dark:text-white"
         >
           {t.backToMainQuizButton}
         </Link>

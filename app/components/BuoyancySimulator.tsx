@@ -68,7 +68,7 @@ export default function BuoyancySimulator() {
         <div className="border border-accent/30 p-5 sm:col-span-2">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium text-neutral-900 dark:text-white">{t.shape}</span>
-            <div className="flex overflow-hidden rounded-full border border-neutral-900/10 dark:border-white/10">
+            <div className="flex overflow-hidden border border-neutral-900/10 dark:border-white/10">
               <button
                 type="button"
                 onClick={() => setHollow(false)}

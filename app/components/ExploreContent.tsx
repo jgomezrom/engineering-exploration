@@ -27,7 +27,7 @@ export default function ExploreContent() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 xl:max-w-6xl">
-      <span className="mb-4 inline-block rounded-full bg-neutral-100 px-4 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+      <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
         {t.badge}
       </span>
 
@@ -90,7 +90,7 @@ export default function ExploreContent() {
                 <Card>
                   <div className="flex items-center justify-between">
                     <FieldIcon slug={stub.slug} className="h-8 w-8 text-primary" />
-                    <span className="rounded-full bg-neutral-100 px-3 py-1 font-mono text-xs uppercase tracking-wide text-neutral-500 dark:bg-neutral-900 dark:text-neutral-400">
+                    <span className="border border-neutral-900/15 px-3 py-1 font-mono text-xs uppercase tracking-wide text-neutral-500 dark:border-white/15 dark:text-neutral-400">
                       {t.briefOverview}
                     </span>
                   </div>
