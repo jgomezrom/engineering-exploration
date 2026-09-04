@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { leverSimulationTranslations } from "../data/translations/leverSimulation";
 import SimulatorSlider from "./SimulatorSlider";
+import { useShareableState, parseNumber } from "../hooks/useShareableState";
 
 const MAX_ANGLE = 15;
 const PIVOT_X = 200;
@@ -14,10 +14,10 @@ const MAX_TORQUE = 10 * 10;
 export default function LeverSimulator() {
   const { language } = useLanguage();
   const t = leverSimulationTranslations[language];
-  const [leftWeight, setLeftWeight] = useState(4);
-  const [leftDistance, setLeftDistance] = useState(6);
-  const [rightWeight, setRightWeight] = useState(6);
-  const [rightDistance, setRightDistance] = useState(4);
+  const [leftWeight, setLeftWeight] = useShareableState("lw", 4, parseNumber);
+  const [leftDistance, setLeftDistance] = useShareableState("ld", 6, parseNumber);
+  const [rightWeight, setRightWeight] = useShareableState("rw", 6, parseNumber);
+  const [rightDistance, setRightDistance] = useShareableState("rd", 4, parseNumber);
 
   const torqueLeft = leftWeight * leftDistance;
   const torqueRight = rightWeight * rightDistance;

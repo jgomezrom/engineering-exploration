@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ProjectileSimulator from "./ProjectileSimulator";
+import CopyLinkButton from "./CopyLinkButton";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../context/LanguageContext";
 import { projectileSimulationTranslations } from "../data/translations/projectileSimulation";
@@ -33,7 +34,11 @@ export default function ProjectileContent() {
         {t.introAfter}
       </p>
 
-      <div className="mt-10">
+      <div className="mt-4">
+        <CopyLinkButton />
+      </div>
+
+      <div className="mt-6">
         <ProjectileSimulator />
       </div>
 

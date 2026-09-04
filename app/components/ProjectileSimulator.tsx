@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { projectileSimulationTranslations } from "../data/translations/projectileSimulation";
 import SimulatorSlider from "./SimulatorSlider";
+import { useShareableState, parseNumber } from "../hooks/useShareableState";
 
 const G = 10; // abstract gravity constant, not a real m/s² claim
 const SPEED_SCALE = 4; // power slider (1-10) -> launch speed (4-40 abstract units)
@@ -14,8 +14,8 @@ const GROUND_Y = 170;
 export default function ProjectileSimulator() {
   const { language } = useLanguage();
   const t = projectileSimulationTranslations[language];
-  const [angleDeg, setAngleDeg] = useState(45);
-  const [power, setPower] = useState(7);
+  const [angleDeg, setAngleDeg] = useShareableState("angle", 45, parseNumber);
+  const [power, setPower] = useShareableState("power", 7, parseNumber);
 
   const angle = (angleDeg * Math.PI) / 180;
   const v = power * SPEED_SCALE;

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { buoyancySimulationTranslations } from "../data/translations/buoyancySimulation";
 import SimulatorSlider from "./SimulatorSlider";
+import { useShareableState, parseNumber, parseBoolean } from "../hooks/useShareableState";
 
 const WATER_DENSITY = 1;
 // A hull shaped to enclose air only needs to be a thin shell — real ships
@@ -20,8 +20,8 @@ const CENTER_X = 200;
 export default function BuoyancySimulator() {
   const { language } = useLanguage();
   const t = buoyancySimulationTranslations[language];
-  const [density, setDensity] = useState(2.7);
-  const [hollow, setHollow] = useState(false);
+  const [density, setDensity] = useShareableState("density", 2.7, parseNumber);
+  const [hollow, setHollow] = useShareableState("hollow", false, parseBoolean);
 
   const effectiveDensity = hollow ? density * HULL_MATERIAL_FRACTION : density;
   const floats = effectiveDensity < WATER_DENSITY;

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import CircuitSimulator from "./CircuitSimulator";
+import CopyLinkButton from "./CopyLinkButton";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../context/LanguageContext";
 import { circuitSimulationTranslations } from "../data/translations/circuitSimulation";
@@ -33,7 +34,11 @@ export default function CircuitContent() {
         {t.introAfter}
       </p>
 
-      <div className="mt-10">
+      <div className="mt-4">
+        <CopyLinkButton />
+      </div>
+
+      <div className="mt-6">
         <CircuitSimulator />
       </div>
 

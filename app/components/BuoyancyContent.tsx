@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import BuoyancySimulator from "./BuoyancySimulator";
+import CopyLinkButton from "./CopyLinkButton";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../context/LanguageContext";
 import { buoyancySimulationTranslations } from "../data/translations/buoyancySimulation";
@@ -27,7 +28,11 @@ export default function BuoyancyContent() {
       </h1>
       <p className="mt-3 max-w-xl text-neutral-600 dark:text-neutral-400">{t.intro}</p>
 
-      <div className="mt-10">
+      <div className="mt-4">
+        <CopyLinkButton />
+      </div>
+
+      <div className="mt-6">
         <BuoyancySimulator />
       </div>
 

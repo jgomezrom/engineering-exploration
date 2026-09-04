@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { circuitSimulationTranslations } from "../data/translations/circuitSimulation";
 import SimulatorSlider from "./SimulatorSlider";
+import { useShareableState, parseNumber } from "../hooks/useShareableState";
 
 // LEDs are current-driven, not voltage-driven — brightness is modeled as
 // roughly proportional to current up to a realistic point where a small LED
@@ -20,8 +21,8 @@ const LOOP_PATH =
 export default function CircuitSimulator() {
   const { language } = useLanguage();
   const t = circuitSimulationTranslations[language];
-  const [voltage, setVoltage] = useState(6);
-  const [resistance, setResistance] = useState(300);
+  const [voltage, setVoltage] = useShareableState("v", 6, parseNumber);
+  const [resistance, setResistance] = useShareableState("r", 300, parseNumber);
 
   const current = voltage / resistance; // amps, Ohm's law: I = V / R
   const currentMA = current * 1000;

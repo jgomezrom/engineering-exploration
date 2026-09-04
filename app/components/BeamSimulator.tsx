@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { beamSimulationTranslations } from "../data/translations/beamSimulation";
 import SimulatorSlider from "./SimulatorSlider";
+import { useShareableState, parseNumber } from "../hooks/useShareableState";
 
 const SPAN = 10; // beam length, in abstract units
 const LEFT_X = 40;
@@ -34,9 +34,9 @@ function deflectionAt(x: number, a: number, load: number, EI: number): number {
 export default function BeamSimulator() {
   const { language } = useLanguage();
   const t = beamSimulationTranslations[language];
-  const [load, setLoad] = useState(5);
-  const [position, setPosition] = useState(5);
-  const [stiffness, setStiffness] = useState(5);
+  const [load, setLoad] = useShareableState("load", 5, parseNumber);
+  const [position, setPosition] = useShareableState("pos", 5, parseNumber);
+  const [stiffness, setStiffness] = useShareableState("stiff", 5, parseNumber);
 
   const EI = stiffness * STIFFNESS_SCALE;
   const samples = 40;

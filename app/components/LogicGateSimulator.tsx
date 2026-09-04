@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { logicGateSimulationTranslations } from "../data/translations/logicGateSimulation";
+import { useShareableState, parseBoolean, parseEnum } from "../hooks/useShareableState";
 
 type Gate = "AND" | "OR" | "XOR" | "NOT";
 const GATES: Gate[] = ["AND", "OR", "XOR", "NOT"];
+const parseGate = parseEnum(GATES);
 
 function compute(gate: Gate, a: boolean, b: boolean): boolean {
   switch (gate) {
@@ -72,9 +73,9 @@ function Toggle({ label, value, onChange, disabled }: { label: string; value: bo
 export default function LogicGateSimulator() {
   const { language } = useLanguage();
   const t = logicGateSimulationTranslations[language];
-  const [gate, setGate] = useState<Gate>("AND");
-  const [a, setA] = useState(true);
-  const [b, setB] = useState(false);
+  const [gate, setGate] = useShareableState<Gate>("gate", "AND", parseGate);
+  const [a, setA] = useShareableState("a", true, parseBoolean);
+  const [b, setB] = useShareableState("b", false, parseBoolean);
 
   const isNot = gate === "NOT";
   const output = compute(gate, a, b);
@@ -129,8 +130,8 @@ export default function LogicGateSimulator() {
         </svg>
 
         <div className="mt-4 flex flex-wrap justify-center gap-3">
-          <Toggle label="A" value={a} onChange={() => setA((v) => !v)} />
-          <Toggle label="B" value={b} onChange={() => setB((v) => !v)} disabled={isNot} />
+          <Toggle label="A" value={a} onChange={() => setA(!a)} />
+          <Toggle label="B" value={b} onChange={() => setB(!b)} disabled={isNot} />
         </div>
       </div>
 

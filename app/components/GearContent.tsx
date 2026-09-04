@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import GearSimulator from "./GearSimulator";
+import CopyLinkButton from "./CopyLinkButton";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../context/LanguageContext";
 import { gearSimulationTranslations } from "../data/translations/gearSimulation";
@@ -30,7 +31,11 @@ export default function GearContent() {
         {t.introAfter}
       </p>
 
-      <div className="mt-10">
+      <div className="mt-4">
+        <CopyLinkButton />
+      </div>
+
+      <div className="mt-6">
         <GearSimulator />
       </div>
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import BeamSimulator from "./BeamSimulator";
+import CopyLinkButton from "./CopyLinkButton";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../context/LanguageContext";
 import { beamSimulationTranslations } from "../data/translations/beamSimulation";
@@ -33,7 +34,11 @@ export default function BeamContent() {
         {t.introAfter}
       </p>
 
-      <div className="mt-10">
+      <div className="mt-4">
+        <CopyLinkButton />
+      </div>
+
+      <div className="mt-6">
         <BeamSimulator />
       </div>
 

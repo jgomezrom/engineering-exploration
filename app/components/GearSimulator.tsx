@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { gearSimulationTranslations } from "../data/translations/gearSimulation";
 import SimulatorSlider from "./SimulatorSlider";
+import { useShareableState, parseNumber } from "../hooks/useShareableState";
 
 const RADIUS_BASE = 14;
 const RADIUS_PER_TOOTH = 2.4;
@@ -64,8 +65,8 @@ function Gear({ cx, cy, teeth, angle, filled }: { cx: number; cy: number; teeth:
 export default function GearSimulator() {
   const { language } = useLanguage();
   const t = gearSimulationTranslations[language];
-  const [teethA, setTeethA] = useState(10);
-  const [teethB, setTeethB] = useState(18);
+  const [teethA, setTeethA] = useShareableState("a", 10, parseNumber);
+  const [teethB, setTeethB] = useShareableState("b", 18, parseNumber);
 
   const ratio = teethB / teethA; // teethA * speedA = teethB * speedB
   const outputSpeedFactor = 1 / ratio; // relative to input speed

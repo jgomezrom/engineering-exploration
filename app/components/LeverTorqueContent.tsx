@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import LeverSimulator from "./LeverSimulator";
+import CopyLinkButton from "./CopyLinkButton";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../context/LanguageContext";
 import { leverSimulationTranslations } from "../data/translations/leverSimulation";
@@ -33,7 +34,11 @@ export default function LeverTorqueContent() {
         {t.introAfter}
       </p>
 
-      <div className="mt-10">
+      <div className="mt-4">
+        <CopyLinkButton />
+      </div>
+
+      <div className="mt-6">
         <LeverSimulator />
       </div>
 
