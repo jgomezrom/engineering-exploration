@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Card from "./Card";
 import FadeIn from "./FadeIn";
 import FieldIcon from "./FieldIcon";
@@ -13,10 +14,16 @@ import { useLanguage } from "../context/LanguageContext";
 import { exploreTranslations } from "../data/translations/explore";
 
 export default function ExploreContent() {
+  const router = useRouter();
   const { language } = useLanguage();
   const t = exploreTranslations[language];
   const displayFields = language === "es" ? fieldsEs : fields;
   const displayStubs = language === "es" ? fieldStubsEs : fieldStubs;
+
+  function goToRandomField() {
+    const pick = displayFields[Math.floor(Math.random() * displayFields.length)];
+    router.push(`/engineering/${pick.slug}`);
+  }
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 xl:max-w-6xl">
@@ -32,6 +39,27 @@ export default function ExploreContent() {
         </Link>{" "}
         {t.introAfter}
       </p>
+
+      <div className="mt-4 flex flex-wrap items-center gap-4">
+        <button
+          type="button"
+          onClick={goToRandomField}
+          className="inline-flex items-center gap-2 border border-neutral-900/10 px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:border-primary/40 hover:text-primary dark:border-white/10 dark:text-neutral-400"
+        >
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
+            <rect x="3" y="3" width="14" height="14" rx="3" stroke="currentColor" strokeWidth="1.4" />
+            <circle cx="7" cy="7" r="1.2" fill="currentColor" />
+            <circle cx="13" cy="7" r="1.2" fill="currentColor" />
+            <circle cx="10" cy="10" r="1.2" fill="currentColor" />
+            <circle cx="7" cy="13" r="1.2" fill="currentColor" />
+            <circle cx="13" cy="13" r="1.2" fill="currentColor" />
+          </svg>
+          {t.surpriseMe}
+        </button>
+        <Link href="/my-summary" className="text-sm font-medium text-primary hover:underline">
+          {t.summaryLink}
+        </Link>
+      </div>
 
       <div className="mt-10">
         <BookmarkedFields

@@ -10,6 +10,9 @@ import { faqItems } from "./faq";
 import { faqItemsEs } from "./faq.es";
 import { resourceLinks } from "./resourceLinks";
 import { resourceLinksEs } from "./translations/resources";
+import { SIMULATIONS } from "./simulationsList";
+import { simulationsHubTranslations } from "./translations/simulationsHub";
+import { mySummaryTranslations } from "./translations/mySummary";
 
 export type SearchItemType = "field" | "challenge" | "concept" | "faq" | "page";
 
@@ -33,6 +36,7 @@ export function buildSearchIndex(language: "en" | "es"): SearchItem[] {
   const displayChallenges = language === "es" ? challengesEs : challenges;
   const displayConcepts = language === "es" ? conceptsEs : concepts;
   const displayFaq = language === "es" ? faqItemsEs : faqItems;
+  const hubT = simulationsHubTranslations[language];
 
   const items: SearchItem[] = [];
 
@@ -56,6 +60,16 @@ export function buildSearchIndex(language: "en" | "es"): SearchItem[] {
   for (const item of displayFaq) {
     items.push({ title: item.question, description: "", href: "/faq", type: "faq" });
   }
+  for (const sim of SIMULATIONS) {
+    items.push({
+      title: hubT[sim.titleKey],
+      description: hubT[sim.descKey],
+      href: `/simulations/${sim.slug}`,
+      type: "page",
+    });
+  }
+  const summaryT = mySummaryTranslations[language];
+  items.push({ title: summaryT.heading, description: summaryT.intro, href: "/my-summary", type: "page" });
   for (const resource of resourceLinks) {
     const localized = language === "es" ? resourceLinksEs[resource.href] : undefined;
     items.push({
