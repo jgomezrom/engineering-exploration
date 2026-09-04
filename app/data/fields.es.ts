@@ -13,7 +13,7 @@ export const fieldsEs: EngineeringField[] = [
     slug: "mechanical-engineering",
     name: "Ingeniería Mecánica",
     tagline:
-      "Diseñar y construir máquinas y sistemas que se mueven, generan energía y le dan forma al mundo físico.",
+      "Máquinas y sistemas que se mueven, generan energía y le dan forma al mundo físico — diseñados y construidos desde cero.",
     whatItIs:
       "La ingeniería mecánica es uno de los campos más amplios de la ingeniería. Se trata de cómo se mueven las cosas, cómo actúan las fuerzas sobre los objetos, y cómo se diseñan, construyen y mejoran las máquinas — desde los mecanismos diminutos dentro de un reloj hasta motores a reacción y robots de fábrica.",
     whatEngineersWorkOn:
@@ -150,7 +150,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "electrical-engineering",
     name: "Ingeniería Eléctrica",
-    tagline: "Comprender y diseñar los sistemas que generan, transportan y controlan la electricidad y las señales electrónicas.",
+    tagline: "Cómo se generan, transportan y controlan de verdad la electricidad y las señales electrónicas.",
     whatItIs:
       "La ingeniería eléctrica abarca cómo se genera, distribuye y utiliza la electricidad — desde enormes redes eléctricas hasta los diminutos circuitos dentro de un teléfono. Se divide en muchas subáreas: sistemas de energía, electrónica, procesamiento de señales, y más.",
     whatEngineersWorkOn:
@@ -184,7 +184,7 @@ export const fieldsEs: EngineeringField[] = [
       "Programar un microcontrolador para que responda a la entrada de un sensor",
     ],
     typicalWorkday:
-      "A menudo es una mezcla de software de diseño de circuitos, equipo de prueba (como osciloscopios y multímetros), y — en muchos puestos — escribir software embebido. Depurar un circuito que no funciona como se esperaba es una parte muy normal y recurrente del trabajo.",
+      "El kit de herramientas abarca software de diseño de circuitos, equipo de prueba como osciloscopios y multímetros, y — en muchos puestos — escribir software embebido. Depurar un circuito que no funciona como se esperaba es una parte muy normal y recurrente del trabajo.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Diseño de circuitos", detail: "Trabajar en software de diseño de circuitos, colocando un nuevo componente en la placa." },
@@ -276,7 +276,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "civil-engineering",
     name: "Ingeniería Civil",
-    tagline: "Planificar y diseñar la infraestructura que hace que la vida diaria funcione — carreteras, puentes, sistemas de agua y los edificios que te rodean.",
+    tagline: "La infraestructura que hace que la vida diaria funcione — carreteras, puentes, sistemas de agua y los edificios que te rodean — planificada y mantenida en pie.",
     whatItIs:
       "La ingeniería civil abarca el diseño, la construcción y el mantenimiento de la infraestructura y el entorno construido — básicamente la mayor parte de lo que usas fuera de tu propia casa que no es un producto privado. Se divide en subáreas como ingeniería estructural, geotécnica, de transporte, y de recursos hídricos/ambiental.",
     whatEngineersWorkOn:
@@ -312,7 +312,7 @@ export const fieldsEs: EngineeringField[] = [
       "Preparar planos del sitio para una solicitud de permiso",
     ],
     typicalWorkday:
-      "Una mezcla de trabajo de diseño en la oficina — haciendo cálculos estructurales o hidráulicos, revisando planos, escribiendo informes — y visitas al sitio para revisar construcción activa o inspeccionar infraestructura existente. Los ingenieros civiles del sector público a menudo pasan bastante tiempo en reuniones con funcionarios municipales o miembros de la comunidad, ya que los proyectos de infraestructura suelen ser financiados y revisados públicamente.",
+      "El trabajo de diseño en la oficina — haciendo cálculos estructurales o hidráulicos, revisando planos, escribiendo informes — se alterna con visitas al sitio para revisar construcción activa o inspeccionar infraestructura existente. Los ingenieros civiles del sector público a menudo pasan bastante tiempo en reuniones con funcionarios municipales o miembros de la comunidad, ya que los proyectos de infraestructura suelen ser financiados y revisados públicamente.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Visita al sitio", detail: "Un inicio temprano revisando la construcción activa para asegurarse de que lo que se está construyendo coincide con el diseño." },
@@ -536,7 +536,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "software-engineering",
     name: "Ingeniería de Software",
-    tagline: "Diseñar, construir y mantener los sistemas de software y aplicaciones que hacen funcionar casi todo lo digital.",
+    tagline: "Los sistemas de software y aplicaciones que hacen funcionar casi todo lo digital — diseñados, construidos y mantenidos.",
     whatItIs:
       "La ingeniería de software se trata de diseñar, construir, probar y mantener software — el código detrás de las aplicaciones, sitios web, sistemas operativos, y los sistemas dentro de otros productos de ingeniería, como el software de control de un auto o un dispositivo médico. A veces se enseña dentro de programas de ciencias de la computación y a veces como carrera propia, y la línea entre 'ingeniero de software,' 'científico de la computación,' y 'programador' se usa de forma inconsistente según la empresa.",
     whatEngineersWorkOn:
@@ -667,7 +667,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "aerospace-engineering",
     name: "Ingeniería Aeroespacial",
-    tagline: "Diseñar y probar las aeronaves, naves espaciales y sistemas que hacen que las cosas despeguen — y que se mantengan seguras en el aire.",
+    tagline: "Las aeronaves, naves espaciales y sistemas que hacen que las cosas despeguen — diseñados y probados para que se mantengan seguros en el aire.",
     whatItIs:
       "La ingeniería aeroespacial se trata de diseñar, construir y probar vehículos que vuelan — desde aviones comerciales hasta satélites, cohetes y drones. Se divide en dos áreas que se superponen: la ingeniería aeronáutica (cosas que vuelan dentro de la atmósfera) y la ingeniería astronáutica (naves espaciales y cosas que operan más allá de ella), aunque la mayoría de los programas y trabajos combinan ambas.",
     whatEngineersWorkOn:
@@ -797,7 +797,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "chemical-engineering",
     name: "Ingeniería Química",
-    tagline: "Aplicar la química y la física para diseñar los procesos y equipos que convierten materias primas en todo, desde combustible hasta medicinas y plásticos.",
+    tagline: "La química y la física puestas a trabajar en diseñar los procesos y equipos que convierten materias primas en todo, desde combustible hasta medicinas y plásticos.",
     whatItIs:
       "La ingeniería química se trata de diseñar y operar los procesos a gran escala que convierten materias primas en productos utilizables — combustibles, plásticos, productos farmacéuticos, alimentos y químicos industriales. Está en la intersección entre la química, la física y la ingeniería tradicional, enfocada menos en inventar nuevas reacciones químicas y más en descubrir cómo llevarlas a cabo de forma segura y eficiente a una escala masiva.",
     whatEngineersWorkOn:
@@ -833,7 +833,7 @@ export const fieldsEs: EngineeringField[] = [
       "Solucionar por qué una línea de producción no está generando el rendimiento esperado",
     ],
     typicalWorkday:
-      "Una mezcla de trabajo de diseño de procesos y simulación en la oficina, y tiempo en el piso de la planta monitoreando y solucionando problemas de procesos de producción activos. El trabajo de revisión de seguridad y cumplimiento normativo es una parte más grande del trabajo de lo que la gente espera, ya que muchos procesos químicos involucran materiales peligrosos.",
+      "Espera tanto trabajo de diseño de procesos y simulación en la oficina, como tiempo en el piso de la planta monitoreando y solucionando problemas de procesos de producción activos. El trabajo de revisión de seguridad y cumplimiento normativo es una parte más grande del trabajo de lo que la gente espera, ya que muchos procesos químicos involucran materiales peligrosos.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Recorrido por la planta", detail: "Revisar un proceso de producción activo y hablar con los operadores de la planta sobre cómo está funcionando." },
@@ -927,7 +927,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "computer-engineering",
     name: "Ingeniería en Computación",
-    tagline: "Diseñar el hardware — procesadores, placas de circuitos y sistemas embebidos — sobre el que realmente corre el software.",
+    tagline: "El hardware — procesadores, placas de circuitos y sistemas embebidos — sobre el que realmente corre el software.",
     whatItIs:
       "La ingeniería en computación está entre la ingeniería eléctrica y la ciencia de la computación, enfocada en diseñar el hardware físico sobre el que corren las computadoras y los dispositivos digitales: procesadores, placas de circuitos, sistemas de memoria, y los sistemas embebidos dentro de los aparatos cotidianos. Muchos ingenieros en computación también escriben el software de bajo nivel (firmware) que corre directamente sobre ese hardware, así que el campo combina el diseño de circuitos con la programación.",
     whatEngineersWorkOn:
@@ -963,7 +963,7 @@ export const fieldsEs: EngineeringField[] = [
       "Actualizar el diseño de un sistema para soportar un nuevo componente o requisito de software",
     ],
     typicalWorkday:
-      "Una mezcla de software de diseño de circuitos, equipo de pruebas de hardware, y escritura de código de bajo nivel — algo parecido en espíritu a la ingeniería eléctrica, pero enfocado específicamente en hardware de cómputo. Probar y documentar resultados es una parte significativa y constante del trabajo.",
+      "Espera software de diseño de circuitos, equipo de pruebas de hardware, y escritura de código de bajo nivel en el mismo día — algo parecido en espíritu a la ingeniería eléctrica, pero enfocado específicamente en hardware de cómputo. Probar y documentar resultados es una parte significativa y constante del trabajo.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Revisión de esquemáticos", detail: "Revisar el esquemático de un circuito para una nueva pieza de hardware antes de que pase a prototipado." },
@@ -1056,7 +1056,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "environmental-engineering",
     name: "Ingeniería Ambiental",
-    tagline: "Diseñar los sistemas y soluciones que protegen la calidad del aire, el agua y el suelo — y limpiarlos cuando algo sale mal.",
+    tagline: "Los sistemas y soluciones que protegen la calidad del aire, el agua y el suelo — y los limpian cuando algo sale mal.",
     whatItIs:
       "La ingeniería ambiental aplica la ingeniería y la ciencia a problemas relacionados con el entorno natural: calidad del agua, contaminación del aire, gestión de residuos, y limpieza de sitios contaminados. Se superpone de forma significativa con la ingeniería civil y la ingeniería química, pero se enfoca específicamente en la protección y remediación ambiental en lugar de la infraestructura o los procesos industriales en general.",
     whatEngineersWorkOn:
@@ -1092,7 +1092,7 @@ export const fieldsEs: EngineeringField[] = [
       "Desarrollar un plan de limpieza para un sitio contaminado",
     ],
     typicalWorkday:
-      "Una mezcla de análisis de datos y redacción de informes en la oficina, y tiempo en sitios de campo recolectando muestras o inspeccionando instalaciones para verificar el cumplimiento normativo. Los ingenieros ambientales a menudo trabajan de cerca con científicos, técnicos y reguladores, y la comunicación con el público o la comunidad es una parte real de algunos puestos.",
+      "El análisis de datos y la redacción de informes en la oficina comparten la semana con tiempo en sitios de campo, recolectando muestras o inspeccionando instalaciones para verificar el cumplimiento normativo. Los ingenieros ambientales a menudo trabajan de cerca con científicos, técnicos y reguladores, y la comunicación con el público o la comunidad es una parte real de algunos puestos.",
     dayInLife: {
       blocks: [
         { time: "8:30 AM", label: "Visita a sitio de campo", detail: "Recolectar muestras de agua o suelo en un sitio que está siendo evaluado por contaminación." },
@@ -1222,7 +1222,7 @@ export const fieldsEs: EngineeringField[] = [
       "Construir un modelo para comparar diferentes cambios de proceso antes de implementar uno",
     ],
     typicalWorkday:
-      "Una mezcla de recolección de datos mediante observación, encuestas, o registros existentes, análisis de esos datos para encontrar ineficiencias, y trabajo con equipos de toda una empresa para rediseñar un proceso. Gran parte del trabajo ocurre en reuniones y observación en el sitio, además del análisis basado en computadora.",
+      "El trabajo consiste en recolectar datos mediante observación, encuestas, o registros existentes, analizarlos para encontrar ineficiencias, y trabajar con equipos de toda una empresa para rediseñar un proceso. Gran parte de esto ocurre en reuniones y observación en el sitio, además del análisis basado en computadora.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Observación en el piso", detail: "Observar un proceso de producción o servicio en acción para ver dónde ocurren los retrasos." },
@@ -1352,7 +1352,7 @@ export const fieldsEs: EngineeringField[] = [
       "Evaluar si un material cumple con las especificaciones de calidad y seguridad de un proyecto",
     ],
     typicalWorkday:
-      "Una mezcla de pruebas y experimentación en el laboratorio, y colaboración con ingenieros de otras disciplinas que necesitan un material con propiedades específicas para su propio proyecto. El análisis de datos y la documentación son una parte importante del trabajo, ya que el desempeño de un material tiene que caracterizarse y registrarse con precisión.",
+      "Las pruebas y experimentación en el laboratorio se equilibran con la colaboración con ingenieros de otras disciplinas que necesitan un material con propiedades específicas para su propio proyecto. El análisis de datos y la documentación son una parte importante del trabajo, ya que el desempeño de un material tiene que caracterizarse y registrarse con precisión.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Pruebas de laboratorio", detail: "Probar cómo se comporta una muestra de material bajo estrés o calor." },
@@ -1482,7 +1482,7 @@ export const fieldsEs: EngineeringField[] = [
       "Depurar por qué un robot no se está comportando como se esperaba — y descubrir en qué disciplina está realmente el problema",
     ],
     typicalWorkday:
-      "Una mezcla de diseño mecánico, trabajo eléctrico y de sensores, y escritura de software de control, además de tiempo significativo probando el sistema integrado como un todo. Como los problemas de robótica pueden originarse en cualquiera de las tres disciplinas subyacentes, gran parte del trabajo es genuinamente solución de problemas interdisciplinaria.",
+      "El trabajo abarca diseño mecánico, trabajo eléctrico y de sensores, y escritura de software de control, además de tiempo significativo probando el sistema integrado como un todo. Como los problemas de robótica pueden originarse en cualquiera de las tres disciplinas subyacentes, gran parte del trabajo es genuinamente solución de problemas interdisciplinaria.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Diseño mecánico", detail: "Trabajar en la estructura física o el mecanismo de una articulación para un sistema robótico." },
@@ -1576,7 +1576,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "nuclear-engineering",
     name: "Ingeniería Nuclear",
-    tagline: "Diseñar y monitorear los sistemas que generan y gestionan la energía nuclear de forma segura.",
+    tagline: "Los sistemas que generan y gestionan la energía nuclear de forma segura — diseñados y monitoreados constantemente.",
     whatItIs:
       "La ingeniería nuclear se enfoca en el diseño, la operación y el monitoreo seguros de los sistemas que usan energía nuclear — desde plantas de energía hasta aplicaciones médicas y de investigación. Combina física, ingeniería de seguridad, y un cumplimiento regulatorio estricto, ya que las consecuencias de un error son inusualmente graves.",
     whatEngineersWorkOn:
@@ -1611,7 +1611,7 @@ export const fieldsEs: EngineeringField[] = [
       "Trabajar con un equipo para prepararse para una inspección o auditoría regulatoria",
     ],
     typicalWorkday:
-      "Una mezcla de monitorear datos de la planta o el sistema, revisar y escribir documentación de seguridad, y coordinar con un equipo el cumplimiento regulatorio. El tiempo se divide entre una oficina o sala de control y, dependiendo del puesto, tiempo presencial en la instalación física.",
+      "Espera una rotación entre monitorear datos de la planta o el sistema, revisar y escribir documentación de seguridad, y coordinar con un equipo el cumplimiento regulatorio. El tiempo se divide entre una oficina o sala de control y, dependiendo del puesto, tiempo presencial en la instalación física.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Reunión de turno", detail: "Revisar los datos de desempeño del reactor durante la noche y cualquier nota del turno anterior." },
@@ -1704,7 +1704,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "petroleum-engineering",
     name: "Ingeniería de Petróleo",
-    tagline: "Diseñar cómo se extraen el petróleo y el gas natural del subsuelo de forma segura y eficiente.",
+    tagline: "Cómo se extraen el petróleo y el gas natural del subsuelo, de forma segura y eficiente.",
     whatItIs:
       "La ingeniería de petróleo se enfoca en cómo extraer petróleo y gas natural del subsuelo de forma segura y eficiente — diseñando métodos de extracción, planes de perforación, y sistemas de producción. Es un campo especializado ligado de cerca a los propios ciclos económicos de la industria energética.",
     whatEngineersWorkOn:
@@ -1738,7 +1738,7 @@ export const fieldsEs: EngineeringField[] = [
       "Evaluar el riesgo de seguridad y ambiental de un método de extracción propuesto",
     ],
     typicalWorkday:
-      "Una mezcla de análisis de datos y modelado en la oficina, y — dependiendo del puesto — tiempo en un sitio de campo revisando las operaciones en persona. La colaboración con geólogos y otros ingenieros es una parte constante del trabajo, ya que las decisiones sobre yacimientos requieren aportes de múltiples disciplinas.",
+      "El análisis de datos y el modelado en la oficina ocupan la mayoría de las semanas, con — dependiendo del puesto — tiempo en un sitio de campo revisando las operaciones en persona. La colaboración con geólogos y otros ingenieros es una parte constante del trabajo, ya que las decisiones sobre yacimientos requieren aportes de múltiples disciplinas.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Revisión de datos", detail: "Revisar los datos de producción de la noche de un pozo activo." },
@@ -1831,7 +1831,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "agricultural-engineering",
     name: "Ingeniería Agrícola",
-    tagline: "Aplicar la ingeniería a la agricultura y la producción de alimentos — equipo, riego, y sistemas alimentarios.",
+    tagline: "La ingeniería puesta a trabajar en la agricultura y la producción de alimentos — equipo, riego, y sistemas alimentarios.",
     whatItIs:
       "La ingeniería agrícola aplica principios de ingeniería a la agricultura y la producción de alimentos — diseñando equipo, sistemas de riego, y estructuras que hacen la agricultura más eficiente, y adaptando la tecnología para trabajar con factores biológicos y ambientales que no se comportan como los materiales de ingeniería estándar.",
     whatEngineersWorkOn:
@@ -1866,7 +1866,7 @@ export const fieldsEs: EngineeringField[] = [
       "Diseñar una instalación de almacenamiento o procesamiento para reducir el desperdicio de alimentos después de la cosecha",
     ],
     typicalWorkday:
-      "Una mezcla de trabajo de diseño y pruebas, a menudo dividido entre una oficina o laboratorio y tiempo en una granja o sitio de campo donde realmente se usan el equipo y los sistemas. La colaboración con agricultores, agrónomos, y científicos de alimentos es una parte regular del trabajo, ya que las condiciones agrícolas del mundo real informan constantemente la ingeniería.",
+      "El trabajo de diseño y pruebas suele dividirse entre una oficina o laboratorio y tiempo en una granja o sitio de campo donde realmente se usan el equipo y los sistemas. La colaboración con agricultores, agrónomos, y científicos de alimentos es una parte regular del trabajo, ya que las condiciones agrícolas del mundo real informan constantemente la ingeniería.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Visita de campo", detail: "Visitar un sitio de granja para ver cómo está funcionando en condiciones reales una pieza de equipo o un sistema de riego." },
@@ -1959,7 +1959,7 @@ export const fieldsEs: EngineeringField[] = [
   {
     slug: "marine-engineering",
     name: "Ingeniería Marina",
-    tagline: "Diseñar y mantener barcos, submarinos, y otras embarcaciones construidas para el océano.",
+    tagline: "Barcos, submarinos, y otras embarcaciones construidas para el océano — diseñados y mantenidos en operación.",
     whatItIs:
       "La ingeniería marina, a menudo combinada con la arquitectura naval, se enfoca en diseñar, construir, y mantener barcos, submarinos, y otras embarcaciones y estructuras marinas — el casco, los sistemas de propulsión, y los sistemas mecánicos y eléctricos a bordo todos tienen que funcionar de forma confiable en un entorno oceánico exigente.",
     whatEngineersWorkOn:
@@ -1994,7 +1994,7 @@ export const fieldsEs: EngineeringField[] = [
       "Trabajar en el diseño de una plataforma marina u otra estructura marítima",
     ],
     typicalWorkday:
-      "Una mezcla de trabajo de diseño y análisis en una oficina, y tiempo en un astillero o a bordo de una embarcación inspeccionando sistemas y estructuras reales. El equilibrio entre el trabajo de oficina y el trabajo práctico en el sitio varía mucho según el puesto y el empleador específicos.",
+      "El trabajo de diseño y análisis en una oficina da paso a tiempo en un astillero o a bordo de una embarcación, inspeccionando sistemas y estructuras reales. El equilibrio entre el trabajo de oficina y el trabajo práctico en el sitio varía mucho según el puesto y el empleador específicos.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Inspección en el astillero", detail: "Inspeccionar el sistema de propulsión de una embarcación en busca de desgaste o mantenimiento necesario." },

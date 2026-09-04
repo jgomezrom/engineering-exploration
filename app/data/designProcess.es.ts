@@ -7,25 +7,25 @@ export const designProcessStepsEs: DesignProcessStep[] = [
     id: "ask",
     name: "Preguntar",
     description:
-      "Descubre qué problema estás resolviendo realmente, y qué contaría como éxito. Muchos diseños fallidos vienen de saltarse este paso e ir directo a construir.",
+      "Descubre qué problema estás resolviendo en realidad, y qué contaría siquiera como éxito. Salta este paso y ve directo a construir, y ahí mismo nacen muchos diseños fallidos.",
   },
   {
     id: "imagine",
     name: "Imaginar",
     description:
-      "Piensa en tantos enfoques posibles como puedas, incluso los que parezcan poco probables. La meta aquí son opciones, no la respuesta final.",
+      "Piensa en tantos enfoques posibles como puedas, incluso los que parezcan poco probables. En esta etapa la meta son opciones, no la respuesta final.",
   },
   {
     id: "plan",
     name: "Planear",
     description:
-      "Elige un enfoque y define los detalles — qué vas a necesitar, más o menos cómo va a armarse, y qué podría salir mal.",
+      "Elige un enfoque y define los detalles — qué vas a necesitar, más o menos cómo va a armarse, y qué podría salir mal en el camino.",
   },
   {
     id: "build",
     name: "Construir",
     description:
-      "Hazlo de verdad. Los planes siempre se topan con la realidad aquí, y la realidad suele ganar — eso es lo esperado, no una señal de que planeaste mal.",
+      "Hazlo de verdad. Los planes siempre se topan con la realidad aquí, y la realidad casi siempre gana. Eso es lo esperado, no una señal de que planeaste mal.",
   },
   {
     id: "test",
@@ -37,6 +37,6 @@ export const designProcessStepsEs: DesignProcessStep[] = [
     id: "improve",
     name: "Mejorar",
     description:
-      "Usa lo que aprendiste probando para cambiar el diseño. Aquí es donde suele pasar la mayor parte del aprendizaje real — a menudo más que en la primera construcción.",
+      "Toma lo que aprendiste probando y cambia el diseño. Aquí es donde suele pasar la mayor parte del aprendizaje real, a menudo más que en la primera construcción.",
   },
 ];

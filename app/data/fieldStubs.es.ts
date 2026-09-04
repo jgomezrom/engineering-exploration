@@ -8,9 +8,9 @@ export const fieldStubsEs: FieldStub[] = [
   {
     slug: "architectural-engineering",
     name: "Ingeniería Arquitectónica",
-    tagline: "Diseñar los sistemas estructurales, mecánicos y eléctricos que hacen que un edificio realmente funcione.",
+    tagline: "Los sistemas estructurales, mecánicos y eléctricos que hacen que un edificio realmente funcione.",
     whatItIs:
-      "La ingeniería arquitectónica se enfoca en los sistemas técnicos dentro de los edificios — soporte estructural, calefacción y refrigeración, electricidad, iluminación, y acústica — trabajando junto a arquitectos, quienes se enfocan más en la forma y distribución de un edificio. Es un campo más pequeño y especializado que combina conceptos de ingeniería civil, mecánica y eléctrica aplicados específicamente a edificios.",
+      "Los sistemas técnicos dentro de un edificio — soporte estructural, calefacción y refrigeración, electricidad, iluminación, acústica — son el territorio de la ingeniería arquitectónica, trabajado junto a arquitectos, quienes se enfocan más en la forma y distribución del edificio. Es un campo más pequeño y especializado que combina conceptos de ingeniería civil, mecánica y eléctrica aplicados específicamente a edificios.",
     realWorldExamples: [
       "Sistemas estructurales para edificios grandes o complejos",
       "Diseño de sistemas de calefacción, refrigeración, y ventilación",
@@ -20,14 +20,14 @@ export const fieldStubsEs: FieldStub[] = [
     relatedMajors: ["Ingeniería Arquitectónica", "Ingeniería Civil (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
     relatedField: "civil-engineering",
     salaryNote:
-      "La ingeniería arquitectónica no se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se agrupa con la ingeniería civil o mecánica según el puesto específico. Consulta la página de Ingeniería Civil para ver datos de salario relacionados y con fuente.",
+      "La Oficina de Estadísticas Laborales de EE. UU. no rastrea la ingeniería arquitectónica como su propia categoría separada — usualmente se agrupa con la ingeniería civil o mecánica según el puesto específico. Consulta la página de Ingeniería Civil para ver datos de salario relacionados y con fuente.",
   },
   {
     slug: "automotive-engineering",
     name: "Ingeniería Automotriz",
-    tagline: "Diseñar, probar, y fabricar autos y otros vehículos de carretera.",
+    tagline: "El diseño, las pruebas, y la fabricación detrás de los autos y otros vehículos de carretera.",
     whatItIs:
-      "La ingeniería automotriz se enfoca específicamente en el diseño, las pruebas, y la fabricación de autos y otros vehículos de carretera — motores, transmisiones, sistemas de seguridad, y cada vez más tecnología de vehículos eléctricos y autónomos. Normalmente se estudia como una especialización dentro de la ingeniería mecánica en lugar de ser su propia carrera separada.",
+      "La ingeniería automotriz trata sobre el diseño, las pruebas, y la fabricación de autos y otros vehículos de carretera — motores, transmisiones, sistemas de seguridad, y, cada vez más, tecnología de vehículos eléctricos y autónomos. Normalmente se estudia como una especialización dentro de la ingeniería mecánica, no como su propia carrera separada.",
     realWorldExamples: [
       "Diseño de motores y sistemas de transmisión",
       "Pruebas de seguridad y colisión de vehículos",
@@ -42,9 +42,9 @@ export const fieldStubsEs: FieldStub[] = [
   {
     slug: "manufacturing-engineering",
     name: "Ingeniería de Manufactura",
-    tagline: "Diseñar y mejorar los procesos y equipos que convierten un diseño en un producto físico a gran escala.",
+    tagline: "Cómo un diseño se convierte en un producto físico real a gran escala — los procesos y equipos detrás.",
     whatItIs:
-      "La ingeniería de manufactura se enfoca en diseñar y mejorar los procesos y equipos usados para realmente producir cosas a gran escala — la maquinaria, las herramientas, y los flujos de trabajo que convierten un diseño en un producto físico. Se superpone de cerca tanto con la ingeniería mecánica como con la industrial.",
+      "La ingeniería de manufactura trata sobre los procesos y equipos usados para realmente producir cosas a gran escala — la maquinaria, las herramientas, y los flujos de trabajo que convierten un diseño en un producto físico, y hacer que todo eso funcione mejor. Se superpone de cerca tanto con la ingeniería mecánica como con la industrial.",
     realWorldExamples: [
       "Diseño de líneas de producción y equipo de fábrica",
       "Diseño de herramientas y dispositivos de sujeción para manufactura",
@@ -54,14 +54,14 @@ export const fieldStubsEs: FieldStub[] = [
     relatedMajors: ["Ingeniería de Manufactura", "Ingeniería Industrial (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
     relatedField: "industrial-engineering",
     salaryNote:
-      "La ingeniería de manufactura no se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se agrupa con la ingeniería industrial o mecánica. Consulta la página de Ingeniería Industrial para ver datos de salario relacionados y con fuente.",
+      "La ingeniería de manufactura tampoco se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se agrupa con la ingeniería industrial o mecánica. Consulta la página de Ingeniería Industrial para ver datos de salario relacionados y con fuente.",
   },
   {
     slug: "systems-engineering",
     name: "Ingeniería de Sistemas",
-    tagline: "Asegurarse de que todas las piezas individuales de un proyecto grande y complejo realmente funcionen bien juntas.",
+    tagline: "Cómo todas las piezas individuales de un proyecto grande y complejo terminan funcionando bien juntas.",
     whatItIs:
-      "La ingeniería de sistemas se enfoca en cómo se integran los sistemas complejos como un todo, en lugar de en un solo componente — asegurándose de que todas las piezas individuales de un proyecto grande, como un avión, una nave espacial, o una plataforma de software importante, funcionen correctamente juntas. Se trata menos de diseñar una parte específica y más de gestionar cómo se conecta todo.",
+      "La ingeniería de sistemas se aleja de cualquier componente individual para ver cómo un sistema complejo se integra como un todo — asegurándose de que cada pieza de un proyecto grande, sea un avión, una nave espacial, o una plataforma de software importante, funcione correctamente con todas las demás. Se trata menos de diseñar una parte específica y más de gestionar cómo se conecta todo.",
     realWorldExamples: [
       "Coordinar cómo funcionan juntos los subsistemas de un avión o una nave espacial",
       "Gestionar los requisitos y la integración de grandes proyectos de defensa o infraestructura",
@@ -70,14 +70,14 @@ export const fieldStubsEs: FieldStub[] = [
     relatedMajors: ["Ingeniería de Sistemas", "A menudo se estudia como una especialización dentro de la ingeniería aeroespacial, industrial o eléctrica"],
     relatedField: "aerospace-engineering",
     salaryNote:
-      "La ingeniería de sistemas no se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia como una especialización dentro de otra disciplina de ingeniería. Consulta las páginas de Ingeniería Aeroespacial o Industrial para ver datos de salario relacionados y con fuente.",
+      "Como varios campos de esta página, la ingeniería de sistemas no se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia como una especialización dentro de otra disciplina de ingeniería. Consulta las páginas de Ingeniería Aeroespacial o Industrial para ver datos de salario relacionados y con fuente.",
   },
   {
     slug: "structural-engineering",
     name: "Ingeniería Estructural",
-    tagline: "Asegurarse de que edificios y puentes puedan soportar de forma segura su propio peso, además del viento, los terremotos, y el uso diario.",
+    tagline: "Si un edificio o puente puede cargar con seguridad su propio peso, además del viento, los terremotos, y el uso diario.",
     whatItIs:
-      "La ingeniería estructural se enfoca específicamente en la estructura portante de edificios y puentes — asegurándose de que una estructura pueda soportar de forma segura su propio peso más fuerzas como el viento, los terremotos, y el uso diario. Normalmente se estudia como una especialización dentro de la ingeniería civil en lugar de ser su propia carrera separada.",
+      "La ingeniería estructural trata sobre la estructura portante de edificios y puentes — asegurándose de que una estructura pueda cargar con seguridad su propio peso más fuerzas como el viento, los terremotos, y el uso diario. Normalmente se estudia como una especialización dentro de la ingeniería civil, no como su propia carrera separada.",
     realWorldExamples: [
       "Diseño de la estructura portante de edificios",
       "Diseño y análisis estructural de puentes",
@@ -92,9 +92,9 @@ export const fieldStubsEs: FieldStub[] = [
   {
     slug: "energy-engineering",
     name: "Ingeniería de Energía",
-    tagline: "Diseñar cómo se genera, distribuye, y usa la energía de forma eficiente — desde redes eléctricas hasta energías renovables.",
+    tagline: "Cómo se genera, distribuye, y usa la energía de forma eficiente — desde redes eléctricas hasta energías renovables.",
     whatItIs:
-      "La ingeniería de energía se enfoca en cómo se genera, distribuye, y usa la energía de forma eficiente — abarcando sistemas de energía tradicionales, energía renovable como la solar y la eólica, y la eficiencia energética en edificios e industria. Se apoya en la ingeniería mecánica, eléctrica y ambiental en lugar de ser una sola disciplina estandarizada.",
+      "La ingeniería de energía abarca cómo se genera, distribuye, y usa la energía de forma eficiente — sistemas de energía tradicionales, energía renovable como la solar y la eólica, y la eficiencia energética en edificios e industria. En lugar de ser una sola disciplina estandarizada, se apoya en la ingeniería mecánica, eléctrica y ambiental.",
     realWorldExamples: [
       "Diseño de sistemas de energía solar y eólica",
       "Sistemas de redes eléctricas y distribución de energía",
@@ -104,14 +104,14 @@ export const fieldStubsEs: FieldStub[] = [
     relatedMajors: ["Ingeniería de Energía", "Ingeniería Eléctrica (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
     relatedField: "electrical-engineering",
     salaryNote:
-      "La ingeniería de energía no se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia a través de la ingeniería eléctrica o mecánica con un enfoque en energía. Consulta la página de Ingeniería Eléctrica para ver datos de salario relacionados y con fuente.",
+      "No existe una categoría separada para la ingeniería de energía en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia a través de la ingeniería eléctrica o mecánica con un enfoque en energía. Consulta la página de Ingeniería Eléctrica para ver datos de salario relacionados y con fuente.",
   },
   {
     slug: "semiconductor-engineering",
     name: "Ingeniería de Semiconductores",
-    tagline: "Diseñar y fabricar los chips que impulsan casi todos los dispositivos electrónicos modernos.",
+    tagline: "Cómo se diseñan y fabrican los chips que impulsan casi todos los dispositivos electrónicos modernos.",
     whatItIs:
-      "La ingeniería de semiconductores se enfoca en diseñar y fabricar los chips que impulsan casi todos los dispositivos electrónicos modernos — trabajando a la escala de circuitos y materiales individuales en lugar de un producto terminado. Combina la ingeniería eléctrica, la ciencia de materiales, y la manufactura de precisión.",
+      "La ingeniería de semiconductores trata sobre diseñar y fabricar los chips que impulsan casi todos los dispositivos electrónicos modernos — trabajando a la escala de circuitos y materiales individuales, no de un producto terminado. Combina la ingeniería eléctrica, la ciencia de materiales, y la manufactura de precisión.",
     realWorldExamples: [
       "Diseño de microchips y procesadores",
       "Ingeniería de procesos de fabricación de semiconductores",
@@ -121,6 +121,6 @@ export const fieldStubsEs: FieldStub[] = [
     relatedMajors: ["Ingeniería Eléctrica (con enfoque en semiconductores)", "Ciencia e Ingeniería de Materiales (con cierta superposición)", "Ingeniería en Computación (con cierta superposición)"],
     relatedField: "electrical-engineering",
     salaryNote:
-      "La ingeniería de semiconductores no se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia a través de la ingeniería eléctrica, en computación, o de materiales. Consulta la página de Ingeniería Eléctrica para ver datos de salario relacionados y con fuente.",
+      "No hay una categoría separada para la ingeniería de semiconductores en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia a través de la ingeniería eléctrica, en computación, o de materiales. Consulta la página de Ingeniería Eléctrica para ver datos de salario relacionados y con fuente.",
   },
 ];

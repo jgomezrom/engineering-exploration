@@ -4,7 +4,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "mechanical-engineering",
     name: "Mechanical Engineering",
-    tagline: "Designing and building machines and systems that move, power, and shape the physical world.",
+    tagline: "Machines and systems that move, power, and shape the physical world — designed and built from the ground up.",
     whatItIs:
       "Mechanical engineering is one of the broadest engineering fields. It's about how things move, how forces act on objects, and how machines are designed, built, and improved — everything from tiny mechanisms inside a watch to jet engines and factory robots.",
     whatEngineersWorkOn:
@@ -142,7 +142,7 @@ export const fields: EngineeringField[] = [
 {
   slug: "electrical-engineering",
   name: "Electrical Engineering",
-  tagline: "Understanding and designing the systems that generate, move, and control electricity and electronic signals.",
+  tagline: "How electricity and electronic signals actually get generated, moved, and controlled.",
   whatItIs:
     "Electrical engineering covers how electricity is generated, distributed, and used — from massive power grids down to the tiny circuits inside a phone. It splits into many sub-areas: power systems, electronics, signal processing, and more.",
   whatEngineersWorkOn:
@@ -176,7 +176,7 @@ export const fields: EngineeringField[] = [
     "Programming a microcontroller to respond to sensor input",
   ],
   typicalWorkday:
-    "Often a mix of circuit design software, testing equipment (like oscilloscopes and multimeters), and — in many roles — writing embedded software. Debugging a circuit that isn't working as expected is a very normal, recurring part of the job.",
+    "The toolkit spans circuit design software, testing equipment like oscilloscopes and multimeters, and — in many roles — writing embedded software. Debugging a circuit that isn't working as expected is a very normal, recurring part of the job.",
   dayInLife: {
     blocks: [
       { time: "9:00 AM", label: "Circuit design", detail: "Working in circuit design software, laying out a new component on the board." },
@@ -189,7 +189,7 @@ export const fields: EngineeringField[] = [
     reflectionQuestion: "How would it feel to spend an afternoon debugging a circuit that isn't working, with no guarantee you'll find the problem before you go home?",
   },
   // mathIntensity: usefulSubjects leads with physics/calculus; helpfulSkills calls for "comfort with abstract math".
-  // handsOnWork: typicalWorkday frames it as "a mix" of software, bench testing, and embedded coding.
+  // handsOnWork: typicalWorkday describes a toolkit spanning software, bench testing, and embedded coding.
   // regulatoryBurden: thingsPeopleDislike says compliance is heavy "especially in power or aerospace" — industry-dependent.
   // marketUncertainty: howCompetitive hedges "varies by country and specialization" but calls demand "generally strong".
   // coding: helpfulSkills calls for "basic programming, since many modern electrical systems include embedded code," and typicalProjects includes "programming a microcontroller."
@@ -277,7 +277,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "civil-engineering",
     name: "Civil Engineering",
-    tagline: "Planning and designing the infrastructure that makes daily life work — roads, bridges, water systems, and the buildings around you.",
+    tagline: "The infrastructure that makes daily life work — roads, bridges, water systems, and the buildings around you — planned and kept standing.",
     whatItIs:
       "Civil engineering covers the design, construction, and upkeep of infrastructure and the built environment — basically most of what you interact with outside your own house that isn't a private product. It splits into sub-areas like structural, geotechnical, transportation, and water resources/environmental engineering.",
     whatEngineersWorkOn:
@@ -313,7 +313,7 @@ export const fields: EngineeringField[] = [
       "Preparing site plans for a permit application",
     ],
     typicalWorkday:
-      "A mix of office design work — running structural or hydraulic calculations, reviewing drawings, writing reports — and site visits to check on active construction or inspect existing infrastructure. Public-sector civil engineers often spend real time in meetings with city officials or community members, since infrastructure projects are usually publicly funded and publicly reviewed.",
+      "Office design work — running structural or hydraulic calculations, reviewing drawings, writing reports — alternates with site visits to check on active construction or inspect existing infrastructure. Public-sector civil engineers often spend real time in meetings with city officials or community members, since infrastructure projects are usually publicly funded and publicly reviewed.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Site visit", detail: "An early start checking on active construction to make sure what's being built matches the design." },
@@ -326,7 +326,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "Would an early-morning outdoor site visit sound like a nice break from the desk, or an annoying interruption to your day?",
     },
     // mathIntensity: usefulSubjects leads with "Physics (especially statics and mechanics)" and calculus.
-    // handsOnWork: typicalWorkday frames it as "a mix" of office work and site visits, not majority field work.
+    // handsOnWork: typicalWorkday has office work alternating with site visits, not majority field work.
     // regulatoryBurden: helpfulSkills centers "designing within legal safety requirements"; thingsPeopleDislike cites heavy permitting.
     // marketUncertainty: howCompetitive calls demand "generally steady" but hedges pay/demand "a lot by region".
     // coding: no programming language appears anywhere in this field's text.
@@ -555,7 +555,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "software-engineering",
     name: "Software Engineering",
-    tagline: "Designing, building, and maintaining the software systems and applications that run almost everything digital.",
+    tagline: "The software systems and applications that run almost everything digital — designed, built, and kept running.",
     whatItIs:
       "Software engineering is about designing, building, testing, and maintaining software — the code behind applications, websites, operating systems, and the systems inside other engineered products, like the control software in a car or a medical device. It's sometimes taught within computer science programs and sometimes as its own major, and the line between 'software engineer,' 'computer scientist,' and 'programmer' is used inconsistently across companies.",
     whatEngineersWorkOn:
@@ -695,7 +695,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "aerospace-engineering",
     name: "Aerospace Engineering",
-    tagline: "Designing and testing the aircraft, spacecraft, and systems that get things off the ground — and keep them there safely.",
+    tagline: "The aircraft, spacecraft, and systems that get things off the ground — designed and tested to keep them there safely.",
     whatItIs:
       "Aerospace engineering is about designing, building, and testing vehicles that fly — from commercial airplanes to satellites, rockets, and drones. It splits into two overlapping areas: aeronautical engineering (things that fly within the atmosphere) and astronautical engineering (spacecraft and things that operate beyond it), though most programs and jobs blend both.",
     whatEngineersWorkOn:
@@ -834,7 +834,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "chemical-engineering",
     name: "Chemical Engineering",
-    tagline: "Applying chemistry and physics to design the processes and equipment that turn raw materials into everything from fuel to medicine to plastics.",
+    tagline: "Chemistry and physics put to work designing the processes and equipment that turn raw materials into everything from fuel to medicine to plastics.",
     whatItIs:
       "Chemical engineering is about designing and running the large-scale processes that turn raw materials into usable products — fuels, plastics, pharmaceuticals, food, and industrial chemicals. It sits at the intersection of chemistry, physics, and traditional engineering, focused less on inventing new chemical reactions and more on figuring out how to run them safely and efficiently at a massive scale.",
     whatEngineersWorkOn:
@@ -870,7 +870,7 @@ export const fields: EngineeringField[] = [
       "Troubleshooting why a production line isn't producing the expected yield",
     ],
     typicalWorkday:
-      "A mix of office-based process design and simulation work, and time on a plant floor monitoring and troubleshooting active production processes. Safety review and regulatory compliance work is a bigger part of the job than people expect, since many chemical processes involve hazardous materials.",
+      "Expect both office-based process design and simulation work, and time on a plant floor monitoring and troubleshooting active production processes. Safety review and regulatory compliance work is a bigger part of the job than people expect, since many chemical processes involve hazardous materials.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Plant walkthrough", detail: "Checking on an active production process and talking with plant operators about how it's running." },
@@ -883,7 +883,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "How would you feel being responsible for the safety procedures around a process that could be genuinely dangerous if something goes wrong?",
     },
     // mathIntensity: usefulSubjects leads with "Chemistry," "Physics," and "Calculus."
-    // handsOnWork: typicalWorkday frames it as "a mix" of office-based work and time on a plant floor.
+    // handsOnWork: typicalWorkday describes both office-based work and time on a plant floor.
     // regulatoryBurden: typicalWorkday explicitly says safety and regulatory compliance work "is a bigger part of the job than people expect."
     // marketUncertainty: howCompetitive cites real, positive BLS growth, but a smaller number of annual openings than other fields, and ties to cyclical industries like oil and gas.
     // coding: no programming language appears anywhere in this field's text — simulation software use isn't the same as writing code.
@@ -973,7 +973,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "computer-engineering",
     name: "Computer Engineering",
-    tagline: "Designing the hardware — processors, circuit boards, and embedded systems — that software actually runs on.",
+    tagline: "The hardware — processors, circuit boards, and embedded systems — that software actually runs on.",
     whatItIs:
       "Computer engineering sits between electrical engineering and computer science, focused on designing the physical hardware that computers and digital devices run on — processors, circuit boards, memory systems, and the embedded systems inside everyday devices. Many computer engineers also write the low-level software (firmware) that runs directly on that hardware, so the field blends circuit design with programming.",
     whatEngineersWorkOn:
@@ -1009,7 +1009,7 @@ export const fields: EngineeringField[] = [
       "Updating a system's design to support a new component or software requirement",
     ],
     typicalWorkday:
-      "A mix of circuit design software, hardware testing equipment, and writing low-level code — similar in spirit to electrical engineering, but focused specifically on computing hardware. Testing and documenting results is a significant, recurring part of the job.",
+      "Expect circuit design software, hardware testing equipment, and writing low-level code in the same day — similar in spirit to electrical engineering, but focused specifically on computing hardware. Testing and documenting results is a significant, recurring part of the job.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Schematic review", detail: "Reviewing a circuit schematic for a new piece of hardware before it goes to prototyping." },
@@ -1022,7 +1022,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "Would you enjoy debugging a problem when you're not even sure yet whether it's a hardware issue or a software issue?",
     },
     // mathIntensity: usefulSubjects leads with "Physics (especially electricity and electronics)" and Calculus, matching electrical engineering's framing.
-    // handsOnWork: typicalWorkday frames it as "a mix" of circuit design, hardware testing, and low-level coding.
+    // handsOnWork: typicalWorkday describes circuit design, hardware testing, and low-level coding in the same day.
     // regulatoryBurden: no regulatory or compliance language appears anywhere in this field's text.
     // marketUncertainty: howCompetitive cites strong BLS growth without the specific hiring-volatility caveat this site gives software engineering, so rated at the same middle level as electrical/mechanical rather than software's High.
     // coding: helpfulSkills calls for "comfort with... programming," and typicalProjects centers "writing firmware."
@@ -1111,7 +1111,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "environmental-engineering",
     name: "Environmental Engineering",
-    tagline: "Designing the systems and solutions that protect air, water, and soil quality — and clean them up when something's gone wrong.",
+    tagline: "The systems and solutions that protect air, water, and soil quality — and clean them up when something's gone wrong.",
     whatItIs:
       "Environmental engineering applies engineering and science to problems involving the natural environment — water quality, air pollution, waste management, and site cleanup. It overlaps significantly with civil and chemical engineering, but focuses specifically on environmental protection and remediation rather than infrastructure or industrial processes in general.",
     whatEngineersWorkOn:
@@ -1147,7 +1147,7 @@ export const fields: EngineeringField[] = [
       "Developing a cleanup plan for a contaminated site",
     ],
     typicalWorkday:
-      "A mix of office-based data analysis and report writing, and time at field sites collecting samples or inspecting facilities for compliance. Environmental engineers often work closely with scientists, technicians, and regulators, and public- or community-facing communication is a real part of some roles.",
+      "Office-based data analysis and report writing shares the week with time at field sites, collecting samples or inspecting facilities for compliance. Environmental engineers often work closely with scientists, technicians, and regulators, and public- or community-facing communication is a real part of some roles.",
     dayInLife: {
       blocks: [
         { time: "8:30 AM", label: "Field site visit", detail: "Collecting water or soil samples at a site being evaluated for contamination." },
@@ -1160,7 +1160,7 @@ export const fields: EngineeringField[] = [
       reflectionQuestion: "Would you find it satisfying to help clean up an environmental problem, even knowing the fix might take years and involve a lot of paperwork along the way?",
     },
     // mathIntensity: usefulSubjects splits fairly evenly across environmental science, chemistry, biology, physics, and calculus — not math-first.
-    // handsOnWork: typicalWorkday frames it as "a mix" of office-based analysis and field site time.
+    // handsOnWork: typicalWorkday has office-based analysis sharing the week with field site time.
     // regulatoryBurden: whatEngineersWorkOn and typicalWorkday both center inspecting facilities and meeting environmental regulations.
     // marketUncertainty: howCompetitive cites solid, real BLS growth similar in strength to civil and mechanical engineering.
     // coding: no programming language appears anywhere in this field's text.
@@ -1286,7 +1286,7 @@ export const fields: EngineeringField[] = [
       "Building a model to compare different process changes before implementing one",
     ],
     typicalWorkday:
-      "A mix of gathering data through observation, surveys, or existing records, analyzing it to find inefficiencies, and working with teams across a business to redesign a process. Much of the job happens in meetings and on-site observation, in addition to computer-based analysis.",
+      "The job means gathering data through observation, surveys, or existing records, analyzing it to find inefficiencies, and working with teams across a business to redesign a process. Much of it happens in meetings and on-site observation, in addition to computer-based analysis.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Floor observation", detail: "Watching a production or service process in action to see where delays happen." },
@@ -1425,7 +1425,7 @@ export const fields: EngineeringField[] = [
       "Evaluating whether a material meets a project's quality and safety specifications",
     ],
     typicalWorkday:
-      "A mix of lab-based testing and experimentation, and collaboration with engineers from other disciplines who need a material with specific properties for their own project. Data analysis and documentation are a significant part of the job, since material performance has to be precisely characterized and recorded.",
+      "Lab-based testing and experimentation are balanced against collaboration with engineers from other disciplines who need a material with specific properties for their own project. Data analysis and documentation are a significant part of the job, since material performance has to be precisely characterized and recorded.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Lab testing", detail: "Testing how a material sample performs under stress or heat." },
@@ -1564,7 +1564,7 @@ export const fields: EngineeringField[] = [
       "Debugging why a robot isn't behaving as expected — and figuring out which discipline the problem is actually in",
     ],
     typicalWorkday:
-      "A mix of mechanical design, electrical and sensor work, and writing control software, plus significant time testing the integrated system as a whole. Because robotics problems can originate in any of the three underlying disciplines, a lot of the job is genuinely cross-disciplinary troubleshooting.",
+      "The job spans mechanical design, electrical and sensor work, and writing control software, plus significant time testing the integrated system as a whole. Because robotics problems can originate in any of the three underlying disciplines, a lot of the job is genuinely cross-disciplinary troubleshooting.",
     dayInLife: {
       blocks: [
         { time: "9:00 AM", label: "Mechanical design", detail: "Working on the physical structure or a joint mechanism for a robotic system." },
@@ -1667,7 +1667,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "nuclear-engineering",
     name: "Nuclear Engineering",
-    tagline: "Designing and monitoring the systems that generate and safely manage nuclear energy.",
+    tagline: "The systems that generate and safely manage nuclear energy — designed and constantly monitored.",
     whatItIs:
       "Nuclear engineering focuses on the safe design, operation, and monitoring of systems that use nuclear energy — from power plants to medical and research applications. It combines physics, safety engineering, and strict regulatory compliance, since the consequences of an error are unusually serious.",
     whatEngineersWorkOn:
@@ -1702,7 +1702,7 @@ export const fields: EngineeringField[] = [
       "Working with a team to prepare for a regulatory inspection or audit",
     ],
     typicalWorkday:
-      "A mix of monitoring plant or system data, reviewing and writing safety documentation, and coordinating with a team on regulatory compliance. Time is split between an office or control room and, depending on the role, in-person time at the physical facility.",
+      "Expect a rotation of monitoring plant or system data, reviewing and writing safety documentation, and coordinating with a team on regulatory compliance. Time is split between an office or control room and, depending on the role, in-person time at the physical facility.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Shift briefing", detail: "Reviewing overnight reactor performance data and any notes from the previous shift." },
@@ -1804,7 +1804,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "petroleum-engineering",
     name: "Petroleum Engineering",
-    tagline: "Designing how oil and natural gas are extracted from the ground safely and efficiently.",
+    tagline: "How oil and natural gas get extracted from the ground, safely and efficiently.",
     whatItIs:
       "Petroleum engineering focuses on how to extract oil and natural gas from the ground safely and efficiently — designing extraction methods, drilling plans, and production systems. It's a specialized field tied closely to the energy industry's own economic cycles.",
     whatEngineersWorkOn:
@@ -1838,7 +1838,7 @@ export const fields: EngineeringField[] = [
       "Assessing the safety and environmental risk of a proposed extraction method",
     ],
     typicalWorkday:
-      "A mix of office-based data analysis and modeling, and — depending on the role — time at a field site reviewing operations in person. Collaboration with geologists and other engineers is a constant part of the job, since reservoir decisions require input from multiple disciplines.",
+      "Office-based data analysis and modeling fills most weeks, with — depending on the role — time at a field site reviewing operations in person. Collaboration with geologists and other engineers is a constant part of the job, since reservoir decisions require input from multiple disciplines.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Data review", detail: "Reviewing overnight production data from an active well." },
@@ -1940,7 +1940,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "agricultural-engineering",
     name: "Agricultural Engineering",
-    tagline: "Applying engineering to farming and food production — equipment, irrigation, and food systems.",
+    tagline: "Engineering put to work on farming and food production — equipment, irrigation, and food systems.",
     whatItIs:
       "Agricultural engineering applies engineering principles to farming and food production — designing equipment, irrigation systems, and structures that make agriculture more efficient, and adapting technology to work with biological and environmental factors that don't behave like standard engineering materials.",
     whatEngineersWorkOn:
@@ -1975,7 +1975,7 @@ export const fields: EngineeringField[] = [
       "Designing a storage or processing facility to reduce food waste after harvest",
     ],
     typicalWorkday:
-      "A mix of design and testing work, often split between an office or lab and time at a farm or field site where equipment and systems are actually used. Collaboration with farmers, agronomists, and food scientists is a regular part of the job, since real-world agricultural conditions constantly inform the engineering.",
+      "Design and testing work is often split between an office or lab and time at a farm or field site where equipment and systems are actually used. Collaboration with farmers, agronomists, and food scientists is a regular part of the job, since real-world agricultural conditions constantly inform the engineering.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Field visit", detail: "Visiting a farm site to see how a piece of equipment or irrigation system is performing in real conditions." },
@@ -2077,7 +2077,7 @@ export const fields: EngineeringField[] = [
   {
     slug: "marine-engineering",
     name: "Marine Engineering",
-    tagline: "Designing and maintaining ships, submarines, and other vessels built for the ocean.",
+    tagline: "Ships, submarines, and other vessels built for the ocean — designed and kept running.",
     whatItIs:
       "Marine engineering, often paired with naval architecture, focuses on designing, building, and maintaining ships, submarines, and other marine vessels and structures — the hull, propulsion systems, and onboard mechanical and electrical systems all need to work reliably in a demanding ocean environment.",
     whatEngineersWorkOn:
@@ -2112,7 +2112,7 @@ export const fields: EngineeringField[] = [
       "Working on the design of an offshore platform or other marine structure",
     ],
     typicalWorkday:
-      "A mix of design and analysis work in an office, and time at a shipyard or aboard a vessel inspecting real systems and structures. The balance between office and hands-on site work varies a lot depending on the specific role and employer.",
+      "Design and analysis work in an office gives way to time at a shipyard or aboard a vessel, inspecting real systems and structures. The balance between office and hands-on site work varies a lot depending on the specific role and employer.",
     dayInLife: {
       blocks: [
         { time: "8:00 AM", label: "Shipyard inspection", detail: "Inspecting a vessel's propulsion system for wear or needed maintenance." },

@@ -12,11 +12,11 @@ export const didYouKnowFactsEs: DidYouKnowFact[] = [
     fieldSlug: "civil-engineering",
   },
   {
-    fact: "La mayoría de los ingenieros biomédicos nunca tratan a un paciente — la mayoría trabaja en laboratorios, investigación y desarrollo, o manufactura, no en entornos clínicos.",
+    fact: "La mayoría de los ingenieros biomédicos nunca tratan a un paciente — el trabajo ocurre sobre todo en laboratorios, investigación y desarrollo, o manufactura, no en entornos clínicos.",
     fieldSlug: "biomedical-engineering",
   },
   {
-    fact: "La mayoría del código profesional no se escribe desde cero — una parte más grande del trabajo es leer y modificar código que alguien más ya escribió.",
+    fact: "Es raro que el código profesional se escriba desde cero — una parte más grande del trabajo es leer y modificar código que alguien más ya escribió.",
     fieldSlug: "software-engineering",
   },
   {

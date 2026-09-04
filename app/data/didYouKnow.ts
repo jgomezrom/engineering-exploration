@@ -22,12 +22,12 @@ export const didYouKnowFacts: DidYouKnowFact[] = [
   },
   {
     // biomedical-engineering, commonMisconceptions
-    fact: "Most biomedical engineers never treat a patient — most work in labs, R&D, or manufacturing, not clinical settings.",
+    fact: "Most biomedical engineers never treat a patient — the work happens mostly in labs, R&D, or manufacturing, not clinical settings.",
     fieldSlug: "biomedical-engineering",
   },
   {
     // software-engineering, whatEngineersWorkOn
-    fact: "Most professional code isn't written from scratch — a bigger part of the job is reading and modifying code someone else already wrote.",
+    fact: "Professional code is rarely written from scratch — a bigger part of the job is reading and modifying code someone else already wrote.",
     fieldSlug: "software-engineering",
   },
   {

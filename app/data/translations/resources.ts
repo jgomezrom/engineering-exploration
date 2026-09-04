@@ -3,13 +3,13 @@ export const resourcesTranslations = {
     badge: "Everything else, in one place",
     heading: "Resources",
     intro:
-      "Beyond the fields, the quiz, and the challenges — this is everything else on the site, gathered in one spot so it's easy to find.",
+      "Beyond the fields, the quiz, and the challenges, there's everything else on the site — gathered here in one spot so it's easy to find.",
   },
   es: {
     badge: "Todo lo demás, en un solo lugar",
     heading: "Recursos",
     intro:
-      "Más allá de los campos, el cuestionario, y los desafíos — esto es todo lo demás en el sitio, reunido en un solo lugar para que sea fácil de encontrar.",
+      "Más allá de los campos, el cuestionario y los desafíos, está todo lo demás del sitio — reunido aquí en un solo lugar para que sea fácil de encontrar.",
   },
 };
 
