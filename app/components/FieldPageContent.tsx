@@ -66,11 +66,13 @@ function PageFrame({
   slug,
   name,
   tagline,
+  printLabel,
   children,
 }: {
   slug: FieldSlug;
   name: string;
   tagline: string;
+  printLabel: string;
   children: React.ReactNode;
 }) {
   return (
@@ -80,7 +82,9 @@ function PageFrame({
       <span className="pointer-events-none absolute bottom-10 left-6 hidden h-8 w-8 border-b-2 border-l-2 border-primary/30 lg:block" />
       <span className="pointer-events-none absolute bottom-10 right-6 hidden h-8 w-8 border-b-2 border-r-2 border-primary/30 lg:block" />
 
-      <BackLink href="/explore" labelKey="backToFields" />
+      <div className="print:hidden">
+        <BackLink href="/explore" labelKey="backToFields" />
+      </div>
 
       <div className="mt-6 inline-flex items-center justify-center rounded-full bg-primary/10 p-4">
         <FieldIcon slug={slug} className="h-10 w-10 text-primary" />
@@ -88,7 +92,23 @@ function PageFrame({
 
       <h1 className="mt-4 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">{name}</h1>
       <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">{tagline}</p>
-      <BookmarkButton slug={slug} />
+      <div className="flex flex-wrap items-center gap-3">
+        <div className="print:hidden">
+          <BookmarkButton slug={slug} />
+        </div>
+        <button
+          type="button"
+          onClick={() => window.print()}
+          className="print:hidden mt-6 flex items-center gap-2 border border-neutral-900/10 px-3 py-1.5 text-xs font-medium text-neutral-600 transition-colors hover:border-primary/40 hover:text-primary dark:border-white/10 dark:text-neutral-400"
+        >
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-3.5 w-3.5">
+            <path d="M6 7.5V3h8v4.5" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+            <rect x="3" y="7.5" width="14" height="7" rx="1" stroke="currentColor" strokeWidth="1.4" />
+            <rect x="6" y="11" width="8" height="5.5" stroke="currentColor" strokeWidth="1.4" />
+          </svg>
+          {printLabel}
+        </button>
+      </div>
 
       {children}
     </main>
@@ -119,8 +139,11 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
     const relatedPool = language === "es" ? [...fieldsEs, ...fields] : fields;
     const related = relatedPool.find((f) => f.slug === stub.relatedField);
     return (
-      <PageFrame slug={stub.slug} name={displayStub.name} tagline={displayStub.tagline}>
-        <div className="mt-8 border border-neutral-900/10 bg-neutral-50 p-5 dark:border-white/10 dark:bg-neutral-900">
+      <PageFrame slug={stub.slug} name={displayStub.name} tagline={displayStub.tagline} printLabel={t.printField}>
+        <div className="mt-8 flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
+          <FieldIllustration slug={stub.slug} className="h-auto w-full max-w-sm text-primary" />
+        </div>
+        <div className="mt-6 border border-neutral-900/10 bg-neutral-50 p-5 dark:border-white/10 dark:bg-neutral-900">
           <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
             {t.stubOverview}
             {related && (
@@ -163,7 +186,7 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
   if (!field) return null;
 
   return (
-    <PageFrame slug={field.slug} name={field.name} tagline={field.tagline}>
+    <PageFrame slug={field.slug} name={field.name} tagline={field.tagline} printLabel={t.printField}>
       <FieldVisitTracker slug={field.slug} />
       {showNotice && <NotTranslatedNotice text={t.notTranslatedNotice} />}
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -201,10 +224,10 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
       </Section>
 
       <Section index={4} title={t.section4}>
-        <p className="mb-5 max-w-2xl text-sm text-neutral-500 dark:text-neutral-400">{t.tapCard}</p>
+        <p className="mb-5 max-w-2xl text-sm text-neutral-500 dark:text-neutral-400 print:hidden">{t.tapCard}</p>
         <MythRealityCards items={field.mythsAndRealities} />
         {careerComparisons.some((c) => c.relatedField === field.slug) && (
-          <Link href="/vs" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+          <Link href="/vs" className="mt-4 inline-block text-sm font-medium text-primary hover:underline print:hidden">
             {t.seeCompared}
           </Link>
         )}

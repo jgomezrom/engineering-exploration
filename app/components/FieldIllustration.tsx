@@ -26,6 +26,13 @@ const DIAGRAM_LABELS = {
     server: "SERVER",
     airflow: "airflow",
     spanDimension: "span 240m",
+    buildingSystems: "structural + mechanical + electrical systems",
+    automotiveCutaway: "chassis + drivetrain",
+    assemblyLine: "assembly line, stamping station",
+    systemsIntegration: "subsystem integration",
+    structuralFrame: "structural frame, 3 stories",
+    renewableEnergy: "solar + wind generation",
+    waferDie: "wafer + die",
   },
   es: {
     airfoilSection: "sección de perfil alar (tipo NACA)",
@@ -44,6 +51,13 @@ const DIAGRAM_LABELS = {
     server: "SERVIDOR",
     airflow: "flujo de aire",
     spanDimension: "luz 240m",
+    buildingSystems: "sistemas estructurales + mecánicos + eléctricos",
+    automotiveCutaway: "chasis + tren motriz",
+    assemblyLine: "línea de ensamblaje, estación de estampado",
+    systemsIntegration: "integración de subsistemas",
+    structuralFrame: "estructura, 3 pisos",
+    renewableEnergy: "generación solar + eólica",
+    waferDie: "oblea + troquel",
   },
 };
 
@@ -509,6 +523,141 @@ export default function FieldIllustration({ slug, className = "h-auto w-full" }:
           <line x1="20" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
           <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
             {labels.shipHull}
+          </text>
+        </svg>
+      );
+
+    case "architectural-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="70" y="35" width="160" height="105" className="fill-primary/5" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M90 35v105M120 35v105M150 35v105M180 35v105M210 35v105" stroke="currentColor" strokeWidth="0.5" opacity="0.25" />
+          <path d="M70 60h160M70 85h160M70 110h160" stroke="currentColor" strokeWidth="0.5" opacity="0.25" />
+          <rect x="80" y="45" width="90" height="13" className="fill-accent/10" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="170" y="45" width="13" height="30" className="fill-accent/10" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="196" y="35" width="12" height="105" className="fill-neutral-900/5 dark:fill-white/5" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="90" y="110" width="20" height="24" stroke="currentColor" strokeWidth="1.2" className="fill-neutral-50 dark:fill-neutral-900" />
+          <path d="M97 116l-3 6h4l-3 6" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+          <line x1="20" y1="150" x2="280" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.buildingSystems}
+          </text>
+        </svg>
+      );
+
+    case "automotive-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <path
+            d="M40 122c0-9 8-16 22-16h8l20-24h58l26 24h28c15 0 26 7 26 16v10H40Z"
+            className="fill-primary/6"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinejoin="round"
+          />
+          <path d="M92 106l14-18h50l18 18" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+          <circle cx="86" cy="132" r="16" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <circle cx="86" cy="132" r="6" stroke="currentColor" strokeWidth="1.2" />
+          <circle cx="204" cy="132" r="16" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <circle cx="204" cy="132" r="6" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="48" y="104" width="30" height="16" strokeDasharray="2 2" stroke="currentColor" strokeWidth="1" className="fill-accent/10" />
+          <line x1="20" y1="150" x2="270" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.automotiveCutaway}
+          </text>
+        </svg>
+      );
+
+    case "manufacturing-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <rect x="140" y="35" width="12" height="45" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-900/5 dark:fill-white/5" />
+          <rect x="118" y="80" width="56" height="16" className="fill-accent/12" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="128" y="96" width="36" height="10" stroke="currentColor" strokeWidth="1.2" />
+          <line x1="30" y1="122" x2="270" y2="122" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="30" y1="134" x2="270" y2="134" stroke="currentColor" strokeWidth="1.5" />
+          {Array.from({ length: 9 }).map((_, i) => (
+            <circle key={i} cx={40 + i * 28} cy={128} r="3" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+          ))}
+          <rect x="60" y="108" width="20" height="20" className="fill-primary/15" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="20" y1="150" x2="280" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.assemblyLine}
+          </text>
+        </svg>
+      );
+
+    case "systems-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <path d="M150 70L110 45M150 70L190 45M150 70L110 100M150 70L190 100M150 70V70" stroke="currentColor" strokeWidth="1.2" opacity="0.6" />
+          <circle cx="150" cy="70" r="18" className="fill-primary/12" stroke="currentColor" strokeWidth="1.75" />
+          <rect x="90" y="28" width="40" height="24" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <rect x="170" y="28" width="40" height="24" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <rect x="90" y="86" width="40" height="24" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <rect x="170" y="86" width="40" height="24" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <line x1="150" y1="88" x2="150" y2="128" stroke="currentColor" strokeWidth="1.2" opacity="0.6" />
+          <rect x="128" y="128" width="44" height="22" stroke="currentColor" strokeWidth="1.5" className="fill-accent/10" />
+          <line x1="20" y1="165" x2="280" y2="165" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
+          <text x="150" y="176" textAnchor="middle" className="fill-current font-mono text-[8px]">
+            {labels.systemsIntegration}
+          </text>
+        </svg>
+      );
+
+    case "structural-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          {[60, 120, 180, 240].map((x) => (
+            <line key={x} x1={x} y1="35" x2={x} y2="145" stroke="currentColor" strokeWidth="1.75" />
+          ))}
+          {[35, 71, 107, 143].map((y) => (
+            <line key={y} x1="60" y1={y} x2="240" y2={y} stroke="currentColor" strokeWidth="1.5" />
+          ))}
+          <path d="M60 35L120 71M120 35L60 71M120 35L180 71M180 35L120 71M180 35L240 71M240 35L180 71" stroke="currentColor" strokeWidth="0.75" opacity="0.4" />
+          <path d="M60 71L120 107M120 71L60 107M120 71L180 107M180 71L120 107M180 71L240 107M240 71L180 107" stroke="currentColor" strokeWidth="0.75" opacity="0.4" />
+          <path d="M60 107L120 143M120 107L60 143M120 107L180 143M180 107L120 143M180 107L240 143M240 107L180 143" stroke="currentColor" strokeWidth="0.75" opacity="0.4" />
+          <line x1="30" y1="155" x2="270" y2="155" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
+          <text x="150" y="168" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.structuralFrame}
+          </text>
+        </svg>
+      );
+
+    case "energy-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <g transform="rotate(-18 110 75)">
+            <rect x="65" y="55" width="90" height="55" className="fill-primary/10" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M65 73.3h90M65 91.7h90M95 55v55M125 55v55" stroke="currentColor" strokeWidth="0.75" opacity="0.5" />
+          </g>
+          <line x1="225" y1="140" x2="225" y2="42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="225" cy="42" r="3.5" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <path d="M225 42L262 34M225 42L200 62M225 42L212 12" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+          <line x1="20" y1="150" x2="280" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.renewableEnergy}
+          </text>
+        </svg>
+      );
+
+    case "semiconductor-engineering":
+      return (
+        <svg viewBox="0 0 300 180" fill="none" aria-hidden="true" className={className}>
+          <path d="M70 90a45 45 0 1 1 32 43l-8-14" className="fill-primary/5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M60 35l30 30M60 145l30-30M120 20l16 40M175 25l-10 42" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+          <rect x="88" y="72" width="26" height="26" className="fill-accent/25" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M114 85h30M88 85H58M101 72V52M101 98v20" stroke="currentColor" strokeWidth="1" strokeDasharray="1.5 2" opacity="0.7" />
+          <rect x="180" y="55" width="70" height="70" stroke="currentColor" strokeWidth="1.5" className="fill-neutral-50 dark:fill-neutral-900" />
+          <path
+            d="M195 65h20v14h-20zM225 65h14v10h-14zM195 90h40M195 100h25M195 110h34"
+            stroke="currentColor"
+            strokeWidth="0.9"
+            opacity="0.75"
+          />
+          <line x1="20" y1="150" x2="280" y2="150" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" opacity="0.3" />
+          <text x="150" y="165" textAnchor="middle" className="fill-current font-mono text-[9px]">
+            {labels.waferDie}
           </text>
         </svg>
       );

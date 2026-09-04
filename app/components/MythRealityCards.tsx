@@ -45,10 +45,28 @@ export default function MythRealityCards({ items }: { items: MythReality[] }) {
   const { language } = useLanguage();
   const t = LABELS[language];
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((item) => (
-        <FlipCard key={item.myth} item={item} t={t} />
-      ))}
-    </div>
+    <>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 print:hidden">
+        {items.map((item) => (
+          <FlipCard key={item.myth} item={item} t={t} />
+        ))}
+      </div>
+      {/* Flip cards only ever show one side on paper — print both, stacked,
+          so nothing gets lost when this page is printed. */}
+      <div className="hidden print:block print:space-y-4">
+        {items.map((item) => (
+          <div key={item.myth} className="border border-neutral-300 p-4">
+            <p>
+              <span className="font-mono text-xs uppercase tracking-widest">{t.myth}: </span>
+              {item.myth}
+            </p>
+            <p className="mt-2">
+              <span className="font-mono text-xs uppercase tracking-widest">{t.reality}: </span>
+              {item.reality}
+            </p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

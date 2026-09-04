@@ -55,7 +55,10 @@ export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps 
 
   return (
     <div>
-      <div className="flex flex-wrap items-center gap-2">
+      <p className="hidden text-sm text-neutral-600 print:block dark:text-neutral-400">
+        {t.ages} {selected}
+      </p>
+      <div className="flex flex-wrap items-center gap-2 print:hidden">
         {AGE_BANDS.map((band) => {
           const isSelected = selected === band;
           return (
@@ -76,7 +79,7 @@ export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps 
         })}
       </div>
 
-      <p className="mt-3 text-xs text-neutral-500 dark:text-neutral-400">
+      <p className="mt-3 text-xs text-neutral-500 print:hidden dark:text-neutral-400">
         {isRemembered ? (
           <>
             {t.rememberingPrefix} {selected} {t.rememberingSuffix}{" "}
@@ -130,7 +133,7 @@ export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps 
           </p>
           <Link
             href="/opportunities"
-            className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
+            className="mt-2 inline-block text-sm font-medium text-primary hover:underline print:hidden"
           >
             {t.findOne}
           </Link>
