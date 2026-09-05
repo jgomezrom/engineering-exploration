@@ -14,7 +14,75 @@ import { useLanguage } from "../context/LanguageContext";
 const WIDTH = 960;
 const HEIGHT = 1080;
 const PADDING_Y = 24;
-const COL_X = [90, 480, 870];
+const COL_X = [140, 480, 870];
+
+// SVG <text> doesn't wrap on its own, and the outer columns don't have much
+// horizontal room before hitting the diagram's edge — long topic names (e.g.
+// "College Math & Basic Science (unspecified)") were getting clipped rather
+// than wrapping. There's no canvas available at render time to measure real
+// text width, so this picks a word-boundary split using a rough per-character
+// width estimate, choosing whichever split keeps both resulting lines as
+// short as possible.
+function estimateWidth(str: string) {
+  let width = 0;
+  for (const ch of str) {
+    if (ch === " " || /[iIl.,'!|]/.test(ch)) width += 0.3;
+    else if (/[A-Z]/.test(ch)) width += 0.72;
+    else if (/[a-z]/.test(ch)) width += 0.52;
+    else width += 0.55;
+  }
+  return width;
+}
+
+function wrapLabel(label: string, maxChars = 15): [string] | [string, string] {
+  if (label.length <= maxChars) return [label];
+  const words = label.split(" ");
+  if (words.length < 2) return [label];
+  let best = { split: 1, maxWidth: Infinity };
+  for (let i = 1; i < words.length; i++) {
+    const line1 = words.slice(0, i).join(" ");
+    const line2 = words.slice(i).join(" ");
+    const w = Math.max(estimateWidth(line1), estimateWidth(line2));
+    if (w < best.maxWidth) best = { split: i, maxWidth: w };
+  }
+  return [words.slice(0, best.split).join(" "), words.slice(best.split).join(" ")];
+}
+
+function WrappedLabel({
+  label,
+  x,
+  y,
+  textAnchor,
+  className,
+  fontSize,
+  fontWeight,
+}: {
+  label: string;
+  x: number;
+  y: number;
+  textAnchor: "start" | "end";
+  className: string;
+  fontSize: number;
+  fontWeight?: number;
+}) {
+  const lines = wrapLabel(label);
+  return (
+    <text x={x} y={y} textAnchor={textAnchor} className={className} fontSize={fontSize} fontWeight={fontWeight}>
+      {lines.length === 1 ? (
+        <tspan dy="0.32em">{lines[0]}</tspan>
+      ) : (
+        <>
+          <tspan x={x} dy="-0.15em">
+            {lines[0]}
+          </tspan>
+          <tspan x={x} dy="1.1em">
+            {lines[1]}
+          </tspan>
+        </>
+      )}
+    </text>
+  );
+}
 
 function layoutColumn(nodes: TopicMapNode[]) {
   const usable = HEIGHT - PADDING_Y * 2;
@@ -104,16 +172,14 @@ export default function CurriculumTopicMap() {
           {col0.map((node) => (
             <g key={node.id}>
               <circle cx={COL_X[0]} cy={yFor(node)} r={2.5} fill="currentColor" className="text-primary" />
-              <text
+              <WrappedLabel
+                label={node.label}
                 x={COL_X[0] - 10}
                 y={yFor(node)}
-                dy="0.32em"
                 textAnchor="end"
                 className="fill-neutral-600 dark:fill-neutral-400"
                 fontSize={11}
-              >
-                {node.label}
-              </text>
+              />
             </g>
           ))}
 
@@ -138,17 +204,15 @@ export default function CurriculumTopicMap() {
           {col2.map((node) => (
             <g key={node.id}>
               <circle cx={COL_X[2]} cy={yFor(node)} r={2.5} fill="currentColor" className="text-primary" />
-              <text
+              <WrappedLabel
+                label={node.label}
                 x={COL_X[2] + 10}
                 y={yFor(node)}
-                dy="0.32em"
                 textAnchor="start"
                 className="fill-neutral-900 dark:fill-white"
                 fontSize={11}
                 fontWeight={600}
-              >
-                {node.label}
-              </text>
+              />
             </g>
           ))}
         </svg>
