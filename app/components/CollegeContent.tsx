@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import FadeIn from "./FadeIn";
+import CurriculumTopicMap from "./CurriculumTopicMap";
 import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
 import { collegeCurricula } from "../data/collegeCurricula";
@@ -156,6 +157,10 @@ export default function CollegeContent() {
             </table>
           </div>
         )}
+      </FadeIn>
+
+      <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+        <CurriculumTopicMap />
       </FadeIn>
 
       <FadeIn as="section" className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
