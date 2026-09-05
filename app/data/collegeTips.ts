@@ -1,82 +1,56 @@
 import { CollegeTip } from "./types";
 
-// PLACEHOLDER DATA — every tip below is invented, purely to verify the
-// layout: theme grouping, the confidence-label display, the required
-// dependsOn hedge, and the optional sourceUrl link. None of it should be
-// treated as real advice. Real, sourced tips replace these entries entirely.
 export const collegeTips: CollegeTip[] = [
   {
-    slug: "placeholder-spaced-repetition",
-    text: "Placeholder tip: spacing out review sessions over several days beats one long cram session for retaining technical material.",
+    slug: "active-problem-solving-vs-passive-review",
+    text: "Focus on active problem-solving and peer-led discussions rather than passively re-reading lecture slides. Students who engage in active learning develop better higher-order cognitive skills and retain information longer, even if the increased cognitive effort makes them feel like they are struggling more in the moment.",
     theme: "study-strategies",
     confidence: "research-backed",
-    dependsOn: "How well this transfers depends on the type of material — it's most studied for memorization-heavy content, less so for open-ended design work.",
-    sourceUrl: "https://example.edu/sources/spaced-repetition",
+    dependsOn:
+      "The student's willingness to embrace the discomfort of working through difficult practice problems from scratch rather than taking the \"easy\" route of just watching a professor solve them on a board.",
+    sourceUrl: "https://adiutor.co/blog/impact-of-active-versus-passive-learning-approaches-on-student-academic-performance/",
   },
   {
-    slug: "placeholder-study-group-size",
-    text: "Placeholder tip: a study group of 3–4 people tends to work better than a much larger group for problem-set-heavy courses.",
+    slug: "secure-an-internship-before-graduation",
+    text: "Prioritize securing at least one industry internship or co-op before graduation. Hands-on experience fundamentally alters career trajectories, clarifies career choices, and significantly builds professional competencies compared to classroom theory alone.",
+    theme: "internships",
+    confidence: "research-backed",
+    dependsOn:
+      "The student's ultimate career goal. If a student strictly intends to pursue a Ph.D. and enter academia, participating in undergraduate laboratory research will generally take precedence over corporate industry internships.",
+    sourceUrl:
+      "https://par.nsf.gov/biblio/10076373-exploring-how-engineering-internships-undergraduate-research-experiences-inform-influence-college-students-career-decisions-future-plans",
+  },
+  {
+    slug: "front-load-hard-prerequisite-chains",
+    text: "Front-load heavy prerequisite chains and map out notoriously difficult classes for your sophomore or junior year.",
+    theme: "course-planning",
+    confidence: "personal experience",
+    dependsOn:
+      "Your specific university's curriculum flowchart and class availability. This strategy only works if the department offers those critical path classes in the semesters you need them, and requires careful academic advising to ensure you don't overwhelm a single semester.",
+  },
+  {
+    slug: "join-a-research-lab-sophomore-year",
+    text: "Volunteer in a professor's research lab by your sophomore year to gain hands-on technical skills and equipment experience that standard core classes won't teach you.",
+    theme: "research",
+    confidence: "varies by situation",
+    dependsOn:
+      "Faculty availability, department funding, and the type of institution. This is highly feasible at large research institutions (R1 universities) but may be much harder to secure at smaller teaching-focused colleges with limited graduate lab space.",
+  },
+  {
+    slug: "input-focused-study-goals",
+    text: 'Set "input-focused" study goals (e.g., "I will do focused practice problems for two hours") rather than "output-focused" goals (e.g., "I will memorize this entire chapter today").',
     theme: "study-strategies",
-    confidence: "personal experience",
-    dependsOn: "Depends heavily on group composition — one or two genuinely engaged people can outweigh group size.",
-  },
-  {
-    slug: "placeholder-course-load-balance",
-    text: "Placeholder tip: try to balance one historically hard course against lighter electives in the same term rather than stacking multiple hard courses together.",
-    theme: "course-planning",
     confidence: "varies by situation",
-    dependsOn: "Depends on your program's required sequencing — some majors leave little room to choose which hard courses land in the same term.",
+    dependsOn:
+      "The student's baseline self-discipline. Input-focused goals only work if the student holds themselves accountable to actual, distraction-free deep work during those dedicated time blocks, rather than just running out the clock.",
   },
   {
-    slug: "placeholder-talk-to-upperclassmen",
-    text: "Placeholder tip: ask upperclassmen in your major which professors' sections of a required course they'd actually recommend before you register.",
-    theme: "course-planning",
-    confidence: "personal experience",
-    dependsOn: "Depends on your school actually offering multiple sections with different instructors for the same course.",
-  },
-  {
-    slug: "placeholder-internship-early",
-    text: "Placeholder tip: applying for internships a full semester before the summer you want one is common in competitive fields.",
-    theme: "internships",
-    confidence: "varies by situation",
-    dependsOn: "Timelines vary a lot by industry and by whether a company uses a formal early recruiting cycle.",
-  },
-  {
-    slug: "placeholder-internship-not-required",
-    text: "Placeholder tip: not having an internship yet by your second year is not unusual and doesn't mean you're behind.",
-    theme: "internships",
-    confidence: "research-backed",
-    dependsOn: "How much this matters depends on your specific field's hiring norms and local job market.",
-    sourceUrl: "https://example.edu/sources/internship-timing",
-  },
-  {
-    slug: "placeholder-undergrad-research-email",
-    text: "Placeholder tip: professors doing research you're interested in are often open to undergraduates emailing to ask about joining their lab, even without prior experience.",
-    theme: "research",
-    confidence: "varies by situation",
-    dependsOn: "Depends heavily on the specific professor, lab funding, and how many students are already in the lab.",
-  },
-  {
-    slug: "placeholder-research-vs-coursework",
-    text: "Placeholder tip: undergraduate research experience is generally viewed favorably for graduate school applications, more so than for most industry-track jobs.",
-    theme: "research",
-    confidence: "research-backed",
-    dependsOn: "Depends on the specific career path — the weight this carries differs a lot between graduate admissions and industry hiring.",
-    sourceUrl: "https://example.edu/sources/research-and-admissions",
-  },
-  {
-    slug: "placeholder-burnout-warning-signs",
-    text: "Placeholder tip: a sudden drop in interest in a subject you used to enjoy can be an early sign of burnout, not necessarily a sign you chose the wrong major.",
+    slug: "schedule-deliberate-breaks-and-exercise",
+    text: 'Schedule deliberate "waste-of-time" activities and physical exercise into your weekly calendar to combat the physical exhaustion and cognitive impairment that comes with intense coursework. The unrelenting quest for perfection in engineering makes stepping away entirely critical to preventing emotional detachment.',
     theme: "workload-and-burnout",
     confidence: "research-backed",
-    dependsOn: "This is a general pattern, not a diagnosis — persistent burnout symptoms are worth discussing with a real counselor, not just self-managing.",
-    sourceUrl: "https://example.edu/sources/burnout-signs",
-  },
-  {
-    slug: "placeholder-workload-varies",
-    text: "Placeholder tip: reported weekly workload for the same major can vary a lot between schools, and even between two students at the same school.",
-    theme: "workload-and-burnout",
-    confidence: "personal experience",
-    dependsOn: "Depends on course selection, work/life circumstances outside school, and how a given student studies.",
+    dependsOn:
+      "The individual's time-management skills. Taking deliberate breaks is an effective recovery tool only if the student is consistently utilizing their study blocks productively and not falling behind on critical deadlines.",
+    sourceUrl: "https://www.sandipuniversity.edu.in/blog/signs-of-burnout-in-engineering-students/",
   },
 ];
