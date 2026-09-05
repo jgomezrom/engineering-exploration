@@ -157,4 +157,18 @@ export const resourceLinks = [
       </svg>
     ),
   },
+  {
+    href: "/college",
+    title: "Engineering in College",
+    description: "Real, published course sequences for 23 majors, plus practical tips for the parts nobody explains clearly.",
+    accentColor: "primary" as const,
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+        <path d="M20 9l16 7-16 7-16-7 16-7Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M11 19.5v6c0 2.2 4 4 9 4s9-1.8 9-4v-6" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M36 16v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="36" cy="27.5" r="1.3" fill="currentColor" />
+      </svg>
+    ),
+  },
 ];

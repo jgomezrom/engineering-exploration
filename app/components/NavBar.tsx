@@ -38,7 +38,7 @@ export default function NavBar() {
             <path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
             <path d="M10 20v-5h4v5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
           </svg>
-          Engineering Exploration
+          <span className="hidden sm:inline">Engineering Exploration</span>
         </Link>
 
         <div className="flex items-center gap-3">

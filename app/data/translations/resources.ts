@@ -70,4 +70,9 @@ export const resourceLinksEs: Record<string, { title: string; description: strin
     title: "Para Padres y Docentes",
     description: "Qué es este sitio, qué recopila (nada), y cómo podría ser útil en un salón de clases.",
   },
+  "/college": {
+    title: "Ingeniería en la Universidad",
+    description:
+      "Secuencias de cursos reales y publicadas para 23 carreras, además de consejos prácticos sobre las cosas que nadie explica claramente.",
+  },
 };

@@ -12,6 +12,7 @@ import {
 import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
 import { useLanguage } from "../context/LanguageContext";
+import { collegeOnlyMajorNames } from "../data/translations/college";
 
 const WIDTH = 960;
 const HEIGHT = 1080;
@@ -170,8 +171,11 @@ export default function CurriculumTopicMap() {
     setSelectedMajor((current) => (current === id ? null : id));
   };
 
+  // All four excluded fields are college-only majors with no full field-
+  // exploration page yet, so they fall back to collegeOnlyMajorNames instead
+  // of the raw slug (see the same fallback in CollegeContent.tsx).
   const excludedNames = topicMapExcludedFields
-    .map((slug) => displayFields.find((f) => f.slug === slug)?.name ?? slug)
+    .map((slug) => displayFields.find((f) => f.slug === slug)?.name ?? collegeOnlyMajorNames[language][slug] ?? slug)
     .join(", ");
 
   return (
