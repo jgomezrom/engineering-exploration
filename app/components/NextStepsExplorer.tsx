@@ -4,20 +4,23 @@ import { useState } from "react";
 import Link from "next/link";
 import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
-import { AgeBand, NextSteps } from "../data/types";
-import { useAgeBand } from "../context/AgeBandContext";
+import { GradeBand, NextSteps } from "../data/types";
+import { useGradeBand } from "../context/GradeBandContext";
 import { useLanguage } from "../context/LanguageContext";
 
-const AGE_BANDS: AgeBand[] = ["10-12", "13-15", "16-18"];
+const GRADE_BANDS: GradeBand[] = ["middle-school", "high-school", "college"];
 
 const LABELS = {
   en: {
-    ages: "Ages",
-    rememberingPrefix: "Remembering ages",
+    gradeLevel: "Grade level",
+    bandLabels: { "middle-school": "Middle school", "high-school": "High school", college: "College" } as Record<GradeBand, string>,
+    bandDetail: { "middle-school": "(US grades 6–8)", "high-school": "(US grades 9–12)", college: "" } as Record<GradeBand, string>,
+    gradeSystemsNote: "Grade systems vary by country — pick whichever tab is the closest match for where you are.",
+    rememberingPrefix: "Remembering",
     rememberingSuffix: "for other pages too, just for this visit —",
     forgetIt: "forget it",
     notSaved: "Not saved anywhere.",
-    rememberPrefix: "Remember ages",
+    rememberPrefix: "Remember",
     rememberSuffix: "for other pages too",
     rememberNote: "(just for this visit — nothing is stored beyond your browser tab).",
     projectTitle: "A project to try",
@@ -27,12 +30,15 @@ const LABELS = {
     relatedTitle: "A related field to compare",
   },
   es: {
-    ages: "Edades",
-    rememberingPrefix: "Recordando las edades",
+    gradeLevel: "Nivel educativo",
+    bandLabels: { "middle-school": "Secundaria", "high-school": "Preparatoria", college: "Universidad" } as Record<GradeBand, string>,
+    bandDetail: { "middle-school": "(grados 6.º–8.º en EE. UU.)", "high-school": "(grados 9.º–12.º en EE. UU.)", college: "" } as Record<GradeBand, string>,
+    gradeSystemsNote: "Los sistemas educativos varían según el país — elige la pestaña que más se parezca a tu situación.",
+    rememberingPrefix: "Recordando",
     rememberingSuffix: "también para otras páginas, solo por esta visita —",
     forgetIt: "olvidarlo",
     notSaved: "No se guarda en ningún lado.",
-    rememberPrefix: "Recordar las edades",
+    rememberPrefix: "Recordar",
     rememberSuffix: "también para otras páginas",
     rememberNote: "(solo por esta visita — no se guarda nada más allá de esta pestaña del navegador).",
     projectTitle: "Un proyecto para probar",
@@ -44,22 +50,23 @@ const LABELS = {
 };
 
 export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps }) {
-  const { ageBand, setAgeBand } = useAgeBand();
+  const { gradeBand, setGradeBand } = useGradeBand();
   const { language } = useLanguage();
   const t = LABELS[language];
-  const [selected, setSelected] = useState<AgeBand>(ageBand ?? "13-15");
+  const [selected, setSelected] = useState<GradeBand>(gradeBand ?? "high-school");
   const suggestion = nextSteps[selected];
   const fieldPool = language === "es" ? [...fieldsEs, ...fields] : fields;
   const relatedField = fieldPool.find((f) => f.slug === suggestion.relatedField);
-  const isRemembered = ageBand === selected;
+  const isRemembered = gradeBand === selected;
+  const selectedLabel = t.bandLabels[selected];
 
   return (
     <div>
       <p className="hidden text-sm text-neutral-600 print:block dark:text-neutral-400">
-        {t.ages} {selected}
+        {t.gradeLevel}: {selectedLabel}
       </p>
       <div className="flex flex-wrap items-center gap-2 print:hidden">
-        {AGE_BANDS.map((band) => {
+        {GRADE_BANDS.map((band) => {
           const isSelected = selected === band;
           return (
             <button
@@ -73,19 +80,22 @@ export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps 
                   : "border-neutral-900/10 text-neutral-600 hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
               }`}
             >
-              {t.ages} {band}
+              {t.bandLabels[band]}
+              {t.bandDetail[band] && <span className="ml-1 font-normal opacity-70">{t.bandDetail[band]}</span>}
             </button>
           );
         })}
       </div>
 
-      <p className="mt-3 text-xs text-neutral-500 print:hidden dark:text-neutral-400">
+      <p className="mt-2 text-xs text-neutral-500 print:hidden dark:text-neutral-400">{t.gradeSystemsNote}</p>
+
+      <p className="mt-2 text-xs text-neutral-500 print:hidden dark:text-neutral-400">
         {isRemembered ? (
           <>
-            {t.rememberingPrefix} {selected} {t.rememberingSuffix}{" "}
+            {t.rememberingPrefix} {selectedLabel} {t.rememberingSuffix}{" "}
             <button
               type="button"
-              onClick={() => setAgeBand(null)}
+              onClick={() => setGradeBand(null)}
               className="font-medium text-primary hover:underline"
             >
               {t.forgetIt}
@@ -97,10 +107,10 @@ export default function NextStepsExplorer({ nextSteps }: { nextSteps: NextSteps 
             {t.notSaved}{" "}
             <button
               type="button"
-              onClick={() => setAgeBand(selected)}
+              onClick={() => setGradeBand(selected)}
               className="font-medium text-primary hover:underline"
             >
-              {t.rememberPrefix} {selected} {t.rememberSuffix}
+              {t.rememberPrefix} {selectedLabel} {t.rememberSuffix}
             </button>{" "}
             {t.rememberNote}
           </>

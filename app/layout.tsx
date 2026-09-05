@@ -3,7 +3,7 @@ import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import NavBar from "./components/NavBar"; import Footer from "./components/Footer";
-import { AgeBandProvider } from "./context/AgeBandContext";
+import { GradeBandProvider } from "./context/GradeBandContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LanguageProvider } from "./context/LanguageContext";
 
@@ -66,11 +66,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
           <LanguageProvider>
-            <AgeBandProvider>
+            <GradeBandProvider>
               <NavBar />
               {children}
               <Footer />
-            </AgeBandProvider>
+            </GradeBandProvider>
           </LanguageProvider>
         </ThemeProvider>
         <Analytics />

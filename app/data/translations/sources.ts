@@ -24,7 +24,7 @@ export const sourcesTranslations = {
     bullet2:
       'Nothing is presented as more certain than it is — hedges like "if available" and "varies by region" are there on purpose, not filler.',
     bullet3:
-      "Nothing on this site is gated by age, and nothing you do on it (quiz answers, reflections, age preferences) is saved anywhere — see the note on each interactive feature.",
+      "Nothing on this site is gated by grade level, and nothing you do on it (quiz answers, reflections, grade-level preferences) is saved anywhere — see the note on each interactive feature.",
     citationsHeading: "Every salary citation on this site",
     citationsIntro:
       "All U.S. national medians, all from named sources, all dated. If one of these looks outdated, it probably is by the time you're reading this — check the source link directly.",
@@ -63,7 +63,7 @@ export const sourcesTranslations = {
     bullet2:
       'Nada se presenta como más certero de lo que es — matices como "si está disponible" y "varía según la región" están ahí a propósito, no como relleno.',
     bullet3:
-      "Nada en este sitio está restringido por edad, y nada de lo que hagas en él (respuestas del cuestionario, reflexiones, preferencias de edad) se guarda en ningún lado — consulta la nota en cada función interactiva.",
+      "Nada en este sitio está restringido por nivel educativo, y nada de lo que hagas en él (respuestas del cuestionario, reflexiones, preferencias de nivel educativo) se guarda en ningún lado — consulta la nota en cada función interactiva.",
     citationsHeading: "Cada cita de salario en este sitio",
     citationsIntro:
       "Todas son medianas nacionales de EE. UU., todas de fuentes nombradas, todas fechadas. Si alguna de estas se ve desactualizada, probablemente lo esté para cuando estés leyendo esto — consulta el enlace de la fuente directamente.",

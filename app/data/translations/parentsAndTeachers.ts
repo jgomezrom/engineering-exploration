@@ -8,7 +8,7 @@ export const parentsAndTeachersTranslations = {
     section1P1Before: "Engineering Exploration is a free, static website (see",
     aboutLink: "About",
     section1P1Mid:
-      ") built by a college student to give teens and young adults an honest look at what engineers in different fields actually do — not a recruiting pitch, not a list of job titles. Every field page includes the unglamorous parts on purpose: common misconceptions, what people actually dislike about the work, and how competitive the job market really is, alongside a",
+      ") built by a college student to give middle school, high school, and college students an honest look at what engineers in different fields actually do — not a recruiting pitch, not a list of job titles. Every field page includes the unglamorous parts on purpose: common misconceptions, what people actually dislike about the work, and how competitive the job market really is, alongside a",
     courseRoadmapLink: "full course roadmap",
     section1P1After: "(AP, IB, and international equivalents) for students trying to plan ahead.",
     section1P2Before:
@@ -25,7 +25,7 @@ export const parentsAndTeachersTranslations = {
     bullet3:
       "Every reflection prompt (on challenge pages and the Day in the Life feature) is a plain text box that is never saved, submitted, or sent anywhere — it's there for the student's own thinking, not for anyone else to read.",
     bullet4:
-      "The optional \"remember my age band\" feature only ever lives in the browser's memory for that one visit, never in a cookie, local storage, or on a server — closing the tab erases it completely.",
+      "The optional \"remember my grade level\" feature only ever lives in the browser's memory for that one visit, never in a cookie, local storage, or on a server — closing the tab erases it completely.",
     bullet5Before:
       "This site uses Vercel Web Analytics to see anonymous, aggregate traffic — total visits and which pages are popular. It doesn't use cookies, and per",
     vercelLink: "Vercel's own privacy documentation",
@@ -55,7 +55,7 @@ export const parentsAndTeachersTranslations = {
     section1P1Before: "Engineering Exploration es un sitio web gratuito y estático (consulta",
     aboutLink: "Acerca de",
     section1P1Mid:
-      ") construido por un estudiante universitario para darles a los adolescentes y adultos jóvenes una mirada honesta de lo que realmente hacen los ingenieros en diferentes campos — no es publicidad de reclutamiento, ni una lista de títulos de trabajo. Cada página de campo incluye a propósito las partes poco glamorosas: malentendidos comunes, lo que a la gente realmente le disgusta del trabajo, y qué tan competitivo es realmente el mercado laboral, junto con un",
+      ") construido por un estudiante universitario para darles a estudiantes de secundaria, preparatoria y universidad una mirada honesta de lo que realmente hacen los ingenieros en diferentes campos — no es publicidad de reclutamiento, ni una lista de títulos de trabajo. Cada página de campo incluye a propósito las partes poco glamorosas: malentendidos comunes, lo que a la gente realmente le disgusta del trabajo, y qué tan competitivo es realmente el mercado laboral, junto con un",
     courseRoadmapLink: "mapa completo de cursos",
     section1P1After: "(AP, IB, y equivalentes internacionales) para estudiantes que están tratando de planear con anticipación.",
     section1P2Before:
@@ -72,7 +72,7 @@ export const parentsAndTeachersTranslations = {
     bullet3:
       "Cada pregunta de reflexión (en las páginas de desafíos y en la función Día en la Vida) es un simple cuadro de texto que nunca se guarda, se envía, ni se manda a ningún lado — está ahí para el propio pensamiento del estudiante, no para que nadie más lo lea.",
     bullet4:
-      'La función opcional de "recordar mi rango de edad" solo vive en la memoria del navegador durante esa visita, nunca en una cookie, almacenamiento local, o en un servidor — cerrar la pestaña la borra por completo.',
+      'La función opcional de "recordar mi nivel educativo" solo vive en la memoria del navegador durante esa visita, nunca en una cookie, almacenamiento local, o en un servidor — cerrar la pestaña la borra por completo.',
     bullet5Before:
       "Este sitio usa Vercel Web Analytics para ver tráfico anónimo y agregado — visitas totales y qué páginas son populares. No usa cookies, y según",
     vercelLink: "la propia documentación de privacidad de Vercel",

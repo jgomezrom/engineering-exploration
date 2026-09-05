@@ -93,9 +93,13 @@ export type SalaryData = {
   verifiedDate: string;
 };
 
-export type AgeBand = "10-12" | "13-15" | "16-18";
+// US grade levels, since that's the framing a reader actually thinks in day to
+// day — "college" especially isn't an age range at all. Grade systems vary by
+// country, so UI showing these should say so rather than assume the US system
+// is universal.
+export type GradeBand = "middle-school" | "high-school" | "college";
 
-// Concrete next steps for someone at a given age/stage. Availability of clubs and
+// Concrete next steps for someone at a given stage. Availability of clubs and
 // programs varies a lot by school and region, so the wording should hedge
 // ("if available") rather than assume every reader has access to the same things.
 export type NextStepSuggestion = {
@@ -105,7 +109,7 @@ export type NextStepSuggestion = {
   relatedField: FieldSlug;
 };
 
-export type NextSteps = Record<AgeBand, NextStepSuggestion>;
+export type NextSteps = Record<GradeBand, NextStepSuggestion>;
 
 export type EngineeringField = {
   slug: FieldSlug;

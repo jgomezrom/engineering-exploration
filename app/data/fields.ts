@@ -84,22 +84,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Build a simple catapult or pulley system from household materials and see how far or how much it can move.",
         tool: "No special tools needed yet — just try building with what's around the house.",
         activity: "Look for a LEGO robotics or STEM club at school, or a FIRST LEGO League team, if one's available near you.",
         relatedField: "electrical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Design a simple part in a free browser-based CAD tool, then think through how you'd actually build it.",
         tool: "Tinkercad — free, browser-based, no installation needed.",
         activity: "Look into a FIRST Tech Challenge or VEX Robotics team at your school, if one exists.",
         relatedField: "electrical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Design and model a more complete part or small mechanism, thinking through tolerances and how it would actually be manufactured.",
         tool: "Fusion 360 (free for personal/education use) or SolidWorks if your school provides access.",
-        activity: "Look for a pre-college engineering program, a FIRST Robotics Competition team, or a summer engineering camp through a university.",
+        activity: "Look for an ASME (American Society of Mechanical Engineers) student chapter, a project team like Formula SAE or Baja SAE, or an undergraduate research position in your department.",
         relatedField: "electrical-engineering",
       },
     },
@@ -220,22 +220,22 @@ export const fields: EngineeringField[] = [
     verifiedDate: "September 2026",
   },
   nextSteps: {
-    "10-12": {
+    "middle-school": {
       project: "Build a simple circuit with a snap-circuit kit, a battery, and an LED.",
       tool: "A beginner snap-circuit kit — inexpensive, widely available, no soldering needed.",
       activity: "Look for a school STEM club or a beginner electronics workshop at a local library or maker space, if one's available.",
       relatedField: "software-engineering",
     },
-    "13-15": {
+    "high-school": {
       project: "Try building a basic LED circuit, then swap the resistor and see what changes.",
       tool: "A free online circuit simulator like Tinkercad Circuits, so you can test ideas before buying parts.",
       activity: "Look into a FIRST Tech Challenge team or a robotics club that involves wiring and electronics, if available at your school.",
       relatedField: "software-engineering",
     },
-    "16-18": {
+    "college": {
       project: "Try a beginner Arduino project, like making an LED blink on a schedule or reading a sensor.",
       tool: "Arduino — a widely used, beginner-friendly microcontroller platform.",
-      activity: "Look for a pre-college engineering program or a summer electronics camp, and check whether your school offers AP Physics with an electricity and magnetism unit.",
+      activity: "Look for an IEEE student chapter, a project team that involves circuit design, or an undergraduate research position in your department.",
       relatedField: "software-engineering",
     },
   },
@@ -357,22 +357,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Build a small bridge out of popsicle sticks or spaghetti and see how much weight it can hold.",
         tool: "No special tools needed yet — just household building materials.",
         activity: "Look for a STEM club at school, or see if a local library or science museum runs a bridge-building or structures workshop.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Try a free online tool that lets you test simple truss or beam designs before building anything physical.",
         tool: "PhET Interactive Simulations (University of Colorado Boulder) — free, includes forces and structures topics.",
         activity: "Look into a Science Olympiad team, which often has bridge-building or structural-engineering events.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Pick a bridge or building you actually pass by and research, from public sources, roughly how it was designed to handle its loads.",
         tool: "Basic CAD or drafting software, if your school offers a drafting or engineering design class.",
-        activity: "Look into a pre-college civil engineering or construction program, or a summer program run by a university engineering department.",
+        activity: "Look for an ASCE (American Society of Civil Engineers) student chapter, a competition team like Concrete Canoe or Steel Bridge, or an internship with a local engineering firm.",
         relatedField: "mechanical-engineering",
       },
     },
@@ -496,22 +496,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Research how a device you or someone you know actually uses (a pacemaker, hearing aid, or insulin pump) works, and explain it in your own words.",
         tool: "No special tools needed yet — just curiosity and reliable sources like library books or trusted science sites.",
         activity: "Look for a science club at school, or see if a local science museum has a health or medical technology exhibit.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Try a beginner biology resource to see whether the life-science side genuinely interests you, not just the engineering side.",
         tool: "A free, reputable biology resource (like Khan Academy's biology content) to test your interest before committing coursework time.",
         activity: "Look into a HOSA (Health Occupations Students of America) chapter at your school, if one exists — it covers health careers broadly, not just biomedical engineering.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Look into whether your school or a nearby hospital offers volunteering, shadowing, or a biomedical engineering summer program.",
         tool: "None specific yet — this stage is more about exposure to the field than a particular tool.",
-        activity: "Look for a HOSA chapter, a pre-college biomedical engineering program, or a hospital's teen volunteer program.",
+        activity: "Look for a BMES (Biomedical Engineering Society) student chapter, an undergraduate research position in a biomedical or bioengineering lab, or a clinical shadowing or internship program.",
         relatedField: "mechanical-engineering",
       },
     },
@@ -636,22 +636,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Try Scratch to build a very simple animation or game — no typing real code required.",
         tool: "Scratch — free, made by MIT, designed specifically for beginners.",
         activity: "Look for a school coding club, or see if your local library runs a beginner coding program.",
         relatedField: "electrical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Try a free beginner coding course and build one small project, like a calculator or a to-do list.",
         tool: "A free beginner course in Python, since it's commonly taught first.",
         activity: "Look into a school coding club or a local chapter of a beginner coding organization, if available.",
         relatedField: "electrical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Contribute a small change to a real open-source project, or build a bigger personal project and publish it.",
         tool: "GitHub — the standard place software engineers store and share code.",
-        activity: "Check whether your school offers AP Computer Science, and look into a summer coding program or internship if one's available.",
+        activity: "Look for an ACM student chapter, contribute to an open-source project, or apply for a summer software internship.",
         relatedField: "electrical-engineering",
       },
     },
@@ -775,22 +775,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Build and fly a simple paper airplane or glider, and experiment with what changes how far or straight it flies.",
         tool: "No special tools needed yet — just paper and experimentation.",
         activity: "Look for a STEM club at school, or see if a local science museum has an aviation or space exhibit.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Try a free simulation tool to see how wing shape or angle affects lift.",
         tool: "PhET Interactive Simulations (University of Colorado Boulder) — free, includes forces and motion topics relevant to flight.",
         activity: "Look into a Science Olympiad team, which often has aviation or rocketry-related events.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Build and launch a basic model rocket, tracking how design choices affect altitude and stability.",
         tool: "A model rocketry kit from an established hobby brand, following standard safety guidelines.",
-        activity: "Look for a pre-college aerospace engineering program or a Civil Air Patrol program, if available.",
+        activity: "Look for an AIAA (American Institute of Aeronautics and Astronautics) student chapter, a rocketry or design-build-fly team, or an undergraduate research position in your department.",
         relatedField: "mechanical-engineering",
       },
     },
@@ -914,22 +914,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Try a simple, adult-supervised kitchen chemistry experiment, like making a basic polymer, and think about how you'd need to do it safely at a much larger scale.",
         tool: "No special tools needed yet — just supervised household chemistry experiments.",
         activity: "Look for a STEM or chemistry club at school, or a chemistry exhibit at a local science museum.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Try a free chemistry simulation tool to see how changing conditions like temperature or concentration affects a reaction.",
         tool: "PhET Interactive Simulations (University of Colorado Boulder) — free, includes chemistry and states-of-matter topics.",
         activity: "Look into a Science Olympiad team, which often has chemistry-related events.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Research how a specific everyday product, like plastic bottles or fuel, is actually manufactured at an industrial scale, using publicly available sources.",
         tool: "None specific yet — this stage is more about exposure to industrial-scale thinking than a particular tool.",
-        activity: "Look for a pre-college chemical engineering program or a summer engineering camp through a university, if available.",
+        activity: "Look for an AIChE (American Institute of Chemical Engineers) student chapter, an undergraduate research position in a process or materials lab, or a co-op or internship with a chemical or process company.",
         relatedField: "mechanical-engineering",
       },
     },
@@ -1053,22 +1053,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Take apart an old, unplugged electronic device (safely) and see if you can identify the circuit board and its components.",
         tool: "No special tools needed yet — just a safe, unplugged device to explore.",
         activity: "Look for a school STEM club or a beginner electronics workshop at a local library or maker space, if available.",
         relatedField: "electrical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Try a beginner microcontroller project, like making an LED blink on a schedule using simple code.",
         tool: "Arduino — a widely used, beginner-friendly microcontroller platform that blends hardware and code.",
         activity: "Look into a robotics club or FIRST Tech Challenge team, which often involves both wiring and programming.",
         relatedField: "electrical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Try a more advanced microcontroller project that combines a sensor with custom code, like a basic temperature-triggered alert.",
         tool: "Arduino or Raspberry Pi, both widely used and well-documented for beginners moving into more complex projects.",
-        activity: "Check whether your school offers a class combining electronics and programming, and look into a pre-college engineering program if available.",
+        activity: "Look for an IEEE or ACM student chapter, a hardware- or embedded-systems-focused project team, or an internship that touches both hardware and software.",
         relatedField: "electrical-engineering",
       },
     },
@@ -1191,22 +1191,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Test the pH or clarity of water samples from different sources, like tap water versus a local pond, using a simple, safe home testing kit.",
         tool: "A basic water testing kit — inexpensive and widely available.",
         activity: "Look for a STEM or environmental club at school, or a nature center program focused on local ecosystems.",
         relatedField: "civil-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Research a local environmental issue, like water quality or air pollution, using public data sources, and summarize what you find.",
         tool: "Public environmental data sources, like a national environmental protection agency's public database, if available in your country.",
         activity: "Look into a Science Olympiad team or an environmental club, which often cover water quality or ecology topics.",
         relatedField: "civil-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Design a simple water filtration setup using household materials and test how well it removes visible particles.",
         tool: "Basic household materials — sand, gravel, charcoal, and containers — for a hands-on filtration experiment.",
-        activity: "Look for a pre-college environmental engineering program or a summer program focused on sustainability or environmental science.",
+        activity: "Look for an ASCE environmental or AEESP-affiliated student group, an undergraduate research position in an environmental or water-resources lab, or an internship with an environmental consulting firm.",
         relatedField: "civil-engineering",
       },
     },
@@ -1330,22 +1330,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Time how long a repetitive task takes, like making a sandwich or packing a bag, a few different ways, and see which is fastest.",
         tool: "No special tools needed yet — just a stopwatch or phone timer.",
         activity: "Look for a STEM or business club at school that touches on organization or process improvement.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Pick a process you experience regularly, like a school cafeteria line, and sketch out where the slowdowns happen and how you'd fix them.",
         tool: "No special tools needed yet — pen, paper, and observation.",
         activity: "Look into a business or entrepreneurship club, which sometimes covers process and operations topics.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Learn the basics of a process-mapping technique, like a simple flowchart, and use it to map out and improve a real process you're familiar with.",
         tool: "A free flowchart or diagramming tool, many of which are available online at no cost.",
-        activity: "Look for a pre-college engineering or business program, or a summer program that touches on operations or logistics.",
+        activity: "Look for an IISE (Institute of Industrial and Systems Engineers) student chapter, a case-competition or process-improvement project team, or an internship in operations or manufacturing.",
         relatedField: "mechanical-engineering",
       },
     },
@@ -1469,22 +1469,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Test how different materials, like different types of tape, string, or plastic, hold up to being stretched or bent, and compare the results.",
         tool: "No special tools needed yet — just household materials and simple comparison tests.",
         activity: "Look for a STEM or science club at school, or a materials-focused exhibit at a science museum.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Research how a specific advanced material, like carbon fiber or a memory alloy, is used and what makes it special.",
         tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
         activity: "Look into a Science Olympiad team, which sometimes has materials-science-related events.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Try a simple, safe crystal-growing or polymer experiment and document how changing conditions, like temperature or time, affects the result.",
         tool: "A basic crystal-growing or polymer science kit, widely available for educational use.",
-        activity: "Look for a pre-college materials science or engineering program, or a summer research program through a university.",
+        activity: "Look for an ASM International or TMS (The Minerals, Metals & Materials Society) student chapter, an undergraduate research position in a materials lab, or an internship with a manufacturer.",
         relatedField: "mechanical-engineering",
       },
     },
@@ -1608,22 +1608,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Build a simple machine that moves using a basic robotics kit or even household materials, like a rubber-band-powered car.",
-        tool: "A beginner robotics kit designed for this age group, or just household materials to start.",
+        tool: "A beginner robotics kit, or just household materials to start.",
         activity: "Look for a LEGO robotics or FIRST LEGO League team at school, if one's available.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Try a beginner robotics kit that combines a microcontroller with motors and sensors, and program a simple behavior.",
         tool: "A beginner robotics kit built around Arduino or a similar microcontroller.",
         activity: "Look into a FIRST Tech Challenge or VEX Robotics team at your school, if one exists.",
         relatedField: "electrical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Build a more complete robotics project that combines a chassis, sensors, and custom code, like a line-following or obstacle-avoiding robot.",
         tool: "A Raspberry Pi or Arduino-based robotics platform, both widely used and well-documented.",
-        activity: "Look for a FIRST Robotics Competition team, a pre-college robotics or mechatronics program, or a summer engineering camp.",
+        activity: "Look for a robotics team or club at your school, an IEEE Robotics and Automation Society chapter, or an undergraduate research position in a robotics lab.",
         relatedField: "software-engineering",
       },
     },
@@ -1746,22 +1746,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Research how a nuclear power plant generates electricity and sketch a simple diagram of the process.",
         tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
         activity: "Look for a STEM or physics club at school, or a museum exhibit on energy or nuclear science.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Research how nuclear medicine is used to diagnose or treat illness, and summarize how it's different from a nuclear power plant.",
         tool: "No special tools needed yet — reliable science sources.",
         activity: "Look into a Science Olympiad team, which sometimes covers energy or nuclear-related events.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Research the safety systems used in modern nuclear reactor designs and what changed after a historical incident like Three Mile Island or Fukushima.",
         tool: "No special tools needed yet — reliable science and engineering sources.",
-        activity: "Look for a pre-college engineering program or a summer program with an energy or nuclear focus, if available.",
+        activity: "Look for an ANS (American Nuclear Society) student chapter, an undergraduate research position in a nuclear or radiation lab, or an internship with a utility or national lab.",
         relatedField: "mechanical-engineering",
       },
     },
@@ -1882,22 +1882,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Research how oil and natural gas are formed underground and how engineers find them.",
         tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
         activity: "Look for a STEM or earth science club at school.",
         relatedField: "chemical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Research how a drilling rig works and sketch the basic steps of drilling a well.",
         tool: "No special tools needed yet — reliable science sources.",
         activity: "Look into a Science Olympiad team, which sometimes covers earth science topics.",
         relatedField: "chemical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Research a real oil or gas field and estimate, using public data, how extraction there has changed over time.",
         tool: "Public energy data sources, like a national energy information agency's public database, if available in your country.",
-        activity: "Look for a pre-college engineering program with an energy focus, if available.",
+        activity: "Look for an SPE (Society of Petroleum Engineers) student chapter, an undergraduate research position in your department, or an internship with an energy company.",
         relatedField: "chemical-engineering",
       },
     },
@@ -2019,22 +2019,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Research how a modern irrigation system decides when and how much to water crops.",
         tool: "No special tools needed yet — reliable science sources like library books or trusted science sites.",
         activity: "Look for a 4-H club, FFA (Future Farmers of America) chapter, or STEM club at school, if available.",
         relatedField: "environmental-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Design a simple drip irrigation system using household materials and test how evenly it waters a small area.",
         tool: "Basic household materials — tubing, containers, and something to poke small holes.",
         activity: "Look into a 4-H or FFA program, which often include hands-on agricultural technology projects.",
         relatedField: "environmental-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Research a real precision agriculture technology, like soil sensors or drone crop monitoring, and summarize how it changes farming decisions.",
         tool: "Reliable agricultural technology sources, like a university extension program's public website.",
-        activity: "Look for a pre-college agricultural engineering program or a summer program at a university with an agriculture department.",
+        activity: "Look for an ASABE (American Society of Agricultural and Biological Engineers) student chapter, an undergraduate research position in an ag-engineering lab, or an internship with an agricultural technology company.",
         relatedField: "environmental-engineering",
       },
     },
@@ -2156,22 +2156,22 @@ export const fields: EngineeringField[] = [
       verifiedDate: "September 2026",
     },
     nextSteps: {
-      "10-12": {
+      "middle-school": {
         project: "Research how a ship stays afloat and try a simple buoyancy experiment using clay or foil in a container of water.",
         tool: "Basic household materials — clay, aluminum foil, and a container of water.",
         activity: "Look for a STEM club at school, or a maritime museum exhibit, if one is near you.",
         relatedField: "mechanical-engineering",
       },
-      "13-15": {
+      "high-school": {
         project: "Build a simple boat hull out of household materials and test how much weight it can hold before sinking.",
         tool: "Basic household materials — cardboard, foil, or plastic containers, and weights for testing.",
         activity: "Look into a Science Olympiad team, which sometimes includes boat-design or naval-engineering-related events.",
         relatedField: "mechanical-engineering",
       },
-      "16-18": {
+      "college": {
         project: "Research how modern ships are designed to resist corrosion in saltwater, and summarize the main strategies used.",
         tool: "Reliable engineering sources, like a maritime engineering organization's public website.",
-        activity: "Look for a pre-college engineering program or summer program with a marine or naval engineering focus, if available.",
+        activity: "Look for a SNAME (Society of Naval Architects and Marine Engineers) student chapter, an undergraduate research position in your department, or an internship with a shipbuilder or naval architecture firm.",
         relatedField: "mechanical-engineering",
       },
     },
