@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { href: "/quiz", key: "navQuiz" as const },
   { href: "/challenges", key: "navChallenges" as const },
   { href: "/simulations", key: "navSimulations" as const },
+  { href: "/college", key: "navCollege" as const },
   { href: "/resources", key: "navResources" as const },
   { href: "/about", key: "navAbout" as const },
 ];

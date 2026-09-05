@@ -289,3 +289,56 @@ export type Challenge = {
   // question — never saved or sent anywhere.
   reflectionPrompt: string;
 };
+
+// A single course within one year of a published curriculum. `code` is
+// optional since not every school's public degree plan lists course codes
+// cleanly (some only name the course).
+export type CurriculumCourse = {
+  name: string;
+  code?: string;
+};
+
+// One year of a curriculum, optionally split by term if the source publishes
+// that level of detail — `term` is left out entirely when a school only
+// publishes a year-level course list, not a Fall/Spring breakdown.
+export type CurriculumYear = {
+  year: number;
+  term?: string;
+  courses: CurriculumCourse[];
+};
+
+// A real, published course sequence for one major at one school — never
+// invented or approximated. Every entry must trace back to `sourceUrl`, the
+// same "no number without a citation" rule the site already applies to
+// salary data (see SalaryData above). `catalogYear` matters because degree
+// requirements change from year to year, so this pins exactly which version
+// of the catalog was used.
+export type CurriculumSequence = {
+  slug: string;
+  fieldSlug: FieldSlug;
+  // The school's own name for the major — often differs from our FieldSlug
+  // label (e.g. "Mechanical Engineering Technology" vs. "Mechanical Engineering").
+  majorName: string;
+  schoolName: string;
+  catalogYear: string;
+  sourceUrl: string;
+  years: CurriculumYear[];
+};
+
+export type TipConfidence = "research-backed" | "varies by situation" | "personal experience";
+
+export type TipTheme = "study-strategies" | "course-planning" | "internships" | "research" | "workload-and-burnout";
+
+// Every tip has to say what it depends on — a specific school, a personality
+// type, a major, a circumstance — rather than being stated as universally
+// true. sourceUrl is optional (only present when confidence is
+// "research-backed" and there's a real citation); dependsOn is not optional,
+// on purpose, for every confidence level including "personal experience".
+export type CollegeTip = {
+  slug: string;
+  text: string;
+  theme: TipTheme;
+  confidence: TipConfidence;
+  dependsOn: string;
+  sourceUrl?: string;
+};

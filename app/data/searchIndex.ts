@@ -13,6 +13,7 @@ import { resourceLinksEs } from "./translations/resources";
 import { SIMULATIONS } from "./simulationsList";
 import { simulationsHubTranslations } from "./translations/simulationsHub";
 import { mySummaryTranslations } from "./translations/mySummary";
+import { collegeTranslations } from "./translations/college";
 
 export type SearchItemType = "field" | "challenge" | "concept" | "faq" | "page";
 
@@ -70,6 +71,8 @@ export function buildSearchIndex(language: "en" | "es"): SearchItem[] {
   }
   const summaryT = mySummaryTranslations[language];
   items.push({ title: summaryT.heading, description: summaryT.intro, href: "/my-summary", type: "page" });
+  const collegeT = collegeTranslations[language];
+  items.push({ title: collegeT.heading, description: collegeT.intro, href: "/college", type: "page" });
   for (const resource of resourceLinks) {
     const localized = language === "es" ? resourceLinksEs[resource.href] : undefined;
     items.push({
