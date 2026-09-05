@@ -43,6 +43,7 @@ export const collegeTips: CollegeTip[] = [
     confidence: "varies by situation",
     dependsOn:
       "The student's baseline self-discipline. Input-focused goals only work if the student holds themselves accountable to actual, distraction-free deep work during those dedicated time blocks, rather than just running out the clock.",
+    sourceUrl: "https://www.youtube.com/watch?v=5JH130NIR8k",
   },
   {
     slug: "schedule-deliberate-breaks-and-exercise",
