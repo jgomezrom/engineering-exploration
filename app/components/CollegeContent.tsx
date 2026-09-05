@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import FadeIn from "./FadeIn";
 import CurriculumTopicMap from "./CurriculumTopicMap";
 import { fields } from "../data/fields";
@@ -9,7 +9,7 @@ import { collegeCurricula } from "../data/collegeCurricula";
 import { collegeTips } from "../data/collegeTips";
 import { CurriculumSequence, CurriculumYear, FieldSlug, TipTheme } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
-import { collegeTranslations, tipThemeLabels, tipConfidenceLabels } from "../data/translations/college";
+import { collegeTranslations, tipThemeLabels, tipConfidenceLabels, collegeOnlyMajorNames } from "../data/translations/college";
 
 const THEME_ORDER: TipTheme[] = ["study-strategies", "course-planning", "internships", "research", "workload-and-burnout"];
 
@@ -57,15 +57,16 @@ export default function CollegeContent() {
   const themeLabel = tipThemeLabels[language];
   const confidenceLabel = tipConfidenceLabels[language];
   const displayFields = language === "es" ? fieldsEs : fields;
+  const majorNameFallback = collegeOnlyMajorNames[language];
+  const majorName = useCallback(
+    (slug: FieldSlug) => displayFields.find((f) => f.slug === slug)?.name ?? majorNameFallback[slug] ?? slug,
+    [displayFields, majorNameFallback]
+  );
 
   const availableFieldSlugs = useMemo(() => {
     const slugs = Array.from(new Set(collegeCurricula.map((c) => c.fieldSlug)));
-    return slugs.sort((a, b) => {
-      const nameA = displayFields.find((f) => f.slug === a)?.name ?? a;
-      const nameB = displayFields.find((f) => f.slug === b)?.name ?? b;
-      return nameA.localeCompare(nameB);
-    });
-  }, [displayFields]);
+    return slugs.sort((a, b) => majorName(a).localeCompare(majorName(b)));
+  }, [majorName]);
 
   const [selectedField, setSelectedField] = useState<FieldSlug | undefined>(availableFieldSlugs[0]);
 
@@ -102,14 +103,11 @@ export default function CollegeContent() {
             onChange={(e) => setSelectedField(e.target.value as FieldSlug)}
             className="mt-2 border border-neutral-900/10 bg-white px-4 py-2 text-sm text-neutral-900 dark:border-white/10 dark:bg-black dark:text-white"
           >
-            {availableFieldSlugs.map((slug) => {
-              const field = displayFields.find((f) => f.slug === slug);
-              return (
-                <option key={slug} value={slug}>
-                  {field?.name ?? slug}
-                </option>
-              );
-            })}
+            {availableFieldSlugs.map((slug) => (
+              <option key={slug} value={slug}>
+                {majorName(slug)}
+              </option>
+            ))}
           </select>
         </div>
 

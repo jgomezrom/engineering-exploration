@@ -1,4 +1,30 @@
-import { TipConfidence, TipTheme } from "../types";
+import { FieldSlug, TipConfidence, TipTheme } from "../types";
+
+// Names for majors that appear in college curricula but don't have a full
+// exploration page in fields.ts/fields.es.ts (no day-in-the-life content,
+// misconceptions, etc. exists for these yet). Covers only the FieldSlug
+// values missing from that file, as a display-name fallback for the major
+// picker below.
+export const collegeOnlyMajorNames: Record<"en" | "es", Partial<Record<FieldSlug, string>>> = {
+  en: {
+    "architectural-engineering": "Architectural Engineering",
+    "automotive-engineering": "Automotive Engineering",
+    "manufacturing-engineering": "Manufacturing Engineering",
+    "systems-engineering": "Systems Engineering",
+    "structural-engineering": "Structural Engineering",
+    "energy-engineering": "Energy Engineering",
+    "semiconductor-engineering": "Semiconductor Engineering",
+  },
+  es: {
+    "architectural-engineering": "Ingeniería Arquitectónica",
+    "automotive-engineering": "Ingeniería Automotriz",
+    "manufacturing-engineering": "Ingeniería de Manufactura",
+    "systems-engineering": "Ingeniería de Sistemas",
+    "structural-engineering": "Ingeniería Estructural",
+    "energy-engineering": "Ingeniería Energética",
+    "semiconductor-engineering": "Ingeniería de Semiconductores",
+  },
+};
 
 export const collegeTranslations = {
   en: {
