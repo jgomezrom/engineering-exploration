@@ -66,10 +66,10 @@ export default function HeatConductionSimulator() {
             </g>
           ))}
 
-          <text x="20" y="28" className="fill-accent font-mono text-[11px] font-semibold">
+          <text x="20" y="28" className="fill-accent font-mono text-[11px] font-medium">
             {t.hotLabel}
           </text>
-          <text x="360" y="28" textAnchor="end" className="fill-primary font-mono text-[11px] font-semibold">
+          <text x="360" y="28" textAnchor="end" className="fill-primary font-mono text-[11px] font-medium">
             {t.coldLabel}
           </text>
         </svg>

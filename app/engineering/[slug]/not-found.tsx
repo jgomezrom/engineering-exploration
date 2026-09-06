@@ -10,7 +10,7 @@ export default function FieldNotFound() {
 
   return (
     <main className="mx-auto flex max-w-xl flex-col items-center px-6 py-24 text-center">
-      <span className="mb-4 border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
+      <span className="mb-4 border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
         {t.badge}
       </span>
       <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">{t.fieldHeading}</h1>

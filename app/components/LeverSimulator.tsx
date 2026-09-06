@@ -42,12 +42,12 @@ export default function LeverSimulator() {
             <circle cx={PIVOT_X} cy={PIVOT_Y} r="4" className="fill-neutral-900 dark:fill-white" />
 
             <circle cx={PIVOT_X - leftPixelDist} cy={PIVOT_Y} r={leftRadius} className="fill-primary/20 stroke-primary" strokeWidth="1.5" />
-            <text x={PIVOT_X - leftPixelDist} y={PIVOT_Y + 4} textAnchor="middle" className="fill-primary font-mono text-[11px] font-semibold">
+            <text x={PIVOT_X - leftPixelDist} y={PIVOT_Y + 4} textAnchor="middle" className="fill-primary font-mono text-[11px] font-medium">
               {leftWeight}
             </text>
 
             <circle cx={PIVOT_X + rightPixelDist} cy={PIVOT_Y} r={rightRadius} className="fill-accent/20 stroke-accent" strokeWidth="1.5" />
-            <text x={PIVOT_X + rightPixelDist} y={PIVOT_Y + 4} textAnchor="middle" className="fill-accent font-mono text-[11px] font-semibold">
+            <text x={PIVOT_X + rightPixelDist} y={PIVOT_Y + 4} textAnchor="middle" className="fill-accent font-mono text-[11px] font-medium">
               {rightWeight}
             </text>
           </g>

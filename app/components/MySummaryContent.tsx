@@ -21,7 +21,7 @@ export default function MySummaryContent() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
-      <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
+      <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
         {t.badge}
       </span>
 
@@ -62,7 +62,7 @@ export default function MySummaryContent() {
         <>
           {(visitedCount > 0 || streakDays > 0) && (
             <div className="mt-10 flex flex-wrap gap-3">
-              <span className="border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
+              <span className="border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
                 {t.fieldsExplored(visitedCount, displayFields.length)}
               </span>
               {streakDays > 0 && (

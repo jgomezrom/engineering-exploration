@@ -102,7 +102,7 @@ export default function SchoolThemeModal() {
             />
           </div>
 
-          <h3 className="mb-2 mt-6 font-mono text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
+          <h3 className="mb-2 mt-6 font-mono text-xs font-medium uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
             {t.bigTenLabel}
           </h3>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
@@ -117,7 +117,7 @@ export default function SchoolThemeModal() {
             ))}
           </div>
 
-          <h3 className="mb-2 mt-6 font-mono text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
+          <h3 className="mb-2 mt-6 font-mono text-xs font-medium uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
             {t.secLabel}
           </h3>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">

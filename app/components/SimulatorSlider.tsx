@@ -23,7 +23,7 @@ export default function SimulatorSlider({
     <div>
       <div className="flex items-center justify-between text-sm">
         <span className="font-medium text-neutral-900 dark:text-white">{label}</span>
-        <span className={`font-mono text-xs font-semibold ${color ?? "text-primary"}`}>
+        <span className={`font-mono text-xs font-medium ${color ?? "text-primary"}`}>
           {value}
           {unit ?? ""}
         </span>

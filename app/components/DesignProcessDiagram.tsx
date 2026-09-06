@@ -94,7 +94,7 @@ export default function DesignProcessDiagram({ compact = false }: { compact?: bo
                   y={p.y}
                   textAnchor="middle"
                   dominantBaseline="middle"
-                  className={`select-none font-mono text-[10px] font-semibold uppercase tracking-tight ${
+                  className={`select-none font-mono text-[10px] font-medium uppercase tracking-tight ${
                     isSelected ? "fill-white" : "fill-neutral-900 dark:fill-white"
                   }`}
                 >

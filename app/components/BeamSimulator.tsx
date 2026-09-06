@@ -82,7 +82,7 @@ export default function BeamSimulator() {
           {/* Load arrow */}
           <line x1={loadX} y1={loadBeamY - 45} x2={loadX} y2={loadBeamY - 4} stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
           <path d={`M${loadX - 6} ${loadBeamY - 12}L${loadX} ${loadBeamY - 2}L${loadX + 6} ${loadBeamY - 12}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <text x={loadX} y={loadBeamY - 50} textAnchor="middle" className="fill-current font-mono text-[11px] font-semibold">
+          <text x={loadX} y={loadBeamY - 50} textAnchor="middle" className="fill-current font-mono text-[11px] font-medium">
             {load}
           </text>
         </svg>

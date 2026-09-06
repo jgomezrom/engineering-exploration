@@ -31,7 +31,7 @@ export default function SourcesContent() {
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-3xl px-6 py-16">
-      <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
+      <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
         {t.badge}
       </span>
 

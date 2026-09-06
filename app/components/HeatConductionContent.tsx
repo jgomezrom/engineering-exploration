@@ -19,7 +19,7 @@ export default function HeatConductionContent() {
         {hub.backToSimulations}
       </Link>
 
-      <span className="mb-4 mt-6 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
+      <span className="mb-4 mt-6 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
         {t.badge}
       </span>
 

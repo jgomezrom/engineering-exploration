@@ -97,7 +97,7 @@ export default function QuizPage() {
           </span>
         </div>
 
-        <span className="mb-4 border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
+        <span className="mb-4 border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
           {t.badge}
         </span>
         <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:max-w-3xl lg:text-6xl 2xl:text-7xl">
@@ -213,7 +213,7 @@ export default function QuizPage() {
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
-      <span className="border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
+      <span className="border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
         {t.yourResults}
       </span>
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">

@@ -112,10 +112,10 @@ export default function GearSimulator() {
           <line x1="20" y1="190" x2="380" y2="190" stroke="currentColor" strokeWidth="1" strokeDasharray="2 4" className="text-neutral-900/15 dark:text-white/15" />
           <Gear cx={GEAR_A_CX} cy={GEAR_Y} teeth={teethA} angle={angleA} filled />
           <Gear cx={gearBCx} cy={GEAR_Y} teeth={teethB} angle={angleB} />
-          <text x={GEAR_A_CX} y="204" textAnchor="middle" className="fill-primary font-mono text-[10px] font-semibold">
+          <text x={GEAR_A_CX} y="204" textAnchor="middle" className="fill-primary font-mono text-[10px] font-medium">
             {t.inputLabel}
           </text>
-          <text x={gearBCx} y="204" textAnchor="middle" className="fill-accent font-mono text-[10px] font-semibold">
+          <text x={gearBCx} y="204" textAnchor="middle" className="fill-accent font-mono text-[10px] font-medium">
             {t.outputLabel}
           </text>
         </svg>
