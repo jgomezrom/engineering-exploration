@@ -61,6 +61,21 @@ export const metadata: Metadata = {
   },
 };
 
+// Tells Google this specific site is the thing called "Engineering
+// Exploration" (helps it rank for that exact name/branded search, and can
+// unlock the sitelinks-search-box result style). No SearchAction here on
+// purpose — that requires a real /search?q= route Google can build URLs
+// against, and the site's search is a client-side modal (SearchModal.tsx)
+// with no such route, so declaring one would be inaccurate structured data.
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  inLanguage: ["en", "es"],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -88,6 +103,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: `(function(){try{var id=localStorage.getItem("ee-school-theme");var themes=${JSON.stringify(SCHOOL_THEME_MAP)};var s=themes[id];if(s){var r=document.documentElement.style;r.setProperty("--school-primary-light",s.primary);r.setProperty("--school-primary-night",s.primaryNight);r.setProperty("--school-primary-dark",s.primaryDark);r.setProperty("--school-secondary",s.secondary);r.setProperty("--school-primary-rgb",s.rgb);r.setProperty("--school-grid-opacity","0.1")}}catch(e){}})()`,
           }}
         />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
