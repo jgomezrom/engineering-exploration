@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import SchoolThemeToggle from "./SchoolThemeToggle";
@@ -11,23 +11,54 @@ import { useLanguage } from "../context/LanguageContext";
 import { useSchoolTheme } from "../context/SchoolThemeContext";
 import { chromeTranslations } from "../data/translations/chrome";
 
-const NAV_LINKS = [
+// Split for the desktop row only — at lg: (1024px), the header's own
+// max-w-5xl left only ~975px of usable width, and the logo plus all 8 links
+// plus the 4 icon buttons needed slightly more than that, so the two ends of
+// the justify-between row were colliding with zero gap between them instead
+// of the intended spacing. Moving the 4 less-central links behind "More"
+// gets comfortably under budget instead of just barely fitting. The mobile
+// menu below still lists all 8 — it has a full-height column to work with,
+// so there's no reason to hide anything there.
+const PRIMARY_NAV_LINKS = [
   { href: "/curious", key: "navCurious" as const },
   { href: "/explore", key: "navExplore" as const },
   { href: "/quiz", key: "navQuiz" as const },
   { href: "/challenges", key: "navChallenges" as const },
+];
+
+const MORE_NAV_LINKS = [
   { href: "/simulations", key: "navSimulations" as const },
   { href: "/college", key: "navCollege" as const },
   { href: "/resources", key: "navResources" as const },
   { href: "/about", key: "navAbout" as const },
 ];
 
+const NAV_LINKS = [...PRIMARY_NAV_LINKS, ...MORE_NAV_LINKS];
+
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
   const { language } = useLanguage();
   const t = chromeTranslations[language];
   const { isPickerOpen } = useSchoolTheme();
+
+  useEffect(() => {
+    if (!moreOpen) return;
+    function handleClickOutside(e: MouseEvent) {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) setMoreOpen(false);
+    }
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setMoreOpen(false);
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [moreOpen]);
 
   return (
     <header className="w-full border-b border-t-[3px] border-neutral-100 border-t-primary bg-white dark:border-white/10 dark:bg-black">
@@ -47,11 +78,40 @@ export default function NavBar() {
 
         <div className="flex items-center gap-5">
           <div className="hidden items-center gap-4 text-sm font-medium text-neutral-600 dark:text-neutral-400 lg:flex">
-            {NAV_LINKS.map((link) => (
+            {PRIMARY_NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-primary">
                 {t[link.key]}
               </Link>
             ))}
+
+            <div ref={moreRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setMoreOpen((o) => !o)}
+                aria-expanded={moreOpen}
+                className="flex items-center gap-1 hover:text-primary"
+              >
+                {t.navMore}
+                <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" className={`h-3 w-3 transition-transform ${moreOpen ? "rotate-180" : ""}`}>
+                  <path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+
+              {moreOpen && (
+                <div className="absolute right-0 top-full z-10 mt-2 w-40 border border-neutral-900/10 bg-white py-1 shadow-sm dark:border-white/10 dark:bg-neutral-900">
+                  {MORE_NAV_LINKS.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMoreOpen(false)}
+                      className="block px-4 py-2 hover:bg-primary/5 hover:text-primary"
+                    >
+                      {t[link.key]}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="flex items-center gap-2.5">

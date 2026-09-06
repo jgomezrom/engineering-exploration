@@ -4,11 +4,11 @@ import { createContext, useContext, useLayoutEffect, useState, ReactNode } from 
 import { schoolThemes, hexToRgbTriplet, SchoolThemeId } from "../data/schoolThemes";
 
 // Same persistence pattern as ThemeContext/LanguageContext: an explicit
-// choice (including an explicit "Default") is remembered in localStorage, so
-// the picker only opens unprompted on a visit where nothing has been chosen
-// yet. The inline script in layout.tsx applies the saved theme's colors
-// before first paint; this just keeps React state (and the picker's
-// open/closed state) in sync with that afterward.
+// choice is remembered in localStorage so it survives reloads. Unlike those
+// two, there's no first-visit prompt for this one — it's opt-in only, opened
+// from the palette icon in the header. The inline script in layout.tsx
+// applies a saved theme's colors before first paint; this just keeps React
+// state in sync with that afterward.
 const STORAGE_KEY = "ee-school-theme";
 
 type SchoolThemeContextValue = {
@@ -46,11 +46,6 @@ function applyTheme(id: SchoolThemeId) {
 export function SchoolThemeProvider({ children }: { children: ReactNode }) {
   const [schoolThemeId, setSchoolThemeId] = useState<SchoolThemeId>("default");
   const [isPickerOpen, setIsPickerOpen] = useState(false);
-  // Whether *any* choice (including an explicit "Default") has ever been
-  // saved. Starts true so a closePicker() call before the mount effect below
-  // has run can't accidentally overwrite a real stored choice with
-  // "default" — only the mount effect, finding nothing stored, flips it.
-  const [hasStoredChoice, setHasStoredChoice] = useState(true);
 
   useLayoutEffect(() => {
     try {
@@ -58,13 +53,9 @@ export function SchoolThemeProvider({ children }: { children: ReactNode }) {
       if (stored && schoolThemes.some((t) => t.id === stored)) {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setSchoolThemeId(stored as SchoolThemeId);
-      } else {
-        setHasStoredChoice(false);
-        setIsPickerOpen(true);
       }
     } catch {
-      // Storage disabled/unavailable — don't nag on every load since the
-      // choice couldn't be remembered anyway; just stay on Default.
+      // Storage disabled/unavailable — stays on Default for this tab.
     }
   }, []);
 
@@ -72,29 +63,12 @@ export function SchoolThemeProvider({ children }: { children: ReactNode }) {
     applyTheme(schoolThemeId);
   }, [schoolThemeId]);
 
-  const persist = (id: SchoolThemeId) => {
+  const selectTheme = (id: SchoolThemeId) => {
+    setSchoolThemeId(id);
     try {
       localStorage.setItem(STORAGE_KEY, id);
     } catch {
       // Storage disabled/unavailable — theme still applies for this tab.
-    }
-  };
-
-  const selectTheme = (id: SchoolThemeId) => {
-    setSchoolThemeId(id);
-    persist(id);
-    setHasStoredChoice(true);
-    setIsPickerOpen(false);
-  };
-
-  const closePicker = () => {
-    // Dismissing (X, backdrop, Esc, "Skip for now") without ever having
-    // chosen anything counts as choosing Default, so the prompt doesn't come
-    // back next visit. Dismissing a picker reopened later from the header
-    // button leaves whatever was already chosen untouched.
-    if (!hasStoredChoice) {
-      persist("default");
-      setHasStoredChoice(true);
     }
     setIsPickerOpen(false);
   };
@@ -106,7 +80,7 @@ export function SchoolThemeProvider({ children }: { children: ReactNode }) {
         isPickerOpen,
         selectTheme,
         openPicker: () => setIsPickerOpen(true),
-        closePicker,
+        closePicker: () => setIsPickerOpen(false),
       }}
     >
       {children}
