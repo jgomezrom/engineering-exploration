@@ -7,6 +7,15 @@
 :root {
   --background: #fafaf8;
   --foreground: #171717;
+  /* SchoolThemeContext sets --school-primary-* as inline styles on <html>
+     when a Big Ten theme is chosen; these fall back to the site's own teal
+     when it hasn't (Default, or no choice made yet). --school-primary-night
+     only applies in dark mode below — see schoolThemes.ts for why a school's
+     primary needs a separate, brightened variant there instead of one value
+     shared across both modes. */
+  --primary: var(--school-primary-light, #0d8087);
+  --primary-dark: var(--school-primary-dark, #0a5f64);
+  --accent: var(--school-secondary, #b25709);
 }
 
 @theme inline {
@@ -15,9 +24,9 @@
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);
 
-  --color-primary: #0d8087;
-  --color-primary-dark: #0a5f64;
-  --color-accent: #b25709;
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
 
   --color-neutral-50: #fafafa;
   --color-neutral-100: #f4f4f5;
@@ -31,6 +40,7 @@
   :root:not(.light) {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: var(--school-primary-night, #0d8087);
   }
 }
 
@@ -38,13 +48,14 @@
 :root.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --primary: var(--school-primary-night, #0d8087);
 }
 
 body {
   background: var(--background);
   background-image:
-    linear-gradient(to right, rgba(13, 128, 135, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(13, 128, 135, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(var(--school-primary-rgb, 13, 128, 135), 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--school-primary-rgb, 13, 128, 135), 0.05) 1px, transparent 1px);
   background-size: 32px 32px;
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;

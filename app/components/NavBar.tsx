@@ -3,9 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import SchoolThemeToggle from "./SchoolThemeToggle";
+import SchoolThemeModal from "./SchoolThemeModal";
 import LanguageToggle from "./LanguageToggle";
 import SearchModal from "./SearchModal";
 import { useLanguage } from "../context/LanguageContext";
+import { useSchoolTheme } from "../context/SchoolThemeContext";
 import { chromeTranslations } from "../data/translations/chrome";
 
 const NAV_LINKS = [
@@ -24,6 +27,7 @@ export default function NavBar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const { language } = useLanguage();
   const t = chromeTranslations[language];
+  const { isPickerOpen } = useSchoolTheme();
 
   return (
     <header className="w-full border-b border-neutral-100 bg-white dark:border-white/10 dark:bg-black">
@@ -62,6 +66,7 @@ export default function NavBar() {
             </svg>
           </button>
           <LanguageToggle />
+          <SchoolThemeToggle />
           <ThemeToggle />
 
           <button
@@ -95,6 +100,7 @@ export default function NavBar() {
       )}
 
       {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
+      {isPickerOpen && <SchoolThemeModal />}
     </header>
   );
 }
