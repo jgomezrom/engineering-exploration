@@ -90,7 +90,7 @@ export default function HomeContent() {
           </span>
         </div>
 
-        <span className="mb-4 border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        <span className="mb-4 border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
           {t.badge}
         </span>
 
@@ -198,7 +198,7 @@ export default function HomeContent() {
       </FadeIn>
 
       <FadeIn className="mt-20 w-full max-w-4xl border-t border-neutral-900/10 pt-16 text-left lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl dark:border-white/10">
-        <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
           {t.deeperBadge}
         </span>
         <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">{t.deeperTitle}</h2>
@@ -235,7 +235,7 @@ export default function HomeContent() {
       </FadeIn>
 
       <FadeIn className="mt-20 w-full max-w-3xl border-t border-neutral-900/10 pt-16 text-center dark:border-white/10">
-        <span className="mb-4 inline-block border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
           {t.curiousBadge}
         </span>
         <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">{t.curiousTitle}</h2>

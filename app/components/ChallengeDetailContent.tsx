@@ -89,13 +89,13 @@ export default function ChallengeDetailContent({ slug }: { slug: string }) {
       <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">{challenge.tagline}</p>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        <span className="border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
           {catLabel[challenge.category]}
         </span>
-        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        <span className="border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
           {challenge.estimatedTime}
         </span>
-        <span className="border-l-2 border-primary/60 pl-3 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+        <span className="border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-primary">
           {challenge.approximateCost}
         </span>
       </div>

@@ -30,7 +30,7 @@ export default function NavBar() {
   const { isPickerOpen } = useSchoolTheme();
 
   return (
-    <header className="w-full border-b border-neutral-100 bg-white dark:border-white/10 dark:bg-black">
+    <header className="w-full border-b border-t-[3px] border-neutral-100 border-t-primary bg-white dark:border-white/10 dark:bg-black">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="/"
@@ -45,7 +45,7 @@ export default function NavBar() {
           <span className="hidden sm:inline">Engineering Exploration</span>
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-5">
           <div className="hidden items-center gap-4 text-sm font-medium text-neutral-600 dark:text-neutral-400 lg:flex">
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-primary">
@@ -54,20 +54,22 @@ export default function NavBar() {
             ))}
           </div>
 
-          <button
-            type="button"
-            aria-label={t.openSearch}
-            onClick={() => setSearchOpen(true)}
-            className="flex h-9 w-9 flex-shrink-0 items-center justify-center border border-neutral-900/10 text-neutral-600 transition-colors hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
-          >
-            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
-              <circle cx="9" cy="9" r="6" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M17 17l-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </button>
-          <LanguageToggle />
-          <SchoolThemeToggle />
-          <ThemeToggle />
+          <div className="flex items-center gap-2.5">
+            <button
+              type="button"
+              aria-label={t.openSearch}
+              onClick={() => setSearchOpen(true)}
+              className="flex h-9 w-9 flex-shrink-0 items-center justify-center border border-neutral-900/10 text-neutral-600 transition-colors hover:border-primary/40 dark:border-white/10 dark:text-neutral-400"
+            >
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
+                <circle cx="9" cy="9" r="6" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M17 17l-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </button>
+            <LanguageToggle />
+            <SchoolThemeToggle />
+            <ThemeToggle />
+          </div>
 
           <button
             type="button"

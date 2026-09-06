@@ -91,6 +91,7 @@ export default function SchoolThemeModal() {
           <p className="mt-5 text-center text-xs font-medium uppercase tracking-wide text-neutral-400 dark:text-neutral-600">
             {t.comingSoon}
           </p>
+          <p className="mt-3 text-center text-xs text-neutral-500 dark:text-neutral-400">{t.darkModeNote}</p>
         </div>
 
         <div className="border-t border-neutral-900/10 px-5 py-3 dark:border-white/10">

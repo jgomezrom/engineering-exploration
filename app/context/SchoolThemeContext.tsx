@@ -30,6 +30,7 @@ function applyTheme(id: SchoolThemeId) {
     root.style.removeProperty("--school-primary-dark");
     root.style.removeProperty("--school-secondary");
     root.style.removeProperty("--school-primary-rgb");
+    root.style.removeProperty("--school-grid-opacity");
     return;
   }
   root.style.setProperty("--school-primary-light", theme.primary);
@@ -37,6 +38,9 @@ function applyTheme(id: SchoolThemeId) {
   root.style.setProperty("--school-primary-dark", theme.primaryDark);
   root.style.setProperty("--school-secondary", theme.secondary);
   root.style.setProperty("--school-primary-rgb", hexToRgbTriplet(theme.primary));
+  // A chosen school theme gets a more visible background tint than the
+  // site's own quieter default (0.05) — the whole point of picking one.
+  root.style.setProperty("--school-grid-opacity", "0.1");
 }
 
 export function SchoolThemeProvider({ children }: { children: ReactNode }) {

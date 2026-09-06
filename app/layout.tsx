@@ -85,7 +85,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             teal in place. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var id=localStorage.getItem("ee-school-theme");var themes=${JSON.stringify(SCHOOL_THEME_MAP)};var s=themes[id];if(s){var r=document.documentElement.style;r.setProperty("--school-primary-light",s.primary);r.setProperty("--school-primary-night",s.primaryNight);r.setProperty("--school-primary-dark",s.primaryDark);r.setProperty("--school-secondary",s.secondary);r.setProperty("--school-primary-rgb",s.rgb)}}catch(e){}})()`,
+            __html: `(function(){try{var id=localStorage.getItem("ee-school-theme");var themes=${JSON.stringify(SCHOOL_THEME_MAP)};var s=themes[id];if(s){var r=document.documentElement.style;r.setProperty("--school-primary-light",s.primary);r.setProperty("--school-primary-night",s.primaryNight);r.setProperty("--school-primary-dark",s.primaryDark);r.setProperty("--school-secondary",s.secondary);r.setProperty("--school-primary-rgb",s.rgb);r.setProperty("--school-grid-opacity","0.1")}}catch(e){}})()`,
           }}
         />
       </head>
