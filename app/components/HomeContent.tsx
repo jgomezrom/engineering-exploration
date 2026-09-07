@@ -8,6 +8,8 @@ import CuriosityExplorer from "./CuriosityExplorer";
 import DidYouKnowTicker from "./DidYouKnowTicker";
 import ExplorationStrip from "./ExplorationStrip";
 import FadeIn from "./FadeIn";
+import PlateFigure from "./PlateFigure";
+import { figures } from "../data/figures";
 import { fields } from "../data/fields";
 import { challenges } from "../data/challenges";
 import { resourceLinks } from "../data/resourceLinks";
@@ -193,6 +195,11 @@ export default function HomeContent() {
             </li>
           ))}
         </ol>
+      </FadeIn>
+
+      {/* ── Plate ──────────────────────────────────────────────────── */}
+      <FadeIn as="section" className="mt-16">
+        <PlateFigure figure={figures.bridge} index="02" />
       </FadeIn>
 
       {/* ── Did you know ───────────────────────────────────────────── */}

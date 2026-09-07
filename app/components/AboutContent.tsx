@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import PlateFigure from "./PlateFigure";
+import { figures } from "../data/figures";
 import { useLanguage } from "../context/LanguageContext";
 import { aboutTranslations } from "../data/translations/about";
 
@@ -31,6 +33,10 @@ export default function AboutContent() {
           </Link>
           .
         </p>
+      </div>
+
+      <div className="mt-10">
+        <PlateFigure figure={figures.pumpHouseDrawing} index="01" ratio="aspect-[3/2]" fit="contain" />
       </div>
 
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">

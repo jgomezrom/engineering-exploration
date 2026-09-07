@@ -4,6 +4,8 @@ import Link from "next/link";
 import Card from "./Card";
 import FadeIn from "./FadeIn";
 import FieldIcon from "./FieldIcon";
+import PlateFigure from "./PlateFigure";
+import { figures } from "../data/figures";
 import { challenges } from "../data/challenges";
 import { challengesEs } from "../data/challenges.es";
 import { ChallengeCategory } from "../data/types";
@@ -38,6 +40,10 @@ export default function ChallengesContent() {
 
       <h1 className="text-3xl font-bold text-neutral-900 dark:text-white xl:text-4xl">{t.heading}</h1>
       <p className="mt-2 max-w-xl text-neutral-600 dark:text-neutral-400">{t.intro}</p>
+
+      <FadeIn className="mt-10">
+        <PlateFigure figure={figures.steamPlant} index="01" />
+      </FadeIn>
 
       {grouped.map(({ category, items }) => (
         <FadeIn key={category} className="mt-12">
