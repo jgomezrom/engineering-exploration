@@ -12,6 +12,8 @@
 // Credit is rendered with each figure even though attribution isn't legally
 // required, since the site's Sources & Methodology page commits to saying
 // where things come from.
+import type { FieldSlug } from "./types";
+
 export type Figure = {
   src: string;
   alt: string;
@@ -19,6 +21,11 @@ export type Figure = {
   credit: string;
   sourceUrl: string;
 };
+
+const HAER = "Historic American Engineering Record, Library of Congress";
+const HAER_URL = "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/";
+const NASA = "NASA";
+const NASA_URL = "https://images.nasa.gov/";
 
 export const figures = {
   bridge: {
@@ -43,3 +50,77 @@ export const figures = {
     sourceUrl: "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/",
   },
 } satisfies Record<string, Figure>;
+
+// Per-field figures exist only for the disciplines where a genuinely good
+// public-domain image exists. That's deliberately partial: HAER covers the
+// built and mechanical trades well and NASA covers spaceflight, but neither
+// has anything usable for biomedical, software, semiconductor, petroleum,
+// chemical, agricultural, nuclear or systems engineering. Architectural and
+// environmental were dropped too — every candidate was a small house or a
+// street view. A field with no entry here simply shows its hand-drawn SVG
+// figure, which every field has.
+export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
+  "civil-engineering": {
+    src: "/figures/fields/civil-engineering.jpg",
+    alt: "A steel suspension bridge carrying a road across a wide river canyon.",
+    caption: "Cameron Suspension Bridge, Little Colorado River, Arizona",
+    credit: HAER,
+    sourceUrl: HAER_URL,
+  },
+  "structural-engineering": {
+    src: "/figures/fields/structural-engineering.jpg",
+    alt: "Close view of a riveted steel truss portal, showing built-up members meeting at a gusseted joint.",
+    caption: "Onion Creek Bridge, Coffeyville, Kansas — truss detail",
+    credit: HAER,
+    sourceUrl: HAER_URL,
+  },
+  "mechanical-engineering": {
+    src: "/figures/fields/mechanical-engineering.jpg",
+    alt: "The interior of a steel mill engine house, with large steam engine cylinders and pressure vessels.",
+    caption: "Carnegie Steel, Ohio Works — steam engines, Youngstown, Ohio",
+    credit: HAER,
+    sourceUrl: HAER_URL,
+  },
+  "manufacturing-engineering": {
+    src: "/figures/fields/manufacturing-engineering.jpg",
+    alt: "The weathered brick and timber exterior of a working nineteenth-century iron foundry.",
+    caption: "Knight Foundry, Sutter Creek, California",
+    credit: HAER,
+    sourceUrl: HAER_URL,
+  },
+  "industrial-engineering": {
+    src: "/figures/fields/industrial-engineering.jpg",
+    alt: "A multi-storey brick factory building on a city corner, where the Model T was first produced.",
+    caption: "Ford Piquette Avenue Plant, Detroit, Michigan",
+    credit: HAER,
+    sourceUrl: HAER_URL,
+  },
+  "marine-engineering": {
+    src: "/figures/fields/marine-engineering.jpg",
+    alt: "A floating dry dock at a shipyard, with cranes standing over the basin.",
+    caption: "Floating Dry Dock USS Oak Ridge, Coast Guard Yard, Curtis Bay, Maryland",
+    credit: HAER,
+    sourceUrl: HAER_URL,
+  },
+  "energy-engineering": {
+    src: "/figures/fields/energy-engineering.jpg",
+    alt: "A hydroelectric powerhouse sitting at the edge of its dam, water passing beside it.",
+    caption: "Hardy Hydroelectric Plant powerhouse, Newaygo, Michigan",
+    credit: HAER,
+    sourceUrl: HAER_URL,
+  },
+  "aerospace-engineering": {
+    src: "/figures/fields/aerospace-engineering.jpg",
+    alt: "An AJ26 rocket engine mounted in its test stand structure ahead of a hot-fire test.",
+    caption: "AJ26 rocket engine on the test stand",
+    credit: NASA,
+    sourceUrl: NASA_URL,
+  },
+  "robotics-engineering": {
+    src: "/figures/fields/robotics-engineering.jpg",
+    alt: "Engineers in cleanroom suits working around the Curiosity rover as it extends its robotic arm.",
+    caption: "Curiosity Mars rover flexing its robotic arm during testing",
+    credit: NASA,
+    sourceUrl: NASA_URL,
+  },
+};
