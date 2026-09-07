@@ -4,6 +4,8 @@ import Link from "next/link";
 import Card from "./Card";
 import FieldIcon from "./FieldIcon";
 import FieldIllustration from "./FieldIllustration";
+import PlateFigure from "./PlateFigure";
+import { fieldFigures } from "../data/figures";
 import FieldStatSheet from "./FieldStatSheet";
 import SalaryDetails from "./SalaryDetails";
 import DayInTheLife from "./DayInTheLife";
@@ -176,6 +178,12 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
         </div>
         {showNotice && <NotTranslatedNotice text={t.notTranslatedNotice} />}
 
+        {fieldFigures[stub.slug] && (
+          <div className="mt-8 print:hidden">
+            <PlateFigure figure={fieldFigures[stub.slug]!} index="02" ratio="aspect-[16/9]" />
+          </div>
+        )}
+
         <Section index={1} title={t.section1}>
           <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.whatItIs}</p>
         </Section>
@@ -235,6 +243,12 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
           </div>
         </div>
       </div>
+
+      {fieldFigures[field.slug] && (
+        <div className="mt-10 print:hidden">
+          <PlateFigure figure={fieldFigures[field.slug]!} index="02" ratio="aspect-[16/9]" />
+        </div>
+      )}
 
       <Section index={1} title={t.section1}>
         <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{field.whatItIs}</p>
