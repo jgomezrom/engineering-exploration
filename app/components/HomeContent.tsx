@@ -104,7 +104,11 @@ export default function HomeContent() {
 
             <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl dark:text-white">
               {t.heroPrefix}
-              <span className="relative inline-block whitespace-nowrap">
+              {/* The key noun switches to the mono face — a technical term
+                  called out mid-sentence. Sized down slightly since mono runs
+                  optically larger and much wider than the sans at the same
+                  px, which would otherwise force an extra line on mobile. */}
+              <span className="relative inline-block whitespace-nowrap font-mono text-[0.88em] tracking-tight">
                 {t.heroHighlight}
                 <span aria-hidden="true" className="absolute -bottom-1 left-0 h-[4px] w-full bg-primary" />
               </span>

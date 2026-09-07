@@ -86,20 +86,26 @@ function PageFrame({
         <BackLink href="/explore" labelKey="backToFields" />
       </div>
 
-      <div className="mt-6 inline-flex items-center justify-center border border-primary/30 bg-primary/5 p-4">
-        <FieldIcon slug={slug} className="h-10 w-10 text-primary" />
-      </div>
-
-      <h1 className="mt-4 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">{name}</h1>
-      <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">{tagline}</p>
-      <div className="flex flex-wrap items-center gap-3">
+      {/* Datasheet-style head: mark and title set side by side, closed off by
+          a rule, rather than a centered stack of icon-then-title. */}
+      <header className="mt-6 border-b border-neutral-900/10 pb-8 dark:border-white/10">
+        <div className="flex items-start gap-5">
+          <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center border border-primary/30 bg-primary/5">
+            <FieldIcon slug={slug} className="h-9 w-9 text-primary" />
+          </span>
+          <div className="min-w-0">
+            <h1 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl dark:text-white">{name}</h1>
+            <p className="mt-2 text-lg leading-relaxed text-neutral-600 dark:text-neutral-400">{tagline}</p>
+          </div>
+        </div>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
         <div className="print:hidden">
           <BookmarkButton slug={slug} />
         </div>
         <button
           type="button"
           onClick={() => window.print()}
-          className="print:hidden mt-6 flex items-center gap-2 border border-neutral-900/10 px-3 py-1.5 text-xs font-medium text-neutral-600 transition-colors hover:border-primary/40 hover:text-primary dark:border-white/10 dark:text-neutral-400"
+          className="print:hidden flex items-center gap-2 border border-neutral-900/10 px-3 py-1.5 text-xs font-medium text-neutral-600 transition-colors hover:border-primary/40 hover:text-primary dark:border-white/10 dark:text-neutral-400"
         >
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-3.5 w-3.5">
             <path d="M6 7.5V3h8v4.5" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
@@ -108,7 +114,8 @@ function PageFrame({
           </svg>
           {printLabel}
         </button>
-      </div>
+        </div>
+      </header>
 
       {children}
     </main>

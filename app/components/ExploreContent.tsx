@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Card from "./Card";
 import FadeIn from "./FadeIn";
 import FieldIcon from "./FieldIcon";
 import BookmarkedFields from "./BookmarkedFields";
@@ -27,7 +26,7 @@ export default function ExploreContent() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 xl:max-w-6xl">
-      <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
+      <span className="mb-5 inline-flex items-center gap-3 text-xs font-mono font-medium uppercase tracking-widest text-primary before:h-px before:w-8 before:bg-primary before:content-['']">
         {t.badge}
       </span>
 
@@ -67,16 +66,28 @@ export default function ExploreContent() {
         />
       </div>
 
-      <FadeIn className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {displayFields.map((field) => (
-          <Link key={field.slug} href={`/engineering/${field.slug}`}>
-            <Card>
-              <FieldIcon slug={field.slug} className="h-10 w-10 text-primary" />
-              <h2 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">{field.name}</h2>
-              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{field.tagline}</p>
-            </Card>
-          </Link>
-        ))}
+      {/* A flush catalog matrix rather than floating cards: the container
+          draws the top/left edges and each cell draws its own bottom/right,
+          so every rule is a single hairline with no doubling at the seams. */}
+      <FadeIn className="mt-10 border-l border-t border-neutral-900/10 dark:border-white/10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3">
+          {displayFields.map((field, i) => (
+            <Link
+              key={field.slug}
+              href={`/engineering/${field.slug}`}
+              className="group flex flex-col border-b border-r border-neutral-900/10 p-6 transition-colors hover:bg-primary/[0.04] dark:border-white/10"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <FieldIcon slug={field.slug} className="h-9 w-9 flex-shrink-0 text-primary" />
+                <span className="font-mono text-xs text-neutral-300 transition-colors group-hover:text-primary dark:text-neutral-700">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h2 className="mt-4 text-base font-semibold text-neutral-900 dark:text-white">{field.name}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{field.tagline}</p>
+            </Link>
+          ))}
+        </div>
       </FadeIn>
 
       {displayStubs.length > 0 && (
@@ -84,21 +95,25 @@ export default function ExploreContent() {
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">{t.moreFieldsHeading}</h2>
           <p className="mt-1 max-w-xl text-sm text-neutral-600 dark:text-neutral-400">{t.moreFieldsIntro}</p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {displayStubs.map((stub) => (
-              <Link key={stub.slug} href={`/engineering/${stub.slug}`}>
-                <Card>
-                  <div className="flex items-center justify-between">
-                    <FieldIcon slug={stub.slug} className="h-8 w-8 text-primary" />
-                    <span className="border border-neutral-900/15 px-3 py-1 font-mono text-xs uppercase tracking-wide text-neutral-500 dark:border-white/15 dark:text-neutral-400">
+          <div className="mt-6 border-l border-t border-neutral-900/10 dark:border-white/10">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3">
+              {displayStubs.map((stub) => (
+                <Link
+                  key={stub.slug}
+                  href={`/engineering/${stub.slug}`}
+                  className="group flex flex-col border-b border-r border-neutral-900/10 p-6 transition-colors hover:bg-primary/[0.04] dark:border-white/10"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <FieldIcon slug={stub.slug} className="h-8 w-8 flex-shrink-0 text-primary" />
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
                       {t.briefOverview}
                     </span>
                   </div>
                   <h3 className="mt-4 text-base font-semibold text-neutral-900 dark:text-white">{stub.name}</h3>
-                  <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{stub.tagline}</p>
-                </Card>
-              </Link>
-            ))}
+                  <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{stub.tagline}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </FadeIn>
       )}

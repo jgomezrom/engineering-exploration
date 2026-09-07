@@ -74,7 +74,7 @@ export default function MoreMajorsQuizPage() {
   if (stage === "intro") {
     return (
       <main className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
+        <span className="mb-5 inline-flex items-center gap-3 text-xs font-mono font-medium uppercase tracking-widest text-primary before:h-px before:w-8 before:bg-primary before:content-['']">
           {t.badge}
         </span>
         <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white xl:text-4xl">
@@ -168,7 +168,7 @@ export default function MoreMajorsQuizPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
-      <span className="mb-4 inline-block border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono font-medium uppercase tracking-widest text-primary">
+      <span className="mb-5 inline-flex items-center gap-3 text-xs font-mono font-medium uppercase tracking-widest text-primary before:h-px before:w-8 before:bg-primary before:content-['']">
         {t.yourResults}
       </span>
       <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white xl:text-4xl">
