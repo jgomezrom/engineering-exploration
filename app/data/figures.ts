@@ -12,6 +12,29 @@
 // Credit is rendered with each figure even though attribution isn't legally
 // required, since the site's Sources & Methodology page commits to saying
 // where things come from.
+// Every image below was matched byte-for-byte (MD5) against the record it
+// claims, so the captions can be re-checked rather than taken on trust.
+// Search the survey number at loc.gov, or the id at images.nasa.gov:
+//
+//   steel-truss-bridge     HAER MT-21     Old Steel Bridge, Flathead River, Kalispell MT
+//   steam-plant            HAER AZ-20     Crosscut Steam Plant, Tempe AZ
+//   pump-house-drawing     HAER MD-39     Chesapeake & Delaware Canal Pump House, MD
+//   generator-hall         HAER AL-47     Wilson Dam & Hydroelectric Plant, Muscle Shoals AL
+//   plate-mill             HAER PA-200    U.S. Steel Homestead Works, 48" plate mill, PA
+//   civil                  HAER AZ-34     Cameron Suspension Bridge, Cameron AZ
+//   structural             HAER KS-8      Onion Creek Bridge, Coffeyville KS
+//   mechanical             HAER OH-33     Carnegie Steel-Ohio Works, Steam Engines, Youngstown OH
+//   manufacturing          HAER CA-179    Knight Foundry, Sutter Creek CA
+//   industrial             HAER MI-347    Ford Piquette Plant, Detroit MI
+//   marine                 HAER MD-191    Floating Dry Dock USS Oak Ridge (ARDM-1), MD
+//   energy                 HAER MI-100-B  Hardy Hydroelectric Plant, Powerhouse, Newaygo MI
+//   aerospace              NASA 624109main_1969-05-20-2_full  Apollo 11 Rollout
+//   robotics               NASA PIA13388  Curiosity Mars Rover Flexes its Robotic Arm
+//
+// Captions follow the record's own wording where there is one. Alt text
+// describes only what is visible in the frame — not what the record says is
+// there, and not history that can't be seen. Getting that backwards is how a
+// photo of an empty flame trench ended up captioned as a rocket engine.
 import type { FieldSlug } from "./types";
 
 export type Figure = {
@@ -37,7 +60,7 @@ export const figures = {
   },
   steamPlant: {
     src: "/figures/steam-plant.jpg",
-    alt: "Exterior of the Crosscut Steam Plant, an early concrete power building behind a lattice of steel transmission framing.",
+    alt: "Exterior of the Crosscut Steam Plant, its tall window bays rising behind the steel framing and insulators of the switchyard.",
     caption: "Crosscut Steam Plant, Salt River, Tempe, Arizona",
     credit: "Historic American Engineering Record, Library of Congress",
     sourceUrl: "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/",
@@ -45,7 +68,7 @@ export const figures = {
   pumpHouseDrawing: {
     src: "/figures/pump-house-drawing.jpg",
     alt: "A measured drawing sheet of the Chesapeake & Delaware Canal pump house, with a site plan, written history, and title block.",
-    caption: "Chesapeake & Delaware Canal Pump House, 1851–1854 — measured drawing",
+    caption: "Chesapeake & Delaware Canal Pump House, 1851–1854 — record drawing: site plan and history",
     credit: "Historic American Engineering Record, Library of Congress",
     sourceUrl: "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/",
   },
@@ -58,7 +81,7 @@ export const figures = {
   },
   plateMill: {
     src: "/figures/plate-mill.jpg",
-    alt: "The interior of a steel plate mill, with a row of soaking pits along one wall under an open steel roof truss.",
+    alt: "The interior of a disused steel plate mill, with a row of furnace openings along a heavy masonry wall under an open steel roof truss.",
     caption: "U.S. Steel Homestead Works, 48-inch plate mill, Homestead, Pennsylvania",
     credit: "Historic American Engineering Record, Library of Congress",
     sourceUrl: "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/",
@@ -101,8 +124,8 @@ export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
   },
   "mechanical-engineering": {
     src: "/figures/fields/mechanical-engineering.jpg",
-    alt: "The interior of a steel mill engine house, with heavy machinery, overhead piping and a large flywheel.",
-    caption: "Carnegie Steel, Ohio Works — engine house, Youngstown, Ohio",
+    alt: "The interior of a steel mill engine room, with heavy machinery, overhead piping and a large flywheel.",
+    caption: "Carnegie Steel–Ohio Works, steam engines, Youngstown, Ohio",
     credit: HAER,
     sourceUrl: HAER_URL,
   },
@@ -115,8 +138,8 @@ export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
   },
   "industrial-engineering": {
     src: "/figures/fields/industrial-engineering.jpg",
-    alt: "A multi-storey brick factory building on a city corner, where the Model T was first produced.",
-    caption: "Ford Piquette Avenue Plant, Detroit, Michigan",
+    alt: "A multi-storey brick factory building on a city corner, its long facade running away down the block.",
+    caption: "Ford Piquette Plant, Detroit, Michigan",
     credit: HAER,
     sourceUrl: HAER_URL,
   },
