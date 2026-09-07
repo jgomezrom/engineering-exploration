@@ -59,6 +59,11 @@ export const figures = {
 // environmental were dropped too — every candidate was a small house or a
 // street view. A field with no entry here simply shows its hand-drawn SVG
 // figure, which every field has.
+//
+// Field pages render these at aspect-[16/9] with object-cover, so use a
+// landscape source: a portrait one gets cropped to a middle band and can lose
+// its subject entirely. Check the crop, not just the full image, and make sure
+// the caption describes what survives it.
 export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
   "civil-engineering": {
     src: "/figures/fields/civil-engineering.jpg",
@@ -76,15 +81,15 @@ export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
   },
   "mechanical-engineering": {
     src: "/figures/fields/mechanical-engineering.jpg",
-    alt: "The interior of a steel mill engine house, with large steam engine cylinders and pressure vessels.",
-    caption: "Carnegie Steel, Ohio Works — steam engines, Youngstown, Ohio",
+    alt: "The interior of a steel mill engine house, with heavy machinery, overhead piping and a large flywheel.",
+    caption: "Carnegie Steel, Ohio Works — engine house, Youngstown, Ohio",
     credit: HAER,
     sourceUrl: HAER_URL,
   },
   "manufacturing-engineering": {
     src: "/figures/fields/manufacturing-engineering.jpg",
-    alt: "The weathered brick and timber exterior of a working nineteenth-century iron foundry.",
-    caption: "Knight Foundry, Sutter Creek, California",
+    alt: "A foundry shop interior, with wooden gear and pulley patterns hung on the wall above workbenches.",
+    caption: "Knight Foundry, Sutter Creek, California — shop interior with foundry patterns",
     credit: HAER,
     sourceUrl: HAER_URL,
   },
@@ -111,8 +116,8 @@ export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
   },
   "aerospace-engineering": {
     src: "/figures/fields/aerospace-engineering.jpg",
-    alt: "An AJ26 rocket engine mounted in its test stand structure ahead of a hot-fire test.",
-    caption: "AJ26 rocket engine on the test stand",
+    alt: "Two engineers crouched beside a large rocket nozzle mounted inside a cylindrical vacuum test chamber.",
+    caption: "Apollo contour rocket nozzle in the Propulsion Systems Laboratory, NASA Lewis Research Center, 1964",
     credit: NASA,
     sourceUrl: NASA_URL,
   },
