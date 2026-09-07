@@ -49,7 +49,27 @@ export const figures = {
     credit: "Historic American Engineering Record, Library of Congress",
     sourceUrl: "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/",
   },
+  generatorHall: {
+    src: "/figures/generator-hall.jpg",
+    alt: "The generator hall of a hydroelectric plant, with a row of housed generating units receding down a long, clean floor.",
+    caption: "Wilson Dam hydroelectric plant, generator hall, Muscle Shoals, Alabama",
+    credit: "Historic American Engineering Record, Library of Congress",
+    sourceUrl: "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/",
+  },
+  plateMill: {
+    src: "/figures/plate-mill.jpg",
+    alt: "The interior of a steel plate mill, with a row of soaking pits along one wall under an open steel roof truss.",
+    caption: "U.S. Steel Homestead Works, 48-inch plate mill, Homestead, Pennsylvania",
+    credit: "Historic American Engineering Record, Library of Congress",
+    sourceUrl: "https://www.loc.gov/collections/historic-american-buildings-landscapes-and-engineering-records/",
+  },
 } satisfies Record<string, Figure>;
+
+// The homepage plate cycles through these rather than showing one fixed
+// image, so the page has something new on a repeat visit. Order is the
+// display order. Keep every entry landscape and readable at 21/9 — the
+// homepage frame is much wider than the field pages'.
+export const homePlates: Figure[] = [figures.bridge, figures.generatorHall, figures.plateMill];
 
 // Per-field figures exist only for the disciplines where a genuinely good
 // public-domain image exists. That's deliberately partial: HAER covers the
@@ -116,8 +136,8 @@ export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
   },
   "aerospace-engineering": {
     src: "/figures/fields/aerospace-engineering.jpg",
-    alt: "Two engineers crouched beside a large rocket nozzle mounted inside a cylindrical vacuum test chamber.",
-    caption: "Apollo contour rocket nozzle in the Propulsion Systems Laboratory, NASA Lewis Research Center, 1964",
+    alt: "An aerial view of the Saturn V rocket and its launch tower riding the crawler-transporter along the crawlerway toward the launch pad.",
+    caption: "Apollo 11's Saturn V and mobile launcher on the crawler, bound for Launch Pad 39A, May 1969",
     credit: NASA,
     sourceUrl: NASA_URL,
   },
