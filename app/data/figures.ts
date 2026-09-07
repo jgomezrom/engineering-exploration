@@ -116,8 +116,8 @@ export const fieldFigures: Partial<Record<FieldSlug, Figure>> = {
   },
   "aerospace-engineering": {
     src: "/figures/fields/aerospace-engineering.jpg",
-    alt: "Two engineers crouched beside a large rocket nozzle mounted inside a cylindrical vacuum test chamber.",
-    caption: "Apollo contour rocket nozzle in the Propulsion Systems Laboratory, NASA Lewis Research Center, 1964",
+    alt: "An aerial view of the Saturn V rocket and its launch tower riding the crawler-transporter along the crawlerway toward the launch pad.",
+    caption: "Apollo 11's Saturn V and mobile launcher on the crawler, bound for Launch Pad 39A, May 1969",
     credit: NASA,
     sourceUrl: NASA_URL,
   },
