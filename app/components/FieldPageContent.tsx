@@ -178,11 +178,9 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
         </div>
         {showNotice && <NotTranslatedNotice text={t.notTranslatedNotice} />}
 
-        {fieldFigures[stub.slug] && (
-          <div className="mt-8 print:hidden">
-            <PlateFigure figure={fieldFigures[stub.slug]!} index="02" ratio="aspect-[16/9]" />
-          </div>
-        )}
+        <div className="mt-8 print:hidden">
+          <PlateFigure figure={fieldFigures[stub.slug]} index="02" ratio="aspect-[16/9]" />
+        </div>
 
         <Section index={1} title={t.section1}>
           <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.whatItIs}</p>
@@ -244,11 +242,9 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
         </div>
       </div>
 
-      {fieldFigures[field.slug] && (
-        <div className="mt-10 print:hidden">
-          <PlateFigure figure={fieldFigures[field.slug]!} index="02" ratio="aspect-[16/9]" />
-        </div>
-      )}
+      <div className="mt-10 print:hidden">
+        <PlateFigure figure={fieldFigures[field.slug]} index="02" ratio="aspect-[16/9]" />
+      </div>
 
       <Section index={1} title={t.section1}>
         <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{field.whatItIs}</p>
