@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { Figure } from "../data/figures";
+import { localizeFigure } from "../data/figures";
+import { useLanguage } from "../context/LanguageContext";
 
 // The same plate frame as PlateFigure, but cycling through several figures so
 // the page isn't identical on a repeat visit. The motion is a slow crossfade
@@ -23,6 +25,7 @@ export default function PlateRotator({
   ratio?: string;
   intervalMs?: number;
 }) {
+  const { language } = useLanguage();
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const [autoplay, setAutoplay] = useState(false);
@@ -47,6 +50,7 @@ export default function PlateRotator({
   }, [autoplay, paused, plates.length, intervalMs]);
 
   const current = plates[active];
+  const currentText = localizeFigure(current, language);
 
   return (
     <figure
@@ -63,7 +67,7 @@ export default function PlateRotator({
             src={plate.src}
             // Only the visible plate carries its description; the rest are
             // stacked underneath and would otherwise be read out as well.
-            alt={i === active ? plate.alt : ""}
+            alt={i === active ? localizeFigure(plate, language).alt : ""}
             aria-hidden={i !== active}
             fill
             sizes="(min-width: 1024px) 1024px, 100vw"
@@ -84,7 +88,7 @@ export default function PlateRotator({
             every few seconds, and announcing each change would interrupt the
             reader repeatedly for something purely illustrative. */}
         <span className="min-w-0 flex-1 text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">
-          {current.caption}
+          {currentText.caption}
         </span>
 
         {plates.length > 1 && (
@@ -94,7 +98,11 @@ export default function PlateRotator({
                 key={plate.src}
                 type="button"
                 onClick={() => setActive(i)}
-                aria-label={`Show plate ${i + 1} of ${plates.length}`}
+                aria-label={
+                  language === "es"
+                    ? `Mostrar lámina ${i + 1} de ${plates.length}`
+                    : `Show plate ${i + 1} of ${plates.length}`
+                }
                 aria-current={i === active}
                 className="group px-1 py-2"
               >
