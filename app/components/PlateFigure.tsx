@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import type { Figure } from "../data/figures";
+import { localizeFigure } from "../data/figures";
+import { useLanguage } from "../context/LanguageContext";
 
 // A public-domain photograph or measured drawing presented the way a plate is
 // presented in a technical document: framed, numbered, captioned, credited.
@@ -18,12 +22,15 @@ export default function PlateFigure({
   fit?: "cover" | "contain";
   priority?: boolean;
 }) {
+  const { language } = useLanguage();
+  const { alt, caption } = localizeFigure(figure, language);
+
   return (
     <figure className="border border-neutral-900/15 dark:border-white/15">
       <div className={`relative ${ratio} overflow-hidden bg-neutral-100 dark:bg-neutral-900`}>
         <Image
           src={figure.src}
-          alt={figure.alt}
+          alt={alt}
           fill
           sizes="(min-width: 1024px) 1024px, 100vw"
           priority={priority}
@@ -33,7 +40,7 @@ export default function PlateFigure({
       <figcaption className="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-t border-neutral-900/15 px-4 py-2.5 dark:border-white/15">
         <span className="font-mono text-[11px] font-medium uppercase tracking-widest text-primary">FIG. {index}</span>
         <span className="min-w-0 flex-1 text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">
-          {figure.caption}
+          {caption}
         </span>
         <a
           href={figure.sourceUrl}
