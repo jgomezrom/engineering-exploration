@@ -106,12 +106,6 @@ export const figures = {
   },
 } satisfies Record<string, Figure>;
 
-// The homepage plate cycles through these rather than showing one fixed
-// image, so the page has something new on a repeat visit. Order is the
-// display order. Keep every entry landscape and readable at 21/9 — the
-// homepage frame is much wider than the field pages'.
-export const homePlates: Figure[] = [figures.bridge, figures.generatorHall, figures.plateMill];
-
 // Every field has a photograph. These are chosen to be recognisable at a
 // glance to a reader who is 10-18 and deciding whether a field looks
 // interesting, so a big legible subject in colour beats archival tidiness —
@@ -327,3 +321,18 @@ export const fieldFigures: Record<FieldSlug, Figure> = {
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Collection_of_Ferrari_Formula_One_racing_cars_at_the_Ferrari_Museum_in_Maranello,_Italy.jpg",
   },
 };
+
+// The homepage plate cycles through these rather than showing one fixed image,
+// so the page has something new on a repeat visit. Order is the display order.
+//
+// These are drawn from the field set on purpose. The homepage is the first
+// thing a reader sees, and it used to rotate through three grey survey
+// photographs while every field page behind it was in colour — which made the
+// front door the dullest room in the house. Wide, high-contrast subjects are
+// chosen here because the homepage frame is 21/9, far wider than a field
+// page's, so anything with its subject near the top or bottom loses it.
+export const homePlates: Figure[] = [
+  fieldFigures["marine-engineering"],
+  fieldFigures["civil-engineering"],
+  fieldFigures["energy-engineering"],
+];
