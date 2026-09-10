@@ -182,25 +182,122 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
           <PlateFigure figure={fieldFigures[stub.slug]} index="02" ratio="aspect-[16/9]" />
         </div>
 
-        <Section index={1} title={t.section1}>
-          <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.whatItIs}</p>
-        </Section>
-
-        <Section index={2} title={t.section3}>
-          <BulletList items={displayStub.realWorldExamples} />
-        </Section>
-
-        <Section index={3} title={t.relatedMajors}>
-          <BulletList items={displayStub.relatedMajors} />
-        </Section>
-
-        <Section index={4} title={t.section13}>
-          {displayStub.salary ? (
-            <SalaryDetails salary={displayStub.salary} />
-          ) : (
-            <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.salaryNote}</p>
-          )}
-        </Section>
+        {/* A stub only shows the sections it actually has content for, so the
+            numbering is assigned after filtering rather than hard-coded. That
+            keeps a half-filled stub from displaying gaps like 01, 02, 05, and
+            means a stub can be filled in one section at a time without anyone
+            renumbering the rest by hand. */}
+        {[
+          {
+            key: "what-it-is",
+            title: t.section1,
+            body: <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.whatItIs}</p>,
+          },
+          displayStub.whatEngineersWorkOn
+            ? {
+                key: "work-on",
+                title: t.section2,
+                body: (
+                  <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+                    {displayStub.whatEngineersWorkOn}
+                  </p>
+                ),
+              }
+            : null,
+          {
+            key: "examples",
+            title: t.section3,
+            body: <BulletList items={displayStub.realWorldExamples} />,
+          },
+          displayStub.mythsAndRealities?.length
+            ? {
+                key: "myths",
+                title: t.section4,
+                body: (
+                  <>
+                    <p className="mb-5 max-w-2xl text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+                      {t.tapCard}
+                    </p>
+                    <MythRealityCards items={displayStub.mythsAndRealities} />
+                  </>
+                ),
+              }
+            : null,
+          displayStub.typicalWorkday
+            ? {
+                key: "workday",
+                title: t.section5,
+                body: (
+                  <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
+                    {displayStub.typicalWorkday}
+                  </p>
+                ),
+              }
+            : null,
+          displayStub.typicalProjects?.length
+            ? {
+                key: "projects",
+                title: t.section6,
+                body: <BulletList items={displayStub.typicalProjects} />,
+              }
+            : null,
+          displayStub.usefulSubjects && displayStub.helpfulSkills
+            ? {
+                key: "subjects-skills",
+                title: t.section7,
+                body: (
+                  <div className="grid gap-8 sm:grid-cols-2">
+                    <SubList label={t.usefulSubjects} items={displayStub.usefulSubjects} />
+                    <SubList label={t.helpfulSkills} items={displayStub.helpfulSkills} />
+                  </div>
+                ),
+              }
+            : null,
+          {
+            key: "where-you-work",
+            title: t.section8,
+            body: (
+              <div className="grid gap-8 sm:grid-cols-2">
+                {displayStub.industries && <SubList label={t.industries} items={displayStub.industries} />}
+                <SubList label={t.relatedMajors} items={displayStub.relatedMajors} />
+              </div>
+            ),
+          },
+          displayStub.advantages && displayStub.challenges
+            ? {
+                key: "pros-cons",
+                title: t.section10,
+                body: (
+                  <div className="grid gap-8 sm:grid-cols-2">
+                    <SubList label={t.advantages} items={displayStub.advantages} />
+                    <SubList label={t.challenges} items={displayStub.challenges} />
+                  </div>
+                ),
+              }
+            : null,
+          displayStub.thingsPeopleDislike?.length
+            ? {
+                key: "dislike",
+                title: t.section11,
+                body: <BulletList items={displayStub.thingsPeopleDislike} />,
+              }
+            : null,
+          {
+            key: "salary",
+            title: t.section13,
+            body: displayStub.salary ? (
+              <SalaryDetails salary={displayStub.salary} />
+            ) : (
+              <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.salaryNote}</p>
+            ),
+          },
+        ]
+          .filter((s) => s !== null)
+          .map((s, i) => (
+            <Section key={s.key} index={i + 1} title={s.title}>
+              {s.body}
+            </Section>
+          ))}
       </PageFrame>
     );
   }

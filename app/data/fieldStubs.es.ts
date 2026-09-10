@@ -38,6 +38,78 @@ export const fieldStubsEs: FieldStub[] = [
     relatedField: "mechanical-engineering",
     salaryNote:
       "Los ingenieros automotrices normalmente se rastrean bajo la categoría más amplia de 'ingenieros mecánicos' en la Oficina de Estadísticas Laborales de EE. UU., no como su propia ocupación separada. Consulta la página de Ingeniería Mecánica para ver esos datos de salario con fuente.",
+    whatEngineersWorkOn:
+      "Los ingenieros automotrices trabajan a fondo sobre una parte del vehículo, no sobre autos enteros a la vez. Una persona puede encargarse del sistema de refrigeración, del mecanismo del pestillo de una puerta, de la gestión térmica de la batería, o del software que decide cuándo intervienen los frenos. El trabajo va desde el diseño y la simulación inicial hasta la construcción de prototipos, las pruebas, y la larga etapa de revisión posterior — buena parte de la cual se dedica a averiguar por qué una pieza no se comporta como decía el modelo, y a cambiarla hasta que lo haga.",
+    commonMisconceptions: [
+      "Que los ingenieros automotrices diseñan el aspecto de los autos — el estilo exterior e interior lo hacen sobre todo diseñadores, y los ingenieros trabajan dentro de formas que a menudo ya están decididas.",
+      "Que el trabajo trata sobre todo de rendimiento y velocidad — se dedica mucho más esfuerzo de ingeniería a la seguridad, las emisiones, el costo, la durabilidad, y la fabricabilidad que a hacer un vehículo rápido.",
+      "Que los vehículos eléctricos simplificaron el campo — un eléctrico elimina el motor y la caja de cambios, pero añade sistemas de alto voltaje, gestión térmica de baterías, y mucho más software.",
+      "Que hay que ser aficionado a los autos para pertenecer aquí — mucha gente entra desde la ingeniería mecánica, eléctrica, o de software sin haber reconstruido nunca un motor.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Los ingenieros automotrices diseñan cómo se ven los autos.",
+        reality:
+          "El estilo es en gran medida trabajo de un diseñador. Los ingenieros suelen trabajar dentro de una forma ya aprobada, y buena parte de la habilidad está en hacer que el mecanismo quepa en el espacio disponible.",
+      },
+      {
+        myth: "El trabajo trata sobre todo de hacer autos rápidos.",
+        reality:
+          "El rendimiento es un requisito que compite con la seguridad ante choques, las emisiones, el costo, el peso, la fiabilidad, y si una fábrica puede realmente producir la pieza.",
+      },
+      {
+        myth: "Pasas los días rodeado de autos terminados.",
+        reality:
+          "La mayor parte del trabajo es sobre un componente, un banco de pruebas, una simulación, o una hoja de resultados. Algunos ingenieros pasan años sin tener un vehículo completo delante.",
+      },
+      {
+        myth: "Los vehículos eléctricos hicieron más fácil la ingeniería automotriz.",
+        reality:
+          "Cambió dónde está la dificultad en vez de eliminarla. Los motores y las transmisiones dieron paso a la química de baterías, la seguridad de alto voltaje, la gestión térmica, y el software.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Química", "Informática o programación, si se ofrece", "Dibujo técnico o CAD, si está disponible"],
+    helpfulSkills: [
+      "Soltura con la mecánica y la termodinámica, ya que casi todos los problemas de un vehículo se reducen a fuerzas, calor, o ambos",
+      "Disposición a probar y volver a probar, porque una pieza que funciona en simulación a menudo se comporta distinto en un banco de pruebas",
+      "Atención a las tolerancias y al costo, ya que un diseño que no se puede fabricar de forma repetible y económica no llega a producción",
+      "Programación suficiente para ser útil, porque cada vez más el comportamiento del vehículo se decide en software",
+      "Trabajar dentro de restricciones fijadas por otros equipos, que es buena parte de la realidad diaria del puesto",
+    ],
+    typicalProjects: [
+      "Diseñar y validar un solo componente — un soporte, una bomba, un pestillo — frente a objetivos de resistencia, peso, y costo",
+      "Realizar pruebas de choque o durabilidad y analizar qué dicen los resultados sobre el diseño",
+      "Desarrollar la gestión térmica de una batería para que se mantenga en su rango seguro de temperatura",
+      "Ajustar el software de control de frenado, tracción, o asistencia al conductor",
+      "Rediseñar una pieza para que pueda montarse realmente en una línea de producción al ritmo necesario",
+    ],
+    typicalWorkday:
+      "El tiempo se reparte entre el diseño y la simulación frente a una computadora, el trabajo en un laboratorio de pruebas o un banco, y bastantes reuniones con los otros equipos cuyas piezas tocan la tuya. Los ciclos de prueba marcan el ritmo: se ejecuta un ensayo, llegan los resultados, y los días siguientes se dedican a entenderlos. Los plazos suelen estar ligados a los hitos del programa del vehículo, lo que hace que algunas etapas sean mucho más intensas que otras.",
+    industries: [
+      "Fabricantes de vehículos",
+      "Proveedores de componentes y sistemas, que emplean a una gran parte de los ingenieros automotrices",
+      "Empresas de vehículos eléctricos y baterías",
+      "Automovilismo deportivo y fabricantes de vehículos especializados",
+      "Organismos de pruebas, certificación, y regulación",
+    ],
+    advantages: [
+      "El trabajo termina dentro de objetos que la gente usa a diario, lo que hace inusualmente fácil señalarlo",
+      "Las habilidades se transfieren bien, ya que los fundamentos mecánicos, térmicos, y de control se aplican en aeroespacial, energía, y maquinaria pesada",
+      "Las pruebas son físicas e inmediatas — averiguas bastante rápido si un diseño aguanta",
+      "El cambio hacia vehículos eléctricos y automatizados ha abierto trabajo real para quienes vienen del software o la electrónica",
+    ],
+    challenges: [
+      "La presión sobre el costo es constante, y un diseño técnicamente mejor pierde con regularidad frente a uno más barato",
+      "La regulación de seguridad y emisiones limita bastante lo que se puede hacer",
+      "Los programas de vehículos son largos, así que pueden pasar años entre tu trabajo y algo que llegue a la carretera",
+      "El trabajo suele concentrarse en ciertas regiones y empresas, lo que puede implicar mudarse para seguir en el campo",
+    ],
+    thingsPeopleDislike: [
+      "Encargarse de un componente pequeño durante mucho tiempo, en vez de trabajar sobre un vehículo completo",
+      "Ver cómo un diseño del que estás orgulloso se cambia para ahorrar una cantidad pequeña por unidad",
+      "Ciclos largos de validación y papeleo entre terminar un diseño y ponerlo en producción",
+      "Periodos de sobrecarga alrededor de los hitos del programa y las fechas de lanzamiento",
+    ],
   },
   {
     slug: "manufacturing-engineering",
