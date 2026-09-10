@@ -34,7 +34,7 @@ export const sourcesTranslations = {
     tableSource: "Source",
     tableVerified: "Verified",
     footnoteBefore: "The remaining fields under",
-    briefOverviewLink: "brief-overview entries",
+    briefOverviewLink: "More fields",
     footnoteAfter:
       "aren't tracked as their own category by the U.S. Bureau of Labor Statistics — each of those pages says so explicitly and points to the closest related field instead of guessing at a number.",
   },
@@ -72,8 +72,8 @@ export const sourcesTranslations = {
     tablePeriod: "Periodo",
     tableSource: "Fuente",
     tableVerified: "Verificado",
-    footnoteBefore: "Los campos restantes bajo las",
-    briefOverviewLink: "entradas de resumen breve",
+    footnoteBefore: "Los campos restantes bajo",
+    briefOverviewLink: "Más campos",
     footnoteAfter:
       "no se rastrean como su propia categoría en la Oficina de Estadísticas Laborales de EE. UU. — cada una de esas páginas lo indica explícitamente y señala hacia el campo relacionado más cercano en lugar de adivinar un número.",
   },

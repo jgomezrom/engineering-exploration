@@ -13,7 +13,7 @@ export const moreMajorsQuizTranslations = {
     yourResults: "Your results",
     fieldsCame: "Fields that came up for you",
     resultsIntro: (n: number) =>
-      `This just counts how many of your ${n} answers pointed toward each field — a tally, not a percentage match. These are brief-overview fields on this site, so treat it as a starting point for curiosity, even more so than the main quiz results.`,
+      `This just counts how many of your ${n} answers pointed toward each field — a tally, not a percentage match. These fields don't have comparison stats or a day-in-the-life section on this site yet, so treat it as a starting point for curiosity, even more so than the main quiz results.`,
     noneMatched:
       "None of your answers pointed toward one of these fields this time, and that's a real result too. Feel free to retake it or head back to the main quiz.",
     answersLabel: "answers",
@@ -34,7 +34,7 @@ export const moreMajorsQuizTranslations = {
     yourResults: "Tus resultados",
     fieldsCame: "Campos que surgieron para ti",
     resultsIntro: (n: number) =>
-      `Esto solo cuenta cuántas de tus ${n} respuestas apuntaron hacia cada campo — un conteo, no una coincidencia porcentual. Estos son campos de resumen breve en este sitio, así que trátalo como un punto de partida para la curiosidad, todavía más que los resultados del cuestionario principal.`,
+      `Esto solo cuenta cuántas de tus ${n} respuestas apuntaron hacia cada campo — un conteo, no una coincidencia porcentual. Estos campos todavía no tienen estadísticas comparativas ni un día en la vida en este sitio, así que trátalo como un punto de partida para la curiosidad, todavía más que los resultados del cuestionario principal.`,
     noneMatched:
       "Ninguna de tus respuestas apuntó hacia uno de estos campos esta vez, y eso también es un resultado real. Siéntete libre de repetirlo o de volver al cuestionario principal.",
     answersLabel: "respuestas",
