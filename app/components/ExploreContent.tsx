@@ -33,6 +33,9 @@ export default function ExploreContent() {
       <h1 className="text-3xl font-bold text-neutral-900 dark:text-white xl:text-4xl">{t.heading}</h1>
       <p className="mt-2 max-w-xl text-neutral-600 dark:text-neutral-400">
         {t.introBefore}{" "}
+        {/* Deliberately fields.length and not totalFieldCount: the comparison
+            table is built from field.stats, which only the full fields carry.
+            Saying 23 here would promise rows the table can't render. */}
         <Link href="/compare" className="font-medium text-primary hover:underline">
           {t.compareLink} {fields.length}
         </Link>{" "}

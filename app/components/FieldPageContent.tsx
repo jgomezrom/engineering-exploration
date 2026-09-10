@@ -149,6 +149,10 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
     const related = relatedPool.find((f) => f.slug === stub.relatedField);
     return (
       <PageFrame slug={stub.slug} name={displayStub.name} tagline={displayStub.tagline} printLabel={t.printField}>
+        {/* Stubs count toward exploration progress too. Without this the
+            homepage strip counts out of every field but can only ever record
+            the sixteen full ones, so it would stick at 16 of 23 forever. */}
+        <FieldVisitTracker slug={stub.slug} />
         <div className="mt-8">
           <div className="relative flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
             <span className="pointer-events-none absolute left-2 top-2 h-2.5 w-2.5 border-l border-t border-primary/40" />
