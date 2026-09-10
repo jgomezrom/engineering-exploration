@@ -38,6 +38,78 @@ export const fieldStubs: FieldStub[] = [
     relatedField: "mechanical-engineering",
     salaryNote:
       "Automotive engineers are typically tracked under the broader 'mechanical engineers' category by the U.S. Bureau of Labor Statistics, not as their own separate occupation. See the Mechanical Engineering page for that sourced salary data.",
+    whatEngineersWorkOn:
+      "Automotive engineers work on one piece of a vehicle in a lot of depth, rather than on whole cars at once. A given engineer might own the cooling system, the door latch mechanism, the battery pack's thermal management, or the software that decides when the brakes intervene. The work runs from early design and simulation through prototype building, testing, and the long stretch of revision that follows — most of which is spent finding out why a part doesn't behave the way the model said it would, and changing it until it does.",
+    commonMisconceptions: [
+      "That automotive engineers design what cars look like — exterior and interior styling is mostly done by designers, and engineers work within shapes that have often already been decided.",
+      "That the job is mostly about performance and speed — far more engineering effort goes into safety, emissions, cost, durability, and manufacturability than into making a vehicle fast.",
+      "That electric vehicles made the field simpler — an EV removes the engine and gearbox but adds high-voltage systems, battery thermal management, and a great deal more software.",
+      "That you need to be a car enthusiast to belong here — plenty of people enter through mechanical, electrical, or software engineering without ever having rebuilt an engine.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Automotive engineers design how cars look.",
+        reality:
+          "Styling is largely a designer's job. Engineers usually work inside a shape that has already been signed off, and much of the skill is making the mechanism fit the space they're given.",
+      },
+      {
+        myth: "The job is mostly about making cars fast.",
+        reality:
+          "Performance is one requirement competing with crash safety, emissions, cost, weight, reliability, and whether a factory can actually build the part.",
+      },
+      {
+        myth: "You spend your days around finished cars.",
+        reality:
+          "Most of the work is on a component, a rig, a simulation, or a spreadsheet of test results. Some engineers go years without a whole vehicle in front of them.",
+      },
+      {
+        myth: "Electric vehicles made automotive engineering easier.",
+        reality:
+          "It shifted the difficulty rather than removing it. Engines and transmissions gave way to battery chemistry, high-voltage safety, thermal management, and software.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Chemistry", "Computer science or programming, if offered", "Technical drawing or CAD, if available"],
+    helpfulSkills: [
+      "Comfort with mechanics and thermodynamics, since most vehicle problems come down to forces, heat, or both",
+      "Willingness to test and re-test, because a part that works in simulation often behaves differently on a rig",
+      "Attention to tolerances and cost, since a design that can't be built repeatably and affordably won't ship",
+      "Enough programming to be useful, as more of the vehicle's behaviour is now decided in software",
+      "Working inside constraints set by other teams, which is a large part of the job's daily reality",
+    ],
+    typicalProjects: [
+      "Designing and validating a single component — a bracket, a pump, a latch — against strength, weight, and cost targets",
+      "Running crash or durability tests and working through what the results say about the design",
+      "Developing battery thermal management so a pack stays in its safe temperature range",
+      "Tuning control software for braking, traction, or driver-assistance behaviour",
+      "Reworking a design so it can actually be assembled on a production line at rate",
+    ],
+    typicalWorkday:
+      "Time is split between design and simulation work at a computer, time in a test lab or on a rig, and a fair number of meetings with the other teams whose parts touch yours. Test cycles set the rhythm: a rig runs, results come back, and the next few days go into understanding them. Deadlines tend to be tied to vehicle programme milestones, which can make some stretches much more intense than others.",
+    industries: [
+      "Vehicle manufacturers",
+      "Component and systems suppliers, which employ a large share of automotive engineers",
+      "Electric vehicle and battery companies",
+      "Motorsport and specialist vehicle builders",
+      "Testing, certification, and regulatory bodies",
+    ],
+    advantages: [
+      "The work ends up in objects people use every day, which makes it unusually easy to point at",
+      "Skills transfer well, since the mechanical, thermal, and control fundamentals apply across aerospace, energy, and heavy equipment",
+      "Testing is physical and immediate — you find out fairly quickly whether a design holds up",
+      "The shift to electric and automated vehicles has opened real work for people who came in through software or electronics",
+    ],
+    challenges: [
+      "Cost pressure is relentless, and a technically better design regularly loses to a cheaper one",
+      "Safety and emissions regulation constrains a great deal of what you're allowed to do",
+      "Vehicle programmes are long, so it can be years between your work and anything reaching a road",
+      "Work is often concentrated in particular regions and companies, which can mean relocating to stay in the field",
+    ],
+    thingsPeopleDislike: [
+      "Owning a small component for a long time, rather than working across a whole vehicle",
+      "Watching a design you're proud of get changed to save a small amount per unit",
+      "Long validation and paperwork cycles that sit between finishing a design and shipping it",
+      "Crunch periods around programme milestones and launch dates",
+    ],
   },
   {
     slug: "manufacturing-engineering",

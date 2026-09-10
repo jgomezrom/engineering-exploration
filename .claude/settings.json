@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(*)",
+
+      "Bash(npm run *)",
+      "Bash(npm ci)",
+      "Bash(npx tsc *)",
+      "Bash(npx eslint *)",
+      "Bash(node *)",
+
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git merge *)",
+      "Bash(git checkout *)",
+      "Bash(git switch *)",
+      "Bash(git restore *)",
+      "Bash(git worktree *)",
+      "Bash(git --no-pager *)",
+
+      "Bash(gh pr *)",
+      "Bash(gh repo *)",
+      "Bash(gh run *)",
+      "Bash(gh api *)",
+
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(rm *)",
+      "Bash(curl *)",
+      "Bash(awk *)",
+      "Bash(xargs *)",
+
+      "WebSearch",
+      "WebFetch(domain:www.loc.gov)",
+      "WebFetch(domain:images-api.nasa.gov)",
+      "WebFetch(domain:images.nasa.gov)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:www.bls.gov)",
+      "WebFetch(domain:www.abet.org)",
+      "WebFetch(domain:www.youtube.com)"
+    ]
+  }
+}

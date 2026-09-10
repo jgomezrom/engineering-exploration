@@ -147,6 +147,16 @@ export type EngineeringField = {
 // tracked as its own government occupational category, salaryNote explains
 // that honestly and points to relatedField's page for sourced data instead of
 // approximating or borrowing a number that isn't really about this field.
+// Everything below realWorldExamples is optional and filled in field by field.
+// These are the qualitative sections — what the work is, what people get wrong
+// about it, what's good and bad about doing it. They can be written and checked
+// without a government statistic behind them, so a stub can be filled out this
+// far before it has sourced numbers.
+//
+// Deliberately absent: stats, dayInLife, careerPaths and nextSteps. Those carry
+// or imply figures — marketUncertainty is a job-market claim, and salary needs a
+// real BLS median with a source and a verified date. A stub gets richer here
+// without anyone having to invent one.
 export type FieldStub = {
   slug: FieldSlug;
   name: string;
@@ -157,6 +167,17 @@ export type FieldStub = {
   relatedField: FieldSlug;
   salary?: SalaryData;
   salaryNote?: string;
+  whatEngineersWorkOn?: string;
+  commonMisconceptions?: string[];
+  mythsAndRealities?: MythReality[];
+  usefulSubjects?: string[];
+  helpfulSkills?: string[];
+  typicalProjects?: string[];
+  typicalWorkday?: string;
+  industries?: string[];
+  advantages?: string[];
+  challenges?: string[];
+  thingsPeopleDislike?: string[];
 };
 
 // A small, fixed vocabulary of interest themes used to explain quiz results in
