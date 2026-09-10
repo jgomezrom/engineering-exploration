@@ -1,4 +1,5 @@
 import { FieldStub } from "./types";
+import { fields } from "./fields";
 
 // Lighter-weight entries — real, honest, but without the full research depth
 // (Day in the Life, comparison stats, next steps) of the fields in fields.ts.
@@ -628,3 +629,13 @@ export const fieldStubs: FieldStub[] = [
     ],
   },
 ];
+
+// Every field the site actually offers a page for. The homepage used to count
+// only fields.length, which was honest when the stubs were four sections deep
+// and genuinely thinner than the rest. They now carry the same qualitative
+// research as any other field, so counting them out undersold the site by
+// seven and contradicted what those pages say about themselves.
+//
+// Anything user-facing that says "N fields" should use this, so the two halves
+// can never drift apart again.
+export const totalFieldCount = fields.length + fieldStubs.length;
