@@ -33,7 +33,7 @@ export const fieldPageTranslations = {
     tapCard: "Tap a card to see the reality behind each one.",
     seeCompared: "See this compared side by side →",
     stubOverview:
-      "This is a brief overview, not a full deep-dive like the site's main fields — we haven't built out a full day-in-the-life, comparison stats, or age-specific next steps for it yet.",
+      "Three things the site's main fields have are still missing here: an hour-by-hour day in the life, the at-a-glance comparison stats, and next steps sorted by your school year. Everything else on this page is as researched as anywhere else on the site.",
     closelyRelatedTo: "It's closely related to",
     hasFullPicture: ", which has the full picture.",
     notTranslatedNotice: "This field hasn't been translated into Spanish yet — showing the English version below.",
@@ -67,7 +67,7 @@ export const fieldPageTranslations = {
     tapCard: "Toca una tarjeta para ver la realidad detrás de cada mito.",
     seeCompared: "Ver esta comparación lado a lado →",
     stubOverview:
-      "Este es un resumen breve, no una guía tan completa como los campos principales del sitio — todavía no hemos creado un día en la vida completo, estadísticas comparativas, ni próximos pasos según la edad.",
+      "Aquí todavía faltan tres cosas que sí tienen los campos principales del sitio: un día en la vida hora por hora, las estadísticas comparativas de un vistazo, y los próximos pasos ordenados por tu año escolar. Todo lo demás en esta página está tan documentado como en cualquier otra parte del sitio.",
     closelyRelatedTo: "Está muy relacionado con",
     hasFullPicture: ", que tiene la información completa.",
     notTranslatedNotice: "Este campo todavía no está traducido al español — se muestra la versión en inglés a continuación.",
