@@ -3,15 +3,18 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
+import { useDialogFocus } from "../hooks/useDialogFocus";
 import { buildSearchIndex, searchTypeLabels } from "../data/searchIndex";
 
 const LABELS = {
   en: {
+    dialogLabel: "Search the site",
     placeholder: "Search fields, challenges, concepts…",
     noResultsBefore: "No results for",
     close: "Close search",
   },
   es: {
+    dialogLabel: "Buscar en el sitio",
     placeholder: "Buscar campos, desafíos, conceptos…",
     noResultsBefore: "Sin resultados para",
     close: "Cerrar búsqueda",
@@ -30,6 +33,9 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
   const typeLabel = searchTypeLabels[language];
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  // Focus goes straight to the input on open, which replaces the old
+  // setTimeout(focus) — refs are already attached by the time effects run.
+  const dialogRef = useDialogFocus<HTMLDivElement>(inputRef);
 
   const index = useMemo(() => buildSearchIndex(language), [language]);
 
@@ -42,11 +48,9 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
   }, [query, index]);
 
   useEffect(() => {
-    const id = setTimeout(() => inputRef.current?.focus(), 10);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
-      clearTimeout(id);
       document.body.style.overflow = previousOverflow;
     };
   }, []);
@@ -65,7 +69,12 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
       onClick={onClose}
     >
       <div
-        className="w-full max-w-lg border border-neutral-900/10 bg-white dark:border-white/10 dark:bg-neutral-900"
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={t.dialogLabel}
+        tabIndex={-1}
+        className="w-full max-w-lg border border-neutral-900/10 bg-white focus:outline-none dark:border-white/10 dark:bg-neutral-900"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 border-b border-neutral-900/10 px-4 py-3 dark:border-white/10">
@@ -73,12 +82,15 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
             <circle cx="9" cy="9" r="6" stroke="currentColor" strokeWidth="1.5" />
             <path d="M17 17l-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
+          {/* A placeholder disappears as soon as you type and isn't reliably
+              read as a label, so the input gets a real accessible name. */}
           <input
             ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t.placeholder}
+            aria-label={t.dialogLabel}
             className="w-full bg-transparent text-sm text-neutral-900 placeholder:text-neutral-500 focus:outline-none dark:text-white"
           />
           <button
