@@ -199,7 +199,7 @@ export const fieldStubs: FieldStub[] = [
     relatedMajors: ["Manufacturing Engineering", "Industrial Engineering (some overlap)", "Mechanical Engineering (some overlap)"],
     relatedField: "industrial-engineering",
     salaryNote:
-      "Manufacturing engineering isn't tracked as its own separate category by the U.S. Bureau of Labor Statistics either — it's usually grouped with industrial or mechanical engineering. See the Industrial Engineering page for related, sourced salary data.",
+      "The U.S. Bureau of Labor Statistics counts manufacturing engineers as a type of industrial engineer rather than a separate occupation, so their pay is included in the industrial engineers figure. See the Industrial Engineering page for that sourced salary data.",
     whatEngineersWorkOn:
       "Manufacturing engineers work on the gap between a design that works once and a design that can be built thousands of times, correctly, at a price someone will pay. They specify machines and tooling, lay out the sequence of operations, design the fixtures that hold a part while it's worked on, and chase down why a process that was fine last month is now producing scrap. Much of the job happens on the factory floor rather than at a desk.",
     commonMisconceptions: [
@@ -464,8 +464,20 @@ export const fieldStubs: FieldStub[] = [
     ],
     relatedMajors: ["Energy Engineering", "Electrical Engineering (some overlap)", "Mechanical Engineering (some overlap)"],
     relatedField: "electrical-engineering",
-    salaryNote:
-      "There's no separate U.S. Bureau of Labor Statistics category for energy engineering — it's usually pursued through electrical or mechanical engineering with an energy focus. See the Electrical Engineering page for related, sourced salary data.",
+    // BLS's "Engineers, all other" group lists Energy Engineers (Except Wind and
+    // Solar), Wind Energy Engineers, and Solar Energy Systems Engineers among its
+    // O*NET occupations — the same group, figure, and page Robotics cites, for
+    // the same reason. This replaced a salaryNote that said BLS had no category
+    // for energy engineering and pointed readers to Electrical's figure instead.
+    salary: {
+      medianAnnual: "$122,930",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/about/data-for-occupations-not-covered-in-detail.htm",
+      note: "Energy engineers aren't tracked as their own detailed BLS category — this figure is from the broader 'Engineers, All Other' group, which BLS lists as including energy engineers, wind energy engineers, and solar energy systems engineers. That group covers other specializations too, so treat it as a rough estimate rather than a precise figure for energy engineering. Energy work done under an electrical or mechanical engineering job title is counted under those occupations instead, so the Electrical Engineering page is worth a look as well.",
+      verifiedDate: "September 2026",
+    },
     whatEngineersWorkOn:
       "Energy engineers work on how energy is generated, moved, stored, and wasted. That might mean sizing a solar array and its inverters, modelling how much a building's heating system actually costs to run, working out where a grid can absorb more intermittent generation, or auditing a factory to find the places energy is quietly disappearing. A lot of the job is measurement and modelling before anything gets built, because the argument for a change is usually financial as much as technical.",
     commonMisconceptions: [
