@@ -198,7 +198,7 @@ export const fieldStubsEs: FieldStub[] = [
     relatedMajors: ["Ingeniería de Manufactura", "Ingeniería Industrial (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
     relatedField: "industrial-engineering",
     salaryNote:
-      "La ingeniería de manufactura tampoco se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se agrupa con la ingeniería industrial o mecánica. Consulta la página de Ingeniería Industrial para ver datos de salario relacionados y con fuente.",
+      "La Oficina de Estadísticas Laborales de EE. UU. cuenta a los ingenieros de manufactura como un tipo de ingeniero industrial, no como una ocupación separada, así que su salario está incluido en la cifra de los ingenieros industriales. Consulta la página de Ingeniería Industrial para ver esos datos de salario con fuente.",
     whatEngineersWorkOn:
       "Los ingenieros de manufactura trabajan en la distancia entre un diseño que funciona una vez y un diseño que se puede fabricar miles de veces, bien, y a un precio que alguien pagará. Especifican máquinas y herramentales, ordenan la secuencia de operaciones, diseñan los dispositivos que sujetan una pieza mientras se trabaja, y persiguen por qué un proceso que iba bien el mes pasado ahora produce desperdicio. Gran parte del trabajo ocurre en la planta y no en un escritorio.",
     commonMisconceptions: [
@@ -463,8 +463,15 @@ export const fieldStubsEs: FieldStub[] = [
     ],
     relatedMajors: ["Ingeniería de Energía", "Ingeniería Eléctrica (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
     relatedField: "electrical-engineering",
-    salaryNote:
-      "No existe una categoría separada para la ingeniería de energía en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia a través de la ingeniería eléctrica o mecánica con un enfoque en energía. Consulta la página de Ingeniería Eléctrica para ver datos de salario relacionados y con fuente.",
+    salary: {
+      medianAnnual: "$122,930",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/about/data-for-occupations-not-covered-in-detail.htm",
+      note: "Los ingenieros de energía no se rastrean como su propia categoría detallada del BLS — esta cifra proviene del grupo más amplio de 'Ingenieros, Todos los Demás', que según el BLS incluye a los ingenieros de energía, los ingenieros de energía eólica y los ingenieros de sistemas de energía solar. Ese grupo también abarca otras especialidades, así que trátala como una estimación aproximada, no como una cifra precisa para la ingeniería de energía. El trabajo en energía que se hace con un puesto de ingeniero eléctrico o mecánico se cuenta dentro de esas ocupaciones, así que también vale la pena ver la página de Ingeniería Eléctrica.",
+      verifiedDate: "Septiembre 2026",
+    },
     whatEngineersWorkOn:
       "Los ingenieros de energía trabajan sobre cómo se genera, transporta, almacena, y desperdicia la energía. Eso puede significar dimensionar un campo solar y sus inversores, modelar cuánto cuesta realmente operar el sistema de calefacción de un edificio, calcular dónde una red puede absorber más generación intermitente, o auditar una fábrica para encontrar por dónde se está yendo la energía. Buena parte del trabajo es medir y modelar antes de construir nada, porque el argumento para un cambio suele ser tan financiero como técnico.",
     commonMisconceptions: [
