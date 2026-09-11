@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useSchoolTheme } from "../context/SchoolThemeContext";
 import { useLanguage } from "../context/LanguageContext";
+import { useDialogFocus } from "../hooks/useDialogFocus";
 import { schoolThemes, SchoolTheme } from "../data/schoolThemes";
 import { schoolThemeTranslations } from "../data/translations/schoolTheme";
 
@@ -49,6 +50,11 @@ export default function SchoolThemeModal() {
   const { schoolThemeId, selectTheme, closePicker } = useSchoolTheme();
   const { language } = useLanguage();
   const t = schoolThemeTranslations[language];
+  // Every way out closes the picker — Escape, the × button, a backdrop click,
+  // and picking a theme (selectTheme closes it too) — and each one unmounts
+  // this component, so the hook's cleanup returns focus to the palette button
+  // whichever way the reader leaves.
+  const dialogRef = useDialogFocus<HTMLDivElement>();
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -72,12 +78,19 @@ export default function SchoolThemeModal() {
       onClick={closePicker}
     >
       <div
-        className="flex max-h-full w-full max-w-3xl flex-col border border-neutral-900/10 bg-white dark:border-white/10 dark:bg-neutral-900"
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="school-theme-heading"
+        tabIndex={-1}
+        className="flex max-h-full w-full max-w-3xl flex-col border border-neutral-900/10 bg-white focus:outline-none dark:border-white/10 dark:bg-neutral-900"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-3 border-b border-neutral-900/10 px-5 py-4 dark:border-white/10">
           <div>
-            <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">{t.heading}</h2>
+            <h2 id="school-theme-heading" className="text-lg font-semibold text-neutral-900 dark:text-white">
+              {t.heading}
+            </h2>
             <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">{t.intro}</p>
           </div>
           <button
