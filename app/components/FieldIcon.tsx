@@ -137,6 +137,126 @@ export default function FieldIcon({ slug, className = "h-10 w-10" }: FieldIconPr
         </svg>
       );
 
+    // Each of these echoes the same motif the field's full illustration uses
+    // in FieldIllustration.tsx — a cooling tower for nuclear, a derrick for
+    // petroleum, a wafer for semiconductor — so the small mark and the big
+    // drawing read as the same field rather than two unrelated pictures.
+    case "nuclear-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <path
+            d="M12 34c-2-8 2-11 4-13-2-2-4-6-2-13h12c2 7 0 11-2 13 2 2 6 5 4 13Z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
+          />
+          <path d="M7 34h26" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "petroleum-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <path d="M10 33 20 9l10 24" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M14 25h12M16 19h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <rect x="16" y="5" width="8" height="4" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M6 33h28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "agricultural-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <path d="M6 10h28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M14 10v5M26 10v5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" strokeLinecap="round" />
+          <path d="M14 33v-7M26 33v-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M14 26c-4-2-5-6-3-9 3 2 4 5 3 9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M26 26c4-2 5-6 3-9-3 2-4 5-3 9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M6 33h28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "marine-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={`${className} transition-transform duration-500 group-hover:-translate-y-0.5`}>
+          <path d="M6 22h26l-3 8H13c-4.5 0-7-3-7-8Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <rect x="15" y="13" width="10" height="9" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M5 34q3-2 6 0t6 0 6 0 6 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "architectural-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <rect x="9" y="6" width="22" height="28" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M9 15h22M9 24h22" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M25 6v28" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M25 19h-7M25 29h-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "automotive-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={`${className} transition-transform duration-500 group-hover:translate-x-0.5`}>
+          <path d="M4 30v-6l5-1 5-8h12l5 8 5 1v6" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <circle cx="13" cy="30" r="4" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="27" cy="30" r="4" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M4 30h5M17 30h6M31 30h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "manufacturing-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <rect x="15" y="8" width="10" height="4" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M20 12v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <rect x="14" y="16" width="12" height="10" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M5 26h30" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <circle cx="11" cy="30" r="3" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="20" cy="30" r="3" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="29" cy="30" r="3" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      );
+
+    case "systems-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <circle cx="20" cy="20" r="5" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="4" y="6" width="9" height="7" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="27" y="6" width="9" height="7" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="4" y="27" width="9" height="7" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="27" y="27" width="9" height="7" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M13 12.5l3.5 4M27 12.5l-3.5 4M13 27.5l3.5-4M27 27.5l-3.5-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "structural-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <path d="M9 6v28M31 6v28M9 6h22M9 20h22M9 34h22" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M9 20l22 14M31 20 9 34" stroke="currentColor" strokeWidth="1.2" opacity="0.55" />
+        </svg>
+      );
+
+    case "energy-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <path d="M20 34V18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <circle cx="20" cy="17" r="2" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M20 15V5M22 18.5l9 5M18 18.5l-9 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M13 34h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "semiconductor-engineering":
+      return (
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className={className}>
+          <path d="M6 20a14 14 0 1 1 10.2 13.5l-2.4-4.3" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <rect x="15" y="15" width="10" height="10" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M25 20h6M9 20h6M20 15V9M20 25v6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.7" />
+        </svg>
+      );
+
     default:
       // A generic technical/engineering glyph for fields that don't have bespoke
       // art yet — so a new field only needs a data.ts entry to render correctly.
