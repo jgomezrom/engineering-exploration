@@ -1,8 +1,7 @@
 // Section titles and other structural text shared by every field page —
 // distinct from fields.es.ts, which holds each field's own translated
-// content. Only mechanical-engineering has a Spanish content entry so far;
-// every other field/stub falls back to English with notTranslatedNotice
-// shown when Spanish is selected.
+// content. A field without a Spanish entry there falls back to English, with
+// notTranslatedNotice shown when Spanish is selected.
 export const fieldPageTranslations = {
   en: {
     atAGlance: "At a Glance",
@@ -32,10 +31,6 @@ export const fieldPageTranslations = {
     section16: "What Can I Do Next?",
     tapCard: "Tap a card to see the reality behind each one.",
     seeCompared: "See this compared side by side →",
-    stubOverview:
-      "Three things the site's main fields have are still missing here: an hour-by-hour day in the life, the at-a-glance comparison stats, and next steps sorted by your school year. Everything else on this page is as researched as anywhere else on the site.",
-    closelyRelatedTo: "It's closely related to",
-    hasFullPicture: ", which has the full picture.",
     notTranslatedNotice: "This field hasn't been translated into Spanish yet — showing the English version below.",
   },
   es: {
@@ -66,10 +61,6 @@ export const fieldPageTranslations = {
     section16: "¿Qué Puedo Hacer Después?",
     tapCard: "Toca una tarjeta para ver la realidad detrás de cada mito.",
     seeCompared: "Ver esta comparación lado a lado →",
-    stubOverview:
-      "Aquí todavía faltan tres cosas que sí tienen los campos principales del sitio: un día en la vida hora por hora, las estadísticas comparativas de un vistazo, y los próximos pasos ordenados por tu año escolar. Todo lo demás en esta página está tan documentado como en cualquier otra parte del sitio.",
-    closelyRelatedTo: "Está muy relacionado con",
-    hasFullPicture: ", que tiene la información completa.",
     notTranslatedNotice: "Este campo todavía no está traducido al español — se muestra la versión en inglés a continuación.",
   },
 };

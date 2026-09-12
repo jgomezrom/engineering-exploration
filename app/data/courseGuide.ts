@@ -212,6 +212,66 @@ export const fieldCourseFocus: FieldCourseFocus[] = [
       "Chemistry, useful for understanding corrosion and materials in marine environments",
     ],
   },
+  {
+    fieldSlug: "architectural-engineering",
+    priorityCourses: [
+      "Physics, especially mechanics and thermodynamics",
+      "Calculus",
+      "CAD or drafting classes, if offered — building systems get drawn long before they get built",
+    ],
+  },
+  {
+    fieldSlug: "automotive-engineering",
+    priorityCourses: [
+      "Physics, especially mechanics — AP Physics C: Mechanics or IB Physics HL if offered",
+      "Calculus",
+      "Any computer science elective, since more of a vehicle's behavior is decided in software",
+      "Auto shop or fabrication classes, if your school has them",
+    ],
+  },
+  {
+    fieldSlug: "manufacturing-engineering",
+    priorityCourses: [
+      "Physics",
+      "Calculus",
+      "Statistics, which is how process quality is actually measured and controlled",
+      "Shop, CAD, or robotics classes, if offered",
+    ],
+  },
+  {
+    fieldSlug: "systems-engineering",
+    priorityCourses: [
+      "Physics and Calculus — most people arrive here through another engineering discipline first",
+      "Statistics, if offered",
+      "Any class with structured technical writing, since a vague requirement gets built two different ways",
+    ],
+  },
+  {
+    fieldSlug: "structural-engineering",
+    priorityCourses: [
+      "Physics, especially statics and mechanics",
+      "Calculus",
+      "CAD or drafting classes, if offered",
+    ],
+  },
+  {
+    fieldSlug: "energy-engineering",
+    priorityCourses: [
+      "Physics, especially thermodynamics and electricity",
+      "Calculus",
+      "Chemistry, useful for fuels, batteries, and combustion",
+      "Statistics or data analysis, if offered, since savings have to be measured to be believed",
+    ],
+  },
+  {
+    fieldSlug: "semiconductor-engineering",
+    priorityCourses: [
+      "Physics and Chemistry both matter here — the behavior comes from the material itself",
+      "Calculus",
+      "Statistics, which is how yield and process control are handled",
+      "Any computer science elective, since analyzing test data by hand isn't practical",
+    ],
+  },
 ];
 
 export const tutoringResources: TutoringResource[] = [

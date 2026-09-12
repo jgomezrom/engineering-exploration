@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { fields } from "./data/fields";
-import { fieldStubs } from "./data/fieldStubs";
 import { challenges } from "./data/challenges";
 import { SIMULATIONS } from "./data/simulationsList";
 
@@ -42,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const fieldRoutes = [...fields, ...fieldStubs].map((field) => ({
+  const fieldRoutes = fields.map((field) => ({
     url: `${baseUrl}/engineering/${field.slug}`,
     lastModified: new Date(),
   }));

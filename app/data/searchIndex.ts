@@ -1,7 +1,5 @@
 import { fields } from "./fields";
 import { fieldsEs } from "./fields.es";
-import { fieldStubs } from "./fieldStubs";
-import { fieldStubsEs } from "./fieldStubs.es";
 import { challenges } from "./challenges";
 import { challengesEs } from "./challenges.es";
 import { concepts } from "./concepts";
@@ -32,7 +30,6 @@ export const searchTypeLabels: Record<"en" | "es", Record<SearchItemType, string
 // depends on the active language — cheap enough (well under 100 items).
 export function buildSearchIndex(language: "en" | "es"): SearchItem[] {
   const displayFields = language === "es" ? fieldsEs : fields;
-  const displayStubs = language === "es" ? fieldStubsEs : fieldStubs;
   const displayChallenges = language === "es" ? challengesEs : challenges;
   const displayConcepts = language === "es" ? conceptsEs : concepts;
   const displayFaq = language === "es" ? faqItemsEs : faqItems;
@@ -42,9 +39,6 @@ export function buildSearchIndex(language: "en" | "es"): SearchItem[] {
 
   for (const f of displayFields) {
     items.push({ title: f.name, description: f.tagline, href: `/engineering/${f.slug}`, type: "field" });
-  }
-  for (const s of displayStubs) {
-    items.push({ title: s.name, description: s.tagline, href: `/engineering/${s.slug}`, type: "field" });
   }
   for (const c of displayChallenges) {
     items.push({ title: c.title, description: c.tagline, href: `/challenges/${c.slug}`, type: "challenge" });

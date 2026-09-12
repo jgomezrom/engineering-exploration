@@ -11,10 +11,6 @@ export const exploreTranslations = {
     bookmarkedIntroBefore: "Saved in this browser only — see",
     parentsLink: "Parents & Teachers",
     bookmarkedIntroAfter: "for exactly what that means.",
-    moreFieldsHeading: "More fields",
-    moreFieldsIntro:
-      "Researched the same way, but without the full day-in-the-life, comparison stats, or next steps the fields above have.",
-    briefOverview: "No stats yet",
   },
   es: {
     badge: "Explorar por campo",
@@ -28,9 +24,5 @@ export const exploreTranslations = {
     bookmarkedIntroBefore: "Guardado solo en este navegador — consulta",
     parentsLink: "Padres y Docentes",
     bookmarkedIntroAfter: "para saber exactamente qué significa eso.",
-    moreFieldsHeading: "Más campos",
-    moreFieldsIntro:
-      "Documentados de la misma forma, pero sin el día en la vida completo, las estadísticas comparativas, o los próximos pasos que tienen los campos de arriba.",
-    briefOverview: "Sin estadísticas aún",
   },
 };
