@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 // Mirrors a piece of simulator state into this page's URL query string, so a
 // specific setup (a launch angle, a gate type, a load position) can be copied
@@ -28,15 +28,45 @@ export function useShareableState<T>(key: string, defaultValue: T, parse: (raw: 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Dragging a slider fires an input event per pixel of movement, and writing
+  // the URL on every one of them means hundreds of history calls a second.
+  // Browsers rate-limit that: Safari throws after roughly 100 writes in 30
+  // seconds, and an uncaught throw inside an onChange handler takes the whole
+  // page down with it. So the write is coalesced to once per settled drag and
+  // can never throw — the URL is a convenience, not something worth crashing a
+  // simulation over. The on-screen value still updates instantly; only the
+  // address bar waits.
+  const pendingRef = useRef<string | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const flush = useCallback(() => {
+    timerRef.current = null;
+    const next = pendingRef.current;
+    if (next === null) return;
+    pendingRef.current = null;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      params.set(key, next);
+      window.history.replaceState(null, "", `${window.location.pathname}?${params.toString()}`);
+    } catch {
+      // Rate-limited by the browser. The next settled change will try again.
+    }
+  }, [key]);
+
   const update = useCallback(
     (next: T) => {
       setValue(next);
-      const params = new URLSearchParams(window.location.search);
-      params.set(key, String(next));
-      window.history.replaceState(null, "", `${window.location.pathname}?${params.toString()}`);
+      pendingRef.current = String(next);
+      if (timerRef.current === null) timerRef.current = setTimeout(flush, 120);
     },
-    [key]
+    [flush]
   );
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current !== null) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   return [value, update];
 }

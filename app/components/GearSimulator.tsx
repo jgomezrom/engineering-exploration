@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { gearSimulationTranslations } from "../data/translations/gearSimulation";
 import SimulatorSlider from "./SimulatorSlider";
@@ -41,11 +41,13 @@ function GearTeeth({ cx, cy, r, count, toothH = 8, toothW = 0.34 }: { cx: number
   return <path d={segs.join(" ")} stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none" />;
 }
 
-function Gear({ cx, cy, teeth, angle, filled }: { cx: number; cy: number; teeth: number; angle: number; filled?: boolean }) {
+// The spin lives on the wrapping <g> the animation writes to, not here, so a
+// gear's own shapes are only rebuilt when its tooth count actually changes.
+function Gear({ cx, cy, teeth, filled }: { cx: number; cy: number; teeth: number; filled?: boolean }) {
   const r = radiusFor(teeth);
   const hubR = Math.max(6, r * 0.22);
   return (
-    <g transform={`rotate(${angle} ${cx} ${cy})`}>
+    <g>
       <circle cx={cx} cy={cy} r={r} className={filled ? "fill-primary/10 stroke-primary" : "fill-accent/10 stroke-accent"} strokeWidth="1.5" />
       <circle cx={cx} cy={cy} r={hubR} stroke="currentColor" strokeWidth="1.5" fill="none" />
       <GearTeeth cx={cx} cy={cy} r={r} count={teeth} />
@@ -79,39 +81,59 @@ export default function GearSimulator() {
   const outputSpeedFactor = 1 / ratio; // relative to input speed
   const outputTorqueFactor = ratio; // ignoring friction, power is conserved
 
-  const [angleA, setAngleA] = useState(0);
+  const radiusA = radiusFor(teethA);
+  const radiusB = radiusFor(teethB);
+  const gearBCx = GEAR_A_CX + radiusA + radiusB;
+
+  const gearARef = useRef<SVGGElement>(null);
+  const gearBRef = useRef<SVGGElement>(null);
   const angleARef = useRef(0);
-  const rafRef = useRef<number | null>(null);
+  const angleBRef = useRef(0);
+  // The loop reads the live ratio and position from refs rather than closing
+  // over them, so moving a slider never restarts the spin mid-turn.
+  const ratioRef = useRef(ratio);
+  const gearBCxRef = useRef(gearBCx);
 
   useEffect(() => {
+    ratioRef.current = ratio;
+    gearBCxRef.current = gearBCx;
+  }, [ratio, gearBCx]);
+
+  // Both gears are spun by writing the transform straight to their <g> nodes.
+  // Driving this through React state instead re-rendered the whole diagram —
+  // every tooth rebuilt from trig and string joins — sixty times a second,
+  // which is a lot to ask of a phone for a decorative spin. Meshing gears turn
+  // opposite ways, and the driven gear turns slower by the tooth ratio. Each
+  // angle is accumulated separately and wrapped to one turn, so a ratio change
+  // doesn't make a gear jump and nothing grows over a long visit.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let raf = 0;
     let last = performance.now();
     function tick(now: number) {
       const dt = (now - last) / 1000;
       last = now;
-      angleARef.current += DRIVE_DEG_PER_SEC * dt;
-      setAngleA(angleARef.current);
-      rafRef.current = requestAnimationFrame(tick);
+      angleARef.current = (angleARef.current + DRIVE_DEG_PER_SEC * dt) % 360;
+      angleBRef.current = (angleBRef.current - (DRIVE_DEG_PER_SEC / ratioRef.current) * dt) % 360;
+      gearARef.current?.setAttribute("transform", `rotate(${round(angleARef.current)} ${GEAR_A_CX} ${GEAR_Y})`);
+      gearBRef.current?.setAttribute("transform", `rotate(${round(angleBRef.current)} ${gearBCxRef.current} ${GEAR_Y})`);
+      raf = requestAnimationFrame(tick);
     }
-    rafRef.current = requestAnimationFrame(tick);
-    return () => {
-      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
-    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, []);
-
-  const radiusA = radiusFor(teethA);
-  const radiusB = radiusFor(teethB);
-  const gearBCx = GEAR_A_CX + radiusA + radiusB;
-  // Meshing gears rotate opposite directions, and the driven gear's angle
-  // is the driving gear's angle scaled by the inverse tooth ratio.
-  const angleB = -angleA / ratio;
 
   return (
     <div>
       <div className="border border-neutral-900/10 p-6 dark:border-white/10 sm:p-8">
         <svg viewBox="0 0 400 220" className="mx-auto w-full max-w-md" role="img" aria-label={t.diagramAriaLabel}>
           <line x1="20" y1="190" x2="380" y2="190" stroke="currentColor" strokeWidth="1" strokeDasharray="2 4" className="text-neutral-900/15 dark:text-white/15" />
-          <Gear cx={GEAR_A_CX} cy={GEAR_Y} teeth={teethA} angle={angleA} filled />
-          <Gear cx={gearBCx} cy={GEAR_Y} teeth={teethB} angle={angleB} />
+          <g ref={gearARef}>
+            <Gear cx={GEAR_A_CX} cy={GEAR_Y} teeth={teethA} filled />
+          </g>
+          <g ref={gearBRef}>
+            <Gear cx={gearBCx} cy={GEAR_Y} teeth={teethB} />
+          </g>
           <text x={GEAR_A_CX} y="204" textAnchor="middle" className="fill-primary font-mono text-[10px] font-medium">
             {t.inputLabel}
           </text>

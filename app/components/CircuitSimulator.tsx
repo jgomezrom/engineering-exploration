@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { circuitSimulationTranslations } from "../data/translations/circuitSimulation";
 import SimulatorSlider from "./SimulatorSlider";
@@ -18,6 +18,10 @@ const DANGER_MA = 40;
 const LOOP_PATH =
   "M60 150V95M60 85V50H150M230 50H340V95M340 105V150H60";
 
+// strokeDasharray "1 9" repeats every 10 units, so the offset wraps there and
+// looks identical while never growing the longer the page is left open.
+const DASH_PATTERN_LENGTH = 10;
+
 export default function CircuitSimulator() {
   const { language } = useLanguage();
   const t = circuitSimulationTranslations[language];
@@ -30,15 +34,20 @@ export default function CircuitSimulator() {
   const isDanger = currentMA >= DANGER_MA;
 
   const dashOffsetRef = useRef(0);
-  const [dashOffset, setDashOffset] = useState(0);
-  const rafRef = useRef<number | null>(null);
+  const flowRef = useRef<SVGPathElement>(null);
   const currentRef = useRef(current);
 
   useEffect(() => {
     currentRef.current = current;
   }, [current]);
 
+  // The flowing dashes are animated by writing the attribute straight to the
+  // path. Driving it through React state instead re-rendered this whole
+  // diagram sixty times a second, which is a lot of work to ask of a phone for
+  // a decorative animation.
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let raf = 0;
     let last = performance.now();
     function tick(now: number) {
       const dt = now - last;
@@ -46,14 +55,12 @@ export default function CircuitSimulator() {
       // Speed of the flow animation scales with current — more amps, faster
       // dashes. Capped so it never becomes an unreadable blur.
       const speed = Math.min(220, 40 + currentRef.current * 900);
-      dashOffsetRef.current -= (speed * dt) / 1000;
-      setDashOffset(dashOffsetRef.current);
-      rafRef.current = requestAnimationFrame(tick);
+      dashOffsetRef.current = (dashOffsetRef.current - (speed * dt) / 1000) % DASH_PATTERN_LENGTH;
+      flowRef.current?.setAttribute("stroke-dashoffset", dashOffsetRef.current.toFixed(2));
+      raf = requestAnimationFrame(tick);
     }
-    rafRef.current = requestAnimationFrame(tick);
-    return () => {
-      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
-    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, []);
 
   return (
@@ -65,13 +72,13 @@ export default function CircuitSimulator() {
 
           {/* Animated current flow along the same loop */}
           <path
+            ref={flowRef}
             d={LOOP_PATH}
             fill="none"
             className="stroke-primary"
             strokeWidth="2"
             strokeLinecap="round"
             strokeDasharray="1 9"
-            strokeDashoffset={dashOffset}
           />
 
           {/* Battery symbol, left wire */}
