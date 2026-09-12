@@ -1,9 +1,9 @@
-// A lighter, separate quiz for the brief-overview fields in fieldStubs.ts.
-// Those fields don't have the depth (FieldStats, Day in the Life, etc.) the
-// main quiz's weighted-percentage scoring relies on, so this uses a simple
-// tally instead of a percentage — each option points directly at 1-2 stub
-// fields, and results just count how often each field came up. Less
-// precise than the main quiz on purpose, and labeled as such.
+// A short, separate quiz for seven fields that are easy to overlook
+// (architectural, automotive, energy, manufacturing, semiconductor,
+// structural, systems). They're scored in the main quiz as well; this one
+// uses a simple tally instead of a percentage — each option points directly
+// at 1-2 of those fields, and results just count how often each field came
+// up. Less precise than the main quiz on purpose, and labeled as such.
 export type StubQuizOption = {
   text: string;
   stubFields: string[];

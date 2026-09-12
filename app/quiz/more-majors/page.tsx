@@ -7,8 +7,8 @@ import Card from "../../components/Card";
 import FieldIcon from "../../components/FieldIcon";
 import { stubQuizQuestions } from "../../data/stubQuiz";
 import { stubQuizQuestionsEs } from "../../data/stubQuiz.es";
-import { fieldStubs } from "../../data/fieldStubs";
-import { fieldStubsEs } from "../../data/fieldStubs.es";
+import { fields } from "../../data/fields";
+import { fieldsEs } from "../../data/fields.es";
 import { useLanguage } from "../../context/LanguageContext";
 import { moreMajorsQuizTranslations } from "../../data/translations/moreMajorsQuiz";
 
@@ -34,7 +34,7 @@ export default function MoreMajorsQuizPage() {
   const { language } = useLanguage();
   const t = moreMajorsQuizTranslations[language];
   const displayQuestions = language === "es" ? stubQuizQuestionsEs : stubQuizQuestions;
-  const displayStubs = language === "es" ? fieldStubsEs : fieldStubs;
+  const displayFields = language === "es" ? fieldsEs : fields;
 
   const [stage, setStage] = useState<Stage>("intro");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -183,21 +183,21 @@ export default function MoreMajorsQuizPage() {
       ) : (
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {results.map((result) => {
-            const stub = displayStubs.find((s) => s.slug === result.slug);
-            if (!stub) return null;
+            const field = displayFields.find((f) => f.slug === result.slug);
+            if (!field) return null;
             return (
-              <Link key={result.slug} href={`/engineering/${stub.slug}`}>
+              <Link key={result.slug} href={`/engineering/${field.slug}`}>
                 <Card>
                   <div className="flex items-center justify-between">
-                    <FieldIcon slug={stub.slug} className="h-8 w-8 text-primary" />
+                    <FieldIcon slug={field.slug} className="h-8 w-8 text-primary" />
                     <span className="font-mono text-xs text-neutral-600 dark:text-neutral-400">
                       {result.count} / {stubQuizQuestions.length} {t.answersLabel}
                     </span>
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
-                    {stub.name}
+                    {field.name}
                   </h3>
-                  <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{stub.tagline}</p>
+                  <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{field.tagline}</p>
                   <div className="mt-3 h-1.5 w-full bg-neutral-100 dark:bg-neutral-900">
                     <div
                       className="h-1.5 bg-primary"

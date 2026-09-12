@@ -16,9 +16,7 @@ import BackLink from "./BackLink";
 import FieldVisitTracker from "./FieldVisitTracker";
 import FadeIn from "./FadeIn";
 import { fields } from "../data/fields";
-import { fieldStubs } from "../data/fieldStubs";
 import { fieldsEs } from "../data/fields.es";
-import { fieldStubsEs } from "../data/fieldStubs.es";
 import { careerComparisons } from "../data/careerComparisons";
 import { FieldSlug } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
@@ -137,174 +135,9 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
   const t = fieldPageTranslations[language];
 
   const englishField = fields.find((f) => f.slug === slug);
-  const stub = !englishField ? fieldStubs.find((s) => s.slug === slug) : undefined;
   const spanishField = language === "es" ? fieldsEs.find((f) => f.slug === slug) : undefined;
-  const spanishStub = language === "es" ? fieldStubsEs.find((s) => s.slug === slug) : undefined;
-  const showNotice = stub ? language === "es" && !spanishStub : language === "es" && !spanishField;
+  const showNotice = language === "es" && !spanishField;
   const field = spanishField ?? englishField;
-
-  if (stub) {
-    const displayStub = spanishStub ?? stub;
-    const relatedPool = language === "es" ? [...fieldsEs, ...fields] : fields;
-    const related = relatedPool.find((f) => f.slug === stub.relatedField);
-    return (
-      <PageFrame slug={stub.slug} name={displayStub.name} tagline={displayStub.tagline} printLabel={t.printField}>
-        {/* Stubs count toward exploration progress too. Without this the
-            homepage strip counts out of every field but can only ever record
-            the sixteen full ones, so it would stick at 16 of 23 forever. */}
-        <FieldVisitTracker slug={stub.slug} />
-        <div className="mt-8">
-          <div className="relative flex items-center justify-center border border-neutral-900/10 bg-white p-6 dark:border-white/10 dark:bg-neutral-900">
-            <span className="pointer-events-none absolute left-2 top-2 h-2.5 w-2.5 border-l border-t border-primary/40" />
-            <span className="pointer-events-none absolute right-2 top-2 h-2.5 w-2.5 border-r border-t border-primary/40" />
-            <span className="pointer-events-none absolute bottom-2 left-2 h-2.5 w-2.5 border-b border-l border-primary/40" />
-            <span className="pointer-events-none absolute bottom-2 right-2 h-2.5 w-2.5 border-b border-r border-primary/40" />
-            <FieldIllustration slug={stub.slug} className="h-auto w-full max-w-sm text-primary" />
-          </div>
-          <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
-            {t.figureCaption(displayStub.name)}
-          </p>
-        </div>
-        <div className="mt-6 border border-neutral-900/10 bg-neutral-50 p-5 dark:border-white/10 dark:bg-neutral-900">
-          <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-            {t.stubOverview}
-            {related && (
-              <>
-                {" "}
-                {t.closelyRelatedTo}{" "}
-                <Link href={`/engineering/${related.slug}`} className="font-medium text-primary hover:underline">
-                  {related.name}
-                </Link>
-                {t.hasFullPicture}
-              </>
-            )}
-          </p>
-        </div>
-        {showNotice && <NotTranslatedNotice text={t.notTranslatedNotice} />}
-
-        <div className="mt-8 print:hidden">
-          <PlateFigure figure={fieldFigures[stub.slug]} index="02" ratio="aspect-[16/9]" />
-        </div>
-
-        {/* A stub only shows the sections it actually has content for, so the
-            numbering is assigned after filtering rather than hard-coded. That
-            keeps a half-filled stub from displaying gaps like 01, 02, 05, and
-            means a stub can be filled in one section at a time without anyone
-            renumbering the rest by hand. */}
-        {[
-          {
-            key: "what-it-is",
-            title: t.section1,
-            body: <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.whatItIs}</p>,
-          },
-          displayStub.whatEngineersWorkOn
-            ? {
-                key: "work-on",
-                title: t.section2,
-                body: (
-                  <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
-                    {displayStub.whatEngineersWorkOn}
-                  </p>
-                ),
-              }
-            : null,
-          {
-            key: "examples",
-            title: t.section3,
-            body: <BulletList items={displayStub.realWorldExamples} />,
-          },
-          displayStub.mythsAndRealities?.length
-            ? {
-                key: "myths",
-                title: t.section4,
-                body: (
-                  <>
-                    <p className="mb-5 max-w-2xl text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
-                      {t.tapCard}
-                    </p>
-                    <MythRealityCards items={displayStub.mythsAndRealities} />
-                  </>
-                ),
-              }
-            : null,
-          displayStub.typicalWorkday
-            ? {
-                key: "workday",
-                title: t.section5,
-                body: (
-                  <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">
-                    {displayStub.typicalWorkday}
-                  </p>
-                ),
-              }
-            : null,
-          displayStub.typicalProjects?.length
-            ? {
-                key: "projects",
-                title: t.section6,
-                body: <BulletList items={displayStub.typicalProjects} />,
-              }
-            : null,
-          displayStub.usefulSubjects && displayStub.helpfulSkills
-            ? {
-                key: "subjects-skills",
-                title: t.section7,
-                body: (
-                  <div className="grid gap-8 sm:grid-cols-2">
-                    <SubList label={t.usefulSubjects} items={displayStub.usefulSubjects} />
-                    <SubList label={t.helpfulSkills} items={displayStub.helpfulSkills} />
-                  </div>
-                ),
-              }
-            : null,
-          {
-            key: "where-you-work",
-            title: t.section8,
-            body: (
-              <div className="grid gap-8 sm:grid-cols-2">
-                {displayStub.industries && <SubList label={t.industries} items={displayStub.industries} />}
-                <SubList label={t.relatedMajors} items={displayStub.relatedMajors} />
-              </div>
-            ),
-          },
-          displayStub.advantages && displayStub.challenges
-            ? {
-                key: "pros-cons",
-                title: t.section10,
-                body: (
-                  <div className="grid gap-8 sm:grid-cols-2">
-                    <SubList label={t.advantages} items={displayStub.advantages} />
-                    <SubList label={t.challenges} items={displayStub.challenges} />
-                  </div>
-                ),
-              }
-            : null,
-          displayStub.thingsPeopleDislike?.length
-            ? {
-                key: "dislike",
-                title: t.section11,
-                body: <BulletList items={displayStub.thingsPeopleDislike} />,
-              }
-            : null,
-          {
-            key: "salary",
-            title: t.section13,
-            body: displayStub.salary ? (
-              <SalaryDetails salary={displayStub.salary} />
-            ) : (
-              <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{displayStub.salaryNote}</p>
-            ),
-          },
-        ]
-          .filter((s) => s !== null)
-          .map((s, i) => (
-            <Section key={s.key} index={i + 1} title={s.title}>
-              {s.body}
-            </Section>
-          ))}
-      </PageFrame>
-    );
-  }
 
   if (!field) return null;
 
@@ -421,7 +254,11 @@ export default function FieldPageContent({ slug }: { slug: FieldSlug }) {
       </Section>
 
       <Section index={13} title={t.section13}>
-        <SalaryDetails salary={field.salary} />
+        {field.salary ? (
+          <SalaryDetails salary={field.salary} />
+        ) : (
+          <p className="max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{field.salaryNote}</p>
+        )}
       </Section>
 
       <Section index={14} title={t.section14}>

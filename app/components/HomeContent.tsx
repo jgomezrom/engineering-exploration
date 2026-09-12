@@ -10,7 +10,7 @@ import ExplorationStrip from "./ExplorationStrip";
 import FadeIn from "./FadeIn";
 import PlateRotator from "./PlateRotator";
 import { homePlates } from "../data/figures";
-import { totalFieldCount } from "../data/fieldStubs";
+import { fields } from "../data/fields";
 import { challenges } from "../data/challenges";
 import { resourceLinks } from "../data/resourceLinks";
 import { homeTranslations } from "../data/translations/home";
@@ -74,7 +74,7 @@ export default function HomeContent() {
     }`;
 
   const steps = [
-    { num: "01", title: t.step1Title, body: t.step1Body.replace("{n}", String(totalFieldCount)), cta: t.step1Cta, href: "/explore", slug: "mechanical-engineering" as const },
+    { num: "01", title: t.step1Title, body: t.step1Body.replace("{n}", String(fields.length)), cta: t.step1Cta, href: "/explore", slug: "mechanical-engineering" as const },
     { num: "02", title: t.step2Title, body: t.step2Body, cta: t.step2Cta, href: "/quiz", slug: "electrical-engineering" as const },
     { num: "03", title: t.step3Title, body: t.step3Body, cta: t.step3Cta, href: "/challenges", slug: "civil-engineering" as const },
   ];
@@ -128,7 +128,7 @@ export default function HomeContent() {
               </Button>
             </div>
 
-            <ExplorationStrip totalFields={totalFieldCount} />
+            <ExplorationStrip totalFields={fields.length} />
           </div>
 
           {/* Title block — the boxed spec table in the corner of a drawing */}
@@ -142,7 +142,7 @@ export default function HomeContent() {
               </div>
               <dl className="divide-y divide-neutral-900/15 dark:divide-white/15">
                 {[
-                  { k: t.fieldsUnit, v: String(totalFieldCount).padStart(2, "0") },
+                  { k: t.fieldsUnit, v: String(fields.length).padStart(2, "0") },
                   { k: t.challengesUnit, v: String(challenges.length).padStart(2, "0") },
                 ].map((row) => (
                   <div key={row.k} className="flex items-center justify-between gap-3 px-4 py-2.5">

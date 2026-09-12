@@ -2084,4 +2084,1067 @@ export const fieldsEs: EngineeringField[] = [
       "¿Me atrae la ingeniería marina específicamente, o más ampliamente la ingeniería mecánica o estructural?",
     ],
   },
+  {
+    slug: "architectural-engineering",
+    name: "Ingeniería Arquitectónica",
+    tagline: "Los sistemas estructurales, mecánicos y eléctricos que hacen que un edificio realmente funcione.",
+    whatItIs:
+      "Los sistemas técnicos dentro de un edificio — soporte estructural, calefacción y refrigeración, electricidad, iluminación, acústica — son el territorio de la ingeniería arquitectónica, trabajado junto a arquitectos, quienes se enfocan más en la forma y distribución del edificio. Es un campo más pequeño y especializado que combina conceptos de ingeniería civil, mecánica y eléctrica aplicados específicamente a edificios.",
+    realWorldExamples: [
+      "Sistemas estructurales para edificios grandes o complejos",
+      "Diseño de sistemas de calefacción, refrigeración, y ventilación",
+      "Sistemas eléctricos y de iluminación de edificios",
+      "Diseño acústico para espacios como salas de conciertos",
+    ],
+    relatedMajors: ["Ingeniería Arquitectónica", "Ingeniería Civil (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
+    salaryNote:
+      "La Oficina de Estadísticas Laborales de EE. UU. no rastrea la ingeniería arquitectónica como su propia categoría separada — usualmente se agrupa con la ingeniería civil o mecánica según el puesto específico. Consulta la página de Ingeniería Civil para ver datos de salario relacionados y con fuente.",
+    whatEngineersWorkOn:
+      "Los ingenieros arquitectónicos hacen que el interior de un edificio funcione. Eso significa dimensionar los sistemas de calefacción y refrigeración de un espacio, trazar la distribución eléctrica y la iluminación, hacer pasar ductos y tuberías por una estructura que ya está llena de vigas, y comprobar que una sala va a sonar como debe. El reto recurrente es espacial: varios sistemas necesitan ocupar el mismo hueco de techo, y alguien tiene que resolver de quién es ese espacio.",
+    commonMisconceptions: [
+      "Que es lo mismo que la arquitectura — los arquitectos trabajan la forma, la distribución, y el uso; los ingenieros arquitectónicos, los sistemas que hacen habitable el edificio.",
+      "Que los sistemas se añaden al final — los recorridos y el espacio de máquinas hay que planificarlos temprano o simplemente no caben.",
+      "Que es un campo pequeño y menor — climatización, iluminación, y electricidad son una parte grande tanto del costo de un edificio como de su consumo energético.",
+      "Que el trabajo es invisible — los ocupantes lo notan de inmediato cuando está mal hecho: ruido, corrientes de aire, deslumbramiento, o salas que nunca alcanzan la temperatura.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "La ingeniería arquitectónica es otro nombre para la arquitectura.",
+        reality:
+          "Los arquitectos dan forma al edificio. Los ingenieros arquitectónicos diseñan los sistemas estructurales, mecánicos, eléctricos, y acústicos de su interior, normalmente trabajando junto a ellos.",
+      },
+      {
+        myth: "Los sistemas del edificio se diseñan al final.",
+        reality:
+          "Las salas de máquinas, los patinillos, y el espacio de techo hay que reservarlos temprano. Dejarlo tarde es como acabas con ductos que no tienen por dónde pasar.",
+      },
+      {
+        myth: "Nadie nota este trabajo.",
+        reality:
+          "Nadie lo nota cuando está bien. Una rejilla ruidosa, una luminaria que deslumbra, o una sala que no enfría se notan de inmediato.",
+      },
+      {
+        myth: "Se trata sobre todo de elegir equipos de un catálogo.",
+        reality:
+          "La selección es un paso. Calcular cargas, coordinar recorridos por la estructura, y cumplir requisitos energéticos y normativos es el trabajo real.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Dibujo técnico o CAD, si está disponible", "Química", "Cualquier materia de dibujo o diseño que ofrezca tu escuela"],
+    helpfulSkills: [
+      "Buen razonamiento espacial, porque varios sistemas compiten por el mismo espacio físico",
+      "Soltura con fundamentos mecánicos y eléctricos, ya que el puesto abarca ambos",
+      "Coordinación con arquitectos y otros oficios, que es parte diaria del trabajo",
+      "Cuidado con normativas y estándares energéticos, que definen buena parte de lo que un edificio puede hacer",
+      "Atención a cómo la gente experimenta realmente un espacio — temperatura, luz, y ruido",
+    ],
+    typicalProjects: [
+      "Dimensionar calefacción y refrigeración según el uso, el clima, y la construcción del edificio",
+      "Trazar la distribución eléctrica y la iluminación de una planta",
+      "Coordinar recorridos de ductos, tuberías, y cableado por la estructura para que todo quepa",
+      "Diseñar la acústica de un espacio donde la calidad del sonido importa",
+      "Modelar el consumo energético previsto de un edificio y ajustar el diseño para reducirlo",
+    ],
+    typicalWorkday:
+      "La mayor parte del día es diseño y coordinación frente a una computadora, trabajando en un modelo compartido del edificio con arquitectos y otros ingenieros y resolviendo las interferencias que aparecen. Las visitas a obra se concentran durante la construcción, comprobando que lo que se instala coincide con los planos. Los plazos siguen las fases de diseño del proyecto, así que la carga llega por oleadas más que de forma pareja.",
+    industries: [
+      "Consultoras de instalaciones e ingeniería multidisciplinar",
+      "Estudios de arquitectura con ingeniería interna",
+      "Constructoras y empresas de diseño y construcción",
+      "Grandes propietarios inmobiliarios y equipos de mantenimiento institucional",
+      "Fabricantes de sistemas y equipos para edificios",
+    ],
+    advantages: [
+      "El resultado son lugares donde la gente pasa la vida entera",
+      "El trabajo abarca pensamiento mecánico, eléctrico, y estructural en vez de un área estrecha",
+      "Hay una línea directa entre las decisiones de diseño y cuánta energía consume un edificio",
+      "Siempre se están construyendo, reformando, y actualizando edificios, así que el trabajo no depende de un solo sector",
+    ],
+    challenges: [
+      "Diseñas dentro de restricciones fijadas por la arquitectura, y rara vez puedes moverlas",
+      "Los conflictos de coordinación son constantes, porque cada sistema quiere el mismo hueco de techo",
+      "Los recortes de presupuesto suelen caer sobre sistemas que el ocupante no ve hasta que fallan",
+      "Las normativas y requisitos energéticos son detallados y cambian con el tiempo",
+    ],
+    thingsPeopleDislike: [
+      "Rehacer recorridos porque un cambio estructural o arquitectónico movió algo",
+      "Ver cómo se recorta calidad en sistemas que los ocupantes sufrirán durante décadas",
+      "El volumen de reuniones de coordinación en un proyecto grande",
+      "Que te culpen por quejas de confort causadas por decisiones tomadas en otro lado",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Revisar el modelo", detail: "Abrir el modelo compartido del edificio y descubrir que una revisión estructural movió dos vigas alrededor de las que pasaban tus ductos." },
+        { time: "10:00 AM", label: "Cálculo de cargas", detail: "Calcular cuánta calefacción y refrigeración necesita una planta según su uso, el clima local, y cómo están construidos sus muros y ventanales." },
+        { time: "11:30 AM", label: "Reunión de coordinación", detail: "Revisar interferencias con el arquitecto y los demás ingenieros — decidir qué sistema se queda con el hueco de techo que tres de ellos quieren." },
+        { time: "1:30 PM", label: "Iluminación y electricidad", detail: "Distribuir las luminarias y la instalación eléctrica de una planta, y comprobar los niveles de luz según para qué sirve cada sala." },
+        { time: "3:00 PM", label: "Visita a obra", detail: "En un edificio en construcción, recorrer una planta para comprobar que lo que se instala coincide con los planos." },
+        { time: "4:30 PM", label: "Correcciones", detail: "Actualizar los planos después de la reunión y la visita, y anotar preguntas para el arquitecto." },
+      ],
+      reflectionQuestion: "¿Te sentirías cómodo/a diseñando los sistemas dentro de un edificio al que otra persona ya le dio forma, en vez de darle forma tú?",
+    },
+    // Mismas calificaciones que en fields.ts — los comentarios de ahí explican en qué se basa cada una.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Low",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Dibuja el plano de tu casa y marca por dónde crees que pasan las tuberías, los cables, y los ductos; luego comprueba lo que realmente se ve.",
+        tool: "Papel cuadriculado y un lápiz — todavía no hacen falta herramientas especiales.",
+        activity: "Busca un club de ciencia, tecnología, o diseño en tu escuela, o una visita guiada a un edificio en un museo o biblioteca local, si hay alguna disponible.",
+        relatedField: "civil-engineering",
+      },
+      "high-school": {
+        project: "Modela una habitación pequeña en una herramienta 3D gratuita y planifica dónde irían la iluminación, la ventilación, y los enchufes.",
+        tool: "SketchUp Free o Tinkercad — ambos gratuitos y funcionan en el navegador.",
+        activity: "Infórmate sobre un capítulo del ACE Mentor Program (arquitectura, construcción, e ingeniería, en EE. UU.) o una clase de dibujo técnico, si tu zona o escuela lo tiene.",
+        relatedField: "mechanical-engineering",
+      },
+      "college": {
+        project: "Modela un edificio sencillo en una herramienta gratuita de simulación energética y observa cómo el aislamiento, los ventanales, o la orientación cambian cuánta energía consume.",
+        tool: "EnergyPlus u OpenStudio — software gratuito de simulación energética de edificios respaldado por el Departamento de Energía de EE. UU.",
+        activity: "Busca una rama estudiantil de ASHRAE, un capítulo estudiantil del Architectural Engineering Institute (AEI), o unas prácticas en una empresa de ingeniería de instalaciones.",
+        relatedField: "electrical-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Ingeniero/a de Diseño de Climatización (HVAC)", description: "Dimensiona y distribuye los sistemas de calefacción, refrigeración, y ventilación de los edificios." },
+      { title: "Ingeniero/a Eléctrico/a y de Iluminación de Edificios", description: "Diseña cómo se distribuyen la electricidad y la iluminación en un edificio, desde la acometida hasta cada sala." },
+      { title: "Modelador/a Energético/a de Edificios", description: "Simula cuánta energía consumirá el diseño de un edificio y prueba cambios que la reducirían." },
+      { title: "Consultor/a Acústico/a", description: "Diseña cómo suenan los espacios y cuánto ruido pasa entre ellos, desde oficinas hasta salas de conciertos." },
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. no publica una proyección de empleo separada para la ingeniería arquitectónica, así que no hay una cifra de crecimiento oficial específica para este campo. Es un campo más pequeño y especializado, y no todas las universidades lo ofrecen como carrera propia — mucha gente llega a este trabajo desde la ingeniería civil, mecánica, o eléctrica. La demanda depende de cuánto se construye y se renueva, lo que varía según la región y con el tiempo, así que investiga el sector de la construcción y los programas disponibles donde vives antes de tomar decisiones.",
+    beginnerActivities: [
+      "Recorre un edificio grande, como una biblioteca o una escuela, e intenta encontrar las rejillas, los rociadores, las luminarias, y los paneles de registro que muestran por dónde pasan sus sistemas",
+      "Mide la temperatura de varias habitaciones de tu casa al mismo tiempo y piensa por qué son distintas",
+      "Modela una habitación en una herramienta 3D gratuita y averigua dónde podrían caber los ductos y las luces en el hueco del techo",
+    ],
+    selfReflectionQuestions: [
+      "¿Me sentiría satisfecho/a diseñando los sistemas dentro del edificio de otra persona, en vez de diseñar el edificio en sí?",
+      "¿Disfruto los rompecabezas espaciales, como meter varias cosas en un espacio que se queda un poco chico?",
+      "¿Estoy cómodo/a con que las normativas y los estándares definan muchas de mis decisiones?",
+      "¿Me quedaría bien un trabajo con muchas reuniones de coordinación?",
+    ],
+  },
+  {
+    slug: "automotive-engineering",
+    name: "Ingeniería Automotriz",
+    tagline: "El diseño, las pruebas, y la fabricación detrás de los autos y otros vehículos de carretera.",
+    whatItIs:
+      "La ingeniería automotriz trata sobre el diseño, las pruebas, y la fabricación de autos y otros vehículos de carretera — motores, transmisiones, sistemas de seguridad, y, cada vez más, tecnología de vehículos eléctricos y autónomos. Normalmente se estudia como una especialización dentro de la ingeniería mecánica, no como su propia carrera separada.",
+    realWorldExamples: [
+      "Diseño de motores y sistemas de transmisión",
+      "Pruebas de seguridad y colisión de vehículos",
+      "Sistemas de batería y motor para vehículos eléctricos",
+      "Sistemas avanzados de asistencia al conductor y vehículos autónomos",
+    ],
+    relatedMajors: ["Ingeniería Mecánica (con enfoque automotriz)", "Ingeniería Eléctrica (con cierta superposición para sistemas eléctricos y autónomos)"],
+    salaryNote:
+      "Los ingenieros automotrices normalmente se rastrean bajo la categoría más amplia de 'ingenieros mecánicos' en la Oficina de Estadísticas Laborales de EE. UU., no como su propia ocupación separada. Consulta la página de Ingeniería Mecánica para ver esos datos de salario con fuente.",
+    whatEngineersWorkOn:
+      "Los ingenieros automotrices trabajan a fondo sobre una parte del vehículo, no sobre autos enteros a la vez. Una persona puede encargarse del sistema de refrigeración, del mecanismo del pestillo de una puerta, de la gestión térmica de la batería, o del software que decide cuándo intervienen los frenos. El trabajo va desde el diseño y la simulación inicial hasta la construcción de prototipos, las pruebas, y la larga etapa de revisión posterior — buena parte de la cual se dedica a averiguar por qué una pieza no se comporta como decía el modelo, y a cambiarla hasta que lo haga.",
+    commonMisconceptions: [
+      "Que los ingenieros automotrices diseñan el aspecto de los autos — el estilo exterior e interior lo hacen sobre todo diseñadores, y los ingenieros trabajan dentro de formas que a menudo ya están decididas.",
+      "Que el trabajo trata sobre todo de rendimiento y velocidad — se dedica mucho más esfuerzo de ingeniería a la seguridad, las emisiones, el costo, la durabilidad, y la fabricabilidad que a hacer un vehículo rápido.",
+      "Que los vehículos eléctricos simplificaron el campo — un eléctrico elimina el motor y la caja de cambios, pero añade sistemas de alto voltaje, gestión térmica de baterías, y mucho más software.",
+      "Que hay que ser aficionado a los autos para pertenecer aquí — mucha gente entra desde la ingeniería mecánica, eléctrica, o de software sin haber reconstruido nunca un motor.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Los ingenieros automotrices diseñan cómo se ven los autos.",
+        reality:
+          "El estilo es en gran medida trabajo de un diseñador. Los ingenieros suelen trabajar dentro de una forma ya aprobada, y buena parte de la habilidad está en hacer que el mecanismo quepa en el espacio disponible.",
+      },
+      {
+        myth: "El trabajo trata sobre todo de hacer autos rápidos.",
+        reality:
+          "El rendimiento es un requisito que compite con la seguridad ante choques, las emisiones, el costo, el peso, la fiabilidad, y si una fábrica puede realmente producir la pieza.",
+      },
+      {
+        myth: "Pasas los días rodeado de autos terminados.",
+        reality:
+          "La mayor parte del trabajo es sobre un componente, un banco de pruebas, una simulación, o una hoja de resultados. Algunos ingenieros pasan años sin tener un vehículo completo delante.",
+      },
+      {
+        myth: "Los vehículos eléctricos hicieron más fácil la ingeniería automotriz.",
+        reality:
+          "Cambió dónde está la dificultad en vez de eliminarla. Los motores y las transmisiones dieron paso a la química de baterías, la seguridad de alto voltaje, la gestión térmica, y el software.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Química", "Informática o programación, si se ofrece", "Dibujo técnico o CAD, si está disponible"],
+    helpfulSkills: [
+      "Soltura con la mecánica y la termodinámica, ya que casi todos los problemas de un vehículo se reducen a fuerzas, calor, o ambos",
+      "Disposición a probar y volver a probar, porque una pieza que funciona en simulación a menudo se comporta distinto en un banco de pruebas",
+      "Atención a las tolerancias y al costo, ya que un diseño que no se puede fabricar de forma repetible y económica no llega a producción",
+      "Programación suficiente para ser útil, porque cada vez más el comportamiento del vehículo se decide en software",
+      "Trabajar dentro de restricciones fijadas por otros equipos, que es buena parte de la realidad diaria del puesto",
+    ],
+    typicalProjects: [
+      "Diseñar y validar un solo componente — un soporte, una bomba, un pestillo — frente a objetivos de resistencia, peso, y costo",
+      "Realizar pruebas de choque o durabilidad y analizar qué dicen los resultados sobre el diseño",
+      "Desarrollar la gestión térmica de una batería para que se mantenga en su rango seguro de temperatura",
+      "Ajustar el software de control de frenado, tracción, o asistencia al conductor",
+      "Rediseñar una pieza para que pueda montarse realmente en una línea de producción al ritmo necesario",
+    ],
+    typicalWorkday:
+      "El tiempo se reparte entre el diseño y la simulación frente a una computadora, el trabajo en un laboratorio de pruebas o un banco, y bastantes reuniones con los otros equipos cuyas piezas tocan la tuya. Los ciclos de prueba marcan el ritmo: se ejecuta un ensayo, llegan los resultados, y los días siguientes se dedican a entenderlos. Los plazos suelen estar ligados a los hitos del programa del vehículo, lo que hace que algunas etapas sean mucho más intensas que otras.",
+    industries: [
+      "Fabricantes de vehículos",
+      "Proveedores de componentes y sistemas, que emplean a una gran parte de los ingenieros automotrices",
+      "Empresas de vehículos eléctricos y baterías",
+      "Automovilismo deportivo y fabricantes de vehículos especializados",
+      "Organismos de pruebas, certificación, y regulación",
+    ],
+    advantages: [
+      "El trabajo termina dentro de objetos que la gente usa a diario, lo que hace inusualmente fácil señalarlo",
+      "Las habilidades se transfieren bien, ya que los fundamentos mecánicos, térmicos, y de control se aplican en aeroespacial, energía, y maquinaria pesada",
+      "Las pruebas son físicas e inmediatas — averiguas bastante rápido si un diseño aguanta",
+      "El cambio hacia vehículos eléctricos y automatizados ha abierto trabajo real para quienes vienen del software o la electrónica",
+    ],
+    challenges: [
+      "La presión sobre el costo es constante, y un diseño técnicamente mejor pierde con regularidad frente a uno más barato",
+      "La regulación de seguridad y emisiones limita bastante lo que se puede hacer",
+      "Los programas de vehículos son largos, así que pueden pasar años entre tu trabajo y algo que llegue a la carretera",
+      "El trabajo suele concentrarse en ciertas regiones y empresas, lo que puede implicar mudarse para seguir en el campo",
+    ],
+    thingsPeopleDislike: [
+      "Encargarse de un componente pequeño durante mucho tiempo, en vez de trabajar sobre un vehículo completo",
+      "Ver cómo un diseño del que estás orgulloso se cambia para ahorrar una cantidad pequeña por unidad",
+      "Ciclos largos de validación y papeleo entre terminar un diseño y ponerlo en producción",
+      "Periodos de sobrecarga alrededor de los hitos del programa y las fechas de lanzamiento",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "8:30 AM", label: "Resultados de prueba", detail: "Revisar los datos de un ensayo de durabilidad que corrió toda la noche en un banco de pruebas, buscando cualquier cosa que se haya desviado." },
+        { time: "10:00 AM", label: "Revisión de diseño", detail: "Presentar un soporte rediseñado a los equipos cuyas piezas están al lado — y descubrir que ahora choca con un arnés de cables." },
+        { time: "11:30 AM", label: "Simulación", detail: "Volver a correr un modelo de esfuerzos con la nueva forma para comprobar que sigue cumpliendo sus objetivos de resistencia y peso." },
+        { time: "1:30 PM", label: "Laboratorio de pruebas", detail: "Preparar con los técnicos del laboratorio la siguiente ronda de pruebas de una pieza prototipo." },
+        { time: "3:00 PM", label: "Llamada con proveedor", detail: "Averiguar si un proveedor puede fabricar la pieza con la tolerancia que necesita el diseño, al precio que permite el programa." },
+        { time: "4:30 PM", label: "Documentación", detail: "Registrar el cambio y su motivo, para que la historia de la pieza se pueda rastrear después." },
+      ],
+      reflectionQuestion: "¿Te gustaría encargarte a fondo de una sola parte de un vehículo durante mucho tiempo, en vez de trabajar en el auto completo?",
+    },
+    // Mismas calificaciones que en fields.ts — los comentarios de ahí explican en qué se basa cada una.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Medium",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Construye un auto impulsado por ligas o por un globo y observa cómo cambiar las ruedas o el peso afecta cuánto avanza.",
+        tool: "Materiales de casa — cartón, tapas de botella, pajitas, y ligas.",
+        activity: "Busca un club de ciencia y tecnología en tu escuela, o una carrera local de autos sin motor, si hay alguna cerca.",
+        relatedField: "mechanical-engineering",
+      },
+      "high-school": {
+        project: "Diseña una pieza sencilla de auto, como un soporte o un buje de rueda, en una herramienta CAD gratuita y piensa qué cargas tendría que soportar.",
+        tool: "Tinkercad u Onshape (plan educativo gratuito) — ambos funcionan en el navegador.",
+        activity: "Toma una clase de mecánica automotriz o de ingeniería, o únete a un equipo de robótica o ingeniería, si tu escuela lo ofrece.",
+        relatedField: "electrical-engineering",
+      },
+      "college": {
+        project: "Únete a un equipo estudiantil de vehículos y hazte cargo de un subsistema, como los frenos, la refrigeración, o el arnés de cables, desde el diseño hasta las pruebas.",
+        tool: "El software de CAD y simulación que ofrezca tu universidad — SolidWorks, Fusion 360, o similar.",
+        activity: "Busca un equipo de Formula SAE o Baja SAE, un capítulo estudiantil de SAE International, o unas prácticas con un fabricante de vehículos o un proveedor.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Ingeniero/a de Diseño y Liberación", description: "Se hace cargo de un componente o sistema durante el diseño, las pruebas, y la aprobación para producción." },
+      { title: "Ingeniero/a de Pruebas y Validación", description: "Planifica y realiza las pruebas en banco, pista, y laboratorio que demuestran que una pieza o un vehículo cumple sus requisitos." },
+      { title: "Ingeniero/a de Tren Motriz o de Sistemas de Batería", description: "Trabaja en lo que mueve al vehículo — motores y transmisiones, o paquetes de baterías y motores eléctricos." },
+      { title: "Ingeniero/a de Control y Calibración", description: "Ajusta el software que decide cómo se comportan sistemas como el frenado, la tracción, o la asistencia al conductor." },
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. cuenta a los ingenieros automotrices dentro de los ingenieros mecánicos, y proyecta un crecimiento del empleo del 11% para los ingenieros mecánicos en conjunto entre 2025 y 2035 — mucho más rápido que el promedio — con unas 17,800 vacantes al año. Esa proyección abarca a todos los ingenieros mecánicos, no específicamente al trabajo automotriz, así que tómala como contexto y no como un pronóstico para este campo. Los empleos automotrices además se concentran alrededor de ciertos fabricantes, proveedores, y regiones, y las habilidades que se buscan han ido cambiando a medida que los vehículos incorporan baterías y más software — investiga dónde está realmente el trabajo en tu país antes de tomar decisiones.",
+    beginnerActivities: [
+      "Mira bajo el cofre de un auto de tu familia (con un adulto, con el motor apagado y frío) e intenta identificar la batería, el depósito de refrigerante, y la toma de aire",
+      "Construye un auto impulsado por ligas y prueba cómo cambiar su peso o sus ruedas afecta cuánto avanza",
+      "Busca la calificación publicada de una prueba de choque de un auto (de NHTSA o IIHS en EE. UU., o de Euro NCAP en Europa) y lee qué miden realmente las pruebas",
+    ],
+    selfReflectionQuestions: [
+      "¿Me gustaría trabajar en un solo componente durante mucho tiempo en vez de en el vehículo completo?",
+      "¿Estoy de acuerdo con que el costo y la regulación se impongan sobre lo que yo creo que es el mejor diseño?",
+      "¿Me gusta combinar trabajo en computadora, pruebas de laboratorio, y reuniones con otros equipos?",
+      "¿Estaría dispuesto/a a mudarme a donde están las empresas automotrices, si el trabajo lo requiriera?",
+    ],
+  },
+  {
+    slug: "manufacturing-engineering",
+    name: "Ingeniería de Manufactura",
+    tagline: "Cómo un diseño se convierte en un producto físico real a gran escala — los procesos y equipos detrás.",
+    whatItIs:
+      "La ingeniería de manufactura trata sobre los procesos y equipos usados para realmente producir cosas a gran escala — la maquinaria, las herramientas, y los flujos de trabajo que convierten un diseño en un producto físico, y hacer que todo eso funcione mejor. Se superpone de cerca tanto con la ingeniería mecánica como con la industrial.",
+    realWorldExamples: [
+      "Diseño de líneas de producción y equipo de fábrica",
+      "Diseño de herramientas y dispositivos de sujeción para manufactura",
+      "Mejora de procesos para reducir desperdicio o defectos",
+      "Automatización de pasos de manufactura",
+    ],
+    relatedMajors: ["Ingeniería de Manufactura", "Ingeniería Industrial (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
+    salaryNote:
+      "La Oficina de Estadísticas Laborales de EE. UU. cuenta a los ingenieros de manufactura como un tipo de ingeniero industrial, no como una ocupación separada, así que su salario está incluido en la cifra de los ingenieros industriales. Consulta la página de Ingeniería Industrial para ver esos datos de salario con fuente.",
+    whatEngineersWorkOn:
+      "Los ingenieros de manufactura trabajan en la distancia entre un diseño que funciona una vez y un diseño que se puede fabricar miles de veces, bien, y a un precio que alguien pagará. Especifican máquinas y herramentales, ordenan la secuencia de operaciones, diseñan los dispositivos que sujetan una pieza mientras se trabaja, y persiguen por qué un proceso que iba bien el mes pasado ahora produce desperdicio. Gran parte del trabajo ocurre en la planta y no en un escritorio.",
+    commonMisconceptions: [
+      "Que los ingenieros de manufactura diseñan el producto — diseñan el proceso que lo fabrica, y a menudo tienen que pedir cambios en un diseño que no se puede producir de forma económica.",
+      "Que el campo desaparece por la automatización — automatizar una línea es en sí ingeniería de manufactura, y alguien tiene que especificarla, instalarla, y mantenerla funcionando.",
+      "Que es trabajo de fábrica de baja cualificación — implica diseño de procesos, estadística, herramentales, y bastante diagnóstico bajo presión de tiempo.",
+      "Que cuando la línea ya corre el trabajo está hecho — los procesos se desvían, los proveedores cambian, y las herramientas se desgastan, así que una línea en marcha necesita atención constante.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Los ingenieros de manufactura diseñan los productos que se fabrican.",
+        reality:
+          "Diseñan cómo se fabrican. Una parte frecuente del trabajo es decirle a un equipo de diseño que su pieza está bien en pantalla y es imposible de producir al ritmo necesario.",
+      },
+      {
+        myth: "La automatización está eliminando el campo.",
+        reality:
+          "La automatización desplaza el trabajo en vez de eliminarlo. Elegir, integrar, y mantener equipo automatizado es ingeniería de manufactura.",
+      },
+      {
+        myth: "Es lo mismo que la ingeniería industrial.",
+        reality:
+          "Se solapan. La industrial se inclina hacia los sistemas, el flujo, y la eficiencia; la de manufactura, hacia los procesos físicos y la maquinaria.",
+      },
+      {
+        myth: "Te sientas en un escritorio.",
+        reality:
+          "Pasas mucho tiempo en planta, porque los problemas aparecen en la máquina y no en el plano.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Estadística, si se ofrece", "Dibujo técnico o CAD, si está disponible", "Taller, robótica, o materias prácticas si tu escuela las tiene"],
+    helpfulSkills: [
+      "Sentido mecánico práctico, ya que buena parte del trabajo es entender por qué una máquina o una herramienta se comporta como lo hace",
+      "Soltura con la estadística, porque la calidad de un proceso se mide y se controla estadísticamente",
+      "Diagnóstico sistemático, ya que un defecto suele tener varias causas plausibles que hay que ir descartando en orden",
+      "Buen trato con operadores y técnicos, que a menudo conocen el proceso mejor que nadie",
+      "Tolerancia a la interrupción, porque una línea detenida tiene prioridad sobre lo que estuvieras haciendo",
+    ],
+    typicalProjects: [
+      "Diseñar un dispositivo que sujete una pieza con precisión mientras se mecaniza o se suelda",
+      "Definir la secuencia de operaciones para el ensamblaje de un producto nuevo",
+      "Encontrar la causa raíz de un defecto que empezó a aparecer en una línea existente",
+      "Especificar y poner en marcha una máquina nueva o una celda robotizada",
+      "Rediseñar un proceso para reducir tiempo de ciclo, desperdicio, o tiempo de cambio",
+    ],
+    typicalWorkday:
+      "El día se mueve entre la planta y el escritorio, normalmente no según tu propia agenda. El trabajo planificado es diseño de procesos, planos de herramental, y análisis de datos; el no planificado es lo que se haya detenido. El calendario de producción lo condiciona todo — las pruebas y los cambios de formato suelen darse alrededor de los turnos, y algunas puestas en marcha caen de noche o en un paro programado porque es el único momento en que la línea está libre.",
+    industries: [
+      "Fabricantes de automoción y aeroespacial",
+      "Producción de electrónica y bienes de consumo",
+      "Fabricación de dispositivos médicos y farmacéutica",
+      "Fabricantes por contrato y proveedores de componentes",
+      "Proveedores de equipo industrial y automatización",
+    ],
+    advantages: [
+      "La retroalimentación es inmediata y física — un cambio mejora la línea o no lo hace",
+      "El trabajo es visible, ya que puedes ver funcionando el proceso que diseñaste",
+      "Las habilidades sirven en casi cualquier industria que fabrique un objeto físico",
+      "Hay una ruta clara hacia operaciones y dirección de planta para quien la quiera",
+    ],
+    challenges: [
+      "La presión de producción es constante, y una línea parada cuesta por minuto",
+      "El costo y el tiempo de ciclo limitan las soluciones tanto como la física",
+      "El trabajo por turnos, las puestas en marcha nocturnas, y los paros programados son habituales",
+      "Los entornos de fábrica pueden ser ruidosos, calurosos, y físicamente exigentes",
+    ],
+    thingsPeopleDislike: [
+      "Que te saquen del trabajo planificado para apagar el incendio de esta mañana",
+      "Trabajo nocturno y de fin de semana durante instalaciones y paros",
+      "Pelear con el mismo defecto recurrente que tiene varias causas posibles",
+      "Tener que defender un cambio de diseño que haría la producción mucho más fácil",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "7:30 AM", label: "Cambio de turno", detail: "Escuchar del turno de noche qué corrió, qué se detuvo, y qué está produciendo desperdicio esta mañana." },
+        { time: "8:30 AM", label: "En la planta", detail: "Observar una máquina que empezó a producir piezas fuera de tolerancia, y preguntarle al operador qué cambió." },
+        { time: "10:30 AM", label: "Causa raíz", detail: "Sacar los datos del proceso y acotar cuál de varias causas posibles encaja con lo que realmente está pasando." },
+        { time: "1:00 PM", label: "Diseño de dispositivos", detail: "De vuelta en el escritorio, dibujar un dispositivo de sujeción para una pieza nueva que pronto entra en producción." },
+        { time: "2:30 PM", label: "Revisión de diseño", detail: "Mostrarle a un equipo de diseño de producto qué detalles de su pieza serían caros de fabricar, y sugerir alternativas." },
+        { time: "4:00 PM", label: "Planificar pruebas", detail: "Programar una prueba de proceso alrededor de la producción para no detener una línea en marcha." },
+      ],
+      reflectionQuestion: "¿Disfrutarías un trabajo en el que parte de cada día consiste en reaccionar a lo que se haya descompuesto, en vez de avanzar en un plan que tú mismo/a definiste?",
+    },
+    // Mismas calificaciones que en fields.ts — los comentarios de ahí explican en qué se basa cada una.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Arma una mini línea de ensamblaje con amigos o familia para hacer algo sencillo, como aviones de papel, y observa cómo repartir los pasos cambia la velocidad y la calidad.",
+        tool: "Papel, un cronómetro, y algunos ayudantes.",
+        activity: "Busca un club de ciencia y tecnología, o una clase de carpintería o de fabricación en tu escuela o biblioteca local, si hay alguna disponible.",
+        relatedField: "industrial-engineering",
+      },
+      "high-school": {
+        project: "Diseña en una herramienta CAD gratuita una plantilla sencilla que sostenga una pieza exactamente en la misma posición cada vez, y piensa cómo la fabricarías.",
+        tool: "Tinkercad, o Fusion 360 (gratuito para estudiantes y docentes).",
+        activity: "Toma una clase de taller, manufactura, o robótica, o únete a un equipo de robótica, si tu escuela lo ofrece.",
+        relatedField: "mechanical-engineering",
+      },
+      "college": {
+        project: "Elige una pieza de un proyecto estudiantil y escribe su proceso de fabricación completo — máquinas, dispositivos de sujeción, secuencia, y qué medirías para comprobar la calidad.",
+        tool: "El taller o makerspace de tu universidad, más una hoja de cálculo para un control estadístico de procesos básico.",
+        activity: "Busca un capítulo estudiantil de SME (Society of Manufacturing Engineers), un rol de manufactura en un equipo estudiantil de vehículos o robótica, o unas prácticas en un fabricante.",
+        relatedField: "industrial-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Ingeniero/a de Procesos", description: "Se hace cargo de un conjunto de pasos de producción y los mantiene dentro de los objetivos de calidad, costo, y tiempo de ciclo." },
+      { title: "Ingeniero/a de Herramentales y Dispositivos", description: "Diseña las plantillas, los dispositivos de sujeción, y el herramental que sostienen y dan forma a las piezas durante la producción." },
+      { title: "Ingeniero/a de Automatización", description: "Especifica, integra, y pone en marcha robots y equipo automatizado en una línea de producción." },
+      { title: "Ingeniero/a de Calidad", description: "Mide y controla la calidad del proceso, y dirige la investigación cuando aparecen defectos." },
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. cuenta a los ingenieros de manufactura como un tipo de ingeniero industrial, y proyecta un crecimiento del empleo del 12% para los ingenieros industriales entre 2025 y 2035 — mucho más rápido que el promedio — con unas 23,100 vacantes al año. Esa cifra abarca a todos los ingenieros industriales, no específicamente a los puestos de manufactura, así que léela como contexto y no como un pronóstico para este campo. El trabajo de manufactura depende de dónde se fabrican realmente las cosas, lo que varía mucho según la región y la industria, y en algunas plantas el trabajo por turnos o durante paros es habitual — investiga los fabricantes y las industrias cercanas antes de tomar decisiones.",
+    beginnerActivities: [
+      "Mira un video de recorrido por una fábrica sobre cómo se hace algo cotidiano, y escribe cada paso en orden",
+      "Elige un objeto sencillo y dibuja cómo lo sujetarías para taladrar un agujero exactamente en el mismo lugar cien veces",
+      "Cronométrate armando algo sencillo de varias formas y observa qué orden de pasos es el más rápido y el que produce menos errores",
+    ],
+    selfReflectionQuestions: [
+      "¿Preferiría mejorar cómo se fabrica algo que diseñar el producto en sí?",
+      "¿Estoy cómodo/a pasando buena parte de mi tiempo en una planta ruidosa en vez de en un escritorio?",
+      "¿Cómo manejaría que problemas urgentes me saquen de mi trabajo planificado?",
+      "¿Estaría de acuerdo con trabajar de vez en cuando de noche, en fin de semana, o durante paros?",
+    ],
+  },
+  {
+    slug: "systems-engineering",
+    name: "Ingeniería de Sistemas",
+    tagline: "Cómo todas las piezas individuales de un proyecto grande y complejo terminan funcionando bien juntas.",
+    whatItIs:
+      "La ingeniería de sistemas se aleja de cualquier componente individual para ver cómo un sistema complejo se integra como un todo — asegurándose de que cada pieza de un proyecto grande, sea un avión, una nave espacial, o una plataforma de software importante, funcione correctamente con todas las demás. Se trata menos de diseñar una parte específica y más de gestionar cómo se conecta todo.",
+    realWorldExamples: [
+      "Coordinar cómo funcionan juntos los subsistemas de un avión o una nave espacial",
+      "Gestionar los requisitos y la integración de grandes proyectos de defensa o infraestructura",
+      "Supervisar cómo interactúan los componentes de hardware y software de un producto complejo",
+    ],
+    relatedMajors: ["Ingeniería de Sistemas", "A menudo se estudia como una especialización dentro de la ingeniería aeroespacial, industrial o eléctrica"],
+    salaryNote:
+      "Como varios campos de esta página, la ingeniería de sistemas no se rastrea como su propia categoría separada en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia como una especialización dentro de otra disciplina de ingeniería. Consulta las páginas de Ingeniería Aeroespacial o Industrial para ver datos de salario relacionados y con fuente.",
+    whatEngineersWorkOn:
+      "Los ingenieros de sistemas se hacen cargo de las uniones entre las partes más que de las partes en sí. Convierten un objetivo vago en requisitos lo bastante concretos como para diseñar contra ellos, deciden cómo se van a comunicar los subsistemas entre sí, y después verifican que el conjunto armado realmente hace lo que se pidió. Buena parte del trabajo es escrito — requisitos, definiciones de interfaz, planes de prueba, y los estudios comparativos que dejan constancia de por qué se eligió una opción sobre otra.",
+    commonMisconceptions: [
+      "Que es gestión de proyectos con título de ingeniería — el trabajo es técnico, y consiste en hacerse cargo de interfaces y requisitos, no de calendarios y presupuestos.",
+      "Que hay que dominar a fondo cada subsistema — hace falta lo suficiente de cada uno para hacer las preguntas correctas y detectar cuándo dos equipos han supuesto cosas distintas.",
+      "Que es solo para naves espaciales y defensa — cualquier producto donde hardware, software, y personas tengan que funcionar juntos usa la misma disciplina.",
+      "Que la documentación es burocracia — en un proyecto grande, la interfaz escrita suele ser lo único que evita que dos equipos construyan piezas que no encajan.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "La ingeniería de sistemas es solo gestión de proyectos.",
+        reality:
+          "Los gestores se ocupan del calendario y el costo. Los ingenieros de sistemas se ocupan de los requisitos, las interfaces, y de si el resultado integrado realmente los cumple.",
+      },
+      {
+        myth: "Tienes que ser experto en cada subsistema.",
+        reality:
+          "Necesitas profundidad suficiente para hacer buenas preguntas a los especialistas y para notar cuándo dos equipos están suponiendo cosas distintas en silencio.",
+      },
+      {
+        myth: "Es un puesto solo para gente veterana.",
+        reality:
+          "Mucha gente empieza ahí, aunque bastantes llegan tras algunos años en una disciplina concreta, que es de donde sale el olfato útil.",
+      },
+      {
+        myth: "Los documentos son el objetivo.",
+        reality:
+          "Los documentos son la forma de hacer explícitos los acuerdos entre equipos. Cuando se saltan, los desacuerdos aparecen después, durante la integración, y salen caros.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Informática o programación, si se ofrece", "Estadística, si se ofrece", "Cualquier materia que implique escritura estructurada"],
+    helpfulSkills: [
+      "Escritura precisa, porque un requisito ambiguo lo construirán de dos formas distintas dos equipos distintos",
+      "Capacidad de sostener el sistema completo en la cabeza sin necesitar dominar cada detalle",
+      "Hacer preguntas incómodas temprano, ya que los problemas de integración son más baratos de encontrar antes de construir nada",
+      "Negociar entre equipos cuyas decisiones locales razonables entran en conflicto entre sí",
+      "Paciencia con el proceso, que en proyectos grandes es lo que mantiene coherente al sistema",
+    ],
+    typicalProjects: [
+      "Convertir el objetivo de un cliente en un conjunto de requisitos verificables",
+      "Definir la interfaz entre dos subsistemas construidos por equipos distintos",
+      "Hacer un estudio comparativo de opciones frente a costo, masa, riesgo, y plazo",
+      "Planificar cómo se va a verificar y probar el sistema integrado",
+      "Rastrear un fallo encontrado durante la integración hasta el requisito o la interfaz que lo permitió",
+    ],
+    typicalWorkday:
+      "El día tiene más reuniones y escritura que la mayoría de los puestos de ingeniería, porque el trabajo consiste en gran medida en mantener alineados a equipos separados. Las revisiones son parte fija del ritmo, igual que leer los diseños de otras personas con suficiente atención como para notar qué han dado por supuesto. La intensidad se dispara en la integración y las pruebas, cuando todo lo acordado sobre el papel se encuentra con todo lo que se construyó de verdad.",
+    industries: [
+      "Programas aeroespaciales y de naves espaciales",
+      "Defensa y grandes proyectos públicos",
+      "Automoción, sobre todo para software y electrónica a nivel de vehículo",
+      "Dispositivos médicos y otros productos regulados",
+      "Infraestructura y sistemas de transporte a gran escala",
+    ],
+    advantages: [
+      "Ves el sistema completo en vez de un componente, lo que encaja con quien disfruta la visión de conjunto",
+      "Las habilidades se transfieren bien entre industrias, ya que la disciplina es en gran medida la misma",
+      "El trabajo está cerca de las decisiones que dan forma a un proyecto desde el principio",
+      "Es una ruta natural hacia el liderazgo técnico sin dejar la ingeniería por la gestión",
+    ],
+    challenges: [
+      "Buena parte del trabajo es escribir y reunirse, que no es lo que mucha gente imagina",
+      "A menudo respondes por resultados que no controlas directamente",
+      "Los programas son largos, y el proceso formal puede sentirse pesado en el día a día",
+      "Es más difícil señalar una cosa y decir que la construiste tú",
+    ],
+    thingsPeopleDislike: [
+      "El volumen de documentación y revisión que exigen los proyectos grandes",
+      "Estar en medio de equipos que no se ponen de acuerdo, una y otra vez",
+      "Los huecos largos entre definir algo y ver si funcionó",
+      "Que te culpen en la integración por huecos que se señalaron y no se financiaron",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Revisión de requisitos", detail: "Leer los requisitos de un subsistema y marcar los que, tal como están escritos, no se podrían probar." },
+        { time: "10:00 AM", label: "Reunión de interfaces", detail: "Lograr que dos equipos acuerden exactamente qué datos envía un subsistema al otro, y en qué formato." },
+        { time: "11:30 AM", label: "Estudio comparativo", detail: "Comparar dos opciones de diseño frente a costo, masa, riesgo, y plazo, y dejar por escrito por qué una sale ganando." },
+        { time: "1:30 PM", label: "Revisión de diseño", detail: "Asistir a la revisión de otro equipo, leyendo con suficiente atención para detectar un supuesto que choca con un subsistema vecino." },
+        { time: "3:00 PM", label: "Planificar pruebas", detail: "Definir cómo se verificará el sistema integrado, y qué requisitos demostrará cada prueba." },
+        { time: "4:30 PM", label: "Actualizar documentos", detail: "Dejar registradas las decisiones de hoy para que ambos equipos construyan según el mismo acuerdo." },
+      ],
+      reflectionQuestion: "¿Te resultaría satisfactorio ser la persona que se asegura de que todo encaje, aunque nunca diseñes una de las piezas tú mismo/a?",
+    },
+    // Mismas calificaciones que en fields.ts — los comentarios de ahí explican en qué se basa cada una.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Low",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Low",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Desarma un aparato viejo y desenchufado (con permiso) y agrupa sus piezas según el trabajo que hacen juntas.",
+        tool: "Un juego pequeño de destornilladores y un cuaderno para dibujar.",
+        activity: "Busca un club de robótica LEGO o de ciencia y tecnología, donde un equipo tiene que hacer que piezas separadas funcionen juntas, si hay alguno disponible.",
+        relatedField: "robotics-engineering",
+      },
+      "high-school": {
+        project: "En un proyecto en equipo, escriban qué le entregará cada persona a otra antes de empezar a construir, y comprueben esas entregas al final.",
+        tool: "Una herramienta gratuita de diagramas como diagrams.net (draw.io).",
+        activity: "Infórmate sobre un equipo de FIRST Robotics, VEX, o Science Olympiad, donde juntar el trabajo de todos es lo difícil, si tu escuela tiene uno.",
+        relatedField: "aerospace-engineering",
+      },
+      "college": {
+        project: "Toma un proyecto de un equipo estudiantil y escribe en serio una lista de requisitos y una definición de interfaces, y úsalas para planear cómo probarías el sistema terminado.",
+        tool: "Una hoja de cálculo para dar seguimiento a los requisitos, más cualquier herramienta de modelado que ofrezca tu universidad.",
+        activity: "Busca un capítulo estudiantil de INCOSE (International Council on Systems Engineering), un rol de sistemas en un equipo estudiantil de cohetes, satélites, o vehículos, o unas prácticas en una empresa aeroespacial o de defensa.",
+        relatedField: "industrial-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Ingeniero/a de Requisitos", description: "Convierte las necesidades de clientes e interesados en requisitos claros y verificables, y los mantiene rastreables mientras cambia el diseño." },
+      { title: "Arquitecto/a de Sistemas", description: "Decide cómo se divide un sistema en subsistemas y cómo se conectan esas piezas." },
+      { title: "Ingeniero/a de Integración y Pruebas", description: "Junta los subsistemas y realiza las pruebas que demuestran que el sistema completo hace lo que debe." },
+      { title: "Ingeniero/a de Verificación y Validación", description: "Planifica cómo se demostrará cada requisito — por prueba, análisis, o inspección — y da seguimiento a la evidencia." },
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. no publica una proyección de empleo separada para la ingeniería de sistemas — la mayoría de los ingenieros de sistemas se cuentan dentro de la disciplina en la que se formaron, como la ingeniería aeroespacial, eléctrica, o industrial, así que no hay una cifra de crecimiento oficial específica para este puesto. (El BLS sí registra a los \"ingenieros de sistemas informáticos\", pero ese es un puesto de TI, no este.) Buena parte del trabajo está en programas aeroespaciales, de defensa, y otros grandes proyectos, que dependen de presupuestos y contratos que varían según el país. Mucha gente llega a la ingeniería de sistemas tras algunos años en una disciplina concreta, así que averigua qué rutas de entrada existen donde te gustaría trabajar.",
+    beginnerActivities: [
+      "Elige algo que tengas, como una bicicleta o una consola de videojuegos, y dibuja un diagrama de sus partes principales y de lo que pasa entre ellas",
+      "Escribe los requisitos de algo sencillo, como una mochila, e intercámbialos con un amigo para ver si construiría lo mismo a partir de tu lista",
+      "Planifica un proyecto o evento en grupo anotando quién depende de quién, y observa dónde podrían quedar huecos",
+    ],
+    selfReflectionQuestions: [
+      "¿Me sentiría satisfecho/a haciendo funcionar un sistema completo, aunque no pueda señalar una parte y decir que la construí yo?",
+      "¿Estoy cómodo/a con un trabajo con mucha escritura, reuniones, y revisiones?",
+      "¿Me gusta entender un poco de muchas áreas en vez de mucho de una sola?",
+      "¿Puedo manejar ser responsable de resultados que dependen del trabajo de otras personas?",
+    ],
+  },
+  {
+    slug: "structural-engineering",
+    name: "Ingeniería Estructural",
+    tagline: "Si un edificio o puente puede cargar con seguridad su propio peso, además del viento, los terremotos, y el uso diario.",
+    whatItIs:
+      "La ingeniería estructural trata sobre la estructura portante de edificios y puentes — asegurándose de que una estructura pueda cargar con seguridad su propio peso más fuerzas como el viento, los terremotos, y el uso diario. Normalmente se estudia como una especialización dentro de la ingeniería civil, no como su propia carrera separada.",
+    realWorldExamples: [
+      "Diseño de la estructura portante de edificios",
+      "Diseño y análisis estructural de puentes",
+      "Ingeniería de resistencia sísmica y al viento",
+      "Inspección estructural de edificios y puentes existentes",
+    ],
+    relatedMajors: ["Ingeniería Civil (con enfoque estructural)", "Ingeniería Estructural (ofrecida como carrera propia en algunas universidades)"],
+    salaryNote:
+      "Los ingenieros estructurales normalmente se rastrean bajo la categoría más amplia de 'ingenieros civiles' en la Oficina de Estadísticas Laborales de EE. UU., no como su propia ocupación separada. Consulta la página de Ingeniería Civil para ver esos datos de salario con fuente.",
+    whatEngineersWorkOn:
+      "Los ingenieros estructurales deciden si algo se va a mantener en pie, y seguir en pie. Dimensionan vigas, columnas, losas, cimentaciones, y las conexiones entre todo eso, y modelan las cargas que una estructura tiene que resistir — su propio peso, las personas y equipos dentro, el viento, la nieve, y, según dónde se construya, los sismos. Buena parte del trabajo es el detallado: dibujar las uniones y fijaciones con precisión suficiente para que un contratista pueda construirlas, y rehacerlas cuando la arquitectura cambia alrededor.",
+    commonMisconceptions: [
+      "Que los ingenieros estructurales diseñan el edificio entero — los arquitectos suelen decidir la forma y la distribución, y el ingeniero estructural resuelve el esqueleto que lo sostiene.",
+      "Que ahora el software hace el trabajo — el software es estándar, pero alguien tiene que elegir el modelo, decidir qué casos de carga importan, y juzgar si el resultado es creíble.",
+      "Que todo es obra nueva — evaluar, reforzar, y reparar estructuras que ya existen es una parte grande del campo.",
+      "Que las matemáticas son lo difícil — los cálculos se aprenden, y la habilidad más difícil suele ser el detallado y la coordinación con todos los demás que tocan el edificio.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Los ingenieros estructurales diseñan edificios.",
+        reality:
+          "Diseñan el esqueleto portante. La forma, la distribución, y la apariencia suelen ser decisiones del arquitecto, dentro de las cuales la estructura tiene que funcionar.",
+      },
+      {
+        myth: "La computadora hace los cálculos, así que el trabajo es capturar datos.",
+        reality:
+          "El software devuelve con toda confianza una respuesta a un modelo mal planteado. Decidir el modelo y verificar que el resultado tenga sentido es la ingeniería.",
+      },
+      {
+        myth: "Es un trabajo de diseño creativo.",
+        reality:
+          "Hay criterio, pero es criterio dentro de normativas y factores de seguridad. Ser deliberadamente conservador es parte de hacerlo bien.",
+      },
+      {
+        myth: "Solo trabajas en obras nuevas y emblemáticas.",
+        reality:
+          "Gran parte del trabajo son edificios ordinarios, y bastante consiste en inspeccionar o reforzar estructuras que ya están ahí.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Dibujo técnico o CAD, si está disponible", "Estadística, si se ofrece"],
+    helpfulSkills: [
+      "Razonamiento espacial, porque hay que imaginar cómo viajan las fuerzas por la estructura hasta el suelo",
+      "Soltura trabajando dentro de normativas y estándares, que definen buena parte de lo permitido",
+      "Precisión y cuidado, porque un caso de carga olvidado o una conexión mal detallada tiene consecuencias reales",
+      "Comunicación clara con arquitectos y contratistas, ya que tus planos los construye otra persona",
+      "Disposición a ser conservador, que en este campo es una virtud profesional y no falta de audacia",
+    ],
+    typicalProjects: [
+      "Dimensionar la estructura de un edificio frente a cargas de gravedad, viento, y sismo",
+      "Analizar un puente existente para juzgar qué cargas puede seguir soportando con seguridad",
+      "Diseñar una cimentación para las condiciones del terreno realmente encontradas en obra",
+      "Detallar conexiones para que la estructura se pueda montar en el orden correcto",
+      "Reforzar un edificio antiguo para cumplir requisitos actuales de sismo o viento",
+    ],
+    typicalWorkday:
+      "La mayor parte del día es análisis y dibujo frente a una computadora, intercalado con coordinación con arquitectos y otros ingenieros cuyos sistemas atraviesan la misma estructura. Las visitas a obra llegan por rachas, normalmente en hitos de construcción o cuando algo en sitio no coincide con los planos. Revisar los cálculos de otras personas es parte rutinaria del trabajo, y que revisen los tuyos también.",
+    industries: [
+      "Consultoras estructurales y civiles",
+      "Constructoras y empresas de diseño y construcción",
+      "Organismos públicos de transporte e infraestructura",
+      "Inspección de edificios e ingeniería forense",
+      "Fabricantes de productos y sistemas estructurales",
+    ],
+    advantages: [
+      "El trabajo es permanente y público — puedes pararte frente a él años después",
+      "El propósito es inusualmente claro, ya que se trata de evitar que las estructuras lastimen a alguien",
+      "Las habilidades sirven para edificios, puentes, y estructuras industriales sin empezar de cero",
+      "La colegiación profesional da una ruta definida y reconocida para avanzar",
+    ],
+    challenges: [
+      "La responsabilidad es real, y los errores tienen consecuencias que otros campos no tienen del mismo modo",
+      "Las normativas y aprobaciones limitan bastante lo que se puede hacer",
+      "Los proyectos son largos, y los diseños se revisan una y otra vez cuando cambia la arquitectura",
+      "Obtener la licencia lleva años de experiencia supervisada y exámenes después de la carrera",
+    ],
+    thingsPeopleDislike: [
+      "Cargar con la responsabilidad legal mucho después de terminado el proyecto",
+      "Rehacer trabajo porque un cambio previo movió un muro o una columna",
+      "Cuánto tiempo se va en revisar, documentar, y defender cálculos",
+      "Ser quien tiene que decir que no a una idea que se vería mejor de lo que se comportaría",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Preparar el modelo", detail: "Armar un modelo de análisis de una planta — decidir qué cargas importan y cómo representar los apoyos." },
+        { time: "10:30 AM", label: "Revisión", detail: "Revisar los cálculos de vigas de un colega, y que revisen los tuyos a cambio." },
+        { time: "12:00 PM", label: "Coordinación", detail: "Un cambio arquitectónico movió una columna; averiguar todo lo demás que tiene que cambiar por eso." },
+        { time: "1:30 PM", label: "Detallado", detail: "Dibujar una conexión de acero con la precisión suficiente para que un taller la fabrique y una cuadrilla la monte." },
+        { time: "3:00 PM", label: "Visita a obra", detail: "En un hito de la construcción, revisar el armado antes de un colado de concreto, o mirar algo en sitio que no coincide con los planos." },
+        { time: "4:30 PM", label: "Memoria de cálculo", detail: "Redactar los cálculos del día para que se puedan revisar y presentar para aprobación." },
+      ],
+      reflectionQuestion: "¿Te sentirías cómodo/a cargando con la responsabilidad de que una estructura se mantenga en pie, y con que revisen cada cálculo que haces?",
+    },
+    // Mismas calificaciones que en fields.ts — los comentarios de ahí explican en qué se basa cada una.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Low",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Construye una torre o un puente con espagueti y malvaviscos o con papel, y prueba cuánto aguanta antes de fallar.",
+        tool: "Materiales de casa, más algunas monedas o pesos pequeños para probar.",
+        activity: "Busca un club de ciencia y tecnología o una competencia de construcción de puentes en tu escuela o en un museo de ciencias local, si hay alguno disponible.",
+        relatedField: "civil-engineering",
+      },
+      "high-school": {
+        project: "Diseña un pequeño puente de armadura en un simulador gratuito, luego constrúyelo con madera de balsa o palitos de paleta y compara dónde falla realmente con dónde decía el modelo.",
+        tool: "Un simulador gratuito de armaduras o puentes en línea, más madera de balsa o palitos de paleta.",
+        activity: "Infórmate sobre Science Olympiad, que tiene pruebas de construcción de estructuras, o un capítulo del ACE Mentor Program (ambos en EE. UU.), si hay uno cerca.",
+        relatedField: "civil-engineering",
+      },
+      "college": {
+        project: "Toma un marco de edificio sencillo, calcula a mano las fuerzas en sus vigas y columnas, y luego compara tus respuestas con un software de análisis.",
+        tool: "Cualquier software de análisis estructural que ofrezca tu universidad, o una herramienta gratuita de análisis de marcos 2D.",
+        activity: "Busca un capítulo estudiantil de ASCE y sus equipos de Steel Bridge o Concrete Canoe, un capítulo estudiantil de EERI si te interesan los sismos, o unas prácticas en una empresa de ingeniería estructural.",
+        relatedField: "materials-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Ingeniero/a Estructural de Edificios", description: "Diseña las estructuras, losas, y cimentaciones de edificios, desde casas hasta rascacielos." },
+      { title: "Ingeniero/a de Puentes", description: "Diseña puentes nuevos y evalúa cuánta carga pueden seguir soportando con seguridad los existentes." },
+      { title: "Ingeniero/a Estructural Forense", description: "Investiga por qué una estructura falló o se dañó, y qué haría falta para repararla." },
+      { title: "Ingeniero/a de Refuerzo Sísmico", description: "Refuerza edificios existentes para cumplir los requisitos sísmicos actuales, sobre todo en regiones donde los terremotos son un factor de diseño." },
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. cuenta a los ingenieros estructurales dentro de los ingenieros civiles, y proyecta un crecimiento del empleo del 6% para los ingenieros civiles en conjunto entre 2025 y 2035 — más rápido que el promedio — con unas 22,700 vacantes al año. Eso abarca a todos los ingenieros civiles, no específicamente al trabajo estructural, y la demanda depende de cuánto se construye y se renueva, lo que varía según la región y con el tiempo. La licencia profesional pesa mucho aquí: en muchos países necesitas años de experiencia supervisada y exámenes antes de poder firmar diseños por tu cuenta, y algunos lugares exigen una licencia estructural adicional para ciertos edificios — investiga las reglas donde te gustaría trabajar.",
+    beginnerActivities: [
+      "Construye una torre de papel o espagueti y prueba cuánto peso aguanta antes de fallar — luego cambia una cosa y vuelve a probar",
+      "Mira un puente por el que pasas seguido e intenta averiguar cómo baja su carga hasta el suelo",
+      "Prueba un simulador gratuito de armaduras o vigas en línea y observa cómo mover un apoyo cambia las fuerzas",
+    ],
+    selfReflectionQuestions: [
+      "¿Estoy cómodo/a con un trabajo en el que un error podría realmente lastimar a alguien?",
+      "¿Disfrutaría ser cuidadoso/a y conservador/a más que ser audaz?",
+      "¿Estoy dispuesto/a a pasar años después de la carrera obteniendo la licencia?",
+      "¿Me atrae la idea de ver mi trabajo construido, aunque tarde años en llegar ahí?",
+    ],
+  },
+  {
+    slug: "energy-engineering",
+    name: "Ingeniería de Energía",
+    tagline: "Cómo se genera, distribuye, y usa la energía de forma eficiente — desde redes eléctricas hasta energías renovables.",
+    whatItIs:
+      "La ingeniería de energía abarca cómo se genera, distribuye, y usa la energía de forma eficiente — sistemas de energía tradicionales, energía renovable como la solar y la eólica, y la eficiencia energética en edificios e industria. En lugar de ser una sola disciplina estandarizada, se apoya en la ingeniería mecánica, eléctrica y ambiental.",
+    realWorldExamples: [
+      "Diseño de sistemas de energía solar y eólica",
+      "Sistemas de redes eléctricas y distribución de energía",
+      "Sistemas de eficiencia energética en edificios",
+      "Sistemas de almacenamiento de baterías y gestión de energía",
+    ],
+    relatedMajors: ["Ingeniería de Energía", "Ingeniería Eléctrica (con cierta superposición)", "Ingeniería Mecánica (con cierta superposición)"],
+    salary: {
+      medianAnnual: "$122,930",
+      period: "Mayo 2025",
+      region: "Estados Unidos (mediana nacional)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/about/data-for-occupations-not-covered-in-detail.htm",
+      note: "Los ingenieros de energía no se rastrean como su propia categoría detallada del BLS — esta cifra proviene del grupo más amplio de 'Ingenieros, Todos los Demás', que según el BLS incluye a los ingenieros de energía, los ingenieros de energía eólica y los ingenieros de sistemas de energía solar. Ese grupo también abarca otras especialidades, así que trátala como una estimación aproximada, no como una cifra precisa para la ingeniería de energía. El trabajo en energía que se hace con un puesto de ingeniero eléctrico o mecánico se cuenta dentro de esas ocupaciones, así que también vale la pena ver la página de Ingeniería Eléctrica.",
+      verifiedDate: "Septiembre 2026",
+    },
+    whatEngineersWorkOn:
+      "Los ingenieros de energía trabajan sobre cómo se genera, transporta, almacena, y desperdicia la energía. Eso puede significar dimensionar un campo solar y sus inversores, modelar cuánto cuesta realmente operar el sistema de calefacción de un edificio, calcular dónde una red puede absorber más generación intermitente, o auditar una fábrica para encontrar por dónde se está yendo la energía. Buena parte del trabajo es medir y modelar antes de construir nada, porque el argumento para un cambio suele ser tan financiero como técnico.",
+    commonMisconceptions: [
+      "Que se trata solo de renovables — gran parte del campo es eficiencia, almacenamiento, y mantener funcionando la generación y las redes que ya existen.",
+      "Que la eficiencia es menor frente a construir generación nueva — reducir lo que consume un edificio o una planta suele ser el cambio más barato y rápido disponible.",
+      "Que es una carrera única y definida — la mayoría llega desde la ingeniería eléctrica o mecánica con enfoque en energía.",
+      "Que la tecnología es lo difícil — las limitaciones más duras suelen ser el costo, la regulación, y la red física que ya está instalada.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "La ingeniería de energía significa trabajar en solar y eólica.",
+        reality:
+          "Las renovables son parte. También lo son las redes, el almacenamiento, la generación convencional, el calor de procesos industriales, y lograr que los edificios consuman menos desde el principio.",
+      },
+      {
+        myth: "El trabajo es diseñar centrales nuevas.",
+        reality:
+          "Mucho más del trabajo es análisis — medir, modelar, y demostrar que un cambio propuesto realmente se va a pagar solo.",
+      },
+      {
+        myth: "Cuando una tecnología es lo bastante barata, se instala.",
+        reality:
+          "La instalación choca con permisos, colas de conexión a la red, e infraestructura existente que no fue diseñada para ella.",
+      },
+      {
+        myth: "Es una carrera de ingeniería aparte.",
+        reality:
+          "Suele ser una especialización. La mayoría estudió ingeniería eléctrica o mecánica y se movió hacia la energía por materias y empleos.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Química", "Estadística, si se ofrece", "Informática o programación, si se ofrece"],
+    helpfulSkills: [
+      "Soltura con la termodinámica y los fundamentos eléctricos, ya que el campo cruza ambos",
+      "Poder trabajar con datos medidos en vez de supuestos, porque las promesas de ahorro tienen que resistir el escrutinio",
+      "Nociones financieras básicas, ya que casi toda propuesta se defiende por su periodo de retorno tanto como por su física",
+      "Paciencia con la regulación y los procesos de las eléctricas, que definen qué se puede conectar y cuándo",
+      "Programación o manejo de hojas de cálculo suficiente para modelar un sistema antes de comprometerse",
+    ],
+    typicalProjects: [
+      "Dimensionar un campo solar, sus inversores, y su conexión para un sitio concreto",
+      "Auditar un edificio o una fábrica e identificar dónde se está desperdiciando energía",
+      "Modelar cómo se comportaría un sistema de baterías a lo largo de un día de demanda",
+      "Evaluar si un tramo de red puede admitir más generación intermitente",
+      "Comparar opciones de calefacción o refrigeración por consumo y por costo de operación",
+    ],
+    typicalWorkday:
+      "El tiempo se reparte entre modelado y análisis frente a una computadora y trabajo en sitio — recorrer instalaciones, leer medidores, comprobar qué está realmente instalado frente a lo que dicen los planos. Los informes y propuestas ocupan una parte real de la semana, porque buena parte del trabajo consiste en convencer a alguien de que vale la pena financiar un cambio. Los plazos de permisos y de las eléctricas marcan el ritmo más que la ingeniería en sí.",
+    industries: [
+      "Empresas eléctricas y operadores de red",
+      "Desarrolladores de energías renovables",
+      "Consultoras de ingeniería que hacen auditorías e instalaciones de edificios",
+      "Fabricantes con grandes consumos energéticos industriales",
+      "Programas públicos de energía y eficiencia",
+    ],
+    advantages: [
+      "El trabajo conecta directamente con cuánta energía se usa y se desperdicia, algo fácil de que te importe",
+      "Abarca trabajo eléctrico y mecánico, así que el día a día varía más que en un campo más estrecho",
+      "Los resultados son medibles — normalmente puedes mostrar qué cambió tras un proyecto",
+      "Hay demanda tanto en obra nueva como en mejorar lo que ya existe",
+    ],
+    challenges: [
+      "El avance suele estar limitado por costo, permisos, y acceso a la red más que por la ingeniería",
+      "El campo está moldeado por la política pública, que cambia con gobiernos y ciclos de financiamiento",
+      "No es una carrera única bien definida, así que el camino de entrada está menos señalizado que en otras",
+      "Los ahorros hay que demostrarlos, y medirlos es más difícil y desordenado de lo que suena",
+    ],
+    thingsPeopleDislike: [
+      "Esperar permisos, aprobaciones de la eléctrica, y colas de conexión a la red",
+      "Escribir una y otra vez la justificación económica de un trabajo técnicamente obvio",
+      "Ver cómo se rechaza una propuesta sólida solo por su periodo de retorno",
+      "Trabajo en sitio en salas de máquinas y azoteas que son calurosas, estrechas, o ambas",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "8:30 AM", label: "Datos de medidores", detail: "Sacar un mes de datos de energía de un edificio y notar que consume electricidad de noche, cuando debería estar vacío." },
+        { time: "10:00 AM", label: "Recorrido en sitio", detail: "Recorrer una sala de máquinas y una azotea para comprobar qué está realmente instalado frente a lo que dicen los planos." },
+        { time: "12:00 PM", label: "Modelado", detail: "Armar un modelo de cómo se cargaría y descargaría un sistema de baterías a lo largo de un día típico de demanda." },
+        { time: "1:30 PM", label: "Justificación económica", detail: "Convertir el modelo en una propuesta: cuánto cuesta, cuánto ahorra, y cuánto tarda en pagarse." },
+        { time: "3:00 PM", label: "Llamada con la eléctrica", detail: "Consultar con la empresa eléctrica qué hace falta para conectar un nuevo campo solar, y cuánto dura la cola de aprobación." },
+        { time: "4:30 PM", label: "Redacción del informe", detail: "Redactar los hallazgos de una auditoría de forma que el dueño de un edificio realmente pueda actuar." },
+      ],
+      reflectionQuestion: "¿Disfrutarías un trabajo en el que demostrar que un cambio vale la pena económicamente importa tanto como la ingeniería en sí?",
+    },
+    // Mismas calificaciones que en fields.ts — los comentarios de ahí explican en qué se basa cada una.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Haz una búsqueda de energía en casa: anota los aparatos, revisa cuáles están tibios o encendidos cuando nadie los usa, y adivina cuáles consumen más.",
+        tool: "Un cuaderno — y un medidor de consumo enchufable, si tu familia tiene uno.",
+        activity: "Busca un club ambiental, de ciencias, o de tecnología en tu escuela, si hay alguno disponible.",
+        relatedField: "environmental-engineering",
+      },
+      "high-school": {
+        project: "Usa una calculadora solar gratuita para estimar cuánta energía podrían producir unos paneles en tu casa o escuela, y compárala con un año de consumo eléctrico.",
+        tool: "La calculadora PVWatts de NREL — gratuita y enfocada en EE. UU.; existen herramientas similares para otros países.",
+        activity: "Haz un proyecto de feria de ciencias sobre energía, o únete a un club ambiental o a una competencia de energía renovable, si tu escuela participa en una.",
+        relatedField: "electrical-engineering",
+      },
+      "college": {
+        project: "Modela un sistema pequeño de paneles solares con baterías para un edificio real usando sus datos de consumo reales, y calcula el periodo de retorno.",
+        tool: "El System Advisor Model (SAM) de NREL, que es gratuito, más una hoja de cálculo.",
+        activity: "Busca un capítulo estudiantil de la IEEE Power & Energy Society, el Solar Decathlon del Departamento de Energía de EE. UU. si tu universidad compite, o unas prácticas con una empresa eléctrica o una consultora de energía.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Ingeniero/a o Auditor/a de Energía", description: "Mide cómo usan la energía los edificios o las plantas y recomienda cambios que reducen el desperdicio y el costo." },
+      { title: "Ingeniero/a de Proyectos Solares o Eólicos", description: "Diseña instalaciones renovables y las lleva por los permisos y la conexión a la red." },
+      { title: "Ingeniero/a de Sistemas de Potencia", description: "Estudia cómo maneja la red eléctrica la nueva generación, el almacenamiento, y los cambios en la demanda." },
+      { title: "Ingeniero/a de Almacenamiento de Energía", description: "Diseña y modela sistemas de baterías que guardan energía y la liberan cuando se necesita." },
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. cuenta a los ingenieros de energía — incluidos los de energía eólica y de sistemas de energía solar — en su grupo amplio de \"Ingenieros, Todos los Demás\", y proyecta un crecimiento del empleo de alrededor del 4% para ese grupo entre 2025 y 2035, más o menos al ritmo del promedio, o unos 6,200 empleos nuevos en la década. Ese grupo mezcla muchas especialidades, así que no es un pronóstico preciso para la ingeniería de energía, y buena parte del trabajo en energía lo hacen personas contadas como ingenieros eléctricos o mecánicos. El campo también está moldeado por la política energética y el financiamiento, que difieren según el país y pueden cambiar con los gobiernos — investiga el mercado actual y los incentivos donde vives antes de tomar decisiones.",
+    beginnerActivities: [
+      "Lee el recibo de luz de tu casa (con permiso) y averigua cuánta energía se usó y cuándo",
+      "Usa una calculadora solar gratuita en línea para estimar cuánto podría producir en un año un conjunto de paneles en tu techo",
+      "Haz una lista de todos los aparatos de tu casa que se quedan en modo de espera, y piensa cuáles se podrían apagar",
+    ],
+    selfReflectionQuestions: [
+      "¿Me motivaría un trabajo que reduce la energía desperdiciada, aunque sea menos visible que construir una central?",
+      "¿Estoy cómodo/a con que la política, los permisos, y el financiamiento definan lo que puedo hacer?",
+      "¿Me gusta combinar análisis de datos en la computadora con visitas a sitios y salas de máquinas?",
+      "¿Disfrutaría defender el argumento económico de un cambio, no solo el técnico?",
+    ],
+  },
+  {
+    slug: "semiconductor-engineering",
+    name: "Ingeniería de Semiconductores",
+    tagline: "Cómo se diseñan y fabrican los chips que impulsan casi todos los dispositivos electrónicos modernos.",
+    whatItIs:
+      "La ingeniería de semiconductores trata sobre diseñar y fabricar los chips que impulsan casi todos los dispositivos electrónicos modernos — trabajando a la escala de circuitos y materiales individuales, no de un producto terminado. Combina la ingeniería eléctrica, la ciencia de materiales, y la manufactura de precisión.",
+    realWorldExamples: [
+      "Diseño de microchips y procesadores",
+      "Ingeniería de procesos de fabricación de semiconductores",
+      "Pruebas de chips y verificación de calidad",
+      "Ingeniería de materiales para la manufactura de semiconductores",
+    ],
+    relatedMajors: ["Ingeniería Eléctrica (con enfoque en semiconductores)", "Ciencia e Ingeniería de Materiales (con cierta superposición)", "Ingeniería en Computación (con cierta superposición)"],
+    salaryNote:
+      "No hay una categoría separada para la ingeniería de semiconductores en la Oficina de Estadísticas Laborales de EE. UU. — usualmente se estudia a través de la ingeniería eléctrica, en computación, o de materiales. Consulta la página de Ingeniería Eléctrica para ver datos de salario relacionados y con fuente.",
+    whatEngineersWorkOn:
+      "Los ingenieros de semiconductores trabajan a una escala donde el material mismo es el diseño. Algunos se dedican al circuito — colocar transistores, verificar tiempos, y simular un bloque mucho antes de que exista silicio alguno. Otros se dedican al proceso, ajustando la secuencia de depósito, litografía, y grabado que construye un chip capa por capa, y buscando por qué una oblea salió mal. Ambos lados viven de los datos: cantidades enormes de mediciones, y la estadística necesaria para distinguir un efecto real del ruido.",
+    commonMisconceptions: [
+      "Que se trata de construir computadoras — el trabajo es el chip en sí, varias capas de abstracción por debajo de un producto terminado.",
+      "Que diseño y fabricación son el mismo puesto — el diseño de chips y la ingeniería de procesos de fábrica son carreras bastante distintas que comparten industria.",
+      "Que todo está automatizado — las herramientas lo están, pero decidir qué ejecutar, y diagnosticar qué salió mal, no.",
+      "Que pasas el día en una sala limpia con traje blanco — algunos puestos sí, y muchos otros están enteramente frente a una computadora.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Los ingenieros de semiconductores construyen computadoras.",
+        reality:
+          "Construyen lo que va dentro del chip. Una computadora terminada está muchas capas de abstracción por encima de donde ocurre este trabajo.",
+      },
+      {
+        myth: "Es un solo trabajo.",
+        reality:
+          "Diseño y proceso son casi profesiones separadas. Uno simula circuitos en un escritorio; el otro opera y depura una línea de fabricación.",
+      },
+      {
+        myth: "Las fábricas modernas están totalmente automatizadas, así que hay poco que hacer.",
+        reality:
+          "La automatización ejecuta los pasos. Los ingenieros deciden cuáles deben ser esos pasos y averiguan por qué cayó el rendimiento cuando nada obvio cambió.",
+      },
+      {
+        myth: "Necesitas un doctorado para entrar.",
+        reality:
+          "Los puestos de investigación suelen pedirlo, pero muchísimo trabajo de diseño, prueba, y proceso lo hace gente con licenciatura o maestría.",
+      },
+    ],
+    usefulSubjects: ["Física", "Cálculo", "Química", "Informática o programación, si se ofrece", "Estadística, si se ofrece"],
+    helpfulSkills: [
+      "Soltura con la física y la química a un nivel por debajo de lo visible, ya que el comportamiento viene de efectos de materiales y cuánticos",
+      "Estadística sólida, porque el rendimiento y el control de procesos son problemas estadísticos antes que físicos",
+      "Programación y scripting, ya que analizar a mano los datos de proceso y prueba no es viable",
+      "Paciencia con ciclos de retroalimentación largos, porque un cambio en un proceso puede tardar semanas en verse en los resultados",
+      "Diagnóstico metódico, porque un defecto puede venir de cualquiera de cientos de pasos",
+    ],
+    typicalProjects: [
+      "Diseñar y simular un bloque de circuito frente a objetivos de tiempo, consumo, y área",
+      "Ajustar un paso de depósito o grabado para alcanzar un espesor o perfil objetivo",
+      "Investigar por qué cayó el rendimiento en un producto o una herramienta concreta",
+      "Desarrollar procedimientos de prueba que detecten chips defectuosos antes de enviarlos",
+      "Caracterizar un material o proceso nuevo y documentar cómo se comporta",
+    ],
+    typicalWorkday:
+      "En los puestos de diseño, la mayor parte del día es simulación y análisis frente a una computadora, con revisiones de diseño de por medio. En los puestos de proceso y rendimiento, es una mezcla de análisis de datos y tiempo dentro o junto a la fábrica, siguiendo experimentos y reaccionando cuando una herramienta se desvía. Ambos lados están marcados por ciclos largos — una oblea tarda semanas en recorrer la línea, así que el experimento de hoy responde una pregunta que hiciste hace tiempo.",
+    industries: [
+      "Diseñadores de chips y empresas sin fábrica propia",
+      "Fundiciones de semiconductores y fabricantes integrados",
+      "Proveedores de equipo y materiales para semiconductores",
+      "Laboratorios de investigación e instalaciones universitarias",
+      "Empresas que diseñan silicio a medida para sus propios productos",
+    ],
+    advantages: [
+      "El trabajo está debajo de casi toda la tecnología moderna, así que su alcance es inusualmente amplio",
+      "Es trabajo técnico genuinamente profundo, con espacio para especializarse muchísimo",
+      "Las rutas de diseño y de proceso son bastante distintas, así que una puede encajarte cuando la otra no",
+      "Las habilidades de estadística y control de procesos se transfieren a otra manufactura de alta precisión",
+    ],
+    challenges: [
+      "Los ciclos de retroalimentación son largos, lo que hace la iteración lenta comparada con el software o lo mecánico",
+      "La industria es intensiva en capital y cíclica, y la contratación se mueve con ese ciclo",
+      "Las fábricas se concentran en regiones concretas, así que las opciones de ubicación pueden ser limitadas",
+      "La curva de aprendizaje es empinada, y mucho del conocimiento práctico es específico del proceso de una empresa",
+    ],
+    thingsPeopleDislike: [
+      "Esperar semanas a que una oblea te diga si una idea funcionó",
+      "El protocolo de sala limpia, el vestuario, y las restricciones que conlleva",
+      "Perseguir problemas de rendimiento con cientos de causas posibles y poca evidencia",
+      "Las guardias y la cobertura por turnos cuando una línea de producción no puede detenerse",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Revisión de la línea", detail: "Revisar las mediciones nocturnas de las obleas que pasan por los pasos a tu cargo. (Este ejemplo sigue a un ingeniero de procesos — un puesto de diseño de chips pasa casi todo el día frente a una computadora.)" },
+        { time: "9:30 AM", label: "En la fábrica", detail: "Ponerte el traje para revisar, junto con los técnicos de equipo, una herramienta que se está saliendo de su rango normal." },
+        { time: "11:00 AM", label: "Análisis de datos", detail: "Escribir un script que compare el rendimiento entre herramientas y lotes, para distinguir un efecto real del ruido." },
+        { time: "1:00 PM", label: "Plan de experimento", detail: "Diseñar un experimento pequeño en un paso de depósito, sabiendo que los resultados tardarán semanas en llegar." },
+        { time: "3:00 PM", label: "Reunión entre equipos", detail: "Reunirte con ingenieros de diseño y de pruebas por un patrón de fallos que aparece en chips terminados." },
+        { time: "4:30 PM", label: "Notas de relevo", detail: "Documentar los cambios del día para el siguiente turno, ya que la línea no se detiene de noche." },
+      ],
+      reflectionQuestion: "¿Tendrías paciencia con un trabajo en el que un experimento que empiezas hoy podría no decirte nada en semanas?",
+    },
+    // Mismas calificaciones que en fields.ts — los comentarios de ahí explican en qué se basa cada una.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Low",
+      marketUncertainty: "High",
+      coding: "Medium",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Arma un circuito sencillo con una batería, un interruptor, y un LED, y luego investiga cómo esa misma idea de encendido y apagado se repite miles de millones de veces dentro de un chip.",
+        tool: "Un kit de electrónica para principiantes o un set de circuitos de piezas encajables.",
+        activity: "Busca un club de ciencia, tecnología, o electrónica en tu escuela, o una exposición sobre computadoras en un museo de ciencias, si hay alguno cerca.",
+        relatedField: "electrical-engineering",
+      },
+      "high-school": {
+        project: "Construye puertas lógicas con transistores en una protoboard, y luego combínalas en un circuito pequeño como un semisumador.",
+        tool: "Una protoboard, algunos transistores y LEDs, y un simulador de circuitos gratuito en el navegador como el de Falstad.",
+        activity: "Toma física o una clase de electrónica, o haz un proyecto de feria de ciencias sobre electrónica, si tu escuela lo ofrece.",
+        relatedField: "computer-engineering",
+      },
+      "college": {
+        project: "Diseña un circuito digital pequeño en un lenguaje de descripción de hardware y simúlalo, y luego investiga programas que permiten a estudiantes fabricar un chip real a partir de su diseño.",
+        tool: "Herramientas de diseño de chips gratuitas y de código abierto, como las que usa el proyecto Tiny Tapeout.",
+        activity: "Busca una rama estudiantil del IEEE, una sala limpia o instalación de nanofabricación en tu universidad que capacite a estudiantes de licenciatura, o unas prácticas en una empresa de chips o un proveedor de equipo.",
+        relatedField: "materials-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Ingeniero/a de Procesos", description: "Se hace cargo de uno o más pasos de fabricación y los mantiene en su objetivo, corrida tras corrida." },
+      { title: "Ingeniero/a de Rendimiento", description: "Averigua por qué fallan algunos chips, y qué paso o herramienta es responsable." },
+      { title: "Ingeniero/a de Diseño o Verificación de Chips", description: "Diseña bloques de circuito, o demuestra mediante simulación que un diseño funciona antes de fabricarlo." },
+      { title: "Ingeniero/a de Pruebas", description: "Desarrolla las pruebas que detectan chips defectuosos antes de enviarlos." },
+    ],
+    howCompetitive:
+      "La Oficina de Estadísticas Laborales de EE. UU. no publica una proyección de empleo separada para la ingeniería de semiconductores — las personas que hacen este trabajo se cuentan dentro de ocupaciones como la ingeniería eléctrica, de hardware de computadoras, de materiales, y otras, así que no hay una cifra de crecimiento oficial específica para este campo. La contratación en la industria sigue su ciclo de inversión, que puede subir y bajar, y las fábricas se concentran en regiones concretas de unos pocos países, así que dónde vives importa más aquí que en la mayoría de los campos — investiga la situación actual en los lugares donde considerarías trabajar.",
+    beginnerActivities: [
+      "Busca una foto de un chip bajo el microscopio (se le llama die shot) e intenta encontrar bloques repetidos, como la memoria",
+      "Arma un circuito sencillo en una protoboard con un LED y un transistor, y observa cómo el transistor funciona como interruptor",
+      "Prueba la simulación de puertas lógicas de este sitio y averigua cómo se combinan las puertas en algo que puede sumar",
+    ],
+    selfReflectionQuestions: [
+      "¿Tengo la paciencia para experimentos que tardan semanas en dar una respuesta?",
+      "¿Disfrutaría trabajar a una escala que solo puedo ver a través de mediciones y datos?",
+      "¿Estaría bien siguiendo procedimientos estrictos de sala limpia, o preferiría un puesto de diseño frente a una computadora?",
+      "¿Estaría dispuesto/a a vivir donde están las empresas de chips y las fábricas?",
+    ],
+  },
 ];

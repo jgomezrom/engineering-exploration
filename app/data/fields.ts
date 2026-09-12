@@ -2211,4 +2211,1142 @@ export const fields: EngineeringField[] = [
       "Am I drawn to marine engineering specifically, or more broadly to mechanical or structural engineering?",
     ],
   },
+  {
+    slug: "architectural-engineering",
+    name: "Architectural Engineering",
+    tagline: "The structural, mechanical, and electrical systems that make a building actually work.",
+    whatItIs:
+      "The technical systems inside a building — structural support, heating and cooling, electrical, lighting, acoustics — are architectural engineering's territory, worked out alongside architects, who focus more on a building's form and layout. It's a smaller, specialized field that blends civil, mechanical, and electrical engineering concepts applied specifically to buildings.",
+    realWorldExamples: [
+      "Structural systems for large or complex buildings",
+      "Heating, cooling, and ventilation system design",
+      "Building electrical and lighting systems",
+      "Acoustic design for spaces like concert halls",
+    ],
+    relatedMajors: ["Architectural Engineering", "Civil Engineering (some overlap)", "Mechanical Engineering (some overlap)"],
+    salaryNote:
+      "The U.S. Bureau of Labor Statistics doesn't track architectural engineering as its own separate category — it's usually grouped with civil or mechanical engineering depending on the specific role. See the Civil Engineering page for related, sourced salary data.",
+    whatEngineersWorkOn:
+      "Architectural engineers make the inside of a building work. That means sizing heating and cooling systems for a space, laying out electrical distribution and lighting, routing ducts and pipes through a structure that is already full of beams, and checking that a room will sound the way it's meant to. The recurring challenge is spatial: several systems all need to occupy the same ceiling void, and someone has to resolve who gets the space.",
+    commonMisconceptions: [
+      "That it's the same as architecture — architects work on form, layout, and how a building is used; architectural engineers work on the systems that make it habitable.",
+      "That the systems are an afterthought bolted on at the end — routing and plant space have to be planned early or they don't fit at all.",
+      "That it's a narrow, minor field — heating, cooling, lighting, and power are a large share of both a building's cost and its energy use.",
+      "That the work is invisible — occupants notice it immediately when it's done badly, through noise, draughts, glare, or rooms that never reach temperature.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Architectural engineering is another name for architecture.",
+        reality:
+          "Architects shape the building. Architectural engineers design the structural, mechanical, electrical, and acoustic systems inside it, usually working alongside them.",
+      },
+      {
+        myth: "Building systems get designed at the end.",
+        reality:
+          "Plant rooms, risers, and ceiling space have to be reserved early. Leaving it late is how you end up with ducts that have nowhere to run.",
+      },
+      {
+        myth: "Nobody notices this work.",
+        reality:
+          "Nobody notices it when it's right. A noisy vent, a glaring light, or a room that won't cool gets noticed immediately.",
+      },
+      {
+        myth: "It's mostly about picking equipment from a catalogue.",
+        reality:
+          "Selection is one step. Sizing loads, coordinating routes through the structure, and meeting energy and code requirements is the actual work.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Technical drawing or CAD, if available", "Chemistry", "Any drafting or design elective your school offers"],
+    helpfulSkills: [
+      "Strong spatial reasoning, because several systems are competing for the same physical space",
+      "Comfort across mechanical and electrical fundamentals, since the role spans both",
+      "Coordination with architects and other trades, which is a daily part of the job",
+      "Care with codes and energy standards, which set much of what a building is allowed to do",
+      "Attention to how people actually experience a space — temperature, light, and noise",
+    ],
+    typicalProjects: [
+      "Sizing heating and cooling for a building based on its use, climate, and construction",
+      "Laying out electrical distribution and lighting for a floor plate",
+      "Coordinating duct, pipe, and cable routes through a structure so everything fits",
+      "Designing acoustics for a space where sound quality matters",
+      "Modelling a building's expected energy use and adjusting the design to reduce it",
+    ],
+    typicalWorkday:
+      "Most of the day is design and coordination at a computer, working in a shared building model with architects and other engineers and resolving the clashes it surfaces. Site visits cluster during construction, checking that what's being installed matches the drawings. Deadlines follow the wider project's design stages, so workload arrives in waves rather than evenly.",
+    industries: [
+      "Building services and multidisciplinary engineering consultancies",
+      "Architecture practices with in-house engineering",
+      "Construction and design-build contractors",
+      "Large property owners and institutional facilities teams",
+      "Building systems and equipment manufacturers",
+    ],
+    advantages: [
+      "The results are places people spend their whole lives in",
+      "The work spans mechanical, electrical, and structural thinking rather than one narrow area",
+      "There's a direct line between design decisions and how much energy a building uses",
+      "Buildings are always being built, refitted, and upgraded, so the work isn't tied to one sector",
+    ],
+    challenges: [
+      "You design within constraints set by the architecture, and rarely get to move them",
+      "Coordination conflicts are constant, because every system wants the same ceiling space",
+      "Budget cuts often land on systems the occupant can't see until they fail",
+      "Codes and energy requirements are detailed and change over time",
+    ],
+    thingsPeopleDislike: [
+      "Redesigning routes because a structural or architectural change moved something",
+      "Watching quality get cut from systems that occupants will feel for decades",
+      "The volume of coordination meetings on a large project",
+      "Being blamed for comfort complaints caused by decisions made elsewhere",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Model check", detail: "Opening the shared building model to find that a structural revision moved two beams your ductwork was routed around." },
+        { time: "10:00 AM", label: "Load calculations", detail: "Working out how much heating and cooling a floor needs, from its use, the local climate, and how its walls and glazing are built." },
+        { time: "11:30 AM", label: "Coordination meeting", detail: "Going through clashes with the architect and the other engineers — deciding which system gets the ceiling space where three of them want it." },
+        { time: "1:30 PM", label: "Lighting and power layout", detail: "Laying out light fittings and electrical distribution for a floor, and checking light levels against what each room is for." },
+        { time: "3:00 PM", label: "Site visit", detail: "On a building under construction, walking a floor to check that what's being installed matches the drawings." },
+        { time: "4:30 PM", label: "Markups", detail: "Updating drawings after the meeting and the site visit, and listing questions for the architect." },
+      ],
+      reflectionQuestion: "Would you be comfortable designing the systems inside a building someone else has already shaped, rather than shaping the building yourself?",
+    },
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: usefulSubjects lists physics and calculus, but typicalProjects center on sizing, layout, and coordination rather than heavy analysis.
+    // handsOnWork: typicalWorkday says "most of the day is design and coordination at a computer"; site visits check the installation rather than build it.
+    // regulatoryBurden: challenges says "codes and energy requirements are detailed and change over time," and helpfulSkills says they "set much of what a building is allowed to do."
+    // marketUncertainty: howCompetitive notes there's no separate government projection for this field; advantages notes the work "isn't tied to one sector."
+    // coding: no programming appears anywhere in this field's text.
+    // outdoorWork: typicalWorkday says site visits "cluster during construction" — the rest of the job is at a computer.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: challenges says "you design within constraints set by the architecture, and rarely get to move them."
+    // teamwork: helpfulSkills calls coordination with architects and other trades "a daily part of the job," and thingsPeopleDislike includes "the volume of coordination meetings."
+    // seeingWorkRealLife: advantages says "the results are places people spend their whole lives in."
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Low",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Draw a floor plan of your home and mark where you think the pipes, wires, and vents run, then check what you can actually see.",
+        tool: "Graph paper and a pencil — no special tools needed yet.",
+        activity: "Look for a STEM or design club at school, or a building tour at a local museum or library, if one is available.",
+        relatedField: "civil-engineering",
+      },
+      "high-school": {
+        project: "Model a small room in a free 3D tool and plan where its lighting, ventilation, and power outlets would go.",
+        tool: "SketchUp Free or Tinkercad — both free and run in a browser.",
+        activity: "Look into an ACE Mentor Program chapter (architecture, construction, and engineering) or a drafting class, if your area or school has one.",
+        relatedField: "mechanical-engineering",
+      },
+      "college": {
+        project: "Model a simple building in a free energy simulation tool and see how insulation, glazing, or orientation changes how much energy it uses.",
+        tool: "EnergyPlus or OpenStudio — free building energy simulation software backed by the U.S. Department of Energy.",
+        activity: "Look for an ASHRAE student branch, an Architectural Engineering Institute (AEI) student chapter, or an internship at a building services engineering firm.",
+        relatedField: "electrical-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "HVAC Design Engineer", description: "Sizes and lays out the heating, cooling, and ventilation systems for buildings." },
+      { title: "Building Electrical and Lighting Engineer", description: "Designs how power and lighting are distributed through a building, from the incoming supply down to individual rooms." },
+      { title: "Building Energy Modeler", description: "Simulates how much energy a building design will use and tests changes that would reduce it." },
+      { title: "Acoustic Consultant", description: "Designs how spaces sound and how much noise travels between them, from offices to concert halls." },
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics doesn't publish a separate job-outlook projection for architectural engineering, so there's no government growth figure specific to this field. It's a smaller, specialized field, and not every university offers it as its own degree — many people reach this work through civil, mechanical, or electrical engineering instead. Demand follows how much is being built and renovated, which varies by region and over time, so research the building industry and the programs available where you live before making decisions.",
+    beginnerActivities: [
+      "Walk through a large building, like a library or school, and try to spot the vents, sprinklers, light fittings, and access panels that show where its systems run",
+      "Check the temperature in a few rooms of your home at the same time and think about why they differ",
+      "Model a room in a free 3D tool and work out where ducts and lights could fit above the ceiling",
+    ],
+    selfReflectionQuestions: [
+      "Would I be satisfied designing the systems inside someone else's building, rather than designing the building itself?",
+      "Do I enjoy spatial puzzles, like fitting several things into a space that's slightly too small?",
+      "Am I comfortable with codes and standards shaping a lot of my decisions?",
+      "Would a job with a lot of coordination meetings suit me?",
+    ],
+  },
+  {
+    slug: "automotive-engineering",
+    name: "Automotive Engineering",
+    tagline: "The design, testing, and manufacturing behind cars and other road vehicles.",
+    whatItIs:
+      "Automotive engineering is about the design, testing, and manufacturing of cars and other road vehicles — engines, transmissions, safety systems, and, increasingly, electric and autonomous vehicle technology. It's typically pursued as a specialization within mechanical engineering, not its own separate degree.",
+    realWorldExamples: [
+      "Engine and drivetrain design",
+      "Vehicle safety and crash testing",
+      "Electric vehicle battery and motor systems",
+      "Advanced driver-assistance and autonomous vehicle systems",
+    ],
+    relatedMajors: ["Mechanical Engineering (with an automotive focus)", "Electrical Engineering (some overlap for EV and autonomous systems)"],
+    salaryNote:
+      "Automotive engineers are typically tracked under the broader 'mechanical engineers' category by the U.S. Bureau of Labor Statistics, not as their own separate occupation. See the Mechanical Engineering page for that sourced salary data.",
+    whatEngineersWorkOn:
+      "Automotive engineers work on one piece of a vehicle in a lot of depth, rather than on whole cars at once. A given engineer might own the cooling system, the door latch mechanism, the battery pack's thermal management, or the software that decides when the brakes intervene. The work runs from early design and simulation through prototype building, testing, and the long stretch of revision that follows — most of which is spent finding out why a part doesn't behave the way the model said it would, and changing it until it does.",
+    commonMisconceptions: [
+      "That automotive engineers design what cars look like — exterior and interior styling is mostly done by designers, and engineers work within shapes that have often already been decided.",
+      "That the job is mostly about performance and speed — far more engineering effort goes into safety, emissions, cost, durability, and manufacturability than into making a vehicle fast.",
+      "That electric vehicles made the field simpler — an EV removes the engine and gearbox but adds high-voltage systems, battery thermal management, and a great deal more software.",
+      "That you need to be a car enthusiast to belong here — plenty of people enter through mechanical, electrical, or software engineering without ever having rebuilt an engine.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Automotive engineers design how cars look.",
+        reality:
+          "Styling is largely a designer's job. Engineers usually work inside a shape that has already been signed off, and much of the skill is making the mechanism fit the space they're given.",
+      },
+      {
+        myth: "The job is mostly about making cars fast.",
+        reality:
+          "Performance is one requirement competing with crash safety, emissions, cost, weight, reliability, and whether a factory can actually build the part.",
+      },
+      {
+        myth: "You spend your days around finished cars.",
+        reality:
+          "Most of the work is on a component, a rig, a simulation, or a spreadsheet of test results. Some engineers go years without a whole vehicle in front of them.",
+      },
+      {
+        myth: "Electric vehicles made automotive engineering easier.",
+        reality:
+          "It shifted the difficulty rather than removing it. Engines and transmissions gave way to battery chemistry, high-voltage safety, thermal management, and software.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Chemistry", "Computer science or programming, if offered", "Technical drawing or CAD, if available"],
+    helpfulSkills: [
+      "Comfort with mechanics and thermodynamics, since most vehicle problems come down to forces, heat, or both",
+      "Willingness to test and re-test, because a part that works in simulation often behaves differently on a rig",
+      "Attention to tolerances and cost, since a design that can't be built repeatably and affordably won't ship",
+      "Enough programming to be useful, as more of the vehicle's behaviour is now decided in software",
+      "Working inside constraints set by other teams, which is a large part of the job's daily reality",
+    ],
+    typicalProjects: [
+      "Designing and validating a single component — a bracket, a pump, a latch — against strength, weight, and cost targets",
+      "Running crash or durability tests and working through what the results say about the design",
+      "Developing battery thermal management so a pack stays in its safe temperature range",
+      "Tuning control software for braking, traction, or driver-assistance behaviour",
+      "Reworking a design so it can actually be assembled on a production line at rate",
+    ],
+    typicalWorkday:
+      "Time is split between design and simulation work at a computer, time in a test lab or on a rig, and a fair number of meetings with the other teams whose parts touch yours. Test cycles set the rhythm: a rig runs, results come back, and the next few days go into understanding them. Deadlines tend to be tied to vehicle programme milestones, which can make some stretches much more intense than others.",
+    industries: [
+      "Vehicle manufacturers",
+      "Component and systems suppliers, which employ a large share of automotive engineers",
+      "Electric vehicle and battery companies",
+      "Motorsport and specialist vehicle builders",
+      "Testing, certification, and regulatory bodies",
+    ],
+    advantages: [
+      "The work ends up in objects people use every day, which makes it unusually easy to point at",
+      "Skills transfer well, since the mechanical, thermal, and control fundamentals apply across aerospace, energy, and heavy equipment",
+      "Testing is physical and immediate — you find out fairly quickly whether a design holds up",
+      "The shift to electric and automated vehicles has opened real work for people who came in through software or electronics",
+    ],
+    challenges: [
+      "Cost pressure is relentless, and a technically better design regularly loses to a cheaper one",
+      "Safety and emissions regulation constrains a great deal of what you're allowed to do",
+      "Vehicle programmes are long, so it can be years between your work and anything reaching a road",
+      "Work is often concentrated in particular regions and companies, which can mean relocating to stay in the field",
+    ],
+    thingsPeopleDislike: [
+      "Owning a small component for a long time, rather than working across a whole vehicle",
+      "Watching a design you're proud of get changed to save a small amount per unit",
+      "Long validation and paperwork cycles that sit between finishing a design and shipping it",
+      "Crunch periods around programme milestones and launch dates",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "8:30 AM", label: "Test results", detail: "Reading through data from an overnight durability run on a test rig, looking for anything that drifted." },
+        { time: "10:00 AM", label: "Design review", detail: "Presenting a revised bracket to the teams whose parts sit next to it — and finding out it now clashes with a wiring harness." },
+        { time: "11:30 AM", label: "Simulation", detail: "Rerunning a stress model with the changed shape to check it still meets its strength and weight targets." },
+        { time: "1:30 PM", label: "Test lab", detail: "Setting up the next round of tests on a prototype part with the lab technicians." },
+        { time: "3:00 PM", label: "Supplier call", detail: "Working out whether a supplier can make the part to the tolerance the design needs, at the price the program allows." },
+        { time: "4:30 PM", label: "Documentation", detail: "Logging the change and the reason for it, so the part's history can be traced later." },
+      ],
+      reflectionQuestion: "Would you be happy owning one part of a vehicle in real depth for a long time, rather than working on the whole car?",
+    },
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: usefulSubjects leads with physics and calculus, and helpfulSkills says most vehicle problems "come down to forces, heat, or both."
+    // handsOnWork: typicalWorkday splits time between design and simulation at a computer and time "in a test lab or on a rig."
+    // regulatoryBurden: challenges says "safety and emissions regulation constrains a great deal of what you're allowed to do."
+    // marketUncertainty: howCompetitive notes the only government projection covers mechanical engineers as a whole, and challenges says the work is "concentrated in particular regions and companies."
+    // coding: helpfulSkills asks for "enough programming to be useful," and typicalProjects includes tuning control software for braking, traction, or driver assistance.
+    // outdoorWork: no outdoor or field component appears anywhere in this field's text — the work is at a desk, in labs, and on rigs.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: commonMisconceptions notes engineers work "within shapes that have often already been decided," and challenges says a better design "regularly loses to a cheaper one."
+    // teamwork: typicalWorkday describes "a fair number of meetings with the other teams whose parts touch yours."
+    // seeingWorkRealLife: advantages says "the work ends up in objects people use every day."
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Medium",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Build a rubber-band- or balloon-powered car and see how changing the wheels or the weight affects how far it goes.",
+        tool: "Household materials — cardboard, bottle caps, straws, and rubber bands.",
+        activity: "Look for a STEM club at school, or a local soapbox-derby-style event, if one runs near you.",
+        relatedField: "mechanical-engineering",
+      },
+      "high-school": {
+        project: "Design a simple car part, like a bracket or a wheel hub, in a free CAD tool and think through what loads it would have to carry.",
+        tool: "Tinkercad or Onshape (free education plan) — both run in a browser.",
+        activity: "Take an auto shop or engineering class, or join a robotics or engineering team, if your school offers one.",
+        relatedField: "electrical-engineering",
+      },
+      "college": {
+        project: "Join a student vehicle team and take ownership of one subsystem, like the brakes, cooling, or wiring harness, from design through testing.",
+        tool: "The CAD and simulation software your school provides — SolidWorks, Fusion 360, or similar.",
+        activity: "Look for a Formula SAE or Baja SAE team, an SAE International student chapter, or an internship with a vehicle manufacturer or supplier.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Design and Release Engineer", description: "Owns a component or system through design, testing, and sign-off for production." },
+      { title: "Test and Validation Engineer", description: "Plans and runs the rig, track, and lab tests that prove a part or vehicle meets its requirements." },
+      { title: "Powertrain or Battery Systems Engineer", description: "Works on what moves the vehicle — engines and transmissions, or battery packs and electric motors." },
+      { title: "Controls and Calibration Engineer", description: "Tunes the software that decides how systems like braking, traction, or driver assistance behave." },
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics counts automotive engineers within mechanical engineers, and projects 11% employment growth for mechanical engineers as a whole from 2025 to 2035 — much faster than average — with about 17,800 openings a year. That projection covers every kind of mechanical engineer, not automotive work specifically, so treat it as background rather than a forecast for this field. Automotive jobs also cluster around particular manufacturers, suppliers, and regions, and the skills in demand have been shifting as vehicles gain batteries and more software — research where the work actually is in your country before making decisions.",
+    beginnerActivities: [
+      "Look under the hood of a family car (with an adult, engine off and cool) and try to identify the battery, the coolant reservoir, and the air intake",
+      "Build a rubber-band-powered car and test how changing its weight or wheels affects how far it goes",
+      "Look up a published crash-test rating for a car (from NHTSA or IIHS in the U.S., or Euro NCAP in Europe) and read what the tests actually measure",
+    ],
+    selfReflectionQuestions: [
+      "Would I be happy working on one component for a long time instead of the whole vehicle?",
+      "Am I okay with cost and regulation overruling what I think is the better design?",
+      "Do I like a mix of computer work, lab testing, and meetings with other teams?",
+      "Would I be willing to move to where automotive companies are, if that's what the work required?",
+    ],
+  },
+  {
+    slug: "manufacturing-engineering",
+    name: "Manufacturing Engineering",
+    tagline: "How a design becomes a real, physical product at scale — the processes and equipment behind it.",
+    whatItIs:
+      "Manufacturing engineering is about the processes and equipment used to actually produce things at scale — the machinery, tooling, and workflows that turn a design into a physical product, and making all of it run better. It overlaps closely with both mechanical and industrial engineering.",
+    realWorldExamples: [
+      "Production line and factory equipment design",
+      "Tooling and fixture design for manufacturing",
+      "Process improvement to reduce waste or defects",
+      "Automation of manufacturing steps",
+    ],
+    relatedMajors: ["Manufacturing Engineering", "Industrial Engineering (some overlap)", "Mechanical Engineering (some overlap)"],
+    salaryNote:
+      "The U.S. Bureau of Labor Statistics counts manufacturing engineers as a type of industrial engineer rather than a separate occupation, so their pay is included in the industrial engineers figure. See the Industrial Engineering page for that sourced salary data.",
+    whatEngineersWorkOn:
+      "Manufacturing engineers work on the gap between a design that works once and a design that can be built thousands of times, correctly, at a price someone will pay. They specify machines and tooling, lay out the sequence of operations, design the fixtures that hold a part while it's worked on, and chase down why a process that was fine last month is now producing scrap. Much of the job happens on the factory floor rather than at a desk.",
+    commonMisconceptions: [
+      "That manufacturing engineers design the product — they design the process that makes it, and often have to argue for changes to a design that can't be built economically.",
+      "That the field is disappearing to automation — automating a line is itself manufacturing engineering, and someone has to specify, install, and keep it running.",
+      "That it's low-skill factory work — the job involves process design, statistics, tooling, and a good deal of troubleshooting under time pressure.",
+      "That once a line is running the work is done — processes drift, suppliers change, and tools wear, so a running line needs constant attention.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Manufacturing engineers design the products being made.",
+        reality:
+          "They design how it gets made. A frequent part of the job is telling a design team that their part is fine on screen and impossible to produce at rate.",
+      },
+      {
+        myth: "Automation is eliminating the field.",
+        reality:
+          "Automation moves the work rather than removing it. Choosing, integrating, and maintaining automated equipment is manufacturing engineering.",
+      },
+      {
+        myth: "It's the same as industrial engineering.",
+        reality:
+          "They overlap. Industrial engineering leans toward systems, flow, and efficiency; manufacturing engineering leans toward the physical processes and machinery.",
+      },
+      {
+        myth: "You sit at a desk.",
+        reality:
+          "You spend a lot of time on the floor, because the problems show up at the machine and not in the drawing.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Statistics, if offered", "Technical drawing or CAD, if available", "Shop, robotics, or hands-on electives if your school has them"],
+    helpfulSkills: [
+      "Practical mechanical sense, since much of the job is understanding why a machine or a tool behaves the way it does",
+      "Comfort with statistics, because process quality is measured and controlled statistically",
+      "Systematic troubleshooting, since a defect usually has several plausible causes that need eliminating in order",
+      "Working well with machine operators and technicians, who often know the process better than anyone",
+      "Tolerance for interruption, because a line going down outranks whatever you were doing",
+    ],
+    typicalProjects: [
+      "Designing a fixture that holds a part accurately while it's machined or welded",
+      "Laying out the sequence of operations for a new product's assembly",
+      "Finding the root cause of a defect that started appearing on an existing line",
+      "Specifying and commissioning a new machine or robot cell",
+      "Reworking a process to cut cycle time, scrap, or changeover time",
+    ],
+    typicalWorkday:
+      "The day moves between the floor and a desk, usually not on your own schedule. Planned work is process design, tooling drawings, and data analysis; unplanned work is whatever has stopped running. Production timing shapes everything — trials and changeovers often happen around shifts, and some commissioning work lands at night or over a shutdown because that's the only time the line is free.",
+    industries: [
+      "Automotive and aerospace manufacturers",
+      "Electronics and consumer goods production",
+      "Medical device and pharmaceutical manufacturing",
+      "Contract manufacturers and component suppliers",
+      "Industrial equipment and automation vendors",
+    ],
+    advantages: [
+      "The feedback is immediate and physical — a change either improves the line or it doesn't",
+      "The work is visible, since you can watch the process you designed running",
+      "Skills apply across almost any industry that makes a physical object",
+      "There's a clear route into operations and plant management for people who want it",
+    ],
+    challenges: [
+      "Production pressure is constant, and a stopped line is expensive by the minute",
+      "Cost and cycle time constrain solutions as much as physics does",
+      "Shift work, night commissioning, and shutdown work are common",
+      "Factory environments can be loud, hot, and physically demanding",
+    ],
+    thingsPeopleDislike: [
+      "Being pulled off planned work to firefight whatever broke this morning",
+      "Night and weekend work during installations and shutdowns",
+      "Fighting the same recurring defect that has several possible causes",
+      "Having to argue for a design change that would make production far easier",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "7:30 AM", label: "Shift handover", detail: "Hearing from the night shift what ran, what stopped, and what's producing scrap this morning." },
+        { time: "8:30 AM", label: "On the floor", detail: "Watching a machine that started making out-of-tolerance parts, and asking the operator what changed." },
+        { time: "10:30 AM", label: "Root cause", detail: "Pulling the process data and narrowing down which of several possible causes fits what's actually happening." },
+        { time: "1:00 PM", label: "Fixture design", detail: "Back at a desk, drawing a fixture for a new part that's due to go into production." },
+        { time: "2:30 PM", label: "Design review", detail: "Showing a product design team which features of their part would be expensive to make, and suggesting alternatives." },
+        { time: "4:00 PM", label: "Trial planning", detail: "Scheduling a process trial around production so it doesn't stop a running line." },
+      ],
+      reflectionQuestion: "Would you enjoy a job where part of every day is reacting to whatever broke, rather than working through a plan you set yourself?",
+    },
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: usefulSubjects lists physics, calculus, and statistics, and helpfulSkills centers on statistics for process quality rather than heavy theory.
+    // handsOnWork: whatEngineersWorkOn says "much of the job happens on the factory floor rather than at a desk."
+    // regulatoryBurden: industries includes medical device and pharmaceutical manufacturing, which are regulated, but no regulatory language appears elsewhere — it depends on the sector.
+    // marketUncertainty: howCompetitive notes the only government projection covers industrial engineers as a whole, and that the work is tied to where things are actually made.
+    // coding: no programming appears anywhere in this field's text.
+    // outdoorWork: the floor work described is inside factories — no outdoor component appears.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: typicalProjects includes designing fixtures and process sequences, but challenges says "cost and cycle time constrain solutions as much as physics does."
+    // teamwork: helpfulSkills stresses "working well with machine operators and technicians," and thingsPeopleDislike includes arguing for design changes with other teams.
+    // seeingWorkRealLife: advantages says "you can watch the process you designed running."
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "High",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Set up a mini assembly line with friends or family to make something simple, like paper airplanes, and see how splitting up the steps changes speed and quality.",
+        tool: "Paper, a timer, and a few helpers.",
+        activity: "Look for a STEM club, or a maker or woodworking class at school or a local library, if one is available.",
+        relatedField: "industrial-engineering",
+      },
+      "high-school": {
+        project: "Design a simple jig in a free CAD tool that would hold a part in exactly the same position every time, and think through how you'd make it.",
+        tool: "Tinkercad, or Fusion 360 (free for students and educators).",
+        activity: "Take a shop, manufacturing, or robotics class, or join a robotics team, if your school offers one.",
+        relatedField: "mechanical-engineering",
+      },
+      "college": {
+        project: "Pick a part from a student project and write out its full manufacturing process — machines, fixtures, sequence, and what you'd measure to check quality.",
+        tool: "Your school's machine shop or makerspace, plus a spreadsheet for basic statistical process control.",
+        activity: "Look for an SME (Society of Manufacturing Engineers) student chapter, a manufacturing role on a student vehicle or robotics team, or a co-op or internship at a manufacturer.",
+        relatedField: "industrial-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Process Engineer", description: "Owns a set of production steps and keeps them running within quality, cost, and cycle-time targets." },
+      { title: "Tooling and Fixture Engineer", description: "Designs the jigs, fixtures, and tooling that hold and shape parts during production." },
+      { title: "Automation Engineer", description: "Specifies, integrates, and commissions robots and automated equipment on a production line." },
+      { title: "Quality Engineer", description: "Measures and controls process quality, and leads the investigation when defects appear." },
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics counts manufacturing engineers as a type of industrial engineer, and projects 12% employment growth for industrial engineers from 2025 to 2035 — much faster than average — with about 23,100 openings a year. That figure covers all industrial engineers, not manufacturing roles specifically, so read it as background rather than a forecast for this field. Manufacturing work is tied to where things are actually made, which varies a lot by region and industry, and shift or shutdown work is common in some plants — research the manufacturers and industries near you before making decisions.",
+    beginnerActivities: [
+      "Watch a factory-tour video of how something ordinary is made, and write down each step in order",
+      "Pick a simple object and sketch how you would hold it steady to drill a hole in exactly the same place a hundred times",
+      "Time yourself assembling something simple a few different ways and see which order of steps is fastest and least error-prone",
+    ],
+    selfReflectionQuestions: [
+      "Would I rather improve how something gets made than design the product itself?",
+      "Am I comfortable spending a lot of my time on a loud factory floor instead of at a desk?",
+      "How would I handle being pulled off planned work by urgent problems?",
+      "Would I be okay with occasional night, weekend, or shutdown work?",
+    ],
+  },
+  {
+    slug: "systems-engineering",
+    name: "Systems Engineering",
+    tagline: "How all the individual pieces of a large, complex project actually work correctly together.",
+    whatItIs:
+      "Systems engineering zooms out from any single component to look at how a complex system comes together as a whole — making sure every piece of a large project, whether it's an aircraft, a spacecraft, or a major software platform, works correctly with every other piece. It's less about designing a specific part and more about managing how everything connects.",
+    realWorldExamples: [
+      "Coordinating how subsystems of an aircraft or spacecraft work together",
+      "Managing requirements and integration for large defense or infrastructure projects",
+      "Overseeing how hardware and software components of a complex product interact",
+    ],
+    relatedMajors: ["Systems Engineering", "Often pursued as a specialization within Aerospace, Industrial, or Electrical Engineering"],
+    salaryNote:
+      "Like several fields on this page, systems engineering isn't tracked as its own separate category by the U.S. Bureau of Labor Statistics — it's usually pursued as a specialization within another engineering discipline. See the Aerospace or Industrial Engineering pages for related, sourced salary data.",
+    whatEngineersWorkOn:
+      "Systems engineers own the seams between parts rather than the parts themselves. They turn a vague goal into requirements specific enough to design against, decide how subsystems will talk to each other, and then verify that the assembled whole actually does what was asked. Much of the work is written — requirements, interface definitions, test plans, and the trade studies that record why one option was chosen over another.",
+    commonMisconceptions: [
+      "That it's project management with an engineering title — the work is technical, and it involves owning interfaces and requirements rather than schedules and budgets.",
+      "That you need to know every subsystem in depth — you need enough of each to ask the right questions and spot when two teams have assumed different things.",
+      "That it's only for spacecraft and defence — any product where hardware, software, and people have to work together uses the same discipline.",
+      "That documentation is bureaucracy — on a large project the written interface is often the only thing keeping two teams from building parts that don't fit.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Systems engineering is just project management.",
+        reality:
+          "Managers own schedule and cost. Systems engineers own requirements, interfaces, and whether the integrated result actually meets them.",
+      },
+      {
+        myth: "You have to be an expert in every subsystem.",
+        reality:
+          "You need enough depth to ask good questions of specialists and to notice when two teams are quietly assuming different things.",
+      },
+      {
+        myth: "It's a senior-only role.",
+        reality:
+          "Plenty of people start in it, though many arrive after some years in a specific discipline, which is where the useful instinct comes from.",
+      },
+      {
+        myth: "The documents are the point.",
+        reality:
+          "The documents are how agreements between teams are made explicit. When they're skipped, the disagreements surface later during integration, expensively.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Computer science or programming, if offered", "Statistics, if offered", "Any subject that involves structured writing"],
+    helpfulSkills: [
+      "Precise writing, because an ambiguous requirement will be built two different ways by two different teams",
+      "Comfort holding a whole system in your head without needing to own every detail",
+      "Asking uncomfortable questions early, since integration problems are cheapest to find before anything is built",
+      "Negotiating between teams whose reasonable local decisions conflict with each other",
+      "Patience with process, which on large projects is what keeps a system coherent",
+    ],
+    typicalProjects: [
+      "Turning a customer's goal into a testable set of requirements",
+      "Defining the interface between two subsystems being built by different teams",
+      "Running a trade study comparing options against cost, mass, risk, and schedule",
+      "Planning how the integrated system will be verified and tested",
+      "Tracing a failure found during integration back to the requirement or interface that allowed it",
+    ],
+    typicalWorkday:
+      "The day is heavier on meetings and writing than most engineering roles, because the job is largely about keeping separate teams aligned. Reviews are a fixed part of the rhythm, and so is reading other people's designs closely enough to notice what they've assumed. Intensity peaks around integration and test, when everything that was agreed on paper meets everything that was actually built.",
+    industries: [
+      "Aerospace and spacecraft programmes",
+      "Defence and large government projects",
+      "Automotive, especially for vehicle-level software and electronics",
+      "Medical devices and other regulated products",
+      "Large-scale infrastructure and transport systems",
+    ],
+    advantages: [
+      "You see the whole system rather than one component, which suits people who like the big picture",
+      "The skills transfer well between industries, since the discipline is largely the same",
+      "Work sits close to the decisions that shape a project early on",
+      "It's a natural route toward technical leadership without leaving engineering for management",
+    ],
+    challenges: [
+      "A large share of the job is writing and meetings, which is not what many people picture",
+      "You are often accountable for outcomes you don't directly control",
+      "Programmes are long, and formal process can feel heavy day to day",
+      "It's harder to point at one thing and say you built it",
+    ],
+    thingsPeopleDislike: [
+      "The volume of documentation and review that large projects require",
+      "Being between teams that disagree, repeatedly",
+      "Long gaps between defining something and seeing whether it worked",
+      "Getting blamed at integration for gaps that were flagged and not funded",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Requirements review", detail: "Reading a subsystem's requirements and marking the ones that couldn't actually be tested as written." },
+        { time: "10:00 AM", label: "Interface meeting", detail: "Getting two teams to agree on exactly what data one subsystem sends the other, and in what format." },
+        { time: "11:30 AM", label: "Trade study", detail: "Comparing two design options against cost, mass, risk, and schedule, and writing down why one comes out ahead." },
+        { time: "1:30 PM", label: "Design review", detail: "Sitting in on another team's review, reading closely enough to spot an assumption that conflicts with a neighboring subsystem." },
+        { time: "3:00 PM", label: "Test planning", detail: "Working out how the integrated system will be verified, and which requirements each test will prove." },
+        { time: "4:30 PM", label: "Updating documents", detail: "Recording today's decisions so both teams are building to the same agreement." },
+      ],
+      reflectionQuestion: "Would you find it satisfying to be the person who makes sure everything fits together, even if you never design one of the parts yourself?",
+    },
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: usefulSubjects lists physics, calculus, and statistics, but the work described is requirements, interfaces, and trade studies rather than heavy analysis.
+    // handsOnWork: typicalWorkday says the day is "heavier on meetings and writing than most engineering roles."
+    // regulatoryBurden: industries includes defense and regulated products like medical devices, and challenges notes "formal process can feel heavy" — process-heavy more than regulation-heavy.
+    // marketUncertainty: howCompetitive notes there's no separate government projection for this role.
+    // coding: usefulSubjects lists programming only "if offered," and nothing else in the text involves writing code.
+    // outdoorWork: no outdoor or field component appears anywhere in this field's text.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: advantages says the work "sits close to the decisions that shape a project early on," balanced by the formal process challenges describes.
+    // teamwork: typicalWorkday says the job "is largely about keeping separate teams aligned."
+    // seeingWorkRealLife: challenges says "it's harder to point at one thing and say you built it."
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Low",
+      regulatoryBurden: "Medium",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "High",
+      seeingWorkRealLife: "Low",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Take apart an old, unplugged gadget (with permission) and sort its parts into groups by the job they do together.",
+        tool: "A small screwdriver set and a notebook for sketching.",
+        activity: "Look for a LEGO robotics or STEM club, where a team has to make separate pieces work together, if one is available.",
+        relatedField: "robotics-engineering",
+      },
+      "high-school": {
+        project: "On a team project, write down what each person will hand to someone else before anyone starts building, then check those handoffs at the end.",
+        tool: "A free diagramming tool like diagrams.net (draw.io).",
+        activity: "Look into a FIRST Robotics, VEX, or Science Olympiad team, where fitting everyone's work together is the hard part, if your school has one.",
+        relatedField: "aerospace-engineering",
+      },
+      "college": {
+        project: "Take a student team project and write a proper requirements list and interface definition for it, then use them to plan how you'd test the finished system.",
+        tool: "A spreadsheet for tracking requirements, plus any modeling tool your school provides.",
+        activity: "Look for an INCOSE (International Council on Systems Engineering) student chapter, a systems role on a student rocketry, satellite, or vehicle team, or an internship at an aerospace or defense company.",
+        relatedField: "industrial-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Requirements Engineer", description: "Turns customer and stakeholder needs into clear, testable requirements, and keeps them traceable as the design changes." },
+      { title: "Systems Architect", description: "Decides how a system is broken into subsystems and how those pieces connect." },
+      { title: "Integration and Test Engineer", description: "Brings subsystems together and runs the tests that show the whole system does what it should." },
+      { title: "Verification and Validation Engineer", description: "Plans how each requirement will be proven — by test, analysis, or inspection — and tracks the evidence." },
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics doesn't publish a separate job-outlook projection for systems engineering — most systems engineers are counted under the discipline they trained in, such as aerospace, electrical, or industrial engineering, so there's no government growth figure specific to this role. (BLS does track \"computer systems engineers,\" but that's an IT role, not this one.) Much of the work sits in aerospace, defense, and other large programs, which depend on budgets and contracts that vary by country. Many people move into systems engineering after some years in a specific discipline, so check what entry-level routes exist where you'd want to work.",
+    beginnerActivities: [
+      "Pick something you own, like a bike or a game console, and draw a diagram of its main parts and what passes between them",
+      "Write a set of requirements for something simple, like a backpack, then swap with a friend and see whether they'd build the same thing from your list",
+      "Plan a group project or event by listing who depends on whom, and notice where things could fall through the gaps",
+    ],
+    selfReflectionQuestions: [
+      "Would I be satisfied making a whole system work, even if I can't point to one part and say I built it?",
+      "Am I comfortable with a job that's heavy on writing, meetings, and reviews?",
+      "Do I like understanding a little about many areas rather than a lot about one?",
+      "Can I handle being responsible for outcomes that depend on other people's work?",
+    ],
+  },
+  {
+    slug: "structural-engineering",
+    name: "Structural Engineering",
+    tagline: "Whether a building or bridge can safely carry its own weight, plus wind, earthquakes, and everyday use.",
+    whatItIs:
+      "Structural engineering deals with the load-bearing framework of buildings and bridges — making sure a structure can safely carry its own weight plus forces like wind, earthquakes, and everyday use. It's typically pursued as a specialization within civil engineering, not its own separate degree.",
+    realWorldExamples: [
+      "Load-bearing framework design for buildings",
+      "Bridge structural design and analysis",
+      "Earthquake and wind-resistance engineering",
+      "Structural inspection of existing buildings and bridges",
+    ],
+    relatedMajors: ["Civil Engineering (with a structural focus)", "Structural Engineering (offered as its own major at some schools)"],
+    salaryNote:
+      "Structural engineers are typically tracked under the broader 'civil engineers' category by the U.S. Bureau of Labor Statistics, not as their own separate occupation. See the Civil Engineering page for that sourced salary data.",
+    whatEngineersWorkOn:
+      "Structural engineers decide whether something will stand up, and keep standing. They size beams, columns, slabs, foundations, and the connections between them, and model the loads a structure has to survive — its own weight, the people and equipment inside it, wind, snow, and, depending on where it's built, earthquakes. A large share of the work is detailing: drawing the joints and fixings precisely enough that a contractor can build them, and revising when the architecture changes around them.",
+    commonMisconceptions: [
+      "That structural engineers design the whole building — architects generally decide form and layout, and the structural engineer works out the frame that carries it.",
+      "That the analysis software does the job now — the software is standard, but someone has to choose the model, decide which load cases matter, and judge whether the output is believable.",
+      "That it's all new construction — assessing, strengthening, and repairing structures that already exist is a large part of the field.",
+      "That the maths is the hard part — the calculations are learnable, and the harder skill is usually detailing and coordinating with everyone else touching the building.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Structural engineers design buildings.",
+        reality:
+          "They design the load-bearing skeleton. The shape, layout, and appearance are usually an architect's decisions, which the structure then has to work within.",
+      },
+      {
+        myth: "The computer does the calculations, so the job is mostly data entry.",
+        reality:
+          "Software will happily return a confident answer to a badly set-up model. Deciding the model and sanity-checking the result is the engineering.",
+      },
+      {
+        myth: "It's a creative design job.",
+        reality:
+          "There is judgement in it, but it is judgement inside codes and safety factors. Being deliberately conservative is part of doing it correctly.",
+      },
+      {
+        myth: "You only work on impressive new landmarks.",
+        reality:
+          "Much of the work is ordinary buildings, and a good deal of it is inspecting or reinforcing structures that are already there.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Technical drawing or CAD, if available", "Statistics, if offered"],
+    helpfulSkills: [
+      "Spatial reasoning, since you need to picture how forces travel through a structure to the ground",
+      "Comfort working inside codes and standards, which set much of what is and isn't allowed",
+      "Precision and care, because a missed load case or a badly detailed connection has real consequences",
+      "Clear communication with architects and contractors, since your drawings have to be built by someone else",
+      "A willingness to be conservative, which in this field is a professional virtue rather than a lack of nerve",
+    ],
+    typicalProjects: [
+      "Sizing the frame of a building against gravity, wind, and seismic loads",
+      "Analysing an existing bridge to judge what loads it can still safely carry",
+      "Designing a foundation for the ground conditions actually found on site",
+      "Detailing connections so the structure can be assembled in the right order",
+      "Retrofitting an older building to meet current earthquake or wind requirements",
+    ],
+    typicalWorkday:
+      "Most of the day is analysis and drawing at a computer, punctuated by coordination with architects and other engineers whose systems have to pass through the same structure. Site visits come in bursts, usually at construction milestones or when something on site doesn't match the drawings. Reviewing and checking other people's calculations is a routine part of the work, and so is being checked yourself.",
+    industries: [
+      "Structural and civil consulting firms",
+      "Construction and design-build contractors",
+      "Government transport and infrastructure agencies",
+      "Building inspection and forensic engineering",
+      "Manufacturers of structural products and systems",
+    ],
+    advantages: [
+      "The work is permanent and public — you can stand in front of it years later",
+      "The purpose is unusually clear, since the job is keeping structures from hurting anyone",
+      "Skills carry across buildings, bridges, and industrial structures without starting over",
+      "Professional licensing gives a defined, recognised path for progressing",
+    ],
+    challenges: [
+      "The responsibility is real, and mistakes carry consequences that other engineering fields don't have in the same way",
+      "Codes and approvals constrain a lot of what you're permitted to do",
+      "Projects run long, and designs get revised repeatedly as the architecture shifts",
+      "Getting licensed takes years of supervised experience and exams after the degree",
+    ],
+    thingsPeopleDislike: [
+      "Carrying liability for decisions long after the project has finished",
+      "Redoing work because a change upstream moved a wall or a column",
+      "How much time goes into checking, documenting, and defending calculations",
+      "Being the person who has to say no to an idea that would look better than it performs",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "9:00 AM", label: "Model setup", detail: "Building an analysis model of a floor — deciding which loads matter and how the supports should be represented." },
+        { time: "10:30 AM", label: "Checking", detail: "Reviewing a colleague's beam calculations, and having your own checked in return." },
+        { time: "12:00 PM", label: "Coordination", detail: "An architectural change has moved a column; working out everything else that has to change because of it." },
+        { time: "1:30 PM", label: "Detailing", detail: "Drawing a steel connection precisely enough that a fabricator can make it and a crew can assemble it." },
+        { time: "3:00 PM", label: "Site visit", detail: "At a construction milestone, checking reinforcement before a concrete pour, or looking at something on site that doesn't match the drawings." },
+        { time: "4:30 PM", label: "Calculation package", detail: "Writing up today's calculations so they can be reviewed and submitted for approval." },
+      ],
+      reflectionQuestion: "Would you be comfortable carrying responsibility for whether a structure stays standing, and having every calculation you make checked?",
+    },
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: usefulSubjects leads with physics and calculus, and whatEngineersWorkOn centers on modeling the loads a structure has to survive.
+    // handsOnWork: typicalWorkday says "most of the day is analysis and drawing at a computer."
+    // regulatoryBurden: challenges says "codes and approvals constrain a lot of what you're permitted to do," and licensing takes years.
+    // marketUncertainty: howCompetitive notes the only government projection covers civil engineers as a whole, and that demand varies by region and over time.
+    // coding: no programming appears anywhere in this field's text — analysis software is used, but not written.
+    // outdoorWork: typicalWorkday says site visits "come in bursts," usually at construction milestones.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: mythsAndRealities describes "judgement inside codes and safety factors," where being conservative is part of doing it right.
+    // teamwork: typicalWorkday describes constant coordination with architects and other engineers, and routinely checking and being checked.
+    // seeingWorkRealLife: advantages says "you can stand in front of it years later."
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Low",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Low",
+      teamwork: "High",
+      seeingWorkRealLife: "High",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Build a tower or bridge from spaghetti and marshmallows or paper, and test how much it can hold before it fails.",
+        tool: "Household materials, plus some coins or small weights for testing.",
+        activity: "Look for a STEM club or a bridge-building competition at school or a local science museum, if one is available.",
+        relatedField: "civil-engineering",
+      },
+      "high-school": {
+        project: "Design a small truss bridge in a free simulator, then build it from balsa or popsicle sticks and compare where it actually fails with where the model said it would.",
+        tool: "A free online truss or bridge simulator, plus balsa wood or popsicle sticks.",
+        activity: "Look into Science Olympiad, which has structure-building events, or an ACE Mentor Program chapter, if one runs near you.",
+        relatedField: "civil-engineering",
+      },
+      "college": {
+        project: "Take a simple building frame, hand-calculate the forces in its beams and columns, then check your answers against analysis software.",
+        tool: "Any structural analysis software your school provides, or a free 2D frame analysis tool.",
+        activity: "Look for an ASCE student chapter and its Steel Bridge or Concrete Canoe teams, an EERI student chapter if earthquakes interest you, or an internship at a structural engineering firm.",
+        relatedField: "materials-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Building Structural Engineer", description: "Designs the frames, floors, and foundations of buildings, from houses to high-rises." },
+      { title: "Bridge Engineer", description: "Designs new bridges and assesses how much load existing ones can still safely carry." },
+      { title: "Forensic Structural Engineer", description: "Investigates why a structure failed or was damaged, and what it would take to repair it." },
+      { title: "Seismic Retrofit Engineer", description: "Strengthens existing buildings to meet current earthquake requirements, mainly in regions where earthquakes are a design concern." },
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics counts structural engineers within civil engineers, and projects 6% employment growth for civil engineers as a whole from 2025 to 2035 — faster than average — with about 22,700 openings a year. That covers every kind of civil engineer, not structural work specifically, and demand follows how much is being built and renovated, which varies by region and over time. Licensing matters a lot here: in many countries you need years of supervised experience and exams before you can sign off designs on your own, and some places require an additional structural-specific license for certain buildings — research the rules where you'd want to work.",
+    beginnerActivities: [
+      "Build a paper or spaghetti tower and test how much weight it holds before it fails — then change one thing and test again",
+      "Look at a bridge you pass regularly and try to work out how its load gets down to the ground",
+      "Try a free online truss or beam simulator and see how moving a support changes the forces",
+    ],
+    selfReflectionQuestions: [
+      "Am I comfortable with work where a mistake could actually hurt someone?",
+      "Would I enjoy being careful and conservative more than being bold?",
+      "Am I willing to spend years after my degree getting licensed?",
+      "Do I like the idea of seeing my work built, even if it takes years to get there?",
+    ],
+  },
+  {
+    slug: "energy-engineering",
+    name: "Energy Engineering",
+    tagline: "How energy actually gets generated, distributed, and used efficiently — from power grids to renewables.",
+    whatItIs:
+      "Energy engineering covers how energy gets generated, distributed, and used efficiently — traditional power systems, renewable energy like solar and wind, and energy efficiency in buildings and industry. Rather than being one standardized discipline, it draws on mechanical, electrical, and environmental engineering.",
+    realWorldExamples: [
+      "Solar and wind power system design",
+      "Power grid and energy distribution systems",
+      "Building energy efficiency systems",
+      "Battery storage and energy management systems",
+    ],
+    relatedMajors: ["Energy Engineering", "Electrical Engineering (some overlap)", "Mechanical Engineering (some overlap)"],
+    // BLS's "Engineers, all other" group lists Energy Engineers (Except Wind and
+    // Solar), Wind Energy Engineers, and Solar Energy Systems Engineers among its
+    // O*NET occupations — the same group, figure, and page Robotics cites, for
+    // the same reason. This replaced a salaryNote that said BLS had no category
+    // for energy engineering and pointed readers to Electrical's figure instead.
+    salary: {
+      medianAnnual: "$122,930",
+      period: "May 2025",
+      region: "United States (national median)",
+      sourceName: "U.S. Bureau of Labor Statistics",
+      sourceUrl: "https://www.bls.gov/ooh/about/data-for-occupations-not-covered-in-detail.htm",
+      note: "Energy engineers aren't tracked as their own detailed BLS category — this figure is from the broader 'Engineers, All Other' group, which BLS lists as including energy engineers, wind energy engineers, and solar energy systems engineers. That group covers other specializations too, so treat it as a rough estimate rather than a precise figure for energy engineering. Energy work done under an electrical or mechanical engineering job title is counted under those occupations instead, so the Electrical Engineering page is worth a look as well.",
+      verifiedDate: "September 2026",
+    },
+    whatEngineersWorkOn:
+      "Energy engineers work on how energy is generated, moved, stored, and wasted. That might mean sizing a solar array and its inverters, modelling how much a building's heating system actually costs to run, working out where a grid can absorb more intermittent generation, or auditing a factory to find the places energy is quietly disappearing. A lot of the job is measurement and modelling before anything gets built, because the argument for a change is usually financial as much as technical.",
+    commonMisconceptions: [
+      "That it means working on renewables only — a great deal of the field is efficiency, storage, and keeping existing generation and grids running.",
+      "That efficiency work is minor compared to building new generation — reducing what a building or plant uses is often the cheapest and fastest change available.",
+      "That it's a single defined degree — most people arrive through electrical or mechanical engineering with an energy focus.",
+      "That the technology is the hard part — the harder constraints are usually cost, regulation, and the physical grid that already exists.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Energy engineering means working on solar and wind.",
+        reality:
+          "Renewables are part of it. So are grids, storage, conventional generation, industrial process heat, and making buildings use less in the first place.",
+      },
+      {
+        myth: "The job is designing new power plants.",
+        reality:
+          "Far more of the work is analysis — metering, modelling, and demonstrating that a proposed change will actually pay for itself.",
+      },
+      {
+        myth: "Once a technology is cheap enough, it gets deployed.",
+        reality:
+          "Deployment runs into permitting, grid connection queues, and existing infrastructure that was not designed for it.",
+      },
+      {
+        myth: "It's a separate engineering degree.",
+        reality:
+          "It is usually a specialisation. Most energy engineers studied electrical or mechanical engineering and moved toward energy through coursework and jobs.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Chemistry", "Statistics, if offered", "Computer science or programming, if offered"],
+    helpfulSkills: [
+      "Comfort with thermodynamics and electrical fundamentals, since the field sits across both",
+      "Being able to work from measured data rather than assumptions, because savings claims have to survive scrutiny",
+      "Basic financial literacy, since most proposals are argued on payback period as much as on physics",
+      "Patience with regulation and utility processes, which shape what can actually be connected and when",
+      "Enough programming or spreadsheet skill to model a system before committing to it",
+    ],
+    typicalProjects: [
+      "Sizing a solar array, its inverters, and its connection for a specific site",
+      "Auditing a building or factory and identifying where energy is being wasted",
+      "Modelling how a battery system would behave across a day of demand",
+      "Assessing whether a section of grid can take more intermittent generation",
+      "Comparing heating or cooling options on both energy use and running cost",
+    ],
+    typicalWorkday:
+      "Time splits between modelling and analysis at a computer and site work — walking plant, reading meters, checking what is actually installed against what the drawings claim. Reports and proposals take up a real share of the week, because most of the job involves convincing someone that a change is worth funding. Utility and permitting timelines often set the pace rather than the engineering itself.",
+    industries: [
+      "Utilities and grid operators",
+      "Renewable energy developers",
+      "Engineering consultancies doing audits and building services",
+      "Manufacturers with large industrial energy loads",
+      "Government energy and efficiency programmes",
+    ],
+    advantages: [
+      "The work connects directly to how much energy gets used and wasted, which is easy to care about",
+      "It spans electrical and mechanical work, so the day-to-day varies more than in a narrower field",
+      "Results are measurable — you can usually show what changed after a project",
+      "Demand exists in both new build and in improving what already exists",
+    ],
+    challenges: [
+      "Progress is often limited by cost, permitting, and grid access rather than by engineering",
+      "The field is shaped by policy, which can shift with governments and funding cycles",
+      "It isn't a single well-defined degree, so the path in is less signposted than most",
+      "Savings have to be proven, and measurement is harder and messier than it sounds",
+    ],
+    thingsPeopleDislike: [
+      "Waiting on permits, utility approvals, and grid connection queues",
+      "Writing the business case over and over for work that is technically obvious",
+      "Watching a sound proposal get rejected purely on payback period",
+      "Site work in plant rooms and rooftops that are hot, cramped, or both",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "8:30 AM", label: "Meter data", detail: "Pulling a month of energy data for a building and spotting that it draws power overnight when it should be empty." },
+        { time: "10:00 AM", label: "Site walk", detail: "Walking a plant room and rooftop to check what's actually installed against what the drawings say." },
+        { time: "12:00 PM", label: "Modeling", detail: "Building a model of how a battery system would charge and discharge across a typical day of demand." },
+        { time: "1:30 PM", label: "Business case", detail: "Turning the model into a proposal: what it costs, what it saves, and how long it takes to pay back." },
+        { time: "3:00 PM", label: "Utility call", detail: "Checking with the utility what's needed to connect a new solar array, and how long the approval queue is." },
+        { time: "4:30 PM", label: "Report writing", detail: "Writing up audit findings in a way a building owner can actually act on." },
+      ],
+      reflectionQuestion: "Would you enjoy a job where proving a change is worth the money matters as much as the engineering itself?",
+    },
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: helpfulSkills calls for thermodynamics and electrical fundamentals, but much of the maths described is modeling and payback analysis rather than heavy theory.
+    // handsOnWork: typicalWorkday splits time between "modelling and analysis at a computer and site work."
+    // regulatoryBurden: challenges says progress is "often limited by cost, permitting, and grid access," and thingsPeopleDislike leads with waiting on permits and approvals.
+    // marketUncertainty: howCompetitive cites an as-fast-as-average projection for a broad group, and challenges says the field "is shaped by policy, which can shift."
+    // coding: helpfulSkills asks for "enough programming or spreadsheet skill to model a system" — useful, but not central.
+    // outdoorWork: typicalWorkday includes walking plant and reading meters, and thingsPeopleDislike mentions rooftop work.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: typicalProjects compare many options for a site or building, within the cost and permitting limits challenges describes.
+    // teamwork: typicalWorkday says much of the job is "convincing someone that a change is worth funding," alongside utilities and site staff.
+    // seeingWorkRealLife: advantages says "you can usually show what changed after a project" — a measured change more often than a single object you designed.
+    stats: {
+      mathIntensity: "Medium",
+      handsOnWork: "Medium",
+      regulatoryBurden: "High",
+      marketUncertainty: "Medium",
+      coding: "Low",
+      outdoorWork: "Medium",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Do a home energy hunt: list the devices in your home, check which ones are warm or glowing when nobody's using them, and guess which use the most.",
+        tool: "A notebook — and a plug-in energy meter, if your family has one.",
+        activity: "Look for an environmental, science, or STEM club at school, if one is available.",
+        relatedField: "environmental-engineering",
+      },
+      "high-school": {
+        project: "Use a free solar calculator to estimate how much energy panels could produce on your home or school, and compare it with a year of electricity use.",
+        tool: "NREL's PVWatts calculator — free and U.S.-focused; similar tools exist for other countries.",
+        activity: "Try a science fair project on energy, or join an environmental club or a renewable-energy competition, if your school takes part in one.",
+        relatedField: "electrical-engineering",
+      },
+      "college": {
+        project: "Model a small solar-plus-battery system for a real building using its actual energy data, and work out the payback period.",
+        tool: "NREL's System Advisor Model (SAM), which is free, plus a spreadsheet.",
+        activity: "Look for an IEEE Power & Energy Society student chapter, the U.S. Department of Energy's Solar Decathlon if your school competes, or an internship with a utility or energy consultancy.",
+        relatedField: "mechanical-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Energy Engineer or Auditor", description: "Measures how buildings or plants use energy and recommends changes that cut waste and cost." },
+      { title: "Solar or Wind Project Engineer", description: "Designs renewable installations and works them through permitting and grid connection." },
+      { title: "Power Systems Engineer", description: "Studies how the electrical grid handles new generation, storage, and changing demand." },
+      { title: "Energy Storage Engineer", description: "Designs and models battery systems that store energy and release it when it's needed." },
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics counts energy engineers — including wind energy and solar energy systems engineers — in its broad \"Engineers, All Other\" group, and projects about 4% employment growth for that group from 2025 to 2035, roughly as fast as average, or about 6,200 new jobs over the decade. That group mixes many specializations, so it isn't a precise forecast for energy engineering, and a lot of energy work is done by people counted as electrical or mechanical engineers instead. The field is also shaped by energy policy and funding, which differ by country and can change with governments — research the current market and incentives where you live before making decisions.",
+    beginnerActivities: [
+      "Read your home's electricity bill (with permission) and find out how much energy it used and when",
+      "Use a free online solar calculator to estimate how much a set of panels on your roof might produce in a year",
+      "List every device in your home that stays on standby, and think about which ones could be switched off",
+    ],
+    selfReflectionQuestions: [
+      "Would I be motivated by work that cuts wasted energy, even if it's less visible than building a power plant?",
+      "Am I comfortable with policy, permits, and funding shaping what I can do?",
+      "Do I like a mix of data analysis at a computer and visits to sites and plant rooms?",
+      "Would I enjoy making the financial case for a change, not just the technical one?",
+    ],
+  },
+  {
+    slug: "semiconductor-engineering",
+    name: "Semiconductor Engineering",
+    tagline: "How the chips inside almost every modern electronic device get designed and manufactured.",
+    whatItIs:
+      "Semiconductor engineering is about designing and manufacturing the chips that power almost every modern electronic device — working at the scale of individual circuits and materials, not a finished product. It combines electrical engineering, materials science, and precision manufacturing.",
+    realWorldExamples: [
+      "Microchip and processor design",
+      "Semiconductor fabrication process engineering",
+      "Chip testing and quality verification",
+      "Materials engineering for semiconductor manufacturing",
+    ],
+    relatedMajors: ["Electrical Engineering (with a semiconductor focus)", "Materials Science and Engineering (some overlap)", "Computer Engineering (some overlap)"],
+    salaryNote:
+      "No separate U.S. Bureau of Labor Statistics category exists for semiconductor engineering — it's usually pursued through electrical, computer, or materials engineering. See the Electrical Engineering page for related, sourced salary data.",
+    whatEngineersWorkOn:
+      "Semiconductor engineers work at a scale where the material itself is the design. Some work on the circuit — laying out transistors, checking timing, and simulating a block long before any silicon exists. Others work on the process, tuning the sequence of deposition, patterning, and etching steps that build a chip layer by layer, and hunting the reasons a wafer came out wrong. Both sides live on data: enormous amounts of measurement, and the statistics needed to tell a real effect from noise.",
+    commonMisconceptions: [
+      "That it means building computers — the work is the chip itself, several layers of abstraction below a finished device.",
+      "That design and manufacturing are the same job — chip design and fab process engineering are quite different careers that happen to share an industry.",
+      "That everything is automated — the tools are automated, but deciding what to run, and diagnosing what went wrong, is not.",
+      "That you spend the day in a cleanroom in a bunny suit — some roles do, and plenty of others are entirely at a computer.",
+    ],
+    mythsAndRealities: [
+      {
+        myth: "Semiconductor engineers build computers.",
+        reality:
+          "They build what's inside the chip. A finished computer is many layers of abstraction above where this work happens.",
+      },
+      {
+        myth: "It's one job.",
+        reality:
+          "Design and process are close to separate professions. One simulates circuits at a desk; the other runs and debugs a fabrication line.",
+      },
+      {
+        myth: "Modern fabs are fully automated, so there's little to do.",
+        reality:
+          "Automation runs the steps. Engineers decide what the steps should be and work out why yield dropped when nothing obvious changed.",
+      },
+      {
+        myth: "You need a PhD to get in.",
+        reality:
+          "Research roles often expect one, but a great deal of design, test, and process work is done by people with a bachelor's or master's.",
+      },
+    ],
+    usefulSubjects: ["Physics", "Calculus", "Chemistry", "Computer science or programming, if offered", "Statistics, if offered"],
+    helpfulSkills: [
+      "Comfort with physics and chemistry at a level below the visible, since behaviour comes from material and quantum effects",
+      "Strong statistics, because yield and process control are statistical problems before they are physical ones",
+      "Programming and scripting, since analysing process and test data by hand isn't practical",
+      "Patience with long feedback loops, as a change to a process can take weeks to show up in results",
+      "Methodical debugging, because a defect can come from any of hundreds of steps",
+    ],
+    typicalProjects: [
+      "Designing and simulating a circuit block against timing, power, and area targets",
+      "Tuning a deposition or etch step to hit a target thickness or profile",
+      "Investigating why yield dropped on a particular product or tool",
+      "Developing test procedures that catch defective chips before they ship",
+      "Characterising a new material or process and documenting how it behaves",
+    ],
+    typicalWorkday:
+      "For design roles, most of the day is simulation and analysis at a computer, punctuated by design reviews. For process and yield roles, it's a mix of data analysis and time in or beside the fab, following experiments through and reacting when a tool drifts. Both sides are shaped by long cycle times — a wafer takes weeks to work through a line, so today's experiment answers a question you asked some time ago.",
+    industries: [
+      "Chip designers and fabless semiconductor companies",
+      "Semiconductor foundries and integrated manufacturers",
+      "Semiconductor equipment and materials suppliers",
+      "Research laboratories and university facilities",
+      "Companies designing custom silicon for their own products",
+    ],
+    advantages: [
+      "The work sits underneath nearly all modern technology, so its reach is unusually wide",
+      "It's genuinely deep technical work, with room to specialise a long way",
+      "Design and process paths are different enough that one may suit you when the other doesn't",
+      "Skills in statistics and process control transfer to other high-precision manufacturing",
+    ],
+    challenges: [
+      "Feedback loops are long, which makes iteration slow compared with software or mechanical work",
+      "The industry is capital-intensive and cyclical, and hiring moves with that cycle",
+      "Fabs are concentrated in particular regions, so location options can be limited",
+      "The learning curve is steep, and much of the practical knowledge is specific to one company's process",
+    ],
+    thingsPeopleDislike: [
+      "Waiting weeks for a wafer to tell you whether an idea worked",
+      "Cleanroom protocol, gowning, and the restrictions that come with it",
+      "Chasing yield problems with hundreds of plausible causes and thin evidence",
+      "On-call and shift coverage when a production line can't be allowed to stop",
+    ],
+    dayInLife: {
+      blocks: [
+        { time: "8:00 AM", label: "Line review", detail: "Checking overnight measurements on the wafers moving through the steps you own. (This example follows a process engineer — a chip design role spends almost the whole day at a computer.)" },
+        { time: "9:30 AM", label: "In the fab", detail: "Gowning up to look at a tool that's drifting out of its normal range, alongside the equipment technicians." },
+        { time: "11:00 AM", label: "Data analysis", detail: "Writing a script to compare yield across tools and batches, to tell a real effect from noise." },
+        { time: "1:00 PM", label: "Experiment plan", detail: "Designing a small experiment on a deposition step, knowing the results won't be back for weeks." },
+        { time: "3:00 PM", label: "Cross-team meeting", detail: "Meeting with design and test engineers about a failure pattern showing up in finished chips." },
+        { time: "4:30 PM", label: "Handover notes", detail: "Documenting today's changes for the next shift, since the line doesn't stop overnight." },
+      ],
+      reflectionQuestion: "Would you be patient with work where an experiment you start today might not tell you anything for weeks?",
+    },
+    // Ratings are a qualitative read of this field's own text above, not an independent score.
+    // mathIntensity: usefulSubjects lists physics, calculus, and chemistry, helpfulSkills says behavior comes from "material and quantum effects," and it calls for strong statistics.
+    // handsOnWork: typicalWorkday describes process roles spending time "in or beside the fab," while design roles are at a computer.
+    // regulatoryBurden: no regulatory or compliance language appears anywhere in this field's text — cleanroom protocol is an internal procedure, not regulation.
+    // marketUncertainty: challenges says "the industry is capital-intensive and cyclical, and hiring moves with that cycle," and howCompetitive notes there's no separate government projection.
+    // coding: helpfulSkills calls for "programming and scripting, since analysing process and test data by hand isn't practical."
+    // outdoorWork: no outdoor or field component appears anywhere in this field's text.
+    // biologyContent: no biology or life-science content appears anywhere in this field's text.
+    // creativeFreedom: advantages describes "genuinely deep technical work, with room to specialise," within processes that are specific to one company.
+    // teamwork: design reviews and cross-team debugging appear, but collaboration isn't emphasized the way it is in systems or civil work.
+    // seeingWorkRealLife: advantages says the work "sits underneath nearly all modern technology," but it's hidden inside devices and results take weeks to arrive.
+    stats: {
+      mathIntensity: "High",
+      handsOnWork: "Medium",
+      regulatoryBurden: "Low",
+      marketUncertainty: "High",
+      coding: "Medium",
+      outdoorWork: "Low",
+      biologyContent: "Low",
+      creativeFreedom: "Medium",
+      teamwork: "Medium",
+      seeingWorkRealLife: "Medium",
+    },
+    nextSteps: {
+      "middle-school": {
+        project: "Build a simple circuit with a battery, a switch, and an LED, then look up how the same on-off idea is repeated billions of times inside a chip.",
+        tool: "A beginner electronics kit or a snap-together circuit set.",
+        activity: "Look for a STEM or electronics club at school, or a science museum exhibit about computers, if one is near you.",
+        relatedField: "electrical-engineering",
+      },
+      "high-school": {
+        project: "Build logic gates from transistors on a breadboard, then combine them into a small circuit like a half adder.",
+        tool: "A breadboard, a few transistors and LEDs, and a free browser-based circuit simulator like Falstad's.",
+        activity: "Take physics or an electronics class, or do a science fair project on electronics, if your school offers them.",
+        relatedField: "computer-engineering",
+      },
+      "college": {
+        project: "Design a small digital circuit in a hardware description language and simulate it, then look into programs that let students get a real chip made from their design.",
+        tool: "Free, open-source chip design tools, like the ones used by the Tiny Tapeout project.",
+        activity: "Look for an IEEE student branch, a university cleanroom or nanofabrication facility that trains undergraduates, or an internship at a chip company or equipment supplier.",
+        relatedField: "materials-engineering",
+      },
+    },
+    careerPaths: [
+      { title: "Process Engineer", description: "Owns one or more fabrication steps and keeps them on target, run after run." },
+      { title: "Yield Engineer", description: "Finds out why some chips fail, and which step or tool is responsible." },
+      { title: "Chip Design or Verification Engineer", description: "Designs circuit blocks, or proves through simulation that a design works before it's manufactured." },
+      { title: "Test Engineer", description: "Develops the tests that catch defective chips before they ship." },
+    ],
+    howCompetitive:
+      "The U.S. Bureau of Labor Statistics doesn't publish a separate job-outlook projection for semiconductor engineering — the people doing this work are counted under electrical, computer hardware, materials, and other engineering occupations, so there's no government growth figure specific to this field. Hiring in the industry moves with its investment cycle, which can swing up and down, and fabrication plants are concentrated in particular regions of a few countries, so where you live matters more here than in most fields — research the current situation in the places you'd consider working.",
+    beginnerActivities: [
+      "Look up a photo of a chip under a microscope (called a die shot) and try to spot repeated blocks, like memory",
+      "Build a simple circuit on a breadboard with an LED and a transistor, and see how the transistor acts as a switch",
+      "Try the logic gates simulation on this site and work out how gates combine into something that can add",
+    ],
+    selfReflectionQuestions: [
+      "Am I patient enough for experiments that take weeks to give an answer?",
+      "Would I enjoy working at a scale I can only see through measurements and data?",
+      "Would I be okay following strict cleanroom procedures, or would I rather work in a design role at a computer?",
+      "Would I be willing to live where chip companies and fabs are located?",
+    ],
+  },
 ];

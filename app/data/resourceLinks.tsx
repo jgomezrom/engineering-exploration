@@ -95,7 +95,7 @@ export const resourceLinks = [
   {
     href: "/quiz/more-majors",
     title: "The Smaller Majors Quiz",
-    description: "An optional, more informal quiz for fields like nuclear, petroleum, marine, and semiconductor engineering.",
+    description: "A short, informal bonus quiz about seven fields that are easy to overlook, like automotive, structural, and semiconductor engineering.",
     accentColor: "accent" as const,
     icon: (
       <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">

@@ -2,18 +2,17 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import FieldPageContent from "../../components/FieldPageContent";
 import { fields } from "../../data/fields";
-import { fieldStubs } from "../../data/fieldStubs";
 import { FieldSlug } from "../../data/types";
 
 export function generateStaticParams() {
-  return [...fields.map((field) => ({ slug: field.slug })), ...fieldStubs.map((stub) => ({ slug: stub.slug }))];
+  return fields.map((field) => ({ slug: field.slug }));
 }
 
 export async function generateMetadata(
   props: PageProps<"/engineering/[slug]">
 ): Promise<Metadata> {
   const { slug } = await props.params;
-  const field = fields.find((f) => f.slug === slug) ?? fieldStubs.find((s) => s.slug === slug);
+  const field = fields.find((f) => f.slug === slug);
 
   if (!field) {
     return { title: "Field Not Found" };
@@ -33,7 +32,7 @@ export async function generateMetadata(
 
 export default async function EngineeringFieldPage(props: PageProps<"/engineering/[slug]">) {
   const { slug } = await props.params;
-  const exists = fields.some((f) => f.slug === slug) || fieldStubs.some((s) => s.slug === slug);
+  const exists = fields.some((f) => f.slug === slug);
 
   if (!exists) {
     notFound();

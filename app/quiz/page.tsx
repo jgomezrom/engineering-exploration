@@ -223,6 +223,9 @@ export default function QuizPage() {
 
       <div className="mt-10">
         <RadarChart results={results} />
+        <p className="mt-3 text-center text-xs text-neutral-500 sm:hidden dark:text-neutral-400">
+          {t.radarSmallScreenNote}
+        </p>
       </div>
 
       {topMatches.length === 0 && (

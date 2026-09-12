@@ -14,7 +14,9 @@ export const compareTranslations = {
     practicalityIntro:
       "Regulation, job-market conditions, and pay all matter, but they shift over time and by region — treat them as background context, not a reason to rule a field out.",
     medianSalary: "Median Salary (US)",
-    salaryFootnote: "Median salary is sourced separately — see each field's page for the exact citation and caveats.",
+    noSeparateFigure: "Not tracked separately",
+    salaryFootnote:
+      "Median salary is sourced separately — see each field's page for the exact citation and caveats. \"Not tracked separately\" means the U.S. Bureau of Labor Statistics doesn't publish a figure for that field on its own; its page explains why and points to the closest related figure.",
   },
   es: {
     badge: "Lado a lado",
@@ -29,7 +31,9 @@ export const compareTranslations = {
     practicalityIntro:
       "La regulación, las condiciones del mercado laboral y el salario sí importan, pero cambian con el tiempo y según la región — trátalos como contexto de fondo, no como razón para descartar un campo.",
     medianSalary: "Salario Mediano (EE. UU.)",
-    salaryFootnote: "El salario mediano tiene una fuente separada — consulta la página de cada campo para ver la cita exacta y sus advertencias.",
+    noSeparateFigure: "Sin cifra propia",
+    salaryFootnote:
+      "El salario mediano tiene una fuente separada — consulta la página de cada campo para ver la cita exacta y sus advertencias. \"Sin cifra propia\" significa que la Oficina de Estadísticas Laborales de EE. UU. no publica una cifra solo para ese campo; su página explica por qué y señala la cifra relacionada más cercana.",
   },
 };
 

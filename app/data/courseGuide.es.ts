@@ -213,6 +213,66 @@ export const fieldCourseFocusEs: FieldCourseFocus[] = [
       "Química, útil para entender la corrosión y los materiales en ambientes marinos",
     ],
   },
+  {
+    fieldSlug: "architectural-engineering",
+    priorityCourses: [
+      "Física, especialmente mecánica y termodinámica",
+      "Cálculo",
+      "Clases de CAD o dibujo técnico, si se ofrecen — los sistemas de un edificio se dibujan mucho antes de construirse",
+    ],
+  },
+  {
+    fieldSlug: "automotive-engineering",
+    priorityCourses: [
+      "Física, especialmente mecánica — AP Physics C: Mechanics o IB Physics HL si se ofrece",
+      "Cálculo",
+      "Cualquier materia de informática, ya que cada vez más el comportamiento del vehículo se decide en software",
+      "Clases de mecánica automotriz o de taller, si tu escuela las tiene",
+    ],
+  },
+  {
+    fieldSlug: "manufacturing-engineering",
+    priorityCourses: [
+      "Física",
+      "Cálculo",
+      "Estadística, que es como se mide y se controla realmente la calidad de un proceso",
+      "Clases de taller, CAD, o robótica, si se ofrecen",
+    ],
+  },
+  {
+    fieldSlug: "systems-engineering",
+    priorityCourses: [
+      "Física y Cálculo — la mayoría llega aquí primero desde otra disciplina de ingeniería",
+      "Estadística, si se ofrece",
+      "Cualquier materia con escritura técnica estructurada, ya que un requisito vago se construye de dos formas distintas",
+    ],
+  },
+  {
+    fieldSlug: "structural-engineering",
+    priorityCourses: [
+      "Física, especialmente estática y mecánica",
+      "Cálculo",
+      "Clases de CAD o dibujo técnico, si se ofrecen",
+    ],
+  },
+  {
+    fieldSlug: "energy-engineering",
+    priorityCourses: [
+      "Física, especialmente termodinámica y electricidad",
+      "Cálculo",
+      "Química, útil para combustibles, baterías, y combustión",
+      "Estadística o análisis de datos, si se ofrece, porque los ahorros hay que medirlos para que alguien los crea",
+    ],
+  },
+  {
+    fieldSlug: "semiconductor-engineering",
+    priorityCourses: [
+      "Física y Química importan por igual aquí — el comportamiento viene del material mismo",
+      "Cálculo",
+      "Estadística, que es como se manejan el rendimiento y el control de procesos",
+      "Cualquier materia de informática, ya que analizar a mano los datos de prueba no es viable",
+    ],
+  },
 ];
 
 export const tutoringResourcesEs: TutoringResource[] = [

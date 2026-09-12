@@ -4,8 +4,6 @@ import Link from "next/link";
 import FadeIn from "./FadeIn";
 import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
-import { fieldStubs } from "../data/fieldStubs";
-import { fieldStubsEs } from "../data/fieldStubs.es";
 import { useLanguage } from "../context/LanguageContext";
 import { sourcesTranslations } from "../data/translations/sources";
 
@@ -26,8 +24,10 @@ export default function SourcesContent() {
   const { language } = useLanguage();
   const t = sourcesTranslations[language];
   const displayFields = language === "es" ? fieldsEs : fields;
-  const displayStubs = language === "es" ? fieldStubsEs : fieldStubs;
-  const stubsWithSalary = displayStubs.filter((s) => s.salary);
+  // Only fields with a figure of their own get a table row. The rest are named
+  // in the footnote, and each of their pages says why it has none.
+  const withSalary = displayFields.flatMap((field) => (field.salary ? [{ field, salary: field.salary }] : []));
+  const withoutSalary = displayFields.filter((field) => !field.salary);
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-3xl px-6 py-16">
@@ -91,7 +91,7 @@ export default function SourcesContent() {
               </tr>
             </thead>
             <tbody>
-              {displayFields.map((field) => (
+              {withSalary.map(({ field, salary }) => (
                 <tr key={field.slug} className="border-b border-neutral-900/10 dark:border-white/10">
                   <td className="py-3 pr-4">
                     <Link href={`/engineering/${field.slug}`} className="text-primary hover:underline">
@@ -99,56 +99,39 @@ export default function SourcesContent() {
                     </Link>
                   </td>
                   <td className="py-3 pr-4 font-mono text-neutral-900 dark:text-white">
-                    {field.salary.medianAnnual}
+                    {salary.medianAnnual}
                   </td>
-                  <td className="py-3 pr-4 text-neutral-600 dark:text-neutral-400">{field.salary.period}</td>
+                  <td className="py-3 pr-4 text-neutral-600 dark:text-neutral-400">{salary.period}</td>
                   <td className="py-3 pr-4">
                     <a
-                      href={field.salary.sourceUrl}
+                      href={salary.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
                     >
-                      {field.salary.sourceName}
+                      {salary.sourceName}
                     </a>
                   </td>
-                  <td className="py-3 text-neutral-600 dark:text-neutral-400">{field.salary.verifiedDate}</td>
-                </tr>
-              ))}
-              {stubsWithSalary.map((stub) => (
-                <tr key={stub.slug} className="border-b border-neutral-900/10 dark:border-white/10">
-                  <td className="py-3 pr-4">
-                    <Link href={`/engineering/${stub.slug}`} className="text-primary hover:underline">
-                      {stub.name}
-                    </Link>
-                  </td>
-                  <td className="py-3 pr-4 font-mono text-neutral-900 dark:text-white">
-                    {stub.salary!.medianAnnual}
-                  </td>
-                  <td className="py-3 pr-4 text-neutral-600 dark:text-neutral-400">{stub.salary!.period}</td>
-                  <td className="py-3 pr-4">
-                    <a
-                      href={stub.salary!.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      {stub.salary!.sourceName}
-                    </a>
-                  </td>
-                  <td className="py-3 text-neutral-600 dark:text-neutral-400">{stub.salary!.verifiedDate}</td>
+                  <td className="py-3 text-neutral-600 dark:text-neutral-400">{salary.verifiedDate}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="mt-4 max-w-2xl text-xs text-neutral-500 dark:text-neutral-400">
-          {t.footnoteBefore}{" "}
-          <Link href="/resources" className="text-primary hover:underline">
-            {t.briefOverviewLink}
-          </Link>{" "}
-          {t.footnoteAfter}
-        </p>
+        {withoutSalary.length > 0 && (
+          <p className="mt-4 max-w-2xl text-xs text-neutral-500 dark:text-neutral-400">
+            {t.footnoteBefore(withoutSalary.length)}{" "}
+            {withoutSalary.map((field, i) => (
+              <span key={field.slug}>
+                <Link href={`/engineering/${field.slug}`} className="text-primary hover:underline">
+                  {field.name}
+                </Link>
+                {i < withoutSalary.length - 1 ? ", " : "."}
+              </span>
+            ))}{" "}
+            {t.footnoteAfter}
+          </p>
+        )}
       </FadeIn>
     </main>
   );

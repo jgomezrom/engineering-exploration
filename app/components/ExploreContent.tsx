@@ -7,8 +7,6 @@ import FieldIcon from "./FieldIcon";
 import BookmarkedFields from "./BookmarkedFields";
 import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
-import { fieldStubs } from "../data/fieldStubs";
-import { fieldStubsEs } from "../data/fieldStubs.es";
 import { useLanguage } from "../context/LanguageContext";
 import { exploreTranslations } from "../data/translations/explore";
 
@@ -17,7 +15,6 @@ export default function ExploreContent() {
   const { language } = useLanguage();
   const t = exploreTranslations[language];
   const displayFields = language === "es" ? fieldsEs : fields;
-  const displayStubs = language === "es" ? fieldStubsEs : fieldStubs;
 
   function goToRandomField() {
     const pick = displayFields[Math.floor(Math.random() * displayFields.length)];
@@ -33,9 +30,6 @@ export default function ExploreContent() {
       <h1 className="text-3xl font-bold text-neutral-900 dark:text-white xl:text-4xl">{t.heading}</h1>
       <p className="mt-2 max-w-xl text-neutral-600 dark:text-neutral-400">
         {t.introBefore}{" "}
-        {/* Deliberately fields.length and not totalFieldCount: the comparison
-            table is built from field.stats, which only the full fields carry.
-            Saying 23 here would promise rows the table can't render. */}
         <Link href="/compare" className="font-medium text-primary hover:underline">
           {t.compareLink} {fields.length}
         </Link>{" "}
@@ -65,7 +59,7 @@ export default function ExploreContent() {
 
       <div className="mt-10">
         <BookmarkedFields
-          allFields={[...displayFields, ...displayStubs].map((f) => ({ slug: f.slug, name: f.name, tagline: f.tagline }))}
+          allFields={displayFields.map((f) => ({ slug: f.slug, name: f.name, tagline: f.tagline }))}
         />
       </div>
 
@@ -92,34 +86,6 @@ export default function ExploreContent() {
           ))}
         </div>
       </FadeIn>
-
-      {displayStubs.length > 0 && (
-        <FadeIn className="mt-16 border-t border-neutral-900/10 pt-10 dark:border-white/10">
-          <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">{t.moreFieldsHeading}</h2>
-          <p className="mt-1 max-w-xl text-sm text-neutral-600 dark:text-neutral-400">{t.moreFieldsIntro}</p>
-
-          <div className="mt-6 border-l border-t border-neutral-900/10 dark:border-white/10">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3">
-              {displayStubs.map((stub) => (
-                <Link
-                  key={stub.slug}
-                  href={`/engineering/${stub.slug}`}
-                  className="group flex flex-col border-b border-r border-neutral-900/10 p-6 transition-colors hover:bg-primary/[0.04] dark:border-white/10"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <FieldIcon slug={stub.slug} className="h-8 w-8 flex-shrink-0 text-primary" />
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
-                      {t.briefOverview}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-base font-semibold text-neutral-900 dark:text-white">{stub.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{stub.tagline}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
-      )}
     </main>
   );
 }

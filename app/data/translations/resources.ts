@@ -50,7 +50,7 @@ export const resourceLinksEs: Record<string, { title: string; description: strin
   "/quiz/more-majors": {
     title: "El Cuestionario de Carreras Menos Comunes",
     description:
-      "Un cuestionario opcional y más informal para campos como ingeniería nuclear, de petróleo, marina, y de semiconductores.",
+      "Un cuestionario extra, corto e informal, sobre siete campos que es fácil pasar por alto, como la ingeniería automotriz, estructural, y de semiconductores.",
   },
   "/sources": {
     title: "Fuentes y Metodología",

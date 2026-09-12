@@ -147,9 +147,15 @@ export default function CompareContent() {
                 <td className="py-4 pr-4 text-sm text-neutral-600 dark:text-neutral-400">{t.medianSalary}</td>
                 {displayFields.map((field) => (
                   <td key={field.slug} className="px-3 py-4 text-center">
-                    <span className="font-mono text-sm font-semibold text-neutral-900 dark:text-white">
-                      {field.salary.medianAnnual}
-                    </span>
+                    {field.salary ? (
+                      <span className="font-mono text-sm font-semibold text-neutral-900 dark:text-white">
+                        {field.salary.medianAnnual}
+                      </span>
+                    ) : (
+                      // No figure of its own: the field's page says why and
+                      // which related figure to look at instead.
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">{t.noSeparateFigure}</span>
+                    )}
                   </td>
                 ))}
               </tr>

@@ -36,11 +36,12 @@ export const quizTranslations = {
     exploreAllFields: "Explore all fields",
     retakeQuiz: "Retake the quiz",
     seeSummaryLink: "See this saved to your exploration summary →",
-    curiousAboutSmaller: "Curious about fields like automotive, structural, or semiconductor engineering?",
+    curiousAboutSmaller: "Want a closer look at seven fields that are easy to overlook?",
     smallerFieldsBody:
-      "Those fields don't have the depth yet to fit into the scoring above, so there's a separate, more informal quiz just for them.",
+      "Architectural, automotive, energy, manufacturing, semiconductor, structural, and systems engineering are all scored above. There's also a short, informal bonus quiz about just those seven.",
     trySmallerQuiz: "Try the smaller majors quiz →",
     radarChartAriaLabel: "Radar chart of match percentage per engineering field",
+    radarSmallScreenNote: "On a narrow screen the chart shows the shape only — every field is named, with its percentage, in the ranking below.",
   },
   es: {
     badge: "Cuestionario de 5 minutos",
@@ -79,11 +80,12 @@ export const quizTranslations = {
     exploreAllFields: "Explorar todos los campos",
     retakeQuiz: "Repetir el cuestionario",
     seeSummaryLink: "Ve esto guardado en tu resumen de exploración →",
-    curiousAboutSmaller: "¿Curioso/a sobre campos como ingeniería automotriz, estructural, o de semiconductores?",
+    curiousAboutSmaller: "¿Quieres ver más de cerca siete campos que es fácil pasar por alto?",
     smallerFieldsBody:
-      "Esos campos todavía no tienen la profundidad para encajar en la calificación de arriba, así que hay un cuestionario separado y más informal solo para ellos.",
+      "La ingeniería arquitectónica, automotriz, de energía, de manufactura, de semiconductores, estructural, y de sistemas ya se califican arriba. También hay un cuestionario extra, corto e informal, solo sobre esos siete.",
     trySmallerQuiz: "Prueba el cuestionario de carreras menos comunes →",
     radarChartAriaLabel: "Gráfico de radar del porcentaje de coincidencia por campo de ingeniería",
+    radarSmallScreenNote: "En una pantalla angosta el gráfico solo muestra la forma — todos los campos aparecen con su porcentaje en la clasificación de abajo.",
   },
 };
 
@@ -105,6 +107,13 @@ export const fieldLabelsShort: Record<"en" | "es", Partial<Record<string, string
     "petroleum-engineering": "Petroleum",
     "agricultural-engineering": "Agricultural",
     "marine-engineering": "Marine",
+    "architectural-engineering": "Architectural",
+    "automotive-engineering": "Automotive",
+    "manufacturing-engineering": "Manufacturing",
+    "systems-engineering": "Systems",
+    "structural-engineering": "Structural",
+    "energy-engineering": "Energy",
+    "semiconductor-engineering": "Semiconductor",
   },
   es: {
     "mechanical-engineering": "Mecánica",
@@ -123,5 +132,12 @@ export const fieldLabelsShort: Record<"en" | "es", Partial<Record<string, string
     "petroleum-engineering": "Petróleo",
     "agricultural-engineering": "Agrícola",
     "marine-engineering": "Marina",
+    "architectural-engineering": "Arquitectónica",
+    "automotive-engineering": "Automotriz",
+    "manufacturing-engineering": "Manufactura",
+    "systems-engineering": "Sistemas",
+    "structural-engineering": "Estructural",
+    "energy-engineering": "Energía",
+    "semiconductor-engineering": "Semiconductores",
   },
 };

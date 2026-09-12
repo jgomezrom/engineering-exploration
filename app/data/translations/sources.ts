@@ -33,10 +33,9 @@ export const sourcesTranslations = {
     tablePeriod: "Period",
     tableSource: "Source",
     tableVerified: "Verified",
-    footnoteBefore: "The remaining fields under",
-    briefOverviewLink: "More fields",
+    footnoteBefore: (n: number) => `${n} fields aren't in this table:`,
     footnoteAfter:
-      "aren't tracked as their own category by the U.S. Bureau of Labor Statistics — each of those pages says so explicitly and points to the closest related field instead of guessing at a number.",
+      "The U.S. Bureau of Labor Statistics doesn't publish a figure for them on their own — each of those pages says why and points to the closest related figure instead of guessing at a number.",
   },
   es: {
     badge: "Cómo se armó esto en realidad",
@@ -72,9 +71,8 @@ export const sourcesTranslations = {
     tablePeriod: "Periodo",
     tableSource: "Fuente",
     tableVerified: "Verificado",
-    footnoteBefore: "Los campos restantes bajo",
-    briefOverviewLink: "Más campos",
+    footnoteBefore: (n: number) => `${n} campos no aparecen en esta tabla:`,
     footnoteAfter:
-      "no se rastrean como su propia categoría en la Oficina de Estadísticas Laborales de EE. UU. — cada una de esas páginas lo indica explícitamente y señala hacia el campo relacionado más cercano en lugar de adivinar un número.",
+      "La Oficina de Estadísticas Laborales de EE. UU. no publica una cifra solo para ellos — cada una de esas páginas explica por qué y señala la cifra relacionada más cercana en lugar de adivinar un número.",
   },
 };
