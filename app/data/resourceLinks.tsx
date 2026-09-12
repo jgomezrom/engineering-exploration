@@ -70,7 +70,9 @@ export const resourceLinks = [
   {
     href: "/simulations",
     title: "Interactive Simulations",
-    description: "Levers, circuits, beams, gears, buoyancy, logic gates, and projectile motion — adjust real variables and watch real physics respond.",
+    // Keep this list in sync with SIMULATIONS in data/simulationsList.ts, and
+    // with the Spanish copy in translations/resources.ts.
+    description: "Levers, circuits, beams, gears, buoyancy, logic gates, projectiles, pendulums, and heat flow — adjust real variables and watch real physics respond.",
     accentColor: "accent" as const,
     icon: (
       <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
