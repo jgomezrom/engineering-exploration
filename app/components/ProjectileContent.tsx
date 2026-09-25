@@ -49,6 +49,14 @@ export default function ProjectileContent() {
           {t.formula}
         </p>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{t.mathP2}</p>
+      </FadeIn>
+
+      <FadeIn className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+        <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t.airHeading}</h2>
+        <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{t.airP1}</p>
+        <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{t.airP2}</p>
+        <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{t.airP3}</p>
+        <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{t.airP4}</p>
         <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400">{t.mathP3}</p>
         <Link href="/concepts?concept=forces" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
           {t.conceptLink}
