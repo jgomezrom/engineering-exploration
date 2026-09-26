@@ -9,6 +9,15 @@ export const aboutTranslations = {
     p5: "The interest quiz works the same way — a starting point based on how you answer a set of questions, not a verdict on what you should do with your life.",
     p6Before: "For more on where the numbers on this site come from, and what's editorial judgment versus a cited source, see",
     sourcesLink: "Sources & Methodology",
+    builtHeading: "How this site is built",
+    builtP1:
+      "It's a static site — Next.js, React and TypeScript, with every page generated ahead of time. There's no backend and no database, and nothing you do here is sent anywhere. The illustrations, icons and charts are hand-written SVG rather than pulled from a library, which is why they all look like they belong to the same set of drawings.",
+    builtP2:
+      "Three of the simulations do real work rather than printing the answer to a formula. The beam solves for the shear force, bending moment and deflection along its whole length by working through it step by step; the pendulum solves the actual swing equation, not the small-angle shortcut most textbooks stop at; and the projectile includes air resistance, which has no tidy formula at all. Each one then checks itself against the exact answer wherever an exact answer exists, and prints how far apart the two landed — usually less than a thousandth of a percent.",
+    builtP3:
+      "Every page works in English and Spanish. Keyboard navigation and screen-reader labels are tested rather than assumed, animations back off if your device asks for less motion, and the maths behind the simulations has its own test suite that anyone can run.",
+    codeLinkBefore: "All of it is open source, if you want to see how any piece works:",
+    codeLink: "the code is on GitHub",
     exploreCta: "Explore Engineering Fields",
     quizCta: "Take the Interest Quiz",
   },
@@ -22,6 +31,15 @@ export const aboutTranslations = {
     p5: "El cuestionario de intereses funciona igual — un punto de partida según cómo respondas un conjunto de preguntas, no un veredicto sobre qué deberías hacer con tu vida.",
     p6Before: "Para más detalle sobre de dónde salen los números de este sitio, y qué es juicio editorial frente a una fuente citada, consulta",
     sourcesLink: "Fuentes y Metodología",
+    builtHeading: "Cómo está construido este sitio",
+    builtP1:
+      "Es un sitio estático — Next.js, React y TypeScript, con cada página generada de antemano. No hay servidor ni base de datos, y nada de lo que haces aquí se envía a ningún lado. Las ilustraciones, los iconos y las gráficas son SVG hechos a mano en vez de sacados de una librería, y por eso todos parecen pertenecer al mismo conjunto de dibujos.",
+    builtP2:
+      "Tres de las simulaciones hacen trabajo de verdad en lugar de imprimir el resultado de una fórmula. La de vigas calcula la fuerza cortante, el momento flector y la deflexión a lo largo de toda la viga resolviéndola paso a paso; la del péndulo resuelve la ecuación real del vaivén, no el atajo de ángulo pequeño donde se detienen la mayoría de los libros; y la de proyectiles incluye la resistencia del aire, que no tiene ninguna fórmula limpia. Cada una se comprueba después contra la respuesta exacta, cuando existe una, e imprime qué tan lejos quedaron la una de la otra — normalmente menos de una milésima de por ciento.",
+    builtP3:
+      "Cada página funciona en inglés y en español. La navegación por teclado y las etiquetas para lectores de pantalla se prueban en vez de darse por hechas, las animaciones se reducen si tu dispositivo pide menos movimiento, y las matemáticas detrás de las simulaciones tienen su propio conjunto de pruebas que cualquiera puede ejecutar.",
+    codeLinkBefore: "Todo es de código abierto, por si quieres ver cómo funciona cualquier parte:",
+    codeLink: "el código está en GitHub",
     exploreCta: "Explorar Campos de Ingeniería",
     quizCta: "Tomar el Cuestionario de Intereses",
   },

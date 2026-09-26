@@ -39,6 +39,27 @@ export default function AboutContent() {
         <PlateFigure figure={figures.pumpHouseDrawing} index="01" ratio="aspect-[3/2]" fit="contain" />
       </div>
 
+      <section className="mt-14 border-t border-neutral-900/10 pt-14 dark:border-white/10">
+        <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t.builtHeading}</h2>
+        <div className="mt-5 flex flex-col gap-5 text-neutral-600 dark:text-neutral-400">
+          <p>{t.builtP1}</p>
+          <p>{t.builtP2}</p>
+          <p>{t.builtP3}</p>
+          <p>
+            {t.codeLinkBefore}{" "}
+            <a
+              href="https://github.com/jgomezrom/engineering-exploration"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              {t.codeLink}
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">
         <Link
           href="/explore"
