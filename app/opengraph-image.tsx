@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { fields } from "./data/fields";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -80,7 +81,8 @@ export default function Image() {
         </div>
 
         <div style={{ display: "flex", fontSize: 30, color: "#52525b", marginTop: 24, textAlign: "center", maxWidth: 880 }}>
-          Real engineering, no hype — 23 fields, honest tradeoffs, hands-on challenges
+          {/* One string, not inline {fields.length}: Satori lays out each JSX text fragment as its own flex item. */}
+          {`Real engineering, no hype — ${fields.length} fields, honest tradeoffs, hands-on challenges`}
         </div>
       </div>
     ),

@@ -7,6 +7,7 @@ import { fields } from "../data/fields";
 import { fieldsEs } from "../data/fields.es";
 import { collegeCurricula } from "../data/collegeCurricula";
 import { collegeTips } from "../data/collegeTips";
+import { collegeTipsEs } from "../data/collegeTips.es";
 import { CurriculumSequence, CurriculumYear, FieldSlug, TipTheme } from "../data/types";
 import { useLanguage } from "../context/LanguageContext";
 import { collegeTranslations, tipThemeLabels, tipConfidenceLabels, collegeOnlyMajorNames } from "../data/translations/college";
@@ -57,6 +58,7 @@ export default function CollegeContent() {
   const themeLabel = tipThemeLabels[language];
   const confidenceLabel = tipConfidenceLabels[language];
   const displayFields = language === "es" ? fieldsEs : fields;
+  const displayTips = language === "es" ? collegeTipsEs : collegeTips;
   const majorNameFallback = collegeOnlyMajorNames[language];
   const majorName = useCallback(
     (slug: FieldSlug) => displayFields.find((f) => f.slug === slug)?.name ?? majorNameFallback[slug] ?? slug,
@@ -167,7 +169,7 @@ export default function CollegeContent() {
 
         <div className="mt-8 space-y-10">
           {THEME_ORDER.map((theme) => {
-            const themeTips = collegeTips.filter((tip) => tip.theme === theme);
+            const themeTips = displayTips.filter((tip) => tip.theme === theme);
             if (themeTips.length === 0) return null;
             return (
               <div key={theme}>
