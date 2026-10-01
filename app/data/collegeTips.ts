@@ -3,16 +3,16 @@ import { CollegeTip } from "./types";
 export const collegeTips: CollegeTip[] = [
   {
     slug: "active-problem-solving-vs-passive-review",
-    text: "Focus on active problem-solving and peer-led discussions rather than passively re-reading lecture slides. Students who engage in active learning develop better higher-order cognitive skills and retain information longer, even if the increased cognitive effort makes them feel like they are struggling more in the moment.",
+    text: "Focus on active problem-solving and peer-led discussions rather than passively re-reading lecture slides. In a 2019 randomized study of introductory college physics courses, students taught with active methods learned more than students taught by highly rated lecturers — yet felt like they had learned less, because they took the extra mental effort as a sign they weren't getting it. Feeling like you're struggling while you work problems doesn't mean it isn't working.",
     theme: "study-strategies",
     confidence: "research-backed",
     dependsOn:
       "The student's willingness to embrace the discomfort of working through difficult practice problems from scratch rather than taking the \"easy\" route of just watching a professor solve them on a board.",
-    sourceUrl: "https://adiutor.co/blog/impact-of-active-versus-passive-learning-approaches-on-student-academic-performance/",
+    sourceUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6765278/",
   },
   {
     slug: "secure-an-internship-before-graduation",
-    text: "Prioritize securing at least one industry internship or co-op before graduation. Hands-on experience fundamentally alters career trajectories, clarifies career choices, and significantly builds professional competencies compared to classroom theory alone.",
+    text: "Prioritize securing at least one industry internship or co-op before graduation. Education research counts internships among the \"high-impact practices\" linked to higher student engagement and retention, and in a 2018 study, interns at an engineering firm could name specific skills they had picked up on the job.",
     theme: "internships",
     confidence: "research-backed",
     dependsOn:
@@ -34,7 +34,7 @@ export const collegeTips: CollegeTip[] = [
     theme: "research",
     confidence: "varies by situation",
     dependsOn:
-      "Faculty availability, department funding, and the type of institution. This is highly feasible at large research institutions (R1 universities) but may be much harder to secure at smaller teaching-focused colleges with limited graduate lab space.",
+      "Faculty availability, department funding, and the type of institution. This is highly feasible at large research institutions (R1 universities, in the U.S. classification) but may be much harder to secure at smaller teaching-focused colleges with limited graduate lab space.",
   },
   {
     slug: "input-focused-study-goals",
@@ -46,12 +46,12 @@ export const collegeTips: CollegeTip[] = [
     sourceUrl: "https://www.youtube.com/watch?v=5JH130NIR8k",
   },
   {
-    slug: "schedule-deliberate-breaks-and-exercise",
-    text: 'Schedule deliberate "waste-of-time" activities and physical exercise into your weekly calendar to combat the physical exhaustion and cognitive impairment that comes with intense coursework. The unrelenting quest for perfection in engineering makes stepping away entirely critical to preventing emotional detachment.',
+    slug: "schedule-regular-exercise",
+    text: "Put physical exercise on your weekly calendar as protected time, not something you'll get to once the work is done — in a heavy course load, the work is rarely done. A 2022 systematic review of 18 studies covering 11,500 medical students in 13 countries found that students who were more physically active had lower burnout and a better quality of life, with more activity tending to go with bigger differences. That's an association, not proof that exercise prevents burnout.",
     theme: "workload-and-burnout",
     confidence: "research-backed",
     dependsOn:
-      "The individual's time-management skills. Taking deliberate breaks is an effective recovery tool only if the student is consistently utilizing their study blocks productively and not falling behind on critical deadlines.",
-    sourceUrl: "https://www.sandipuniversity.edu.in/blog/signs-of-burnout-in-engineering-students/",
+      "Your schedule and how you manage it. Exercise only helps if it fits around your critical deadlines instead of eating study time you can't spare — and the research behind this tip comes from medical students, not engineering students specifically.",
+    sourceUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9826463/",
   },
 ];
