@@ -1,5 +1,7 @@
 # Engineering Exploration
 
+[![CI](https://github.com/jgomezrom/engineering-exploration/actions/workflows/ci.yml/badge.svg)](https://github.com/jgomezrom/engineering-exploration/actions/workflows/ci.yml)
+
 A website to help students figure out which engineering field might actually fit them, built as a personal project by **Jaime Gomez**, a student at MSU.
 
 **Live site:** https://engineering-exploration-two.vercel.app
@@ -17,6 +19,9 @@ Back in high school I remember looking at a long list of engineering majors and 
 - **A 28-question interest quiz** scoring a percentage against all 23 fields, with a radar chart, plus a shorter bonus quiz for the less familiar majors
 - **12 hands-on challenges** with real materials lists, costs, time estimates and step-by-step instructions
 - **Fully bilingual (English/Spanish)** — every page, every simulation, every field
+- **A real photograph for every field** — public-domain and CC0 images from NASA, the Library of Congress (the Historic American Engineering Record and the Carol M. Highsmith Archive), the U.S. Navy and Wikimedia Commons, each credited and deep-linked to its source record so a caption can be re-checked
+- **Optional school color themes** — pick a Big Ten or SEC school and the whole site re-themes to its colors
+- **Built to be shared and found** — every page has its own share preview with a generated image, a canonical URL, and a place in the sitemap, plus structured data so search engines know what the site is
 - 64 pages, all statically generated
 - Custom illustrations, icons and charts are hand-built SVG — no stock photos, no icon library, no charting library
 - Accessible: real focus management on dialogs, keyboard traps where modals need them, checked contrast and heading structure, and `prefers-reduced-motion` respected
@@ -44,6 +49,8 @@ npm test
 
 22 tests covering the three solvers, using Node's built-in test runner — **no test framework added as a dependency**. They check the beam against `Pab/L` and `PL³/48EI`, the pendulum against published elliptic-integral period ratios, and the projectile's drag solution against a second integrator written independently inside the test, since agreeing with a different method is a real check while agreeing with itself is not. They also check things that must be true regardless: equilibrium holds, moment returns to zero at both supports, amplitude doesn't decay in a frictionless swing, and air never adds range.
 
+GitHub Actions runs the typecheck, lint, tests and a full production build on every push and pull request, so a broken change shows up before it reaches the live site.
+
 ## Tech stack
 
 - **Next.js 16** (App Router), **React 19**, **TypeScript**
@@ -51,6 +58,7 @@ npm test
 - No backend, no database — it's a fully static site, generated at build time
 - No UI kit, no charting library, no physics library, no test framework — the solvers, the radar chart and every illustration are hand-written
 - `app/lib/` holds the numerical solvers as plain functions, separate from the UI, which is what makes them testable
+- **GitHub Actions** for CI, **Vercel** for hosting — every merge to `main` deploys automatically
 
 ## How this was actually built
 
@@ -66,6 +74,7 @@ I didn't type most of these lines of code. But I know why every part of this sit
 - Why sourcing matters: I had this project verify salary numbers against the actual BLS pages instead of trusting a search summary, and it caught an earlier mistake where a sitemap pointed at the wrong domain because a similarly-named site already existed
 - That it's easy to accidentally write "advertising" language even when you're trying to be honest, and worth specifically reviewing your own content for it
 - The basics of deploying to Vercel, environment variables, and why a sitemap needs to know its own real production URL to be useful at all
+- That a framework can quietly undo your work: in Next.js, a page that sets its own share-preview (Open Graph) title replaces the parent layout's share settings entirely instead of merging with them, so adding per-page titles silently dropped the preview image from every page but the homepage — caught by checking the actual `<head>` tags, not by assuming it worked
 - That a numerical answer nobody has checked isn't really an answer — every solver here gets compared against an exact solution wherever one exists, and the error goes on the page instead of staying in my head
 
 ## Running it locally
