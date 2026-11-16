@@ -14,4 +14,5 @@ export const SIMULATIONS = [
   { slug: "projectile-motion", titleKey: "projectileTitle", descKey: "projectileDescription" },
   { slug: "pendulum", titleKey: "pendulumTitle", descKey: "pendulumDescription" },
   { slug: "heat-conduction", titleKey: "heatConductionTitle", descKey: "heatConductionDescription" },
+  { slug: "bridge-builder", titleKey: "bridgeBuilderTitle", descKey: "bridgeBuilderDescription" },
 ] as const satisfies readonly { slug: string; titleKey: keyof typeof simulationsHubTranslations.en; descKey: keyof typeof simulationsHubTranslations.en }[];

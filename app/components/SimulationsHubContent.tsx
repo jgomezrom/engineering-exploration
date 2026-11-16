@@ -76,6 +76,13 @@ const ICONS: Record<(typeof SIMULATIONS)[number]["slug"], React.ReactNode> = {
       <path d="M31 20l3-3M31 20l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   ),
+  "bridge-builder": (
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="h-8 w-8">
+      <path d="M5 27h30M12.5 14h15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M5 27l7.5-13 7.5 13 7.5-13 7.5 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 31h6M31 31h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  ),
 };
 
 export default function SimulationsHubContent() {

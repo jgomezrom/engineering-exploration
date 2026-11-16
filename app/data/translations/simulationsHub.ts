@@ -23,6 +23,8 @@ export const simulationsHubTranslations = {
     pendulumDescription: "Change the length and release angle and watch the period respond — notice what's conspicuously missing from the controls.",
     heatConductionTitle: "Heat Conduction",
     heatConductionDescription: "Pick a material and adjust its thickness and temperature difference to see how much heat actually gets through.",
+    bridgeBuilderTitle: "Bridge Builder (game)",
+    bridgeBuilderDescription: "Design a steel truss across five levels, load it, and find out which member gives way first — then try to do it with less steel.",
   },
   es: {
     backToSimulations: "← Volver a todas las simulaciones",
@@ -48,5 +50,7 @@ export const simulationsHubTranslations = {
     pendulumDescription: "Cambia la longitud y el ángulo de liberación y observa cómo responde el periodo — nota qué falta claramente entre los controles.",
     heatConductionTitle: "Conducción de Calor",
     heatConductionDescription: "Elige un material y ajusta su grosor y la diferencia de temperatura para ver cuánto calor realmente logra pasar.",
+    bridgeBuilderTitle: "Constructor de Puentes (juego)",
+    bridgeBuilderDescription: "Diseña una armadura de acero en cinco niveles, cárgala y descubre qué barra cede primero — y luego intenta lograrlo con menos acero.",
   },
 };
